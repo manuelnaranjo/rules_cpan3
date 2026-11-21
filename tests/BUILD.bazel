@@ -1,0 +1,82 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_test")
+load("@rules_perl//perl:perl.bzl", "perl_binary", "perl_test")
+load("//platforms:transitions.bzl", "multi_platform_test", "platform_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+# 1. Hermetic C test verifying LLVM compiler
+cc_test(
+    name = "cc_toolchain_test",
+    size = "small",
+    srcs = ["test_cc.c"],
+)
+
+# 2. Hermetic Perl test verifying rules_perl toolchain
+perl_test(
+    name = "perl_toolchain_test",
+    size = "small",
+    srcs = ["test_perl.t"],
+)
+
+# 3. Base binaries for cross-platform transitions
+cc_binary(
+    name = "cross_cc_binary",
+    srcs = ["test_cc.c"],
+)
+
+perl_binary(
+    name = "cross_perl_binary",
+    srcs = ["test_perl.t"],
+    main = "test_perl.t",
+)
+
+# 4. Multi-arch platform binaries across Linux & macOS (x86_64 & arm64)
+platform_binary(
+    name = "cross_cc_linux_x86_64",
+    actual = ":cross_cc_binary",
+    platform = "//platforms:linux_x86_64",
+)
+
+platform_binary(
+    name = "cross_cc_linux_arm64",
+    actual = ":cross_cc_binary",
+    platform = "//platforms:linux_arm64",
+)
+
+platform_binary(
+    name = "cross_perl_linux_x86_64",
+    actual = ":cross_perl_binary",
+    platform = "//platforms:linux_x86_64",
+)
+
+platform_binary(
+    name = "cross_perl_linux_arm64",
+    actual = ":cross_perl_binary",
+    platform = "//platforms:linux_arm64",
+)
+
+platform_binary(
+    name = "cross_perl_darwin_x86_64",
+    actual = ":cross_perl_binary",
+    platform = "//platforms:darwin_x86_64",
+)
+
+platform_binary(
+    name = "cross_perl_darwin_arm64",
+    actual = ":cross_perl_binary",
+    platform = "//platforms:darwin_arm64",
+)
+
+# Multi-platform verification test ensuring cross targets are buildable across platforms
+multi_platform_test(
+    name = "cross_compilation_test",
+    size = "small",
+    targets = [
+        ":cross_cc_linux_x86_64",
+        ":cross_cc_linux_arm64",
+        ":cross_perl_linux_x86_64",
+        ":cross_perl_linux_arm64",
+        ":cross_perl_darwin_x86_64",
+        ":cross_perl_darwin_arm64",
+    ],
+)

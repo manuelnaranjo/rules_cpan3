@@ -1,6 +1,6 @@
 load("@stardoc//stardoc:stardoc.bzl", "stardoc")
 
-_PUBLIC_FILES = [
+_CPAN_PUBLIC_FILES = [
     "defs",
     "extensions",
 ]
@@ -12,10 +12,27 @@ _PUBLIC_FILES = [
         input = "//cpan:{}.bzl".format(name),
         deps = ["//cpan:{}".format(name)],
     )
-    for name in _PUBLIC_FILES
+    for name in _CPAN_PUBLIC_FILES
 ]
+
+stardoc(
+    name = "platforms",
+    out = "platforms.md",
+    input = "//platforms:platforms.bzl",
+    deps = ["//platforms:platforms_bzl"],
+)
+
+stardoc(
+    name = "transitions",
+    out = "transitions.md",
+    input = "//platforms:transitions.bzl",
+    deps = ["//platforms:platforms_bzl"],
+)
 
 filegroup(
     name = "docs",
-    srcs = [":{}".format(name) for name in _PUBLIC_FILES],
+    srcs = [":{}".format(name) for name in _CPAN_PUBLIC_FILES] + [
+        ":platforms",
+        ":transitions",
+    ],
 )
