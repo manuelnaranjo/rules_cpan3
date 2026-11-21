@@ -2,11 +2,12 @@
 
 load("@bazel_skylib//rules:build_test.bzl", "build_test")
 
-filegroup(name = "empty")
-
 build_test(
     name = "smoke_test",
     targets = [
-        ":empty",
+        "@rules_cpan//platforms:darwin_arm64",
+        "@rules_cpan//platforms:darwin_x86_64",
+        "@rules_cpan//platforms:linux_arm64",
+        "@rules_cpan//platforms:linux_x86_64",
     ],
 )

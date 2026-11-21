@@ -1,0 +1,15 @@
+"""Public platforms API for rules_cpan"""
+
+PLATFORMS = {
+    "darwin_arm64": "//platforms:darwin_arm64",
+    "darwin_x86_64": "//platforms:darwin_x86_64",
+    "linux_arm64": "//platforms:linux_arm64",
+    "linux_x86_64": "//platforms:linux_x86_64",
+}
+
+SUPPORTED_PLATFORMS = [
+    "//platforms:linux_x86_64",
+    "//platforms:linux_arm64",
+    "//platforms:darwin_x86_64",
+    "//platforms:darwin_arm64",
+]
