@@ -1,5 +1,9 @@
 common --lockfile_mode=update
 
+# BCR Registries: local 3rdparty registry first, followed by public BCR
+common --registry=file://%workspace%/../../bazel/3rdparty
+common --registry=https://bcr.bazel.build
+
 # BuildBuddy Remote Build Execution (RBE) Configuration
 common:rbe --remote_executor=grpcs://remote.buildbuddy.io
 common:rbe --remote_cache=grpcs://remote.buildbuddy.io
