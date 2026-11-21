@@ -27,3 +27,23 @@ bazel_dep(name = "stardoc", version = "0.8.1", dev_dependency = True)
 bazel_dep(name = "protobuf", version = "33.6", dev_dependency = True)
 
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.10.0")
+
+# External CPAN test dependency for hermetic XS C integration testing
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "cpan_compress_raw_zlib",
+    build_file = "//tests:BUILD.Compress-Raw-Zlib.bazel",
+    dev_dependency = True,
+    integrity = "sha256-gNwQSnM5duukDb6Scs0y6/GDGVIE4L3TDiFKN9KsQss=",
+    patch_cmds = [
+        "cp fallback/constants.h constants.h",
+        "cp fallback/constants.xs constants.xs",
+    ],
+    patch_cmds_win = [
+        "copy fallback\\constants.h constants.h",
+        "copy fallback\\constants.xs constants.xs",
+    ],
+    strip_prefix = "Compress-Raw-Zlib-2.226",
+    urls = ["https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.226.tar.gz"],
+)
