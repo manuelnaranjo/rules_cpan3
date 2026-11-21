@@ -23,7 +23,7 @@ cc_test(
     name = "zlib_consumption_test",
     size = "small",
     srcs = ["test_zlib.c"],
-    deps = ["@zlib//:zlib"],
+    deps = ["@zlib"],
 )
 
 perl_test(
@@ -94,7 +94,7 @@ platform_binary(
 cc_binary(
     name = "cross_zlib_binary",
     srcs = ["test_zlib.c"],
-    deps = ["@zlib//:zlib"],
+    deps = ["@zlib"],
 )
 
 platform_binary(
