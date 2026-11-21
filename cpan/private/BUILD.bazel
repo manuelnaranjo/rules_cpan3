@@ -1,0 +1,8 @@
+load("@bazel_lib//:bzl_library.bzl", "bzl_library")
+
+package(default_visibility = ["//:__subpackages__"])
+
+bzl_library(
+    name = "rules",
+    srcs = ["rules.bzl"],
+)
