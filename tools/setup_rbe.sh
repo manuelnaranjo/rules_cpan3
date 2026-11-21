@@ -15,12 +15,20 @@ if [ -z "${TOKEN}" ]; then
   exit 1
 fi
 
+if [[ ! "${ENDPOINT}" =~ ^grpcs?:// ]]; then
+  ENDPOINT="grpcs://${ENDPOINT}"
+fi
+
+HOST="${ENDPOINT#*://}"
+RESULTS_URL="https://${HOST}/invocation/"
+
 cat <<EOF >> "${TARGET_RC}"
 
 # BuildBuddy RBE credentials (configured via tools/setup_rbe.sh)
 common:rbe --remote_executor=${ENDPOINT}
 common:rbe --remote_cache=${ENDPOINT}
 common:rbe --bes_backend=${ENDPOINT}
+common:rbe --bes_results_url=${RESULTS_URL}
 common:rbe --remote_header=x-buildbuddy-api-key=${TOKEN}
 common:rbe --bes_header=x-buildbuddy-api-key=${TOKEN}
 EOF
