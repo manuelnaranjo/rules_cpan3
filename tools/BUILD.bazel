@@ -17,3 +17,5 @@ gazelle(
     gazelle = "gazelle_bin",
     visibility = ["//visibility:public"],
 )
+
+exports_files(["setup_rbe.sh"])

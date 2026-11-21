@@ -13,3 +13,8 @@ SUPPORTED_PLATFORMS = [
     "//platforms:darwin_x86_64",
     "//platforms:darwin_arm64",
 ]
+
+RBE_PLATFORMS = {
+    "linux_arm64": "//platforms:rbe_linux_arm64",
+    "linux_x86_64": "//platforms:rbe_linux_x86_64",
+}

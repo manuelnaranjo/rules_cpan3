@@ -9,5 +9,7 @@ build_test(
         "@rules_cpan//platforms:darwin_x86_64",
         "@rules_cpan//platforms:linux_arm64",
         "@rules_cpan//platforms:linux_x86_64",
+        "@rules_cpan//platforms:rbe_linux_arm64",
+        "@rules_cpan//platforms:rbe_linux_x86_64",
     ],
 )

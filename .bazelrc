@@ -17,6 +17,25 @@ common --incompatible_enable_proto_toolchain_resolution
 # Perl rules configuration (enable XS dynamic loading)
 common --@rules_perl//perl/settings:xs=true
 
+# --- BuildBuddy Remote Build Execution (RBE) Configuration ---
+# Remote executor, cache, and BES endpoints
+common:rbe --remote_executor=grpcs://remote.buildbuddy.io
+common:rbe --remote_cache=grpcs://remote.buildbuddy.io
+common:rbe --bes_backend=grpcs://remote.buildbuddy.io
+common:rbe --bes_results_url=https://app.buildbuddy.io/invocation/
+
+# Remote execution properties compatible with hermetic toolchains (LLVM + Perl)
+common:rbe --remote_default_exec_properties=container-image=docker://gcr.io/flame-public/rbe-ubuntu22-04:latest
+common:rbe --remote_default_exec_properties=OSFamily=Linux
+common:rbe --extra_execution_platforms=//platforms:rbe_linux_x86_64
+
+# Execution and caching optimizations
+common:rbe --remote_download_outputs=minimal
+common:rbe --remote_download_regex='.*\.log$'
+common:rbe --remote_timeout=3600
+common:rbe --remote_upload_local_results=true
+common:rbe --jobs=50
+
 # Ensure that the MODULE.bazel.lock file is complete and committed.
 common --lockfile_mode=update
 

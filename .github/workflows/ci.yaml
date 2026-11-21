@@ -24,6 +24,8 @@ jobs:
         working-directory: ${{ matrix.folder }}
     env:
       USE_BAZEL_VERSION: ${{ matrix.bazel }}
+      BB_ENDPOINT: ${{ vars.BB_ENDPOINT || secrets.BB_ENDPOINT }}
+      BB_TOKEN: ${{ secrets.BB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
       - uses: bazel-contrib/setup-bazel@0.19.2
@@ -33,7 +35,40 @@ jobs:
           repository-cache: true
           bazelrc: |
             ${{ matrix.folder == '.' && 'common --config=ci ' || '' }}
-      - run: bazel test //...
+      - name: Configure BuildBuddy RBE credentials
+        if: ${{ env.BB_TOKEN != '' }}
+        run: |
+          ENDPOINT="${BB_ENDPOINT:-grpcs://remote.buildbuddy.io}"
+          if [[ ! "${ENDPOINT}" =~ ^grpcs?:// ]]; then
+            ENDPOINT="grpcs://${ENDPOINT}"
+          fi
+          HOST="${ENDPOINT#*://}"
+          RESULTS_URL="https://${HOST}/invocation/"
+          cat >> ~/.bazelrc <<EOF
+          common:rbe --remote_executor=${ENDPOINT}
+          common:rbe --remote_cache=${ENDPOINT}
+          common:rbe --bes_backend=${ENDPOINT}
+          common:rbe --bes_results_url=${RESULTS_URL}
+          common:rbe --remote_header=x-buildbuddy-api-key=${BB_TOKEN}
+          common:rbe --bes_header=x-buildbuddy-api-key=${BB_TOKEN}
+          common:rbe --build_metadata=ROLE=CI
+          EOF
+          cat >> .bazelrc.user <<EOF
+          common:rbe --remote_executor=${ENDPOINT}
+          common:rbe --remote_cache=${ENDPOINT}
+          common:rbe --bes_backend=${ENDPOINT}
+          common:rbe --bes_results_url=${RESULTS_URL}
+          common:rbe --remote_header=x-buildbuddy-api-key=${BB_TOKEN}
+          common:rbe --bes_header=x-buildbuddy-api-key=${BB_TOKEN}
+          common:rbe --build_metadata=ROLE=CI
+          EOF
+      - name: Run Bazel tests
+        run: |
+          if [ -n "${BB_TOKEN}" ]; then
+            bazel test --config=rbe //...
+          else
+            bazel test //...
+          fi
 
   pre-commit:
     runs-on: ubuntu-latest

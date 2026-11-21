@@ -44,6 +44,12 @@ platform_binary(
 )
 
 platform_binary(
+    name = "cross_cc_rbe_linux_x86_64",
+    actual = ":cross_cc_binary",
+    platform = "//platforms:rbe_linux_x86_64",
+)
+
+platform_binary(
     name = "cross_perl_linux_x86_64",
     actual = ":cross_perl_binary",
     platform = "//platforms:linux_x86_64",
@@ -74,6 +80,7 @@ multi_platform_test(
     targets = [
         ":cross_cc_linux_x86_64",
         ":cross_cc_linux_arm64",
+        ":cross_cc_rbe_linux_x86_64",
         ":cross_perl_linux_x86_64",
         ":cross_perl_linux_arm64",
         ":cross_perl_darwin_x86_64",
