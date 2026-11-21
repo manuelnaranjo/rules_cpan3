@@ -4,6 +4,8 @@ load("//platforms:transitions.bzl", "multi_platform_test", "platform_binary")
 
 package(default_visibility = ["//visibility:public"])
 
+exports_files(["BUILD.Compress-Raw-Zlib.bazel"])
+
 # 1. Hermetic C test verifying LLVM compiler
 cc_test(
     name = "cc_toolchain_test",
@@ -85,5 +87,14 @@ multi_platform_test(
         ":cross_perl_linux_arm64",
         ":cross_perl_darwin_x86_64",
         ":cross_perl_darwin_arm64",
+    ],
+)
+
+# CPAN module tests building and linking against BCR native C dependencies (@zlib)
+test_suite(
+    name = "cpan_compress_raw_zlib_tests",
+    tests = [
+        "@cpan_compress_raw_zlib//:version_test",
+        "@cpan_compress_raw_zlib//:zlib_test",
     ],
 )

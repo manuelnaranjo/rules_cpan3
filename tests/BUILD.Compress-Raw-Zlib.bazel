@@ -1,5 +1,5 @@
+load("@rules_cpan//cpan:defs.bzl", "cpan_xs")
 load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
-load("//cpan:defs.bzl", "cpan_xs")
 
 package(default_visibility = ["//visibility:public"])
 
