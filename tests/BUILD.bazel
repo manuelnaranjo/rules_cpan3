@@ -18,25 +18,7 @@ perl_test(
     srcs = ["test_perl.t"],
 )
 
-# 3. Hermetic 3rdparty native C dependency consumption (zlib from local BCR registry)
-cc_test(
-    name = "zlib_consumption_test",
-    size = "small",
-    srcs = ["test_zlib.c"],
-    deps = ["@zlib"],
-)
-
-perl_test(
-    name = "perl_zlib_test",
-    size = "small",
-    srcs = ["test_zlib.t"],
-    data = [":zlib_consumption_test"],
-    env = {
-        "TEST_WORKSPACE": "rules_cpan",
-    },
-)
-
-# 4. Base binaries for cross-platform transitions
+# 3. Base binaries for cross-platform transitions
 cc_binary(
     name = "cross_cc_binary",
     srcs = ["test_cc.c"],
@@ -91,36 +73,6 @@ platform_binary(
     platform = "//platforms:darwin_arm64",
 )
 
-cc_binary(
-    name = "cross_zlib_binary",
-    srcs = ["test_zlib.c"],
-    deps = ["@zlib"],
-)
-
-platform_binary(
-    name = "cross_zlib_linux_x86_64",
-    actual = ":cross_zlib_binary",
-    platform = "//platforms:linux_x86_64",
-)
-
-platform_binary(
-    name = "cross_zlib_linux_arm64",
-    actual = ":cross_zlib_binary",
-    platform = "//platforms:linux_arm64",
-)
-
-platform_binary(
-    name = "cross_zlib_darwin_x86_64",
-    actual = ":cross_zlib_binary",
-    platform = "//platforms:darwin_x86_64",
-)
-
-platform_binary(
-    name = "cross_zlib_darwin_arm64",
-    actual = ":cross_zlib_binary",
-    platform = "//platforms:darwin_arm64",
-)
-
 # Multi-platform verification test ensuring cross targets are buildable across platforms
 multi_platform_test(
     name = "cross_compilation_test",
@@ -133,9 +85,5 @@ multi_platform_test(
         ":cross_perl_linux_arm64",
         ":cross_perl_darwin_x86_64",
         ":cross_perl_darwin_arm64",
-        ":cross_zlib_linux_x86_64",
-        ":cross_zlib_linux_arm64",
-        ":cross_zlib_darwin_x86_64",
-        ":cross_zlib_darwin_arm64",
     ],
 )

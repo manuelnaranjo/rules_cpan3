@@ -5,4 +5,11 @@ package(default_visibility = ["//:__subpackages__"])
 bzl_library(
     name = "rules",
     srcs = ["rules.bzl"],
+    deps = [
+        "@bazel_skylib//lib:new_sets",
+        "@bazel_skylib//lib:paths",
+        "@rules_cc//cc:defs",
+        "@rules_cc//cc:find_cc_toolchain",
+        "@rules_perl//perl:defs_bzl",
+    ],
 )

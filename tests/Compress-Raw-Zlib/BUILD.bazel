@@ -1,0 +1,72 @@
+load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
+load("//cpan:defs.bzl", "cpan_xs")
+
+package(default_visibility = ["//visibility:public"])
+
+cpan_xs(
+    name = "zlib_xs",
+    srcs = ["Zlib.xs"],
+    defines = [
+        "NO_VIZ",
+        "USE_PPPORT_H",
+        "GZIP_OS_CODE=3",
+        "Perl_crz_BUILD_ZLIB=0",
+    ],
+    output_loc = "auto/Compress/Raw/Zlib/Zlib",
+    textual_hdrs = [
+        "constants.h",
+        "constants.xs",
+        "ppport.h",
+    ],
+    typemaps = ["typemap"],
+    deps = [
+        "@zlib",
+    ],
+)
+
+perl_library(
+    name = "Compress-Raw-Zlib",
+    srcs = [
+        "lib/Compress/Raw/Zlib.pm",
+    ],
+    data = [
+        ":zlib_xs",
+    ],
+    includes = [
+        ".",
+        "lib",
+    ],
+)
+
+perl_library(
+    name = "test_utils",
+    srcs = [
+        "t/compress/CompTestUtils.pm",
+    ],
+    includes = [
+        "t",
+        "t/compress",
+    ],
+)
+
+perl_test(
+    name = "version_test",
+    size = "small",
+    srcs = ["t/01version.t"],
+    deps = [
+        ":Compress-Raw-Zlib",
+        ":test_utils",
+    ],
+)
+
+perl_test(
+    name = "zlib_test",
+    size = "small",
+    srcs = [
+        "t/02zlib.t",
+    ],
+    deps = [
+        ":Compress-Raw-Zlib",
+        ":test_utils",
+    ],
+)

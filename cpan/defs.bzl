@@ -1,6 +1,6 @@
 """Public API re-exports for rules_cpan"""
 
-load("//cpan/private:rules.bzl", _cpan_dummy = "cpan_dummy")
+load("//cpan/private:rules.bzl", _cpan_xs = "cpan_xs")
 load(
     "//platforms:platforms.bzl",
     _PLATFORMS = "PLATFORMS",
@@ -13,7 +13,7 @@ load(
     _platform_transition = "platform_transition",
 )
 
-cpan_dummy = _cpan_dummy
+cpan_xs = _cpan_xs
 PLATFORMS = _PLATFORMS
 RBE_PLATFORMS = _RBE_PLATFORMS
 SUPPORTED_PLATFORMS = _SUPPORTED_PLATFORMS

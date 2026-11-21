@@ -1,6 +1,5 @@
 load("@bazel_gazelle//:def.bzl", "gazelle", "gazelle_binary")
 load("@bazelrc-preset.bzl", "bazelrc_preset")
-load("@rules_shell//shell:sh_binary.bzl", "sh_binary")
 
 bazelrc_preset(
     name = "preset",
@@ -19,15 +18,4 @@ gazelle(
     visibility = ["//visibility:public"],
 )
 
-exports_files([
-    "port_3rdparty.py",
-    "port_3rdparty.sh",
-    "setup_rbe.sh",
-])
-
-sh_binary(
-    name = "port_3rdparty",
-    srcs = ["port_3rdparty.sh"],
-    data = ["port_3rdparty.py"],
-    visibility = ["//visibility:public"],
-)
+exports_files(["setup_rbe.sh"])
