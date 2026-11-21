@@ -1,0 +1,21 @@
+load("@stardoc//stardoc:stardoc.bzl", "stardoc")
+
+_PUBLIC_FILES = [
+    "defs",
+    "extensions",
+]
+
+[
+    stardoc(
+        name = name,
+        out = "{}.md".format(name),
+        input = "//cpan:{}.bzl".format(name),
+        deps = ["//cpan:{}".format(name)],
+    )
+    for name in _PUBLIC_FILES
+]
+
+filegroup(
+    name = "docs",
+    srcs = [":{}".format(name) for name in _PUBLIC_FILES],
+)
