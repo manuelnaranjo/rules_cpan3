@@ -538,4 +538,3 @@ __END__
   }
   return PERL_constant_NOTFOUND;
 }
-
