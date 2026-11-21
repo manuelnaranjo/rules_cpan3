@@ -28,18 +28,6 @@ jobs:
       BB_TOKEN: ${{ secrets.BB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
-      - name: Configure BuildBuddy RBE credentials
-        if: ${{ env.BB_TOKEN != '' }}
-        run: |
-          ENDPOINT="${BB_ENDPOINT:-grpcs://remote.buildbuddy.io}"
-          cat >> ~/.bazelrc <<EOF
-          common:rbe --remote_executor=${ENDPOINT}
-          common:rbe --remote_cache=${ENDPOINT}
-          common:rbe --bes_backend=${ENDPOINT}
-          common:rbe --remote_header=x-buildbuddy-api-key=${BB_TOKEN}
-          common:rbe --bes_header=x-buildbuddy-api-key=${BB_TOKEN}
-          common:rbe --build_metadata=ROLE=CI
-          EOF
       - uses: bazel-contrib/setup-bazel@0.19.2
         with:
           bazelisk-cache: true
@@ -47,6 +35,33 @@ jobs:
           repository-cache: true
           bazelrc: |
             ${{ matrix.folder == '.' && 'common --config=ci ' || '' }}
+      - name: Configure BuildBuddy RBE credentials
+        if: ${{ env.BB_TOKEN != '' }}
+        run: |
+          ENDPOINT="${BB_ENDPOINT:-grpcs://remote.buildbuddy.io}"
+          if [[ ! "${ENDPOINT}" =~ ^grpcs?:// ]]; then
+            ENDPOINT="grpcs://${ENDPOINT}"
+          fi
+          HOST="${ENDPOINT#*://}"
+          RESULTS_URL="https://${HOST}/invocation/"
+          cat >> ~/.bazelrc <<EOF
+          common:rbe --remote_executor=${ENDPOINT}
+          common:rbe --remote_cache=${ENDPOINT}
+          common:rbe --bes_backend=${ENDPOINT}
+          common:rbe --bes_results_url=${RESULTS_URL}
+          common:rbe --remote_header=x-buildbuddy-api-key=${BB_TOKEN}
+          common:rbe --bes_header=x-buildbuddy-api-key=${BB_TOKEN}
+          common:rbe --build_metadata=ROLE=CI
+          EOF
+          cat >> .bazelrc.user <<EOF
+          common:rbe --remote_executor=${ENDPOINT}
+          common:rbe --remote_cache=${ENDPOINT}
+          common:rbe --bes_backend=${ENDPOINT}
+          common:rbe --bes_results_url=${RESULTS_URL}
+          common:rbe --remote_header=x-buildbuddy-api-key=${BB_TOKEN}
+          common:rbe --bes_header=x-buildbuddy-api-key=${BB_TOKEN}
+          common:rbe --build_metadata=ROLE=CI
+          EOF
       - name: Run Bazel tests
         run: |
           if [ -n "${BB_TOKEN}" ]; then
