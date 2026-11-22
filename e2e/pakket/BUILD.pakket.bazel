@@ -1,0 +1,107 @@
+load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
+
+package(default_visibility = ["//visibility:public"])
+
+perl_library(
+    name = "pakket",
+    srcs = glob(["lib/**/*.pm"]),
+    data = glob(
+        ["share/**/*"],
+        allow_empty = True,
+        exclude = ["share/02packages.details.txt"],
+    ),
+    includes = [
+        "lib",
+    ],
+    deps = [
+        "@cpan//Algorithm-Diff",
+        "@cpan//Algorithm-Diff-Callback",
+        "@cpan//App-Cmd",
+        "@cpan//Archive-Any",
+        "@cpan//Archive-Tar",
+        "@cpan//Capture-Tiny",
+        "@cpan//Compress-Raw-Zlib",
+        "@cpan//Config-Any",
+        "@cpan//Cpanel-JSON-XS",
+        "@cpan//Data-OptList",
+        "@cpan//Data-Printer",
+        "@cpan//File-Copy-Recursive",
+        "@cpan//File-HomeDir",
+        "@cpan//File-Lockfile",
+        "@cpan//File-ShareDir",
+        "@cpan//File-chdir",
+        "@cpan//Git-Wrapper",
+        "@cpan//IO-Interactive",
+        "@cpan//IO-Prompt-Tiny",
+        "@cpan//JSON-MaybeXS",
+        "@cpan//Log-Any",
+        "@cpan//Log-Any-Adapter-Dispatch",
+        "@cpan//Log-Dispatch",
+        "@cpan//Module-CPANfile",
+        "@cpan//Module-Runtime",
+        "@cpan//Moose",
+        "@cpan//MooseX-Clone",
+        "@cpan//MooseX-StrictConstructor",
+        "@cpan//Package-Stash",
+        "@cpan//Params-Util",
+        "@cpan//Path-Tiny",
+        "@cpan//Ref-Util",
+        "@cpan//Safe-Isa",
+        "@cpan//Sub-Exporter",
+        "@cpan//Sub-Identify",
+        "@cpan//Sub-Install",
+        "@cpan//Sub-Name",
+        "@cpan//System-Command",
+        "@cpan//Try-Tiny",
+        "@cpan//Type-Tiny",
+        "@cpan//Types-Path-Tiny",
+        "@cpan//Unicode-UTF8",
+        "@cpan//Variable-Magic",
+        "@cpan//YAML-LibYAML",
+        "@cpan//namespace-autoclean",
+        "@cpan//namespace-clean",
+    ],
+)
+
+perl_library(
+    name = "test_utils",
+    srcs = glob(["t/lib/**/*.pm"]),
+    includes = ["t"],
+    deps = [
+        ":pakket",
+        "@cpan//Test-Simple",
+    ],
+)
+
+perl_test(
+    name = "package_utils_test",
+    size = "small",
+    srcs = ["t/Pakket/Utils/Package.pm.t"],
+    deps = [
+        ":pakket",
+        ":test_utils",
+        "@cpan//Test-Simple",
+    ],
+)
+
+perl_test(
+    name = "versioner_test",
+    size = "small",
+    srcs = ["t/Pakket/Helper/Versioner.pm.t"],
+    deps = [
+        ":pakket",
+        ":test_utils",
+        "@cpan//Test-Simple",
+    ],
+)
+
+perl_test(
+    name = "utils_test",
+    size = "small",
+    srcs = ["t/Pakket/Utils.pm.t"],
+    deps = [
+        ":pakket",
+        ":test_utils",
+        "@cpan//Test-Simple",
+    ],
+)

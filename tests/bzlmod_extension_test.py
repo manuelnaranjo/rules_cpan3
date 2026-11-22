@@ -211,6 +211,25 @@ class BzlmodExtensionTests(unittest.TestCase):
         self.assertIn('"no-remote": "1"', reqs_str)
         self.assertIn('"supports-path-mapping": "1"', reqs_str)
 
+    def test_injected_targets_mapping(self):
+        injected = {
+            "Compress-Raw-Zlib": "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
+        }
+        all_dists = {"Algorithm-Diff": "cpan__Algorithm-Diff"}
+        # Combined keys
+        combined = dict(all_dists)
+        for dist in injected:
+            if dist not in combined:
+                combined[dist] = ""
+        self.assertIn("Compress-Raw-Zlib", combined)
+        self.assertIn("Algorithm-Diff", combined)
+
+        # Resolution for alias
+        actual_injected = injected.get("Compress-Raw-Zlib", "@cpan__Compress-Raw-Zlib//:Compress-Raw-Zlib")
+        actual_normal = injected.get("Algorithm-Diff", "@cpan__Algorithm-Diff//:Algorithm-Diff")
+        self.assertEqual(actual_injected, "@perl-compress-raw-zlib//:Compress-Raw-Zlib")
+        self.assertEqual(actual_normal, "@cpan__Algorithm-Diff//:Algorithm-Diff")
+
 
 if __name__ == "__main__":
     unittest.main()

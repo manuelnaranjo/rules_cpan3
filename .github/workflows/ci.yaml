@@ -19,6 +19,7 @@ jobs:
         folder:
           - .
           - e2e/smoke
+          - e2e/pakket
     defaults:
       run:
         working-directory: ${{ matrix.folder }}

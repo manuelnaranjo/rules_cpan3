@@ -1,0 +1,48 @@
+bazel_dep(name = "rules_cpan", version = "0.0.0", dev_dependency = True)
+
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "bazel_skylib", version = "1.9.2")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "zlib", version = "1.3.1.bcr.5")
+bazel_dep(name = "perl-compress-raw-zlib", version = "2.226")
+bazel_dep(name = "perl-io-tty", version = "1.20")
+
+local_path_override(
+    module_name = "rules_cpan",
+    path = "../..",
+)
+
+# CPAN dependency installation via Bzlmod module extension
+cpan = use_extension("@rules_cpan//cpan:extensions.bzl", "cpan")
+cpan.install(
+    name = "cpan",
+    lock = "//:cpan.lock.json",
+)
+cpan.inject(
+    distribution = "Compress-Raw-Zlib",
+    hub = "cpan",
+    target = "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
+)
+cpan.inject(
+    distribution = "IO-Tty",
+    hub = "cpan",
+    target = "@perl-io-tty//:IO-Tty",
+)
+cpan.annotation(
+    defines = ["HAVE_CONFIG_H"],
+    distribution = "YAML-LibYAML",
+    hub = "cpan",
+    output_loc = "auto/YAML/XS/LibYAML/LibYAML",
+)
+use_repo(cpan, "cpan")
+
+# Pakket upstream repository
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "pakket",
+    build_file = "//:BUILD.pakket.bazel",
+    integrity = "sha256-uGijrtONHS5BKaB2mKki+683VlIdWAXpj/Wq7W8ABIQ=",
+    strip_prefix = "pakket-3.417",
+    urls = ["https://github.com/bookingcom/pakket/archive/refs/tags/3.417.tar.gz"],
+)

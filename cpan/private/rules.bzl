@@ -27,7 +27,13 @@ def _compile_flags(toolchain, cc_toolchain, is_windows):
         ccflags = [flag for flag in ccflags if flag.startswith("-D")]
         if _is_msvc(cc_toolchain.compiler):
             ccflags.append("-D__inline__=__inline")
-    return ccflags + toolchain.cccdlflags
+    raw_flags = ccflags + toolchain.cccdlflags
+    clean_flags = []
+    for flag in raw_flags:
+        if flag.startswith("-I/usr") or flag.startswith("-I/opt"):
+            continue
+        clean_flags.append(flag)
+    return clean_flags
 
 def _dlext(toolchain, is_windows, is_macos):
     if toolchain.dlext:

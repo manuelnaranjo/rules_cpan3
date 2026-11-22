@@ -1,0 +1,9 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/IO-Tty-1.31.tar.gz",
+    "integrity": "sha256-1ZevIhYoVxy+zzW0RSAUjER5jfyKmGd3TmBFP3nSX/c=",
+    "strip_prefix": "IO-Tty-1.31",
+    "patch_strip": 1,
+    "patches": {
+        "add_build_file.patch": "sha256-6+ZwcRVV3hJUrWYaolbWQSvoadvJigLlKTLpQOrkrpU="
+    }
+}
