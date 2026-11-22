@@ -157,6 +157,9 @@ def _cpan_impl(module_ctx):
                         tags.extend(annot.tags)
 
                 dist_test_tags = list(install.test_tags.get(dist_name, []))
+                strip_prefix = ""
+                if annot and hasattr(annot, "strip_prefix") and annot.strip_prefix:
+                    strip_prefix = annot.strip_prefix
                 if dist_name in whole_dist_manual:
                     if "manual" not in dist_test_tags:
                         dist_test_tags.append("manual")
@@ -195,6 +198,7 @@ def _cpan_impl(module_ctx):
                     test_deps = test_deps,
                     test_tags = dist_test_tags,
                     manual_tests = specific_manual,
+                    strip_prefix = strip_prefix,
                 )
 
             hub_test_tags = {}
@@ -284,6 +288,10 @@ annotation_tag = tag_class(
         "patch_cmds_win": attr.string_list(
             doc = "Patch windows commands.",
             default = [],
+        ),
+        "strip_prefix": attr.string(
+            doc = "Archive directory prefix to strip from distribution archive.",
+            default = "",
         ),
         "tags": attr.string_list(
             doc = "Bazel tags to add to the generated targets.",

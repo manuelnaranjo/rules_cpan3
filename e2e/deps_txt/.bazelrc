@@ -1,0 +1,12 @@
+# Import shared configuration from repo root
+import %workspace%/../../shared.bazelrc
+
+# BCR Registries: local 3rdparty registry first, followed by public BCR
+common --registry=file://%workspace%/../../bazel/3rdparty
+common --registry=https://bcr.bazel.build
+
+# Perl rules configuration (enable XS dynamic loading)
+common --@rules_perl//perl/settings:xs=true
+
+# Load any settings specific to the current user.
+try-import %workspace%/.bazelrc.user
