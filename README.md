@@ -34,4 +34,3 @@ bazel run --invocation_id=${INVOCATION_ID} //tools:resolver -- --input deps.txt 
 ```
 
 See [docs/resolver.md](docs/resolver.md) for full details, lockfile format specifications, and CLI options.
-
