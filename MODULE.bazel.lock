@@ -283,7 +283,7 @@
   "moduleExtensions": {
     "//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "s1n8UleLVyCuT7VFlHlF0qjcUbKM0dLYsNx1TAYCD68=",
+        "bzlTransitiveDigest": "P8B1PdxP1npJ3vXJGexoBKrMGe30Qf8p1lsAwSUxCkw=",
         "usagesDigest": "++covx/Ue6EFULVnJUzFJ2/TpnncaKg7EvXIHQzaPi4=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
