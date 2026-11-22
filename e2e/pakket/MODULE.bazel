@@ -32,6 +32,7 @@ cpan.annotation(
     defines = ["HAVE_CONFIG_H"],
     distribution = "YAML-LibYAML",
     hub = "cpan",
+    includes = ["LibYAML/lib"],
     output_loc = "auto/YAML/XS/LibYAML/LibYAML",
 )
 use_repo(cpan, "cpan")

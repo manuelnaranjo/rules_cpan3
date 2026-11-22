@@ -172,9 +172,26 @@ def _cpan_dist_repo_impl(ctx):
         exec_reqs_str = ""
 
     includes_list = ['"."', '"lib"']
-    if ctx.path("LibYAML/lib").exists:
-        includes_list.append('"LibYAML/lib"')
+    for inc in ctx.attr.includes:
+        quoted = '"%s"' % inc
+        if quoted not in includes_list:
+            includes_list.append(quoted)
     includes_str = "\n        " + ",\n        ".join(includes_list) + ",\n    "
+
+    src_patterns = ['"lib/**/*.pm"', '"lib/**/*.pod"', '"*.pm"']
+    data_patterns = ['"lib/**/*"']
+    exclude_patterns = ['"lib/**/*.pm"', '"lib/**/*.pod"']
+
+    for inc in ctx.attr.includes:
+        src_patterns.append('"%s/**/*.pm"' % inc)
+        src_patterns.append('"%s/**/*.pod"' % inc)
+        data_patterns.append('"%s/**/*"' % inc)
+        exclude_patterns.append('"%s/**/*.pm"' % inc)
+        exclude_patterns.append('"%s/**/*.pod"' % inc)
+
+    srcs_str = "\n        " + ",\n        ".join(src_patterns) + ",\n    "
+    data_str = "\n        " + ",\n        ".join(data_patterns) + ",\n    "
+    exclude_str = "\n        " + ",\n        ".join(exclude_patterns) + ",\n    "
 
     if not ctx.attr.is_xs:
         # Pure Perl distribution
@@ -185,27 +202,16 @@ package(default_visibility = ["//visibility:public"])
 
 perl_library(
     name = "{dist_name}",
-    srcs = glob([
-        "lib/**/*.pm",
-        "lib/**/*.pod",
-        "*.pm",
-        "LibYAML/lib/**/*.pm",
-        "LibYAML/lib/**/*.pod",
-    ], allow_empty = True),
-    data = glob([
-        "lib/**/*",
-        "LibYAML/lib/**/*",
-    ], exclude = [
-        "lib/**/*.pm",
-        "lib/**/*.pod",
-        "LibYAML/lib/**/*.pm",
-        "LibYAML/lib/**/*.pod",
-    ], allow_empty = True),
+    srcs = glob([{srcs_str}], allow_empty = True),
+    data = glob([{data_str}], exclude = [{exclude_str}], allow_empty = True),
     includes = [{includes_str}],{exec_compat_str}{tags_str}{target_compat_str}
     deps = [{deps_str}],
 )
 """.format(
             dist_name = ctx.attr.dist_name,
+            srcs_str = srcs_str,
+            data_str = data_str,
+            exclude_str = exclude_str,
             deps_str = deps_str,
             exec_compat_str = exec_compat_str,
             includes_str = includes_str,
@@ -215,23 +221,10 @@ perl_library(
     else:
         # XS (C extension) module
         output_loc = ctx.attr.output_loc
-        if not output_loc and not ctx.os.name.startswith("windows"):
-            res = ctx.execute(["sh", "-c", "grep -m1 '^MODULE =' *.xs */*.xs 2>/dev/null"])
-            if res.return_code == 0 and res.stdout.strip():
-                line = res.stdout.strip().split("\n")[0]
-                if "MODULE =" in line:
-                    mod_part = line.split("MODULE =")[1].strip().split()[0]
-                    parts = mod_part.split("::")
-                    output_loc = "auto/" + "/".join(parts) + "/" + parts[-1]
         if not output_loc:
             output_loc = _compute_output_loc(ctx.attr.dist_name, ctx.attr.provides)
 
-        defines = list(ctx.attr.defines)
-        if "HAVE_CONFIG_H" not in defines:
-            if ctx.path("config.h").exists or ctx.path("LibYAML/config.h").exists or ctx.path("src/config.h").exists:
-                defines.append("HAVE_CONFIG_H")
-
-        defines_items = ['"%s"' % d for d in defines]
+        defines_items = ['"%s"' % d for d in ctx.attr.defines]
         if defines_items:
             defines_str = "\n        " + ",\n        ".join(defines_items) + ",\n    "
         else:
@@ -280,30 +273,19 @@ cpan_xs(
 
 perl_library(
     name = "{dist_name}",
-    srcs = glob([
-        "lib/**/*.pm",
-        "lib/**/*.pod",
-        "*.pm",
-        "LibYAML/lib/**/*.pm",
-        "LibYAML/lib/**/*.pod",
-    ], allow_empty = True),
+    srcs = glob([{srcs_str}], allow_empty = True),
     data = [
         ":{dist_name}_xs",
-    ] + glob([
-        "lib/**/*",
-        "LibYAML/lib/**/*",
-    ], exclude = [
-        "lib/**/*.pm",
-        "lib/**/*.pod",
-        "LibYAML/lib/**/*.pm",
-        "LibYAML/lib/**/*.pod",
-    ], allow_empty = True),
+    ] + glob([{data_str}], exclude = [{exclude_str}], allow_empty = True),
     includes = [{includes_str}],{exec_compat_str}{tags_str}{target_compat_str}
     deps = [{deps_str}],
 )
 """.format(
             dist_name = ctx.attr.dist_name,
             output_loc = output_loc,
+            srcs_str = srcs_str,
+            data_str = data_str,
+            exclude_str = exclude_str,
             defines_str = defines_str,
             native_deps_str = native_deps_str,
             deps_str = deps_str,
@@ -339,6 +321,10 @@ cpan_dist_repo = repository_rule(
         "execution_requirements": attr.string_dict(
             doc = "Optional execution requirements for actions (e.g. {'no-remote': '1'}).",
             default = {},
+        ),
+        "includes": attr.string_list(
+            doc = "Optional extra include paths for Perl modules.",
+            default = [],
         ),
         "is_xs": attr.bool(
             doc = "Whether this distribution is an XS C extension.",

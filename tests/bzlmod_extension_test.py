@@ -202,6 +202,7 @@ class BzlmodExtensionTests(unittest.TestCase):
         # Verify formatting helper logic for annotations
         target_compat = ["@platforms//os:linux", "@platforms//os:macos"]
         exec_reqs = {"no-remote": "1", "supports-path-mapping": "1"}
+        extra_includes = ["LibYAML/lib", "custom/inc"]
 
         target_str = ", ".join(f'"{x}"' for x in target_compat)
         self.assertIn('"@platforms//os:linux"', target_str)
@@ -210,6 +211,14 @@ class BzlmodExtensionTests(unittest.TestCase):
         reqs_str = ", ".join(f'"{k}": "{v}"' for k, v in exec_reqs.items())
         self.assertIn('"no-remote": "1"', reqs_str)
         self.assertIn('"supports-path-mapping": "1"', reqs_str)
+
+        includes_list = ['"."', '"lib"']
+        for inc in extra_includes:
+            quoted = f'"{inc}"'
+            if quoted not in includes_list:
+                includes_list.append(quoted)
+        self.assertIn('"LibYAML/lib"', includes_list)
+        self.assertIn('"custom/inc"', includes_list)
 
     def test_injected_targets_mapping(self):
         injected = {
