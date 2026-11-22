@@ -280,8 +280,8 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "s1n8UleLVyCuT7VFlHlF0qjcUbKM0dLYsNx1TAYCD68=",
-        "usagesDigest": "YEDkOqQn7rWUBMF18LH0Jw0CEENeRiHQbBOjkWblNZE=",
+        "bzlTransitiveDigest": "P8B1PdxP1npJ3vXJGexoBKrMGe30Qf8p1lsAwSUxCkw=",
+        "usagesDigest": "z1n8ndX0j+N2wL7woLDeDZxx3zUAKcGh+1+tFZnZmMI=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -1494,7 +1494,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [
+                "manual"
+              ]
             }
           },
           "cpan__File-chdir": {
@@ -6093,6 +6095,7 @@
                 "Data-Printer",
                 "File-Copy-Recursive",
                 "File-ShareDir",
+                "File-Which",
                 "IO-Tty",
                 "Module-Build",
                 "Moose",
