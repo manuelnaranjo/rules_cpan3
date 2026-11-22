@@ -21,7 +21,31 @@ In your `MODULE.bazel`:
 
 ```starlark
 bazel_dep(name = "rules_cpan", version = "...")
+
+cpan = use_extension("@rules_cpan//cpan:extensions.bzl", "cpan")
+cpan.install(
+    name = "cpan",
+    lock = "//:cpan.lock.json",
+)
+use_repo(cpan, "cpan")
 ```
+
+In your `BUILD.bazel`:
+
+```starlark
+load("@rules_perl//perl:defs.bzl", "perl_test")
+
+perl_test(
+    name = "my_test",
+    srcs = ["my_test.t"],
+    deps = [
+        "@cpan//Algorithm-Diff",
+        "@cpan//Compress-Raw-Zlib",
+    ],
+)
+```
+
+See [docs/bzlmod_rules.md](docs/bzlmod_rules.md) for full details on pure Perl vs. XS module generation, hub repositories, visibility rules, and custom overlays.
 
 ## Dependency Resolution & Lockfile Generation
 

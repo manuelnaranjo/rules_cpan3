@@ -17,6 +17,7 @@ bzl_library(
     name = "extensions",
     srcs = ["extensions.bzl"],
     deps = [
+        "//cpan/private:repo_rules",
         "//cpan/private:rules",
     ],
 )
