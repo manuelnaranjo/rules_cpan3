@@ -283,8 +283,8 @@
   "moduleExtensions": {
     "//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "CWmjotQUaBivXwNZk8R7n9Jm2dWtDeYed06DLJ8uzNM=",
-        "usagesDigest": "NUpExcyOOBxJ/lxPbHl9nosTmpGznJDkZdPQkG65YY8=",
+        "bzlTransitiveDigest": "r65GCG2KdO6BIg1oAySvTsXCpVzFW5IED2kv5K49a7w=",
+        "usagesDigest": "++covx/Ue6EFULVnJUzFJ2/TpnncaKg7EvXIHQzaPi4=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "FILE:@@//tests/cpan.lock.json 5dc46991e6cddf4382a13498df9f95a8525605e8d86795c36e2487e7d6eb5984"
@@ -1580,7 +1580,10 @@
                   "Pod::Text::Overstrike",
                   "Pod::Text::Termcap"
                 ]
-              }
+              },
+              "manual_tests": [],
+              "test_modules": {},
+              "test_tags": {}
             }
           },
           "cpan_alt__Algorithm-Diff": {
@@ -2891,7 +2894,12 @@
                   "Pod::Text::Overstrike",
                   "Pod::Text::Termcap"
                 ]
-              }
+              },
+              "manual_tests": [
+                "Compress-Raw-Zlib"
+              ],
+              "test_modules": {},
+              "test_tags": {}
             }
           }
         }

@@ -17,6 +17,13 @@ cpan = use_extension("@rules_cpan//cpan:extensions.bzl", "cpan")
 cpan.install(
     name = "cpan",
     lock = "//:cpan.lock.json",
+    manual_tests = [
+        "Archive-Any",
+        "Cpanel-JSON-XS",
+        "IO-Tty",
+        "Types-Serialiser",
+        "common-sense",
+    ],
 )
 cpan.inject(
     distribution = "Compress-Raw-Zlib",
@@ -34,6 +41,7 @@ cpan.annotation(
     hub = "cpan",
     includes = ["LibYAML/lib"],
     output_loc = "auto/YAML/XS/LibYAML/LibYAML",
+    test_module = "YAML::XS",
 )
 use_repo(cpan, "cpan")
 

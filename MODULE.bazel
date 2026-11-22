@@ -59,6 +59,9 @@ cpan.inject(
 cpan.install(
     name = "cpan_alt",
     lock = "//tests:cpan.lock.json",
+    manual_tests = [
+        "Compress-Raw-Zlib",
+    ],
 )
 cpan.annotation(
     distribution = "Algorithm-Diff",

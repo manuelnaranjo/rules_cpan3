@@ -6,6 +6,7 @@ test_suite(
     name = "pakket_tests",
     tests = [
         ":e2e_pakket_integration_test",
+        "@cpan//:test-rules-cpan-modules",
         "@pakket//:package_utils_test",
         "@pakket//:utils_test",
         "@pakket//:versioner_test",

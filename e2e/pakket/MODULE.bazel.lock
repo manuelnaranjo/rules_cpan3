@@ -280,8 +280,8 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "CWmjotQUaBivXwNZk8R7n9Jm2dWtDeYed06DLJ8uzNM=",
-        "usagesDigest": "V2QW577MpVGeA5inESzhW1j+L5kUA/jpudw5f428VsQ=",
+        "bzlTransitiveDigest": "r65GCG2KdO6BIg1oAySvTsXCpVzFW5IED2kv5K49a7w=",
+        "usagesDigest": "YD0pchRNMKKoKDrrpLE8MkP9L14bXo4GOSYcMHzXolM=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -5730,7 +5730,18 @@
                 "namespace-clean": [
                   "namespace::clean"
                 ]
-              }
+              },
+              "manual_tests": [
+                "Archive-Any",
+                "Cpanel-JSON-XS",
+                "IO-Tty",
+                "Types-Serialiser",
+                "common-sense"
+              ],
+              "test_modules": {
+                "YAML-LibYAML": "YAML::XS"
+              },
+              "test_tags": {}
             }
           },
           "cpan_alt__Algorithm-Diff": {
@@ -7041,7 +7052,12 @@
                   "Pod::Text::Overstrike",
                   "Pod::Text::Termcap"
                 ]
-              }
+              },
+              "manual_tests": [
+                "Compress-Raw-Zlib"
+              ],
+              "test_modules": {},
+              "test_tags": {}
             }
           }
         }

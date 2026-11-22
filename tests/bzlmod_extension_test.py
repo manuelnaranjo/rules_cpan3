@@ -36,15 +36,17 @@ def get_strip_prefix(url: str) -> str:
     return ""
 
 
-def compute_output_loc(dist_name: str, provides: list[str]) -> str:
+def get_primary_module(dist_name: str, provides: list[str]) -> str:
     canonical_mod = dist_name.replace("-", "::")
-    primary_mod = canonical_mod
     if provides:
         if canonical_mod in provides:
-            primary_mod = canonical_mod
-        else:
-            primary_mod = provides[0]
+            return canonical_mod
+        return provides[0]
+    return canonical_mod
 
+
+def compute_output_loc(dist_name: str, provides: list[str]) -> str:
+    primary_mod = get_primary_module(dist_name, provides)
     parts = primary_mod.split("::")
     path_prefix = "/".join(parts)
     leaf = parts[-1]
@@ -238,6 +240,43 @@ class BzlmodExtensionTests(unittest.TestCase):
         actual_normal = injected.get("Algorithm-Diff", "@cpan__Algorithm-Diff//:Algorithm-Diff")
         self.assertEqual(actual_injected, "@perl-compress-raw-zlib//:Compress-Raw-Zlib")
         self.assertEqual(actual_normal, "@cpan__Algorithm-Diff//:Algorithm-Diff")
+
+    def test_get_primary_module(self):
+        self.assertEqual(
+            get_primary_module("Algorithm-Diff", ["Algorithm::Diff", "Algorithm::Diff::_impl"]),
+            "Algorithm::Diff",
+        )
+        self.assertEqual(
+            get_primary_module("PathTools", ["Cwd", "File::Spec"]),
+            "Cwd",
+        )
+        self.assertEqual(
+            get_primary_module("Text-Tabs+Wrap", ["Text::Tabs", "Text::Wrap"]),
+            "Text::Tabs",
+        )
+        self.assertEqual(
+            get_primary_module("Unknown-Module", []),
+            "Unknown::Module",
+        )
+
+    def test_hub_repo_test_suite_generation(self):
+        direct_deps = ["Algorithm-Diff", "Compress-Raw-Zlib"]
+        manual_tests = ["Compress-Raw-Zlib"]
+        test_tags = {"Algorithm-Diff": ["fast"]}
+
+        declared_tests = []
+        tags_by_test = {}
+        for dist in direct_deps:
+            target = f":{dist}_test"
+            cur_tags = list(test_tags.get(dist, []))
+            if dist in manual_tests and "manual" not in cur_tags:
+                cur_tags.append("manual")
+            declared_tests.append(target)
+            tags_by_test[dist] = cur_tags
+
+        self.assertEqual(declared_tests, [":Algorithm-Diff_test", ":Compress-Raw-Zlib_test"])
+        self.assertEqual(tags_by_test["Algorithm-Diff"], ["fast"])
+        self.assertEqual(tags_by_test["Compress-Raw-Zlib"], ["manual"])
 
 
 if __name__ == "__main__":
