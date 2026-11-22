@@ -283,7 +283,7 @@
   "moduleExtensions": {
     "//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "r65GCG2KdO6BIg1oAySvTsXCpVzFW5IED2kv5K49a7w=",
+        "bzlTransitiveDigest": "s1n8UleLVyCuT7VFlHlF0qjcUbKM0dLYsNx1TAYCD68=",
         "usagesDigest": "++covx/Ue6EFULVnJUzFJ2/TpnncaKg7EvXIHQzaPi4=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
@@ -316,7 +316,9 @@
               "execution_requirements": {
                 "no-remote": "1"
               },
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__Carp": {
@@ -345,7 +347,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__Data-Dumper": {
@@ -369,7 +373,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__Encode": {
@@ -423,7 +429,11 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan__Exporter": {
@@ -448,7 +458,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__ExtUtils-MakeMaker": {
@@ -512,7 +524,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__File-Path": {
@@ -539,7 +553,13 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan__Carp//:Carp",
+                "@cpan__PathTools//:PathTools",
+                "@cpan__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan__File-Temp": {
@@ -569,7 +589,13 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan__ExtUtils-MakeMaker//:ExtUtils-MakeMaker",
+                "@cpan__PathTools//:PathTools",
+                "@cpan__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan__IO": {
@@ -604,7 +630,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__PathTools": {
@@ -640,7 +668,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__Pod-Escapes": {
@@ -666,7 +696,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__Pod-Simple": {
@@ -722,7 +754,11 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan__Scalar-List-Utils": {
@@ -750,7 +786,11 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan__Storable": {
@@ -776,7 +816,12 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan__File-Temp//:File-Temp",
+                "@cpan__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan__Term-Table": {
@@ -808,7 +853,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__Test-Simple": {
@@ -1040,7 +1087,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__Text-Tabs_Wrap": {
@@ -1065,7 +1114,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__Time-HiRes": {
@@ -1092,7 +1143,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__XSLoader": {
@@ -1118,7 +1171,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan__podlators": {
@@ -1149,7 +1204,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan": {
@@ -1608,7 +1665,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__Carp": {
@@ -1637,7 +1696,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__Compress-Raw-Zlib": {
@@ -1661,7 +1722,11 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": [
+                "manual"
+              ]
             }
           },
           "cpan_alt__Data-Dumper": {
@@ -1685,7 +1750,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__Encode": {
@@ -1739,7 +1806,11 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan_alt__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan_alt__Exporter": {
@@ -1764,7 +1835,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__ExtUtils-MakeMaker": {
@@ -1828,7 +1901,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__File-Path": {
@@ -1855,7 +1930,13 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan_alt__Carp//:Carp",
+                "@cpan_alt__PathTools//:PathTools",
+                "@cpan_alt__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan_alt__File-Temp": {
@@ -1885,7 +1966,13 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan_alt__ExtUtils-MakeMaker//:ExtUtils-MakeMaker",
+                "@cpan_alt__PathTools//:PathTools",
+                "@cpan_alt__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan_alt__IO": {
@@ -1920,7 +2007,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__PathTools": {
@@ -1956,7 +2045,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__Pod-Escapes": {
@@ -1982,7 +2073,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__Pod-Simple": {
@@ -2038,7 +2131,11 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan_alt__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan_alt__Scalar-List-Utils": {
@@ -2066,7 +2163,11 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan_alt__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan_alt__Storable": {
@@ -2092,7 +2193,12 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [
+                "@cpan_alt__File-Temp//:File-Temp",
+                "@cpan_alt__Test-Simple//:Test-Simple"
+              ],
+              "test_tags": []
             }
           },
           "cpan_alt__Term-Table": {
@@ -2124,7 +2230,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__Test-Simple": {
@@ -2356,7 +2464,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__Text-Tabs_Wrap": {
@@ -2381,7 +2491,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__Time-HiRes": {
@@ -2408,7 +2520,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__XSLoader": {
@@ -2434,7 +2548,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt__podlators": {
@@ -2465,7 +2581,9 @@
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
-              "extra_tags": []
+              "extra_tags": [],
+              "test_deps": [],
+              "test_tags": []
             }
           },
           "cpan_alt": {

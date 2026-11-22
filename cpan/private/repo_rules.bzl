@@ -128,6 +128,35 @@ def _apply_patches(ctx):
         if res.return_code != 0:
             fail("Failed to execute patch_cmd '%s':\n%s\n%s" % (cmd, res.stdout, res.stderr))
 
+def _find_t_files(root_dir, max_depth = 5):
+    """Find all .t test files under root_dir."""
+    if not root_dir.exists:
+        return []
+    res = []
+    frontier = [root_dir]
+    for _ in range(max_depth):
+        if not frontier:
+            break
+        deeper = []
+        for d in frontier:
+            for entry in d.readdir():
+                if entry.is_dir:
+                    deeper.append(entry)
+                elif entry.basename.endswith(".t"):
+                    res.append(entry)
+        frontier = deeper
+    return res
+
+def _sanitize_target_name(path_str):
+    res = ""
+    for i in range(len(path_str)):
+        c = path_str[i]
+        if (c >= "a" and c <= "z") or (c >= "A" and c <= "Z") or (c >= "0" and c <= "9") or c in ["_", "-", "."]:
+            res += c
+        else:
+            res += "_"
+    return res
+
 def _cpan_dist_repo_impl(ctx):
     strip_prefix = ctx.attr.strip_prefix
     if not strip_prefix:
@@ -306,6 +335,148 @@ perl_library(
             target_compat_str = target_compat_str,
         )
 
+    # Discover test files in t/
+    t_entries = _find_t_files(ctx.path("t"))
+    repo_root_len = len(str(ctx.path(""))) + 1
+    test_lines = []
+    test_target_names = []
+
+    test_deps_items = ['"%s"' % d for d in ctx.attr.test_deps]
+    if test_deps_items:
+        test_deps_str = ",\n        " + ",\n        ".join(test_deps_items)
+    else:
+        test_deps_str = ""
+
+    cur_test_tags = list(ctx.attr.test_tags)
+    if cur_test_tags:
+        test_tags_str = "\n    tags = [" + ", ".join(['"%s"' % t for t in cur_test_tags]) + "],"
+    else:
+        test_tags_str = ""
+
+    if t_entries:
+        test_runner_content = """#!/usr/bin/env perl
+use strict;
+use warnings;
+use File::Basename qw(dirname);
+use File::Spec;
+use Cwd qw(abs_path);
+
+my $test_file = shift @ARGV;
+die "No test file specified to _test_runner.pl\\n" unless defined $test_file;
+
+my $dist_dir = dirname(abs_path(__FILE__));
+chdir($dist_dir) or die "Failed to chdir to $dist_dir: $!\\n";
+
+my $target_test = File::Spec->file_name_is_absolute($test_file)
+    ? $test_file
+    : File::Spec->catfile($dist_dir, $test_file);
+
+die "Test file '$target_test' does not exist in $dist_dir\\n" unless -f $target_test;
+
+$ENV{PERL5LIB} = join(':', @INC);
+$ENV{PERL_USE_UNSAFE_INC} = 1;
+
+my @extra_flags;
+if (open my $fh, '<', $target_test) {
+    my $first_line = <$fh>;
+    close $fh;
+    if (defined $first_line && $first_line =~ m{^#!\\s*\\S*perl\\S*(?:\\s+(.*?))?\\s*$}) {
+        my $opts = $1 // '';
+        for my $flag (split ' ', $opts) {
+            if ($flag =~ /^-/) {
+                push @extra_flags, $flag;
+            }
+        }
+    }
+}
+
+my @inc_flags = map { "-I$_" } @INC;
+exec $^X, @extra_flags, @inc_flags, $target_test, @ARGV
+    or die "Failed to exec $^X: $!\\n";
+"""
+        ctx.file("_test_runner.pl", test_runner_content)
+
+        test_lines.append("""load("@rules_perl//perl:defs.bzl", "perl_test")
+
+perl_library(
+    name = "{dist_name}_test_lib",
+    srcs = glob(["t/**/*.pm", "t/*.pm"], allow_empty = True),
+    data = glob(["t/**/*"], exclude = ["t/**/*.t", "t/*.t", "t/**/*.pm", "t/*.pm"], allow_empty = True),
+    includes = [".", "lib", "t", "t/lib"],
+    deps = [":{dist_name}"{test_deps_str}],
+)
+""".format(
+            dist_name = ctx.attr.dist_name,
+            test_deps_str = test_deps_str,
+        ))
+
+        for entry in t_entries:
+            rel_path = str(entry)[repo_root_len:]
+            t_name = _sanitize_target_name(rel_path.replace("/", "_").replace(".t", ""))
+            test_target = "test_%s" % t_name
+            test_target_names.append(":" + test_target)
+            test_lines.append("""perl_test(
+    name = "{test_target}",
+    size = "small",
+    srcs = ["_test_runner.pl"],
+    args = ["{rel_path}"],
+    data = glob(["t/**/*"], allow_empty = True),{test_tags_str}
+    deps = [":{dist_name}_test_lib"],
+)
+""".format(
+                test_target = test_target,
+                rel_path = rel_path,
+                dist_name = ctx.attr.dist_name,
+                test_tags_str = test_tags_str,
+            ))
+
+        test_suite_tests = ",\n        ".join(['"%s"' % t for t in test_target_names])
+        test_lines.append("""test_suite(
+    name = "test",{test_tags_str}
+    tests = [
+        {tests_str},
+    ],
+)
+""".format(
+            tests_str = test_suite_tests,
+            test_tags_str = test_tags_str,
+        ))
+    else:
+        # Fallback smoke test if no t/ directory exists
+        primary_mod = get_primary_module(ctx.attr.dist_name, ctx.attr.provides)
+        test_script_content = """#!/usr/bin/env perl
+use strict;
+use warnings;
+use Test::More;
+
+BEGIN {{
+    Test::More::use_ok('{primary_mod}') or Test::More::BAIL_OUT("Failed to load {primary_mod}");
+}}
+
+Test::More::done_testing();
+""".format(primary_mod = primary_mod)
+        ctx.file("test_smoke.t", test_script_content)
+        test_lines.append("""load("@rules_perl//perl:defs.bzl", "perl_test")
+
+perl_test(
+    name = "test_smoke",
+    size = "small",
+    srcs = ["test_smoke.t"],{test_tags_str}
+    deps = [":{dist_name}"{test_deps_str}],
+)
+
+test_suite(
+    name = "test",{test_tags_str}
+    tests = [":test_smoke"],
+)
+""".format(
+            dist_name = ctx.attr.dist_name,
+            test_deps_str = test_deps_str,
+            test_tags_str = test_tags_str,
+        ))
+
+    build_content += "\n".join(test_lines)
+
     ctx.file("BUILD.bazel", build_content)
 
 cpan_dist_repo = repository_rule(
@@ -382,6 +553,14 @@ cpan_dist_repo = repository_rule(
             doc = "Directory prefix to strip from archive.",
             default = "",
         ),
+        "test_deps": attr.string_list(
+            doc = "Labels of test dependencies for running t/*.t tests.",
+            default = [],
+        ),
+        "test_tags": attr.string_list(
+            doc = "Optional tags to add to generated test targets.",
+            default = [],
+        ),
         "extra_tags": attr.string_list(
             doc = "Optional target tags to add to generated BUILD targets.",
             default = [],
@@ -419,6 +598,7 @@ def _cpan_hub_repo_impl(ctx):
             all_dists_keys[dist_name] = ""
 
     declared_tests = []
+    manual_test_targets = {}
     manual_tests_set = {d: True for d in ctx.attr.manual_tests}
 
     for dist_name, repo_name in all_dists_keys.items():
@@ -448,12 +628,27 @@ def _cpan_hub_repo_impl(ctx):
         # Test generation for requested modules
         should_test = is_direct if has_direct else True
         if should_test:
-            primary_mod = ctx.attr.test_modules.get(dist_name, "")
-            if not primary_mod:
-                provides = ctx.attr.dist_provides.get(dist_name, [])
-                primary_mod = get_primary_module(dist_name, provides)
-            test_file_name = "test_%s.t" % sanitize_repo_name(dist_name)
-            test_content = """#!/usr/bin/env perl
+            cur_tags = list(ctx.attr.test_tags.get(dist_name, []))
+            if dist_name in manual_tests_set:
+                if "manual" not in cur_tags:
+                    cur_tags.append("manual")
+
+            if "manual" in cur_tags:
+                manual_test_targets[":{dist_name}_test".format(dist_name = dist_name)] = True
+
+            if cur_tags:
+                tags_str = "\n    tags = [\n        " + ",\n        ".join(['"%s"' % t for t in cur_tags]) + ",\n    ],"
+            else:
+                tags_str = ""
+
+            test_target_name = "{dist_name}_test".format(dist_name = dist_name)
+            if dist_name in ctx.attr.injected_targets or repo_name == "":
+                primary_mod = ctx.attr.test_modules.get(dist_name, "")
+                if not primary_mod:
+                    provides = ctx.attr.dist_provides.get(dist_name, [])
+                    primary_mod = get_primary_module(dist_name, provides)
+                test_file_name = "test_%s.t" % sanitize_repo_name(dist_name)
+                test_content = """#!/usr/bin/env perl
 use strict;
 use warnings;
 use Test::More;
@@ -464,35 +659,38 @@ BEGIN {{
 
 Test::More::done_testing();
 """.format(primary_mod = primary_mod)
-            ctx.file(test_file_name, test_content)
+                ctx.file(test_file_name, test_content)
 
-            cur_tags = list(ctx.attr.test_tags.get(dist_name, []))
-            if dist_name in manual_tests_set:
-                if "manual" not in cur_tags:
-                    cur_tags.append("manual")
-
-            if cur_tags:
-                tags_str = "\n    tags = [\n        " + ",\n        ".join(['"%s"' % t for t in cur_tags]) + ",\n    ],"
-            else:
-                tags_str = ""
-
-            test_target_name = "{dist_name}_test".format(dist_name = dist_name)
-            root_lines.append("""perl_test(
+                root_lines.append("""perl_test(
     name = "{test_target_name}",
     size = "small",
     srcs = ["{test_file_name}"],{tags_str}
     deps = [":{dist_name}"],
 )
+""".format(
+                    test_target_name = test_target_name,
+                    dist_name = dist_name,
+                    test_file_name = test_file_name,
+                    tags_str = tags_str,
+                ))
+            else:
+                root_lines.append("""test_suite(
+    name = "{test_target_name}",{tags_str}
+    tests = ["@{repo_name}//:test"],
+)
+""".format(
+                    test_target_name = test_target_name,
+                    repo_name = repo_name,
+                    tags_str = tags_str,
+                ))
 
-alias(
+            root_lines.append("""alias(
     name = "test_{dist_name}",
     actual = ":{test_target_name}",
 )
 """.format(
-                test_target_name = test_target_name,
                 dist_name = dist_name,
-                test_file_name = test_file_name,
-                tags_str = tags_str,
+                test_target_name = test_target_name,
             ))
             declared_tests.append(":{test_target_name}".format(test_target_name = test_target_name))
 
@@ -521,7 +719,7 @@ alias(
         )
         ctx.file(dist_name + "/BUILD.bazel", sub_content)
 
-    tests_items = ['"%s"' % t for t in declared_tests]
+    tests_items = ['"%s"' % t for t in declared_tests if t not in manual_test_targets]
     if tests_items:
         tests_str = "\n        " + ",\n        ".join(tests_items) + ",\n    "
     else:
