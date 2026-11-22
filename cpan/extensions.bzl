@@ -93,7 +93,9 @@ def _cpan_impl(module_ctx):
 
                 build_file = install.build_file_overlays.get(dist_name, None)
                 defines = list(install.defines.get(dist_name, []))
+                includes = list(install.includes.get(dist_name, []))
                 native_deps = list(install.native_deps.get(dist_name, []))
+                output_loc = install.output_locs.get(dist_name, "")
                 patch_cmds = list(install.patch_cmds.get(dist_name, []))
                 patch_cmds_win = list(install.patch_cmds_win.get(dist_name, []))
 
@@ -102,12 +104,13 @@ def _cpan_impl(module_ctx):
                 execution_requirements = {}
                 tags = list(install.tags.get(dist_name, []))
 
-                output_loc = ""
                 if annot:
                     if annot.build_file:
                         build_file = annot.build_file
                     if annot.defines:
                         defines.extend(annot.defines)
+                    if annot.includes:
+                        includes.extend(annot.includes)
                     if annot.native_deps:
                         native_deps.extend(annot.native_deps)
                     if annot.output_loc:
@@ -136,6 +139,7 @@ def _cpan_impl(module_ctx):
                     runtime_deps = runtime_deps,
                     build_file = build_file,
                     defines = defines,
+                    includes = includes,
                     native_deps = native_deps,
                     output_loc = output_loc,
                     patch_cmds = patch_cmds,
@@ -182,6 +186,10 @@ annotation_tag = tag_class(
         "hub": attr.string(
             doc = "Name of the hub repository this annotation applies to.",
             default = "cpan",
+        ),
+        "includes": attr.string_list(
+            doc = "Extra library include paths to search for Perl modules and add to @INC (e.g. ['LibYAML/lib']).",
+            default = [],
         ),
         "native_deps": attr.string_list(
             doc = "Extra native C/C++ dependencies.",
@@ -243,6 +251,10 @@ install_tag = tag_class(
             doc = "Optional execution platform constraints per distribution.",
             default = {},
         ),
+        "includes": attr.string_list_dict(
+            doc = "Optional extra include paths per distribution.",
+            default = {},
+        ),
         "injected": attr.string_keyed_label_dict(
             doc = "Optional mapping from distribution name to injected Bazel target label.",
             default = {},
@@ -257,6 +269,10 @@ install_tag = tag_class(
         ),
         "native_deps": attr.string_list_dict(
             doc = "Optional native C/C++ library dependencies per distribution.",
+            default = {},
+        ),
+        "output_locs": attr.string_dict(
+            doc = "Optional DynaLoader/XSLoader auto/ location per distribution.",
             default = {},
         ),
         "patch_cmds": attr.string_list_dict(

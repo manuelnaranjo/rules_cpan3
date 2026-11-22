@@ -1,20 +1,8 @@
-common --lockfile_mode=update
+# Import shared configuration from repo root
+import %workspace%/../../shared.bazelrc
 
 # BCR Registries: local 3rdparty registry first, followed by public BCR
 common --registry=file://%workspace%/../../bazel/3rdparty
 common --registry=https://bcr.bazel.build
-
-# BuildBuddy Remote Build Execution (RBE) Configuration
-common:rbe --remote_executor=grpcs://remote.buildbuddy.io
-common:rbe --remote_cache=grpcs://remote.buildbuddy.io
-common:rbe --bes_backend=grpcs://remote.buildbuddy.io
-common:rbe --bes_results_url=https://app.buildbuddy.io/invocation/
-common:rbe --remote_default_exec_properties=container-image=docker://gcr.io/flame-public/rbe-ubuntu22-04:latest
-common:rbe --remote_default_exec_properties=OSFamily=Linux
-common:rbe --remote_download_outputs=minimal
-common:rbe --remote_download_regex='.*\.log$'
-common:rbe --remote_timeout=3600
-common:rbe --remote_upload_local_results=true
-common:rbe --jobs=50
 
 try-import %workspace%/.bazelrc.user
