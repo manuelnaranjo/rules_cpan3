@@ -47,7 +47,6 @@ cpan.install(
         "common-sense",
     ],
 )
-
 cpan.annotation(
     distribution = "Dancer2-Template-MojoTemplate",
     hub = "cpan",
