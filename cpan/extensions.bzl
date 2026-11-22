@@ -150,6 +150,30 @@ def _cpan_impl(module_ctx):
                     extra_tags = tags,
                 )
 
+            hub_test_tags = {}
+            hub_test_modules = {}
+            hub_manual_tests = list(install.manual_tests)
+            for dist_name in distributions.keys():
+                dtags = list(install.test_tags.get(dist_name, []))
+                if "manual" in install.tags.get(dist_name, []):
+                    if "manual" not in dtags:
+                        dtags.append("manual")
+                annot = annotations.get((hub_name, dist_name))
+                if annot:
+                    if hasattr(annot, "test_tags") and annot.test_tags:
+                        for t in annot.test_tags:
+                            if t not in dtags:
+                                dtags.append(t)
+                    if hasattr(annot, "test_module") and annot.test_module:
+                        hub_test_modules[dist_name] = annot.test_module
+                    if "manual" in annot.tags:
+                        if "manual" not in dtags:
+                            dtags.append("manual")
+                if "manual" in dtags and dist_name not in hub_manual_tests:
+                    hub_manual_tests.append(dist_name)
+                if dtags:
+                    hub_test_tags[dist_name] = dtags
+
             # Third pass: instantiate hub repository rule
             cpan_hub_repo(
                 name = hub_name,
@@ -158,6 +182,9 @@ def _cpan_impl(module_ctx):
                 all_dists = all_dists,
                 injected_targets = hub_injected,
                 dist_provides = {d: info.get("provides", []) for d, info in distributions.items()},
+                manual_tests = hub_manual_tests,
+                test_modules = hub_test_modules,
+                test_tags = hub_test_tags,
             )
 
 annotation_tag = tag_class(
@@ -215,6 +242,14 @@ annotation_tag = tag_class(
             doc = "Target platform constraints (e.g. ['@platforms//os:linux']).",
             default = [],
         ),
+        "test_module": attr.string(
+            doc = "Perl package to load in generated module test (defaults to primary module).",
+            default = "",
+        ),
+        "test_tags": attr.string_list(
+            doc = "Bazel tags to add to generated test targets.",
+            default = [],
+        ),
     },
 )
 
@@ -263,6 +298,10 @@ install_tag = tag_class(
             doc = "Label to cpan.lock.json lockfile.",
             mandatory = True,
         ),
+        "manual_tests": attr.string_list(
+            doc = "Optional list of distribution names whose tests should be marked as manual.",
+            default = [],
+        ),
         "name": attr.string(
             doc = "Name of the hub repository.",
             default = "cpan",
@@ -289,6 +328,10 @@ install_tag = tag_class(
         ),
         "target_compatible_with": attr.string_list_dict(
             doc = "Optional target platform constraints per distribution.",
+            default = {},
+        ),
+        "test_tags": attr.string_list_dict(
+            doc = "Optional test tags per distribution.",
             default = {},
         ),
     },

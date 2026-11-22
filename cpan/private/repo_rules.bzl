@@ -86,16 +86,26 @@ def prune_runtime_cycles(dists, root_dependencies):
 
     return pruned_graph
 
-def _compute_output_loc(dist_name, provides):
-    """Compute the DynaLoader/XSLoader auto/ directory location for an XS module."""
+def get_primary_module(dist_name, provides):
+    """Determine the primary Perl module name for a distribution.
+
+    Args:
+        dist_name: CPAN distribution name (e.g. 'Algorithm-Diff').
+        provides: List of packages provided by the distribution.
+
+    Returns:
+        Primary Perl package name (e.g. 'Algorithm::Diff').
+    """
     canonical_mod = dist_name.replace("-", "::")
-    primary_mod = canonical_mod
     if provides:
         if canonical_mod in provides:
-            primary_mod = canonical_mod
-        else:
-            primary_mod = provides[0]
+            return canonical_mod
+        return provides[0]
+    return canonical_mod
 
+def _compute_output_loc(dist_name, provides):
+    """Compute the DynaLoader/XSLoader auto/ directory location for an XS module."""
+    primary_mod = get_primary_module(dist_name, provides)
     parts = primary_mod.split("::")
     path_prefix = "/".join(parts)
     leaf = parts[-1]
@@ -393,9 +403,12 @@ cpan_dist_repo = repository_rule(
 
 def _cpan_hub_repo_impl(ctx):
     direct_set = {d: True for d in ctx.attr.direct_deps}
+    has_direct = len(direct_set) > 0 or len(ctx.attr.injected_targets) > 0
 
     root_lines = [
         "# Auto-generated hub repository for rules_cpan (%s)" % ctx.attr.hub_name,
+        "load(\"@rules_perl//perl:defs.bzl\", \"perl_test\")",
+        "",
         "package(default_visibility = [\"//visibility:public\"])",
         "",
     ]
@@ -405,9 +418,12 @@ def _cpan_hub_repo_impl(ctx):
         if dist_name not in all_dists_keys:
             all_dists_keys[dist_name] = ""
 
+    declared_tests = []
+    manual_tests_set = {d: True for d in ctx.attr.manual_tests}
+
     for dist_name, repo_name in all_dists_keys.items():
         is_direct = dist_name in direct_set or dist_name in ctx.attr.injected_targets
-        vis = "[\"//visibility:public\"]" if is_direct else "[\"//visibility:private\"]"
+        vis = "[\"//visibility:public\"]" if (is_direct or not has_direct) else "[\"//visibility:private\"]"
 
         if dist_name in ctx.attr.injected_targets:
             actual = ctx.attr.injected_targets[dist_name]
@@ -429,6 +445,66 @@ def _cpan_hub_repo_impl(ctx):
             vis = vis,
         ))
 
+        # Test generation for requested modules
+        should_test = is_direct if has_direct else True
+        if should_test:
+            primary_mod = ctx.attr.test_modules.get(dist_name, "")
+            if not primary_mod:
+                provides = ctx.attr.dist_provides.get(dist_name, [])
+                primary_mod = get_primary_module(dist_name, provides)
+            test_file_name = "test_%s.t" % sanitize_repo_name(dist_name)
+            test_content = """#!/usr/bin/env perl
+use strict;
+use warnings;
+use Test::More;
+
+BEGIN {{
+    Test::More::use_ok('{primary_mod}') or Test::More::BAIL_OUT("Failed to load {primary_mod}");
+}}
+
+Test::More::done_testing();
+""".format(primary_mod = primary_mod)
+            ctx.file(test_file_name, test_content)
+
+            cur_tags = list(ctx.attr.test_tags.get(dist_name, []))
+            if dist_name in manual_tests_set:
+                if "manual" not in cur_tags:
+                    cur_tags.append("manual")
+
+            if cur_tags:
+                tags_str = "\n    tags = [\n        " + ",\n        ".join(['"%s"' % t for t in cur_tags]) + ",\n    ],"
+            else:
+                tags_str = ""
+
+            test_target_name = "{dist_name}_test".format(dist_name = dist_name)
+            root_lines.append("""perl_test(
+    name = "{test_target_name}",
+    size = "small",
+    srcs = ["{test_file_name}"],{tags_str}
+    deps = [":{dist_name}"],
+)
+
+alias(
+    name = "test_{dist_name}",
+    actual = ":{test_target_name}",
+)
+""".format(
+                test_target_name = test_target_name,
+                dist_name = dist_name,
+                test_file_name = test_file_name,
+                tags_str = tags_str,
+            ))
+            declared_tests.append(":{test_target_name}".format(test_target_name = test_target_name))
+
+            sub_test_alias = """
+alias(
+    name = "test",
+    actual = "//:{test_target_name}",
+)
+""".format(test_target_name = test_target_name)
+        else:
+            sub_test_alias = ""
+
         # Subpackage alias: @cpan//Algorithm-Diff (resolves to @cpan//Algorithm-Diff:Algorithm-Diff)
         sub_content = """# Auto-generated package alias for {dist_name}
 package(default_visibility = ["//visibility:public"])
@@ -437,13 +513,26 @@ alias(
     name = "{dist_name}",
     actual = "{actual}",
     visibility = {vis},
-)
-""".format(
+){sub_test_alias}""".format(
             dist_name = dist_name,
             actual = actual,
             vis = vis,
+            sub_test_alias = sub_test_alias,
         )
         ctx.file(dist_name + "/BUILD.bazel", sub_content)
+
+    tests_items = ['"%s"' % t for t in declared_tests]
+    if tests_items:
+        tests_str = "\n        " + ",\n        ".join(tests_items) + ",\n    "
+    else:
+        tests_str = ""
+
+    root_lines.append("""test_suite(
+    name = "test-rules-cpan-modules",
+    tags = ["-manual"],
+    tests = [{tests_str}],
+)
+""".format(tests_str = tests_str))
 
     ctx.file("BUILD.bazel", "\n".join(root_lines))
 
@@ -469,6 +558,18 @@ cpan_hub_repo = repository_rule(
         ),
         "injected_targets": attr.string_dict(
             doc = "Mapping from distribution name to injected Bazel target label.",
+            default = {},
+        ),
+        "manual_tests": attr.string_list(
+            doc = "List of distribution names whose tests should be marked as manual.",
+            default = [],
+        ),
+        "test_modules": attr.string_dict(
+            doc = "Optional mapping from distribution name to custom Perl package to test.",
+            default = {},
+        ),
+        "test_tags": attr.string_list_dict(
+            doc = "Optional test tags per distribution.",
             default = {},
         ),
     },
