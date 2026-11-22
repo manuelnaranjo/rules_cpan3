@@ -89,6 +89,13 @@ def _cpan_impl(module_ctx):
                     elif dep in dist_repo_names:
                         runtime_deps.append("@" + dist_repo_names[dep] + "//:" + dep)
 
+                test_deps = []
+                for dep in dist_info.get("dependencies", {}).get("test", []):
+                    if dep in hub_injected:
+                        test_deps.append(hub_injected[dep])
+                    elif dep in dist_repo_names:
+                        test_deps.append("@" + dist_repo_names[dep] + "//:" + dep)
+
                 annot = annotations.get((hub_name, dist_name))
 
                 build_file = install.build_file_overlays.get(dist_name, None)
@@ -128,6 +135,20 @@ def _cpan_impl(module_ctx):
                     if annot.tags:
                         tags.extend(annot.tags)
 
+                dist_test_tags = list(install.test_tags.get(dist_name, []))
+                if dist_name in install.manual_tests:
+                    if "manual" not in dist_test_tags:
+                        dist_test_tags.append("manual")
+                if "manual" in tags and "manual" not in dist_test_tags:
+                    dist_test_tags.append("manual")
+                if annot:
+                    if hasattr(annot, "test_tags") and annot.test_tags:
+                        for t in annot.test_tags:
+                            if t not in dist_test_tags:
+                                dist_test_tags.append(t)
+                    if "manual" in annot.tags and "manual" not in dist_test_tags:
+                        dist_test_tags.append("manual")
+
                 cpan_dist_repo(
                     name = repo_name,
                     dist_name = dist_name,
@@ -148,6 +169,8 @@ def _cpan_impl(module_ctx):
                     exec_compatible_with = exec_compatible_with,
                     execution_requirements = execution_requirements,
                     extra_tags = tags,
+                    test_deps = test_deps,
+                    test_tags = dist_test_tags,
                 )
 
             hub_test_tags = {}
