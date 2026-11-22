@@ -13,3 +13,12 @@ bzl_library(
         "@rules_perl//perl:defs_bzl",
     ],
 )
+
+bzl_library(
+    name = "repo_rules",
+    srcs = ["repo_rules.bzl"],
+    deps = [
+        ":rules",
+        "@rules_perl//perl:defs_bzl",
+    ],
+)

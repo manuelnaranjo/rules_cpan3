@@ -116,3 +116,40 @@ py_test(
     ],
     deps = ["//cpan/tools/resolver:resolver_lib"],
 )
+
+# 6. Bzlmod module extension & repository rules tests
+perl_test(
+    name = "cpan_pureperl_test",
+    size = "small",
+    srcs = ["test_cpan_pureperl.t"],
+    deps = [
+        "@cpan//Algorithm-Diff",
+    ],
+)
+
+perl_test(
+    name = "cpan_xs_test",
+    size = "small",
+    srcs = ["test_cpan_xs.t"],
+    deps = [
+        "@cpan//Compress-Raw-Zlib",
+    ],
+)
+
+perl_test(
+    name = "cpan_alt_test",
+    size = "small",
+    srcs = ["test_cpan_alt.t"],
+    deps = [
+        "@cpan_alt//Algorithm-Diff",
+    ],
+)
+
+py_test(
+    name = "bzlmod_extension_test",
+    size = "small",
+    srcs = ["bzlmod_extension_test.py"],
+    data = [
+        "cpan.lock.json",
+    ],
+)

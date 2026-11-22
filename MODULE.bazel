@@ -29,6 +29,33 @@ bazel_dep(name = "protobuf", version = "33.6", dev_dependency = True)
 
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.10.0")
 
+# CPAN dependency installation via Bzlmod module extension
+cpan = use_extension("//cpan:extensions.bzl", "cpan")
+cpan.install(
+    name = "cpan",
+    build_file_overlays = {
+        "Compress-Raw-Zlib": "//tests:BUILD.Compress-Raw-Zlib.bazel",
+    },
+    lock = "//tests:cpan.lock.json",
+    patch_cmds = {
+        "Compress-Raw-Zlib": [
+            "cp fallback/constants.h constants.h",
+            "cp fallback/constants.xs constants.xs",
+        ],
+    },
+    patch_cmds_win = {
+        "Compress-Raw-Zlib": [
+            "copy fallback\\constants.h constants.h",
+            "copy fallback\\constants.xs constants.xs",
+        ],
+    },
+)
+cpan.install(
+    name = "cpan_alt",
+    lock = "//tests:cpan.lock.json",
+)
+use_repo(cpan, "cpan", "cpan_alt")
+
 # External CPAN test dependency for hermetic XS C integration testing
 http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
