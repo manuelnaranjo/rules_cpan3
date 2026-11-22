@@ -54,6 +54,16 @@ cpan.install(
     name = "cpan_alt",
     lock = "//tests:cpan.lock.json",
 )
+cpan.annotation(
+    distribution = "Algorithm-Diff",
+    execution_requirements = {
+        "no-remote": "1",
+    },
+    hub = "cpan",
+    target_compatible_with = [
+        "@platforms//os:linux",
+    ],
+)
 use_repo(cpan, "cpan", "cpan_alt")
 
 # External CPAN test dependency for hermetic XS C integration testing

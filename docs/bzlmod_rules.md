@@ -77,6 +77,45 @@ use_repo(cpan, "cpan_linux", "cpan_macos")
 
 Distribution repositories are isolated by prefixing with the hub name (`<hub_name>__<dist_name>`), avoiding any target or repo collisions.
 
+### Extra Annotations: Platform Constraints & Execution Requirements
+
+Generated distribution targets can be customized with extra annotations such as platform constraints (`target_compatible_with`, `exec_compatible_with`) and action `execution_requirements` (e.g. `no-remote`, `requires-network`, `local`):
+
+#### Using `cpan.annotation` tag
+
+```starlark
+cpan.annotation(
+    hub = "cpan",                          # Target hub repository name (default: "cpan")
+    distribution = "Compress-Raw-Zlib",    # Target CPAN distribution
+    target_compatible_with = [             # Platform constraints
+        "@platforms//os:linux",
+        "@platforms//os:macos",
+    ],
+    execution_requirements = {             # Execution requirements passed to actions
+        "no-remote": "1",
+    },
+    tags = ["no-remote"],
+)
+```
+
+#### Using attributes directly in `cpan.install`
+
+```starlark
+cpan.install(
+    name = "cpan",
+    lock = "//:cpan.lock.json",
+    target_compatible_with = {
+        "Compress-Raw-Zlib": ["@platforms//os:linux"],
+    },
+    exec_compatible_with = {
+        "Compress-Raw-Zlib": ["@platforms//os:linux"],
+    },
+    tags = {
+        "Compress-Raw-Zlib": ["no-remote"],
+    },
+)
+```
+
 ### Overlays and Customization
 For distributions requiring custom build logic, patches, or native BCR dependencies (e.g. `@zlib`):
 

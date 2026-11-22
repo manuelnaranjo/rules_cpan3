@@ -11,6 +11,13 @@ load(
 def _cpan_impl(module_ctx):
     seen_hubs = {}
 
+    # Collect distribution annotations across modules
+    annotations = {}
+    for mod in module_ctx.modules:
+        for annot in mod.tags.annotation:
+            key = (annot.hub, annot.distribution)
+            annotations[key] = annot
+
     for mod in module_ctx.modules:
         for install in mod.tags.install:
             hub_name = install.name
@@ -61,11 +68,38 @@ def _cpan_impl(module_ctx):
                     if dep in dist_repo_names:
                         runtime_deps.append("@" + dist_repo_names[dep] + "//:" + dep)
 
+                annot = annotations.get((hub_name, dist_name))
+
                 build_file = install.build_file_overlays.get(dist_name, None)
-                defines = install.defines.get(dist_name, [])
-                native_deps = install.native_deps.get(dist_name, [])
-                patch_cmds = install.patch_cmds.get(dist_name, [])
-                patch_cmds_win = install.patch_cmds_win.get(dist_name, [])
+                defines = list(install.defines.get(dist_name, []))
+                native_deps = list(install.native_deps.get(dist_name, []))
+                patch_cmds = list(install.patch_cmds.get(dist_name, []))
+                patch_cmds_win = list(install.patch_cmds_win.get(dist_name, []))
+
+                target_compatible_with = list(install.target_compatible_with.get(dist_name, []))
+                exec_compatible_with = list(install.exec_compatible_with.get(dist_name, []))
+                execution_requirements = {}
+                tags = list(install.tags.get(dist_name, []))
+
+                if annot:
+                    if annot.build_file:
+                        build_file = annot.build_file
+                    if annot.defines:
+                        defines.extend(annot.defines)
+                    if annot.native_deps:
+                        native_deps.extend(annot.native_deps)
+                    if annot.patch_cmds:
+                        patch_cmds.extend(annot.patch_cmds)
+                    if annot.patch_cmds_win:
+                        patch_cmds_win.extend(annot.patch_cmds_win)
+                    if annot.target_compatible_with:
+                        target_compatible_with = annot.target_compatible_with
+                    if annot.exec_compatible_with:
+                        exec_compatible_with = annot.exec_compatible_with
+                    if annot.execution_requirements:
+                        execution_requirements.update(annot.execution_requirements)
+                    if annot.tags:
+                        tags.extend(annot.tags)
 
                 cpan_dist_repo(
                     name = repo_name,
@@ -81,6 +115,10 @@ def _cpan_impl(module_ctx):
                     native_deps = native_deps,
                     patch_cmds = patch_cmds,
                     patch_cmds_win = patch_cmds_win,
+                    target_compatible_with = target_compatible_with,
+                    exec_compatible_with = exec_compatible_with,
+                    execution_requirements = execution_requirements,
+                    extra_tags = tags,
                 )
 
             # Third pass: instantiate hub repository rule
@@ -92,6 +130,56 @@ def _cpan_impl(module_ctx):
                 dist_provides = {d: info.get("provides", []) for d, info in distributions.items()},
             )
 
+annotation_tag = tag_class(
+    doc = "Defines extra annotations (platform constraints, execution requirements, etc.) for a generated distribution.",
+    attrs = {
+        "build_file": attr.label(
+            doc = "Custom BUILD file overlay.",
+            default = None,
+        ),
+        "defines": attr.string_list(
+            doc = "Extra preprocessor defines.",
+            default = [],
+        ),
+        "distribution": attr.string(
+            doc = "CPAN distribution name (e.g. 'Compress-Raw-Zlib').",
+            mandatory = True,
+        ),
+        "exec_compatible_with": attr.string_list(
+            doc = "Execution platform constraints.",
+            default = [],
+        ),
+        "execution_requirements": attr.string_dict(
+            doc = "Execution requirements for actions (e.g. {'no-remote': '1'}).",
+            default = {},
+        ),
+        "hub": attr.string(
+            doc = "Name of the hub repository this annotation applies to.",
+            default = "cpan",
+        ),
+        "native_deps": attr.string_list(
+            doc = "Extra native C/C++ dependencies.",
+            default = [],
+        ),
+        "patch_cmds": attr.string_list(
+            doc = "Patch bash commands.",
+            default = [],
+        ),
+        "patch_cmds_win": attr.string_list(
+            doc = "Patch windows commands.",
+            default = [],
+        ),
+        "tags": attr.string_list(
+            doc = "Bazel tags to add to the generated targets.",
+            default = [],
+        ),
+        "target_compatible_with": attr.string_list(
+            doc = "Target platform constraints (e.g. ['@platforms//os:linux']).",
+            default = [],
+        ),
+    },
+)
+
 install_tag = tag_class(
     doc = "Defines a CPAN hub repository and installs dependencies from a lockfile.",
     attrs = {
@@ -101,6 +189,10 @@ install_tag = tag_class(
         ),
         "defines": attr.string_list_dict(
             doc = "Optional preprocessor defines per distribution.",
+            default = {},
+        ),
+        "exec_compatible_with": attr.string_list_dict(
+            doc = "Optional execution platform constraints per distribution.",
             default = {},
         ),
         "lock": attr.label(
@@ -123,6 +215,14 @@ install_tag = tag_class(
             doc = "Optional Windows batch commands per distribution.",
             default = {},
         ),
+        "tags": attr.string_list_dict(
+            doc = "Optional tags per distribution.",
+            default = {},
+        ),
+        "target_compatible_with": attr.string_list_dict(
+            doc = "Optional target platform constraints per distribution.",
+            default = {},
+        ),
     },
 )
 
@@ -130,6 +230,7 @@ cpan = module_extension(
     doc = "Module extension for hermetic CPAN dependency installation.",
     implementation = _cpan_impl,
     tag_classes = {
+        "annotation": annotation_tag,
         "install": install_tag,
     },
 )

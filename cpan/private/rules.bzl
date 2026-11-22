@@ -55,6 +55,9 @@ def _boot_def_file(ctx, srcs):
     args.add("--output", out)
     args.add_all(srcs)
 
+    exec_reqs = {"supports-path-mapping": "1"}
+    exec_reqs.update(ctx.attr.execution_requirements)
+
     ctx.actions.run(
         mnemonic = "PerlXsDef",
         outputs = [out],
@@ -63,7 +66,7 @@ def _boot_def_file(ctx, srcs):
         progress_message = "Listing XS exports for %s" % out.short_path,
         executable = xs_def.interpreter,
         tools = xs_def.tools,
-        execution_requirements = {"supports-path-mapping": "1"},
+        execution_requirements = exec_reqs,
         toolchain = None,
     )
 
@@ -159,6 +162,9 @@ def _cpan_xs_implementation(ctx):
 
     gen = []
 
+    exec_reqs = {"supports-path-mapping": "1"}
+    exec_reqs.update(ctx.attr.execution_requirements)
+
     for src in ctx.files.srcs:
         c_execpath = paths.replace_extension(src.path, ".c")
         out = ctx.actions.declare_file(paths.join("_xs", c_execpath))
@@ -178,7 +184,7 @@ def _cpan_xs_implementation(ctx):
             progress_message = "Translitterating %s to %s" % (src.short_path, out.short_path),
             executable = xsubpp.interpreter,
             tools = xsubpp.tools,
-            execution_requirements = {"supports-path-mapping": "1"},
+            execution_requirements = exec_reqs,
             toolchain = None,
         )
 
@@ -223,6 +229,10 @@ cpan_xs = rule(
         "deps": attr.label_list(
             doc = "Targets providing CcInfo (e.g. cc_library) to link with the extension.",
             providers = [CcInfo],
+        ),
+        "execution_requirements": attr.string_dict(
+            doc = "Execution requirements for Perl actions spawned by this rule (e.g. {'no-remote': '1'}).",
+            default = {},
         ),
         "linkopts": attr.string_list(
             doc = "Extra linker flags passed when linking the shared library.",
