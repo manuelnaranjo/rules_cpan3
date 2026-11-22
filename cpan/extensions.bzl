@@ -69,6 +69,27 @@ def _cpan_impl(module_ctx):
                 all_dists[dist_name] = repo_name
                 dist_repo_names[dist_name] = repo_name
 
+            # Parse manual_tests from install tag:
+            # - "Dist-Name" marks the whole distribution as manual
+            # - "Dist-Name:test_name_or_pattern" marks only specific tests as manual
+            dist_manual_tests = {}
+            whole_dist_manual = {}
+            for item in install.manual_tests:
+                if ":" in item:
+                    dist_part, test_part = item.split(":", 1)
+                    if dist_part not in dist_manual_tests:
+                        dist_manual_tests[dist_part] = []
+                    dist_manual_tests[dist_part].append(test_part)
+                else:
+                    whole_dist_manual[item] = True
+
+            # Also incorporate manual_tests from annotations
+            for (hub, dname), annot in annotations.items():
+                if hub == hub_name and hasattr(annot, "manual_tests") and annot.manual_tests:
+                    if dname not in dist_manual_tests:
+                        dist_manual_tests[dname] = []
+                    dist_manual_tests[dname].extend(annot.manual_tests)
+
             # Second pass: instantiate distribution repository rules
             for dist_name, dist_info in distributions.items():
                 if dist_name in hub_injected:
@@ -136,7 +157,7 @@ def _cpan_impl(module_ctx):
                         tags.extend(annot.tags)
 
                 dist_test_tags = list(install.test_tags.get(dist_name, []))
-                if dist_name in install.manual_tests:
+                if dist_name in whole_dist_manual:
                     if "manual" not in dist_test_tags:
                         dist_test_tags.append("manual")
                 if "manual" in tags and "manual" not in dist_test_tags:
@@ -148,6 +169,8 @@ def _cpan_impl(module_ctx):
                                 dist_test_tags.append(t)
                     if "manual" in annot.tags and "manual" not in dist_test_tags:
                         dist_test_tags.append("manual")
+
+                specific_manual = list(dist_manual_tests.get(dist_name, []))
 
                 cpan_dist_repo(
                     name = repo_name,
@@ -171,11 +194,12 @@ def _cpan_impl(module_ctx):
                     extra_tags = tags,
                     test_deps = test_deps,
                     test_tags = dist_test_tags,
+                    manual_tests = specific_manual,
                 )
 
             hub_test_tags = {}
             hub_test_modules = {}
-            hub_manual_tests = list(install.manual_tests)
+            hub_manual_tests = list(whole_dist_manual.keys())
             for dist_name in distributions.keys():
                 dtags = list(install.test_tags.get(dist_name, []))
                 if "manual" in install.tags.get(dist_name, []):
@@ -239,6 +263,10 @@ annotation_tag = tag_class(
         ),
         "includes": attr.string_list(
             doc = "Extra library include paths to search for Perl modules and add to @INC (e.g. ['LibYAML/lib']).",
+            default = [],
+        ),
+        "manual_tests": attr.string_list(
+            doc = "Optional list of test names or patterns to mark as manual in this distribution.",
             default = [],
         ),
         "native_deps": attr.string_list(
