@@ -1,0 +1,3 @@
+# Sample CPAN dependency file
+Algorithm-Diff 1.201
+Compress-Raw-Zlib 2.226

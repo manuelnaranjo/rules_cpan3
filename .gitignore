@@ -6,3 +6,5 @@ bazel-*
 .ijwb/
 .worktrees/
 .untether-outbox/
+agents.local.md
+*.local.md

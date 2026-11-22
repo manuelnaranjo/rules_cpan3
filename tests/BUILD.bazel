@@ -1,10 +1,15 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_test")
 load("@rules_perl//perl:perl.bzl", "perl_binary", "perl_test")
+load("@rules_python//python:defs.bzl", "py_test")
 load("//platforms:transitions.bzl", "multi_platform_test", "platform_binary")
 
 package(default_visibility = ["//visibility:public"])
 
-exports_files(["BUILD.Compress-Raw-Zlib.bazel"])
+exports_files([
+    "BUILD.Compress-Raw-Zlib.bazel",
+    "cpan.lock.json",
+    "deps.txt",
+])
 
 # 1. Hermetic C test verifying LLVM compiler
 cc_test(
@@ -97,4 +102,17 @@ test_suite(
         "@cpan_compress_raw_zlib//:version_test",
         "@cpan_compress_raw_zlib//:zlib_test",
     ],
+)
+
+# 5. Resolver and lockfile generator unit and integration test
+py_test(
+    name = "resolver_test",
+    size = "small",
+    srcs = ["resolver_test.py"],
+    data = [
+        "cpan.lock.json",
+        "deps.txt",
+        "//cpan:cpan.lock.schema.json",
+    ],
+    deps = ["//cpan/tools/resolver:resolver_lib"],
 )

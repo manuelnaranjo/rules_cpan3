@@ -1,0 +1,20 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
+package(default_visibility = ["//visibility:public"])
+
+py_library(
+    name = "resolver_lib",
+    srcs = [
+        "core_modules.py",
+        "resolver.py",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+py_binary(
+    name = "resolver",
+    srcs = ["resolver.py"],
+    main = "resolver.py",
+    visibility = ["//visibility:public"],
+    deps = [":resolver_lib"],
+)
