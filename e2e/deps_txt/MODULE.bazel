@@ -1,0 +1,104 @@
+bazel_dep(name = "rules_cpan", version = "0.0.0", dev_dependency = True)
+
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "bazel_skylib", version = "1.9.2")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "zlib", version = "1.3.1.bcr.5")
+bazel_dep(name = "perl-compress-raw-zlib", version = "2.226")
+bazel_dep(name = "perl-io-tty", version = "1.20")
+
+local_path_override(
+    module_name = "rules_cpan",
+    path = "../..",
+)
+
+# CPAN dependency installation via Bzlmod module extension
+cpan = use_extension("@rules_cpan//cpan:extensions.bzl", "cpan")
+cpan.install(
+    name = "cpan",
+    lock = "//:cpan.lock.json",
+    manual_tests = [
+        "App-Cmd:t/basic.t",
+        "App-Cmd:t/simple-version.t",
+        "App-Cmd:t/tester-exit.t",
+        "Archive-Any:t/00compile.t",
+        "Archive-Any:t/Any.t",
+        "Archive-Any:t/fail.t",
+        "Archive-Any:t/type.t",
+        "Cpanel-JSON-XS",
+        "Data-Printer:t/000.2-warn.t",
+        "Data-Printer:t/026-caller_message.t",
+        "File-ShareDir:t/00_prereqs.t",
+        "File-ShareDir:t/02_main.t",
+        "File-ShareDir:t/05_class.t",
+        "File-Which:t/file_which.t",
+        "IO-Tty",
+        "Module-Build",
+        "Moose:t/attributes/attribute_delegation.t",
+        "Moose:t/basics/override_and_foreign_classes.t",
+        "Package-Stash:t/warnings-taint.t",
+        "Test-Simple:t/Test2/behavior/Taint.t",
+        "Type-Tiny:t/20-modules/*",
+        "Type-Tiny:t/21-types/*",
+        "Type-Tiny:t/30-external/*",
+        "Type-Tiny:t/40-bugs/*",
+        "Types-Serialiser",
+        "YAML-LibYAML",
+        "common-sense",
+    ],
+)
+
+cpan.annotation(
+    distribution = "Dancer2-Template-MojoTemplate",
+    hub = "cpan",
+    strip_prefix = "Dancer2-Template-MojoTemplate",
+)
+cpan.annotation(
+    distribution = "Digest-CRC",
+    hub = "cpan",
+    strip_prefix = "Digest-CRC-0.22",
+)
+cpan.annotation(
+    distribution = "Digest-Perl-MD4",
+    hub = "cpan",
+    strip_prefix = "MD4",
+)
+cpan.annotation(
+    distribution = "Text-ParagraphDiff",
+    hub = "cpan",
+    strip_prefix = "Text-ParagraphDiff",
+)
+cpan.annotation(
+    distribution = "XML-Entities",
+    hub = "cpan",
+    strip_prefix = "XML-Entities",
+)
+cpan.annotation(
+    distribution = "grpc-xs",
+    hub = "cpan",
+    strip_prefix = "Grpc-XS-0.36",
+)
+cpan.annotation(
+    distribution = "Test-File",
+    hub = "cpan",
+    patch_cmds = ["rm -f File.xs"],
+)
+cpan.inject(
+    distribution = "Compress-Raw-Zlib",
+    hub = "cpan",
+    target = "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
+)
+cpan.inject(
+    distribution = "IO-Tty",
+    hub = "cpan",
+    target = "@perl-io-tty//:IO-Tty",
+)
+cpan.annotation(
+    defines = ["HAVE_CONFIG_H"],
+    distribution = "YAML-LibYAML",
+    hub = "cpan",
+    includes = ["LibYAML/lib"],
+    output_loc = "auto/YAML/XS/LibYAML/LibYAML",
+    test_module = "YAML::XS",
+)
+use_repo(cpan, "cpan")

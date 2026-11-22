@@ -283,7 +283,7 @@
   "moduleExtensions": {
     "//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "9ZOEsxSyxJnrp4o9b9zCpgH4w1H10JL+Ra6ClpVwSeQ=",
+        "bzlTransitiveDigest": "/rI5sDpYQg+wiVBdq6E7YjvDjP2be5FZs5KdDKlrBME=",
         "usagesDigest": "++covx/Ue6EFULVnJUzFJ2/TpnncaKg7EvXIHQzaPi4=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
@@ -319,7 +319,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Carp": {
@@ -351,7 +352,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Data-Dumper": {
@@ -378,7 +380,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Encode": {
@@ -437,7 +440,8 @@
                 "@cpan__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Exporter": {
@@ -465,7 +469,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__ExtUtils-MakeMaker": {
@@ -532,7 +537,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__File-Path": {
@@ -566,7 +572,8 @@
                 "@cpan__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__File-Temp": {
@@ -603,7 +610,8 @@
                 "@cpan__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__IO": {
@@ -641,7 +649,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__PathTools": {
@@ -680,7 +689,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Pod-Escapes": {
@@ -709,7 +719,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Pod-Simple": {
@@ -770,7 +781,8 @@
                 "@cpan__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Scalar-List-Utils": {
@@ -803,7 +815,8 @@
                 "@cpan__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Storable": {
@@ -835,7 +848,8 @@
                 "@cpan__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Term-Table": {
@@ -870,7 +884,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Test-Simple": {
@@ -1105,7 +1120,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Text-Tabs_Wrap": {
@@ -1133,7 +1149,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__Time-HiRes": {
@@ -1163,7 +1180,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__XSLoader": {
@@ -1192,7 +1210,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan__podlators": {
@@ -1226,7 +1245,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan": {
@@ -1688,7 +1708,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Carp": {
@@ -1720,7 +1741,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Compress-Raw-Zlib": {
@@ -1749,7 +1771,8 @@
               "test_tags": [
                 "manual"
               ],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Data-Dumper": {
@@ -1776,7 +1799,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Encode": {
@@ -1835,7 +1859,8 @@
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Exporter": {
@@ -1863,7 +1888,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__ExtUtils-MakeMaker": {
@@ -1930,7 +1956,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__File-Path": {
@@ -1964,7 +1991,8 @@
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__File-Temp": {
@@ -2001,7 +2029,8 @@
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__IO": {
@@ -2039,7 +2068,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__PathTools": {
@@ -2078,7 +2108,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Pod-Escapes": {
@@ -2107,7 +2138,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Pod-Simple": {
@@ -2168,7 +2200,8 @@
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Scalar-List-Utils": {
@@ -2201,7 +2234,8 @@
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Storable": {
@@ -2233,7 +2267,8 @@
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Term-Table": {
@@ -2268,7 +2303,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Test-Simple": {
@@ -2503,7 +2539,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Text-Tabs_Wrap": {
@@ -2531,7 +2568,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__Time-HiRes": {
@@ -2561,7 +2599,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__XSLoader": {
@@ -2590,7 +2629,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt__podlators": {
@@ -2624,7 +2664,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": []
+              "manual_tests": [],
+              "strip_prefix": ""
             }
           },
           "cpan_alt": {

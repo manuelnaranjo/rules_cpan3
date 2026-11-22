@@ -1,0 +1,37 @@
+load("@rules_perl//perl:defs.bzl", "perl_test")
+
+package(default_visibility = ["//visibility:public"])
+
+test_suite(
+    name = "deps_txt_tests",
+    tests = [
+        ":e2e_deps_txt_test",
+        "@cpan//:Capture-Tiny_test",
+        "@cpan//:Clone_test",
+        "@cpan//:Compress-Raw-Zlib_test",
+        "@cpan//:IO-Tty_test",
+        "@cpan//:Path-Tiny_test",
+        "@cpan//:Sub-Name_test",
+        "@cpan//:Try-Tiny_test",
+        "@cpan//:URI_test",
+    ],
+)
+
+perl_test(
+    name = "e2e_deps_txt_test",
+    size = "small",
+    srcs = ["test_deps_txt_e2e.t"],
+    deps = [
+        "@cpan//Capture-Tiny",
+        "@cpan//Clone",
+        "@cpan//Compress-Raw-Zlib",
+        "@cpan//IO-Tty",
+        "@cpan//Moo",
+        "@cpan//Path-Tiny",
+        "@cpan//Sub-Name",
+        "@cpan//Test-Simple",
+        "@cpan//Try-Tiny",
+        "@cpan//URI",
+        "@cpan//YAML-LibYAML",
+    ],
+)
