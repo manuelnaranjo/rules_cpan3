@@ -26,6 +26,7 @@ cpan.install(
         "Data-Printer",
         "File-Copy-Recursive",
         "File-ShareDir",
+        "File-Which",
         "IO-Tty",
         "Module-Build",
         "Moose",

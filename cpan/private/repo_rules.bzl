@@ -401,7 +401,18 @@ exec $^X, @extra_flags, @inc_flags, $target_test, @ARGV
 perl_library(
     name = "{dist_name}_test_lib",
     srcs = glob(["t/**/*.pm", "t/*.pm"], allow_empty = True),
-    data = glob(["t/**/*"], exclude = ["t/**/*.t", "t/*.t", "t/**/*.pm", "t/*.pm"], allow_empty = True),
+    data = glob(
+        ["**/*"],
+        exclude = [
+            "BUILD.bazel",
+            "REPO.bazel",
+            "_test_runner.pl",
+            "_xs/**",
+            "t/**/*.pm",
+            "t/*.pm",
+        ],
+        allow_empty = True,
+    ),
     includes = [".", "lib", "t", "t/lib"],
     deps = [":{dist_name}"{test_deps_str}],
 )
@@ -420,7 +431,16 @@ perl_library(
     size = "small",
     srcs = ["_test_runner.pl"],
     args = ["{rel_path}"],
-    data = glob(["t/**/*"], allow_empty = True),{test_tags_str}
+    data = glob(
+        ["**/*"],
+        exclude = [
+            "BUILD.bazel",
+            "REPO.bazel",
+            "_test_runner.pl",
+            "_xs/**",
+        ],
+        allow_empty = True,
+    ),{test_tags_str}
     deps = [":{dist_name}_test_lib"],
 )
 """.format(
