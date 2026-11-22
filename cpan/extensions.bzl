@@ -18,12 +18,27 @@ def _cpan_impl(module_ctx):
             key = (annot.hub, annot.distribution)
             annotations[key] = annot
 
+    # Collect injected distribution targets across modules
+    injected_by_hub = {}
+    for mod in module_ctx.modules:
+        for inj in getattr(mod.tags, "inject", []):
+            hub = inj.hub
+            if hub not in injected_by_hub:
+                injected_by_hub[hub] = {}
+            if inj.target:
+                injected_by_hub[hub][inj.distribution] = str(inj.target)
+
     for mod in module_ctx.modules:
         for install in mod.tags.install:
             hub_name = install.name
             if hub_name in seen_hubs:
                 continue
             seen_hubs[hub_name] = True
+
+            hub_injected = dict(injected_by_hub.get(hub_name, {}))
+            for dist_name, target in install.injected.items():
+                if target:
+                    hub_injected[dist_name] = str(target)
 
             lock_content = module_ctx.read(install.lock)
             lock_data = json.decode(lock_content)
@@ -56,6 +71,10 @@ def _cpan_impl(module_ctx):
 
             # Second pass: instantiate distribution repository rules
             for dist_name, dist_info in distributions.items():
+                if dist_name in hub_injected:
+                    # Injected ported distribution managed externally
+                    continue
+
                 repo_name = dist_repo_names[dist_name]
                 url = dist_info.get("url", "")
                 sha256 = dist_info.get("sha256", "")
@@ -65,7 +84,9 @@ def _cpan_impl(module_ctx):
 
                 runtime_deps = []
                 for dep in pruned_runtime.get(dist_name, []):
-                    if dep in dist_repo_names:
+                    if dep in hub_injected:
+                        runtime_deps.append(hub_injected[dep])
+                    elif dep in dist_repo_names:
                         runtime_deps.append("@" + dist_repo_names[dep] + "//:" + dep)
 
                 annot = annotations.get((hub_name, dist_name))
@@ -81,6 +102,7 @@ def _cpan_impl(module_ctx):
                 execution_requirements = {}
                 tags = list(install.tags.get(dist_name, []))
 
+                output_loc = ""
                 if annot:
                     if annot.build_file:
                         build_file = annot.build_file
@@ -88,6 +110,8 @@ def _cpan_impl(module_ctx):
                         defines.extend(annot.defines)
                     if annot.native_deps:
                         native_deps.extend(annot.native_deps)
+                    if annot.output_loc:
+                        output_loc = annot.output_loc
                     if annot.patch_cmds:
                         patch_cmds.extend(annot.patch_cmds)
                     if annot.patch_cmds_win:
@@ -113,6 +137,7 @@ def _cpan_impl(module_ctx):
                     build_file = build_file,
                     defines = defines,
                     native_deps = native_deps,
+                    output_loc = output_loc,
                     patch_cmds = patch_cmds,
                     patch_cmds_win = patch_cmds_win,
                     target_compatible_with = target_compatible_with,
@@ -127,6 +152,7 @@ def _cpan_impl(module_ctx):
                 hub_name = hub_name,
                 direct_deps = direct_deps.keys(),
                 all_dists = all_dists,
+                injected_targets = hub_injected,
                 dist_provides = {d: info.get("provides", []) for d, info in distributions.items()},
             )
 
@@ -161,6 +187,10 @@ annotation_tag = tag_class(
             doc = "Extra native C/C++ dependencies.",
             default = [],
         ),
+        "output_loc": attr.string(
+            doc = "Optional DynaLoader/XSLoader auto/ directory location for an XS module.",
+            default = "",
+        ),
         "patch_cmds": attr.string_list(
             doc = "Patch bash commands.",
             default = [],
@@ -180,6 +210,24 @@ annotation_tag = tag_class(
     },
 )
 
+inject_tag = tag_class(
+    doc = "Injects an externally-managed or ported Bazel target for a CPAN distribution.",
+    attrs = {
+        "distribution": attr.string(
+            doc = "CPAN distribution name (e.g. 'Compress-Raw-Zlib').",
+            mandatory = True,
+        ),
+        "hub": attr.string(
+            doc = "Name of the hub repository this injection applies to.",
+            default = "cpan",
+        ),
+        "target": attr.label(
+            doc = "Bazel target label managing this distribution (e.g. '@perl-compress-raw-zlib//:Compress-Raw-Zlib').",
+            mandatory = True,
+        ),
+    },
+)
+
 install_tag = tag_class(
     doc = "Defines a CPAN hub repository and installs dependencies from a lockfile.",
     attrs = {
@@ -193,6 +241,10 @@ install_tag = tag_class(
         ),
         "exec_compatible_with": attr.string_list_dict(
             doc = "Optional execution platform constraints per distribution.",
+            default = {},
+        ),
+        "injected": attr.string_keyed_label_dict(
+            doc = "Optional mapping from distribution name to injected Bazel target label.",
             default = {},
         ),
         "lock": attr.label(
@@ -231,6 +283,7 @@ cpan = module_extension(
     implementation = _cpan_impl,
     tag_classes = {
         "annotation": annotation_tag,
+        "inject": inject_tag,
         "install": install_tag,
     },
 )

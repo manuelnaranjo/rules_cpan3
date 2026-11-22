@@ -229,8 +229,7 @@ class CPANIndex:
             return True
         if module_name in self.core_packages:
             return True
-        # If in CORE_MODULES and not separately published as a standalone package on CPAN
-        if module_name in CORE_MODULES and module_name not in self.package_to_path:
+        if module_name in CORE_MODULES:
             return True
         return False
 

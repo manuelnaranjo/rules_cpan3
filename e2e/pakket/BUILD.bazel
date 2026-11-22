@@ -1,0 +1,24 @@
+load("@rules_perl//perl:defs.bzl", "perl_test")
+
+package(default_visibility = ["//visibility:public"])
+
+test_suite(
+    name = "pakket_tests",
+    tests = [
+        ":e2e_pakket_integration_test",
+        "@pakket//:package_utils_test",
+        "@pakket//:utils_test",
+        "@pakket//:versioner_test",
+    ],
+)
+
+perl_test(
+    name = "e2e_pakket_integration_test",
+    size = "small",
+    srcs = ["test_pakket_e2e.t"],
+    deps = [
+        "@cpan//Compress-Raw-Zlib",
+        "@cpan//Test-Simple",
+        "@pakket",
+    ],
+)
