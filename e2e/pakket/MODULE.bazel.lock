@@ -302,8 +302,8 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "P8B1PdxP1npJ3vXJGexoBKrMGe30Qf8p1lsAwSUxCkw=",
-        "usagesDigest": "z1n8ndX0j+N2wL7woLDeDZxx3zUAKcGh+1+tFZnZmMI=",
+        "bzlTransitiveDigest": "9ZOEsxSyxJnrp4o9b9zCpgH4w1H10JL+Ra6ClpVwSeQ=",
+        "usagesDigest": "AZiTSSI/S3aboiSnZTLjFR0xJnbyVgfjNQ++2MF8ZaM=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -340,7 +340,8 @@
               },
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Algorithm-Diff-Callback": {
@@ -368,7 +369,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__App-Cmd": {
@@ -420,8 +422,11 @@
               "test_deps": [
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/basic.t",
+                "t/simple-version.t",
+                "t/tester-exit.t"
               ]
             }
           },
@@ -460,8 +465,12 @@
               "test_deps": [
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/00compile.t",
+                "t/Any.t",
+                "t/fail.t",
+                "t/type.t"
               ]
             }
           },
@@ -490,9 +499,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ]
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Archive-Zip": {
@@ -529,7 +537,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__B-COW": {
@@ -555,7 +564,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__B-Hooks-EndOfScope": {
@@ -586,7 +596,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__CPAN-Meta-Check": {
@@ -612,7 +623,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Capture-Tiny": {
@@ -638,7 +650,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Class-Data-Inheritable": {
@@ -664,7 +677,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Class-Inspector": {
@@ -691,7 +705,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Class-Load": {
@@ -727,7 +742,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Class-Load-XS": {
@@ -759,7 +775,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Clone": {
@@ -787,7 +804,8 @@
               "test_deps": [
                 "@cpan__B-COW//:B-COW"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Clone-PP": {
@@ -813,7 +831,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Config-Any": {
@@ -848,7 +867,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Cpanel-JSON-XS": {
@@ -878,7 +898,8 @@
               "test_deps": [],
               "test_tags": [
                 "manual"
-              ]
+              ],
+              "manual_tests": []
             }
           },
           "cpan__Data-OptList": {
@@ -907,7 +928,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Data-Printer": {
@@ -962,8 +984,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/000.2-warn.t",
+                "t/026-caller_message.t"
               ]
             }
           },
@@ -997,7 +1021,8 @@
               "test_deps": [
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Devel-CheckBin": {
@@ -1023,7 +1048,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Devel-GlobalDestruction": {
@@ -1051,7 +1077,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Devel-OverloadInfo": {
@@ -1082,7 +1109,8 @@
               "test_deps": [
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Devel-StackTrace": {
@@ -1109,7 +1137,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Dist-CheckConflicts": {
@@ -1139,7 +1168,8 @@
               "test_deps": [
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Eval-Closure": {
@@ -1168,7 +1198,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Exception-Class": {
@@ -1198,7 +1229,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Exporter-Tiny": {
@@ -1225,7 +1257,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__ExtUtils-Config": {
@@ -1252,7 +1285,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__ExtUtils-Helpers": {
@@ -1281,7 +1315,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__ExtUtils-InstallPaths": {
@@ -1309,7 +1344,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__File-Copy-Recursive": {
@@ -1341,9 +1377,8 @@
                 "@cpan__Test-File//:Test-File",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [
-                "manual"
-              ]
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__File-HomeDir": {
@@ -1380,7 +1415,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__File-Lockfile": {
@@ -1408,7 +1444,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__File-MMagic": {
@@ -1434,7 +1471,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__File-ShareDir": {
@@ -1462,8 +1500,11 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/00_prereqs.t",
+                "t/02_main.t",
+                "t/05_class.t"
               ]
             }
           },
@@ -1490,7 +1531,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__File-Which": {
@@ -1516,8 +1558,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/file_which.t"
               ]
             }
           },
@@ -1546,7 +1589,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__File-pushd": {
@@ -1572,7 +1616,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Getopt-Long-Descriptive": {
@@ -1607,7 +1652,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Git-Wrapper": {
@@ -1645,7 +1691,8 @@
                 "@cpan__Test-Deep//:Test-Deep",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Hash-Util-FieldHash-Compat": {
@@ -1672,7 +1719,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__IO-Interactive": {
@@ -1698,7 +1746,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__IO-Prompt-Tiny": {
@@ -1726,7 +1775,8 @@
               "test_deps": [
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__IO-TieCombine": {
@@ -1754,7 +1804,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__IPC-Run": {
@@ -1789,7 +1840,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__IPC-Run3": {
@@ -1815,7 +1867,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__JSON-MaybeXS": {
@@ -1843,7 +1896,8 @@
               "test_deps": [
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Log-Any": {
@@ -1886,7 +1940,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Log-Any-Adapter-Dispatch": {
@@ -1915,7 +1970,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Log-Dispatch": {
@@ -1970,7 +2026,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__MIME-Types": {
@@ -2000,7 +2057,8 @@
               "test_deps": [
                 "@cpan__Test-Pod//:Test-Pod"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__MRO-Compat": {
@@ -2026,7 +2084,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Module-Build": {
@@ -2072,7 +2131,8 @@
               "test_deps": [],
               "test_tags": [
                 "manual"
-              ]
+              ],
+              "manual_tests": []
             }
           },
           "cpan__Module-Build-Tiny": {
@@ -2102,7 +2162,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Module-CPANfile": {
@@ -2134,7 +2195,8 @@
               "test_deps": [
                 "@cpan__File-pushd//:File-pushd"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Module-Find": {
@@ -2160,7 +2222,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Module-Implementation": {
@@ -2192,7 +2255,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Module-Pluggable": {
@@ -2220,7 +2284,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Module-Runtime": {
@@ -2246,7 +2311,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Module-Runtime-Conflicts": {
@@ -2275,7 +2341,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Moose": {
@@ -2759,8 +2826,10 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/attributes/attribute_delegation.t",
+                "t/basics/override_and_foreign_classes.t"
               ]
             }
           },
@@ -2800,7 +2869,8 @@
               "test_deps": [
                 "@cpan__Moose//:Moose"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__MooseX-StrictConstructor": {
@@ -2835,7 +2905,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__MooseX-Test-Role": {
@@ -2863,7 +2934,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Package-DeprecationManager": {
@@ -2896,7 +2968,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Package-Stash": {
@@ -2930,8 +3003,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/warnings-taint.t"
               ]
             }
           },
@@ -2961,7 +3035,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Params-SomeUtil": {
@@ -2987,7 +3062,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Params-Util": {
@@ -3016,7 +3092,8 @@
               "test_deps": [
                 "@cpan__Test-LeakTrace//:Test-LeakTrace"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Params-Validate": {
@@ -3050,7 +3127,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Params-ValidationCompiler": {
@@ -3085,7 +3163,8 @@
                 "@cpan__Test-Without-Module//:Test-Without-Module",
                 "@cpan__Test2-Plugin-NoWarnings//:Test2-Plugin-NoWarnings"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Path-Tiny": {
@@ -3112,7 +3191,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Readonly": {
@@ -3141,7 +3221,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Ref-Util": {
@@ -3168,7 +3249,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Ref-Util-XS": {
@@ -3194,7 +3276,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Role-Tiny": {
@@ -3221,7 +3304,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Safe-Isa": {
@@ -3247,7 +3331,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Sort-Versions": {
@@ -3273,7 +3358,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Specio": {
@@ -3354,7 +3440,8 @@
               "test_deps": [
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__String-RewritePrefix": {
@@ -3382,7 +3469,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Sub-Exporter": {
@@ -3413,7 +3501,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Sub-Exporter-Progressive": {
@@ -3439,7 +3528,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Sub-Identify": {
@@ -3465,7 +3555,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Sub-Install": {
@@ -3491,7 +3582,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Sub-Name": {
@@ -3517,7 +3609,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Sub-Quote": {
@@ -3544,7 +3637,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Sub-Uplevel": {
@@ -3570,7 +3664,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__System-Command": {
@@ -3599,7 +3694,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Deep": {
@@ -3675,7 +3771,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Exception": {
@@ -3703,7 +3800,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Fatal": {
@@ -3731,7 +3829,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-File": {
@@ -3750,14 +3849,17 @@
               "includes": [],
               "native_deps": [],
               "output_loc": "",
-              "patch_cmds": [],
+              "patch_cmds": [
+                "rm -f File.xs"
+              ],
               "patch_cmds_win": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-LeakTrace": {
@@ -3784,7 +3886,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Needs": {
@@ -3810,7 +3913,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Pod": {
@@ -3836,7 +3940,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Requires": {
@@ -3862,7 +3967,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Simple": {
@@ -4088,8 +4194,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/Test2/behavior/Taint.t"
               ]
             }
           },
@@ -4118,7 +4225,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Warnings": {
@@ -4145,7 +4253,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test-Without-Module": {
@@ -4171,7 +4280,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Test2-Plugin-NoWarnings": {
@@ -4201,7 +4311,8 @@
                 "@cpan__IPC-Run3//:IPC-Run3",
                 "@cpan__Module-Pluggable//:Module-Pluggable"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Tie-ToObject": {
@@ -4227,7 +4338,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Try-Tiny": {
@@ -4253,7 +4365,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Type-Tiny": {
@@ -4331,8 +4444,12 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/20-modules/*",
+                "t/21-types/*",
+                "t/30-external/*",
+                "t/40-bugs/*"
               ]
             }
           },
@@ -4364,7 +4481,8 @@
               "test_deps": [
                 "@cpan__File-pushd//:File-pushd"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Types-Serialiser": {
@@ -4396,7 +4514,8 @@
               "test_deps": [],
               "test_tags": [
                 "manual"
-              ]
+              ],
+              "manual_tests": []
             }
           },
           "cpan__Unicode-UTF8": {
@@ -4424,7 +4543,8 @@
               "test_deps": [
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__Variable-Magic": {
@@ -4450,7 +4570,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__YAML-LibYAML": {
@@ -4486,7 +4607,8 @@
               ],
               "test_tags": [
                 "manual"
-              ]
+              ],
+              "manual_tests": []
             }
           },
           "cpan__common-sense": {
@@ -4514,7 +4636,8 @@
               "test_deps": [],
               "test_tags": [
                 "manual"
-              ]
+              ],
+              "manual_tests": []
             }
           },
           "cpan__namespace-autoclean": {
@@ -4545,7 +4668,8 @@
               "test_deps": [
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan__namespace-clean": {
@@ -4574,7 +4698,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan": {
@@ -6109,22 +6234,9 @@
                 ]
               },
               "manual_tests": [
-                "App-Cmd",
-                "Archive-Any",
-                "Archive-Tar",
-                "Compress-Raw-Zlib",
                 "Cpanel-JSON-XS",
-                "Data-Printer",
-                "File-Copy-Recursive",
-                "File-ShareDir",
-                "File-Which",
                 "IO-Tty",
                 "Module-Build",
-                "Moose",
-                "Package-Stash",
-                "Test-Simple",
-                "Test2-Suite",
-                "Type-Tiny",
                 "Types-Serialiser",
                 "YAML-LibYAML",
                 "common-sense"
@@ -6159,7 +6271,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Carp": {
@@ -6190,7 +6303,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Compress-Raw-Zlib": {
@@ -6218,7 +6332,8 @@
               "test_deps": [],
               "test_tags": [
                 "manual"
-              ]
+              ],
+              "manual_tests": []
             }
           },
           "cpan_alt__Data-Dumper": {
@@ -6244,7 +6359,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Encode": {
@@ -6302,7 +6418,8 @@
               "test_deps": [
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Exporter": {
@@ -6329,7 +6446,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__ExtUtils-MakeMaker": {
@@ -6395,7 +6513,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__File-Path": {
@@ -6428,7 +6547,8 @@
                 "@cpan_alt__PathTools//:PathTools",
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__File-Temp": {
@@ -6464,7 +6584,8 @@
                 "@cpan_alt__PathTools//:PathTools",
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__IO": {
@@ -6501,7 +6622,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__PathTools": {
@@ -6539,7 +6661,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Pod-Escapes": {
@@ -6567,7 +6690,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Pod-Simple": {
@@ -6627,7 +6751,8 @@
               "test_deps": [
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Scalar-List-Utils": {
@@ -6659,7 +6784,8 @@
               "test_deps": [
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Storable": {
@@ -6690,7 +6816,8 @@
                 "@cpan_alt__File-Temp//:File-Temp",
                 "@cpan_alt__Test-Simple//:Test-Simple"
               ],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Term-Table": {
@@ -6724,7 +6851,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Test-Simple": {
@@ -6958,7 +7086,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Text-Tabs_Wrap": {
@@ -6985,7 +7114,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__Time-HiRes": {
@@ -7014,7 +7144,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__XSLoader": {
@@ -7042,7 +7173,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt__podlators": {
@@ -7075,7 +7207,8 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": []
+              "test_tags": [],
+              "manual_tests": []
             }
           },
           "cpan_alt": {
