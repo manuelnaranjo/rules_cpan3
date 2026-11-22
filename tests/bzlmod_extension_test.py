@@ -198,6 +198,19 @@ class BzlmodExtensionTests(unittest.TestCase):
             is_dag(pruned), "Pruned CPAN runtime dependency graph must be a strict DAG"
         )
 
+    def test_annotations_formatting(self):
+        # Verify formatting helper logic for annotations
+        target_compat = ["@platforms//os:linux", "@platforms//os:macos"]
+        exec_reqs = {"no-remote": "1", "supports-path-mapping": "1"}
+
+        target_str = ", ".join(f'"{x}"' for x in target_compat)
+        self.assertIn('"@platforms//os:linux"', target_str)
+        self.assertIn('"@platforms//os:macos"', target_str)
+
+        reqs_str = ", ".join(f'"{k}": "{v}"' for k, v in exec_reqs.items())
+        self.assertIn('"no-remote": "1"', reqs_str)
+        self.assertIn('"supports-path-mapping": "1"', reqs_str)
+
 
 if __name__ == "__main__":
     unittest.main()

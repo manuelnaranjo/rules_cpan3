@@ -283,8 +283,8 @@
   "moduleExtensions": {
     "//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "Rgg0ObBQTvVhAAVfOgW5JT7KQ6xBJpkYNxAvm9g8n9o=",
-        "usagesDigest": "SrX6KAaEFLg9tlt2qogcCdl6PjRFllcLj/MhVGP0hJg=",
+        "bzlTransitiveDigest": "iprPfWmExVNa8HdlBu+WGn019Bid7oCHTaROl5/TjRY=",
+        "usagesDigest": "q4hLMD9KxxgLLsG+ekh4jolmq+La9oLdAS+wZb4EB9o=",
         "recordedInputs": [
           "FILE:@@//tests/cpan.lock.json 5dc46991e6cddf4382a13498df9f95a8525605e8d86795c36e2487e7d6eb5984"
         ],
@@ -305,7 +305,15 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [
+                "@platforms//os:linux"
+              ],
+              "exec_compatible_with": [],
+              "execution_requirements": {
+                "no-remote": "1"
+              },
+              "extra_tags": []
             }
           },
           "cpan__Carp": {
@@ -328,7 +336,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Compress-Raw-Zlib": {
@@ -353,7 +365,11 @@
               "patch_cmds_win": [
                 "copy fallback\\constants.h constants.h",
                 "copy fallback\\constants.xs constants.xs"
-              ]
+              ],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Data-Dumper": {
@@ -371,7 +387,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Encode": {
@@ -419,7 +439,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Exporter": {
@@ -438,7 +462,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__ExtUtils-MakeMaker": {
@@ -496,7 +524,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__File-Path": {
@@ -517,7 +549,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__File-Temp": {
@@ -541,7 +577,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__IO": {
@@ -570,7 +610,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__PathTools": {
@@ -600,7 +644,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Pod-Escapes": {
@@ -620,7 +668,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Pod-Simple": {
@@ -670,7 +722,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Scalar-List-Utils": {
@@ -692,7 +748,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Storable": {
@@ -712,7 +772,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Term-Table": {
@@ -738,7 +802,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Test-Simple": {
@@ -964,7 +1032,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Text-Tabs_Wrap": {
@@ -983,7 +1055,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__Time-HiRes": {
@@ -1004,7 +1080,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__XSLoader": {
@@ -1024,7 +1104,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan__podlators": {
@@ -1049,7 +1133,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan": {
@@ -1496,7 +1584,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Carp": {
@@ -1519,7 +1611,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Compress-Raw-Zlib": {
@@ -1537,7 +1633,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Data-Dumper": {
@@ -1555,7 +1655,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Encode": {
@@ -1603,7 +1707,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Exporter": {
@@ -1622,7 +1730,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__ExtUtils-MakeMaker": {
@@ -1680,7 +1792,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__File-Path": {
@@ -1701,7 +1817,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__File-Temp": {
@@ -1725,7 +1845,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__IO": {
@@ -1754,7 +1878,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__PathTools": {
@@ -1784,7 +1912,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Pod-Escapes": {
@@ -1804,7 +1936,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Pod-Simple": {
@@ -1854,7 +1990,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Scalar-List-Utils": {
@@ -1876,7 +2016,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Storable": {
@@ -1896,7 +2040,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Term-Table": {
@@ -1922,7 +2070,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Test-Simple": {
@@ -2148,7 +2300,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Text-Tabs_Wrap": {
@@ -2167,7 +2323,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__Time-HiRes": {
@@ -2188,7 +2348,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__XSLoader": {
@@ -2208,7 +2372,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt__podlators": {
@@ -2233,7 +2401,11 @@
               "defines": [],
               "native_deps": [],
               "patch_cmds": [],
-              "patch_cmds_win": []
+              "patch_cmds_win": [],
+              "target_compatible_with": [],
+              "exec_compatible_with": [],
+              "execution_requirements": {},
+              "extra_tags": []
             }
           },
           "cpan_alt": {
