@@ -30,3 +30,6 @@ Whenever invoking Bazel commands (`build`, `test`, `run`, `cquery`, `query`, etc
 ## Bzlmod & Dependencies
 - Strictly use Bzlmod (`MODULE.bazel`). No legacy `WORKSPACE` files.
 - Native C/C++ third-party dependencies are ported into the local BCR registry at `bazel/3rdparty` if not present in the upstream BCR.
+
+## Pre-commit Verification
+- Always run `pre-commit run --all-files` before each commit to verify and enforce formatting (Buildifier), script executable permissions, trailing whitespace, and file endings.
