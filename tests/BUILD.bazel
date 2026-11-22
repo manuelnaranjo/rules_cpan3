@@ -1,6 +1,6 @@
+load("@aspect_rules_py//py:defs.bzl", "py_test")
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_test")
 load("@rules_perl//perl:perl.bzl", "perl_binary", "perl_test")
-load("@rules_python//python:defs.bzl", "py_test")
 load("//platforms:transitions.bzl", "multi_platform_test", "platform_binary")
 
 package(default_visibility = ["//visibility:public"])

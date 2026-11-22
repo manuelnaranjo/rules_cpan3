@@ -8,10 +8,6 @@ If `agents.local.md` is present, agents MUST read and follow its contents as par
 
 <!-- include: agents.local.md -->
 
-## Workflow Protocol
-1. **Always Make a PR**: When assigned an issue to work on, create a dedicated feature branch (e.g. `feat/issue-<number>-<description>`), implement and test the changes thoroughly, and submit a GitHub Pull Request for review.
-2. **Reply to Feedback**: When requested to address review comments or feedback on an issue/PR, make the required updates and post a reply on the PR or issue directly addressing the reviewer's feedback.
-
 ## Bazel Invocation Protocol
 Whenever invoking Bazel commands (`build`, `test`, `run`, `cquery`, `query`, etc.):
 1. Generate an invocation ID:
@@ -30,9 +26,6 @@ Whenever invoking Bazel commands (`build`, `test`, `run`, `cquery`, `query`, etc
 ## Path Handling
 - Always use relative paths relative to the repository workspace root.
 - For tools executed via `bazel run`, reference files relative to `BUILD_WORKSPACE_DIRECTORY`.
-
-## Timezone & Date Localization
-- Display all dates, times, and timestamps localized to `Europe/Amsterdam` (CET/CEST) in user-facing communication.
 
 ## Bzlmod & Dependencies
 - Strictly use Bzlmod (`MODULE.bazel`). No legacy `WORKSPACE` files.
