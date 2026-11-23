@@ -285,7 +285,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "zcqlho7TinVfJAhrpfcMgkvghTt9dJF4Lrzk8wvz9zI=",
-        "usagesDigest": "Pd4z2jKxG8BvuGWBsZJih+CxHXRf11E3utBR9L6Kvm4=",
+        "usagesDigest": "EaOKDygKjF3TJdENGMMy1wj2tZqz482kxgTUiSXFwRM=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -23154,8 +23154,12 @@
               "includes": [],
               "native_deps": [],
               "output_loc": "",
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "mv util.c util.inc && mv hparser.c hparser.inc && sed -i -e 's/\"util.c\"/\"util.inc\"/' -e 's/\"hparser.c\"/\"hparser.inc\"/' Parser.xs"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"Move-Item util.c util.inc; Move-Item hparser.c hparser.inc; (Get-Content Parser.xs) -replace '\"\"util.c\"\"', '\"\"util.inc\"\"' -replace '\"\"hparser.c\"\"', '\"\"hparser.inc\"\"' | Set-Content Parser.xs\""
+              ],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
