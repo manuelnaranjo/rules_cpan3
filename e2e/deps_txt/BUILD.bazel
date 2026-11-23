@@ -6,14 +6,7 @@ test_suite(
     name = "deps_txt_tests",
     tests = [
         ":e2e_deps_txt_test",
-        "@cpan//:Capture-Tiny_test",
-        "@cpan//:Clone_test",
-        "@cpan//:Compress-Raw-Zlib_test",
-        "@cpan//:IO-Tty_test",
-        "@cpan//:Path-Tiny_test",
-        "@cpan//:Sub-Name_test",
-        "@cpan//:Try-Tiny_test",
-        "@cpan//:URI_test",
+        "@cpan//:test-rules-cpan-modules",
     ],
 )
 

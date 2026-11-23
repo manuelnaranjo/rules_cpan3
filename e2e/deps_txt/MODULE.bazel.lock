@@ -281,7 +281,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "/rI5sDpYQg+wiVBdq6E7YjvDjP2be5FZs5KdDKlrBME=",
-        "usagesDigest": "LSapSlsZ1RmYlPd7z126vvGPmikaaI1qtlzVPT6fiWw=",
+        "usagesDigest": "TBXA0qSI4dg6+oR1IqbfUEGcxyIKnMXNVz+VuesuRlU=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -384,7 +384,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -416,7 +418,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -659,7 +663,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1266,7 +1272,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1397,7 +1405,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1428,7 +1438,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1459,7 +1471,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1491,7 +1505,9 @@
               "test_deps": [
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1522,7 +1538,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1553,7 +1571,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1584,7 +1604,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1661,7 +1683,9 @@
               "test_deps": [
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1738,7 +1762,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1769,7 +1795,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1799,7 +1827,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1892,7 +1922,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1924,7 +1956,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2014,7 +2048,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2081,7 +2117,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2110,7 +2148,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2147,7 +2187,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2258,7 +2300,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2621,7 +2665,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2679,7 +2725,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2779,7 +2827,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2847,7 +2897,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2906,7 +2958,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3082,7 +3136,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3170,7 +3226,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3198,7 +3256,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3232,7 +3292,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3263,7 +3325,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3371,7 +3435,9 @@
                 "@cpan__Test-Warn//:Test-Warn",
                 "@cpan__TimeDate//:TimeDate"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3407,7 +3473,9 @@
                 "@cpan__Pod-Coverage-TrustPod//:Pod-Coverage-TrustPod",
                 "@cpan__Test-Perl-Critic//:Test-Perl-Critic"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3463,7 +3531,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3521,7 +3591,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3578,7 +3650,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3626,7 +3700,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3677,7 +3753,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3708,7 +3786,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3736,7 +3816,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3881,7 +3963,9 @@
               "test_deps": [
                 "@cpan__Test-Base//:Test-Base"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3940,7 +4024,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4036,7 +4122,9 @@
                 "@cpan__Devel-Cycle//:Devel-Cycle",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4616,7 +4704,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4798,7 +4888,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4855,7 +4947,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4916,7 +5010,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5044,7 +5140,9 @@
               "test_deps": [
                 "@cpan__Test-Most//:Test-Most"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5074,7 +5172,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5103,7 +5203,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5131,7 +5233,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5159,7 +5263,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5215,7 +5321,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5243,7 +5351,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5277,7 +5387,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5374,7 +5486,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5595,7 +5709,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5655,7 +5771,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5836,7 +5954,9 @@
                 "@cpan__File-Slurp//:File-Slurp",
                 "@cpan__Test-Most//:Test-Most"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6019,7 +6139,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6103,7 +6225,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6159,7 +6283,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6267,7 +6393,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6328,7 +6456,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6371,7 +6501,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6476,7 +6608,9 @@
               "test_deps": [
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6504,7 +6638,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6533,7 +6669,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6591,7 +6729,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6619,7 +6759,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6684,7 +6826,9 @@
               "test_deps": [
                 "@cpan__Test-Pod//:Test-Pod"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6772,7 +6916,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6884,7 +7030,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6926,7 +7074,9 @@
               "test_deps": [
                 "@cpan__Statistics-ChiSquare//:Statistics-ChiSquare"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7002,7 +7152,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7030,7 +7182,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7058,7 +7212,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7086,7 +7242,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7118,7 +7276,9 @@
               "test_deps": [
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7368,7 +7528,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7403,7 +7565,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7468,7 +7632,9 @@
               "test_deps": [
                 "@cpan__Ref-Util//:Ref-Util"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7506,7 +7672,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7539,7 +7707,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7577,7 +7747,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7613,7 +7785,9 @@
               "test_deps": [
                 "@cpan__Test-Deep//:Test-Deep"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7735,7 +7909,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7903,7 +8079,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8090,7 +8268,9 @@
                 "@cpan__Test-Roo//:Test-Roo",
                 "@cpan__aliased//:aliased"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8236,7 +8416,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8304,7 +8486,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8332,7 +8516,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8448,7 +8634,9 @@
                 "@cpan__Plack//:Plack",
                 "@cpan__Test-NoWarnings//:Test-NoWarnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8565,7 +8753,9 @@
                 "@cpan__Test-EOL//:Test-EOL",
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8599,7 +8789,9 @@
                 "@cpan__HTTP-Message//:HTTP-Message",
                 "@cpan__Plack//:Plack"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8635,7 +8827,9 @@
                 "@cpan__HTTP-Message//:HTTP-Message",
                 "@cpan__Plack//:Plack"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8673,7 +8867,9 @@
                 "@cpan__Plack//:Plack",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8701,7 +8897,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": "Dancer2-Template-MojoTemplate"
             }
@@ -8785,7 +8983,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8923,7 +9123,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8964,7 +9166,9 @@
               "test_deps": [
                 "@cpan__Test-Deep//:Test-Deep"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9028,7 +9232,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9121,7 +9327,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9162,7 +9370,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9194,7 +9404,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9310,7 +9522,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9372,7 +9586,9 @@
               "test_deps": [
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9402,7 +9618,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9547,7 +9765,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Output//:Test-Output"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9585,11 +9805,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
-              "manual_tests": [
-                "t/000.2-warn.t",
-                "t/026-caller_message.t"
+              "test_tags": [
+                "manual"
               ],
+              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -9762,7 +9981,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9823,7 +10044,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9885,7 +10108,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -10077,7 +10302,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -10109,7 +10336,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -11022,7 +11251,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -11056,7 +11287,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -11321,7 +11554,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -11566,7 +11801,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -11636,7 +11873,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -12612,7 +12851,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -12689,7 +12930,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -12722,7 +12965,9 @@
               "test_deps": [
                 "@cpan__JSON-MaybeXS//:JSON-MaybeXS"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -12955,7 +13200,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13032,7 +13279,9 @@
                 "@cpan__Sub-Name//:Sub-Name",
                 "@cpan__Test-Differences//:Test-Differences"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13160,7 +13409,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13231,7 +13482,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13347,7 +13600,9 @@
               "test_deps": [
                 "@cpan__Test-Differences//:Test-Differences"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13375,7 +13630,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13403,7 +13660,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13547,7 +13806,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": "Digest-CRC-0.22"
             }
@@ -13575,7 +13836,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13661,7 +13924,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13689,7 +13954,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13775,7 +14042,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": "MD4"
             }
@@ -13831,7 +14100,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13859,7 +14130,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13887,7 +14160,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13916,7 +14191,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13944,7 +14221,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -13987,7 +14266,9 @@
               "test_deps": [
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14080,7 +14361,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14150,7 +14433,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14201,7 +14486,9 @@
                 "@cpan__Test-Differences//:Test-Differences",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14286,7 +14573,9 @@
                 "@cpan__Test-Class-Most//:Test-Class-Most",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14542,7 +14831,9 @@
               "test_deps": [
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14799,7 +15090,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14854,7 +15147,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14885,7 +15180,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14943,7 +15240,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -15030,7 +15329,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -15184,7 +15485,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -15214,7 +15517,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -15608,7 +15913,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -15870,7 +16177,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -15930,7 +16239,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -16023,7 +16334,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -16226,7 +16539,9 @@
               "test_deps": [
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -16675,7 +16990,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -16913,7 +17230,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17053,7 +17372,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17126,7 +17447,9 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__Test-TCP//:Test-TCP"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17235,7 +17558,9 @@
               "test_deps": [
                 "@cpan__Test-Fork//:Test-Fork"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17275,7 +17600,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17305,7 +17632,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17352,7 +17681,9 @@
                 "@cpan__Capture-Tiny//:Capture-Tiny",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17382,7 +17713,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17549,7 +17882,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17606,7 +17941,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17690,7 +18027,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Number-Delta//:Test-Number-Delta"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17881,7 +18220,9 @@
               "test_deps": [
                 "@cpan__Test-Requires-Git//:Test-Requires-Git"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17913,7 +18254,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -21888,7 +22231,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -21963,7 +22308,9 @@
                 "@cpan__Test-Exception//:Test-Exception",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22200,7 +22547,9 @@
               "test_deps": [
                 "@cpan__Test-Pod//:Test-Pod"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22259,7 +22608,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22377,7 +22728,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22433,7 +22786,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22507,7 +22862,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22579,7 +22936,9 @@
               "test_deps": [
                 "@cpan__URI//:URI"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22612,7 +22971,9 @@
                 "@cpan__Test-Differences//:Test-Differences",
                 "@cpan__Test-Memory-Cycle//:Test-Memory-Cycle"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22672,7 +23033,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22704,7 +23067,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22732,7 +23097,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22772,7 +23139,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22801,7 +23170,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22839,7 +23210,9 @@
               "test_deps": [
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22874,7 +23247,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22902,7 +23277,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22975,7 +23352,9 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__URI//:URI"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -23309,7 +23688,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -23430,7 +23811,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -23628,7 +24011,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -23813,7 +24198,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24059,7 +24446,9 @@
                 "@cpan__Plack//:Plack",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24115,7 +24504,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24145,7 +24536,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24185,7 +24578,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24332,7 +24727,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24477,7 +24874,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24653,7 +25052,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24692,7 +25093,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24752,7 +25155,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24905,7 +25310,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -24941,7 +25348,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25299,7 +25708,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25417,7 +25828,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25445,7 +25858,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25713,7 +26128,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25744,7 +26161,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25773,7 +26192,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25862,7 +26283,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25907,7 +26330,9 @@
                 "@cpan__Test-Most//:Test-Most",
                 "@cpan__Tie-IxHash//:Tie-IxHash"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25938,7 +26363,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -25991,7 +26418,9 @@
                 "@cpan__Test-JSON-Schema-Acceptance//:Test-JSON-Schema-Acceptance",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26056,7 +26485,9 @@
                 "@cpan__Test-Memory-Cycle//:Test-Memory-Cycle",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26084,7 +26515,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26196,7 +26629,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26261,7 +26696,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26330,7 +26767,9 @@
                 "@cpan__Test-TCP//:Test-TCP",
                 "@cpan__Try-Tiny//:Try-Tiny"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26393,7 +26832,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26463,7 +26904,9 @@
               "test_deps": [
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26501,7 +26944,9 @@
                 "@cpan__Test-RequiresInternet//:Test-RequiresInternet",
                 "@cpan__libwww-perl//:libwww-perl"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26531,7 +26976,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26657,7 +27104,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26827,7 +27276,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26855,7 +27306,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26883,7 +27336,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26911,7 +27366,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -26942,7 +27399,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -27026,7 +27485,9 @@
                 "@cpan__Snowball-Swedish//:Snowball-Swedish",
                 "@cpan__Text-German//:Text-German"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -27207,7 +27668,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -27239,7 +27702,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -27270,7 +27735,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -27429,7 +27896,9 @@
               "test_deps": [
                 "@cpan__Test-LeakTrace//:Test-LeakTrace"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -27561,7 +28030,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -27694,7 +28165,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -28000,7 +28473,9 @@
                 "@cpan__Path-Tiny//:Path-Tiny",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -28077,7 +28552,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -28112,7 +28589,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -28148,7 +28627,9 @@
                 "@cpan__Test-Most//:Test-Most",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -28199,7 +28680,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -28562,7 +29045,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -28761,7 +29246,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -28805,7 +29292,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -29098,7 +29587,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -29229,7 +29720,9 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__Tree-Simple-VisitorFactory//:Tree-Simple-VisitorFactory"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -29877,7 +30370,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -29971,7 +30466,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30064,7 +30561,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30123,7 +30622,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30192,7 +30693,9 @@
                 "@cpan__Test-SharedFork//:Test-SharedFork",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30220,7 +30723,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30250,7 +30755,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30281,7 +30788,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30378,7 +30887,9 @@
                 "@cpan__Test-Number-Delta//:Test-Number-Delta",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30422,7 +30933,9 @@
                 "@cpan__Test-Number-Delta//:Test-Number-Delta",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30483,7 +30996,9 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30511,7 +31026,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30681,7 +31198,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30822,7 +31341,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -31004,7 +31525,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -31166,7 +31689,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -31195,7 +31720,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -31313,7 +31840,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -31607,7 +32136,9 @@
               "test_deps": [
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -31650,7 +32181,9 @@
                 "@cpan__Test-Exception//:Test-Exception",
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -31722,7 +32255,9 @@
               "test_deps": [
                 "@cpan__Test-Trap//:Test-Trap"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -31888,7 +32423,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -32289,11 +32826,10 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
-              "manual_tests": [
-                "t/attributes/attribute_delegation.t",
-                "t/basics/override_and_foreign_classes.t"
+              "test_tags": [
+                "manual"
               ],
+              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -32565,7 +33101,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -32632,7 +33170,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -32663,7 +33203,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -32702,7 +33244,9 @@
                 "@cpan__Moose//:Moose",
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -32946,7 +33490,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -33135,7 +33681,9 @@
                 "@cpan__Moose//:Moose",
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -33372,7 +33920,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -33434,7 +33984,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -33642,7 +34194,9 @@
                 "@cpan__Test-Warnings//:Test-Warnings",
                 "@cpan__libwww-perl//:libwww-perl"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -33741,7 +34295,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -33933,7 +34489,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34057,7 +34615,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34109,7 +34669,9 @@
               "test_deps": [
                 "@cpan__Test-CPAN-Meta//:Test-CPAN-Meta"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34144,7 +34706,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34185,7 +34749,9 @@
                 "@cpan__Test-Deep//:Test-Deep",
                 "@cpan__libwww-perl//:libwww-perl"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34239,7 +34805,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34273,7 +34841,9 @@
               "test_deps": [
                 "@cpan__Test-NoWarnings//:Test-NoWarnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34336,7 +34906,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34370,7 +34942,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34398,7 +34972,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34474,7 +35050,9 @@
               "test_deps": [
                 "@cpan__Test-Pod//:Test-Pod"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34502,7 +35080,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34535,7 +35115,9 @@
                 "@cpan__Test-Pod//:Test-Pod",
                 "@cpan__Test-Pod-Coverage//:Test-Pod-Coverage"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34625,7 +35207,9 @@
                 "@cpan__Test-Pod//:Test-Pod",
                 "@cpan__Test-Pod-Coverage//:Test-Pod-Coverage"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34695,7 +35279,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34854,7 +35440,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34889,7 +35477,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34918,7 +35508,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -34999,7 +35591,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -35068,7 +35662,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -35099,7 +35695,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -35133,7 +35731,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -35228,7 +35828,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -35570,7 +36172,9 @@
                 "@cpan__Test-Differences//:Test-Differences",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -35727,7 +36331,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -35790,7 +36396,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -35886,7 +36494,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -36081,7 +36691,9 @@
                 "@cpan__Test-Exception//:Test-Exception",
                 "@cpan__Test-Memory-Cycle//:Test-Memory-Cycle"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -36250,7 +36862,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -36278,7 +36892,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -36662,7 +37278,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -36889,7 +37507,9 @@
               "test_deps": [
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -37105,7 +37725,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -37310,7 +37932,9 @@
                 "@cpan__JSON-XS//:JSON-XS",
                 "@cpan__Path-Tiny//:Path-Tiny"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -37483,7 +38107,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58152,7 +58778,9 @@
                 "@cpan__Test-Warnings//:Test-Warnings",
                 "@cpan__YAML//:YAML"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58441,7 +59069,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58497,7 +59127,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58537,7 +59169,9 @@
               "test_deps": [
                 "@cpan__Perl-Critic//:Perl-Critic"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58577,7 +59211,9 @@
               "test_deps": [
                 "@cpan__Perl-Critic//:Perl-Critic"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58615,7 +59251,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58646,7 +59284,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58676,7 +59316,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58709,7 +59351,9 @@
               "test_deps": [
                 "@cpan__Perl-Critic//:Perl-Critic"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58742,7 +59386,9 @@
               "test_deps": [
                 "@cpan__Perl-Critic//:Perl-Critic"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58776,7 +59422,9 @@
                 "@cpan__Test-FailWarnings//:Test-FailWarnings",
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58804,7 +59452,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58834,7 +59484,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58864,7 +59516,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58898,7 +59552,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -58988,7 +59644,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59029,7 +59687,9 @@
               "test_deps": [
                 "@cpan__Perl-Critic//:Perl-Critic"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59057,7 +59717,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59100,7 +59762,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59136,7 +59800,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59183,7 +59849,9 @@
                 "@cpan__PPI//:PPI",
                 "@cpan__Try-Tiny//:Try-Tiny"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59333,7 +60001,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59394,7 +60064,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59480,7 +60152,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59716,7 +60390,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59747,7 +60423,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59778,7 +60456,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -59892,7 +60572,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60033,7 +60715,9 @@
                 "@cpan__Test-Memory-Cycle//:Test-Memory-Cycle",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60380,7 +61064,9 @@
                 "@cpan__Test-Differences//:Test-Differences",
                 "@cpan__Text-Diff//:Text-Diff"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60599,7 +61285,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60655,7 +61343,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60686,7 +61376,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60732,7 +61424,9 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60788,7 +61482,9 @@
                 "@cpan__Test-LeakTrace//:Test-LeakTrace",
                 "@cpan__Test-TCP//:Test-TCP"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60838,7 +61534,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60870,7 +61568,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60929,7 +61629,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -60987,7 +61689,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61058,7 +61762,9 @@
                 "@cpan__Test-SharedFork//:Test-SharedFork",
                 "@cpan__Test-TCP//:Test-TCP"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61121,7 +61827,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61352,7 +62060,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61480,7 +62190,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61610,7 +62322,9 @@
                 "@cpan__Test-Warn//:Test-Warn",
                 "@cpan__XML-Parser-Lite//:XML-Parser-Lite"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61782,7 +62496,9 @@
                 "@cpan__Test-XML//:Test-XML",
                 "@cpan__XML-LibXML//:XML-LibXML"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61830,7 +62546,9 @@
                 "@cpan__Test-Exception//:Test-Exception",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61894,7 +62612,9 @@
               "test_deps": [
                 "@cpan__Test-Most//:Test-Most"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -61927,7 +62647,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62371,7 +63093,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62403,7 +63127,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62522,7 +63248,9 @@
                 "@cpan__Test-Pod//:Test-Pod",
                 "@cpan__Test-SharedFork//:Test-SharedFork"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62592,7 +63320,9 @@
                 "@cpan__Test-Deep//:Test-Deep",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62675,7 +63405,9 @@
                 "@cpan__Test-Deep//:Test-Deep",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62752,7 +63484,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-LWP-UserAgent//:Test-LWP-UserAgent"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62790,7 +63524,9 @@
                 "@cpan__Test-LongString//:Test-LongString",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62825,7 +63561,9 @@
                 "@cpan__Test-LongString//:Test-LongString",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -62860,7 +63598,9 @@
                 "@cpan__Test-LongString//:Test-LongString",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63059,7 +63799,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63091,7 +63833,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63124,7 +63868,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63158,7 +63904,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63330,7 +64078,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63358,7 +64108,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63633,7 +64385,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63673,7 +64427,9 @@
               "test_deps": [
                 "@cpan__Spreadsheet-ParseExcel//:Spreadsheet-ParseExcel"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63723,7 +64479,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63754,7 +64512,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63788,7 +64548,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63830,7 +64592,9 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__libwww-perl//:libwww-perl"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63872,7 +64636,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63900,7 +64666,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63963,7 +64731,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -63991,7 +64761,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64019,7 +64791,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64052,7 +64826,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64080,7 +64856,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64115,7 +64893,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64143,7 +64923,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64202,7 +64984,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64258,7 +65042,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64286,7 +65072,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64314,7 +65102,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64434,7 +65224,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64462,7 +65254,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64523,7 +65317,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -64996,7 +65792,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65024,7 +65822,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65080,7 +65880,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65165,7 +65967,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65298,7 +66102,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65329,7 +66135,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65462,7 +66270,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65611,7 +66421,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65758,7 +66570,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65786,7 +66600,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -65872,7 +66688,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -66162,7 +66980,9 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -66261,7 +67081,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -66331,7 +67153,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -66859,7 +67683,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -67108,7 +67934,9 @@
                 "@cpan__Test-RequiresInternet//:Test-RequiresInternet",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -67384,7 +68212,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -67412,7 +68242,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -67447,7 +68279,9 @@
                 "@cpan__Test-Exception//:Test-Exception",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -67475,7 +68309,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -67571,7 +68407,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -67774,7 +68612,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -67860,7 +68700,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69301,7 +70143,9 @@
               "test_deps": [
                 "@cpan__Test-Most//:Test-Most"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69329,7 +70173,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69485,7 +70331,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69570,7 +70418,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69598,7 +70448,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69626,7 +70478,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69654,7 +70508,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69712,7 +70568,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -69740,7 +70598,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": "Text-ParagraphDiff"
             }
@@ -69941,7 +70801,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -70092,7 +70954,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -70318,7 +71182,9 @@
               "test_deps": [
                 "@cpan__Thrift-XS//:Thrift-XS"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -70350,7 +71216,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -70459,7 +71327,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -70546,7 +71416,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -70632,7 +71504,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -70661,7 +71535,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -70689,7 +71565,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71022,13 +71900,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
-              "manual_tests": [
-                "t/20-modules/*",
-                "t/21-types/*",
-                "t/30-external/*",
-                "t/40-bugs/*"
+              "test_tags": [
+                "manual"
               ],
+              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -71180,7 +72055,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71264,7 +72141,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71451,7 +72330,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71690,7 +72571,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71726,7 +72609,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71816,7 +72701,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71849,7 +72736,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71906,7 +72795,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72001,7 +72892,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72060,7 +72953,9 @@
               "test_deps": [
                 "@cpan__JSON//:JSON"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72110,7 +73005,9 @@
                 "@cpan__URI//:URI",
                 "@cpan__libwww-perl//:libwww-perl"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72243,7 +73140,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72322,7 +73221,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72405,7 +73306,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72672,7 +73575,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72702,7 +73607,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -72766,7 +73673,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73006,7 +73915,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73040,7 +73951,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73079,7 +73992,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73109,7 +74024,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73161,7 +74078,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73443,7 +74362,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73476,7 +74397,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73507,7 +74430,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73620,7 +74545,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73742,7 +74669,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73927,7 +74856,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73991,7 +74922,9 @@
               "test_deps": [
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -74062,7 +74995,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": "Grpc-XS-0.36"
             }
@@ -74186,7 +75121,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -74254,7 +75191,9 @@
                 "@cpan__Test-Needs//:Test-Needs",
                 "@cpan__Test-RequiresInternet//:Test-RequiresInternet"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -74318,7 +75257,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -74615,7 +75556,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -114580,12 +115523,489 @@
                 ]
               },
               "manual_tests": [
+                "AWS-S3",
+                "AWS-Signature4",
+                "Algorithm-Heapify-XS",
+                "Amazon-S3",
+                "AnyEvent",
+                "AnyEvent-AIO",
+                "AnyEvent-HTTP",
+                "AnyEvent-Handle-UDP",
+                "AnyEvent-Promise",
+                "AnyEvent-Promises",
+                "AnyEvent-Redis-RipeRedis",
+                "AnyEvent-Subprocess",
+                "AnyEvent-XMPP",
+                "AnyEvent-XSPromises",
+                "AnyEvent-YACurl",
+                "Apache-Session",
+                "Apache-Session-Memcached",
+                "App-Daemon",
+                "App-ElasticSearch-Utilities",
+                "App-FatPacker",
+                "App-Inotify-Hookable",
+                "App-Oozie",
+                "Array-RefElem",
+                "Authen-Krb5-Admin",
+                "Authen-SASL-XS",
+                "Authen-Simple-PAM",
+                "AutoLoader",
+                "BSD-Resource",
+                "Bit-Vector",
+                "Business-CreditCard",
+                "Business-OnlinePayment",
+                "Business-Tax-VAT-Validation",
+                "CHI",
+                "CLI-Helpers",
+                "CSS-Compressor",
+                "CSS-Packer",
+                "CSS-Sass",
+                "Cache",
+                "Cache-Cache",
+                "Cache-Memcached",
+                "Cache-Memcached-Fast",
+                "Carp-Always",
+                "Carp-Assert-More",
+                "Cassandra-Client",
+                "Class-MethodMaker",
+                "Class-Std-Fast",
+                "Class-Trigger",
+                "Class-XSAccessor",
+                "CodeGen-Protection",
+                "Common-CLI",
+                "CommonMark",
+                "Compress-Bzip2",
+                "Compress-LZ4",
+                "Compress-Raw-Bzip2",
+                "Compress-Snappy",
+                "Compress-Zstd",
+                "Config-General",
+                "Config-Validate",
+                "Constant-Export-Lazy",
+                "Convert-BinHex",
                 "Cpanel-JSON-XS",
+                "Crypt-Blowfish",
+                "Crypt-CBC",
+                "Crypt-DES",
+                "Crypt-Eksblowfish",
+                "Crypt-JWT",
+                "Crypt-NaCl-Sodium",
+                "Crypt-OpenPGP",
+                "Crypt-OpenSSL-AES",
+                "Crypt-OpenSSL-Bignum",
+                "Crypt-OpenSSL-RSA",
+                "Crypt-OpenSSL-Random",
+                "Crypt-OpenSSL-X509",
+                "Crypt-Primes",
+                "Crypt-RSA",
+                "Crypt-Random",
+                "Crypt-Rijndael",
+                "Crypt-SMIME",
+                "Crypt-ScryptKDF",
+                "Crypt-Skip32-XS",
+                "Crypt-Sodium-Nitrate",
+                "CryptX",
+                "Curses",
+                "DBD-Cassandra",
+                "DBD-Mock",
+                "DBD-ODBC",
+                "DBD-SQLite",
+                "DBD-mysql",
+                "DBI",
+                "DBIx-Class",
+                "DBIx-Class-Helpers",
+                "DBIx-ContextualFetch",
+                "DBIx-Placeholder-Named",
+                "Daemon-Control",
+                "Dancer",
+                "Dancer2",
+                "Dancer2-Plugin-Ajax",
+                "Dancer2-Plugin-GraphQL",
+                "Dancer2-Plugin-REST",
+                "Dancer2-Template-MojoTemplate",
+                "Data-Buffer",
+                "Data-Consumer",
+                "Data-DPath",
+                "Data-Dump-Streamer",
+                "Data-FlexSerializer",
+                "Data-FormValidator",
+                "Data-GUID",
+                "Data-ICal",
+                "Data-MessagePack",
+                "Data-MessagePack-Stream",
+                "Data-Perl",
+                "Data-Printer",
+                "Data-Structure-Util",
+                "Data-UUID",
+                "Data-Undump",
+                "Date-Calc",
+                "Date-Calc-XS",
+                "DateTime",
+                "DateTime-Event-Cron",
+                "DateTime-Format-Flexible",
+                "DateTime-Format-RFC3339",
+                "DateTime-Format-Strptime",
+                "Devel-Cover",
+                "Devel-Cover-Report-Cobertura",
+                "Devel-Cover-Report-SonarGeneric",
+                "Devel-Leak",
+                "Devel-NYTProf",
+                "Devel-PPPort",
+                "Devel-QuickCover",
+                "Devel-REPL-InProcess",
+                "Devel-Refcount",
+                "Devel-Size",
+                "Digest-CRC",
+                "Digest-FarmHash",
+                "Digest-MD2",
+                "Digest-MD4",
+                "Digest-Perl-MD4",
+                "Digest-SHA",
+                "Digest-SHA1",
+                "Digest-SHA3",
+                "Digest-SipHash",
+                "Digest-Trivial",
+                "Directory-Scanner",
+                "EV",
+                "EWS-Client",
+                "ElasticSearch",
+                "Elasticsearch-Model",
+                "Email-MIME-Encodings",
+                "Emoji-NationalFlag",
+                "Encode",
+                "Encode-Detect",
+                "Encode-HanExtra",
+                "Error",
+                "Exception-Class",
+                "Expect",
+                "ExtUtils-MakeMaker",
+                "Feersum",
+                "File-BaseDir",
+                "File-CounterFile",
+                "File-Hotfolder",
+                "File-Tail",
+                "Filter",
+                "Frontier-RPC",
+                "Furl",
+                "GD",
+                "GD-Barcode",
+                "GD-Persian",
+                "GDGraph",
+                "GDTextUtil",
+                "Geo-GoogleMaps-OffsetCenter",
+                "Geo-IP",
+                "GeoIP2",
+                "Git-Repository",
+                "Git-Repository-Plugin-Log",
+                "Google-Ads-AdWords-Client",
+                "Google-ProtocolBuffers-Dynamic",
+                "GraphViz",
+                "Graphite-Enumerator",
+                "HBase-JSONRest",
+                "HTML-FillInForm",
+                "HTML-FromANSI",
+                "HTML-Parser",
+                "HTML-Scrubber",
+                "HTML-Strip",
+                "HTML-TagFilter",
+                "HTML-Tagset",
+                "HTML-Template",
+                "HTML-Tidy",
+                "HTML-Tree",
+                "HTML-TreeBuilder-XPath",
+                "HTML-TreeStructured",
+                "HTTP-CookieJar",
+                "HTTP-MultiPartParser",
+                "HTTP-Server-Simple",
+                "Hadoop-Inline-ClassLoader",
+                "Hash-Merge-Simple",
+                "Hijk",
+                "I18N-Charset",
+                "IO-AIO",
+                "IO-All",
+                "IO-Compress-Brotli",
+                "IO-Prompt",
+                "IO-Socket-PortState",
+                "IO-Socket-SSL",
+                "IO-String",
                 "IO-Tty",
+                "IPC-ConcurrencyLimit",
+                "IPC-Run",
+                "Image-Scale",
+                "Imager",
+                "Imager-QRCode",
+                "JIRA-REST",
+                "JS-SourceMap",
+                "JSON",
+                "JSON-Parse",
+                "JSON-Path",
+                "JSON-SL",
+                "JSON-Schema-Draft201909",
+                "JSON-Schema-Modern",
+                "JSON-Types",
+                "JSON-XS",
+                "Jcode",
+                "Kafka",
+                "LWP-Authen-Negotiate",
+                "LWP-Protocol-connect",
+                "LWP-Protocol-https",
+                "LWP-UserAgent-Determined",
+                "Lingua-EN-Inflexion",
+                "Lingua-Han-PinYin",
+                "Lingua-Han-Utils",
+                "Lingua-Identify-CLD",
+                "Lingua-Identify-CLD2",
+                "Lingua-JA-Moji",
+                "Lingua-Stem",
+                "Lingua-ZH-HanDetect",
+                "Linux-Inotify2",
+                "Linux-Prctl",
+                "List-MoreUtils",
+                "Locale-CLDR",
+                "Locale-gettext",
+                "Log-Dispatch-FileRotate",
+                "Log-Log4perl",
+                "Log-Log4perl-Appender-Elasticsearch",
+                "Log-Log4perl-Layout-JSON",
+                "Log-Report",
+                "MIME-tools",
+                "Mail-Box",
+                "Mail-Box-IMAP4",
+                "MariaDB-NonBlocking",
+                "Markdent",
+                "Math-GSL",
+                "Math-Pari",
+                "Math-Random",
+                "Math-Random-MT",
+                "Math-Random-Secure",
+                "Math-Round",
+                "Math-SimpleHisto-XS",
+                "Math-SimpleHisto-XS-CLI",
+                "MaxMind-DB-Reader",
+                "MaxMind-DB-Reader-XS",
+                "MaxMind-DB-Writer",
+                "Memoize-Memcached",
+                "Mock-Quick",
                 "Module-Build",
+                "Module-Build-WithXSpp",
+                "Module-Find",
+                "Module-Pluggable",
+                "Module-Reader",
+                "Module-Util",
+                "MooX-Cmd",
+                "MooX-HandlesVia",
+                "MooX-Options",
+                "MooX-Types-MooseLike-Numeric",
+                "Moose",
+                "MooseX-Getopt-Usage",
+                "MooseX-Log-Log4perl",
+                "MooseX-MungeHas",
+                "MooseX-NonMoose",
+                "MooseX-Storage",
+                "MooseX-Types-DateTime",
+                "Mozilla-PublicSuffix",
+                "Net-AMQP-RabbitMQ",
+                "Net-Amazon-S3",
+                "Net-Curl",
+                "Net-Facebook-Oauth2",
+                "Net-HTTPS-NB",
+                "Net-Hadoop-Oozie",
+                "Net-Hadoop-WebHDFS",
+                "Net-Hadoop-WebHDFS-LWP",
+                "Net-Hadoop-YARN",
+                "Net-IDN-Encode",
+                "Net-IP",
+                "Net-Kafka",
+                "Net-LibIDN",
+                "Net-Patricia",
+                "Net-Pcap",
+                "Net-Ping",
+                "Net-SAML2",
+                "Net-SMS-WorldText",
+                "Net-SSH-Perl",
+                "Net-SSH2",
+                "Net-SSLeay",
+                "Net-Subnet",
+                "Net-ZooKeeper",
+                "Net-ZooKeeper-Lock",
+                "NetAddr-IP",
+                "Number-Format",
+                "Number-Phone",
+                "OIDC-Lite",
+                "Object-Event",
+                "OptArgs",
+                "PDF-API2",
+                "POE-XS-Queue-Array",
+                "POSIX-AtFork",
+                "Package-Alias",
+                "Parallel-ForkManager",
+                "Parse-CSV",
+                "Parser-GraphQL-XS",
+                "PathTools",
+                "Paws",
+                "Perl-Critic",
+                "Perl-Critic-Community",
+                "Perl-Critic-Lax",
+                "Perl-Critic-Moose",
+                "Perl-Critic-More",
+                "Perl-Critic-Policy-BuiltinFunctions-ProhibitDeleteOnArrays",
+                "Perl-Critic-Policy-BuiltinFunctions-ProhibitReturnOr",
+                "Perl-Critic-Policy-HTTPCookies",
+                "Perl-Critic-Policy-Moo-ProhibitMakeImmutable",
+                "Perl-Critic-Policy-Perlsecret",
+                "Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection",
+                "Perl-Critic-Policy-ValuesAndExpressions-ProhibitSingleArgArraySlice",
+                "Perl-Critic-Policy-Variables-ProhibitLoopOnHash",
+                "Perl-Critic-Policy-Variables-ProhibitUnusedVarsStricter",
+                "Perl-Critic-Pulp",
+                "Perl-Critic-StricterSubs",
+                "Perl-Destruct-Level",
+                "Perl-LanguageServer",
+                "Perl-MinimumVersion",
+                "Perl-PrereqScanner",
+                "Perl-Version-Bumper",
+                "PerlIO-gzip",
+                "PerlX-Maybe-XS",
+                "Plack-Debugger",
+                "Plack-Middleware-Camelcadedb",
+                "Plack-Middleware-ChromeLogger",
+                "Plack-Middleware-Deflater",
+                "Plack-Test-Agent",
+                "Pod-POM",
+                "Pod-Usage",
+                "Proc-Daemon",
+                "Proc-ProcessTable",
+                "Promises",
+                "Protocol-HTTP2",
+                "Queue-Q",
+                "REST-Client",
+                "REST-Neo4p",
+                "RPC-XML",
+                "Redis",
+                "Redis-ScriptCache",
+                "Regexp-Util",
+                "Role-Kerberos",
+                "SOAP-Lite",
+                "SOAP-WSDL",
+                "SQL-Abstract",
+                "SQL-Abstract-Complete",
+                "SQL-Abstract-Limit",
+                "Scope-Upper",
+                "Search-Brick-RAM-Query",
+                "Search-Elasticsearch",
+                "Search-Elasticsearch-Client-6_0",
+                "Search-Elasticsearch-Client-7_0",
+                "Selenium-Remote-Driver",
+                "Sereal",
+                "Sereal-Decoder",
+                "Sereal-Encoder",
+                "ShardedKV",
+                "ShardedKV-Continuum-CHash",
+                "ShardedKV-Continuum-Jump",
+                "ShardedKV-Storage-Rest",
+                "Socket",
+                "Socket6",
+                "Spreadsheet-ParseExcel",
+                "Spreadsheet-ParseXLSX",
+                "Spreadsheet-WriteExcel",
+                "Spreadsheet-WriteExcel-Simple",
+                "Spreadsheet-XLSX",
+                "Starman",
+                "Statistics-Basic",
+                "Statistics-CaseResampling",
+                "Statistics-Descriptive",
+                "Statistics-Distributions",
+                "Statistics-EfficiencyCI",
+                "Statistics-R",
+                "Statistics-Regression",
+                "Statistics-Test-WilcoxonRankSum",
+                "Storable",
+                "String-Approx",
+                "String-CRC32",
+                "String-Escape",
+                "String-Format",
+                "String-ShellQuote",
+                "String-Similarity",
+                "Struct-Diff",
+                "Syntax-Keyword-Try",
+                "Sys-CpuAffinity",
+                "Sys-RunAlone",
+                "Sys-Syslog",
+                "TAP-Formatter-JUnit",
+                "TAP-Harness-JUnit",
+                "Template-Toolkit",
+                "Term-ProgressBar",
+                "Term-Size",
+                "Term-Size-Perl",
+                "TermReadKey",
+                "Test-Class-Moose",
+                "Test-Compile",
+                "Test-DBIx-Class",
+                "Test-HTTP-AnyEvent-Server",
+                "Test-LWP-UserAgent",
+                "Test-MockFile",
+                "Test-MockModule",
+                "Test-MockObject",
+                "Test-MockTime",
+                "Test-Most",
+                "Test-Perl-Critic",
+                "Test-Pod-Coverage",
+                "Text-CSV-Slurp",
+                "Text-CSV_XS",
+                "Text-Iconv",
+                "Text-Levenshtein-Damerau-XS",
+                "Text-LevenshteinXS",
+                "Text-Markdown",
+                "Text-Markdown-Discount",
+                "Text-Ngrams",
+                "Text-ParagraphDiff",
+                "Text-TabularDisplay",
+                "Text-WordDiff",
+                "Thrift-API-HiveClient2",
+                "Thrift-SASL-Transport",
+                "Tie-EncryptedHash",
+                "Time-Crontab",
+                "Time-HiRes",
+                "Time-Moment",
+                "Time-Out",
+                "Type-Tiny",
                 "Types-Serialiser",
+                "UNIVERSAL-can",
+                "UNIVERSAL-moniker",
+                "URI-Find",
+                "UV",
+                "Unicode-Collate",
+                "Unicode-Map8",
+                "Unicode-MapUTF8",
+                "Unix-Sysexits",
+                "Variable-Magic",
+                "WWW-Form-UrlEncoded-XS",
+                "WWW-Mechanize",
+                "Web-Scraper",
+                "XML-Compile",
+                "XML-Compile-SOAP",
+                "XML-LibXML",
+                "XML-LibXML-Simple",
+                "XML-Parser",
+                "XML-Simple",
+                "XML-TreeBuilder",
+                "XML-Twig",
+                "XML-Writer",
+                "XML-XPath",
                 "YAML-LibYAML",
-                "common-sense"
+                "YAML-PP",
+                "YAML-PP-LibYAML",
+                "YAML-Syck",
+                "ack",
+                "bareword-filehandles",
+                "common-sense",
+                "decorators",
+                "fs-Promises",
+                "grpc-xs",
+                "jmx4perl",
+                "libwww-perl",
+                "multidimensional",
+                "warnings-unused"
               ],
               "test_modules": {
                 "YAML-LibYAML": "YAML::XS"
