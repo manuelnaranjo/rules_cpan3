@@ -1,0 +1,9 @@
+{
+    "integrity": "sha256-Owj19Pm064LxUacEC/1v5sb7ki7+SxZZxm6pMydpZeg=",
+    "patch_strip": 1,
+    "patches": {
+        "add_build_file.patch": "sha256-GM82Pcqd8MKv2FGzng+4SWTWDnG8Mi9KWYpgsTP/yn8="
+    },
+    "strip_prefix": "libiconv-1.18",
+    "url": "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz"
+}

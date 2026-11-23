@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 34;
+use Test::More tests => 40;
 
 # Pure Perl distributions
 use Moo;
@@ -40,6 +40,12 @@ use Crypt::OpenSSL::RSA ();
 use Crypt::OpenSSL::X509 ();
 use Crypt::SMIME ();
 use Net::SSLeay ();
+use CommonMark ();
+use CSS::Sass ();
+use Text::Iconv ();
+use Text::Markdown::Discount ();
+use Authen::Krb5 ();
+use Authen::Krb5::Admin ();
 
 # Test 1: Try::Tiny
 my $caught = 0;
@@ -187,3 +193,26 @@ ok($smime, "Crypt::SMIME instance initialized");
 # Test 28: Net::SSLeay (XS - BCR openssl integration)
 Net::SSLeay::randomize();
 ok(1, "Net::SSLeay randomize executed successfully");
+
+# Test 29: CommonMark (XS - BCR cmark integration)
+my $cmark_html = CommonMark->markdown_to_html("# CommonMark Test");
+ok(index($cmark_html, "<h1>CommonMark Test</h1>") != -1, "CommonMark markdown_to_html works");
+
+# Test 30: CSS::Sass (XS - BCR libsass integration)
+my ($sass_css, $sass_err) = CSS::Sass::sass_compile("foo { color: red; }");
+ok(index($sass_css, "color: red") != -1, "CSS::Sass compiled SCSS successfully");
+
+# Test 31: Text::Iconv (XS - BCR libiconv integration)
+my $iconv_conv = Text::Iconv->new("UTF-8", "UTF-8");
+my $iconv_res = $iconv_conv->convert("hello world");
+is($iconv_res, "hello world", "Text::Iconv converted text accurately");
+
+# Test 32: Text::Markdown::Discount (XS - BCR discount integration)
+my $discount_html = Text::Markdown::Discount::markdown("# Discount Test");
+ok(index($discount_html, "<h1>Discount Test</h1>") != -1, "Text::Markdown::Discount works");
+
+# Test 33: Authen::Krb5 (XS - BCR krb5 integration)
+ok(defined(&Authen::Krb5::init_context), "Authen::Krb5 init_context function is defined");
+
+# Test 34: Authen::Krb5::Admin (XS - BCR krb5 integration)
+ok(defined(&Authen::Krb5::Admin::init_with_password), "Authen::Krb5::Admin init_with_password function is defined");

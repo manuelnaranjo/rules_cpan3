@@ -1,0 +1,9 @@
+{
+    "integrity": "sha256-mfbbNtP/9smazSHUxglhdtSsh4XqsxnQ+vd62ZW4t8U=",
+    "patch_strip": 1,
+    "patches": {
+        "add_build_file.patch": "sha256-vLZuqe2vGMHbvRfJrMqNIh+WytvqPxwiMOfueFnWHuQ="
+    },
+    "strip_prefix": "discount-3.0.2.0",
+    "url": "https://github.com/Orc/discount/archive/refs/tags/v3.0.2.0.tar.gz"
+}

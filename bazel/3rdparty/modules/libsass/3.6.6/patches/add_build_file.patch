@@ -1,0 +1,67 @@
+diff -urN a/BUILD.bazel b/BUILD.bazel
+--- a/BUILD.bazel	1970-01-01 01:00:00.000000000 +0100
++++ b/BUILD.bazel	2026-11-24 00:08:18.163269986 +0100
+@@ -0,0 +1,47 @@
++load("@rules_cc//cc:defs.bzl", "cc_library")
++
++package(default_visibility = ["//visibility:public"])
++
++cc_library(
++    name = "sass_c",
++    srcs = [
++        "src/c99func.c",
++        "src/cencode.c",
++    ],
++    hdrs = glob([
++        "include/**/*.h",
++        "include/*.h",
++        "src/**/*.h",
++        "src/*.h",
++    ]),
++    includes = [
++        "include",
++        "src",
++    ],
++)
++
++cc_library(
++    name = "sass",
++    srcs = glob([
++        "src/*.cpp",
++        "src/**/*.cpp",
++    ]),
++    hdrs = glob([
++        "include/**/*.h",
++        "include/*.h",
++        "src/**/*.h",
++        "src/*.h",
++        "src/**/*.hpp",
++        "src/*.hpp",
++    ]),
++    copts = [
++        "-std=c++11",
++    ],
++    includes = [
++        "include",
++        "src",
++    ],
++    deps = [
++        ":sass_c",
++    ],
++)
+diff -urN a/include/sass/version.h b/include/sass/version.h
+--- a/include/sass/version.h	1970-01-01 01:00:00.000000000 +0100
++++ b/include/sass/version.h	2026-11-24 00:08:18.166269988 +0100
+@@ -0,0 +1,12 @@
++#ifndef SASS_VERSION_H
++#define SASS_VERSION_H
++
++#ifndef LIBSASS_VERSION
++#define LIBSASS_VERSION "3.6.6"
++#endif
++
++#ifndef LIBSASS_LANGUAGE_VERSION
++#define LIBSASS_LANGUAGE_VERSION "3.5"
++#endif
++
++#endif
