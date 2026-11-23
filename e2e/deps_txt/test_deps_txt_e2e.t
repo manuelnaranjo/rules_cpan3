@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 10;
+use Test::More tests => 13;
 
 # Pure Perl distributions
 use Moo;
@@ -13,6 +13,8 @@ use Capture::Tiny qw(capture_stdout);
 
 # XS extensions
 use Compress::Raw::Zlib;
+use Compress::Raw::Bzip2 qw(BZ_OK);
+use Compress::Bzip2 qw(bzip2 bunzip2);
 use IO::Tty;
 use YAML::XS;
 use Clone qw(clone);
@@ -69,3 +71,23 @@ isnt($orig->{b}[0], 99, "Clone performed deep copy");
 my $yaml_str = YAML::XS::Dump({ greeting => "hello", language => "perl" });
 my $yaml_data = YAML::XS::Load($yaml_str);
 is($yaml_data->{greeting}, "hello", "YAML::XS serialized and deserialized correctly");
+
+# Test 8: Compress::Raw::Bzip2 (XS - BCR bzip2 integration)
+my ($bz_def, $bz_status) = new Compress::Raw::Bzip2(0);
+ok($bz_status == BZ_OK, "Compress::Raw::Bzip2 deflate initialized");
+my $bz_in = "Hermetic bzip2 compression via rules_cpan3!";
+my $bz_out = "";
+$bz_def->bzdeflate($bz_in, $bz_out);
+my $bz_flushed = "";
+$bz_def->bzclose($bz_flushed);
+$bz_out .= $bz_flushed;
+
+my ($bz_inf, $bz_inf_status) = new Compress::Raw::Bunzip2(0);
+my $bz_decomp = "";
+$bz_inf->bzinflate($bz_out, $bz_decomp);
+is($bz_decomp, $bz_in, "Compress::Raw::Bzip2 roundtrip compression matches input");
+
+# Test 9: Compress::Bzip2 (XS - BCR bzip2 integration)
+my $compressed_bz2 = Compress::Bzip2::memBzip("High-level bzip2 test string");
+my $decompressed_bz2 = Compress::Bzip2::memBunzip($compressed_bz2);
+is($decompressed_bz2, "High-level bzip2 test string", "Compress::Bzip2 roundtrip matches");

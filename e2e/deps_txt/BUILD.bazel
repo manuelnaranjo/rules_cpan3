@@ -17,6 +17,8 @@ perl_test(
     deps = [
         "@cpan//Capture-Tiny",
         "@cpan//Clone",
+        "@cpan//Compress-Bzip2",
+        "@cpan//Compress-Raw-Bzip2",
         "@cpan//Compress-Raw-Zlib",
         "@cpan//IO-Tty",
         "@cpan//Moo",

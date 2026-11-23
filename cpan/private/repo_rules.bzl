@@ -306,6 +306,14 @@ cpan_xs(
     srcs = glob([
         "*.xs",
         "**/*.xs",
+    ], exclude = [
+        "_xs/**",
+        "t/**",
+        "fallback/**",
+        "constants.xs",
+        "**/constants.xs",
+        "const-xs.inc",
+        "**/const-xs.inc",
     ], allow_empty = True),
     cc_srcs = glob([
         "*.c",
@@ -314,6 +322,8 @@ cpan_xs(
         "_xs/**",
         "t/**",
         "fallback/**",
+        "bzip2-src/**",
+        "bzlib-src/**",
     ], allow_empty = True),
     defines = [{defines_str}],{exec_compat_str}{exec_reqs_str}
     output_loc = "{output_loc}",{tags_str}{target_compat_str}
@@ -322,6 +332,8 @@ cpan_xs(
         "**/*.h",
         "*.xs",
         "**/*.xs",
+        "*.inc",
+        "**/*.inc",
     ], allow_empty = True),
     typemaps = glob([
         "typemap",
