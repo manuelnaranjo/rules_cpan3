@@ -1,0 +1,13 @@
+{
+    "homepage": "https://github.com/commonmark/cmark",
+    "maintainers": [
+        {
+            "github": "manuelnaranjo",
+            "name": "rules_cpan maintainers"
+        }
+    ],
+    "versions": [
+        "0.31.1"
+    ],
+    "yanked_versions": {}
+}
