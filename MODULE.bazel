@@ -14,6 +14,14 @@ bazel_dep(name = "zlib", version = "1.3.1.bcr.5")
 bazel_dep(name = "bzip2", version = "1.0.8.bcr.4")
 bazel_dep(name = "libexpat", version = "2.7.1.bcr.1")
 bazel_dep(name = "zstd", version = "1.5.7.bcr.1")
+bazel_dep(name = "openssl", version = "3.3.1.bcr.13")
+bazel_dep(name = "libxml2", version = "2.15.4")
+bazel_dep(name = "lz4", version = "1.10.0.bcr.2")
+bazel_dep(name = "snappy", version = "1.2.2.bcr.3")
+bazel_dep(name = "ncurses", version = "6.4.20221231.bcr.15")
+bazel_dep(name = "linux-pam", version = "1.7.3")
+bazel_dep(name = "libsodium", version = "1.0.19")
+bazel_dep(name = "gmp", version = "6.3.0.bcr.5")
 bazel_dep(name = "bazel_skylib", version = "1.9.2")
 bazel_dep(name = "package_metadata", version = "0.0.15")
 bazel_dep(name = "platforms", version = "1.1.0")
@@ -76,6 +84,25 @@ cpan.annotation(
         "@platforms//os:linux",
     ],
 )
+
+single_version_override(
+    module_name = "audit-userspace",
+    patch_strip = 1,
+    patches = ["//bazel/patches:audit-userspace-fix-kernel-headers.patch"],
+)
+
+single_version_override(
+    module_name = "libsodium",
+    patch_strip = 1,
+    patches = ["//bazel/patches:libsodium-full-build.patch"],
+)
+
+single_version_override(
+    module_name = "linux-pam",
+    patch_strip = 1,
+    patches = ["//bazel/patches:linux-pam-disable-close-range.patch"],
+)
+
 use_repo(cpan, "cpan", "cpan_alt")
 
 # External CPAN test dependency for hermetic XS C integration testing

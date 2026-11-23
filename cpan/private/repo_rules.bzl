@@ -112,8 +112,12 @@ def _compute_output_loc(dist_name, provides):
     return "auto/" + path_prefix + "/" + leaf
 
 def _apply_patches(ctx):
+    strip = 0
+    for arg in ctx.attr.patch_args:
+        if arg.startswith("-p"):
+            strip = int(arg[2:])
     for patch in ctx.attr.patches:
-        ctx.patch(patch)
+        ctx.patch(patch, strip = strip)
 
     patch_cmds = ctx.attr.patch_cmds
     if ctx.os.name.startswith("windows"):
@@ -253,7 +257,7 @@ def _cpan_dist_repo_impl(ctx):
                     if entry.is_dir:
                         if entry.basename not in ["t", "fallback", "inc", ".git", "_xs"]:
                             deeper.append(entry)
-                    elif entry.basename.endswith(".xs"):
+                    elif entry.basename.endswith(".xs") or entry.basename.endswith(".c"):
                         has_xs_files = True
                         break
             frontier = deeper
@@ -317,6 +321,10 @@ cpan_xs(
     ], exclude = [
         "_xs/**",
         "t/**",
+        "xt/**",
+        "example/**",
+        "examples/**",
+        "corpus/**",
         "fallback/**",
         "constants.xs",
         "**/constants.xs",
@@ -329,6 +337,10 @@ cpan_xs(
     ], exclude = [
         "_xs/**",
         "t/**",
+        "xt/**",
+        "example/**",
+        "examples/**",
+        "corpus/**",
         "fallback/**",
         "bzip2-src/**",
         "bzlib-src/**",

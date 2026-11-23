@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 17;
+use Test::More tests => 34;
 
 # Pure Perl distributions
 use Moo;
@@ -21,6 +21,25 @@ use IO::Tty;
 use YAML::XS;
 use Clone qw(clone);
 use Sub::Name qw(subname);
+
+# BCR Native Integrations
+use Compress::LZ4 ();
+use Compress::Snappy ();
+use Math::Prime::Util::GMP ();
+use Crypt::NaCl::Sodium ();
+use Crypt::Sodium::Nitrate ();
+use Curses ();
+use Authen::PAM ();
+use Authen::Simple::PAM ();
+use XML::LibXML ();
+use XML::LibXML::Simple ();
+use Crypt::OpenSSL::AES ();
+use Crypt::OpenSSL::Bignum ();
+use Crypt::OpenSSL::Random ();
+use Crypt::OpenSSL::RSA ();
+use Crypt::OpenSSL::X509 ();
+use Crypt::SMIME ();
+use Net::SSLeay ();
 
 # Test 1: Try::Tiny
 my $caught = 0;
@@ -107,3 +126,64 @@ my $zstd_decomp = decompress($zstd_out);
 is($zstd_decomp, $zstd_in, "Compress::Zstd roundtrip compression matches input");
 my $zstd_mt_out = compress_mt($zstd_in, 2);
 is(decompress($zstd_mt_out), $zstd_in, "Compress::Zstd multi-threaded compression matches input");
+
+# Test 12: Compress::LZ4 (XS - BCR lz4 integration)
+my $lz4_in = "Hermetic lz4 compression via rules_cpan3!";
+my $lz4_out = Compress::LZ4::compress($lz4_in);
+is(Compress::LZ4::decompress($lz4_out), $lz4_in, "Compress::LZ4 roundtrip compression matches input");
+
+# Test 13: Compress::Snappy (XS - BCR snappy integration)
+my $snappy_in = "Hermetic snappy compression via rules_cpan3!";
+my $snappy_out = Compress::Snappy::compress($snappy_in);
+is(Compress::Snappy::decompress($snappy_out), $snappy_in, "Compress::Snappy roundtrip compression matches input");
+
+# Test 14: Math::Prime::Util::GMP (XS - BCR gmp integration)
+ok(Math::Prime::Util::GMP::is_prime(104729), "Math::Prime::Util::GMP identifies prime correctly");
+
+# Test 15 & 16: Crypt::NaCl::Sodium & Crypt::Sodium::Nitrate (XS - BCR libsodium integration)
+my $crypto_box = Crypt::NaCl::Sodium->new();
+ok($crypto_box, "Crypt::NaCl::Sodium instance initialized");
+ok(Crypt::Sodium::Nitrate::MACBYTES(), "Crypt::Sodium::Nitrate MACBYTES constant works");
+
+# Test 17: Curses (XS - BCR ncurses integration)
+ok(defined(&Curses::initscr), "Curses function initscr is defined");
+
+# Test 18 & 19: Authen::PAM & Authen::Simple::PAM (XS - BCR linux-pam integration)
+ok(defined(&Authen::PAM::pam_start), "Authen::PAM function pam_start is defined");
+my $pam_simple = Authen::Simple::PAM->new(service => "login");
+ok($pam_simple, "Authen::Simple::PAM instance created");
+
+# Test 20 & 21: XML::LibXML & XML::LibXML::Simple (XS - BCR libxml2 integration)
+my $doc = XML::LibXML->load_xml(string => "<root><elem id='1'>test</elem></root>");
+is($doc->findvalue('/root/elem/@id'), "1", "XML::LibXML parses and queries DOM accurately");
+my $xml_simple = XML::LibXML::Simple->new();
+my $xml_hash = $xml_simple->XMLin("<root><val>42</val></root>");
+is($xml_hash->{val}, "42", "XML::LibXML::Simple parsed XML to hash");
+
+# Test 22: Crypt::OpenSSL::AES (XS - BCR openssl integration)
+my $aes = Crypt::OpenSSL::AES->new("0123456789abcdef");
+my $aes_enc = $aes->encrypt("abcdefghijklmnop");
+is($aes->decrypt($aes_enc), "abcdefghijklmnop", "Crypt::OpenSSL::AES encrypt/decrypt roundtrip");
+
+# Test 23: Crypt::OpenSSL::Bignum (XS - BCR openssl integration)
+my $bn = Crypt::OpenSSL::Bignum->new_from_word(42);
+is($bn->to_decimal(), "42", "Crypt::OpenSSL::Bignum word to decimal");
+
+# Test 24: Crypt::OpenSSL::Random (XS - BCR openssl integration)
+my $rand_bytes = Crypt::OpenSSL::Random::random_bytes(16);
+is(length($rand_bytes), 16, "Crypt::OpenSSL::Random generated 16 bytes");
+
+# Test 25: Crypt::OpenSSL::RSA (XS - BCR openssl integration)
+my $rsa = Crypt::OpenSSL::RSA->generate_key(1024);
+ok($rsa->is_private(), "Crypt::OpenSSL::RSA generated private key");
+
+# Test 26: Crypt::OpenSSL::X509 (XS - BCR openssl integration)
+ok(defined(&Crypt::OpenSSL::X509::new_from_string), "Crypt::OpenSSL::X509 function is defined");
+
+# Test 27: Crypt::SMIME (XS - BCR openssl integration)
+my $smime = Crypt::SMIME->new();
+ok($smime, "Crypt::SMIME instance initialized");
+
+# Test 28: Net::SSLeay (XS - BCR openssl integration)
+Net::SSLeay::randomize();
+ok(1, "Net::SSLeay randomize executed successfully");

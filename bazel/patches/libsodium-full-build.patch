@@ -1,0 +1,59 @@
+diff -Naur a/BUILD.bazel b/BUILD.bazel
+--- a/BUILD.bazel	2026-11-23 23:01:13.514320486 +0100
++++ b/BUILD.bazel	2026-11-23 23:01:13.514394976 +0100
+@@ -34,6 +34,10 @@
+     ] + select({
+         "@platforms//os:windows": [],
+         "//conditions:default": [
++            "-DHAVE_SYS_MMAN_H=1",
++            "-DHAVE_MPROTECT=1",
++            "-DHAVE_MMAP=1",
++            "-DHAVE_POSIX_MEMALIGN=1",
+             "-Wno-unused-but-set-variable",
+             "-Wno-unused-function",
+             "-Wno-unknown-pragmas",
+@@ -41,6 +45,16 @@
+         ],
+     }),
+     includes = ["src/libsodium/include"],
+-    local_defines = ["CONFIGURED"],
++    local_defines = [
++        "CONFIGURED",
++    ] + select({
++        "@platforms//os:windows": [],
++        "//conditions:default": [
++            "HAVE_SYS_MMAN_H",
++            "HAVE_MPROTECT",
++            "HAVE_MMAP",
++            "HAVE_POSIX_MEMALIGN",
++        ],
++    }),
+     visibility = ["//visibility:public"],
+ )
+diff -Naur a/bzl/defs.bzl b/bzl/defs.bzl
+--- a/bzl/defs.bzl	2026-11-23 23:01:13.653591176 +0100
++++ b/bzl/defs.bzl	2026-11-23 23:01:13.653787413 +0100
+@@ -2,7 +2,7 @@
+
+ VERSION_H_TEMPLATE = "//:src/libsodium/include/sodium/version.h.in"
+ VERSION_H_OUTPUT_FILE = "sodium/version.h"
+-DEFAULT_MINIMAL = True
++DEFAULT_MINIMAL = False
+
+ def _gen_version_hdr_impl(ctx):
+     substitutions = {
+diff -Naur a/src/libsodium/sodium/utils.c b/src/libsodium/sodium/utils.c
+--- a/src/libsodium/sodium/utils.c	2026-11-23 23:01:13.695069666 +0100
++++ b/src/libsodium/sodium/utils.c	2026-11-23 23:01:13.695109296 +0100
+@@ -1,6 +1,11 @@
+ #ifndef __STDC_WANT_LIB_EXT1__
+ # define __STDC_WANT_LIB_EXT1__ 1
+ #endif
++#define _GNU_SOURCE 1
++#define HAVE_SYS_MMAN_H 1
++#define HAVE_MPROTECT 1
++#define HAVE_MMAP 1
++#define HAVE_SYSCONF 1
+ #include <assert.h>
+ #include <errno.h>
+ #include <limits.h>

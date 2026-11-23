@@ -1,0 +1,63 @@
+diff --git a/lib/gen_tables.c b/lib/gen_tables.c
+index 3a74584..aea58f9 100644
+--- a/lib/gen_tables.c
++++ b/lib/gen_tables.c
+@@ -79,6 +79,17 @@
+ /* Allow more than one string defined for a single integer value */
+ static bool allow_duplicate_ints; /* = false; */
+
++
++#include <linux/audit.h>
++#ifndef AUDIT_SADDR_FAM
++#define AUDIT_SADDR_FAM 113
++#endif
++#ifndef AUDIT_TIME_INJOFFSET
++#define AUDIT_TIME_INJOFFSET 1332
++#endif
++#ifndef AUDIT_TIME_ADJNTPVAL
++#define AUDIT_TIME_ADJNTPVAL 1333
++#endif
+ struct value {
+ 	int val;
+ 	const char *s;
+diff --git a/lib/libaudit.c b/lib/libaudit.c
+index 9a0e23a..1528f1a 100644
+--- a/lib/libaudit.c
++++ b/lib/libaudit.c
+@@ -23,6 +23,8 @@
+  */
+
+ #include "config.h"
++#undef WITH_IO_URING
++#undef WITH_RISCV
+ #include <stdio.h>
+ #include <stdarg.h>
+ #include <string.h>
+@@ -50,6 +52,14 @@
+ #include "private.h"
+ #include "errormsg.h"
+ #include "common.h"
++#undef WITH_IO_URING
++#undef WITH_RISCV
++#undef HAVE_DECL_AUDIT_STATUS_BACKLOG_WAIT_TIME_ACTUAL
++#define HAVE_DECL_AUDIT_STATUS_BACKLOG_WAIT_TIME_ACTUAL 0
++#ifndef AUDIT_SADDR_FAM
++#define AUDIT_SADDR_FAM 113
++#endif
++
+
+ /* #defines for the audit failure query  */
+ #define CONFIG_FILE "/etc/libaudit.conf"
+diff --git a/lib/lookup_table.c b/lib/lookup_table.c
+index 71a00f7..ae2643c 100644
+--- a/lib/lookup_table.c
++++ b/lib/lookup_table.c
+@@ -22,6 +22,8 @@
+  */
+
+ #include "config.h"
++#undef WITH_IO_URING
++#undef WITH_RISCV
+ #include <stddef.h>
+ #include <stdint.h>
+ #include <string.h>

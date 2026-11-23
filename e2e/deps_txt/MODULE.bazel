@@ -7,8 +7,34 @@ bazel_dep(name = "zlib", version = "1.3.1.bcr.5")
 bazel_dep(name = "bzip2", version = "1.0.8.bcr.4")
 bazel_dep(name = "libexpat", version = "2.7.1.bcr.1")
 bazel_dep(name = "zstd", version = "1.5.7.bcr.1")
+bazel_dep(name = "openssl", version = "3.3.1.bcr.13")
+bazel_dep(name = "libxml2", version = "2.15.4")
+bazel_dep(name = "lz4", version = "1.10.0.bcr.2")
+bazel_dep(name = "snappy", version = "1.2.2.bcr.3")
+bazel_dep(name = "ncurses", version = "6.4.20221231.bcr.15")
+bazel_dep(name = "linux-pam", version = "1.7.3")
+bazel_dep(name = "libsodium", version = "1.0.19")
+bazel_dep(name = "gmp", version = "6.3.0.bcr.5")
 bazel_dep(name = "perl-compress-raw-zlib", version = "2.226")
 bazel_dep(name = "perl-io-tty", version = "1.20")
+
+single_version_override(
+    module_name = "audit-userspace",
+    patch_strip = 1,
+    patches = ["//bazel/patches:audit-userspace-fix-kernel-headers.patch"],
+)
+
+single_version_override(
+    module_name = "libsodium",
+    patch_strip = 1,
+    patches = ["//bazel/patches:libsodium-full-build.patch"],
+)
+
+single_version_override(
+    module_name = "linux-pam",
+    patch_strip = 1,
+    patches = ["//bazel/patches:linux-pam-disable-close-range.patch"],
+)
 
 local_path_override(
     module_name = "rules_cpan",
@@ -53,7 +79,6 @@ cpan.install(
         "Array-RefElem",
         "Authen-Krb5-Admin",
         "Authen-SASL-XS",
-        "Authen-Simple-PAM",
         "AutoLoader",
         "BSD-Resource",
         "Bit-Vector",
@@ -79,8 +104,6 @@ cpan.install(
         "CodeGen-Protection",
         "Common-CLI",
         "CommonMark",
-        "Compress-LZ4",
-        "Compress-Snappy",
         "Config-General",
         "Config-Validate",
         "Constant-Export-Lazy",
@@ -91,25 +114,16 @@ cpan.install(
         "Crypt-DES",
         "Crypt-Eksblowfish",
         "Crypt-JWT",
-        "Crypt-NaCl-Sodium",
         "Crypt-OpenPGP",
-        "Crypt-OpenSSL-AES",
-        "Crypt-OpenSSL-Bignum",
-        "Crypt-OpenSSL-RSA",
-        "Crypt-OpenSSL-Random",
-        "Crypt-OpenSSL-X509",
         "Crypt-PKCS10:t/04_complex_rdn.t",
         "Crypt-Primes",
         "Crypt-RSA",
         "Crypt-Random",
         "Crypt-Rijndael",
-        "Crypt-SMIME",
         "Crypt-ScryptKDF",
         "Crypt-Skip32-XS",
-        "Crypt-Sodium-Nitrate",
         "Crypt-URandom",
         "CryptX",
-        "Curses",
         "DBD-Cassandra",
         "DBD-Mock",
         "DBD-ODBC",
@@ -341,7 +355,6 @@ cpan.install(
         "Net-SMS-WorldText",
         "Net-SSH-Perl",
         "Net-SSH2",
-        "Net-SSLeay",
         "Net-Subnet",
         "Net-ZooKeeper",
         "Net-ZooKeeper-Lock",
@@ -507,8 +520,6 @@ cpan.install(
         "Web-Scraper",
         "XML-Compile",
         "XML-Compile-SOAP",
-        "XML-LibXML",
-        "XML-LibXML-Simple",
         "XML-Simple",
         "XML-TreeBuilder",
         "XML-Twig",
@@ -693,4 +704,169 @@ cpan.annotation(
         "powershell -Command \"Move-Item util.c util.inc; Move-Item hparser.c hparser.inc; (Get-Content Parser.xs) -replace '\"\"util.c\"\"', '\"\"util.inc\"\"' -replace '\"\"hparser.c\"\"', '\"\"hparser.inc\"\"' | Set-Content Parser.xs\"",
     ],
 )
+cpan.annotation(
+    distribution = "Compress-LZ4",
+    hub = "cpan",
+    native_deps = ["@lz4//:lz4_hc"],
+    patch_cmds = [
+        "rm -rf src",
+    ],
+    patch_cmds_win = [
+        "powershell -Command \"Remove-Item -Recurse -Force src\"",
+    ],
+)
+cpan.annotation(
+    distribution = "Compress-Snappy",
+    hub = "cpan",
+    native_deps = ["@snappy//:snappy-c"],
+    patch_args = ["-p1"],
+    patch_cmds = [
+        "rm -rf src",
+    ],
+    patch_cmds_win = [
+        "powershell -Command \"Remove-Item -Recurse -Force src\"",
+    ],
+    patches = ["@rules_cpan//bazel/patches:Compress-Snappy-bcr.patch"],
+)
 use_repo(cpan, "cpan")
+
+cpan.annotation(
+    distribution = "Math-Prime-Util-GMP",
+    hub = "cpan",
+    native_deps = ["@gmp//:gmp"],
+)
+cpan.annotation(
+    distribution = "Crypt-NaCl-Sodium",
+    hub = "cpan",
+    native_deps = ["@libsodium//:libsodium"],
+)
+cpan.annotation(
+    distribution = "Crypt-Sodium-Nitrate",
+    hub = "cpan",
+    native_deps = ["@libsodium//:libsodium"],
+)
+cpan.annotation(
+    distribution = "Curses",
+    hub = "cpan",
+    native_deps = ["@ncurses//:ncurses"],
+    patch_args = ["-p1"],
+    patch_cmds = [
+        "rm -f cdemo.c testint.c testsym.c testtyp.c",
+        "for f in CursesWide CursesFun CursesFunWide CursesVar CursesCon CursesBoot; do if [ -f $f.c ]; then mv $f.c $f.inc; sed -i \"s/$f.c/$f.inc/\" Curses.c; fi; done",
+    ],
+    patches = ["@rules_cpan//bazel/patches:Curses-bcr.patch"],
+)
+cpan.annotation(
+    distribution = "Authen-PAM",
+    hub = "cpan",
+    native_deps = ["@linux-pam//:linux-pam"],
+    patch_args = ["-p1"],
+    patch_cmds = [
+        "rm -rf d",
+        "mkdir -p lib/Authen",
+        "sed -e 's/@PACKAGE_VERSION@/0.16/g' -e 's/@DL_LOAD_FLAGS@/sub dl_load_flags { 0x01 }/' PAM.pm.in > lib/Authen/PAM.pm",
+    ],
+    patches = ["@rules_cpan//bazel/patches:Authen-PAM-bcr.patch"],
+    target_compatible_with = ["@platforms//os:linux"],
+)
+cpan.annotation(
+    distribution = "Authen-Simple-PAM",
+    hub = "cpan",
+    target_compatible_with = ["@platforms//os:linux"],
+)
+cpan.annotation(
+    defines = ["HAVE_UTF8"],
+    distribution = "XML-LibXML",
+    hub = "cpan",
+    native_deps = ["@libxml2//:xml2"],
+    patch_cmds = [
+        "mkdir -p lib/XML && cp LibXML.pm lib/XML/LibXML.pm && cp LibXML.pod lib/XML/LibXML.pod",
+    ],
+)
+cpan.annotation(
+    distribution = "Crypt-OpenSSL-AES",
+    hub = "cpan",
+    native_deps = [
+        "@openssl//:crypto",
+        "@openssl//:ssl",
+    ],
+)
+cpan.annotation(
+    distribution = "Crypt-OpenSSL-Bignum",
+    hub = "cpan",
+    native_deps = [
+        "@openssl//:crypto",
+        "@openssl//:ssl",
+    ],
+    patch_cmds = [
+        "mkdir -p lib/Crypt/OpenSSL && cp Bignum.pm lib/Crypt/OpenSSL/Bignum.pm",
+    ],
+)
+cpan.annotation(
+    distribution = "Crypt-OpenSSL-RSA",
+    hub = "cpan",
+    native_deps = [
+        "@openssl//:crypto",
+        "@openssl//:ssl",
+    ],
+    patch_cmds = [
+        "mkdir -p lib/Crypt/OpenSSL && cp RSA.pm lib/Crypt/OpenSSL/RSA.pm",
+    ],
+)
+cpan.annotation(
+    distribution = "Crypt-OpenSSL-Random",
+    hub = "cpan",
+    native_deps = [
+        "@openssl//:crypto",
+        "@openssl//:ssl",
+    ],
+    patch_cmds = [
+        "mkdir -p lib/Crypt/OpenSSL && cp Random.pm lib/Crypt/OpenSSL/Random.pm",
+    ],
+)
+cpan.annotation(
+    distribution = "Crypt-OpenSSL-X509",
+    hub = "cpan",
+    native_deps = [
+        "@openssl//:crypto",
+        "@openssl//:ssl",
+    ],
+    patch_cmds = [
+        "mkdir -p lib/Crypt/OpenSSL && cp X509.pm lib/Crypt/OpenSSL/X509.pm",
+    ],
+)
+cpan.annotation(
+    defines = [
+        "HAVE_GETTIMEOFDAY",
+        "HAVE_SYS_TIME_H",
+        "HAVE_TIME",
+        "HAVE_TIME_H",
+        "OPENSSL_LOAD_CONF",
+    ],
+    distribution = "Crypt-SMIME",
+    hub = "cpan",
+    manual_tests = [
+        "t/manifest.t",
+    ],
+    native_deps = [
+        "@openssl//:crypto",
+        "@openssl//:ssl",
+    ],
+    patch_cmds = [
+        "perl -MExtUtils::Constant=WriteConstants -e 'WriteConstants(NAME => \"Crypt::SMIME\", NAMES => [{name => \"NO_CHECK_CERTIFICATE\", macro => \"CMS_NO_SIGNER_CERT_VERIFY\", value => \"CMS_NO_SIGNER_CERT_VERIFY\"}, {name => \"FORMAT_ASN1\", macro => 1, value => \"CRYPT_SMIME_FORMAT_ASN1\"}, {name => \"FORMAT_PEM\", macro => 1, value => \"CRYPT_SMIME_FORMAT_PEM\"}, {name => \"FORMAT_SMIME\", macro => 1, value => \"CRYPT_SMIME_FORMAT_SMIME\"}, {name => \"CRL_CHECK\", macro => \"X509_V_FLAG_CRL_CHECK\", value => \"X509_V_FLAG_CRL_CHECK\"}, {name => \"CRL_CHECK_ALL\", macro => \"X509_V_FLAG_CRL_CHECK_ALL\", value => \"X509_V_FLAG_CRL_CHECK | X509_V_FLAG_CRL_CHECK_ALL\"}], PROXYSUBS => {autoload => 1});'",
+        "mkdir -p lib/Crypt && cat SMIME.pl > lib/Crypt/SMIME.pm",
+    ],
+)
+cpan.annotation(
+    distribution = "Net-SSLeay",
+    hub = "cpan",
+    native_deps = [
+        "@openssl//:crypto",
+        "@openssl//:ssl",
+    ],
+    patch_cmds = [
+        "mv constants.c constants.inc",
+        "sed -i 's/\"constants.c\"/\"constants.inc\"/' SSLeay.xs",
+        "perl -MAutoSplit -e 'autosplit(\"lib/Net/SSLeay.pm\", \"lib/auto\", 0, 1, 1)'",
+    ],
+)

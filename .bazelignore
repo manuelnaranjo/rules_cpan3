@@ -1,2 +1,3 @@
 e2e/
 .worktrees/
+bazel/3rdparty/

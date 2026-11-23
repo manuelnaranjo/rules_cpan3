@@ -40,6 +40,7 @@ Array-RefElem 1.00
 Authen-Krb5-Admin 0.17
 Authen-SASL 2.2100
 Authen-SASL-XS 1.02
+Authen-PAM 0.16
 Authen-Simple-PAM 0.2
 Authorize-Rule 0.009
 autodie 2.37
@@ -457,6 +458,7 @@ Math-ConvexHull-MonotoneChain 0.01
 Math-FFT 1.36
 Math-GSL 0.49
 Math-Pari 2.030528
+Math-Prime-Util-GMP 0.54
 Math-Random 0.75
 Math-Random-MT 1.17
 Math-Random-MT-Auto 6.23
