@@ -281,7 +281,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "/rI5sDpYQg+wiVBdq6E7YjvDjP2be5FZs5KdDKlrBME=",
-        "usagesDigest": "TBXA0qSI4dg6+oR1IqbfUEGcxyIKnMXNVz+VuesuRlU=",
+        "usagesDigest": "8uFqLBic1nkaK2azD0A0J4unFk3GYhHdO+8HhjExbrw=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -14960,7 +14960,9 @@
               "test_deps": [
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -32095,7 +32097,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/accessor-weaken-pre-5_8_3.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -60784,7 +60788,9 @@
               "test_deps": [
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -68049,7 +68055,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71599,7 +71607,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -115671,6 +115681,7 @@
                 "ElasticSearch",
                 "Elasticsearch-Model",
                 "Email-MIME-Encodings",
+                "Email-Sender",
                 "Emoji-NationalFlag",
                 "Encode",
                 "Encode-Detect",
@@ -115871,6 +115882,7 @@
                 "Plack-Middleware-ChromeLogger",
                 "Plack-Middleware-Deflater",
                 "Plack-Test-Agent",
+                "Pod-Coverage-TrustMe",
                 "Pod-POM",
                 "Pod-Usage",
                 "Proc-Daemon",
@@ -115943,6 +115955,7 @@
                 "Test-DBIx-Class",
                 "Test-HTTP-AnyEvent-Server",
                 "Test-LWP-UserAgent",
+                "Test-Manifest",
                 "Test-MockFile",
                 "Test-MockModule",
                 "Test-MockObject",
@@ -115968,6 +115981,7 @@
                 "Time-HiRes",
                 "Time-Moment",
                 "Time-Out",
+                "Time-ParseDate",
                 "Type-Tiny",
                 "Types-Serialiser",
                 "UNIVERSAL-can",
