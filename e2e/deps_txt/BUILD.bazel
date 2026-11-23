@@ -27,6 +27,7 @@ perl_test(
         "@cpan//Test-Simple",
         "@cpan//Try-Tiny",
         "@cpan//URI",
+        "@cpan//XML-Parser",
         "@cpan//YAML-LibYAML",
     ],
 )

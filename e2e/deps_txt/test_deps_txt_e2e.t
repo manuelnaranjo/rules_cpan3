@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 13;
+use Test::More tests => 15;
 
 # Pure Perl distributions
 use Moo;
@@ -15,6 +15,7 @@ use Capture::Tiny qw(capture_stdout);
 use Compress::Raw::Zlib;
 use Compress::Raw::Bzip2 qw(BZ_OK);
 use Compress::Bzip2 qw(bzip2 bunzip2);
+use XML::Parser;
 use IO::Tty;
 use YAML::XS;
 use Clone qw(clone);
@@ -91,3 +92,9 @@ is($bz_decomp, $bz_in, "Compress::Raw::Bzip2 roundtrip compression matches input
 my $compressed_bz2 = Compress::Bzip2::memBzip("High-level bzip2 test string");
 my $decompressed_bz2 = Compress::Bzip2::memBunzip($compressed_bz2);
 is($decompressed_bz2, "High-level bzip2 test string", "Compress::Bzip2 roundtrip matches");
+
+# Test 10: XML::Parser (XS - BCR libexpat integration)
+my $xml_parser = XML::Parser->new(Style => 'Tree');
+my $tree = $xml_parser->parse('<root id="123"><child attr="val">Hello XML Expat</child></root>');
+is($tree->[0], 'root', "XML::Parser parsed root element accurately");
+is($tree->[1]->[2]->[2], 'Hello XML Expat', "XML::Parser parsed child text accurately");

@@ -90,6 +90,8 @@
     "https://bcr.bazel.build/modules/jsoncpp/1.9.5/MODULE.bazel": "31271aedc59e815656f5736f282bb7509a97c7ecb43e927ac1a37966e0578075",
     "https://bcr.bazel.build/modules/jsoncpp/1.9.6/MODULE.bazel": "2f8d20d3b7d54143213c4dfc3d98225c42de7d666011528dc8fe91591e2e17b0",
     "https://bcr.bazel.build/modules/jsoncpp/1.9.6/source.json": "a04756d367a2126c3541682864ecec52f92cdee80a35735a3cb249ce015ca000",
+    "https://bcr.bazel.build/modules/libexpat/2.7.1.bcr.1/MODULE.bazel": "ad0933e7da133de74cc535911cab2f1b2f224b340898656748d2c1f48d031e70",
+    "https://bcr.bazel.build/modules/libexpat/2.7.1.bcr.1/source.json": "8e120a44b11853250a501634148058edad44c4a6fabb1c494cbf9ebc2cc3d6dd",
     "https://bcr.bazel.build/modules/libpfm/4.11.0/MODULE.bazel": "45061ff025b301940f1e30d2c16bea596c25b176c8b6b3087e92615adbd52902",
     "https://bcr.bazel.build/modules/libxml2/2.15.3/MODULE.bazel": "a6bffafd8aa8b0c13eaa4bf25d55be188ec8548549395f03e98c39bab264adaa",
     "https://bcr.bazel.build/modules/libxml2/2.15.3/source.json": "fd7c420cb14981416c9fadd0db555bd1e249355e0e5b63b2ce15b92996b5fbfb",
@@ -282,8 +284,8 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "YsSoyUWvdD+ubora/V9LRS4cKhyiqC/Go6XSZbN1hSM=",
-        "usagesDigest": "Qsvaxs16twSnqXM7DFtDqBhBrZ+8fhxuqt7u2yYXxH4=",
+        "bzlTransitiveDigest": "Kff7HWO/8MfBTsHePp/MxvfMBNoi9ASNrjOli1IP8cY=",
+        "usagesDigest": "TzzNR5+WInGCqFzTipxULMa1RjycK+mi4Pw08qhGHwk=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -73689,19 +73691,33 @@
                 "@cpan__File-ShareDir//:File-ShareDir"
               ],
               "defines": [],
-              "includes": [],
-              "native_deps": [],
-              "output_loc": "",
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "includes": [
+                "."
+              ],
+              "native_deps": [
+                "@libexpat//:libexpat"
+              ],
+              "output_loc": "auto/XML/Parser/Expat/Expat",
+              "patch_cmds": [
+                "mkdir -p XML/Parser/Encodings",
+                "cp Parser.pm XML/Parser.pm",
+                "cp Expat/Expat.pm XML/Parser/Expat.pm",
+                "cp -r Parser/Style XML/Parser/",
+                "cp share/*.enc XML/Parser/Encodings/"
+              ],
+              "patch_cmds_win": [
+                "mkdir XML\\Parser\\Encodings",
+                "copy Parser.pm XML\\Parser.pm",
+                "copy Expat\\Expat.pm XML\\Parser\\Expat.pm",
+                "xcopy /E /I Parser\\Style XML\\Parser\\Style",
+                "copy share\\*.enc XML\\Parser\\Encodings\\"
+              ],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -116014,7 +116030,6 @@
                 "XML-Compile-SOAP",
                 "XML-LibXML",
                 "XML-LibXML-Simple",
-                "XML-Parser",
                 "XML-Simple",
                 "XML-TreeBuilder",
                 "XML-Twig",
