@@ -681,4 +681,14 @@ cpan.annotation(
         "powershell -Command \"Remove-Item sombok\\lib\\[5-7].*.c\"",
     ],
 )
+cpan.annotation(
+    distribution = "HTML-Parser",
+    hub = "cpan",
+    patch_cmds = [
+        "mv util.c util.inc && mv hparser.c hparser.inc && sed -i -e 's/\"util.c\"/\"util.inc\"/' -e 's/\"hparser.c\"/\"hparser.inc\"/' Parser.xs",
+    ],
+    patch_cmds_win = [
+        "powershell -Command \"Move-Item util.c util.inc; Move-Item hparser.c hparser.inc; (Get-Content Parser.xs) -replace '\"\"util.c\"\"', '\"\"util.inc\"\"' -replace '\"\"hparser.c\"\"', '\"\"hparser.inc\"\"' | Set-Content Parser.xs\"",
+    ],
+)
 use_repo(cpan, "cpan")
