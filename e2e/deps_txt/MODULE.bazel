@@ -98,6 +98,7 @@ cpan.install(
         "Crypt-OpenSSL-RSA",
         "Crypt-OpenSSL-Random",
         "Crypt-OpenSSL-X509",
+        "Crypt-PKCS10:t/04_complex_rdn.t",
         "Crypt-Primes",
         "Crypt-RSA",
         "Crypt-Random",
@@ -203,9 +204,11 @@ cpan.install(
         "Geo-GoogleMaps-OffsetCenter",
         "Geo-IP",
         "GeoIP2",
+        "Getopt-ArgParse",
         "Git-Repository",
         "Git-Repository-Plugin-Log",
         "Google-Ads-AdWords-Client",
+        "Google-ProtocolBuffers:t/10-codegen-b.t",
         "Google-ProtocolBuffers-Dynamic",
         "GraphViz",
         "Graphite-Enumerator",
@@ -646,6 +649,17 @@ cpan.annotation(
     patch_cmds_win = [
         "powershell -Command \"(Get-Content lib\\Compress\\Zstd.xs) -replace '#include .compress/zstdmt_compress.h.', '' -replace 'ZSTDMT_CCtx\\* cctx;', 'ZSTD_CCtx* cctx;' -replace 'cctx = ZSTDMT_createCCtx\\(nbThreads\\);', 'cctx = ZSTD_createCCtx(); ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, (int)nbThreads); ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, level);' -replace 'ret = ZSTDMT_compressCCtx\\(cctx, dst, bound \\+ 1, src, src_len, level\\);', 'ret = ZSTD_compress2(cctx, dst, bound + 1, src, src_len);' -replace 'ZSTDMT_freeCCtx\\(cctx\\);', 'ZSTD_freeCCtx(cctx);' | Set-Content lib\\Compress\\Zstd.xs\"",
         "powershell -Command \"(Get-Content t\\01_basic.t) -replace '10403', 'ZSTD_VERSION_NUMBER()' -replace '''1.4.3''', 'ZSTD_VERSION_STRING()' | Set-Content t\\01_basic.t\"",
+    ],
+)
+cpan.annotation(
+    distribution = "NetAddr-IP",
+    hub = "cpan",
+    patch_cmds = [
+        "touch Lite/Util/localperl.h Lite/Util/config.h",
+    ],
+    patch_cmds_win = [
+        "type nul > Lite\\Util\\localperl.h",
+        "type nul > Lite\\Util\\config.h",
     ],
 )
 use_repo(cpan, "cpan")
