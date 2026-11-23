@@ -222,11 +222,19 @@ def _cpan_dist_repo_impl(ctx):
     exclude_patterns = ['"lib/**/*.pm"', '"lib/**/*.pod"']
 
     for inc in ctx.attr.includes:
-        src_patterns.append('"%s/**/*.pm"' % inc)
-        src_patterns.append('"%s/**/*.pod"' % inc)
-        data_patterns.append('"%s/**/*"' % inc)
-        exclude_patterns.append('"%s/**/*.pm"' % inc)
-        exclude_patterns.append('"%s/**/*.pod"' % inc)
+        if inc in [".", ""]:
+            src_patterns.append('"**/*.pm"')
+            src_patterns.append('"**/*.pod"')
+            data_patterns.append('"**/*"')
+            exclude_patterns.append('"**/*.pm"')
+            exclude_patterns.append('"**/*.pod"')
+        else:
+            inc_clean = inc.removeprefix("./").rstrip("/")
+            src_patterns.append('"%s/**/*.pm"' % inc_clean)
+            src_patterns.append('"%s/**/*.pod"' % inc_clean)
+            data_patterns.append('"%s/**/*"' % inc_clean)
+            exclude_patterns.append('"%s/**/*.pm"' % inc_clean)
+            exclude_patterns.append('"%s/**/*.pod"' % inc_clean)
 
     srcs_str = "\n        " + ",\n        ".join(src_patterns) + ",\n    "
     data_str = "\n        " + ",\n        ".join(data_patterns) + ",\n    "

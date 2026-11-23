@@ -5,6 +5,7 @@ bazel_dep(name = "bazel_skylib", version = "1.9.2")
 bazel_dep(name = "platforms", version = "1.1.0")
 bazel_dep(name = "zlib", version = "1.3.1.bcr.5")
 bazel_dep(name = "bzip2", version = "1.0.8.bcr.4")
+bazel_dep(name = "libexpat", version = "2.7.1.bcr.1")
 bazel_dep(name = "perl-compress-raw-zlib", version = "2.226")
 bazel_dep(name = "perl-io-tty", version = "1.20")
 
@@ -498,7 +499,6 @@ cpan.install(
         "XML-Compile-SOAP",
         "XML-LibXML",
         "XML-LibXML-Simple",
-        "XML-Parser",
         "XML-Simple",
         "XML-TreeBuilder",
         "XML-Twig",
@@ -598,6 +598,27 @@ cpan.annotation(
     patch_cmds_win = [
         "copy fallback\\const-c.inc const-c.inc",
         "copy fallback\\const-xs.inc const-xs.inc",
+    ],
+)
+cpan.annotation(
+    distribution = "XML-Parser",
+    hub = "cpan",
+    includes = ["."],
+    native_deps = ["@libexpat//:libexpat"],
+    output_loc = "auto/XML/Parser/Expat/Expat",
+    patch_cmds = [
+        "mkdir -p XML/Parser/Encodings",
+        "cp Parser.pm XML/Parser.pm",
+        "cp Expat/Expat.pm XML/Parser/Expat.pm",
+        "cp -r Parser/Style XML/Parser/",
+        "cp share/*.enc XML/Parser/Encodings/",
+    ],
+    patch_cmds_win = [
+        "mkdir XML\\Parser\\Encodings",
+        "copy Parser.pm XML\\Parser.pm",
+        "copy Expat\\Expat.pm XML\\Parser\\Expat.pm",
+        "xcopy /E /I Parser\\Style XML\\Parser\\Style",
+        "copy share\\*.enc XML\\Parser\\Encodings\\",
     ],
 )
 use_repo(cpan, "cpan")
