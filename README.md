@@ -58,3 +58,21 @@ bazel run --invocation_id=${INVOCATION_ID} //tools:resolver -- --input deps.txt 
 ```
 
 See [docs/resolver.md](docs/resolver.md) for full details, lockfile format specifications, and CLI options.
+
+## Development & CI Reproduction
+
+A `Makefile` is provided at the repository root to reproduce the CI workflow locally:
+
+```bash
+# Run pre-commit checks, full build, and test across all workspaces
+make all
+
+# Run only builds across all workspaces
+make build
+
+# Run only tests across all workspaces
+make test
+
+# Run pre-commit checks (formatting, buildifier, lint)
+make pre-commit
+```
