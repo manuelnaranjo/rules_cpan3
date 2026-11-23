@@ -285,7 +285,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "zcqlho7TinVfJAhrpfcMgkvghTt9dJF4Lrzk8wvz9zI=",
-        "usagesDigest": "EaOKDygKjF3TJdENGMMy1wj2tZqz482kxgTUiSXFwRM=",
+        "usagesDigest": "Eu3SeIE1nES4n8F9Ib3TBAFNQS9BoIJHJjHFuvXxDmU=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -7579,10 +7579,10 @@
               "test_deps": [
                 "@cpan__Test-Pod//:Test-Pod"
               ],
-              "test_tags": [],
-              "manual_tests": [
-                "t/core_partial_read.t"
+              "test_tags": [
+                "manual"
               ],
+              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -28034,7 +28034,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -75533,7 +75535,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -134601,6 +134605,7 @@
                 "Crypt-ScryptKDF",
                 "Crypt-Skip32-XS",
                 "Crypt-Sodium-Nitrate",
+                "Crypt-URandom",
                 "CryptX",
                 "Curses",
                 "DBD-Cassandra",
@@ -134761,6 +134766,7 @@
                 "Lingua-ZH-HanDetect",
                 "Linux-Inotify2",
                 "Linux-Prctl",
+                "Linux-Smaps-Tiny",
                 "List-MoreUtils",
                 "Locale-CLDR",
                 "Locale-gettext",
@@ -134933,6 +134939,7 @@
                 "Sys-CpuAffinity",
                 "Sys-RunAlone",
                 "Sys-Syslog",
+                "TAP-Formatter-HTML",
                 "TAP-Formatter-JUnit",
                 "TAP-Harness-JUnit",
                 "Template-Toolkit",
