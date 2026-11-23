@@ -301,6 +301,7 @@ cpan.install(
         "Module-Pluggable",
         "Module-Reader",
         "Module-Util",
+        "Mojolicious:t/mojo/exception.t",
         "Moo:t/accessor-weaken-pre-5_8_3.t",
         "MooX-Cmd",
         "MooX-HandlesVia",
@@ -331,6 +332,7 @@ cpan.install(
         "Net-Pcap",
         "Net-Ping",
         "Net-SAML2",
+        "Net-Server:t/Options.t",
         "Net-SMS-WorldText",
         "Net-SSH-Perl",
         "Net-SSH2",
@@ -622,6 +624,16 @@ cpan.annotation(
         "xcopy /E /I Parser\\Style XML\\Parser\\Style",
         "copy share\\*.enc XML\\Parser\\Encodings\\",
     ],
+)
+cpan.annotation(
+    distribution = "Syntax-Keyword-Try",
+    hub = "cpan",
+    native_deps = ["@cpan__XS-Parse-Keyword//:XS-Parse-Keyword_xs"],
+)
+cpan.annotation(
+    distribution = "Syntax-Operator-Equ",
+    hub = "cpan",
+    native_deps = ["@cpan__XS-Parse-Keyword//:XS-Parse-Keyword_xs"],
 )
 cpan.annotation(
     distribution = "Compress-Zstd",

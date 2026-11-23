@@ -285,7 +285,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "zcqlho7TinVfJAhrpfcMgkvghTt9dJF4Lrzk8wvz9zI=",
-        "usagesDigest": "x4Klh3Ynj0C+QhCIKcpwCepIKHU/Z0CEjnwAQgkuhbM=",
+        "usagesDigest": "5sKuCP+a1BZtj4+C1Z39uz3Rh+2Ejg/VbvQVo2uzjWA=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -32487,7 +32487,9 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/mojo/exception.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -36272,7 +36274,9 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/Options.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -75192,7 +75196,9 @@
               ],
               "defines": [],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@cpan__XS-Parse-Keyword//:XS-Parse-Keyword_xs"
+              ],
               "output_loc": "",
               "patch_cmds": [],
               "patch_cmds_win": [],
@@ -75226,7 +75232,9 @@
               ],
               "defines": [],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@cpan__XS-Parse-Keyword//:XS-Parse-Keyword_xs"
+              ],
               "output_loc": "",
               "patch_cmds": [],
               "patch_cmds_win": [],
