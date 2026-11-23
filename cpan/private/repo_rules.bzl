@@ -332,6 +332,7 @@ cpan_xs(
         "fallback/**",
         "bzip2-src/**",
         "bzlib-src/**",
+        "ext/**",
     ], allow_empty = True),
     defines = [{defines_str}],{exec_compat_str}{exec_reqs_str}
     output_loc = "{output_loc}",{tags_str}{target_compat_str}
@@ -342,6 +343,10 @@ cpan_xs(
         "**/*.xs",
         "*.inc",
         "**/*.inc",
+    ], exclude = [
+        "bzip2-src/**",
+        "bzlib-src/**",
+        "ext/**",
     ], allow_empty = True),
     typemaps = glob([
         "typemap",

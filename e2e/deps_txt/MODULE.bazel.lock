@@ -284,8 +284,8 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "Kff7HWO/8MfBTsHePp/MxvfMBNoi9ASNrjOli1IP8cY=",
-        "usagesDigest": "TzzNR5+WInGCqFzTipxULMa1RjycK+mi4Pw08qhGHwk=",
+        "bzlTransitiveDigest": "zcqlho7TinVfJAhrpfcMgkvghTt9dJF4Lrzk8wvz9zI=",
+        "usagesDigest": "msEMdlmqDGg6Ky/ITtw0/5Wbk/cV96q3213H71p0rpA=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -5396,18 +5396,24 @@
               "runtime_deps": [],
               "defines": [],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@zstd//:zstd"
+              ],
               "output_loc": "",
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "sed -i -e '/compress\\/zstdmt_compress\\.h/d' -e 's/ZSTDMT_CCtx\\* cctx;/ZSTD_CCtx* cctx;/' -e 's/cctx = ZSTDMT_createCCtx(nbThreads);/cctx = ZSTD_createCCtx(); ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, (int)nbThreads); ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, level);/' -e 's/ret = ZSTDMT_compressCCtx(cctx, dst, bound + 1, src, src_len, level);/ret = ZSTD_compress2(cctx, dst, bound + 1, src, src_len);/' -e 's/ZSTDMT_freeCCtx(cctx);/ZSTD_freeCCtx(cctx);/' lib/Compress/Zstd.xs",
+                "sed -i -e 's/10403/ZSTD_VERSION_NUMBER()/' -e \"s/'1.4.3'/ZSTD_VERSION_STRING()/\" t/01_basic.t"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"(Get-Content lib\\Compress\\Zstd.xs) -replace '#include .compress/zstdmt_compress.h.', '' -replace 'ZSTDMT_CCtx\\* cctx;', 'ZSTD_CCtx* cctx;' -replace 'cctx = ZSTDMT_createCCtx\\(nbThreads\\);', 'cctx = ZSTD_createCCtx(); ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, (int)nbThreads); ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, level);' -replace 'ret = ZSTDMT_compressCCtx\\(cctx, dst, bound \\+ 1, src, src_len, level\\);', 'ret = ZSTD_compress2(cctx, dst, bound + 1, src, src_len);' -replace 'ZSTDMT_freeCCtx\\(cctx\\);', 'ZSTD_freeCCtx(cctx);' | Set-Content lib\\Compress\\Zstd.xs\"",
+                "powershell -Command \"(Get-Content t\\01_basic.t) -replace '10403', 'ZSTD_VERSION_NUMBER()' -replace '''1.4.3''', 'ZSTD_VERSION_STRING()' | Set-Content t\\01_basic.t\""
+              ],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -115618,7 +115624,6 @@
                 "CommonMark",
                 "Compress-LZ4",
                 "Compress-Snappy",
-                "Compress-Zstd",
                 "Config-General",
                 "Config-Validate",
                 "Constant-Export-Lazy",
