@@ -285,7 +285,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "zcqlho7TinVfJAhrpfcMgkvghTt9dJF4Lrzk8wvz9zI=",
-        "usagesDigest": "5sKuCP+a1BZtj4+C1Z39uz3Rh+2Ejg/VbvQVo2uzjWA=",
+        "usagesDigest": "DvZPeT7ol2O12LXTy30ATzJB2egXYH8Z4OA/akmo8wg=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -7038,7 +7038,9 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/04_complex_rdn.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -18284,7 +18286,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -22491,7 +22495,9 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/10-codegen-b.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -36438,8 +36444,13 @@
               "includes": [],
               "native_deps": [],
               "output_loc": "",
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "touch Lite/Util/localperl.h Lite/Util/config.h"
+              ],
+              "patch_cmds_win": [
+                "type nul > Lite\\Util\\localperl.h",
+                "type nul > Lite\\Util\\config.h"
+              ],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
@@ -134666,6 +134677,7 @@
                 "Geo-GoogleMaps-OffsetCenter",
                 "Geo-IP",
                 "GeoIP2",
+                "Getopt-ArgParse",
                 "Git-Repository",
                 "Git-Repository-Plugin-Log",
                 "Google-Ads-AdWords-Client",
