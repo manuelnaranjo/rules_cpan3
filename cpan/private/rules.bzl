@@ -100,6 +100,8 @@ def _cpan_xs_cc_lib(ctx, toolchain, srcs, is_windows, is_macos):
         unsupported_features = ctx.disabled_features,
     )
 
+    hdrs = [h for h in textual_hdrs if not h.basename.endswith(".xs")]
+
     # Pass compilation_contexts from deps so headers like zlib.h are available!
     (compilation_context, compilation_outputs) = cc_common.compile(
         actions = ctx.actions,
@@ -108,6 +110,7 @@ def _cpan_xs_cc_lib(ctx, toolchain, srcs, is_windows, is_macos):
         cc_toolchain = cc_toolchain,
         srcs = srcs + ctx.files.cc_srcs,
         defines = ctx.attr.defines,
+        public_hdrs = hdrs,
         additional_inputs = textual_hdrs,
         private_hdrs = xs_headers.to_list(),
         includes = includes,
