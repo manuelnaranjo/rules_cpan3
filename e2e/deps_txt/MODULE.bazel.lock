@@ -285,7 +285,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "zcqlho7TinVfJAhrpfcMgkvghTt9dJF4Lrzk8wvz9zI=",
-        "usagesDigest": "DvZPeT7ol2O12LXTy30ATzJB2egXYH8Z4OA/akmo8wg=",
+        "usagesDigest": "Pd4z2jKxG8BvuGWBsZJih+CxHXRf11E3utBR9L6Kvm4=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -7580,7 +7580,9 @@
                 "@cpan__Test-Pod//:Test-Pod"
               ],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/core_partial_read.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -82467,11 +82469,22 @@
                 "@cpan__MIME-Charset//:MIME-Charset"
               ],
               "defines": [],
-              "includes": [],
+              "includes": [
+                ".",
+                "sombok/include"
+              ],
               "native_deps": [],
               "output_loc": "",
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "cp sombok/include/sombok.h.in sombok/include/sombok.h",
+                "sed -i -e 's/#ifdef HAVE_CONFIG_H/#if 1/' -e 's/\"config.h\"/\"EXTERN.h\"\\n#include \"perl.h\"\\n#include \"XSUB.h\"\\n#undef USE_LIBTHAI/' -e 's/@SOMBOK_UNICHAR_T@/U32/' -e 's/@PACKAGE_VERSION@/2.4.0/' -e 's/@SOMBOK_UNICHAR_T_IS_[A-Z_]*@//' sombok/include/sombok.h",
+                "rm -f sombok/lib/[5-7].*.c"
+              ],
+              "patch_cmds_win": [
+                "copy sombok\\include\\sombok.h.in sombok\\include\\sombok.h",
+                "powershell -Command \"(Get-Content sombok\\include\\sombok.h) -replace '#ifdef HAVE_CONFIG_H', '#if 1' -replace '\"\"config.h\"\"', '\"\"EXTERN.h\"\"`n#include \"\"perl.h\"\"`n#include \"\"XSUB.h\"\"`n#undef USE_LIBTHAI' -replace '@SOMBOK_UNICHAR_T@', 'U32' -replace '@PACKAGE_VERSION@', '2.4.0' -replace '@SOMBOK_UNICHAR_T_IS_[A-Z_]*@', '' | Set-Content sombok\\include\\sombok.h\"",
+                "powershell -Command \"Remove-Item sombok\\lib\\[5-7].*.c\""
+              ],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
