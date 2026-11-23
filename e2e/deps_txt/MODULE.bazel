@@ -4,6 +4,7 @@ bazel_dep(name = "rules_perl", version = "2.1.0")
 bazel_dep(name = "bazel_skylib", version = "1.9.2")
 bazel_dep(name = "platforms", version = "1.1.0")
 bazel_dep(name = "zlib", version = "1.3.1.bcr.5")
+bazel_dep(name = "bzip2", version = "1.0.8.bcr.4")
 bazel_dep(name = "perl-compress-raw-zlib", version = "2.226")
 bazel_dep(name = "perl-io-tty", version = "1.20")
 
@@ -76,9 +77,7 @@ cpan.install(
         "CodeGen-Protection",
         "Common-CLI",
         "CommonMark",
-        "Compress-Bzip2",
         "Compress-LZ4",
-        "Compress-Raw-Bzip2",
         "Compress-Snappy",
         "Compress-Zstd",
         "Config-General",
@@ -573,5 +572,32 @@ cpan.annotation(
     includes = ["LibYAML/lib"],
     output_loc = "auto/YAML/XS/LibYAML/LibYAML",
     test_module = "YAML::XS",
+)
+cpan.annotation(
+    defines = ["BZ_NO_STDIO"],
+    distribution = "Compress-Raw-Bzip2",
+    hub = "cpan",
+    native_deps = ["@bzip2//:bz2"],
+    patch_cmds = [
+        "cp fallback/constants.h constants.h",
+        "cp fallback/constants.xs constants.xs",
+    ],
+    patch_cmds_win = [
+        "copy fallback\\constants.h constants.h",
+        "copy fallback\\constants.xs constants.xs",
+    ],
+)
+cpan.annotation(
+    distribution = "Compress-Bzip2",
+    hub = "cpan",
+    native_deps = ["@bzip2//:bz2"],
+    patch_cmds = [
+        "cp fallback/const-c.inc const-c.inc",
+        "cp fallback/const-xs.inc const-xs.inc",
+    ],
+    patch_cmds_win = [
+        "copy fallback\\const-c.inc const-c.inc",
+        "copy fallback\\const-xs.inc const-xs.inc",
+    ],
 )
 use_repo(cpan, "cpan")

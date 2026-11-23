@@ -76,6 +76,8 @@
     "https://bcr.bazel.build/modules/bazelrc-preset.bzl/1.10.0/source.json": "4520ad0d79364a5f46daa3aad4cf79b654cac675a211afe717cc0e1d0f19941d",
     "https://bcr.bazel.build/modules/buildozer/8.5.1/MODULE.bazel": "a35d9561b3fc5b18797c330793e99e3b834a473d5fbd3d7d7634aafc9bdb6f8f",
     "https://bcr.bazel.build/modules/buildozer/8.5.1/source.json": "e3386e6ff4529f2442800dee47ad28d3e6487f36a1f75ae39ae56c70f0cd2fbd",
+    "https://bcr.bazel.build/modules/bzip2/1.0.8.bcr.4/MODULE.bazel": "80a6a6a7493885b113dec2760403636d97009356b33df1720e79a65d126149cf",
+    "https://bcr.bazel.build/modules/bzip2/1.0.8.bcr.4/source.json": "a769883197aebe54f78671f1a2c7e0fae5cd8f045bae1230f04f4902856e3bca",
     "https://bcr.bazel.build/modules/gawk/5.3.2.bcr.3/MODULE.bazel": "f1b7bb2dd53e8f2ef984b39485ec8a44e9076dda5c4b8efd2fb4c6a6e856a31d",
     "https://bcr.bazel.build/modules/gawk/5.3.2.bcr.3/source.json": "ebe931bfe362e4b41e59ee00a528db6074157ff2ced92eb9e970acab2e1089c9",
     "https://bcr.bazel.build/modules/google_benchmark/1.8.2/MODULE.bazel": "a70cf1bba851000ba93b58ae2f6d76490a9feb74192e57ab8e8ff13c34ec50cb",
@@ -280,8 +282,8 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "/rI5sDpYQg+wiVBdq6E7YjvDjP2be5FZs5KdDKlrBME=",
-        "usagesDigest": "TBXA0qSI4dg6+oR1IqbfUEGcxyIKnMXNVz+VuesuRlU=",
+        "bzlTransitiveDigest": "YsSoyUWvdD+ubora/V9LRS4cKhyiqC/Go6XSZbN1hSM=",
+        "usagesDigest": "Qsvaxs16twSnqXM7DFtDqBhBrZ+8fhxuqt7u2yYXxH4=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -5224,18 +5226,24 @@
               "runtime_deps": [],
               "defines": [],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@bzip2//:bz2"
+              ],
               "output_loc": "",
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "cp fallback/const-c.inc const-c.inc",
+                "cp fallback/const-xs.inc const-xs.inc"
+              ],
+              "patch_cmds_win": [
+                "copy fallback\\const-c.inc const-c.inc",
+                "copy fallback\\const-xs.inc const-xs.inc"
+              ],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5310,20 +5318,28 @@
                 "Compress::Raw::Bzip2"
               ],
               "runtime_deps": [],
-              "defines": [],
+              "defines": [
+                "BZ_NO_STDIO"
+              ],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@bzip2//:bz2"
+              ],
               "output_loc": "",
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "cp fallback/constants.h constants.h",
+                "cp fallback/constants.xs constants.xs"
+              ],
+              "patch_cmds_win": [
+                "copy fallback\\constants.h constants.h",
+                "copy fallback\\constants.xs constants.xs"
+              ],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -14960,7 +14976,9 @@
               "test_deps": [
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -32095,7 +32113,9 @@
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/accessor-weaken-pre-5_8_3.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -60784,7 +60804,9 @@
               "test_deps": [
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -68049,7 +68071,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -71599,7 +71623,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -115574,9 +115600,7 @@
                 "CodeGen-Protection",
                 "Common-CLI",
                 "CommonMark",
-                "Compress-Bzip2",
                 "Compress-LZ4",
-                "Compress-Raw-Bzip2",
                 "Compress-Snappy",
                 "Compress-Zstd",
                 "Config-General",
@@ -115671,6 +115695,7 @@
                 "ElasticSearch",
                 "Elasticsearch-Model",
                 "Email-MIME-Encodings",
+                "Email-Sender",
                 "Emoji-NationalFlag",
                 "Encode",
                 "Encode-Detect",
@@ -115871,6 +115896,7 @@
                 "Plack-Middleware-ChromeLogger",
                 "Plack-Middleware-Deflater",
                 "Plack-Test-Agent",
+                "Pod-Coverage-TrustMe",
                 "Pod-POM",
                 "Pod-Usage",
                 "Proc-Daemon",
@@ -115943,6 +115969,7 @@
                 "Test-DBIx-Class",
                 "Test-HTTP-AnyEvent-Server",
                 "Test-LWP-UserAgent",
+                "Test-Manifest",
                 "Test-MockFile",
                 "Test-MockModule",
                 "Test-MockObject",
@@ -115968,6 +115995,7 @@
                 "Time-HiRes",
                 "Time-Moment",
                 "Time-Out",
+                "Time-ParseDate",
                 "Type-Tiny",
                 "Types-Serialiser",
                 "UNIVERSAL-can",
