@@ -1,0 +1,78 @@
+--- a/Snappy.xs
++++ b/Snappy.xs
+@@ -7,8 +7,7 @@
+ #define NEED_sv_2pvbyte
+ #include "ppport.h"
+
+-#include "src/csnappy_compress.c"
+-#include "src/csnappy_decompress.c"
++#include "snappy-c.h"
+
+ MODULE = Compress::Snappy    PACKAGE = Compress::Snappy
+
+@@ -20,8 +19,7 @@
+ PREINIT:
+     char *src, *dest;
+     STRLEN src_len;
+-    uint32_t dest_len;
+-    void *working_memory;
++    size_t dest_len;
+ CODE:
+     SvGETMAGIC(sv);
+     if (SvROK(sv) && ! SvAMAGIC(sv)) {
+@@ -33,19 +31,17 @@
+     src = SvPVbyte(sv, src_len);
+     if (! src_len)
+         XSRETURN_NO;
+-    dest_len = csnappy_max_compressed_length(src_len);
++    dest_len = snappy_max_compressed_length(src_len);
+     if (! dest_len)
+         XSRETURN_UNDEF;
+-    Newx(working_memory, CSNAPPY_WORKMEM_BYTES, void *);
+-    if (! working_memory)
+-        XSRETURN_UNDEF;
+     RETVAL = newSV(dest_len);
+     dest = SvPVX(RETVAL);
+     if (! dest)
+         XSRETURN_UNDEF;
+-    csnappy_compress(src, src_len, dest, &dest_len, working_memory,
+-                     CSNAPPY_WORKMEM_BYTES_POWER_OF_TWO);
+-    Safefree(working_memory);
++    if (snappy_compress(src, src_len, dest, &dest_len) != SNAPPY_OK) {
++        SvREFCNT_dec(RETVAL);
++        XSRETURN_UNDEF;
++    }
+     SvCUR_set(RETVAL, dest_len);
+     SvPOK_on(RETVAL);
+ OUTPUT:
+@@ -59,8 +55,7 @@
+ PREINIT:
+     char *src, *dest;
+     STRLEN src_len;
+-    uint32_t dest_len;
+-    int header_len;
++    size_t dest_len;
+ CODE:
+     PERL_UNUSED_VAR(ix); /* -W */
+     SvGETMAGIC(sv);
+@@ -73,16 +68,16 @@
+     src = SvPVbyte(sv, src_len);
+     if (! src_len)
+         XSRETURN_NO;
+-    header_len = csnappy_get_uncompressed_length(src, src_len, &dest_len);
+-    if (0 > header_len || ! dest_len)
++    if (snappy_uncompressed_length(src, src_len, &dest_len) != SNAPPY_OK || ! dest_len)
+         XSRETURN_UNDEF;
+     RETVAL = newSV(dest_len);
+     dest = SvPVX(RETVAL);
+     if (! dest)
+         XSRETURN_UNDEF;
+-    if (csnappy_decompress_noheader(src + header_len, src_len - header_len,
+-                                    dest, &dest_len))
++    if (snappy_uncompress(src, src_len, dest, &dest_len) != SNAPPY_OK) {
++        SvREFCNT_dec(RETVAL);
+         XSRETURN_UNDEF;
++    }
+     SvCUR_set(RETVAL, dest_len);
+     SvPOK_on(RETVAL);
+ OUTPUT:

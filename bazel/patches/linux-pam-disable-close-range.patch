@@ -1,0 +1,12 @@
+diff -Naur a/config.h b/config.h
+--- a/config.h	2026-11-23 23:03:26.325629761 +0100
++++ b/config.h	2026-11-23 23:03:26.325805331 +0100
+@@ -1,7 +1,7 @@
+ /* Linux-PAM's Linux/glibc configuration, including kernel audit support. */
+ #define ENABLE_NLS 1
+ #define HAVE_BINDTEXTDOMAIN 1
+-#define HAVE_CLOSE_RANGE 1
++/* #undef HAVE_CLOSE_RANGE */
+ #define HAVE_EXPLICIT_BZERO 1
+ #define HAVE_GETGRGID_R 1
+ #define HAVE_GETGRNAM_R 1

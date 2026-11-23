@@ -111,7 +111,14 @@ def _cpan_impl(module_ctx):
                         runtime_deps.append("@" + dist_repo_names[dep] + "//:" + dep)
 
                 test_deps = []
-                for dep in dist_info.get("dependencies", {}).get("test", []):
+                all_test_deps = list(dist_info.get("dependencies", {}).get("test", []))
+                for dep in dist_info.get("dependencies", {}).get("build", []):
+                    if dep not in all_test_deps:
+                        all_test_deps.append(dep)
+                for dep in dist_info.get("dependencies", {}).get("configure", []):
+                    if dep not in all_test_deps:
+                        all_test_deps.append(dep)
+                for dep in all_test_deps:
                     if dep in hub_injected:
                         test_deps.append(hub_injected[dep])
                     elif dep in dist_repo_names:
@@ -124,8 +131,10 @@ def _cpan_impl(module_ctx):
                 includes = list(install.includes.get(dist_name, []))
                 native_deps = list(install.native_deps.get(dist_name, []))
                 output_loc = install.output_locs.get(dist_name, "")
+                patch_args = ["-p0"]
                 patch_cmds = list(install.patch_cmds.get(dist_name, []))
                 patch_cmds_win = list(install.patch_cmds_win.get(dist_name, []))
+                patches = []
 
                 target_compatible_with = list(install.target_compatible_with.get(dist_name, []))
                 exec_compatible_with = list(install.exec_compatible_with.get(dist_name, []))
@@ -143,10 +152,14 @@ def _cpan_impl(module_ctx):
                         native_deps.extend(annot.native_deps)
                     if annot.output_loc:
                         output_loc = annot.output_loc
+                    if annot.patch_args:
+                        patch_args = annot.patch_args
                     if annot.patch_cmds:
                         patch_cmds.extend(annot.patch_cmds)
                     if annot.patch_cmds_win:
                         patch_cmds_win.extend(annot.patch_cmds_win)
+                    if annot.patches:
+                        patches.extend(annot.patches)
                     if annot.target_compatible_with:
                         target_compatible_with = annot.target_compatible_with
                     if annot.exec_compatible_with:
@@ -189,8 +202,10 @@ def _cpan_impl(module_ctx):
                     includes = includes,
                     native_deps = native_deps,
                     output_loc = output_loc,
+                    patch_args = patch_args,
                     patch_cmds = patch_cmds,
                     patch_cmds_win = patch_cmds_win,
+                    patches = patches,
                     target_compatible_with = target_compatible_with,
                     exec_compatible_with = exec_compatible_with,
                     execution_requirements = execution_requirements,
@@ -281,12 +296,20 @@ annotation_tag = tag_class(
             doc = "Optional DynaLoader/XSLoader auto/ directory location for an XS module.",
             default = "",
         ),
+        "patch_args": attr.string_list(
+            doc = "Arguments passed to patch (e.g. ['-p1']).",
+            default = [],
+        ),
         "patch_cmds": attr.string_list(
             doc = "Patch bash commands.",
             default = [],
         ),
         "patch_cmds_win": attr.string_list(
             doc = "Patch windows commands.",
+            default = [],
+        ),
+        "patches": attr.label_list(
+            doc = "Patch files to apply to this distribution.",
             default = [],
         ),
         "strip_prefix": attr.string(

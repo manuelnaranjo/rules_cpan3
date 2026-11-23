@@ -1,0 +1,15 @@
+diff --git a/PAM_config.h b/PAM_config.h
+new file mode 100644
+--- /dev/null
++++ b/PAM_config.h
+@@ -0,0 +1,9 @@
++#ifndef PAM_CONFIG_H
++#define PAM_CONFIG_H
++
++#define HAVE_SECURITY_PAM_APPL_H 1
++#define HAVE_PAM_GETENV 1
++#define HAVE_PAM_FAIL_DELAY 1
++#define PAM_STRERROR_NEEDS_PAMH 1
++
++#endif
++
