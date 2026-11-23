@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 15;
+use Test::More tests => 17;
 
 # Pure Perl distributions
 use Moo;
@@ -15,6 +15,7 @@ use Capture::Tiny qw(capture_stdout);
 use Compress::Raw::Zlib;
 use Compress::Raw::Bzip2 qw(BZ_OK);
 use Compress::Bzip2 qw(bzip2 bunzip2);
+use Compress::Zstd qw(compress decompress compress_mt);
 use XML::Parser;
 use IO::Tty;
 use YAML::XS;
@@ -98,3 +99,11 @@ my $xml_parser = XML::Parser->new(Style => 'Tree');
 my $tree = $xml_parser->parse('<root id="123"><child attr="val">Hello XML Expat</child></root>');
 is($tree->[0], 'root', "XML::Parser parsed root element accurately");
 is($tree->[1]->[2]->[2], 'Hello XML Expat', "XML::Parser parsed child text accurately");
+
+# Test 11: Compress::Zstd (XS - BCR zstd integration)
+my $zstd_in = "Hermetic zstd compression via rules_cpan3!";
+my $zstd_out = compress($zstd_in);
+my $zstd_decomp = decompress($zstd_out);
+is($zstd_decomp, $zstd_in, "Compress::Zstd roundtrip compression matches input");
+my $zstd_mt_out = compress_mt($zstd_in, 2);
+is(decompress($zstd_mt_out), $zstd_in, "Compress::Zstd multi-threaded compression matches input");
