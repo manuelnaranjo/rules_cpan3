@@ -376,9 +376,9 @@
         "Cpanel::JSON::XS::Boolean",
         "Cpanel::JSON::XS::Type"
       ],
-      "sha256": "ff84f5ef1d168e9dfdd4a164ed08a6a5b3bf2de57a63101cfdeb6173e22302dc",
-      "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Cpanel-JSON-XS-4.82.tar.gz",
-      "version": "4.82"
+      "sha256": "daabf6ad0376ee4613e671c521f5d05650c42205e403cac077e79d8594da3ade",
+      "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Cpanel-JSON-XS-4.83.tar.gz",
+      "version": "4.83"
     },
     "Data-OptList": {
       "dependencies": {
