@@ -522,7 +522,7 @@ cpan.install(
         "common-sense",
         "decorators",
         "fs-Promises",
-        "grpc-xs",  # Requires native libgrpc (tracked in #19)
+        "grpc-xs",  # Requires native libgrpc (tracked in #57)
         "jmx4perl",
         "libwww-perl",
         "warnings-unused",
