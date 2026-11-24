@@ -52,5 +52,6 @@ perl_test(
         "@cpan//XML-LibXML-Simple",
         "@cpan//XML-Parser",
         "@cpan//YAML-LibYAML",
+        "@cpan//grpc-xs",
     ],
 )
