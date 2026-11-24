@@ -682,7 +682,7 @@ diff -urN a/config.h b/config.h
 +#elif HAVE___BUILTIN_EXPECT == 2
 +# include <builtins.h>
 +#endif
-+    
++
 +
 +/* Define to 1 if ctype.h defines __header_inline. */
 +/* #undef HAVE___HEADER_INLINE */
@@ -798,7 +798,7 @@ diff -urN a/config.h b/config.h
 +#define HAVE___INLINE 1
 +
 +/* Define as const if the declaration of iconv() needs const. */
-+#define ICONV_CONST 
++#define ICONV_CONST
 +
 +/* Define to the value of ${prefix}, as a string. */
 +#define INSTALLPREFIX "/tmp/iconv_install"
@@ -901,7 +901,7 @@ diff -urN a/config.h b/config.h
 +
 +/* Define to the prefix of C symbols at the assembler and linker level, either
 +   an underscore or empty. */
-+#define USER_LABEL_PREFIX 
++#define USER_LABEL_PREFIX
 +
 +/* Define to enable the declarations of ISO C 23 Annex K types and functions.  */
 +#if !(defined __STDC_WANT_LIB_EXT1__ && __STDC_WANT_LIB_EXT1__)
@@ -2020,7 +2020,7 @@ diff -urN a/config.h b/config.h
 +  # else
 +  #  define _UC_RESTRICT
 +  # endif
-+  
++
 +
 +#if !defined HAVE_C_ALIGNASOF \
 +    && !(defined __cplusplus && 201103 <= __cplusplus) \
@@ -2288,7 +2288,7 @@ diff -urN a/include/iconv.h b/include/iconv.h
 +   have EILSEQ in a different header.  On these systems, define EILSEQ
 +   ourselves. */
 +#ifndef EILSEQ
-+#define EILSEQ 
++#define EILSEQ
 +#endif
 +
 +
@@ -2507,7 +2507,7 @@ diff -urN a/lib/config.h b/lib/config.h
 +   iconv_open, iconv, iconv_close functions. */
 +#define HAVE_ICONV 1
 +/* Define as const if the declaration of iconv() needs const. */
-+#define ICONV_CONST 
++#define ICONV_CONST
 +
 +/* Define to 1 if you have the getc_unlocked() function. */
 +#define HAVE_GETC_UNLOCKED 1

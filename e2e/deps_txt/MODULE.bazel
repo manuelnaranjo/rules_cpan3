@@ -880,6 +880,10 @@ cpan.annotation(
 cpan.annotation(
     distribution = "CSS-Sass",
     hub = "cpan",
+    manual_tests = [
+        "t/10_sass_value_op.t",
+        "t/99_sass_specs.t",
+    ],
     native_deps = ["@libsass//:sass"],
     patch_cmds = [
         "rm -rf libsass plugins",
@@ -926,6 +930,22 @@ cpan.annotation(
     defines = ["HAVE_KDB_H"],
     distribution = "Authen-Krb5-Admin",
     hub = "cpan",
+    manual_tests = [
+        "t/03-principal.t",
+        "t/04-key.t",
+        "t/10-getprivs.t",
+        "t/20-addpol.t",
+        "t/21-getpol.t",
+        "t/22-getpols.t",
+        "t/23-modpol.t",
+        "t/31-getprinc.t",
+        "t/32-getprincs.t",
+        "t/34-cpw.t",
+        "t/35-randkey.t",
+        "t/36-rename.t",
+        "t/91-delprinc.t",
+        "t/92-delpol.t",
+    ],
     native_deps = [
         "@krb5//:kadm5clnt",
         "@krb5//:krb5",

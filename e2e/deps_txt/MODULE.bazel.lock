@@ -337,7 +337,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "Mk3YRkzkoIdnf+WEeKbhZslJ0BklnznmJOQp2nmUNU4=",
-        "usagesDigest": "9Eg8L1KgblbdegBJ1Y0jvYoKcEYCPb1RzNAYVa3l97M=",
+        "usagesDigest": "7Js0xYF/4ZbH3G9K3qGEJik+8GchvVxziVwmt1XCMa0=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -3065,7 +3065,22 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/03-principal.t",
+                "t/04-key.t",
+                "t/10-getprivs.t",
+                "t/20-addpol.t",
+                "t/21-getpol.t",
+                "t/22-getpols.t",
+                "t/23-modpol.t",
+                "t/31-getprinc.t",
+                "t/32-getprincs.t",
+                "t/34-cpw.t",
+                "t/35-randkey.t",
+                "t/36-rename.t",
+                "t/91-delprinc.t",
+                "t/92-delpol.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -4304,7 +4319,10 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/10_sass_value_op.t",
+                "t/99_sass_specs.t"
+              ],
               "strip_prefix": ""
             }
           },
