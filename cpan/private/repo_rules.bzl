@@ -184,6 +184,23 @@ def _cpan_dist_repo_impl(ctx):
         if ctx.path("fallback/constants.xs").exists and not ctx.path("constants.xs").exists:
             ctx.file("constants.xs", ctx.read(ctx.path("fallback/constants.xs")))
 
+    # Ensure root-level .pm files are accessible at their module paths (e.g. RefElem.pm -> lib/Array/RefElem.pm)
+    all_provides = list(ctx.attr.provides)
+    primary_mod = get_primary_module(ctx.attr.dist_name, ctx.attr.provides)
+    if primary_mod not in all_provides:
+        all_provides.append(primary_mod)
+
+    for mod in all_provides:
+        parts = mod.split("::")
+        expected_dest = "lib/" + "/".join(parts) + ".pm"
+        if not ctx.path(expected_dest).exists:
+            candidates = [parts[-1] + ".pm", ctx.attr.dist_name + ".pm"]
+            for cand in candidates:
+                cand_path = ctx.path(cand)
+                if cand_path.exists:
+                    ctx.file(expected_dest, ctx.read(cand_path))
+                    break
+
     deps_items = ['"%s"' % d for d in ctx.attr.runtime_deps]
     if deps_items:
         deps_str = "\n        " + ",\n        ".join(deps_items) + ",\n    "
@@ -248,7 +265,7 @@ def _cpan_dist_repo_impl(ctx):
     if actual_is_xs:
         has_xs_files = False
         frontier = [ctx.path("")]
-        for _ in range(4):
+        for _ in range(8):
             if not frontier or has_xs_files:
                 break
             deeper = []
@@ -307,6 +324,129 @@ perl_library(
         else:
             native_deps_str = ""
 
+        extra_srcs_exclude = []
+        extra_cc_srcs_exclude = []
+        extra_textual_hdrs = []
+
+        # Scan for INCLUDE: directives in .xs files and #include "*.c"
+        scan_frontier = [ctx.path("")]
+        for _ in range(8):
+            if not scan_frontier:
+                break
+            next_frontier = []
+            for d in scan_frontier:
+                for entry in d.readdir():
+                    if entry.is_dir:
+                        if entry.basename not in ["t", "fallback", "inc", ".git", "_xs"]:
+                            next_frontier.append(entry)
+                    elif entry.basename.endswith(".xs"):
+                        content = ctx.read(entry)
+                        for line in content.splitlines():
+                            sline = line.strip()
+                            if sline.startswith("INCLUDE:"):
+                                inc_target = sline.removeprefix("INCLUDE:").strip()
+                                leaf = inc_target.split("/")[-1]
+                                if ".." not in inc_target and inc_target not in extra_srcs_exclude:
+                                    extra_srcs_exclude.append(inc_target)
+                                if leaf and ("**/" + leaf) not in extra_srcs_exclude:
+                                    extra_srcs_exclude.append("**/" + leaf)
+                                if ".." not in inc_target and inc_target not in extra_textual_hdrs:
+                                    extra_textual_hdrs.append(inc_target)
+                                if leaf and ("**/" + leaf) not in extra_textual_hdrs:
+                                    extra_textual_hdrs.append("**/" + leaf)
+                            elif sline.startswith("#") and "include" in sline:
+                                for part in sline.split('"'):
+                                    if part.endswith(".c"):
+                                        leaf = part.split("/")[-1]
+                                        if ".." not in part and part not in extra_cc_srcs_exclude:
+                                            extra_cc_srcs_exclude.append(part)
+                                        if leaf and ("**/" + leaf) not in extra_cc_srcs_exclude:
+                                            extra_cc_srcs_exclude.append("**/" + leaf)
+                                        if ".." not in part and part not in extra_textual_hdrs:
+                                            extra_textual_hdrs.append(part)
+                                        if leaf and ("**/" + leaf) not in extra_textual_hdrs:
+                                            extra_textual_hdrs.append("**/" + leaf)
+                    elif entry.basename.endswith(".c") or entry.basename.endswith(".h"):
+                        content = ctx.read(entry)
+                        for line in content.splitlines():
+                            sline = line.strip()
+                            if sline.startswith("#") and "include" in sline:
+                                for part in sline.split('"'):
+                                    if part.endswith(".c"):
+                                        leaf = part.split("/")[-1]
+                                        if ".." not in part and part not in extra_cc_srcs_exclude:
+                                            extra_cc_srcs_exclude.append(part)
+                                        if leaf and ("**/" + leaf) not in extra_cc_srcs_exclude:
+                                            extra_cc_srcs_exclude.append("**/" + leaf)
+                                        if ".." not in part and part not in extra_textual_hdrs:
+                                            extra_textual_hdrs.append(part)
+                                        if leaf and ("**/" + leaf) not in extra_textual_hdrs:
+                                            extra_textual_hdrs.append("**/" + leaf)
+            scan_frontier = next_frontier
+
+        srcs_exclude_items = [
+            '"_xs/**"',
+            '"t/**"',
+            '"xt/**"',
+            '"example/**"',
+            '"examples/**"',
+            '"corpus/**"',
+            '"fallback/**"',
+            '"c_api_client/**"',
+            '"constants.xs"',
+            '"**/constants.xs"',
+            '"const-xs.inc"',
+            '"**/const-xs.inc"',
+        ]
+        for x in extra_srcs_exclude:
+            quoted = '"%s"' % x
+            if quoted not in srcs_exclude_items:
+                srcs_exclude_items.append(quoted)
+        srcs_exclude_str = "\n        " + ",\n        ".join(srcs_exclude_items) + ",\n    "
+
+        cc_srcs_exclude_items = [
+            '"_xs/**"',
+            '"t/**"',
+            '"xt/**"',
+            '"example/**"',
+            '"examples/**"',
+            '"corpus/**"',
+            '"fallback/**"',
+            '"c_api_client/**"',
+            '"bzip2-src/**"',
+            '"bzlib-src/**"',
+            '"ext/**"',
+        ]
+        for x in extra_cc_srcs_exclude:
+            quoted = '"%s"' % x
+            if quoted not in cc_srcs_exclude_items:
+                cc_srcs_exclude_items.append(quoted)
+        cc_srcs_exclude_str = "\n        " + ",\n        ".join(cc_srcs_exclude_items) + ",\n    "
+
+        textual_hdrs_patterns = [
+            '"*.h"',
+            '"**/*.h"',
+            '"*.xs"',
+            '"**/*.xs"',
+            '"*.inc"',
+            '"**/*.inc"',
+        ]
+        for x in extra_textual_hdrs:
+            quoted = '"%s"' % x
+            if quoted not in textual_hdrs_patterns:
+                textual_hdrs_patterns.append(quoted)
+        textual_hdrs_str = "\n        " + ",\n        ".join(textual_hdrs_patterns) + ",\n    "
+
+        textual_hdrs_exclude = [
+            "bzip2-src/**",
+            "bzlib-src/**",
+        ]
+        has_ext_included = any([x.startswith("ext/") or "/ext/" in x for x in extra_textual_hdrs])
+        if not has_ext_included:
+            textual_hdrs_exclude.append("ext/**")
+        textual_hdrs_exclude_items = ['"%s"' % x for x in textual_hdrs_exclude]
+        textual_hdrs_exclude_str = "\n        " + ",\n        ".join(textual_hdrs_exclude_items) + ",\n    "
+
         build_content = """# Auto-generated by rules_cpan for {dist_name} (XS extension)
 load("@rules_cpan//cpan:defs.bzl", "cpan_xs")
 load("@rules_perl//perl:defs.bzl", "perl_library")
@@ -318,48 +458,14 @@ cpan_xs(
     srcs = glob([
         "*.xs",
         "**/*.xs",
-    ], exclude = [
-        "_xs/**",
-        "t/**",
-        "xt/**",
-        "example/**",
-        "examples/**",
-        "corpus/**",
-        "fallback/**",
-        "constants.xs",
-        "**/constants.xs",
-        "const-xs.inc",
-        "**/const-xs.inc",
-    ], allow_empty = True),
+    ], exclude = [{srcs_exclude_str}], allow_empty = True),
     cc_srcs = glob([
         "*.c",
         "**/*.c",
-    ], exclude = [
-        "_xs/**",
-        "t/**",
-        "xt/**",
-        "example/**",
-        "examples/**",
-        "corpus/**",
-        "fallback/**",
-        "bzip2-src/**",
-        "bzlib-src/**",
-        "ext/**",
-    ], allow_empty = True),
+    ], exclude = [{cc_srcs_exclude_str}], allow_empty = True),
     defines = [{defines_str}],{exec_compat_str}{exec_reqs_str}
     output_loc = "{output_loc}",{tags_str}{target_compat_str}
-    textual_hdrs = glob([
-        "*.h",
-        "**/*.h",
-        "*.xs",
-        "**/*.xs",
-        "*.inc",
-        "**/*.inc",
-    ], exclude = [
-        "bzip2-src/**",
-        "bzlib-src/**",
-        "ext/**",
-    ], allow_empty = True),
+    textual_hdrs = glob([{textual_hdrs_str}], exclude = [{textual_hdrs_exclude_str}], allow_empty = True),
     typemaps = glob([
         "typemap",
         "**/typemap",
@@ -380,6 +486,10 @@ perl_library(
             dist_name = ctx.attr.dist_name,
             output_loc = output_loc,
             srcs_str = srcs_str,
+            srcs_exclude_str = srcs_exclude_str,
+            cc_srcs_exclude_str = cc_srcs_exclude_str,
+            textual_hdrs_str = textual_hdrs_str,
+            textual_hdrs_exclude_str = textual_hdrs_exclude_str,
             data_str = data_str,
             exclude_str = exclude_str,
             defines_str = defines_str,

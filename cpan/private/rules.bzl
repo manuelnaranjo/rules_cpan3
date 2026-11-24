@@ -88,6 +88,8 @@ def _compute_output_loc_rpaths(output_loc, deps, is_macos):
     bin_dots = "/".join([".." for _ in range(depth + 2)])
     rpaths = []
     for sdir in solib_dirs:
+        sdir_clean = sdir.removeprefix("../")
+        rpaths.append("-Wl,-rpath,%s/%s/%s" % (origin_var, rf_dots, sdir_clean))
         rpaths.append("-Wl,-rpath,%s/%s/_main/%s" % (origin_var, rf_dots, sdir))
         rpaths.append("-Wl,-rpath,%s/%s/%s" % (origin_var, bin_dots, sdir))
         rpaths.append("-Wl,-rpath,%s/%s/%s" % (origin_var, rf_dots, sdir))
@@ -123,16 +125,46 @@ def _cpan_xs_cc_lib(ctx, toolchain, srcs, is_windows, is_macos):
     cc_toolchain = find_cc_toolchain(ctx)
     xs_headers = toolchain.xs_headers
 
-    includes = [f.dirname for f in xs_headers.to_list()]
-
+    pkg_includes = ["."] + [f.dirname for f in xs_headers.to_list()]
+    sub_includes = []
     textual_hdrs = []
     for hdrs in ctx.attr.textual_hdrs:
         for hdr in hdrs.files.to_list():
             textual_hdrs.append(hdr)
-            includes.append(hdr.dirname)
+            sp = hdr.short_path
+            if sp.startswith("../"):
+                parts = sp.split("/", 2)
+                if len(parts) > 2:
+                    pdir = paths.dirname(parts[2])
+                    if pdir and pdir != "." and ".." not in pdir:
+                        pkg_includes.append(pdir)
+                        sub_includes.append(pdir)
+            else:
+                pdir = paths.dirname(sp)
+                if pdir and pdir != "." and ".." not in pdir:
+                    pkg_includes.append(pdir)
+                    sub_includes.append(pdir)
 
-    includes = sets.make(includes)
-    includes = sets.to_list(includes)
+    pkg_includes = sets.to_list(sets.make(pkg_includes))
+    sub_includes = sets.to_list(sets.make(sub_includes))
+
+    extra_cflags = []
+    if ctx.label.workspace_root:
+        extra_cflags.append("-I" + ctx.label.workspace_root)
+        for s in sub_includes:
+            extra_cflags.append("-I" + paths.join(ctx.label.workspace_root, s))
+    else:
+        for s in sub_includes:
+            extra_cflags.append("-I" + s)
+
+    for dep in ctx.attr.deps:
+        if CcInfo in dep:
+            cc_ctx = dep[CcInfo].compilation_context
+            for inc in cc_ctx.includes.to_list():
+                if dep.label.workspace_root and not inc.startswith(dep.label.workspace_root):
+                    extra_cflags.append("-I" + paths.join(dep.label.workspace_root, inc))
+                else:
+                    extra_cflags.append("-I" + inc)
 
     feature_configuration = cc_common.configure_features(
         ctx = ctx,
@@ -141,7 +173,7 @@ def _cpan_xs_cc_lib(ctx, toolchain, srcs, is_windows, is_macos):
         unsupported_features = ctx.disabled_features,
     )
 
-    hdrs = [h for h in textual_hdrs if not h.basename.endswith(".xs")]
+    hdrs = [h for h in textual_hdrs if not h.basename.endswith(".xs") and not h.basename.endswith(".c")]
 
     # Pass compilation_contexts from deps so headers like zlib.h are available!
     (compilation_context, compilation_outputs) = cc_common.compile(
@@ -154,8 +186,8 @@ def _cpan_xs_cc_lib(ctx, toolchain, srcs, is_windows, is_macos):
         public_hdrs = hdrs,
         additional_inputs = textual_hdrs,
         private_hdrs = xs_headers.to_list(),
-        includes = includes,
-        user_compile_flags = _compile_flags(toolchain, cc_toolchain, is_windows) + ctx.attr.copts,
+        includes = pkg_includes,
+        user_compile_flags = _compile_flags(toolchain, cc_toolchain, is_windows) + extra_cflags + ctx.attr.copts,
         compilation_contexts = [dep[CcInfo].compilation_context for dep in ctx.attr.deps],
     )
 
@@ -260,7 +292,19 @@ def _cpan_xs_implementation(ctx):
         output = ctx.actions.declare_file(output_loc)
         ctx.actions.symlink(output = output, target_file = dyn_lib)
 
-    runfiles = ctx.runfiles(files = [output])
+    rf_files = [output]
+    if dyn_lib and dyn_lib != output:
+        rf_files.append(dyn_lib)
+    for dep in ctx.attr.deps:
+        if CcInfo in dep:
+            for li in dep[CcInfo].linking_context.linker_inputs.to_list():
+                for lib_item in li.libraries:
+                    if lib_item.dynamic_library:
+                        rf_files.append(lib_item.dynamic_library)
+                    if lib_item.resolved_symlink_dynamic_library:
+                        rf_files.append(lib_item.resolved_symlink_dynamic_library)
+
+    runfiles = ctx.runfiles(files = rf_files)
     for dep in ctx.attr.deps:
         runfiles = runfiles.merge(dep[DefaultInfo].default_runfiles)
 
