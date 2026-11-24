@@ -1,9 +1,10 @@
 {
     "integrity": "sha256-Pak9tUacMFiM/rKD2dYu38be2esO3BCk9bv7fXIuqAI=",
-    "patch_strip": 1,
-    "patches": {
-        "add_build_file.patch": "sha256-4YM509weQ6D6A++lWv11ufAfiwo15r1f1XPPvxyLZUI="
-    },
     "strip_prefix": "cmark-0.31.1",
-    "url": "https://github.com/commonmark/cmark/archive/refs/tags/0.31.1.tar.gz"
+    "url": "https://github.com/commonmark/cmark/archive/refs/tags/0.31.1.tar.gz",
+    "overlay": {
+        "BUILD.bazel": "sha256-qUAzh9faRnBHlwKdziCV0IispE+b4s5i2WsfgjBuh1U=",
+        "src/cmark_export.h": "sha256-vKhdg/4apvakKYJ8iDvsABvprYX+5gvHQ4Kt4lv+HsU=",
+        "src/cmark_version.h": "sha256-W/4ChCthF62NVqUo/Up2l6w307S6MndqUOvzyHSfTDs="
+    }
 }

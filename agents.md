@@ -30,6 +30,7 @@ Whenever invoking Bazel commands (`build`, `test`, `run`, `cquery`, `query`, etc
 ## Bzlmod & Dependencies
 - Strictly use Bzlmod (`MODULE.bazel`). No legacy `WORKSPACE` files.
 - Native C/C++ third-party dependencies are ported into the local BCR registry at `bazel/3rdparty` if not present in the upstream BCR.
+- When creating or modifying BCR module ports in `bazel/3rdparty/modules`, always use the `overlay/` directory to introduce new files (such as `BUILD.bazel`, headers, or configuration files) and list them under the `overlay` dictionary in `source.json`. Patch files (`patches/`) should ONLY be used to modify existing upstream files when needed, never to introduce new files.
 
 ## Pre-commit Verification
 - Always run `pre-commit run --all-files` before each commit to verify and enforce formatting (Buildifier), script executable permissions, trailing whitespace, and file endings.

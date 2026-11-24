@@ -1,9 +1,9 @@
 {
     "integrity": "sha256-EfC7Nwmk8gKFUHQZ12GPOHekJcATHqjfQP5hlhKd8V0=",
-    "patch_strip": 1,
-    "patches": {
-        "add_build_file.patch": "sha256-jcTYLJg0LRWgzhwnnPiKKV9idilX31dYbg9KtubwIS8="
-    },
     "strip_prefix": "libsass-3.6.6",
-    "url": "https://github.com/sass/libsass/archive/refs/tags/3.6.6.tar.gz"
+    "url": "https://github.com/sass/libsass/archive/refs/tags/3.6.6.tar.gz",
+    "overlay": {
+        "BUILD.bazel": "sha256-ivWREYBPBoRv/4Y1RRx/fYagOuUAEH0EUH7SzP2+34U=",
+        "include/sass/version.h": "sha256-8q5ysfsguNJ2I1NZKJWtZODCgzDfU1gn1fE+BpLPgUs="
+    }
 }

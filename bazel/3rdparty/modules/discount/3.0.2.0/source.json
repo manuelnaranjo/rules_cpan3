@@ -1,9 +1,12 @@
 {
     "integrity": "sha256-mfbbNtP/9smazSHUxglhdtSsh4XqsxnQ+vd62ZW4t8U=",
-    "patch_strip": 1,
-    "patches": {
-        "add_build_file.patch": "sha256-vLZuqe2vGMHbvRfJrMqNIh+WytvqPxwiMOfueFnWHuQ="
-    },
     "strip_prefix": "discount-3.0.2.0",
-    "url": "https://github.com/Orc/discount/archive/refs/tags/v3.0.2.0.tar.gz"
+    "url": "https://github.com/Orc/discount/archive/refs/tags/v3.0.2.0.tar.gz",
+    "overlay": {
+        "BUILD.bazel": "sha256-K7GbSRvULFKKIPCy425DtX5ZIX+rsg1oSqD1fBvg6l0=",
+        "blocktags": "sha256-YVYacV5h+3c9Yk2abbG4rGOaoT8cH6cLwrOW9Pjtp7c=",
+        "config.h": "sha256-mnEi6fkQoJ5j/eaa4by5ajwCSIf8fbfAXcxbLQKZxvw=",
+        "mkdio.h": "sha256-Tl+AXATUjey5jAn7PK7LMRqdxCJ6eNtidv40PGeF958=",
+        "version.c": "sha256-qobVAc18+ow4P75Lo/QA6lejuc5AXP9TNIR/WWJ5VQk="
+    }
 }

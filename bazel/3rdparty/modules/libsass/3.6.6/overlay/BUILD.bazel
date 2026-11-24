@@ -1,0 +1,47 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "sass_c",
+    srcs = [
+        "src/c99func.c",
+        "src/cencode.c",
+    ],
+    hdrs = glob([
+        "include/**/*.h",
+        "include/*.h",
+        "src/**/*.h",
+        "src/*.h",
+    ]),
+    includes = [
+        "include",
+        "src",
+    ],
+)
+
+cc_library(
+    name = "sass",
+    srcs = glob([
+        "src/*.cpp",
+        "src/**/*.cpp",
+    ]),
+    hdrs = glob([
+        "include/**/*.h",
+        "include/*.h",
+        "src/**/*.h",
+        "src/*.h",
+        "src/**/*.hpp",
+        "src/*.hpp",
+    ]),
+    copts = [
+        "-std=c++11",
+    ],
+    includes = [
+        "include",
+        "src",
+    ],
+    deps = [
+        ":sass_c",
+    ],
+)

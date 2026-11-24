@@ -1,9 +1,13 @@
 {
     "integrity": "sha256-Owj19Pm064LxUacEC/1v5sb7ki7+SxZZxm6pMydpZeg=",
-    "patch_strip": 1,
-    "patches": {
-        "add_build_file.patch": "sha256-TLY+OKovuV4nLI6rtaqEbdu5rdiPbM4YiDoDOpDVOLc="
-    },
     "strip_prefix": "libiconv-1.18",
-    "url": "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz"
+    "url": "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+    "overlay": {
+        "BUILD.bazel": "sha256-yXT/+d+u+DrCtaTl+fWBRkkynzvwnW/ynlO54tPfMuw=",
+        "config.h": "sha256-vZVnn9zQ6q6qOGBFFQJjaEfaMnvDiG0hebXoEimtOJk=",
+        "include/iconv.h": "sha256-hFRHFtHTPg2abgcuCOrb5q2+s27ff3i6bMi9717YpSE=",
+        "lib/config.h": "sha256-qIfnv8RHxjwe9fTZqjqo0THaFOyda8FzgD/IfIjhLzM=",
+        "libcharset/include/libcharset.h": "sha256-K4vSL4nZVkH3VaPr5hbruN185iZ8Xv42zcmzgfmd5M8=",
+        "libcharset/include/localcharset.h": "sha256-fV17cpKLZumQULS8WR1haU9HbJtV/tvKJVtflOPrX9A="
+    }
 }

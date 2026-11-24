@@ -52,6 +52,47 @@ def _libperl(ctx, toolchain):
         ).format(ctx.label))
     return toolchain.libperl
 
+def _compute_output_loc_rpaths(output_loc, deps, is_macos):
+    """Computes runtime search paths (rpaths) for XS libraries in subdirectories.
+
+    On Linux/macOS, if the XS shared library is placed in a subfolder
+    (e.g. output_loc = auto/Foo/Bar/Bar.so), Bazel's default RUNPATH relative
+    to the package root does not match the actual location of the .so at runtime.
+    This helper computes and returns extra rpaths from output_loc to all dependent
+    solib directories.
+    """
+    if not output_loc:
+        return []
+
+    dirname = paths.dirname(output_loc)
+    depth = len([p for p in dirname.split("/") if p and p != "."])
+    if depth == 0:
+        return []
+
+    solib_dirs = []
+    for dep in deps:
+        if CcInfo in dep:
+            for li in dep[CcInfo].linking_context.linker_inputs.to_list():
+                for lib_item in li.libraries:
+                    dyn = lib_item.dynamic_library
+                    if dyn:
+                        sdir = paths.dirname(dyn.short_path)
+                        if sdir not in solib_dirs:
+                            solib_dirs.append(sdir)
+
+    if not solib_dirs:
+        return []
+
+    origin_var = "@loader_path" if is_macos else "$ORIGIN"
+    rf_dots = "/".join([".." for _ in range(depth + 1)])
+    bin_dots = "/".join([".." for _ in range(depth + 2)])
+    rpaths = []
+    for sdir in solib_dirs:
+        rpaths.append("-Wl,-rpath,%s/%s/_main/%s" % (origin_var, rf_dots, sdir))
+        rpaths.append("-Wl,-rpath,%s/%s/%s" % (origin_var, bin_dots, sdir))
+        rpaths.append("-Wl,-rpath,%s/%s/%s" % (origin_var, rf_dots, sdir))
+    return rpaths
+
 def _boot_def_file(ctx, srcs):
     xs_def = ctx.attr._xs_def[PerlToolInfo]
     out = ctx.actions.declare_file(ctx.label.name + ".def")
@@ -132,32 +173,7 @@ def _cpan_xs_cc_lib(ctx, toolchain, srcs, is_windows, is_macos):
         additional_inputs.append(def_file)
         variables_extension["def_file_path"] = def_file.path
     else:
-        # On Linux/macOS, if the XS shared library is placed in a subfolder
-        # (e.g. output_loc = auto/Foo/Bar/Bar.so), Bazel's default RUNPATH relative
-        # to the package root does not match the actual location of the .so at runtime.
-        # Compute and add extra rpaths from output_loc to all dependent solib directories.
-        output_loc_attr = ctx.attr.output_loc
-        if output_loc_attr:
-            dirname = paths.dirname(output_loc_attr)
-            depth = len([p for p in dirname.split("/") if p and p != "."])
-            if depth > 0:
-                solib_dirs = []
-                for dep in ctx.attr.deps:
-                    if CcInfo in dep:
-                        for li in dep[CcInfo].linking_context.linker_inputs.to_list():
-                            for lib_item in li.libraries:
-                                dyn = lib_item.dynamic_library
-                                if dyn:
-                                    sdir = paths.dirname(dyn.short_path)
-                                    if sdir not in solib_dirs:
-                                        solib_dirs.append(sdir)
-                origin_var = "@loader_path" if is_macos else "$ORIGIN"
-                rf_dots = "/".join([".." for _ in range(depth + 1)])
-                bin_dots = "/".join([".." for _ in range(depth + 2)])
-                for sdir in solib_dirs:
-                    linkopts.append("-Wl,-rpath,%s/%s/_main/%s" % (origin_var, rf_dots, sdir))
-                    linkopts.append("-Wl,-rpath,%s/%s/%s" % (origin_var, bin_dots, sdir))
-                    linkopts.append("-Wl,-rpath,%s/%s/%s" % (origin_var, rf_dots, sdir))
+        linkopts.extend(_compute_output_loc_rpaths(ctx.attr.output_loc, ctx.attr.deps, is_macos))
 
     linking_outputs = cc_common.link(
         actions = ctx.actions,
