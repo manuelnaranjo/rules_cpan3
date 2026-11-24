@@ -161,6 +161,89 @@ def _sanitize_target_name(path_str):
             res += "_"
     return res
 
+def _append_target_and_leaf(target, target_list):
+    """Adds target and its glob leaf pattern to list if not already present."""
+    if not target or ".." in target:
+        return
+    if target not in target_list:
+        target_list.append(target)
+    leaf = target.split("/")[-1]
+    leaf_pattern = "**/" + leaf
+    if leaf and leaf_pattern not in target_list:
+        target_list.append(leaf_pattern)
+
+def _extract_included_c_files(line):
+    """Extracts .c file paths from #include statements."""
+    sline = line.strip()
+    if not (sline.startswith("#") and "include" in sline):
+        return []
+    parts = sline.split('"')
+    if len(parts) < 2:
+        return []
+    results = []
+    for part in parts:
+        if not part.endswith(".c") or ".." in part:
+            continue
+        results.append(part)
+    return results
+
+def _scan_xs_file(ctx, entry, extra_srcs_exclude, extra_cc_srcs_exclude, extra_textual_hdrs):
+    content = ctx.read(entry)
+    for line in content.splitlines():
+        sline = line.strip()
+        if sline.startswith("INCLUDE:"):
+            inc_target = sline.removeprefix("INCLUDE:").strip()
+            _append_target_and_leaf(inc_target, extra_srcs_exclude)
+            _append_target_and_leaf(inc_target, extra_textual_hdrs)
+            continue
+        c_includes = _extract_included_c_files(sline)
+        for c_file in c_includes:
+            _append_target_and_leaf(c_file, extra_cc_srcs_exclude)
+            _append_target_and_leaf(c_file, extra_textual_hdrs)
+
+def _scan_c_hdr_file(ctx, entry, extra_cc_srcs_exclude, extra_textual_hdrs):
+    content = ctx.read(entry)
+    for line in content.splitlines():
+        c_includes = _extract_included_c_files(line)
+        for c_file in c_includes:
+            _append_target_and_leaf(c_file, extra_cc_srcs_exclude)
+            _append_target_and_leaf(c_file, extra_textual_hdrs)
+
+def _scan_sources_for_includes(ctx):
+    """Scans repository sources for INCLUDE: and #include directives to adjust build targets."""
+    extra_srcs_exclude = []
+    extra_cc_srcs_exclude = []
+    extra_textual_hdrs = []
+
+    frontier = [ctx.path("")]
+    for _ in range(8):
+        if not frontier:
+            break
+        next_frontier = []
+        for d in frontier:
+            for entry in d.readdir():
+                if entry.is_dir:
+                    if entry.basename in ["t", "fallback", "inc", ".git", "_xs"]:
+                        continue
+                    next_frontier.append(entry)
+                    continue
+
+                if entry.basename.endswith(".xs"):
+                    _scan_xs_file(ctx, entry, extra_srcs_exclude, extra_cc_srcs_exclude, extra_textual_hdrs)
+                    continue
+
+                if entry.basename.endswith(".c") or entry.basename.endswith(".h"):
+                    _scan_c_hdr_file(ctx, entry, extra_cc_srcs_exclude, extra_textual_hdrs)
+                    continue
+
+        frontier = next_frontier
+
+    return struct(
+        srcs_exclude = extra_srcs_exclude,
+        cc_srcs_exclude = extra_cc_srcs_exclude,
+        textual_hdrs = extra_textual_hdrs,
+    )
+
 def _cpan_dist_repo_impl(ctx):
     strip_prefix = ctx.attr.strip_prefix
     if not strip_prefix:
@@ -324,65 +407,11 @@ perl_library(
         else:
             native_deps_str = ""
 
-        extra_srcs_exclude = []
-        extra_cc_srcs_exclude = []
-        extra_textual_hdrs = []
-
         # Scan for INCLUDE: directives in .xs files and #include "*.c"
-        scan_frontier = [ctx.path("")]
-        for _ in range(8):
-            if not scan_frontier:
-                break
-            next_frontier = []
-            for d in scan_frontier:
-                for entry in d.readdir():
-                    if entry.is_dir:
-                        if entry.basename not in ["t", "fallback", "inc", ".git", "_xs"]:
-                            next_frontier.append(entry)
-                    elif entry.basename.endswith(".xs"):
-                        content = ctx.read(entry)
-                        for line in content.splitlines():
-                            sline = line.strip()
-                            if sline.startswith("INCLUDE:"):
-                                inc_target = sline.removeprefix("INCLUDE:").strip()
-                                leaf = inc_target.split("/")[-1]
-                                if ".." not in inc_target and inc_target not in extra_srcs_exclude:
-                                    extra_srcs_exclude.append(inc_target)
-                                if leaf and ("**/" + leaf) not in extra_srcs_exclude:
-                                    extra_srcs_exclude.append("**/" + leaf)
-                                if ".." not in inc_target and inc_target not in extra_textual_hdrs:
-                                    extra_textual_hdrs.append(inc_target)
-                                if leaf and ("**/" + leaf) not in extra_textual_hdrs:
-                                    extra_textual_hdrs.append("**/" + leaf)
-                            elif sline.startswith("#") and "include" in sline:
-                                for part in sline.split('"'):
-                                    if part.endswith(".c"):
-                                        leaf = part.split("/")[-1]
-                                        if ".." not in part and part not in extra_cc_srcs_exclude:
-                                            extra_cc_srcs_exclude.append(part)
-                                        if leaf and ("**/" + leaf) not in extra_cc_srcs_exclude:
-                                            extra_cc_srcs_exclude.append("**/" + leaf)
-                                        if ".." not in part and part not in extra_textual_hdrs:
-                                            extra_textual_hdrs.append(part)
-                                        if leaf and ("**/" + leaf) not in extra_textual_hdrs:
-                                            extra_textual_hdrs.append("**/" + leaf)
-                    elif entry.basename.endswith(".c") or entry.basename.endswith(".h"):
-                        content = ctx.read(entry)
-                        for line in content.splitlines():
-                            sline = line.strip()
-                            if sline.startswith("#") and "include" in sline:
-                                for part in sline.split('"'):
-                                    if part.endswith(".c"):
-                                        leaf = part.split("/")[-1]
-                                        if ".." not in part and part not in extra_cc_srcs_exclude:
-                                            extra_cc_srcs_exclude.append(part)
-                                        if leaf and ("**/" + leaf) not in extra_cc_srcs_exclude:
-                                            extra_cc_srcs_exclude.append("**/" + leaf)
-                                        if ".." not in part and part not in extra_textual_hdrs:
-                                            extra_textual_hdrs.append(part)
-                                        if leaf and ("**/" + leaf) not in extra_textual_hdrs:
-                                            extra_textual_hdrs.append("**/" + leaf)
-            scan_frontier = next_frontier
+        scan_results = _scan_sources_for_includes(ctx)
+        extra_srcs_exclude = scan_results.srcs_exclude
+        extra_cc_srcs_exclude = scan_results.cc_srcs_exclude
+        extra_textual_hdrs = scan_results.textual_hdrs
 
         srcs_exclude_items = [
             '"_xs/**"',
