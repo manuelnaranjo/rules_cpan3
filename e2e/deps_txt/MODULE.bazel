@@ -19,7 +19,6 @@ bazel_dep(name = "cmark", version = "0.31.1")
 bazel_dep(name = "libsass", version = "3.6.6")
 bazel_dep(name = "discount", version = "3.0.2.0")
 bazel_dep(name = "libiconv", version = "1.18")
-bazel_dep(name = "krb5", version = "1.21.3")
 bazel_dep(name = "perl-compress-raw-zlib", version = "2.226")
 bazel_dep(name = "perl-io-tty", version = "1.20")
 
@@ -82,6 +81,7 @@ cpan.install(
         "Archive-Any:t/fail.t",
         "Archive-Any:t/type.t",
         "Array-RefElem",
+        "Authen-Krb5-Admin",
         "Authen-SASL-XS",
         "AutoLoader",
         "BSD-Resource",
@@ -912,50 +912,5 @@ cpan.annotation(
     ],
     patch_cmds_win = [
         "powershell -Command \"Remove-Item -Recurse -Force discount-*\"",
-    ],
-)
-cpan.annotation(
-    distribution = "Authen-Krb5",
-    hub = "cpan",
-    native_deps = ["@krb5//:krb5"],
-    patch_cmds = [
-        "mv lib/Authen/krb5_constants.c lib/Authen/krb5_constants.inc",
-        "sed -i 's/\"krb5_constants.c\"/\"krb5_constants.inc\"/' lib/Authen/Krb5.xs",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Move-Item lib/Authen/krb5_constants.c lib/Authen/krb5_constants.inc; (Get-Content lib/Authen/Krb5.xs) -replace 'krb5_constants.c', 'krb5_constants.inc' | Set-Content lib/Authen/Krb5.xs\"",
-    ],
-)
-cpan.annotation(
-    defines = ["HAVE_KDB_H"],
-    distribution = "Authen-Krb5-Admin",
-    hub = "cpan",
-    manual_tests = [
-        "t/03-principal.t",
-        "t/04-key.t",
-        "t/10-getprivs.t",
-        "t/20-addpol.t",
-        "t/21-getpol.t",
-        "t/22-getpols.t",
-        "t/23-modpol.t",
-        "t/31-getprinc.t",
-        "t/32-getprincs.t",
-        "t/34-cpw.t",
-        "t/35-randkey.t",
-        "t/36-rename.t",
-        "t/91-delprinc.t",
-        "t/92-delpol.t",
-    ],
-    native_deps = [
-        "@krb5//:kadm5clnt",
-        "@krb5//:krb5",
-        "@krb5//:com_err",
-        "@krb5//:k5crypto",
-    ],
-    patch_cmds = [
-        "mkdir -p lib/Authen/Krb5 && cp Admin.pm lib/Authen/Krb5/Admin.pm",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"New-Item -ItemType Directory -Force lib/Authen/Krb5; Copy-Item Admin.pm lib/Authen/Krb5/Admin.pm\"",
     ],
 )

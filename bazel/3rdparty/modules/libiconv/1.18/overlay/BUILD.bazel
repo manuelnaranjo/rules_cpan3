@@ -1,0 +1,34 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "iconv",
+    srcs = [
+        "lib/compat.c",
+        "lib/iconv.c",
+        "libcharset/lib/localcharset.c",
+    ],
+    hdrs = glob([
+        "include/**/*.h",
+        "include/*.h",
+        "lib/**/*.h",
+        "lib/*.h",
+        "lib/**/*.def",
+        "lib/*.def",
+        "libcharset/include/**/*.h",
+        "libcharset/include/*.h",
+    ]) + [
+        "config.h",
+    ],
+    defines = [
+        "BUILDING_LIBCHARSET",
+        "BUILDING_LIBICONV",
+        "HAVE_CONFIG_H",
+    ],
+    includes = [
+        "include",
+        "lib",
+        "libcharset/include",
+    ],
+)

@@ -176,7 +176,6 @@
     "https://bcr.bazel.build/modules/rules_cc/0.1.5/MODULE.bazel": "88dfc9361e8b5ae1008ac38f7cdfd45ad738e4fa676a3ad67d19204f045a1fd8",
     "https://bcr.bazel.build/modules/rules_cc/0.2.0/MODULE.bazel": "b5c17f90458caae90d2ccd114c81970062946f49f355610ed89bebf954f5783c",
     "https://bcr.bazel.build/modules/rules_cc/0.2.13/MODULE.bazel": "eecdd666eda6be16a8d9dc15e44b5c75133405e820f620a234acc4b1fdc5aa37",
-    "https://bcr.bazel.build/modules/rules_cc/0.2.14/MODULE.bazel": "353c99ed148887ee89c54a17d4100ae7e7e436593d104b668476019023b58df8",
     "https://bcr.bazel.build/modules/rules_cc/0.2.15/MODULE.bazel": "6a0a4a75a57aa6dc888300d848053a58c6b12a29f89d4304e1c41448514ec6e8",
     "https://bcr.bazel.build/modules/rules_cc/0.2.16/MODULE.bazel": "9242fa89f950c6ef7702801ab53922e99c69b02310c39fb6e62b2bd30df2a1d4",
     "https://bcr.bazel.build/modules/rules_cc/0.2.17/MODULE.bazel": "1849602c86cb60da8613d2de887f9566a6d354a6df6d7009f9d04a14402f9a84",
@@ -312,32 +311,10 @@
         }
       }
     },
-    "@@pybind11_bazel+//:internal_configure.bzl%internal_configure_extension": {
-      "general": {
-        "bzlTransitiveDigest": "BsgERqYptkJeeC8wFaLj251IoTZTSy/58WA6kVp0q8I=",
-        "usagesDigest": "D1r3lfzMuUBFxgG8V6o0bQTLMk3GkaGOaPzw53wrwyw=",
-        "recordedInputs": [
-          "REPO_MAPPING:pybind11_bazel+,bazel_tools bazel_tools",
-          "FILE:@@pybind11_bazel+//MODULE.bazel e6f4c20442eaa7c90d7190d8dc539d0ab422f95c65a57cc59562170c58ae3d34"
-        ],
-        "generatedRepoSpecs": {
-          "pybind11": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "build_file": "@@pybind11_bazel+//:pybind11-BUILD.bazel",
-              "strip_prefix": "pybind11-2.12.0",
-              "urls": [
-                "https://github.com/pybind/pybind11/archive/v2.12.0.zip"
-              ]
-            }
-          }
-        }
-      }
-    },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "Mk3YRkzkoIdnf+WEeKbhZslJ0BklnznmJOQp2nmUNU4=",
-        "usagesDigest": "7Js0xYF/4ZbH3G9K3qGEJik+8GchvVxziVwmt1XCMa0=",
+        "usagesDigest": "9sP4akMmXLdEArdXFcg56OSfaeaA2y8u2ogcVan1B1s=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -2994,20 +2971,13 @@
               "runtime_deps": [],
               "defines": [],
               "includes": [],
-              "native_deps": [
-                "@krb5//:krb5"
-              ],
+              "native_deps": [],
               "output_loc": "",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [
-                "mv lib/Authen/krb5_constants.c lib/Authen/krb5_constants.inc",
-                "sed -i 's/\"krb5_constants.c\"/\"krb5_constants.inc\"/' lib/Authen/Krb5.xs"
-              ],
-              "patch_cmds_win": [
-                "powershell -Command \"Move-Item lib/Authen/krb5_constants.c lib/Authen/krb5_constants.inc; (Get-Content lib/Authen/Krb5.xs) -replace 'krb5_constants.c', 'krb5_constants.inc' | Set-Content lib/Authen/Krb5.xs\""
-              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -3038,49 +3008,25 @@
               "runtime_deps": [
                 "@cpan__Authen-Krb5//:Authen-Krb5"
               ],
-              "defines": [
-                "HAVE_KDB_H"
-              ],
+              "defines": [],
               "includes": [],
-              "native_deps": [
-                "@krb5//:kadm5clnt",
-                "@krb5//:krb5",
-                "@krb5//:com_err",
-                "@krb5//:k5crypto"
-              ],
+              "native_deps": [],
               "output_loc": "",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [
-                "mkdir -p lib/Authen/Krb5 && cp Admin.pm lib/Authen/Krb5/Admin.pm"
-              ],
-              "patch_cmds_win": [
-                "powershell -Command \"New-Item -ItemType Directory -Force lib/Authen/Krb5; Copy-Item Admin.pm lib/Authen/Krb5/Admin.pm\""
-              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
-              "manual_tests": [
-                "t/03-principal.t",
-                "t/04-key.t",
-                "t/10-getprivs.t",
-                "t/20-addpol.t",
-                "t/21-getpol.t",
-                "t/22-getpols.t",
-                "t/23-modpol.t",
-                "t/31-getprinc.t",
-                "t/32-getprincs.t",
-                "t/34-cpw.t",
-                "t/35-randkey.t",
-                "t/36-rename.t",
-                "t/91-delprinc.t",
-                "t/92-delpol.t"
+              "test_tags": [
+                "manual"
               ],
+              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -140752,6 +140698,7 @@
                 "App-Inotify-Hookable",
                 "App-Oozie",
                 "Array-RefElem",
+                "Authen-Krb5-Admin",
                 "Authen-SASL-XS",
                 "AutoLoader",
                 "BSD-Resource",
@@ -141556,80 +141503,6 @@
               "toolchain_target_settings": {}
             }
           }
-        }
-      }
-    },
-    "@@windows_support+//windows:extensions.bzl%msvc_runtime": {
-      "general": {
-        "bzlTransitiveDigest": "/fpjACapwytnUWPsK9hfNxq/3i0vYEbGgvEFP3etVEA=",
-        "usagesDigest": "CnU6rkr4VWmpZfYkjacUA6xZDFYbdJE1CwhRxOgYcDo=",
-        "recordedInputs": [
-          "REPO_MAPPING:windows_support+,bazel_tools bazel_tools"
-        ],
-        "generatedRepoSpecs": {
-          "msvc_runtime": {
-            "repoRuleId": "@@windows_support+//windows/private/extensions:msvc_runtime.bzl%_msvc_runtime_repository",
-            "attributes": {
-              "msvc_version": "14.50.35717",
-              "architectures": [
-                "x64",
-                "arm64"
-              ],
-              "installer_manifest_url": "https://download.visualstudio.microsoft.com/download/pr/fdc37f6e-59f6-4054-838a-b476eeaa6ec3/1d82370739911457e0a2f6be15d8b5f569531b352b2eabb961429eea1e99e356/VisualStudio.vsman",
-              "installer_manifest_integrity": "sha256-qOhU+p8/uurCfXME4pfxZg1xN0ATid61fPeYPzPBb+8="
-            }
-          }
-        },
-        "moduleExtensionMetadata": {
-          "explicitRootModuleDirectDeps": [],
-          "explicitRootModuleDirectDevDeps": [
-            "msvc_runtime"
-          ],
-          "useAllRepos": "NO",
-          "reproducible": false
-        }
-      }
-    },
-    "@@windows_support+//windows:extensions.bzl%windows_sdk": {
-      "general": {
-        "bzlTransitiveDigest": "/fpjACapwytnUWPsK9hfNxq/3i0vYEbGgvEFP3etVEA=",
-        "usagesDigest": "1kl1FrgrJQlIGd5Z/4/mPY40BMI415pP35mSjtfHumg=",
-        "recordedInputs": [
-          "REPO_MAPPING:windows_support+,bazel_tools bazel_tools"
-        ],
-        "generatedRepoSpecs": {
-          "windows_sdk": {
-            "repoRuleId": "@@windows_support+//windows/private/extensions:windows_sdk.bzl%_windows_sdk_repository",
-            "attributes": {
-              "windows_sdk_version": "10.0.26100.7705",
-              "windows_sdk_integrity": {
-                "Microsoft.Windows.SDK.CPP": "sha256-/0VWYL7gcadEcVqWZWZvopwHaBV509gVlZqe7FpVZCQ=",
-                "Microsoft.Windows.SDK.CPP.x64": "sha256-rWzpD/lAEGmdKVSLPCseUsieuBFD4hmRVdmlw4ABtSs=",
-                "Microsoft.Windows.SDK.CPP.arm64": "sha256-A7wMA9Q5zvhQdLvNQl+dXTptO0Z5Z6zSHaO6bf7q+mc="
-              },
-              "transformations": {
-                "base/c/Include/10.0.26100.0/shared/driverspecs.h": "base/c/Include/10.0.26100.0/shared/DriverSpecs.h",
-                "base/c/Include/10.0.26100.0/shared/specstrings.h": "base/c/Include/10.0.26100.0/shared/SpecStrings.h",
-                "base/c/Include/10.0.26100.0/um/ole2.h": "base/c/Include/10.0.26100.0/um/Ole2.h",
-                "base/c/Include/10.0.26100.0/um/olectl.h": "base/c/Include/10.0.26100.0/um/OleCtl.h",
-                "**/*.h": "lowercase",
-                "**/*.lib": "lowercase",
-                "**/*.Lib": "lowercase"
-              },
-              "architectures": [
-                "x64",
-                "arm64"
-              ]
-            }
-          }
-        },
-        "moduleExtensionMetadata": {
-          "explicitRootModuleDirectDeps": [],
-          "explicitRootModuleDirectDevDeps": [
-            "windows_sdk"
-          ],
-          "useAllRepos": "NO",
-          "reproducible": false
         }
       }
     }
@@ -143505,17 +143378,6 @@
     },
     "@@aspect_tools_telemetry+//:extension.bzl%telemetry": {
       "notice_version": "3"
-    },
-    "@@windows_support+//windows:extensions.bzl%msvc_runtime": {
-      "visual_studio_installer_manifest_v1": {
-        "integrity": "sha256-qOhU+p8/uurCfXME4pfxZg1xN0ATid61fPeYPzPBb+8=",
-        "request": {
-          "visual_studio_channel_url": "https://aka.ms/vs/stable/channel",
-          "visual_studio_installer_manifest_integrity": "sha256-qOhU+p8/uurCfXME4pfxZg1xN0ATid61fPeYPzPBb+8=",
-          "visual_studio_installer_manifest_url": "https://download.visualstudio.microsoft.com/download/pr/fdc37f6e-59f6-4054-838a-b476eeaa6ec3/1d82370739911457e0a2f6be15d8b5f569531b352b2eabb961429eea1e99e356/VisualStudio.vsman"
-        },
-        "url": "https://download.visualstudio.microsoft.com/download/pr/fdc37f6e-59f6-4054-838a-b476eeaa6ec3/1d82370739911457e0a2f6be15d8b5f569531b352b2eabb961429eea1e99e356/VisualStudio.vsman"
-      }
     }
   },
   "factsVersions": {}

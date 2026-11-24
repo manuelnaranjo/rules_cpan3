@@ -1,0 +1,50 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "markdown",
+    srcs = [
+        "mkdio.c",
+        "markdown.c",
+        "dumptree.c",
+        "generate.c",
+        "resource.c",
+        "docheader.c",
+        "version.c",
+        "toc.c",
+        "css.c",
+        "xml.c",
+        "Csio.c",
+        "xmlpage.c",
+        "basename.c",
+        "emmatch.c",
+        "github_flavoured.c",
+        "setup.c",
+        "tags.c",
+        "html5.c",
+        "pgm_options.c",
+        "flags.c",
+        "v2compat.c",
+        "flagprocs.c",
+    ],
+    hdrs = [
+        "amalloc.h",
+        "blocktags",
+        "config.h",
+        "cstring.h",
+        "markdown.h",
+        "mkdio.h",
+        "pgm_options.h",
+        "tags.h",
+    ],
+    copts = [
+        "-Wno-return-type",
+        "-Wno-implicit-int",
+    ],
+    defines = [
+        "BRANCH=\"\\\"\\\"\"",
+        "VERSION=\"\\\"3.0.2.0\\\"\"",
+    ],
+    includes = ["."],
+)
