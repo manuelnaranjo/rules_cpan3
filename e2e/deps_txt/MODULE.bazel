@@ -81,11 +81,9 @@ cpan.install(
         "Archive-Any:t/Any.t",
         "Archive-Any:t/fail.t",
         "Archive-Any:t/type.t",
-        "Array-RefElem",
         "Authen-SASL-XS",
         "AutoLoader",
         "BSD-Resource",
-        "Bit-Vector",
         "Business-CreditCard",
         "Business-OnlinePayment",
         "Business-Tax-VAT-Validation",
@@ -103,7 +101,6 @@ cpan.install(
         "Class-MethodMaker",
         "Class-Std-Fast",
         "Class-Trigger",
-        "Class-XSAccessor",
         "CodeGen-Protection",
         "Common-CLI",
         "Config-General",
@@ -111,10 +108,6 @@ cpan.install(
         "Constant-Export-Lazy",
         "Convert-BinHex",
         "Cpanel-JSON-XS",
-        "Crypt-Blowfish",
-        "Crypt-CBC",
-        "Crypt-DES",
-        "Crypt-Eksblowfish",
         "Crypt-JWT",
         "Crypt-OpenPGP",
         "Crypt-PKCS10:t/04_complex_rdn.t",
@@ -123,7 +116,6 @@ cpan.install(
         "Crypt-Random",
         "Crypt-Rijndael",
         "Crypt-ScryptKDF",
-        "Crypt-Skip32-XS",
         "Crypt-URandom",
         "CryptX",
         "DBD-Cassandra",
@@ -461,7 +453,6 @@ cpan.install(
         "String-ShellQuote",
         "String-Similarity",
         "Struct-Diff",
-        "Syntax-Keyword-Try",
         "Sys-CpuAffinity",
         "Sys-RunAlone",
         "Sys-Syslog",
@@ -514,8 +505,6 @@ cpan.install(
         "Unicode-Map8",
         "Unicode-MapUTF8",
         "Unix-Sysexits",
-        "Variable-Magic",
-        "WWW-Form-UrlEncoded-XS",
         "WWW-Mechanize",
         "Web-Scraper",
         "XML-Compile",
@@ -530,14 +519,12 @@ cpan.install(
         "YAML-PP-LibYAML",
         "YAML-Syck",
         "ack",
-        "bareword-filehandles",
         "common-sense",
         "decorators",
         "fs-Promises",
-        "grpc-xs",
+        "grpc-xs",  # Requires native libgrpc (tracked in #19)
         "jmx4perl",
         "libwww-perl",
-        "multidimensional",
         "warnings-unused",
     ],
 )
@@ -569,7 +556,7 @@ cpan.annotation(
 cpan.annotation(
     distribution = "grpc-xs",
     hub = "cpan",
-    strip_prefix = "Grpc-XS-0.36",
+    strip_prefix = "Grpc-XS-0.38",
 )
 cpan.annotation(
     distribution = "Test-File",
@@ -648,6 +635,35 @@ cpan.annotation(
     distribution = "Syntax-Keyword-Try",
     hub = "cpan",
     native_deps = ["@cpan__XS-Parse-Keyword//:XS-Parse-Keyword_xs"],
+)
+cpan.annotation(
+    defines = [
+        "INT64_BACKEND_IV",
+        "USE_INT64_T",
+        "HAS_STDINT_H",
+    ],
+    distribution = "Math-Int64",
+    hub = "cpan",
+)
+cpan.annotation(
+    distribution = "bareword-filehandles",
+    hub = "cpan",
+    native_deps = ["@cpan__B-Hooks-OP-Check//:B-Hooks-OP-Check_xs"],
+)
+cpan.annotation(
+    distribution = "multidimensional",
+    hub = "cpan",
+    native_deps = ["@cpan__B-Hooks-OP-Check//:B-Hooks-OP-Check_xs"],
+)
+cpan.annotation(
+    distribution = "Params-Classify",
+    hub = "cpan",
+    patch_cmds = ["rm -f lib/Params/Classify.xs"],
+)
+cpan.annotation(
+    distribution = "CryptX",
+    hub = "cpan",
+    patch_cmds = ["rm -f src/patched_s_mp_rand_platform.c"],
 )
 cpan.annotation(
     distribution = "Syntax-Operator-Equ",

@@ -319,8 +319,8 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "Mk3YRkzkoIdnf+WEeKbhZslJ0BklnznmJOQp2nmUNU4=",
-        "usagesDigest": "5BLjj7+2WHpYLd1jMafnnysBwVEocMz38Zwc+jH54mM=",
+        "bzlTransitiveDigest": "pWDH+D+yYqN+jhNMEz4ZLlP+CTeN2G5TzVR0B2qqGYo=",
+        "usagesDigest": "Er009eWMaVCOY1oTXu6ziy7H4wMYObr6uRdAZsOa4g8=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -2956,9 +2956,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3738,9 +3736,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5841,9 +5837,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7155,9 +7149,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7263,9 +7255,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7329,9 +7319,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7449,9 +7437,7 @@
               "test_deps": [
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8550,9 +8536,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -8843,7 +8827,9 @@
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
+              "patch_cmds": [
+                "rm -f src/patched_s_mp_rand_platform.c"
+              ],
               "patch_cmds_win": [],
               "patches": [],
               "target_compatible_with": [],
@@ -34040,7 +34026,11 @@
                 "Math::UInt64"
               ],
               "runtime_deps": [],
-              "defines": [],
+              "defines": [
+                "INT64_BACKEND_IV",
+                "USE_INT64_T",
+                "HAS_STDINT_H"
+              ],
               "includes": [],
               "native_deps": [],
               "output_loc": "",
@@ -42325,7 +42315,9 @@
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
+              "patch_cmds": [
+                "rm -f lib/Params/Classify.xs"
+              ],
               "patch_cmds_win": [],
               "patches": [],
               "target_compatible_with": [],
@@ -80095,9 +80087,7 @@
                 "@cpan__Module-Build//:Module-Build",
                 "@cpan__XS-Parse-Keyword//:XS-Parse-Keyword"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -88633,9 +88623,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -88705,9 +88693,7 @@
                 "@cpan__JSON//:JSON",
                 "@cpan__Module-Build-Tiny//:Module-Build-Tiny"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -90644,7 +90630,9 @@
               ],
               "defines": [],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@cpan__B-Hooks-OP-Check//:B-Hooks-OP-Check_xs"
+              ],
               "output_loc": "",
               "patch_args": [
                 "-p0"
@@ -90660,9 +90648,7 @@
                 "@cpan__B-Hooks-OP-Check//:B-Hooks-OP-Check",
                 "@cpan__ExtUtils-Depends//:ExtUtils-Depends"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -91033,7 +91019,7 @@
                 "manual"
               ],
               "manual_tests": [],
-              "strip_prefix": "Grpc-XS-0.36"
+              "strip_prefix": "Grpc-XS-0.38"
             }
           },
           "cpan__indirect": {
@@ -91336,7 +91322,9 @@
               ],
               "defines": [],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@cpan__B-Hooks-OP-Check//:B-Hooks-OP-Check_xs"
+              ],
               "output_loc": "",
               "patch_args": [
                 "-p0"
@@ -91352,9 +91340,7 @@
                 "@cpan__B-Hooks-OP-Check//:B-Hooks-OP-Check",
                 "@cpan__ExtUtils-Depends//:ExtUtils-Depends"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -140736,11 +140722,9 @@
                 "App-FatPacker",
                 "App-Inotify-Hookable",
                 "App-Oozie",
-                "Array-RefElem",
                 "Authen-SASL-XS",
                 "AutoLoader",
                 "BSD-Resource",
-                "Bit-Vector",
                 "Business-CreditCard",
                 "Business-OnlinePayment",
                 "Business-Tax-VAT-Validation",
@@ -140758,7 +140742,6 @@
                 "Class-MethodMaker",
                 "Class-Std-Fast",
                 "Class-Trigger",
-                "Class-XSAccessor",
                 "CodeGen-Protection",
                 "Common-CLI",
                 "Config-General",
@@ -140766,10 +140749,6 @@
                 "Constant-Export-Lazy",
                 "Convert-BinHex",
                 "Cpanel-JSON-XS",
-                "Crypt-Blowfish",
-                "Crypt-CBC",
-                "Crypt-DES",
-                "Crypt-Eksblowfish",
                 "Crypt-JWT",
                 "Crypt-OpenPGP",
                 "Crypt-Primes",
@@ -140777,7 +140756,6 @@
                 "Crypt-Random",
                 "Crypt-Rijndael",
                 "Crypt-ScryptKDF",
-                "Crypt-Skip32-XS",
                 "Crypt-URandom",
                 "CryptX",
                 "DBD-Cassandra",
@@ -141106,7 +141084,6 @@
                 "String-ShellQuote",
                 "String-Similarity",
                 "Struct-Diff",
-                "Syntax-Keyword-Try",
                 "Sys-CpuAffinity",
                 "Sys-RunAlone",
                 "Sys-Syslog",
@@ -141158,8 +141135,6 @@
                 "Unicode-Map8",
                 "Unicode-MapUTF8",
                 "Unix-Sysexits",
-                "Variable-Magic",
-                "WWW-Form-UrlEncoded-XS",
                 "WWW-Mechanize",
                 "Web-Scraper",
                 "XML-Compile",
@@ -141174,14 +141149,12 @@
                 "YAML-PP-LibYAML",
                 "YAML-Syck",
                 "ack",
-                "bareword-filehandles",
                 "common-sense",
                 "decorators",
                 "fs-Promises",
                 "grpc-xs",
                 "jmx4perl",
                 "libwww-perl",
-                "multidimensional",
                 "warnings-unused"
               ],
               "test_modules": {
