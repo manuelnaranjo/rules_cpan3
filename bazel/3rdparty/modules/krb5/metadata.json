@@ -1,0 +1,12 @@
+{
+    "homepage": "https://kerberos.org",
+    "maintainers": [
+        {
+            "github": "manuelnaranjo",
+            "name": "rules_cpan maintainers"
+        }
+    ],
+    "versions": [
+        "1.22.3"
+    ]
+}
