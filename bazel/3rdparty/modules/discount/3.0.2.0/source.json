@@ -3,7 +3,7 @@
     "strip_prefix": "discount-3.0.2.0",
     "url": "https://github.com/Orc/discount/archive/refs/tags/v3.0.2.0.tar.gz",
     "overlay": {
-        "BUILD.bazel": "sha256-K7GbSRvULFKKIPCy425DtX5ZIX+rsg1oSqD1fBvg6l0=",
+        "BUILD.bazel": "sha256-hjbHZP+sf0yBFWlGL1rGSXcUfkIfrt/oCv6+3P97aJ4=",
         "blocktags": "sha256-YVYacV5h+3c9Yk2abbG4rGOaoT8cH6cLwrOW9Pjtp7c=",
         "config.h": "sha256-mnEi6fkQoJ5j/eaa4by5ajwCSIf8fbfAXcxbLQKZxvw=",
         "mkdio.h": "sha256-Tl+AXATUjey5jAn7PK7LMRqdxCJ6eNtidv40PGeF958=",

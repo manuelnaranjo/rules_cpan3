@@ -4,9 +4,9 @@
     "url": "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
     "overlay": {
         "BUILD.bazel": "sha256-yXT/+d+u+DrCtaTl+fWBRkkynzvwnW/ynlO54tPfMuw=",
-        "config.h": "sha256-vZVnn9zQ6q6qOGBFFQJjaEfaMnvDiG0hebXoEimtOJk=",
+        "config.h": "sha256-5ZNzLqiwRge5B6UgRdjpBZoD1+fFcGPQtGxRLRaAiOw=",
         "include/iconv.h": "sha256-hFRHFtHTPg2abgcuCOrb5q2+s27ff3i6bMi9717YpSE=",
-        "lib/config.h": "sha256-qIfnv8RHxjwe9fTZqjqo0THaFOyda8FzgD/IfIjhLzM=",
+        "lib/config.h": "sha256-rOOrkEfHeiszCBS2lAKqF5ME8PKP6Oedc258WAMCmyE=",
         "libcharset/include/libcharset.h": "sha256-K4vSL4nZVkH3VaPr5hbruN185iZ8Xv42zcmzgfmd5M8=",
         "libcharset/include/localcharset.h": "sha256-fV17cpKLZumQULS8WR1haU9HbJtV/tvKJVtflOPrX9A="
     }
