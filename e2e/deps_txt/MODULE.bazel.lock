@@ -28,6 +28,8 @@
     "https://bcr.bazel.build/modules/aspect_tools_telemetry/0.5.2/source.json": "4dd300d44767ad4860098b006dda614e67ab0409ae6ec6e133faad303fe9ede8",
     "https://bcr.bazel.build/modules/audit-userspace/4.2.1/MODULE.bazel": "74f79e0f6da894107089df4434d9038d3564ebafbea4b085ef16c79f6bb0873b",
     "https://bcr.bazel.build/modules/audit-userspace/4.2.1/source.json": "7ba08ecb88775464af848ec2c0c1d39bca06c49e0f5a6a41acf9692b92b79c26",
+    "https://bcr.bazel.build/modules/awk.bzl/0.2.3/MODULE.bazel": "5e100736b977badee624c6e45622ba5ad6f1aa0572eb1443e2965f15b7e7be69",
+    "https://bcr.bazel.build/modules/awk.bzl/0.2.3/source.json": "d9eb8c0abd4f0fbaf9f26c905f34c2b2e8a439fb2f553ea07b3d625022865400",
     "https://bcr.bazel.build/modules/bazel_features/1.0.0/MODULE.bazel": "d7f022dc887efb96e1ee51cec7b2e48d41e36ff59a6e4f216c40e4029e1585bf",
     "https://bcr.bazel.build/modules/bazel_features/1.1.1/MODULE.bazel": "27b8c79ef57efe08efccbd9dd6ef70d61b4798320b8d3c134fd571f78963dbcd",
     "https://bcr.bazel.build/modules/bazel_features/1.10.0/MODULE.bazel": "f75e8807570484a99be90abcd52b5e1f390362c258bcb73106f4544957a48101",
@@ -56,7 +58,8 @@
     "https://bcr.bazel.build/modules/bazel_features/1.9.1/MODULE.bazel": "8f679097876a9b609ad1f60249c49d68bfab783dd9be012faf9d82547b14815a",
     "https://bcr.bazel.build/modules/bazel_lib/3.0.0/MODULE.bazel": "22b70b80ac89ad3f3772526cd9feee2fa412c2b01933fea7ed13238a448d370d",
     "https://bcr.bazel.build/modules/bazel_lib/3.2.2/MODULE.bazel": "e2c890c8a515d6bca9c66d47718aa9e44b458fde64ec7204b8030bf2d349058c",
-    "https://bcr.bazel.build/modules/bazel_lib/3.2.2/source.json": "9e84e115c20e14652c5c21401ae85ff4daa8702e265b5c0b3bf89353f17aa212",
+    "https://bcr.bazel.build/modules/bazel_lib/3.8.0/MODULE.bazel": "ac892a5b9b1d6b755c915f1e82663cb71ebffb4183d57f95c6507fafc2cac53a",
+    "https://bcr.bazel.build/modules/bazel_lib/3.8.0/source.json": "45eb621b9efa8fbc4c1c9f2ea484fc0e330558a1d8e120b063f7463363adc854",
     "https://bcr.bazel.build/modules/bazel_skylib/1.0.3/MODULE.bazel": "bcb0fd896384802d1ad283b4e4eb4d718eebd8cb820b0a2c3a347fb971afd9d8",
     "https://bcr.bazel.build/modules/bazel_skylib/1.1.1/MODULE.bazel": "1add3e7d93ff2e6998f9e118022c84d163917d912f5afafb3058e3d2f1545b5e",
     "https://bcr.bazel.build/modules/bazel_skylib/1.2.0/MODULE.bazel": "44fe84260e454ed94ad326352a698422dbe372b21a1ac9f3eab76eb531223686",
@@ -81,6 +84,7 @@
     "https://bcr.bazel.build/modules/buildozer/8.5.1/source.json": "e3386e6ff4529f2442800dee47ad28d3e6487f36a1f75ae39ae56c70f0cd2fbd",
     "https://bcr.bazel.build/modules/bzip2/1.0.8.bcr.4/MODULE.bazel": "80a6a6a7493885b113dec2760403636d97009356b33df1720e79a65d126149cf",
     "https://bcr.bazel.build/modules/bzip2/1.0.8.bcr.4/source.json": "a769883197aebe54f78671f1a2c7e0fae5cd8f045bae1230f04f4902856e3bca",
+    "https://bcr.bazel.build/modules/gawk/5.3.2.bcr.1/MODULE.bazel": "cdf8cbe5ee750db04b78878c9633cc76e80dcf4416cbe982ac3a9222f80713c8",
     "https://bcr.bazel.build/modules/gawk/5.3.2.bcr.2/MODULE.bazel": "ae318680f31d1960f1d102db3b7e04cfa6fb38ae9ba54319b6b9b104b49e7c65",
     "https://bcr.bazel.build/modules/gawk/5.3.2.bcr.3/MODULE.bazel": "f1b7bb2dd53e8f2ef984b39485ec8a44e9076dda5c4b8efd2fb4c6a6e856a31d",
     "https://bcr.bazel.build/modules/gawk/5.3.2.bcr.3/source.json": "ebe931bfe362e4b41e59ee00a528db6074157ff2ced92eb9e970acab2e1089c9",
@@ -126,6 +130,7 @@
     "https://bcr.bazel.build/modules/package_metadata/0.0.13/MODULE.bazel": "a9cc7e81640c1e7eaca5a465cdf4b63c88d416ca998fcded3680181b1602eee2",
     "https://bcr.bazel.build/modules/package_metadata/0.0.15/MODULE.bazel": "d9c06292392870150584c2f4f84fad636b7012ac7255b2801b424826bad48749",
     "https://bcr.bazel.build/modules/package_metadata/0.0.15/source.json": "5a9945ed1fa35e1887d6b4c3921758bfd9fa4d78b4be0b9549cab9d6db2d8ea1",
+    "https://bcr.bazel.build/modules/package_metadata/0.0.2/MODULE.bazel": "fb8d25550742674d63d7b250063d4580ca530499f045d70748b1b142081ebb92",
     "https://bcr.bazel.build/modules/package_metadata/0.0.3/MODULE.bazel": "77890552ecea9e284b5424c9de827a58099348763a4359e975c359a83d4faa83",
     "https://bcr.bazel.build/modules/package_metadata/0.0.7/MODULE.bazel": "7adb03933fc8401f495800cf4eafcff0edc6da0ff55c7db223ef69d19f689486",
     "https://bcr.bazel.build/modules/platforms/0.0.10/MODULE.bazel": "8cb8efaf200bdeb2150d93e162c40f388529a25852b332cec879373771e48ed5",
@@ -176,6 +181,7 @@
     "https://bcr.bazel.build/modules/rules_cc/0.1.5/MODULE.bazel": "88dfc9361e8b5ae1008ac38f7cdfd45ad738e4fa676a3ad67d19204f045a1fd8",
     "https://bcr.bazel.build/modules/rules_cc/0.2.0/MODULE.bazel": "b5c17f90458caae90d2ccd114c81970062946f49f355610ed89bebf954f5783c",
     "https://bcr.bazel.build/modules/rules_cc/0.2.13/MODULE.bazel": "eecdd666eda6be16a8d9dc15e44b5c75133405e820f620a234acc4b1fdc5aa37",
+    "https://bcr.bazel.build/modules/rules_cc/0.2.14/MODULE.bazel": "353c99ed148887ee89c54a17d4100ae7e7e436593d104b668476019023b58df8",
     "https://bcr.bazel.build/modules/rules_cc/0.2.15/MODULE.bazel": "6a0a4a75a57aa6dc888300d848053a58c6b12a29f89d4304e1c41448514ec6e8",
     "https://bcr.bazel.build/modules/rules_cc/0.2.16/MODULE.bazel": "9242fa89f950c6ef7702801ab53922e99c69b02310c39fb6e62b2bd30df2a1d4",
     "https://bcr.bazel.build/modules/rules_cc/0.2.17/MODULE.bazel": "1849602c86cb60da8613d2de887f9566a6d354a6df6d7009f9d04a14402f9a84",
@@ -286,7 +292,7 @@
   "moduleExtensions": {
     "@@aspect_tools_telemetry+//:extension.bzl%telemetry": {
       "general": {
-        "bzlTransitiveDigest": "ihzLOoAnQP6Y5iSYOhEjvb6uxEbA6ZgH8Qikau2lGRU=",
+        "bzlTransitiveDigest": "V8DEOYcatJGvzYvZJpb8cEb1qkRX/jeVny5i6CHtApM=",
         "usagesDigest": "wyIXFLqS0N1GIG17Gi2+8rDpAn25D1anYPUFbKnPnN4=",
         "recordedInputs": [
           "REPO_MAPPING:aspect_tools_telemetry+,bazel_lib bazel_lib+",
@@ -314,7 +320,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "Mk3YRkzkoIdnf+WEeKbhZslJ0BklnznmJOQp2nmUNU4=",
-        "usagesDigest": "9sP4akMmXLdEArdXFcg56OSfaeaA2y8u2ogcVan1B1s=",
+        "usagesDigest": "5BLjj7+2WHpYLd1jMafnnysBwVEocMz38Zwc+jH54mM=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -2971,13 +2977,22 @@
               "runtime_deps": [],
               "defines": [],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@krb5//:krb5",
+                "@krb5//:k5crypto",
+                "@krb5//:com_err"
+              ],
               "output_loc": "",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "mv lib/Authen/krb5_constants.c lib/Authen/krb5_constants.inc",
+                "sed -i 's/\"krb5_constants.c\"/\"krb5_constants.inc\"/' lib/Authen/Krb5.xs"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"Move-Item lib/Authen/krb5_constants.c lib/Authen/krb5_constants.inc; (Get-Content lib/Authen/Krb5.xs) -replace 'krb5_constants.c', 'krb5_constants.inc' | Set-Content lib/Authen/Krb5.xs\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -3008,25 +3023,49 @@
               "runtime_deps": [
                 "@cpan__Authen-Krb5//:Authen-Krb5"
               ],
-              "defines": [],
+              "defines": [
+                "HAVE_KDB_H"
+              ],
               "includes": [],
-              "native_deps": [],
+              "native_deps": [
+                "@krb5//:kadm5clnt",
+                "@krb5//:krb5",
+                "@krb5//:com_err",
+                "@krb5//:k5crypto"
+              ],
               "output_loc": "",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "mkdir -p lib/Authen/Krb5 && cp Admin.pm lib/Authen/Krb5/Admin.pm"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"New-Item -ItemType Directory -Force lib/Authen/Krb5; Copy-Item Admin.pm lib/Authen/Krb5/Admin.pm\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/03-principal.t",
+                "t/04-key.t",
+                "t/10-getprivs.t",
+                "t/20-addpol.t",
+                "t/21-getpol.t",
+                "t/22-getpols.t",
+                "t/23-modpol.t",
+                "t/31-getprinc.t",
+                "t/32-getprincs.t",
+                "t/34-cpw.t",
+                "t/35-randkey.t",
+                "t/36-rename.t",
+                "t/91-delprinc.t",
+                "t/92-delpol.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -140698,7 +140737,6 @@
                 "App-Inotify-Hookable",
                 "App-Oozie",
                 "Array-RefElem",
-                "Authen-Krb5-Admin",
                 "Authen-SASL-XS",
                 "AutoLoader",
                 "BSD-Resource",

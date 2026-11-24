@@ -1,0 +1,685 @@
+load("@awk.bzl", "awk")
+load("@bazel_lib//lib:copy_file.bzl", "copy_file")
+load("@bazel_lib//lib:expand_template.bzl", "expand_template")
+load("@bazel_lib//lib:run_binary.bzl", "run_binary")
+load("@rules_cc//cc:defs.bzl", "cc_library")
+load("@rules_perl//perl:defs.bzl", "perl_binary", "perl_library")
+
+package(default_visibility = ["//visibility:public"])
+
+COMMON_COPTS = [
+    "-DHAVE_CONFIG_H",
+    "-D_GNU_SOURCE",
+    "-DKRB5_DEPRECATED=1",
+    "-DKRB5_PRIVATE=1",
+    "-DLIBDIR=\\\"/usr/local/lib\\\"",
+    "-DBINDIR=\\\"/usr/local/bin\\\"",
+    "-DSBINDIR=\\\"/usr/local/sbin\\\"",
+    "-DDYNOBJEXT=\\\".so\\\"",
+    "-DLOCALEDIR=\\\"/usr/local/share/locale\\\"",
+    "-DHAS_STDARG",
+    "-Wno-deprecated-declarations",
+    "-Wno-format-zero-length",
+    "-Wno-strict-prototypes",
+    "-Wno-incompatible-pointer-types",
+    "-Wno-ignored-qualifiers",
+]
+
+COMMON_INCLUDES = [
+    "src",
+    "src/include",
+    "src/include/krb5",
+    "src/util/support",
+    "src/util/et",
+    "src/util/profile",
+    "src/lib/crypto",
+    "src/lib/crypto/krb",
+    "src/lib/crypto/builtin",
+    "src/lib/crypto/builtin/des",
+    "src/lib/crypto/builtin/aes",
+    "src/lib/crypto/builtin/camellia",
+    "src/lib/crypto/builtin/md4",
+    "src/lib/crypto/builtin/md5",
+    "src/lib/crypto/builtin/sha1",
+    "src/lib/crypto/builtin/sha2",
+    "src/lib/crypto/builtin/enc_provider",
+    "src/lib/crypto/builtin/hash_provider",
+    "src/lib/krb5",
+    "src/lib/krb5/asn.1",
+    "src/lib/krb5/ccache",
+    "src/lib/krb5/keytab",
+    "src/lib/krb5/krb",
+    "src/lib/krb5/rcache",
+    "src/lib/krb5/unicode",
+    "src/lib/krb5/unicode/ucdata",
+    "src/lib/krb5/os",
+    "src/lib/gssapi",
+    "src/lib/gssapi/generic",
+    "src/lib/gssapi/krb5",
+    "src/lib/gssapi/spnego",
+    "src/lib/gssapi/mechglue",
+    "src/lib/rpc",
+    "src/lib/kdb",
+    "src/lib/kadm5",
+    "src/lib/kadm5/clnt",
+]
+
+# Generated and expanded headers
+expand_template(
+    name = "osconf_h",
+    out = "src/include/osconf.h",
+    substitutions = {
+        "@BINDIR": "/usr/local/bin",
+        "@DYNOBJEXT": ".so",
+        "@GSSMODULEDIR": "/usr/local/lib/gss",
+        "@KRB5RCTMPDIR": "/var/tmp",
+        "@LIBDIR": "/usr/local/lib",
+        "@LOCALSTATEDIR": "/var",
+        "@MODULEDIR": "/usr/local/lib/krb5/plugins",
+        "@RUNSTATEDIR": "/run",
+        "@SBINDIR": "/usr/local/sbin",
+        "@SYSCONFCONF": "",
+        "@SYSCONFDIR": "/etc",
+    },
+    template = "src/include/osconf.hin",
+)
+
+expand_template(
+    name = "types_h",
+    out = "src/include/gssrpc/types.h",
+    substitutions = {
+        "@GSSRPC__BSD_TYPEALIASES@": "",
+        "@GSSRPC__NETDB_H@": "",
+        "@GSSRPC__SYS_PARAM_H@": "#include <sys/param.h>",
+        "@GSSRPC__SYS_SELECT_H@": "#include <sys/select.h>",
+        "@GSSRPC__SYS_TIME_H@": "#include <sys/time.h>",
+        "@GSSRPC__UNISTD_H@": "#include <unistd.h>",
+        "@rpcent_define@": "#define STRUCT_RPCENT_IN_RPC_NETDB_H",
+    },
+    template = "src/include/gssrpc/types.hin",
+)
+
+# Headers copied from elsewhere in repo to public include paths
+copy_file(
+    name = "com_err_h",
+    src = "src/util/et/com_err.h",
+    out = "src/include/com_err.h",
+)
+
+copy_file(
+    name = "verto_h",
+    src = "src/util/verto/verto.h",
+    out = "src/include/verto.h",
+)
+
+copy_file(
+    name = "kdc_j_encode_h",
+    src = "src/plugins/audit/kdc_j_encode.h",
+    out = "src/include/kdc_j_encode.h",
+)
+
+copy_file(
+    name = "ss_h",
+    src = "src/util/ss/ss.h",
+    out = "src/include/ss/ss.h",
+)
+
+copy_file(
+    name = "gssapi_alloc_h",
+    src = "src/lib/gssapi/generic/gssapi_alloc.h",
+    out = "src/include/gssapi/gssapi_alloc.h",
+)
+
+copy_file(
+    name = "gssapi_ext_h",
+    src = "src/lib/gssapi/generic/gssapi_ext.h",
+    out = "src/include/gssapi/gssapi_ext.h",
+)
+
+copy_file(
+    name = "gssapi_krb5_h",
+    src = "src/lib/gssapi/krb5/gssapi_krb5.h",
+    out = "src/include/gssapi/gssapi_krb5.h",
+)
+
+copy_file(
+    name = "gssapi_generic_h",
+    src = "src/lib/gssapi/generic/gssapi_generic.h",
+    out = "src/include/gssapi/gssapi_generic.h",
+)
+
+copy_file(
+    name = "gssapi_h",
+    src = "src/lib/gssapi/generic/gssapi.hin",
+    out = "src/include/gssapi/gssapi.h",
+)
+
+copy_file(
+    name = "gssapi_generic_gssapi_h",
+    src = "src/lib/gssapi/generic/gssapi.hin",
+    out = "src/lib/gssapi/generic/gssapi.h",
+)
+
+copy_file(
+    name = "kadm_rpc_h",
+    src = "src/lib/kadm5/kadm_rpc.h",
+    out = "src/include/kadm5/kadm_rpc.h",
+)
+
+copy_file(
+    name = "kadm_admin_h",
+    src = "src/lib/kadm5/admin.h",
+    out = "src/include/kadm5/admin.h",
+)
+
+copy_file(
+    name = "kadm_admin_internal_h",
+    src = "src/lib/kadm5/admin_internal.h",
+    out = "src/include/kadm5/admin_internal.h",
+)
+
+copy_file(
+    name = "kadm_client_internal_h",
+    src = "src/lib/kadm5/clnt/client_internal.h",
+    out = "src/include/kadm5/client_internal.h",
+)
+
+copy_file(
+    name = "kadm_admin_xdr_h",
+    src = "src/lib/kadm5/admin_xdr.h",
+    out = "src/include/kadm5/admin_xdr.h",
+)
+
+copy_file(
+    name = "kadm_server_internal_h",
+    src = "src/lib/kadm5/server_internal.h",
+    out = "src/include/kadm5/server_internal.h",
+)
+
+copy_file(
+    name = "db_h",
+    src = "src/plugins/kdb/db2/libdb2/include/db.hin",
+    out = "src/include/db.h",
+)
+
+copy_file(
+    name = "db_config_h",
+    src = "src/plugins/kdb/db2/libdb2/include/db-config.hin",
+    out = "src/include/db-config.h",
+)
+
+copy_file(
+    name = "profile_profile_h",
+    src = ":profile_h",
+    out = "src/util/profile/profile.h",
+)
+
+copy_file(
+    name = "ss_err_include_h",
+    src = ":ss_err_h",
+    out = "src/include/ss/ss_err.h",
+)
+
+copy_file(
+    name = "kadm_err_include_h",
+    src = ":kadm_err_h",
+    out = "src/include/kadm5/kadm_err.h",
+)
+
+copy_file(
+    name = "chpass_strings_include_h",
+    src = ":chpass_util_strings_h",
+    out = "src/include/kadm5/chpass_util_strings.h",
+)
+
+ERROR_TABLES = [
+    ("asn1_err", "src/lib/krb5/error_tables/asn1_err.et", "src/lib/krb5/error_tables/asn1_err.h", "src/lib/krb5/error_tables/asn1_err.c"),
+    ("k5e1_err", "src/lib/krb5/error_tables/k5e1_err.et", "src/lib/krb5/error_tables/k5e1_err.h", "src/lib/krb5/error_tables/k5e1_err.c"),
+    ("kdb5_err", "src/lib/krb5/error_tables/kdb5_err.et", "src/lib/krb5/error_tables/kdb5_err.h", "src/lib/krb5/error_tables/kdb5_err.c"),
+    ("krb524_err", "src/lib/krb5/error_tables/krb524_err.et", "src/lib/krb5/error_tables/krb524_err.h", "src/lib/krb5/error_tables/krb524_err.c"),
+    ("krb5_err", "src/lib/krb5/error_tables/krb5_err.et", "src/lib/krb5/error_tables/krb5_err.h", "src/lib/krb5/error_tables/krb5_err.c"),
+    ("kv5m_err", "src/lib/krb5/error_tables/kv5m_err.et", "src/lib/krb5/error_tables/kv5m_err.h", "src/lib/krb5/error_tables/kv5m_err.c"),
+    ("kadm_err", "src/lib/kadm5/kadm_err.et", "src/lib/kadm5/kadm_err.h", "src/lib/kadm5/kadm_err.c"),
+    ("chpass_util_strings", "src/lib/kadm5/chpass_util_strings.et", "src/lib/kadm5/chpass_util_strings.h", "src/lib/kadm5/chpass_util_strings.c"),
+    ("prof_err", "src/util/profile/prof_err.et", "src/util/profile/prof_err.h", "src/util/profile/prof_err.c"),
+    ("ss_err", "src/util/ss/ss_err.et", "src/util/ss/ss_err.h", "src/util/ss/ss_err.c"),
+    ("gssapi_err_generic", "src/lib/gssapi/generic/gssapi_err_generic.et", "src/lib/gssapi/generic/gssapi_err_generic.h", "src/lib/gssapi/generic/gssapi_err_generic.c"),
+    ("gssapi_err_krb5", "src/lib/gssapi/krb5/gssapi_err_krb5.et", "src/lib/gssapi/krb5/gssapi_err_krb5.h", "src/lib/gssapi/krb5/gssapi_err_krb5.c"),
+    ("adb_err", "src/lib/kdb/adb_err.et", "src/lib/kdb/adb_err.h", "src/lib/kdb/adb_err.c"),
+]
+
+[
+    (
+        awk(
+            name = name + "_h",
+            src = src,
+            out = out_h,
+            assign = {
+                "outfile": "/dev/stdout",
+            },
+            progfile = "src/util/et/et_h.awk",
+        ),
+        awk(
+            name = name + "_c",
+            src = src,
+            out = out_c,
+            assign = {
+                "outfile": "/dev/stdout",
+            },
+            progfile = "src/util/et/et_c.awk",
+        ),
+    )
+    for name, src, out_h, out_c in ERROR_TABLES
+]
+
+perl_library(
+    name = "gen_map_lib",
+    srcs = ["src/util/ktemplate.pm"],
+    includes = ["src/util"],
+)
+
+perl_binary(
+    name = "gen_map",
+    srcs = ["src/util/gen-map.pl"],
+    main = "src/util/gen-map.pl",
+    deps = [":gen_map_lib"],
+)
+
+run_binary(
+    name = "error_map_h",
+    outs = ["src/lib/gssapi/krb5/error_map.h"],
+    args = [
+        "-o$(execpath src/lib/gssapi/krb5/error_map.h)",
+        "NAME=gsserrmap",
+        "KEY=OM_uint32",
+        "'VALUE=char *'",
+        "COMPARE=compare_OM_uint32",
+        "FREEVALUE=free_string",
+    ],
+    tool = ":gen_map",
+)
+
+perl_library(
+    name = "gen_lib",
+    srcs = [
+        "src/util/t_array.pm",
+        "src/util/t_bimap.pm",
+        "src/util/t_template.pm",
+    ],
+    includes = ["src/util"],
+)
+
+perl_binary(
+    name = "gen",
+    srcs = ["src/util/gen.pl"],
+    main = "src/util/gen.pl",
+    deps = [":gen_lib"],
+)
+
+run_binary(
+    name = "errmap_h",
+    outs = ["src/lib/gssapi/generic/errmap.h"],
+    args = [
+        "bimap",
+        "$(execpath src/lib/gssapi/generic/errmap.h)",
+        "NAME=mecherrmap",
+        "LEFT=OM_uint32",
+        "'RIGHT=struct mecherror'",
+        "LEFTPRINT=print_OM_uint32",
+        "RIGHTPRINT=mecherror_print",
+        "LEFTCMP=cmp_OM_uint32",
+        "RIGHTCMP=mecherror_cmp",
+    ],
+    tool = ":gen",
+)
+
+genrule(
+    name = "krb5_h",
+    srcs = [
+        "src/include/krb5/krb5.hin",
+        ":asn1_err_h",
+        ":k5e1_err_h",
+        ":kdb5_err_h",
+        ":krb524_err_h",
+        ":krb5_err_h",
+        ":kv5m_err_h",
+    ],
+    outs = ["src/include/krb5/krb5.h"],
+    cmd = """
+echo "/* This file is generated, please don't edit it directly. */" > $@
+echo "#ifndef KRB5_KRB5_H_INCLUDED" >> $@
+echo "#define KRB5_KRB5_H_INCLUDED" >> $@
+cat $(execpath src/include/krb5/krb5.hin) \
+    $(execpath :krb5_err_h) \
+    $(execpath :k5e1_err_h) \
+    $(execpath :kdb5_err_h) \
+    $(execpath :kv5m_err_h) \
+    $(execpath :krb524_err_h) \
+    $(execpath :asn1_err_h) >> $@
+echo "#endif /* KRB5_KRB5_H_INCLUDED */" >> $@
+""",
+)
+
+genrule(
+    name = "profile_h",
+    srcs = [
+        "src/util/profile/profile.hin",
+        ":prof_err_h",
+    ],
+    outs = ["src/include/profile.h"],
+    cmd = "cat $(execpath src/util/profile/profile.hin) $(execpath :prof_err_h) > $@",
+)
+
+cc_library(
+    name = "krb5_headers",
+    hdrs = [
+        ":chpass_strings_include_h",
+        ":com_err_h",
+        ":db_config_h",
+        ":db_h",
+        ":gssapi_alloc_h",
+        ":gssapi_ext_h",
+        ":gssapi_generic_h",
+        ":gssapi_h",
+        ":gssapi_krb5_h",
+        ":kadm_admin_h",
+        ":kadm_admin_internal_h",
+        ":kadm_admin_xdr_h",
+        ":kadm_client_internal_h",
+        ":kadm_err_include_h",
+        ":kadm_rpc_h",
+        ":kadm_server_internal_h",
+        ":kdc_j_encode_h",
+        ":krb5_h",
+        ":osconf_h",
+        ":profile_h",
+        ":ss_err_include_h",
+        ":ss_h",
+        ":types_h",
+        ":verto_h",
+    ] + glob([
+        "src/*.h",
+        "src/include/**/*.h",
+    ]),
+    includes = [
+        "src",
+        "src/include",
+    ],
+)
+
+cc_library(
+    name = "krb5support",
+    srcs = [
+        "src/util/support/base64.c",
+        "src/util/support/bcmp.c",
+        "src/util/support/dir_filenames.c",
+        "src/util/support/errors.c",
+        "src/util/support/fake-addrinfo.c",
+        "src/util/support/gmt_mktime.c",
+        "src/util/support/hashtab.c",
+        "src/util/support/hex.c",
+        "src/util/support/init-addrinfo.c",
+        "src/util/support/json.c",
+        "src/util/support/k5buf.c",
+        "src/util/support/path.c",
+        "src/util/support/plugins.c",
+        "src/util/support/strerror_r.c",
+        "src/util/support/strlcpy.c",
+        "src/util/support/threads.c",
+        "src/util/support/utf8.c",
+        "src/util/support/utf8_conv.c",
+        "src/util/support/zap.c",
+    ],
+    hdrs = glob(["src/util/support/*.h"]),
+    copts = COMMON_COPTS,
+    includes = COMMON_INCLUDES,
+    linkopts = [
+        "-lpthread",
+        "-lresolv",
+        "-Wl,-rpath,$$ORIGIN",
+    ],
+    deps = [":krb5_headers"],
+)
+
+cc_library(
+    name = "com_err",
+    srcs = [
+        "src/util/et/com_err.c",
+        "src/util/et/error_message.c",
+        "src/util/et/et_name.c",
+    ],
+    hdrs = glob(["src/util/et/*.h"]),
+    copts = COMMON_COPTS,
+    includes = COMMON_INCLUDES,
+    linkopts = ["-Wl,-rpath,$$ORIGIN"],
+    deps = [
+        ":krb5_headers",
+        ":krb5support",
+    ],
+)
+
+cc_library(
+    name = "k5crypto",
+    srcs = glob(
+        [
+            "src/lib/crypto/**/*.c",
+        ],
+        exclude = [
+            "src/lib/crypto/**/aes-gen.c",
+            "src/lib/crypto/**/camellia-gen.c",
+            "src/lib/crypto/**/destest.c",
+            "src/lib/crypto/**/f_cbc.c",
+            "src/lib/crypto/**/t_*.c",
+            "src/lib/crypto/crypto_tests/**",
+            "src/lib/crypto/openssl/**",
+        ],
+    ),
+    hdrs = glob(["src/lib/crypto/**/*.h"]),
+    copts = COMMON_COPTS,
+    includes = COMMON_INCLUDES,
+    linkopts = ["-Wl,-rpath,$$ORIGIN"],
+    deps = [
+        ":com_err",
+        ":krb5_headers",
+        ":krb5support",
+    ],
+)
+
+cc_library(
+    name = "krb5",
+    srcs = glob(
+        [
+            "src/lib/krb5/**/*.c",
+        ],
+        exclude = [
+            "src/lib/krb5/**/brand.c",
+            "src/lib/krb5/**/init_ets.c",
+            "src/lib/krb5/**/strptime.c",
+            "src/lib/krb5/**/t_*.c",
+            "src/lib/krb5/ccache/cc_api_macos.c",
+            "src/lib/krb5/ccache/cc_mslsa.c",
+            "src/lib/krb5/ccache/ccapi/**",
+            "src/lib/krb5/posix/**",
+            "src/lib/krb5/test/**/*",
+            "src/lib/krb5/unicode/**/ucgendat.c",
+            "src/lib/krb5/unicode/ucdata/**",
+            "src/lib/krb5/unicode/ucgendat.c",
+        ],
+    ) + [
+        "src/lib/krb5/unicode/ucdata/ucdata.c",
+        "src/util/profile/prof_file.c",
+        "src/util/profile/prof_get.c",
+        "src/util/profile/prof_init.c",
+        "src/util/profile/prof_parse.c",
+        "src/util/profile/prof_set.c",
+        "src/util/profile/prof_tree.c",
+        ":asn1_err_c",
+        ":k5e1_err_c",
+        ":kdb5_err_c",
+        ":krb524_err_c",
+        ":krb5_err_c",
+        ":kv5m_err_c",
+        ":prof_err_c",
+    ],
+    hdrs = glob([
+        "src/lib/krb5/**/*.h",
+        "src/util/profile/*.h",
+    ]) + [
+        "src/lib/krb5/krb/brand.c",
+        "src/lib/krb5/krb/strptime.c",
+        ":asn1_err_h",
+        ":k5e1_err_h",
+        ":kdb5_err_h",
+        ":krb524_err_h",
+        ":krb5_err_h",
+        ":kv5m_err_h",
+        ":prof_err_h",
+        ":profile_profile_h",
+    ],
+    copts = COMMON_COPTS,
+    includes = COMMON_INCLUDES,
+    linkopts = [
+        "-lresolv",
+        "-Wl,-rpath,$$ORIGIN",
+    ],
+    deps = [
+        ":com_err",
+        ":k5crypto",
+        ":krb5_headers",
+        ":krb5support",
+    ],
+)
+
+cc_library(
+    name = "gssapi_krb5",
+    srcs = glob(
+        ["src/lib/gssapi/**/*.c"],
+        exclude = [
+            "src/lib/gssapi/**/maptest.c",
+            "src/lib/gssapi/**/negoex_trace.c",
+            "src/lib/gssapi/**/t_*.c",
+        ],
+    ) + [
+        ":gssapi_err_generic_c",
+        ":gssapi_err_krb5_c",
+    ],
+    hdrs = glob(["src/lib/gssapi/**/*.h"]) + [
+        ":errmap_h",
+        ":error_map_h",
+        ":gssapi_err_generic_h",
+        ":gssapi_err_krb5_h",
+        ":gssapi_generic_gssapi_h",
+    ],
+    copts = COMMON_COPTS,
+    defines = ["_GSS_STATIC_LINK=1"],
+    includes = COMMON_INCLUDES,
+    linkopts = [
+        "-lresolv",
+        "-Wl,-rpath,$$ORIGIN",
+    ],
+    deps = [
+        ":com_err",
+        ":k5crypto",
+        ":krb5",
+        ":krb5_headers",
+        ":krb5support",
+    ],
+)
+
+cc_library(
+    name = "gssrpc",
+    srcs = glob(
+        ["src/lib/rpc/*.c"],
+        exclude = [
+            "src/lib/rpc/dyntest.c",
+            "src/lib/rpc/getrpcent.c",
+            "src/lib/rpc/unit-test/**",
+        ],
+    ),
+    hdrs = glob(["src/lib/rpc/*.h"]),
+    copts = COMMON_COPTS,
+    defines = [
+        "DEBUG_GSSAPI=0",
+        "GSSAPI_KRB5",
+        "GSSRPC__IMPL",
+    ],
+    includes = COMMON_INCLUDES,
+    linkopts = [
+        "-lresolv",
+        "-Wl,-rpath,$$ORIGIN",
+    ],
+    deps = [
+        ":com_err",
+        ":gssapi_krb5",
+        ":k5crypto",
+        ":krb5",
+        ":krb5_headers",
+    ],
+)
+
+cc_library(
+    name = "kdb5",
+    srcs = glob(
+        ["src/lib/kdb/*.c"],
+        exclude = ["src/lib/kdb/t_*.c"],
+    ) + [
+        ":adb_err_c",
+    ],
+    hdrs = glob(["src/lib/kdb/*.h"]) + [
+        ":adb_err_h",
+    ],
+    copts = COMMON_COPTS,
+    defines = ["KDB5_USE_LIB_KDB_DB2"],
+    includes = COMMON_INCLUDES,
+    linkopts = [
+        "-lresolv",
+        "-Wl,-rpath,$$ORIGIN",
+    ],
+    deps = [
+        ":com_err",
+        ":gssrpc",
+        ":k5crypto",
+        ":krb5",
+        ":krb5_headers",
+        ":krb5support",
+    ],
+)
+
+cc_library(
+    name = "kadm5clnt",
+    srcs = [
+        "src/lib/kadm5/alt_prof.c",
+        "src/lib/kadm5/chpass_util.c",
+        "src/lib/kadm5/clnt/client_init.c",
+        "src/lib/kadm5/clnt/client_principal.c",
+        "src/lib/kadm5/clnt/client_rpc.c",
+        "src/lib/kadm5/clnt/clnt_chpass_util.c",
+        "src/lib/kadm5/clnt/clnt_policy.c",
+        "src/lib/kadm5/clnt/clnt_privs.c",
+        "src/lib/kadm5/kadm_rpc_xdr.c",
+        "src/lib/kadm5/logger.c",
+        "src/lib/kadm5/misc_free.c",
+        "src/lib/kadm5/str_conv.c",
+        ":chpass_util_strings_c",
+        ":kadm_err_c",
+    ],
+    hdrs = glob(["src/lib/kadm5/**/*.h"]) + [
+        ":chpass_util_strings_h",
+        ":kadm_err_h",
+    ],
+    copts = COMMON_COPTS,
+    includes = COMMON_INCLUDES,
+    linkopts = [
+        "-lresolv",
+        "-Wl,-rpath,$$ORIGIN",
+    ],
+    deps = [
+        ":com_err",
+        ":gssapi_krb5",
+        ":gssrpc",
+        ":k5crypto",
+        ":krb5",
+        ":krb5_headers",
+        ":krb5support",
+    ],
+)

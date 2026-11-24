@@ -1,0 +1,9 @@
+{
+    "integrity": "sha256-/pCvhEGtn6mwZLjlMHfO+3gqlvimgnawMdxUrxeJ/ws=",
+    "overlay": {
+        "BUILD.bazel": "sha256-XEtYZAq3dVaxYx/FQFFSuEYWspRT4NWBudenXRjWFGY=",
+        "src/include/autoconf.h": "sha256-O7ehe7+7KppVJW4P6xAla9SKhHv3KCnaW1FszTL/7hk="
+    },
+    "strip_prefix": "krb5-1.22.3",
+    "url": "https://kerberos.org/dist/krb5/1.22/krb5-1.22.3.tar.gz"
+}
