@@ -619,8 +619,8 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "V2ecd4/i3wB0ecJAo699Abp82wgJwn6X0NecDe24O5A=",
-        "usagesDigest": "KWxRGNU0aPcmvdesdRMtayNniJ3gzIhgCI5ewLU2AP0=",
+        "bzlTransitiveDigest": "dMA6Rw+jcXh+k13uJjEi/MUdJTR4DXKxbvnie5zL6Y8=",
+        "usagesDigest": "66QEW/hb/p8GmUh5siN7ChQcsIhXlygL4WSJUrJIw84=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -740,10 +740,10 @@
                 "@cpan__Test-Deep//:Test-Deep",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/001_compiles_pod.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -780,9 +780,7 @@
               "test_deps": [
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4108,10 +4106,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/fd_precharge.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -4146,9 +4144,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4458,9 +4454,7 @@
               "test_deps": [
                 "@cpan__Test-Differences//:Test-Differences"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4530,9 +4524,7 @@
               "test_deps": [
                 "@cpan__Test-File-Contents//:Test-File-Contents"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -10318,10 +10310,13 @@
                 "@cpan__Test-LongString//:Test-LongString",
                 "@cpan__Test-NoWarnings//:Test-NoWarnings"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/00_base/008_export.t",
+                "t/03_route_handler/08_errors.t",
+                "t/22_hooks/11_error_in_hook.t",
+                "t/25_exceptions/01_exceptions.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -10490,9 +10485,7 @@
                 "@cpan__HTTP-Message//:HTTP-Message",
                 "@cpan__Plack//:Plack"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -10532,9 +10525,7 @@
                 "@cpan__HTTP-Message//:HTTP-Message",
                 "@cpan__Plack//:Plack"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -10576,10 +10567,10 @@
                 "@cpan__Plack//:Plack",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/02_prepare_serializer_for_format.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -17347,9 +17338,7 @@
               "test_deps": [
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -17385,10 +17374,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/above-0xFF.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -20148,9 +20137,7 @@
                 "@cpan__Test-TCP//:Test-TCP",
                 "@cpan__Module-Build-Tiny//:Module-Build-Tiny"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -30394,9 +30381,7 @@
                 "@cpan__Test-Needs//:Test-Needs",
                 "@cpan__libwww-perl//:libwww-perl"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -75669,9 +75654,7 @@
               "test_deps": [
                 "@cpan__HTTP-Server-Simple//:HTTP-Server-Simple"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -75813,10 +75796,11 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/40_server.t",
+                "t/50_client.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -76518,10 +76502,11 @@
                 "@cpan__Test-Warn//:Test-Warn",
                 "@cpan__XML-Parser-Lite//:XML-Parser-Lite"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/SOAP/Transport/HTTP.t",
+                "t/SOAP/Transport/HTTP/CGI.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -80969,7 +80954,7 @@
               "defines": [],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/Template/Stash/XS/XS",
               "patch_args": [
                 "-p0"
               ],
@@ -80983,10 +80968,12 @@
               "test_deps": [
                 "@cpan__Test-LeakTrace//:Test-LeakTrace"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/compile1.t",
+                "t/compile2.t",
+                "t/compile3.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -88195,8 +88182,12 @@
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "mkdir -p blib/script && cp bin/urifind blib/script/urifind"
+              ],
+              "patch_cmds_win": [
+                "mkdir blib\\script && copy bin\\urifind blib\\script\\urifind"
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -88205,9 +88196,7 @@
               "test_deps": [
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -89202,9 +89191,7 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__Module-Build-Tiny//:Module-Build-Tiny"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -89296,9 +89283,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -89390,9 +89375,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -91076,7 +91059,9 @@
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
+              "patch_cmds": [
+                "perl sense.pm.PL sense.pm"
+              ],
               "patch_cmds_win": [],
               "patches": [],
               "target_compatible_with": [],
@@ -91084,9 +91069,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -141017,8 +141000,6 @@
                 ]
               },
               "manual_tests": [
-                "AWS-S3",
-                "AWS-Signature4",
                 "Algorithm-Heapify-XS",
                 "Amazon-S3",
                 "AnyEvent",
@@ -141043,12 +141024,8 @@
                 "AutoLoader",
                 "BSD-Resource",
                 "Business-CreditCard",
-                "Business-OnlinePayment",
-                "Business-Tax-VAT-Validation",
                 "CHI",
                 "CLI-Helpers",
-                "CSS-Compressor",
-                "CSS-Packer",
                 "Cache",
                 "Cache-Cache",
                 "Cache-Memcached",
@@ -141086,11 +141063,7 @@
                 "DBIx-ContextualFetch",
                 "DBIx-Placeholder-Named",
                 "Daemon-Control",
-                "Dancer",
                 "Dancer2",
-                "Dancer2-Plugin-Ajax",
-                "Dancer2-Plugin-GraphQL",
-                "Dancer2-Plugin-REST",
                 "Dancer2-Template-MojoTemplate",
                 "Data-Buffer",
                 "Data-Consumer",
@@ -141140,8 +141113,6 @@
                 "ElasticSearch",
                 "Elasticsearch-Model",
                 "Email-MIME-Encodings",
-                "Email-Sender",
-                "Email-Simple",
                 "Emoji-NationalFlag",
                 "Encode",
                 "Encode-Detect",
@@ -141157,7 +141128,6 @@
                 "File-Tail",
                 "Filter",
                 "Frontier-RPC",
-                "Furl",
                 "GD",
                 "GD-Barcode",
                 "GD-Persian",
@@ -141221,7 +141191,6 @@
                 "Kafka",
                 "LWP-Authen-Negotiate",
                 "LWP-Protocol-connect",
-                "LWP-Protocol-https",
                 "LWP-UserAgent-Determined",
                 "Lingua-EN-Inflexion",
                 "Lingua-Han-PinYin",
@@ -141352,14 +141321,11 @@
                 "Promises",
                 "Protocol-HTTP2",
                 "Queue-Q",
-                "REST-Client",
                 "REST-Neo4p",
-                "RPC-XML",
                 "Redis",
                 "Redis-ScriptCache",
                 "Regexp-Util",
                 "Role-Kerberos",
-                "SOAP-Lite",
                 "SOAP-WSDL",
                 "SQL-Abstract",
                 "SQL-Abstract-Complete",
@@ -141407,7 +141373,6 @@
                 "TAP-Formatter-HTML",
                 "TAP-Formatter-JUnit",
                 "TAP-Harness-JUnit",
-                "Template-Toolkit",
                 "Term-ProgressBar",
                 "Term-Size",
                 "Term-Size-Perl",
@@ -141446,16 +141411,12 @@
                 "Types-Serialiser",
                 "UNIVERSAL-can",
                 "UNIVERSAL-moniker",
-                "URI-Find",
                 "UV",
                 "Unicode-Collate",
                 "Unicode-Map8",
                 "Unicode-MapUTF8",
                 "Unix-Sysexits",
                 "WWW-Mechanize",
-                "Web-Scraper",
-                "XML-Compile",
-                "XML-Compile-SOAP",
                 "XML-Simple",
                 "XML-TreeBuilder",
                 "XML-Twig",
@@ -141466,7 +141427,6 @@
                 "YAML-PP-LibYAML",
                 "YAML-Syck",
                 "ack",
-                "common-sense",
                 "decorators",
                 "fs-Promises",
                 "jmx4perl",

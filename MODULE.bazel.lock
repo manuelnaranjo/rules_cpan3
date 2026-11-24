@@ -588,7 +588,7 @@
   "moduleExtensions": {
     "//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "V2ecd4/i3wB0ecJAo699Abp82wgJwn6X0NecDe24O5A=",
+        "bzlTransitiveDigest": "dMA6Rw+jcXh+k13uJjEi/MUdJTR4DXKxbvnie5zL6Y8=",
         "usagesDigest": "++covx/Ue6EFULVnJUzFJ2/TpnncaKg7EvXIHQzaPi4=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
