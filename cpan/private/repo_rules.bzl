@@ -578,8 +578,9 @@ if (open my $fh, '<', $target_test) {
     close $fh;
     if (defined $first_line && $first_line =~ m{^#!\\s*\\S*perl\\S*(?:\\s+(.*?))?\\s*$}) {
         my $opts = $1 // '';
+        $opts =~ s/#.*//;
         for my $flag (split ' ', $opts) {
-            if ($flag =~ /^-/) {
+            if ($flag =~ /^-[a-zA-Z0-9]+$/) {
                 push @extra_flags, $flag;
             }
         }
