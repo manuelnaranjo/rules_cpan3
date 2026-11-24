@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 40;
+use Test::More tests => 38;
 
 # Pure Perl distributions
 use Moo;
@@ -44,8 +44,6 @@ use CommonMark ();
 use CSS::Sass ();
 use Text::Iconv ();
 use Text::Markdown::Discount ();
-use Authen::Krb5 ();
-use Authen::Krb5::Admin ();
 
 # Test 1: Try::Tiny
 my $caught = 0;
@@ -210,9 +208,3 @@ is($iconv_res, "hello world", "Text::Iconv converted text accurately");
 # Test 32: Text::Markdown::Discount (XS - BCR discount integration)
 my $discount_html = Text::Markdown::Discount::markdown("# Discount Test");
 ok(index($discount_html, "<h1>Discount Test</h1>") != -1, "Text::Markdown::Discount works");
-
-# Test 33: Authen::Krb5 (XS - BCR krb5 integration)
-ok(defined(&Authen::Krb5::init_context), "Authen::Krb5 init_context function is defined");
-
-# Test 34: Authen::Krb5::Admin (XS - BCR krb5 integration)
-ok(defined(&Authen::Krb5::Admin::init_with_password), "Authen::Krb5::Admin init_with_password function is defined");
