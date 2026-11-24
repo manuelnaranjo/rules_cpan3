@@ -20,6 +20,7 @@ bazel_dep(name = "libsass", version = "3.6.6")
 bazel_dep(name = "discount", version = "3.0.2.0")
 bazel_dep(name = "libiconv", version = "1.18")
 bazel_dep(name = "krb5", version = "1.22.3")
+bazel_dep(name = "grpc", version = "1.85.4")
 bazel_dep(name = "perl-compress-raw-zlib", version = "2.226")
 bazel_dep(name = "perl-io-tty", version = "1.20")
 
@@ -522,7 +523,6 @@ cpan.install(
         "common-sense",
         "decorators",
         "fs-Promises",
-        "grpc-xs",  # Requires native libgrpc (tracked in #57)
         "jmx4perl",
         "libwww-perl",
         "warnings-unused",
@@ -554,8 +554,30 @@ cpan.annotation(
     strip_prefix = "XML-Entities",
 )
 cpan.annotation(
+    defines = [
+        "GRPC_VERSION_1_1",
+        "GRPC_VERSION_1_2",
+        "GRPC_VERSION_1_4",
+        "GRPC_VERSION_1_7",
+        "GRPC_RECV_STATUS_ON_CLIENT_HAS_ERROR_STRING",
+        "GRPC_SSL_CREDENTIALS_HAS_4_ARGS",
+        "GRPC_METADATA_CREDENTIALS_CRATE_FROM_PLUGIN_HAS_3_ARGS",
+        "GRPC_NO_INSECURE_BUILD",
+        "GRPC_HAS_SHUTDOWN_BLOCKING",
+    ],
     distribution = "grpc-xs",
     hub = "cpan",
+    manual_tests = [
+        "t/15-xs_end_to_end.t",
+        "t/16-xs_secure_end_to_end.t",
+    ],
+    native_deps = ["@grpc//:grpc"],
+    output_loc = "auto/Grpc/XS/XS",
+    patch_cmds = [
+        "sed -i 's/#include <grpc\\/grpc_security\\.h>/#include <grpc\\/grpc_security.h>\\n#include <grpc\\/credentials.h>/g' util.h ext/*.h",
+        "sed -i '/#include <grpc\\/slice\\.h>/a typedef grpc_slice gpr_slice;\\n#define gpr_slice_from_copied_buffer grpc_slice_from_copied_buffer\\n#define gpr_slice_unref grpc_slice_unref\\n#define GPR_SLICE_START_PTR GRPC_SLICE_START_PTR\\n#define GPR_SLICE_LENGTH GRPC_SLICE_LENGTH\\n#define gpr_log grpc_absl_log' util.h",
+        "sed -i '/grpc_google_default_credentials_create/,/);/c\\    ctx->wrapped = grpc_google_default_credentials_create(NULL, NULL);' ext/channel_credentials.xs",
+    ],
     strip_prefix = "Grpc-XS-0.38",
 )
 cpan.annotation(

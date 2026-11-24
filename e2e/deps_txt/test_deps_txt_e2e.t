@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 40;
+use Test::More tests => 42;
 
 # Pure Perl distributions
 use Moo;
@@ -46,6 +46,8 @@ use Text::Iconv ();
 use Text::Markdown::Discount ();
 use Authen::Krb5 ();
 use Authen::Krb5::Admin ();
+use Grpc::XS ();
+use Grpc::XS::Timeval ();
 
 # Test 1: Try::Tiny
 my $caught = 0;
@@ -216,3 +218,8 @@ ok(defined(&Authen::Krb5::init_context), "Authen::Krb5 init_context function is 
 
 # Test 34: Authen::Krb5::Admin (XS - BCR krb5 integration)
 ok(defined(&Authen::Krb5::Admin::init_with_password), "Authen::Krb5::Admin init_with_password function is defined");
+
+# Test 35: Grpc::XS (XS - BCR libgrpc integration)
+is($Grpc::XS::VERSION, '0.38', "Grpc::XS version matches");
+my $grpc_deadline = Grpc::XS::Timeval::infFuture();
+ok(defined($grpc_deadline), "Grpc::XS::Timeval::infFuture works");
