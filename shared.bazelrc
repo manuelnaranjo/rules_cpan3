@@ -3,6 +3,14 @@
 # Ensure that the MODULE.bazel.lock file is complete and committed.
 common --lockfile_mode=update
 
+# Inhibit C/C++ compiler warnings across all builds and tests
+build --copt=-w
+build --cxxopt=-w
+
+# When testing, only report failed tests in summary and output logs on error
+test --test_summary=terse
+test --test_output=errors
+
 # --- BuildBuddy Remote Build Execution (RBE) Configuration ---
 # Remote executor, cache, and BES endpoints
 common:rbe --remote_executor=grpcs://remote.buildbuddy.io
