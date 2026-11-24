@@ -204,7 +204,7 @@ diff -urN a/src/config/shlib.conf b/src/config/shlib.conf
  	# Alpha OSF/1 doesn't need separate PIC objects
  	SHOBJEXT=.o
 @@ -164,7 +164,7 @@
- 
+
  mips-sgi-irix6.3)	# This is a Kludge; see below
  	SHLIBVEXT='.so.$(LIBMAJOR).$(LIBMINOR)'
 -	SHLIBSEXT='.so.$(LIBMAJOR)'
@@ -213,7 +213,7 @@ diff -urN a/src/config/shlib.conf b/src/config/shlib.conf
  	SHOBJEXT=.o
  	# Kludge follows: (gcc makes n32 object files but ld expects o32, so we reeducate ld)
 @@ -203,7 +203,7 @@
- 
+
  mips-sgi-irix*)
  	SHLIBVEXT='.so.$(LIBMAJOR).$(LIBMINOR)'
 -	SHLIBSEXT='.so.$(LIBMAJOR)'
@@ -382,7 +382,7 @@ diff -urN a/src/lib/kadm5/clnt/Makefile.in b/src/lib/kadm5/clnt/Makefile.in
 @@ -2,7 +2,7 @@
  BUILDTOP=$(REL)..$(S)..$(S)..
  LOCALINCLUDES = -I$(BUILDTOP)/include/kadm5
- 
+
 -LIBBASE=kadm5clnt_mit
 +LIBBASE=kadm5clnt
  LIBMAJOR=12
