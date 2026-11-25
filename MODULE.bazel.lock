@@ -588,7 +588,7 @@
   "moduleExtensions": {
     "//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "dMA6Rw+jcXh+k13uJjEi/MUdJTR4DXKxbvnie5zL6Y8=",
+        "bzlTransitiveDigest": "hN7KJR2EzVUhseKHDndZEmueVdCIV/Xqips3JZX0CGk=",
         "usagesDigest": "++covx/Ue6EFULVnJUzFJ2/TpnncaKg7EvXIHQzaPi4=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
@@ -628,6 +628,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -690,6 +692,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -724,6 +728,8 @@
               "test_tags": [
                 "manual"
               ],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }

@@ -254,6 +254,8 @@ def _cpan_dist_repo_impl(ctx):
         sha256 = ctx.attr.sha256,
         stripPrefix = strip_prefix,
     )
+    if not ctx.os.name.startswith("windows"):
+        ctx.execute(["chmod", "-R", "u+rwX", "."])
     _apply_patches(ctx)
 
     if ctx.attr.build_file:
@@ -413,6 +415,27 @@ perl_library(
         extra_cc_srcs_exclude = scan_results.cc_srcs_exclude
         extra_textual_hdrs = scan_results.textual_hdrs
 
+        # Check if any .xsi file or DBI header is needed and synthesize if missing
+        driver_xst_file = None
+        for res in ctx.attr._dbi_resources:
+            if res.name == "Driver.xst":
+                driver_xst_file = res
+                break
+
+        needs_dbi = False
+        for hdr in extra_textual_hdrs:
+            if hdr.endswith(".xsi"):
+                needs_dbi = True
+                if not ctx.path(hdr).exists and driver_xst_file:
+                    driver_name = hdr.split("/")[-1].replace(".xsi", "")
+                    content = ctx.read(driver_xst_file).replace("~DRIVER~", driver_name)
+                    ctx.file(hdr, content)
+
+        if needs_dbi or ctx.path("SQLiteXS.h").exists or ctx.path("dbdimp.h").exists:
+            for res in ctx.attr._dbi_resources:
+                if not ctx.path(res.name).exists:
+                    ctx.file(res.name, ctx.read(res))
+
         srcs_exclude_items = [
             '"_xs/**"',
             '"t/**"',
@@ -498,6 +521,8 @@ cpan_xs(
     typemaps = glob([
         "typemap",
         "**/typemap",
+        "TYPEMAP",
+        "**/TYPEMAP",
     ], allow_empty = True),
     deps = [{native_deps_str}],
 )
@@ -550,6 +575,106 @@ perl_library(
         test_tags_str = ""
 
     if t_entries:
+        services_list = ['"%s"' % s for s in ctx.attr.test_services]
+        services_list_str = ", ".join(services_list)
+        if ctx.attr.test_services:
+            service_setup_code = """
+my @services = ({services_list_str});
+my %KNOWN_SERVICES = (
+    'redis' => {{
+        port => 6379,
+        image => 'redis:alpine',
+        cmd => 'docker run -d --rm --name %s -p 6379:6379 redis:alpine',
+    }},
+    'memcached' => {{
+        port => 11211,
+        image => 'memcached:alpine',
+        cmd => 'docker run -d --rm --name %s -p 11211:11211 memcached:alpine',
+    }},
+    'mysql' => {{
+        port => 3306,
+        image => 'mysql:8.0',
+        cmd => 'docker run -d --rm --name %s -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=test mysql:8.0',
+    }},
+    'postgres' => {{
+        port => 5432,
+        image => 'postgres:alpine',
+        cmd => 'docker run -d --rm --name %s -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_DB=test postgres:alpine',
+    }},
+    'postgresql' => {{
+        port => 5432,
+        image => 'postgres:alpine',
+        cmd => 'docker run -d --rm --name %s -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_DB=test postgres:alpine',
+    }},
+    'cassandra' => {{
+        port => 9042,
+        image => 'cassandra:latest',
+        cmd => 'docker run -d --rm --name %s -p 9042:9042 cassandra:latest',
+    }},
+    'elasticsearch' => {{
+        port => 9200,
+        image => 'elasticsearch:7.17.10',
+        cmd => 'docker run -d --rm --name %s -p 9200:9200 -e discovery.type=single-node -e xpack.security.enabled=false elasticsearch:7.17.10',
+    }},
+);
+
+my @started_containers;
+if (@services) {{
+    require IO::Socket::INET;
+    for my $svc (@services) {{
+        my $info = $KNOWN_SERVICES{{$svc}};
+        next unless $info;
+        my $port = $info->{{port}};
+        my $is_open = sub {{
+            my $sock = IO::Socket::INET->new(
+                PeerAddr => '127.0.0.1',
+                PeerPort => $port,
+                Proto    => 'tcp',
+                Timeout  => 1,
+            );
+            if ($sock) {{
+                close $sock;
+                return 1;
+            }}
+            return 0;
+        }};
+
+        if (!$is_open->()) {{
+            my $docker_ok = system("docker info >/dev/null 2>&1") == 0;
+            if ($docker_ok) {{
+                my $cname = "cpan_${{svc}}_" . $$ . "_" . int(rand(100000));
+                my $cmd = sprintf($info->{{cmd}}, $cname);
+                system("$cmd >/dev/null 2>&1");
+                push @started_containers, $cname;
+
+                for (1..30) {{
+                    last if $is_open->();
+                    sleep 1;
+                }}
+            }}
+        }}
+    }}
+}}
+
+my $cleanup = sub {{
+    for my $c (@started_containers) {{
+        system("docker stop $c >/dev/null 2>&1");
+    }}
+}};
+
+$SIG{{INT}} = sub {{ $cleanup->(); exit 1; }};
+$SIG{{TERM}} = sub {{ $cleanup->(); exit 1; }};
+
+if (@started_containers) {{
+    system($^X, @extra_flags, @inc_flags, $target_test, @ARGV);
+    my $exit_code = $? >> 8;
+    $cleanup->();
+    exit $exit_code;
+}}
+""".format(services_list_str = services_list_str)
+        else:
+            service_setup_code = ""
+
         test_runner_content = """#!/usr/bin/env perl
 use strict;
 use warnings;
@@ -569,28 +694,29 @@ my $target_test = File::Spec->file_name_is_absolute($test_file)
 
 die "Test file '$target_test' does not exist in $dist_dir\\n" unless -f $target_test;
 
-$ENV{PERL5LIB} = join(':', @INC);
-$ENV{PERL_USE_UNSAFE_INC} = 1;
+$ENV{{PERL5LIB}} = join(':', @INC);
+$ENV{{PERL_USE_UNSAFE_INC}} = 1;
 
 my @extra_flags;
-if (open my $fh, '<', $target_test) {
+if (open my $fh, '<', $target_test) {{
     my $first_line = <$fh>;
     close $fh;
-    if (defined $first_line && $first_line =~ m{^#!\\s*\\S*perl\\S*(?:\\s+(.*?))?\\s*$}) {
+    if (defined $first_line && $first_line =~ m{{^#!\\s*\\S*perl\\S*(?:\\s+(.*?))?\\s*$}}) {{
         my $opts = $1 // '';
         $opts =~ s/#.*//;
-        for my $flag (split ' ', $opts) {
-            if ($flag =~ /^-[a-zA-Z0-9]+$/) {
+        for my $flag (split ' ', $opts) {{
+            if ($flag =~ /^-[a-zA-Z0-9]+$/) {{
                 push @extra_flags, $flag;
-            }
-        }
-    }
-}
+            }}
+        }}
+    }}
+}}
 
-my @inc_flags = map { "-I$_" } @INC;
+my @inc_flags = map {{ "-I$_" }} @INC;
+{service_setup_code}
 exec $^X, @extra_flags, @inc_flags, $target_test, @ARGV
     or die "Failed to exec $^X: $!\\n";
-"""
+""".format(service_setup_code = service_setup_code)
         ctx.file("_test_runner.pl", test_runner_content)
 
         test_lines.append("""load("@rules_perl//perl:defs.bzl", "perl_test")
@@ -617,6 +743,24 @@ perl_library(
             dist_name = ctx.attr.dist_name,
             test_deps_str = test_deps_str,
         ))
+
+        test_exec_props = dict(ctx.attr.test_exec_properties)
+        if ctx.attr.test_services:
+            if "workload-isolation-type" not in test_exec_props:
+                test_exec_props["workload-isolation-type"] = "firecracker"
+            if "init-dockerd" not in test_exec_props:
+                test_exec_props["init-dockerd"] = "true"
+            if "test.workload-isolation-type" not in test_exec_props:
+                test_exec_props["test.workload-isolation-type"] = "firecracker"
+            if "test.init-dockerd" not in test_exec_props:
+                test_exec_props["test.init-dockerd"] = "true"
+
+        if test_exec_props:
+            target_exec_props_str = "\n    exec_properties = {\n" + ",\n".join(['        "%s": "%s"' % (k, v) for k, v in test_exec_props.items()]) + ",\n    },"
+        else:
+            target_exec_props_str = ""
+
+        test_size = "medium" if ctx.attr.test_services else "small"
 
         any_manual = False
         all_manual = len(t_entries) > 0
@@ -665,7 +809,7 @@ perl_library(
 
             test_lines.append("""perl_test(
     name = "{test_target}",
-    size = "small",
+    size = "{test_size}",
     srcs = ["_test_runner.pl"],
     args = ["{rel_path}"],
     data = glob(
@@ -677,13 +821,15 @@ perl_library(
             "_xs/**",
         ],
         allow_empty = True,
-    ),{target_tags_str}
+    ),{target_exec_props_str}{target_tags_str}
     deps = [":{dist_name}_test_lib"],
 )
 """.format(
                 test_target = test_target,
+                test_size = test_size,
                 rel_path = rel_path,
                 dist_name = ctx.attr.dist_name,
+                target_exec_props_str = target_exec_props_str,
                 target_tags_str = target_tags_str,
             ))
 
@@ -831,6 +977,26 @@ cpan_dist_repo = repository_rule(
         "test_tags": attr.string_list(
             doc = "Optional tags to add to generated test targets.",
             default = [],
+        ),
+        "test_services": attr.string_list(
+            doc = "Optional list of containerized services to start before test runs.",
+            default = [],
+        ),
+        "test_exec_properties": attr.string_dict(
+            doc = "Optional execution properties for generated test targets.",
+            default = {},
+        ),
+        "_dbi_resources": attr.label_list(
+            default = [
+                Label("//cpan/resources/dbi:DBIXS.h"),
+                Label("//cpan/resources/dbi:Driver.xst"),
+                Label("//cpan/resources/dbi:Driver_xst.h"),
+                Label("//cpan/resources/dbi:dbd_xsh.h"),
+                Label("//cpan/resources/dbi:dbi_sql.h"),
+                Label("//cpan/resources/dbi:dbipport.h"),
+                Label("//cpan/resources/dbi:dbivport.h"),
+                Label("//cpan/resources/dbi:dbixs_rev.h"),
+            ],
         ),
         "extra_tags": attr.string_list(
             doc = "Optional target tags to add to generated BUILD targets.",

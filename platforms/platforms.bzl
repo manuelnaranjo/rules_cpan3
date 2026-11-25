@@ -18,3 +18,8 @@ RBE_PLATFORMS = {
     "linux_arm64": "//platforms:rbe_linux_arm64",
     "linux_x86_64": "//platforms:rbe_linux_x86_64",
 }
+
+RBE_DOCKERD_PLATFORMS = {
+    "linux_arm64": "//platforms:rbe_linux_arm64_dockerd",
+    "linux_x86_64": "//platforms:rbe_linux_x86_64_dockerd",
+}

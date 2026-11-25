@@ -188,6 +188,14 @@ def _cpan_impl(module_ctx):
 
                 specific_manual = list(dist_manual_tests.get(dist_name, []))
 
+                test_services = []
+                test_exec_properties = {}
+                if annot:
+                    if hasattr(annot, "test_services") and annot.test_services:
+                        test_services = list(annot.test_services)
+                    if hasattr(annot, "test_exec_properties") and annot.test_exec_properties:
+                        test_exec_properties = dict(annot.test_exec_properties)
+
                 cpan_dist_repo(
                     name = repo_name,
                     dist_name = dist_name,
@@ -212,6 +220,8 @@ def _cpan_impl(module_ctx):
                     extra_tags = tags,
                     test_deps = test_deps,
                     test_tags = dist_test_tags,
+                    test_services = test_services,
+                    test_exec_properties = test_exec_properties,
                     manual_tests = specific_manual,
                     strip_prefix = strip_prefix,
                 )
@@ -327,6 +337,14 @@ annotation_tag = tag_class(
         "test_module": attr.string(
             doc = "Perl package to load in generated module test (defaults to primary module).",
             default = "",
+        ),
+        "test_services": attr.string_list(
+            doc = "Containerized services required for unit testing (e.g. ['redis', 'memcached', 'mysql']).",
+            default = [],
+        ),
+        "test_exec_properties": attr.string_dict(
+            doc = "Execution properties for generated test targets (e.g. {'workload-isolation-type': 'firecracker'}).",
+            default = {},
         ),
         "test_tags": attr.string_list(
             doc = "Bazel tags to add to generated test targets.",

@@ -21,7 +21,12 @@ common:rbe --bes_results_url=https://app.buildbuddy.io/invocation/
 # Remote execution properties compatible with hermetic toolchains (LLVM + Perl)
 common:rbe --remote_default_exec_properties=container-image=docker://gcr.io/flame-public/rbe-ubuntu22-04:latest
 common:rbe --remote_default_exec_properties=OSFamily=Linux
-common:rbe --extra_execution_platforms=@rules_cpan//platforms:rbe_linux_x86_64
+common:rbe --extra_execution_platforms=@rules_cpan//platforms:rbe_linux_x86_64,@rules_cpan//platforms:rbe_linux_x86_64_dockerd
+
+# BuildBuddy RBE configuration with Firecracker and dockerd
+common:rbe-dockerd --config=rbe
+common:rbe-dockerd --platforms=@rules_cpan//platforms:rbe_linux_x86_64_dockerd
+common:rbe-dockerd --extra_execution_platforms=@rules_cpan//platforms:rbe_linux_x86_64_dockerd
 
 # Execution and caching optimizations
 common:rbe --remote_download_outputs=minimal

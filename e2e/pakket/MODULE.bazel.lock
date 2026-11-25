@@ -641,7 +641,7 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "V2ecd4/i3wB0ecJAo699Abp82wgJwn6X0NecDe24O5A=",
+        "bzlTransitiveDigest": "hN7KJR2EzVUhseKHDndZEmueVdCIV/Xqips3JZX0CGk=",
         "usagesDigest": "AZiTSSI/S3aboiSnZTLjFR0xJnbyVgfjNQ++2MF8ZaM=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
@@ -684,6 +684,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -720,6 +722,8 @@
                 "@cpan__Module-Build//:Module-Build"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -778,6 +782,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/basic.t",
                 "t/simple-version.t",
@@ -826,6 +832,8 @@
                 "@cpan__Test-Warn//:Test-Warn"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/00compile.t",
                 "t/Any.t",
@@ -865,6 +873,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -908,6 +918,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -940,6 +952,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -977,6 +991,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1009,6 +1025,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1041,6 +1059,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1073,6 +1093,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1106,6 +1128,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1148,6 +1172,8 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1186,6 +1212,8 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1220,6 +1248,8 @@
                 "@cpan__B-COW//:B-COW"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1252,6 +1282,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1293,6 +1325,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1329,6 +1363,8 @@
               "test_tags": [
                 "manual"
               ],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1364,6 +1400,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1425,6 +1463,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/000.2-warn.t",
                 "t/026-caller_message.t"
@@ -1467,6 +1507,8 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1499,6 +1541,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1533,6 +1577,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1570,6 +1616,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1603,6 +1651,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1639,6 +1689,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1674,6 +1726,8 @@
                 "@cpan__Test-Requires//:Test-Requires"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1710,6 +1764,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1743,6 +1799,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1776,6 +1834,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1811,6 +1871,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1845,6 +1907,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1883,6 +1947,8 @@
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1926,6 +1992,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1962,6 +2030,8 @@
                 "@cpan__Module-Build//:Module-Build"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -1994,6 +2064,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2030,6 +2102,8 @@
                 "@cpan__File-ShareDir-Install//:File-ShareDir-Install"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/00_prereqs.t",
                 "t/02_main.t",
@@ -2066,6 +2140,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2098,6 +2174,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/file_which.t"
               ],
@@ -2134,6 +2212,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2166,6 +2246,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2207,6 +2289,8 @@
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2252,6 +2336,8 @@
                 "@cpan__Devel-CheckBin//:Devel-CheckBin"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2285,6 +2371,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2317,6 +2405,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2351,6 +2441,8 @@
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2385,6 +2477,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2428,6 +2522,8 @@
                 "@cpan__Readonly//:Readonly"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2460,6 +2556,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2494,6 +2592,8 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2543,6 +2643,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2578,6 +2680,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2640,6 +2744,8 @@
                 "@cpan__Dist-CheckConflicts//:Dist-CheckConflicts"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2676,6 +2782,8 @@
                 "@cpan__Test-Pod//:Test-Pod"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2708,6 +2816,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2760,6 +2870,8 @@
               "test_tags": [
                 "manual"
               ],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2800,6 +2912,8 @@
                 "@cpan__ExtUtils-InstallPaths//:ExtUtils-InstallPaths"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2838,6 +2952,8 @@
                 "@cpan__File-pushd//:File-pushd"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2870,6 +2986,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2908,6 +3026,8 @@
                 "@cpan__Test-Requires//:Test-Requires"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2942,6 +3062,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2974,6 +3096,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3009,6 +3133,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3500,6 +3626,8 @@
                 "@cpan__Dist-CheckConflicts//:Dist-CheckConflicts"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/attributes/attribute_delegation.t",
                 "t/basics/override_and_foreign_classes.t"
@@ -3549,6 +3677,8 @@
                 "@cpan__Module-Build-Tiny//:Module-Build-Tiny"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3590,6 +3720,8 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3624,6 +3756,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3663,6 +3797,8 @@
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3704,6 +3840,8 @@
                 "@cpan__Dist-CheckConflicts//:Dist-CheckConflicts"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/warnings-taint.t"
               ],
@@ -3741,6 +3879,8 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3773,6 +3913,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3808,6 +3950,8 @@
                 "@cpan__Test-LeakTrace//:Test-LeakTrace"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3849,6 +3993,8 @@
                 "@cpan__Module-Build//:Module-Build"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3890,6 +4036,8 @@
                 "@cpan__Test2-Plugin-NoWarnings//:Test2-Plugin-NoWarnings"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3923,6 +4071,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3960,6 +4110,8 @@
                 "@cpan__Module-Build-Tiny//:Module-Build-Tiny"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -3993,6 +4145,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4025,6 +4179,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4058,6 +4214,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4090,6 +4248,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4122,6 +4282,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4209,6 +4371,8 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4243,6 +4407,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4280,6 +4446,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4312,6 +4480,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4344,6 +4514,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4376,6 +4548,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4408,6 +4582,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4441,6 +4617,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4473,6 +4651,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4508,6 +4688,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4590,6 +4772,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4624,6 +4808,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4658,6 +4844,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4692,6 +4880,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4725,6 +4915,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4757,6 +4949,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4789,6 +4983,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -4821,6 +5017,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5053,6 +5251,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/Test2/behavior/Taint.t"
               ],
@@ -5089,6 +5289,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5122,6 +5324,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5154,6 +5358,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5190,6 +5396,8 @@
                 "@cpan__Module-Pluggable//:Module-Pluggable"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5222,6 +5430,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5254,6 +5464,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5338,6 +5550,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [
                 "t/20-modules/*",
                 "t/21-types/*",
@@ -5380,6 +5594,8 @@
                 "@cpan__File-pushd//:File-pushd"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5418,6 +5634,8 @@
               "test_tags": [
                 "manual"
               ],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5452,6 +5670,8 @@
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5484,6 +5704,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5526,6 +5748,8 @@
               "test_tags": [
                 "manual"
               ],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5560,6 +5784,8 @@
               "test_tags": [
                 "manual"
               ],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5597,6 +5823,8 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -5632,6 +5860,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7210,6 +7440,8 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7244,6 +7476,8 @@
               "test_tags": [
                 "manual"
               ],
+              "test_services": [],
+              "test_exec_properties": {},
               "manual_tests": [],
               "strip_prefix": ""
             }
