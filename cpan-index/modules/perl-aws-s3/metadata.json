@@ -7,7 +7,6 @@
         }
     ],
     "versions": [
-        "2.00.cpan1",
         "2.00.cpan2"
     ],
     "yanked_versions": {}

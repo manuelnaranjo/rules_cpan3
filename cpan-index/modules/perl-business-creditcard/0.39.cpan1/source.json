@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IV/IVAN/Business-CreditCard-0.39.tar.gz",
-    "integrity": "sha256-x8imUtKXfIMZ6obNXhxb5RvUpr/Del7FzA30NF/0UKI=",
-    "strip_prefix": "Business-CreditCard-0.39",
-    "overlay": {
-        "BUILD.bazel": "sha256-p+I5pA2NFDT4vm4ySpRzK5lSJEwXuCBdhK6WUcszsM8="
-    }
-}

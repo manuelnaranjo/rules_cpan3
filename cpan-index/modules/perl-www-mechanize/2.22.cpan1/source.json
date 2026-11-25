@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/WWW-Mechanize-2.22.tar.gz",
-    "integrity": "sha256-LtKMvupU3kDQjojrUvTdX8sFBi77ay/rnag3bKQwjmA=",
-    "strip_prefix": "WWW-Mechanize-2.22",
-    "overlay": {
-        "BUILD.bazel": "sha256-gXDYAiQyIt260lpe2fE8VLdWrQwwZt6uFvUk1Xy26sg="
-    }
-}

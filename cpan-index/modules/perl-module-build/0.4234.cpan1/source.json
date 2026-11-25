@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz",
-    "integrity": "sha256-Zq6sYSdBi+XkcerTdEZIx2a9AUgoJcW2ZlJnXyvIao8=",
-    "strip_prefix": "Module-Build-0.4234",
-    "overlay": {
-        "BUILD.bazel": "sha256-gpcPyXFrRP2FN8z+f8Na9qOtgdPescGvV+Z5UfXso5g="
-    }
-}

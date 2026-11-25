@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PM/PMQS/IO-Compress-2.225.tar.gz",
-    "integrity": "sha256-UkQnm8WqKWN+THf0W15U2byMKeLwfSIYB4PMewbli18=",
-    "strip_prefix": "IO-Compress-2.225",
-    "overlay": {
-        "BUILD.bazel": "sha256-eViy9wXYMVlHpiUD89cms8rRjoSPHFAhAbhpimJ3zhs="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-Simple-2.218.tar.gz",
-    "integrity": "sha256-Lc4daP3pnVPbnKQ+IRtpsWm6Lvrs+HpVyzOpM2BHyW0=",
-    "strip_prefix": "Email-Simple-2.218",
-    "overlay": {
-        "BUILD.bazel": "sha256-HyZUFykmvYh4FZyECXplTXBruCp3Xw9S9B8vyDEjmFg="
-    }
-}

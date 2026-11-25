@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DE/DENIK/Lingua-Identify-CLD2-0.03.tar.gz",
-    "integrity": "sha256-y2Wtp9AX2zHdvjSrGd4WazHvQOC8V291g5oHPDXitgM=",
-    "strip_prefix": "Lingua-Identify-CLD2-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-uHhNl45/kn58j09pwCm/oxNySS6Uz4nkUlHbCpQZ2nc="
-    }
-}

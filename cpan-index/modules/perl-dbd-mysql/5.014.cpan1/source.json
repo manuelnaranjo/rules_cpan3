@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN/DBD-mysql-5.014.tar.gz",
-    "integrity": "sha256-xf7lIH5qNA5Zz6Z98hFpgnH3tMiF90DlK7XCw6EN9Vw=",
-    "strip_prefix": "DBD-mysql-5.014",
-    "overlay": {
-        "BUILD.bazel": "sha256-mT8P5oYImzr6KjdYyUBN051dB1JWWwQl2sVlu2GbMRc="
-    }
-}

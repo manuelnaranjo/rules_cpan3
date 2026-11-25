@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GO/GONZUS/Parser-GraphQL-XS-0.000004.tar.gz",
-    "integrity": "sha256-wqxKiuxYdsyLcsURVxaqTRkSzmVhpxNyKmCu2ecnXPc=",
-    "strip_prefix": "Parser-GraphQL-XS-0.000004",
-    "overlay": {
-        "BUILD.bazel": "sha256-9fd4Ns+TMTu6R/IMhdz8VbyMzjKgXVqoQAMFea2LWRM="
-    }
-}

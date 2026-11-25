@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DB/DBOOK/Perl-Critic-Community-v1.0.4.tar.gz",
-    "integrity": "sha256-OzFiTqDPQ5K49Dl6UpUVJIgUohZml/GkU9WKtvES0gk=",
-    "strip_prefix": "Perl-Critic-Community-v1.0.4",
-    "overlay": {
-        "BUILD.bazel": "sha256-/ZwNOE6pPmCK6oD0pP+21S7AGE8NIGvUuiAxEq3vGXo="
-    }
-}

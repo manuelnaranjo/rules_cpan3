@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AG/AGJ/AnyEvent-Promise-0.02.tar.gz",
-    "integrity": "sha256-swDvteBYc1ChspNVDMB2+KcGwwWKkCQtJRUb6ZYbFQg=",
-    "strip_prefix": "AnyEvent-Promise-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-47wkdO7xt2Rj5ZE1gghPxXJ3tejyeUaT8b5zza8sPao="
-    }
-}

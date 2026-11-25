@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AM/AMIRI/Elasticsearch-Model-0.1.5.tar.gz",
-    "integrity": "sha256-TBFxZ5Gi7qhw/nbi+fBMl5RMU0Rqljx4abwzka4err4=",
-    "strip_prefix": "Elasticsearch-Model-0.1.5",
-    "overlay": {
-        "BUILD.bazel": "sha256-eL1O/7hEMhtB0gjPU4ox3003FXDFC1DJjqbkM58uaJE="
-    }
-}

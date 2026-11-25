@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/U/UM/UMEMOTO/Socket6-0.29.tar.gz",
-    "integrity": "sha256-RokV+joE3PZXT8lX7/SVkV4kVpQ0lwyR7o5OFFn8kRQ=",
-    "strip_prefix": "Socket6-0.29",
-    "overlay": {
-        "config.h": "sha256-0YytIOFfRBBj9vBF3bZ821yZipv9YbKz+ijjuCuQU1Q=",
-        "BUILD.bazel": "sha256-8Mtp95Kx4P+PDQbd/noUnN/jmLhbBImgDmhgs0XHRuY="
-    }
-}

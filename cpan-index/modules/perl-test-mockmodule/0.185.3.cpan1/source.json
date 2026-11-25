@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GF/GFRANKS/Test-MockModule-v0.185.3.tar.gz",
-    "integrity": "sha256-kubeHK9Aw41VV60hkuGjT3pRipEBvGr5U7I7z8/8UtM=",
-    "strip_prefix": "Test-MockModule-v0.185.3",
-    "overlay": {
-        "BUILD.bazel": "sha256-E2UyXY5ddtLAgX7rsi99Q/ISp9arWWwDAo4UdvAysIs="
-    }
-}

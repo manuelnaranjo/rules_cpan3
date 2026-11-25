@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OT/OTAKA/Digest-Perl-MD4-1.4.tar.gz",
-    "integrity": "sha256-k9x7sYFnmGZ5mVkMuXcZcJH4ue1EI9xo2+S9rTYaGsY=",
-    "strip_prefix": "Digest-Perl-MD4-1.4",
-    "overlay": {
-        "BUILD.bazel": "sha256-wVY/yhvyQRE7aVoTifCOUzh9kVsa/Ze65uF/gMMaRvg="
-    }
-}

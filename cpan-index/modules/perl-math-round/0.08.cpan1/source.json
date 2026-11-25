@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Math-Round-0.08.tar.gz",
-    "integrity": "sha256-e00nda07hZpf1h9/P8XPukKxoQ3whtLtFaCucSyP1AI=",
-    "strip_prefix": "Math-Round-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-uEfPTEXeEgSN8qc77AMl6x+N8rNyGkNLb1vDZIDeKIk="
-    }
-}

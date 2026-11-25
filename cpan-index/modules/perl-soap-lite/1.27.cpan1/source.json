@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PH/PHRED/SOAP-Lite-1.27.tar.gz",
-    "integrity": "sha256-41kQa6saRaFgRKTC+ASfrQNOXe0VF5kLybX42G3d0wE=",
-    "strip_prefix": "SOAP-Lite-1.27",
-    "overlay": {
-        "BUILD.bazel": "sha256-CHQhg5E8Dz7BPbF/tiDRFYYhSG469vlCVKgh8yKY1Is="
-    }
-}

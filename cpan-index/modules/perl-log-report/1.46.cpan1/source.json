@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Log-Report-1.46.tar.gz",
-    "integrity": "sha256-nVpyVj2QVjZFedAizDF8FybpBccNJvBnIOSY3AWRDoY=",
-    "strip_prefix": "Log-Report-1.46",
-    "overlay": {
-        "BUILD.bazel": "sha256-qdrMAqi/LjIoPG7cpapWa6jst3sO/tMz+BAr48LLtxc="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SC/SCHWIGON/class-methodmaker/Class-MethodMaker-2.25.tar.gz",
-    "integrity": "sha256-cL06ZZXMQOVKlSHq4yR+fWkWbmeD6l+uvVm4RTfhtYg=",
-    "strip_prefix": "Class-MethodMaker-2.25",
-    "overlay": {
-        "BUILD.bazel": "sha256-HS2DLfsGU1i+c9od1+h3pJiDwT2gn1/5OQY+q0Oag3g="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/JSON-Schema-Modern-0.654.tar.gz",
-    "integrity": "sha256-4z0I7P2yQGL6bXRywfJz6+dhEXsBzPcdcmgBjwE+Mek=",
-    "strip_prefix": "JSON-Schema-Modern-0.654",
-    "overlay": {
-        "BUILD.bazel": "sha256-gL3Viu0GxfEa7szE58QvBhushDJi/B670ave3GnmRP8="
-    }
-}

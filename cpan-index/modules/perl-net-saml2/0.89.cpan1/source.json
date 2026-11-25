@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Net-SAML2-0.89.tar.gz",
-    "integrity": "sha256-pv7LKhRlAXwo9TJDG3evOghcvBhMgQRmmj0Q4C61i2I=",
-    "strip_prefix": "Net-SAML2-0.89",
-    "overlay": {
-        "BUILD.bazel": "sha256-YzcHGUytV8Qqt4WcR/g+GlUTEtXe4BHn5d1lF/Tt8Ko="
-    }
-}

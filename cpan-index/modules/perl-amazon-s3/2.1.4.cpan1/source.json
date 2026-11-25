@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BI/BIGFOOT/Amazon-S3-2.1.4.tar.gz",
-    "integrity": "sha256-7Mifp42t0aNUUP+3MHEsODszs29LyEszmtzLptoDR/s=",
-    "strip_prefix": "Amazon-S3-2.1.4",
-    "overlay": {
-        "BUILD.bazel": "sha256-aSfcx3e0/UYpID8htuM+yy3Qk8XoObO/5BvOus9Vugw="
-    }
-}

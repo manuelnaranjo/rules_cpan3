@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Data-Consumer-0.17.tar.gz",
-    "integrity": "sha256-eZujX6D+BdzdoDq4vtb+fsbYWeGdDWUliWrXM88qPVs=",
-    "strip_prefix": "Data-Consumer-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-44sohS6VPRk9sRN2fLXnurkowBtHlJFL0tQyuYRUWbc="
-    }
-}

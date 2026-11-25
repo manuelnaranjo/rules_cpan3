@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Types-Serialiser-1.01.tar.gz",
-    "integrity": "sha256-+McXOwkU0OPZVyggd7Nm8MjHAlZxXq7zKY/zK5I4ioA=",
-    "strip_prefix": "Types-Serialiser-1.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-qDLPN7FbdO2huIxXWDdVbNy+lIaL8o1qrw3YWUaHcEQ="
-    }
-}

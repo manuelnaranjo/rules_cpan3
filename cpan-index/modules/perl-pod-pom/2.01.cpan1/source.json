@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Pod-POM-2.01.tar.gz",
-    "integrity": "sha256-G1D7qbvd4+rRkr7roOrd0MYU46+xdD+m//gF9XxW9/Q=",
-    "strip_prefix": "Pod-POM-2.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-egRgFQrJux335sM/fXcYOry0V+XllcWH+Lt147sEtLw="
-    }
-}

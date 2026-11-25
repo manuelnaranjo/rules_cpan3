@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SA/SAXJAZMAN/protobuf/Google-ProtocolBuffers-0.12.tar.gz",
-    "integrity": "sha256-s4RJxguaJxLd5IFIXMerA7KgrBw/1ICzhT5BEawpTXE=",
-    "strip_prefix": "Google-ProtocolBuffers-0.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-QCdt6g48Lqi9edCnb7tbIiSpX/e+qtwiqhRO7JZQqjc="
-    }
-}

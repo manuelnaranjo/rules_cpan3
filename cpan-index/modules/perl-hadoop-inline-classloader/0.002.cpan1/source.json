@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Hadoop-Inline-ClassLoader-0.002.tar.gz",
-    "integrity": "sha256-r+cFAf19S4e5UblUSgNLRcMd5bO8237Q5YlZNO4jhqk=",
-    "strip_prefix": "Hadoop-Inline-ClassLoader-0.002",
-    "overlay": {
-        "BUILD.bazel": "sha256-ZPctGmRSk+15C8d9LgAM7BKa8uwlYjJ0MXAzKSzyLzA="
-    }
-}

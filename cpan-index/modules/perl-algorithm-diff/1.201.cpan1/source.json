@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Algorithm-Diff-1.201.tar.gz",
-    "integrity": "sha256-ACLaWYJkXZ7wIH8+ue9j5w6XE+0jQO17OFB3mw2EKn0=",
-    "strip_prefix": "Algorithm-Diff-1.201",
-    "overlay": {
-        "BUILD.bazel": "sha256-qMlHwrPkdVOy0a3dmb5TEp6DoDyF3PJx1bPk8BesO78="
-    }
-}

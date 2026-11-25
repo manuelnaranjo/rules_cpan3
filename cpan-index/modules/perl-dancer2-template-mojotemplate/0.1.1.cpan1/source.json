@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/V/VE/VEROLOM/Dancer2-Template-MojoTemplate-0.1.1.tar.gz",
-    "integrity": "sha256-AqUA+RxOwOXyP8zI/dnriikNP6XueeNWF2DIENyeZ0Q=",
-    "strip_prefix": "Dancer2-Template-MojoTemplate-0.1.1",
-    "overlay": {
-        "BUILD.bazel": "sha256-lHFnAV3ZKXFaKY4nW7lf75784K4ARWcG/nUZPrWODII="
-    }
-}

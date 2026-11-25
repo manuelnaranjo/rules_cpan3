@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BE/BENNING/LWP-Protocol-connect-6.09.tar.gz",
-    "integrity": "sha256-nyUjlHdeI6pCwxdmEeWTBjirUo1RkBELRzGqWwvzWhU=",
-    "strip_prefix": "LWP-Protocol-connect-6.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-8E+7zjtnJhr0T4voF/P7QirF24JFjeH/cegoC+cLvW4="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Mail-Box-4.02.tar.gz",
-    "integrity": "sha256-jwZN8O0In0fxkiwRznRoeE8DezUZaK3RkWkqYUydXyU=",
-    "strip_prefix": "Mail-Box-4.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-lk+10EMksdQ6em1NyG4L6PJ4qnQTOh1H8qm0xEgiKa0="
-    }
-}

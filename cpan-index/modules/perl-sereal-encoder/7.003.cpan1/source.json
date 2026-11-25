@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Sereal-Encoder-7.003.tar.gz",
-    "integrity": "sha256-myu+JBtLzZ7XVoUv+309QOPJqSq50H58NEoZ3NHNHM4=",
-    "strip_prefix": "Sereal-Encoder-7.003",
-    "overlay": {
-        "BUILD.bazel": "sha256-M6Gt8Hz+0mS8qF6apF+n+E3mPSg0TIq3JgUTbZe+bOQ="
-    }
-}

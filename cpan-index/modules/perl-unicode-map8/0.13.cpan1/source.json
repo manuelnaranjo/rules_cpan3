@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/Unicode-Map8-0.13.tar.gz",
-    "integrity": "sha256-rx6FuOutk6nFIL8IUZSN07ps8RM2dkiRzititrapK24=",
-    "strip_prefix": "Unicode-Map8-0.13",
-    "overlay": {
-        "BUILD.bazel": "sha256-ApHQJQhVLggd1mtZdO8EzZfpgom/fVL5T86mWcdWwD4="
-    }
-}

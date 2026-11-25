@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Log-Log4perl-Layout-JSON-0.61.tar.gz",
-    "integrity": "sha256-TmD+/otrXmJBXPY0Ul6troBhiusL81Miajs7aOqt6UM=",
-    "strip_prefix": "Log-Log4perl-Layout-JSON-0.61",
-    "overlay": {
-        "BUILD.bazel": "sha256-yl7mcq6cQQeAvRuqHzzAkqtWvs955S8pApqpMH63lEU="
-    }
-}

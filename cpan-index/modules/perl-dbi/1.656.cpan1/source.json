@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HM/HMBRAND/DBI-1.656.tgz",
-    "integrity": "sha256-q18rmu8AlR7UWYcj1hMaALA+aBk0eN1eXyEQFVIKbvA=",
-    "strip_prefix": "DBI-1.656",
-    "overlay": {
-        "BUILD.bazel": "sha256-rmqa2L8345H0VNfcNU1wfOcca2Lce+1oNDnm1K0riSQ="
-    }
-}

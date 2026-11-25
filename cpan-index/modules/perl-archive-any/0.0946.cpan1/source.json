@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Archive-Any-0.0946.tar.gz",
-    "integrity": "sha256-DVe82s4g65B/9vAP76EgoPb9BapjjF0z7wqL6hVznYQ=",
-    "strip_prefix": "Archive-Any-0.0946",
-    "overlay": {
-        "BUILD.bazel": "sha256-qhVW7OhGoQh62//o9hsV9lsGbZ57/cdVG0mnUBGQACE="
-    }
-}

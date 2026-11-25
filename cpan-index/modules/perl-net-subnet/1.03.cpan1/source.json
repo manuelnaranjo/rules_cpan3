@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JU/JUERD/Net-Subnet-1.03.tar.gz",
-    "integrity": "sha256-El5ttkyYAmQ5+bWFEV+U9CMVox2PFspj0Mk5q2YBmvo=",
-    "strip_prefix": "Net-Subnet-1.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-9L7cNbl1OBUpF7sq4ElqKaotxGRQJOtUmdAsM4TfVdw="
-    }
-}

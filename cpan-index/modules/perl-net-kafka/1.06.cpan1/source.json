@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AM/AMIRONOV/Net-Kafka-1.06.tar.gz",
-    "integrity": "sha256-AiBU+boHL30kN0YgQdONE3ZAnfU6FeBqLnMC0MgAoRc=",
-    "strip_prefix": "Net-Kafka-1.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-NXBrPPvpGdRrsGdq610J+v8lz15WeKPXehaFkew5sPE="
-    }
-}
