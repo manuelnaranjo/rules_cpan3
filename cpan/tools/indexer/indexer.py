@@ -193,11 +193,12 @@ class IndexManager:
         src_module = src_dir / "MODULE.bazel"
         if src_module.exists():
             content = src_module.read_text(encoding="utf-8")
-            # Replace version = "..." with target_version
+            # Replace module version = "..." with target_version (only the first match for the module itself)
             updated_content = re.sub(
                 r'version\s*=\s*"[^"]+"',
                 f'version = "{target_version}"',
                 content,
+                count=1,
             )
             (dest_dir / "MODULE.bazel").write_text(updated_content, encoding="utf-8")
         else:
@@ -263,6 +264,7 @@ class IndexManager:
                 r'version\s*=\s*"[^"]+"',
                 f'version = "{new_version}"',
                 content,
+                count=1,
             )
             dest_module.write_text(updated, encoding="utf-8")
 
@@ -295,14 +297,39 @@ class IndexManager:
             tmp_path = Path(tmpdir)
             tar_file = archive_path
             if not tar_file or not tar_file.exists():
-                tar_file = tmp_path / "dist.tar.gz"
-                logger.info("Downloading %s from %s ...", dist_name, archive_url)
-                req = urllib.request.Request(
-                    archive_url,
-                    headers={"User-Agent": "rules_cpan/indexer"},
-                )
-                with urllib.request.urlopen(req, timeout=60) as resp:
-                    tar_file.write_bytes(resp.read())
+                cache_dirs = [
+                    Path(os.environ.get("RULES_CPAN_CACHE_DIR", "")),
+                    Path.home() / ".cache" / "rules_cpan" / "dist",
+                ]
+                filename = archive_url.split("/")[-1] if archive_url else ""
+                found_in_cache = False
+                if filename:
+                    for c_dir in cache_dirs:
+                        if str(c_dir) and (c_dir / filename).exists():
+                            tar_file = c_dir / filename
+                            found_in_cache = True
+                            break
+
+                if not found_in_cache:
+                    tar_file = tmp_path / "dist.tar.gz"
+                    logger.info("Downloading %s from %s ...", dist_name, archive_url)
+                    req = urllib.request.Request(
+                        archive_url,
+                        headers={"User-Agent": "rules_cpan/indexer"},
+                    )
+                    with urllib.request.urlopen(req, timeout=60) as resp:
+                        content = resp.read()
+                        tar_file.write_bytes(content)
+                        default_cache = Path.home() / ".cache" / "rules_cpan" / "dist"
+                        if default_cache.exists() and filename:
+                            try:
+                                (default_cache / filename).write_bytes(content)
+                            except Exception:
+                                pass
+
+            if not archive_sha256 and tar_file and tar_file.exists():
+                import hashlib
+                archive_sha256 = hashlib.sha256(tar_file.read_bytes()).hexdigest()
 
             extract_dir = tmp_path / "extract"
             extract_dir.mkdir(parents=True, exist_ok=True)

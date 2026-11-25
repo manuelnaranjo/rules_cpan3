@@ -344,8 +344,9 @@ class HeuristicsEngine:
         # Search for preprocessor defines: -D...
         define_matches = re.findall(r"-D([A-Za-z0-9_]+(?:=[^\s\'\"]+)?)", script_text)
         for define in define_matches:
-            if define not in inspection.defines:
-                inspection.defines.append(define)
+            clean_def = re.sub(r'[\'\"\\/]+$', '', define).strip()
+            if clean_def and clean_def not in inspection.defines:
+                inspection.defines.append(clean_def)
 
         # Attempt build system dry-run if Makefile.PL exists
         if not makefile_pl.exists():
@@ -353,11 +354,17 @@ class HeuristicsEngine:
 
         existing_files = {p for p in extract_dir.rglob("*") if p.is_file()}
         try:
+            env = dict(os.environ)
+            env["PERL_MM_USE_DEFAULT"] = "1"
+            env["AUTOMATED_TESTING"] = "1"
+            env["NONINTERACTIVE_TESTING"] = "1"
             subprocess.run(
                 ["perl", "Makefile.PL"],
                 cwd=str(extract_dir),
                 capture_output=True,
-                timeout=10,
+                stdin=subprocess.DEVNULL,
+                timeout=5,
+                env=env,
             )
         except Exception:
             return
@@ -394,12 +401,12 @@ class HeuristicsEngine:
     ) -> str:
         """Generates BUILD.bazel content for overlay/BUILD.bazel."""
         dist = inspection.dist_name
-        runtime_deps = runtime_deps or []
-        test_deps = test_deps or []
+        valid_runtime_deps = [d for d in (runtime_deps or []) if d.startswith(("@", ":"))]
+        valid_test_deps = [d for d in (test_deps or []) if d.startswith(("@", ":"))]
 
         cpan_deps_str = ""
-        if runtime_deps:
-            items = [f'"{d}"' for d in runtime_deps]
+        if valid_runtime_deps:
+            items = [f'"{d}"' for d in valid_runtime_deps]
             cpan_deps_str = "\n        " + ",\n        ".join(items) + ",\n    "
 
         # Build test rules if t/ directory has test files
@@ -426,7 +433,7 @@ class HeuristicsEngine:
 )""")
 
             tests_str = ",\n        ".join(test_target_names)
-            test_deps_items = [f'"{d}"' for d in test_deps]
+            test_deps_items = [f'"{d}"' for d in valid_test_deps]
             test_deps_str = (",\n        " + ",\n        ".join(test_deps_items)) if test_deps_items else ""
 
             test_content = f"""
@@ -537,8 +544,8 @@ cpan_xs(
         "**/*.inc",
     ], allow_empty = True),
     typemaps = glob([
-        "typemap",
-        "**/typemap",
+        "*typemap*",
+        "**/*typemap*",
     ], allow_empty = True),
     deps = [{native_deps_str}],
 )
