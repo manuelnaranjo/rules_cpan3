@@ -237,7 +237,27 @@ class IndexManager:
 
         # 3. Update source.json
         archive_sri = hex_to_sri(archive_sha256)
-        strip_prefix = self._compute_strip_prefix(archive_url, dist_name, upstream_version)
+        src_source_json = src_dir / "source.json"
+        preserved_prefix = None
+        if src_source_json.exists():
+            try:
+                src_data = json.loads(src_source_json.read_text(encoding="utf-8"))
+                old_prefix = src_data.get("strip_prefix", "")
+                if old_prefix:
+                    if old_prefix.endswith(f"-{source_version}"):
+                        stem = old_prefix[:-len(f"-{source_version}")]
+                        preserved_prefix = f"{stem}-{upstream_version}"
+                    elif old_prefix.endswith(source_version):
+                        stem = old_prefix[:-len(source_version)]
+                        preserved_prefix = f"{stem}{upstream_version}"
+            except Exception:
+                pass
+
+        strip_prefix = (
+            preserved_prefix
+            if preserved_prefix
+            else self._compute_strip_prefix(archive_url, dist_name, upstream_version)
+        )
 
         source_data = {
             "url": archive_url,
@@ -523,8 +543,14 @@ class IndexManager:
             archive_sri = hex_to_sri(archive_sha256)
             if generator_metadata and generator_metadata.strip_prefix:
                 strip_prefix = generator_metadata.strip_prefix
+            elif len(entries) == 1 and entries[0].is_dir():
+                strip_prefix = entries[0].name
+            elif len(entries) > 1:
+                strip_prefix = ""
             else:
-                strip_prefix = self._compute_strip_prefix(archive_url, dist_name, upstream_version)
+                strip_prefix = self._compute_strip_prefix(
+                    archive_url, dist_name, upstream_version, tar_file
+                )
             source_data = {
                 "url": archive_url,
                 "integrity": archive_sri,
@@ -541,8 +567,44 @@ class IndexManager:
         logger.info("Created new port %s %s in %s", module_name, target_version, dest_dir)
         return dest_dir
 
-    def _compute_strip_prefix(self, url: str, dist_name: str, version: str) -> str:
-        filename = url.split("/")[-1]
+    def _compute_strip_prefix(
+        self,
+        url: str,
+        dist_name: str,
+        version: str,
+        archive_path: Optional[Path] = None,
+    ) -> str:
+        if archive_path and archive_path.exists():
+            try:
+                with tarfile.open(archive_path, "r:*") as tar:
+                    top_entries = set(n.split("/")[0] for n in tar.getnames() if n)
+                    if len(top_entries) == 1:
+                        return list(top_entries)[0]
+                    if len(top_entries) > 1:
+                        return ""
+            except Exception:
+                pass
+
+        filename = url.split("/")[-1] if url else ""
+        if filename:
+            cache_dirs = [
+                Path(os.environ.get("RULES_CPAN_CACHE_DIR", "")),
+                Path.home() / ".cache" / "rules_cpan" / "dist",
+            ]
+            for c_dir in cache_dirs:
+                c_tar = c_dir / filename
+                if str(c_dir) and c_tar.exists():
+                    try:
+                        with tarfile.open(c_tar, "r:*") as tar:
+                            top_entries = set(n.split("/")[0] for n in tar.getnames() if n)
+                            if len(top_entries) == 1:
+                                return list(top_entries)[0]
+                            if len(top_entries) > 1:
+                                return ""
+                    except Exception:
+                        pass
+                    break
+
         for ext in [".tar.gz", ".tgz", ".tar.bz2", ".tbz2", ".tar.xz", ".txz", ".zip"]:
             if filename.endswith(ext):
                 return filename[: -len(ext)]
@@ -805,6 +867,11 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
         help="Regenerate BCR port from generator-metadata.yaml.",
     )
     parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Apply regeneration across all modules in cpan-index, not just those with generator-metadata.yaml.",
+    )
+    parser.add_argument(
         "--verbose",
         action="store_true",
         help="Enable debug logging output.",
@@ -847,10 +914,13 @@ def main(argv: Optional[List[str]] = None) -> int:
             print(f"[cpan_indexer] Successfully regenerated {mod_name} -> {new_ver}")
             return 0
         else:
-            # Regenerate all modules that have generator-metadata.yaml
+            # Regenerate modules
             count = 0
             for mod_entry in sorted((index_dir / "modules").iterdir()):
-                if mod_entry.is_dir() and (mod_entry / "generator-metadata.yaml").exists():
+                if not mod_entry.is_dir():
+                    continue
+                has_metadata = (mod_entry / "generator-metadata.yaml").exists()
+                if args.all or has_metadata:
                     try:
                         new_ver = indexer.index_mgr.regenerate_port(
                             module_name=mod_entry.name,
@@ -860,7 +930,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                         count += 1
                     except Exception as e:
                         logger.warning("Failed regenerating %s: %s", mod_entry.name, e)
-            print(f"[cpan_indexer] Successfully regenerated {count} modules with generator-metadata.yaml")
+            print(f"[cpan_indexer] Successfully regenerated {count} modules")
             return 0
 
     if args.lockfile:

@@ -436,6 +436,36 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
             mb_text = self.mb_path.read_text(encoding="utf-8")
             self.assertIn('bazel_dep(name = "perl-algorithm-diff", version = "1.201.cpan1")', mb_text)
 
+    def test_create_new_port_preserves_archive_prefix_case(self) -> None:
+        """Verifies that create_new_port preserves directory casing from the actual archive."""
+        import io
+        import tarfile
+
+        # Create a synthetic tarball with uppercase prefix
+        tar_buf = io.BytesIO()
+        with tarfile.open(fileobj=tar_buf, mode="w:gz") as tar:
+            ti = tarfile.TarInfo("Grpc-XS-0.38/lib/Grpc/XS.pm")
+            content = b"package Grpc::XS;\nour $VERSION = '0.38';\n1;\n"
+            ti.size = len(content)
+            tar.addfile(ti, io.BytesIO(content))
+
+        tar_bytes = tar_buf.getvalue()
+        tar_path = self.root_path / "grpc-xs-0.38.tar.gz"
+        tar_path.write_bytes(tar_bytes)
+
+        manager = IndexManager(index_dir=self.index_dir)
+        dest_dir = manager.create_new_port(
+            dist_name="grpc-xs",
+            upstream_version="0.38",
+            archive_url="https://cpan.metacpan.org/authors/id/J/JO/JOYREX/grpc-xs-0.38.tar.gz",
+            archive_sha256="",
+            archive_path=tar_path,
+            target_version="0.38.cpan1",
+        )
+
+        source_json = json.loads((dest_dir / "source.json").read_text(encoding="utf-8"))
+        self.assertEqual(source_json["strip_prefix"], "Grpc-XS-0.38")
+
 
 if __name__ == "__main__":
     unittest.main()
