@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/SOAP-WSDL",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.004.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Sereal-Decoder",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "7.003.cpan1"
+    ],
+    "yanked_versions": {}
+}

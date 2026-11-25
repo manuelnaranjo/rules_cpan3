@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/File-TreeCreate",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.0.1.cpan1"
+    ],
+    "yanked_versions": {}
+}

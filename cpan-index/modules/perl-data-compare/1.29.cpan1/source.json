@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Data-Compare-1.29.tar.gz",
+    "integrity": "sha256-U8nbO5MmPIiqo8QHLYGere0CTXo2s4wMN3N9KI1a+ow=",
+    "strip_prefix": "Data-Compare-1.29",
+    "overlay": {
+        "BUILD.bazel": "sha256-VUWHCMqoqGmb9biqXG/YAjlaYCNJF6qicc4KT1emD10="
+    }
+}

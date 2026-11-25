@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARSCHAP/perl-ldap-0.68.tar.gz",
+    "integrity": "sha256-4vOJ/j56nkthSIaSkZrXI7mPO0ebUoj2ENqownmVs1E=",
+    "strip_prefix": "perl-ldap-0.68",
+    "overlay": {
+        "BUILD.bazel": "sha256-/SYYj8IwiJvUXr9UTZGv2jr0k/q3yhZOdiVMICmMsEA="
+    }
+}

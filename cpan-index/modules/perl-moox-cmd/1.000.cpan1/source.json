@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GE/GETTY/MooX-Cmd-1.000.tar.gz",
+    "integrity": "sha256-2MDmRDHPNEe7XNaXEnfvU+NBIr0yrEKucZvbFfimDxY=",
+    "strip_prefix": "MooX-Cmd-1.000",
+    "overlay": {
+        "BUILD.bazel": "sha256-IBx0TyXEDwZM85wOFX9tmEAzk+4jqPwf2U5/JT/0Mzk="
+    }
+}

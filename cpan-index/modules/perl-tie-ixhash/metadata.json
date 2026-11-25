@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Tie-IxHash",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.23.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHANSEN/Authen-Simple-0.5.tar.gz",
+    "integrity": "sha256-As3atH+L8aHL1Mm/jSWPbQURFJnDP4MV5yRIEvcmE6o=",
+    "strip_prefix": "Authen-Simple-0.5",
+    "overlay": {
+        "BUILD.bazel": "sha256-6f+AGoc3S7GrEm6oq2iNrMltUNQ511bbJy8UgycIIRk="
+    }
+}

@@ -245,6 +245,8 @@
     "https://bcr.bazel.build/modules/libxml2/2.15.3/MODULE.bazel": "a6bffafd8aa8b0c13eaa4bf25d55be188ec8548549395f03e98c39bab264adaa",
     "https://bcr.bazel.build/modules/libxml2/2.15.4/MODULE.bazel": "8d0bca5635a3ba19dddd0fcf0578b032f3c127f597e7f6b24cec3462bf10b824",
     "https://bcr.bazel.build/modules/libxml2/2.15.4/source.json": "8495e801060e7d4edb558fa1f02ccdbc4653e572e83103b4d723c9b80bfb53b6",
+    "https://bcr.bazel.build/modules/libyaml/0.2.5/MODULE.bazel": "5da68714162d232e5ae0ebbaf060da9c889f3284cbe8fd6fad5a9a5c821f1505",
+    "https://bcr.bazel.build/modules/libyaml/0.2.5/source.json": "7183dcdb9afe15dceaa545865f13d2ce1f6f9571e40138eeb5dc7daad5feb56e",
     "https://bcr.bazel.build/modules/linux-pam/1.7.3/MODULE.bazel": "125b12dadba7279adf93908823025541c19516c4c949feaaca89901c42c13290",
     "https://bcr.bazel.build/modules/linux-pam/1.7.3/source.json": "4ff19bbad3897be9295fcf978e7a4cc56b792fea247ce7e086fbe06685ff4052",
     "https://bcr.bazel.build/modules/llvm/0.8.27/MODULE.bazel": "1abc4db629a4b3c975682b8402a5e5b6885a5dfe8e07411917ecedaf6d9529f5",

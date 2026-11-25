@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MR/MRSCOTTY/Crypt-X509-0.55.tar.gz",
+    "integrity": "sha256-FHlrEdFfdq10ROeKYZtw/92RMIaN0LANhYV5yTA4Icc=",
+    "strip_prefix": "Crypt-X509-0.55",
+    "overlay": {
+        "BUILD.bazel": "sha256-Av/yicEWOaAmkFRhIU6eTjvZdF5AsCfFXG7ZSpHJxbg="
+    }
+}

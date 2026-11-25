@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PJ/PJACKLAM/Math-BigInt-GMP-1.7003.tar.gz",
+    "integrity": "sha256-oWViiyd9HoM/W2V8qDbbgbxE4EwQfP6fW4vZR1VkLtU=",
+    "strip_prefix": "Math-BigInt-GMP-1.7003",
+    "overlay": {
+        "BUILD.bazel": "sha256-/MfcA7m1kppCiTZILnAc0lSwDVpUALgvoI+t9VBd0L0="
+    }
+}

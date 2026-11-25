@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Devel-StrictMode",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.003.cpan1"
+    ],
+    "yanked_versions": {}
+}

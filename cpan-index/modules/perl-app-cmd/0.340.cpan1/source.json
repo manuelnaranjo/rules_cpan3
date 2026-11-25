@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/App-Cmd-0.340.tar.gz",
+    "integrity": "sha256-u+6M1rMe6cKm6aEPSUFsQ400MQL1XBsOUNIOG/X0qC4=",
+    "strip_prefix": "App-Cmd-0.340",
+    "overlay": {
+        "BUILD.bazel": "sha256-q/Fh6yTXEORBTrbHA3voRvixnfZ9576jBu7SLLwmtkM="
+    }
+}

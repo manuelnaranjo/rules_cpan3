@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NK/NKH/Text-Colorizer-0.03.tar.gz",
+    "integrity": "sha256-t/fFFdi0/XYjcxXZN3mpVQRZ5CKCJKHON9zF6XZby38=",
+    "strip_prefix": "Text-Colorizer-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-3C0UowEuaAp9+peju4CsMNJXKyKWjboee4g/Uh2lQM8="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-Stuffer-0.020.tar.gz",
+    "integrity": "sha256-Ch77fy3t05BSsSb3GMotO1hFpBI6OTkv2d+gx25gV8c=",
+    "strip_prefix": "Email-Stuffer-0.020",
+    "overlay": {
+        "BUILD.bazel": "sha256-1GACpllM5CXbJbBmHA3j/aCWk7HogNc+jsHYHSf4ndk="
+    }
+}

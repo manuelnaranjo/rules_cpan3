@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/POE",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.370.cpan1"
+    ],
+    "yanked_versions": {}
+}

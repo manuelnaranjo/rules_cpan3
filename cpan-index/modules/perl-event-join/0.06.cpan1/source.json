@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/Event-Join-0.06.tar.gz",
+    "integrity": "sha256-qCAiFdEcIKeQYoa9jSM30/C1rmtBNw0roAubjRW4/zw=",
+    "strip_prefix": "Event-Join-0.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-LtJLb+IlmUrE2hGGw1jLLAxhu3wedDIojUNqbnOmWA0="
+    }
+}

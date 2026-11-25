@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Perl-Critic-StricterSubs-0.08.tar.gz",
+    "integrity": "sha256-zeFNMUMEKUdE0q3ZIzhrMEf0MLx9Cn0mZAUqTtv8KgM=",
+    "strip_prefix": "Perl-Critic-StricterSubs-0.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-GThszsHd4J9EjtsyohjO0N3DIYAxLkOFNlmX+wnuXOo="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/TAP-Harness-JUnit",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.42.cpan1"
+    ],
+    "yanked_versions": {}
+}

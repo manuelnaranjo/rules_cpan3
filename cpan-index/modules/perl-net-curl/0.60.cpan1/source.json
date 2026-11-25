@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SY/SYP/Net-Curl-0.60.tar.gz",
+    "integrity": "sha256-8ahOjvT953WciRO4fItlgreVNF1wEsrlI5Ko4VAEM/g=",
+    "strip_prefix": "Net-Curl-0.60",
+    "overlay": {
+        "BUILD.bazel": "sha256-5EPt7Ki5gn1WkEP9tz0Tz8imS3vGH23FsR6Hqng0DXg="
+    }
+}

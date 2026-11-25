@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/DBD-SQLite",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.78.cpan1"
+    ],
+    "yanked_versions": {}
+}

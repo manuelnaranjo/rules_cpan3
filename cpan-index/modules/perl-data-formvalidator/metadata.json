@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Data-FormValidator",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "4.88.cpan1"
+    ],
+    "yanked_versions": {}
+}

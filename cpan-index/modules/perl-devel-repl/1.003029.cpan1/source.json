@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Devel-REPL-1.003029.tar.gz",
+    "integrity": "sha256-fIfr2I/jq6sv+MP7aBxkRu56LcE5Cm33qmBPJjRHPGk=",
+    "strip_prefix": "Devel-REPL-1.003029",
+    "overlay": {
+        "BUILD.bazel": "sha256-u9mrsQANF6ZepRToS/kjipLnnVL3xFPOuLB2ax2x4fk="
+    }
+}

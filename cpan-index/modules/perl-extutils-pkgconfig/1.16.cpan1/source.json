@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-PkgConfig-1.16.tar.gz",
+    "integrity": "sha256-u+rO2ZXX2NEM/FGjpaZtpBzrK8BP7cq1DhDmMA6AHG4=",
+    "strip_prefix": "ExtUtils-PkgConfig-1.16",
+    "overlay": {
+        "BUILD.bazel": "sha256-4GeZqRgXXsFqX5WNTViyeEzqOmkZJql1A+m7VOATEjk="
+    }
+}

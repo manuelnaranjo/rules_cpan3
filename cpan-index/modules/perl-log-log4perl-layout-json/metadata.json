@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Log-Log4perl-Layout-JSON",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.61.cpan1"
+    ],
+    "yanked_versions": {}
+}

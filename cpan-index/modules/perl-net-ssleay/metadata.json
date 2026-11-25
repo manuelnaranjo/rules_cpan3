@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Net-SSLeay",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.96.cpan1"
+    ],
+    "yanked_versions": {}
+}

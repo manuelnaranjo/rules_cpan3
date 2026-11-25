@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SB/SBECK/Test-Inter-1.13.tar.gz",
+    "integrity": "sha256-9R8Ki6FA2HIoUUFiBmd/Lz6HwgeryMEZPmkeLususOo=",
+    "strip_prefix": "Test-Inter-1.13",
+    "overlay": {
+        "BUILD.bazel": "sha256-5Up5FlQ0z50mHEUlE4uf1CL0pfar5Iw7XU3P2mooFTU="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Sub-Attribute-0.07.tar.gz",
+    "integrity": "sha256-bw49SU13Eysm7zkIpWnpt4eX32wivoLCArTRcSJbjyY=",
+    "strip_prefix": "Sub-Attribute-0.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-XXuK3SsbofjXPHi2kUgkfW8ooiYMG9V5nnTvyMTSp8M="
+    }
+}

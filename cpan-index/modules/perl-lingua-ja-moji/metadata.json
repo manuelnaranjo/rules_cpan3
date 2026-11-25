@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Lingua-JA-Moji",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.63.cpan1"
+    ],
+    "yanked_versions": {}
+}

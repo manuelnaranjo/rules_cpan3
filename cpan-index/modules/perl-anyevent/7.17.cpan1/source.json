@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/AnyEvent-7.17.tar.gz",
+    "integrity": "sha256-UL7qaJwJj+Sq64OAbEC5/n+UbVdprPmfhJ8JkJGkuYU=",
+    "strip_prefix": "AnyEvent-7.17",
+    "overlay": {
+        "BUILD.bazel": "sha256-7CmCvNjvjvJb6/P7ykTP/XJJhzeMJ+Ybj+FhxYYFDZY="
+    }
+}

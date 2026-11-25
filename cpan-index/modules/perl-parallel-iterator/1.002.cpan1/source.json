@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AR/ARISTOTLE/Parallel-Iterator-1.002.tar.gz",
+    "integrity": "sha256-g3SaUpPNdsVZY8wRsc/om6jDIj6DyLG4tS/p9nLm2TE=",
+    "strip_prefix": "Parallel-Iterator-1.002",
+    "overlay": {
+        "BUILD.bazel": "sha256-zaa7ITXpmGy5wJifaFeROATnPJPIfGJbWydrcQ7Leyk="
+    }
+}

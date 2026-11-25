@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/F/FR/FREW/IO-All-0.87.tar.gz",
+    "integrity": "sha256-VOIdJQwCKRJ+MLd6NGHhAHeFTsJE8m+2cPG0Re1MTVs=",
+    "strip_prefix": "IO-All-0.87",
+    "overlay": {
+        "BUILD.bazel": "sha256-nWa7OFmDQrvj9Rq9av75eZZO0oxjDAl6invB0xFTPcc="
+    }
+}

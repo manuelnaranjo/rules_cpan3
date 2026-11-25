@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Path-Router-0.15.tar.gz",
+    "integrity": "sha256-VqWytstx7QazzaNenqhcKtacFgW4jOyDUW2vu9RqKxo=",
+    "strip_prefix": "Path-Router-0.15",
+    "overlay": {
+        "BUILD.bazel": "sha256-RLGY1NqtcS1SBOVxtyVGrJ8Qiu0/RmwfHmQq1QkUklE="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/HTML-Template",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.97.cpan1"
+    ],
+    "yanked_versions": {}
+}

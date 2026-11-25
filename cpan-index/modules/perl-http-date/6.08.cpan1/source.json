@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Date-6.08.tar.gz",
+    "integrity": "sha256-tX2Aym2CHGlJykiydGfUWrp6nHc0ZWIwb6zKeBoAPkQ=",
+    "strip_prefix": "HTTP-Date-6.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-kFilXfeXSZbTQk0oMIlzrrZUg4ej9QTXLFrLRI0GbrI="
+    }
+}

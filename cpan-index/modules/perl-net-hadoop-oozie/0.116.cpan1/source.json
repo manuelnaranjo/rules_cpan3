@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Net-Hadoop-Oozie-0.116.tar.gz",
+    "integrity": "sha256-orRBJxeP/hGnLivuJ61K9jkp9wgovrz8AGIQEZ0C27w=",
+    "strip_prefix": "Net-Hadoop-Oozie-0.116",
+    "overlay": {
+        "BUILD.bazel": "sha256-isiQH+oEFN39m2ChCytgiE53w61BRSGKB/XSmcj4s0k="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Config-Identity-0.0019.tar.gz",
+    "integrity": "sha256-KVIL2zdlnmQUkbDGlmFCmhqJtqLkdcL5tOvyfkXoEqg=",
+    "strip_prefix": "Config-Identity-0.0019",
+    "overlay": {
+        "BUILD.bazel": "sha256-ay2FK8Wsr55ZEdwVa+7fDnvoxn0nzORXZ9xlPM9JcIE="
+    }
+}

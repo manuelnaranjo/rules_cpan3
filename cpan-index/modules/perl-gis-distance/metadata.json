@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/GIS-Distance",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.20.cpan1"
+    ],
+    "yanked_versions": {}
+}

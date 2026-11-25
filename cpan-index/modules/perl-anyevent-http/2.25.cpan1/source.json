@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/AnyEvent-HTTP-2.25.tar.gz",
+    "integrity": "sha256-XPpTQWEkF29vTNMrAOqMp5otXfUSWGg5ic0E/obiUBM=",
+    "strip_prefix": "AnyEvent-HTTP-2.25",
+    "overlay": {
+        "BUILD.bazel": "sha256-WPyvqM1lfqsieQOudtO4MEN/KVJ9HH2X0YTg7wylZf4="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/WWW-Form-UrlEncoded-0.26.tar.gz",
+    "integrity": "sha256-wEgLXx8VtxFj7DJ7jnhCKY8Ms6zpfmPXA0rx6UotkPQ=",
+    "strip_prefix": "WWW-Form-UrlEncoded-0.26",
+    "overlay": {
+        "BUILD.bazel": "sha256-th/YwZiAhrGyAqp+EQFC5mqQeW9oVZ269LjGtMhf+to="
+    }
+}

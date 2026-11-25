@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Hadoop-IO-0.003.tar.gz",
+    "integrity": "sha256-QA1BUf1hcxwM4KFFGUBTfqJtxVe2tOicP557HOt4L0A=",
+    "strip_prefix": "Hadoop-IO-0.003",
+    "overlay": {
+        "BUILD.bazel": "sha256-sA3ktYTcT2RMgM6b0vcifjaxMv5XKJEqDidmPsq0iVQ="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DB/DBOOK/PPIx-Utils-0.004.tar.gz",
+    "integrity": "sha256-M2kY1WrJSC0kjSym557X8sxnQD+97N1zqcQUoDSts88=",
+    "strip_prefix": "PPIx-Utils-0.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-4mIV8ueda71771gewKYXczf5GCh1tMOlTAF7Ws9JcDI="
+    }
+}

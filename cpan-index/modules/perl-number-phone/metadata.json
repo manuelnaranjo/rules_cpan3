@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Number-Phone",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "4.0012.cpan1"
+    ],
+    "yanked_versions": {}
+}

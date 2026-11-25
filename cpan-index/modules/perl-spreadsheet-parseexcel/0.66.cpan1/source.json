@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA/Spreadsheet-ParseExcel-0.66.tar.gz",
+    "integrity": "sha256-v9dqz7qYhgHcBRvac7S7JfaDmgBt2WC2p0AcJJJF9ls=",
+    "strip_prefix": "Spreadsheet-ParseExcel-0.66",
+    "overlay": {
+        "BUILD.bazel": "sha256-knH4HJ4C7X8zdL+aDbij2lPiR9FC1sGauyzQLljA+M0="
+    }
+}

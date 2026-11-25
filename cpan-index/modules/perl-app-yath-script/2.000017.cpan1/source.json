@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/App-Yath-Script-2.000017.tar.gz",
+    "integrity": "sha256-AkTivm5Er8smDo+O4PZSt1dK1wgRnWJFCvZxgzOy09A=",
+    "strip_prefix": "App-Yath-Script-2.000017",
+    "overlay": {
+        "BUILD.bazel": "sha256-3zzrkP7g/e1HucD4HK36b/IvhKcpGejQQVlxyTsdxr0="
+    }
+}

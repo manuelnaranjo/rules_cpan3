@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Font-TTF-1.06.tar.gz",
+    "integrity": "sha256-S2l9REJZdZ6gLSxELJv/5f/hTJIUCEoB90NpOpRMwpM=",
+    "strip_prefix": "Font-TTF-1.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-kztO6uLDvuLG97Y2JFcUK3VA2Zou0ThECS0rmxqR4cw="
+    }
+}

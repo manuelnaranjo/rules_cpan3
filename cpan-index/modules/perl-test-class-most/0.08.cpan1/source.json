@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OV/OVID/Test-Class-Most-0.08.tar.gz",
+    "integrity": "sha256-Y0ze2Gu6Xd4Hztcv+4pGcF/5OqhEuY6WveBVQCNMff8=",
+    "strip_prefix": "Test-Class-Most-0.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-c5W/74caConB2z/2ynEWVUKuB1byytvv4ECtQg2z2RQ="
+    }
+}

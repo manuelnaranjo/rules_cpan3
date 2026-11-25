@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Net-IMAP-Simple",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.2212.cpan1"
+    ],
+    "yanked_versions": {}
+}

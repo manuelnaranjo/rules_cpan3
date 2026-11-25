@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/IO-Compress-Brotli",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.023.cpan1"
+    ],
+    "yanked_versions": {}
+}

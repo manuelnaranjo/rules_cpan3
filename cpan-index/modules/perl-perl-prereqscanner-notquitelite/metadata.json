@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Perl-PrereqScanner-NotQuiteLite",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.9918.cpan1"
+    ],
+    "yanked_versions": {}
+}

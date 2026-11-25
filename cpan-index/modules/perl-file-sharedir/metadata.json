@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/File-ShareDir",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.118.cpan1"
+    ],
+    "yanked_versions": {}
+}

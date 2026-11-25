@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Git-Wrapper",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.048.cpan1"
+    ],
+    "yanked_versions": {}
+}

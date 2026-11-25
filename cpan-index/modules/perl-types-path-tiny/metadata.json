@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Types-Path-Tiny",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.006.cpan1"
+    ],
+    "yanked_versions": {}
+}

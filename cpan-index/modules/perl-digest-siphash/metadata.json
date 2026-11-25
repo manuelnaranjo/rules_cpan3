@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Digest-SipHash",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.21.cpan1"
+    ],
+    "yanked_versions": {}
+}

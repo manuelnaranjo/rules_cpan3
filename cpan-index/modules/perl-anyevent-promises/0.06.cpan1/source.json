@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANIELR/AnyEvent-Promises-0.06.tar.gz",
+    "integrity": "sha256-l+oap16pc8V+YHfObxX+zuy93Cs4kBiyFxQrNFTxNM8=",
+    "strip_prefix": "AnyEvent-Promises-0.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-2CjX/LcX12S3wSg91uQ9/FtcYJbq0Y6J+iY59ojrbyI="
+    }
+}

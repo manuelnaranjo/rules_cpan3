@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SW/SWALTERS/SOAP-WSDL-3.004.tar.gz",
+    "integrity": "sha256-4sweQurOjbs4TlCdBGRBka/N2N8P7BRDds66+tPxV0Q=",
+    "strip_prefix": "SOAP-WSDL-3.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-8HL+G0HdJ+63FwFYgBcPupl0LqVI87vKKPFnbt15TnI="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/AnyEvent-Subprocess",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.102912.cpan1"
+    ],
+    "yanked_versions": {}
+}

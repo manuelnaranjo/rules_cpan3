@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BB/BBC/Log-Trace-1.070.tar.gz",
+    "integrity": "sha256-nsuCWO8wwvJN7/SRckDQ/nMkLaWyGSQC95gVsJLtNuM=",
+    "strip_prefix": "Log-Trace-1.070",
+    "overlay": {
+        "BUILD.bazel": "sha256-trAjo6PcDspQIFNofDGvkcTXcYR2w5duhI+sV+WYkKk="
+    }
+}

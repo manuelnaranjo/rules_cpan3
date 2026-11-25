@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Class-Unload",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.12.cpan1"
+    ],
+    "yanked_versions": {}
+}

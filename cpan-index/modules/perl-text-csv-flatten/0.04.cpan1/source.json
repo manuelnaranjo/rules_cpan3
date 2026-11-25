@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TK/TKLUCK/Text-CSV-Flatten-0.04.tar.gz",
+    "integrity": "sha256-gQkAjWdVQOwMbHYQDlwK+pgVSA/xTYzmMx3hF+XvL0A=",
+    "strip_prefix": "Text-CSV-Flatten-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-sM0aWaqSBrpVfwdw1sXxYaoqTxiPX6FVUipWBaIN+a4="
+    }
+}

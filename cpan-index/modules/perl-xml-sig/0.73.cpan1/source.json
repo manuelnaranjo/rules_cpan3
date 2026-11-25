@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/XML-Sig-0.73.tar.gz",
+    "integrity": "sha256-42vNVqL4WxTrtGNSQ40l+3jTXj6CftetlYqAYjEoe0E=",
+    "strip_prefix": "XML-Sig-0.73",
+    "overlay": {
+        "BUILD.bazel": "sha256-Dj8BQkyp5ure8yZCQvc5rY3icNgQF1H0CgF6B0rQTf0="
+    }
+}

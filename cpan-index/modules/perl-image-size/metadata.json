@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Image-Size",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.300.cpan1"
+    ],
+    "yanked_versions": {}
+}

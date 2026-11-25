@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/WWW-RobotRules-6.03.tar.gz",
+    "integrity": "sha256-hSK1MpNaEb+miMLhE7rGZynfSFG+UMLCbUsG9F+t5HI=",
+    "strip_prefix": "WWW-RobotRules-6.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-R2k/kxK2LAKSHaLjkv93xhC9izwmpF0ZMZ++s22AS0E="
+    }
+}

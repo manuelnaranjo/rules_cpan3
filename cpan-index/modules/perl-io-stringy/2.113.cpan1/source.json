@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/IO-Stringy-2.113.tar.gz",
+    "integrity": "sha256-USIPyvn2amObadJR17B1e/QgL0+d69Rb3TQaaspi/k4=",
+    "strip_prefix": "IO-Stringy-2.113",
+    "overlay": {
+        "BUILD.bazel": "sha256-gDtcADCYxeC08f958fBK/qODpFjV/mFQogRMMVZq/Ak="
+    }
+}

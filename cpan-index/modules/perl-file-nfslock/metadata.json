@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/File-NFSLock",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.29.cpan1"
+    ],
+    "yanked_versions": {}
+}

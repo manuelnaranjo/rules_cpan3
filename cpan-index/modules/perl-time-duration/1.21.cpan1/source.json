@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Time-Duration-1.21.tar.gz",
+    "integrity": "sha256-/jQOuodl+SY2lGdOXf8UgzRD4Zhl5f9Ce715t7X4qbg=",
+    "strip_prefix": "Time-Duration-1.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-bsV4tmv3L0XovLOvRzeHaUsN6UgYcV4TTSVctYITwmQ="
+    }
+}

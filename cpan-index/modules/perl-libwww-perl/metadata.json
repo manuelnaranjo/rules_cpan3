@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/libwww-perl",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "6.83.cpan1"
+    ],
+    "yanked_versions": {}
+}

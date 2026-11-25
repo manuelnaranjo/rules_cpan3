@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AS/ASB/Spreadsheet-XLSX-0.21.tar.gz",
+    "integrity": "sha256-CpivNEWfdkRxVI4pIE6qpi+7nb8Rt20NgSwftOq4KL0=",
+    "strip_prefix": "Spreadsheet-XLSX-0.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-cmM1TxwctFh24q/QVQJltrP9unZxOaaTB21epV9L7PY="
+    }
+}

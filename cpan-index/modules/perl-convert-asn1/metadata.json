@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Convert-ASN1",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.37.cpan1"
+    ],
+    "yanked_versions": {}
+}

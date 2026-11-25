@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Data-GUID-0.051.tar.gz",
+    "integrity": "sha256-aOp3xz/KiROC8gbhJEkJRQG2+/Llf1SQLVBkInz9ji4=",
+    "strip_prefix": "Data-GUID-0.051",
+    "overlay": {
+        "BUILD.bazel": "sha256-cqnMIo4/ohug6N38XVrC3cOvp/fgg+52Do1JJoTJ5fU="
+    }
+}

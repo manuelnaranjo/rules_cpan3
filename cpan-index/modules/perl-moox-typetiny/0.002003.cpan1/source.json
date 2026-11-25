@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/MooX-TypeTiny-0.002003.tar.gz",
+    "integrity": "sha256-2B4m/2+NsQJh8Ah/ltxUNn3LSanz3o1TI4+DTs4ZYks=",
+    "strip_prefix": "MooX-TypeTiny-0.002003",
+    "overlay": {
+        "BUILD.bazel": "sha256-RNNpoDVu2odM4wX1U2ckkK3ID7S94Mt87MkL/szij3M="
+    }
+}

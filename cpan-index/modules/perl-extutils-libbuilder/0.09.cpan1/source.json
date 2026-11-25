@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AM/AMBS/ExtUtils-LibBuilder-0.09.tar.gz",
+    "integrity": "sha256-2/rIXQFYdBiacE+govAB0TtaDH2J82wG/zLVaXIKbPs=",
+    "strip_prefix": "ExtUtils-LibBuilder-0.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-BoGEZVe2eZfBaFvVej6hMMv5d4HMy0PS4b6EXxUxBeI="
+    }
+}

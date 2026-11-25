@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/MooseX-Types",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.51.cpan1"
+    ],
+    "yanked_versions": {}
+}

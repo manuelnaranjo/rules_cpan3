@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IN/INGY/File-Share-0.27.tar.gz",
+    "integrity": "sha256-1uj0tV69OOC7ReRDkuP6J9wf3harxdH/U+FX4ZpXVb4=",
+    "strip_prefix": "File-Share-0.27",
+    "overlay": {
+        "BUILD.bazel": "sha256-5GXzYG0H3z2IuZV6xaYqJUBAH+RhdWngmQcDWzXikq0="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.099.tar.gz",
+    "integrity": "sha256-oL6AD/SFKxVn7lUA53JBetejYKv/gMAbW4dcFdRL6DI=",
+    "strip_prefix": "IO-Socket-SSL-2.099",
+    "overlay": {
+        "BUILD.bazel": "sha256-tHIv9tKBETF+9Zh8zb82E1FdvR6znqVMQ8q+FOVbdQA="
+    }
+}

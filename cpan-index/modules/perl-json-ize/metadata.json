@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/JSON-ize",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.202.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Class-0.09.tar.gz",
+    "integrity": "sha256-54S6tTaYrpWnCahmMwYUX/7FVmjfbPMWFTM1I/vn734=",
+    "strip_prefix": "MooseX-Types-Path-Class-0.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-pxrSvXZ4M4SXoqJu7mNgaKKK5GjxILTrTYHu5ANGaCw="
+    }
+}

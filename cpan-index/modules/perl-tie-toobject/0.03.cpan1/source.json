@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NU/NUFFIN/Tie-ToObject-0.03.tar.gz",
+    "integrity": "sha256-oxoNRDD+FPWWIvMdt/JbInXa0uxS8QQL6wMNPoOtOvQ=",
+    "strip_prefix": "Tie-ToObject-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-rPkNpGwIkaCsTHU94byxk2VgZw9RVX9+AhmHSPRysPA="
+    }
+}

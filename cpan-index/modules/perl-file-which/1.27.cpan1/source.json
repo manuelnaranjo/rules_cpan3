@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Which-1.27.tar.gz",
+    "integrity": "sha256-MgHxpg4/FkhAguYEXIloQiYfw0Xen7LmIP0qLHrzqTo=",
+    "strip_prefix": "File-Which-1.27",
+    "overlay": {
+        "BUILD.bazel": "sha256-/Q1HZQ1qthzKW+cwO4sHynJPYfjj/0sE4wsuC3oU45w="
+    }
+}

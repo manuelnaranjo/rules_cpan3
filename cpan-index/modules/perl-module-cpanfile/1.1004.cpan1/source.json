@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Module-CPANfile-1.1004.tar.gz",
+    "integrity": "sha256-iO++LppkLc6qGGQw/t/PmZqvDgb2zO0opxS45WtRSSE=",
+    "strip_prefix": "Module-CPANfile-1.1004",
+    "overlay": {
+        "BUILD.bazel": "sha256-anz/tf7naqteRslOmkg1h1Q0btGVcp1ejnIaPOh7fcA="
+    }
+}

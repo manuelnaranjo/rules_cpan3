@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz",
+    "integrity": "sha256-HHKcHqYxAOh4QFzafWb5rf0+1PHWysrKDukVLfco4BY=",
+    "strip_prefix": "HTTP-Negotiate-6.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-ZbGaWQs7Xm2ujsfEO3HKI0YmQeXZCCrL/LlXR0jt3L8="
+    }
+}

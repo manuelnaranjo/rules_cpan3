@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Thrift-SASL-Transport-0.007.tar.gz",
+    "integrity": "sha256-iFoCL8x4DVLCgrCRFey/K93JcQfrZD9ZfKu9SqXi7eo=",
+    "strip_prefix": "Thrift-SASL-Transport-0.007",
+    "overlay": {
+        "BUILD.bazel": "sha256-wW8Xr4aQxn8v5lXeXmz7nCNa7wPl0ztvpptmqoPzr7o="
+    }
+}

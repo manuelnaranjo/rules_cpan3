@@ -1,0 +1,9 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TH/THOR/Net-LibIDN-0.12.tar.gz",
+    "integrity": "sha256-L4rMlEKzhm7H3GPNRJ/Gk64+kw1dPl6UMPu285O9uxc=",
+    "strip_prefix": "Net-LibIDN-0.12",
+    "overlay": {
+        "__test1.c": "sha256-IbMCf2gE2bgB91w7nwergAEObvJB9H0TCKtPPcp3aBQ=",
+        "BUILD.bazel": "sha256-ku6MXLhU8Q2YJem8nIF8R4zYPqvpLWc+fGSlLxcetuo="
+    }
+}

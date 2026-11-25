@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Devel-GlobalPhase-0.003003.tar.gz",
+    "integrity": "sha256-jaMCL3ynHf2/SqYGmJRNcgCsMUn0c32KnJG/Q4f/MvU=",
+    "strip_prefix": "Devel-GlobalPhase-0.003003",
+    "overlay": {
+        "BUILD.bazel": "sha256-trYxfgfhupc31Px3tYYx4I+ObtmjJb64Pxsc1YQ4WJM="
+    }
+}

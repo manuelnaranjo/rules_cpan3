@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.78.tar.gz",
+    "integrity": "sha256-Q7M8IPjYLbp8xI+M1wL4/JgR6dB4gIht/TG3B3vUo6Y=",
+    "strip_prefix": "ExtUtils-MakeMaker-7.78",
+    "overlay": {
+        "BUILD.bazel": "sha256-JVPqN9lTa4Gi2RkKZwLUBKU65uDC9F/OHsP1vb58w30="
+    }
+}

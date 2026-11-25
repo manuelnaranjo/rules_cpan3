@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Text-Soundex-3.05.tar.gz",
+    "integrity": "sha256-9t1VtCgLJd6peCIYOYZDglYAdOHWkzOV+u4lEMLbYO0=",
+    "strip_prefix": "Text-Soundex-3.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-rzfVXd7ufbxOURQZFQAC0Uorf+gtRcjJJgBbboz0Hu8="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JJ/JJNAPIORK/MooseX-Attribute-ENV-0.02.tar.gz",
+    "integrity": "sha256-TkD9lStnKqIyzz2KfVX2ei+NB5LuOHtM6lpPTPz8UIM=",
+    "strip_prefix": "MooseX-Attribute-ENV-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-rnbJlVU5U+hTCUVUx9R7NyXwq7tnTkflT6rwprzSDG8="
+    }
+}

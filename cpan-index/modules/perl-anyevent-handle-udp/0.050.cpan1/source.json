@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/AnyEvent-Handle-UDP-0.050.tar.gz",
+    "integrity": "sha256-Ti/jVWYgF/QznYUBO5BRWlpUh9hiZTfuQEFR98ak3W0=",
+    "strip_prefix": "AnyEvent-Handle-UDP-0.050",
+    "overlay": {
+        "BUILD.bazel": "sha256-l58aLfI2rrLxRbIk5fB4VDmKfbGD25iSzFYgeSr8mUo="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Devel-StackTrace-2.05.tar.gz",
+    "integrity": "sha256-Y8thlumGp+V4xNKLPHgOcZSDW/x4to7rjwBZnUREiIw=",
+    "strip_prefix": "Devel-StackTrace-2.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-3X8ZRzCtn7KabMt5T//3kR1/x5+Xuq4332jKJw3R+1Y="
+    }
+}

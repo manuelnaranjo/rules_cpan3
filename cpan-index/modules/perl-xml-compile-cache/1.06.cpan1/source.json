@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/XML-Compile-Cache-1.06.tar.gz",
+    "integrity": "sha256-WRsTa9koQsgaUXYIJQP0ffbVzE2ODXiVPvFVf3RwOKA=",
+    "strip_prefix": "XML-Compile-Cache-1.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-pIEIGrEX90f+lFwKj+vy1RbMywRdfQZRdnrFLgw10zA="
+    }
+}

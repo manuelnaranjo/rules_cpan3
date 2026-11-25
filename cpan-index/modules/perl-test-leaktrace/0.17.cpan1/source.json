@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/Test-LeakTrace-0.17.tar.gz",
+    "integrity": "sha256-d31k0pOPXqWGMA7vl+8D6stD1MGFPJw7EJHrMxFGeXA=",
+    "strip_prefix": "Test-LeakTrace-0.17",
+    "overlay": {
+        "BUILD.bazel": "sha256-Q5JMwRrLzTtKVkTU1R8yg8JASrUjZyeMgBdfR6d9Fjk="
+    }
+}

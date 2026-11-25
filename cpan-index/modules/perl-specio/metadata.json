@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Specio",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.53.cpan1"
+    ],
+    "yanked_versions": {}
+}

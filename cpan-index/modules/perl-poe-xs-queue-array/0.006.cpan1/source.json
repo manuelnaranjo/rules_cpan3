@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TONYC/POE-XS-Queue-Array-0.006.tar.gz",
+    "integrity": "sha256-cEAFY1r8eb5fzk0WRlLr+ye3nBA0v74J1BbvuAiBlUs=",
+    "strip_prefix": "POE-XS-Queue-Array-0.006",
+    "overlay": {
+        "BUILD.bazel": "sha256-rgfe/N/UjkTdJ0y7i7hSCtiVEYLS1FnNxy+wQqoQr8U="
+    }
+}

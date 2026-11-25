@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIKEM/DigestMD4/Digest-MD4-1.9.tar.gz",
+    "integrity": "sha256-ZlEQu6MkcPOY8xHNZGL9iXXXyDZ1/2dLwvbHtysMqqY=",
+    "strip_prefix": "Digest-MD4-1.9",
+    "overlay": {
+        "BUILD.bazel": "sha256-UR0Fvk5ZSLd+MW3ZXmdKTysoeCsPKd1w5kOQRvmghEk="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Compress-Raw-Bzip2",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.225.cpan1"
+    ],
+    "yanked_versions": {}
+}

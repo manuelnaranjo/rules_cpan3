@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/XS-Parse-Keyword-0.51.tar.gz",
+    "integrity": "sha256-nc/fTKNXyqZVfAS/biFcHvR4TVcRqyRsVAC0mGOj9hs=",
+    "strip_prefix": "XS-Parse-Keyword-0.51",
+    "overlay": {
+        "BUILD.bazel": "sha256-E4L02CdNL3V14m7g3PHdJdsSioqHfLFimW63FtWy1fM="
+    }
+}

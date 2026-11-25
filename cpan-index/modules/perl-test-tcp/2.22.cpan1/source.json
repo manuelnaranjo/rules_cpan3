@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Test-TCP-2.22.tar.gz",
+    "integrity": "sha256-PlPDwG1tCYCiv+uRVgK3FOaC7iEa6IwRdIzyzHFOe1c=",
+    "strip_prefix": "Test-TCP-2.22",
+    "overlay": {
+        "BUILD.bazel": "sha256-APTkY+9K2frtAHJfOFnZXQbvrLmuhLBN6VGOY6M0bnY="
+    }
+}

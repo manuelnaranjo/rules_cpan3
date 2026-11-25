@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Pod-Snippets",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.14.cpan1"
+    ],
+    "yanked_versions": {}
+}

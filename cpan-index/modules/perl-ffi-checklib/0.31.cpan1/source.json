@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/FFI-CheckLib-0.31.tar.gz",
+    "integrity": "sha256-BNiF/Dd9RIluXqHE7DEPl5uwTy8YZYp+ek1Qn36Au4A=",
+    "strip_prefix": "FFI-CheckLib-0.31",
+    "overlay": {
+        "BUILD.bazel": "sha256-K0/++QzMAcrSSb7Vz0JDYGd09BCA7bidb0okR1GKt54="
+    }
+}

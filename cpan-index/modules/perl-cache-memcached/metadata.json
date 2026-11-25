@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Cache-Memcached",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.30.cpan1"
+    ],
+    "yanked_versions": {}
+}

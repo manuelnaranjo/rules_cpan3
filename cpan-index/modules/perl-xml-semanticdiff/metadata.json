@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/XML-SemanticDiff",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.0007.cpan1"
+    ],
+    "yanked_versions": {}
+}

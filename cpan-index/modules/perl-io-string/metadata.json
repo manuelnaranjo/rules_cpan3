@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/IO-String",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.08.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AN/ANATOFUZ/Test-Time-0.092.tar.gz",
+    "integrity": "sha256-MNkPVM6ECJPHuiysKk0e7NTJzfgFkQxZXjronf1kRzg=",
+    "strip_prefix": "Test-Time-0.092",
+    "overlay": {
+        "BUILD.bazel": "sha256-jjSKOTBgOX/pYTVfNlbhEgwKpUTaj77s+PvV0oUFU3M="
+    }
+}

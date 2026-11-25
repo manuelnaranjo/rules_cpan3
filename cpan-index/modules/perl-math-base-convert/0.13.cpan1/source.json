@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIKER/Math-Base-Convert-0.13.tar.gz",
+    "integrity": "sha256-KJwMM7yYhts9ws+UnY4Ksk42xnuegzNVlB1wqvNRntI=",
+    "strip_prefix": "Math-Base-Convert-0.13",
+    "overlay": {
+        "BUILD.bazel": "sha256-bj+GpGqtlD1AL3GyyiDRenRgILbuJMO156gXeF0HM0k="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Sub-Uplevel",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.2800.cpan1"
+    ],
+    "yanked_versions": {}
+}

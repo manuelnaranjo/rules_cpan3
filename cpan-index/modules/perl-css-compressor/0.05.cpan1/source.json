@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JA/JANUS/CSS-Compressor-0.05.tar.gz",
+    "integrity": "sha256-GqyYgaSDiBym4TQ3cafUFHN3XetbGvoSZ/xBWAIuVyw=",
+    "strip_prefix": "CSS-Compressor-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-Ii6noc1peSOhZonyb7H5fSPp/jsryOE0yafk3UMfx94="
+    }
+}

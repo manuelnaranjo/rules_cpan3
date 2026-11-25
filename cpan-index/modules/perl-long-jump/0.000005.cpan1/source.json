@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Long-Jump-0.000005.tar.gz",
+    "integrity": "sha256-eyjpkBruaYf6MCP8LG3ELZl19z2l16ILpmwu3+41W18=",
+    "strip_prefix": "Long-Jump-0.000005",
+    "overlay": {
+        "BUILD.bazel": "sha256-Y2Q6hiS0RMxZKb4ndEQ0MDVrCETQFOFrXH6RHfO4DOA="
+    }
+}

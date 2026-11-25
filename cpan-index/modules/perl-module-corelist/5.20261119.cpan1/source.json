@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Module-CoreList-5.20261119.tar.gz",
+    "integrity": "sha256-d535pxlU2V4ho9mQ7PhNCi5HfQGaXrQx/zzgiaqWOns=",
+    "strip_prefix": "Module-CoreList-5.20261119",
+    "overlay": {
+        "BUILD.bazel": "sha256-Jak2C6cbVB5RW4Qsbi63LbVoweIfUjne0UWK+jH1wp4="
+    }
+}

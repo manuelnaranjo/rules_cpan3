@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Devel-NYTProf",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "6.16.cpan1"
+    ],
+    "yanked_versions": {}
+}

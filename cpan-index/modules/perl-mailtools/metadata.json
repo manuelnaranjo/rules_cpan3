@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/MailTools",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.22.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/AnyEvent",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "7.17.cpan1"
+    ],
+    "yanked_versions": {}
+}

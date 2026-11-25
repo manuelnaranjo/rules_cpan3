@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Crypt-Random-Source-0.14.tar.gz",
+    "integrity": "sha256-7E7OJp+a0ZWMbimOzuLlpDReNX86T/ssdIEWr4du7eY=",
+    "strip_prefix": "Crypt-Random-Source-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-MTagrSpK6y+lSgpQ43hc8sUwHXCUks543NA8qasGsxM="
+    }
+}

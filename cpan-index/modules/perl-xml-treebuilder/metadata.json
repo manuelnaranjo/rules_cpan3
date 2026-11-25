@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/XML-TreeBuilder",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "5.4.cpan1"
+    ],
+    "yanked_versions": {}
+}

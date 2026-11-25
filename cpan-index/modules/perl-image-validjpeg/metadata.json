@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Image-ValidJpeg",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.002001.cpan1"
+    ],
+    "yanked_versions": {}
+}

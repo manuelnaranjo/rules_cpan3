@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz",
+    "integrity": "sha256-rLSZqnIG652yHrhTV6dFIb/jva5KZBbVCnx1uTnPVv4=",
+    "strip_prefix": "Meta-Builder-0.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-qafifF5nYctdPUfpzCwh3n0FuCfNPKovZWP/4B/zzVo="
+    }
+}

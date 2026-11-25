@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/MaxMind-DB-Reader-XS",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.000009.cpan1"
+    ],
+    "yanked_versions": {}
+}

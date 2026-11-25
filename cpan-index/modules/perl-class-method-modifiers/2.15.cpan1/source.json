@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.15.tar.gz",
+    "integrity": "sha256-Zc2Fv+R10GbpGG96jMY2BwmFswsOuxzehoHPBiwuFfw=",
+    "strip_prefix": "Class-Method-Modifiers-2.15",
+    "overlay": {
+        "BUILD.bazel": "sha256-v8eFkwKknmysTfyClaX+BuUkrXebaCgzvKnNKe+XI5U="
+    }
+}

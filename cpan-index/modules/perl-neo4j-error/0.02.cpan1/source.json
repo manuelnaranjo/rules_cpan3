@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AJ/AJNN/Neo4j-Error-0.02.tar.gz",
+    "integrity": "sha256-0dEVnip0CVzjFlk2v2Oc92XH+wOWiRhAOHy3ndRkk1c=",
+    "strip_prefix": "Neo4j-Error-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-rFQy0evufbc401RubczEZ9XeNZqTCyMyPCZTxhzJK+Q="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Geo-Hash-XS",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.00015.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/Eval-Closure-0.14.tar.gz",
+    "integrity": "sha256-6glE8vXsmNiVvvbVA+bko3b+pjg6a8ZMdnDUb/IhjK0=",
+    "strip_prefix": "Eval-Closure-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-pDJ4T3IuwsHh6/ipk4Edq6QbKUmzursBF0Z1FYorhXE="
+    }
+}

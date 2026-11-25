@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/List-UtilsBy-0.12.tar.gz",
+    "integrity": "sha256-//EoH9Rp/pgrGlgES+z9lw8xO/86JuHHsrP0wKXtceA=",
+    "strip_prefix": "List-UtilsBy-0.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-7QUuiKFdvrG1jzWrFASXpD/ZqHtbjjPjiKVW92QMcps="
+    }
+}

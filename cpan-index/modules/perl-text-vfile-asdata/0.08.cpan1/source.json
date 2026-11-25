@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Text-vFile-asData-0.08.tar.gz",
+    "integrity": "sha256-spGrXg+YfFFyVgppIjRxGnXkWW2DR19y0BJ4NpUy+Co=",
+    "strip_prefix": "Text-vFile-asData-0.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-1rqqLLRgFOhGz/BXpoLU07UHQIUvLoqkZzb9G5Htd38="
+    }
+}

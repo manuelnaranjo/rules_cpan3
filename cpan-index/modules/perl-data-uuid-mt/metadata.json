@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Data-UUID-MT",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.001.cpan1"
+    ],
+    "yanked_versions": {}
+}

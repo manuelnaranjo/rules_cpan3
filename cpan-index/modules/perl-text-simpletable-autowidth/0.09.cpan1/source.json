@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CU/CUB/Text-SimpleTable-AutoWidth-0.09.tar.gz",
+    "integrity": "sha256-HBdujhwBu+hqfzrN5Ec/DwNNQQBQJG8uukz2igja9kM=",
+    "strip_prefix": "Text-SimpleTable-AutoWidth-0.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-cl6vBLWGVIIE9RwJI5bokTTFM1yx2OQ/OyiOYIjon1c="
+    }
+}

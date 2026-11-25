@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AS/ASB/SQL-Abstract-Limit-0.143.tar.gz",
+    "integrity": "sha256-0Yr9eIk72DC6JGXArmozQlRgFZADhk3tO1rc9RGJyuk=",
+    "strip_prefix": "SQL-Abstract-Limit-0.143",
+    "overlay": {
+        "BUILD.bazel": "sha256-Klr+eaom7xZTvH0opOc3F1l6MKI1N8YJLUn9MyIuYCY="
+    }
+}

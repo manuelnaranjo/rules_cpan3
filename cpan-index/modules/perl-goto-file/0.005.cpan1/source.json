@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/goto-file-0.005.tar.gz",
+    "integrity": "sha256-xs3V7kps3L2/MU2SpPmYXbzfnkJYBIyudhJcBSqjH3c=",
+    "strip_prefix": "goto-file-0.005",
+    "overlay": {
+        "BUILD.bazel": "sha256-cDfsc0+IrBNfbPMk2Fn2h1DGoRwK4ndGzdbI5BxsTm4="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SW/SWEETKID/Plack-Middleware-FixMissingBodyInRedirect-0.12.tar.gz",
+    "integrity": "sha256-bCLQafWlesIG1GWbKLiGm7knBkC7lV793UUdzFjNs5E=",
+    "strip_prefix": "Plack-Middleware-FixMissingBodyInRedirect-0.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-RfgbNF+aXHdOnTbx/2V+ZFPGEe8dEblWbO91NT7nLo4="
+    }
+}

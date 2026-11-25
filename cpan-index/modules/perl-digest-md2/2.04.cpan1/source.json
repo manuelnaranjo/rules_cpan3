@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-MD2-2.04.tar.gz",
+    "integrity": "sha256-0Kq/SDTCCsQRvqQnxKMItZpfyqMnZ571KUwdaKtx7tM=",
+    "strip_prefix": "Digest-MD2-2.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-sD1YU14aXDHa8kytzxoAiqCvBYmNk1m8zVr1rwTIhJ4="
+    }
+}

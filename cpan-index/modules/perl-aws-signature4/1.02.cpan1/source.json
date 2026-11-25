@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LD/LDS/AWS-Signature4-1.02.tar.gz",
+    "integrity": "sha256-ILvBbLNFT+XozzT+YfGpH+JsPxfkSf9mX8u7kqtEPr0=",
+    "strip_prefix": "AWS-Signature4-1.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-7gQ0MO3Xa1M+96QGGnSStlhIyehGRQscUY7K0NWO2CY="
+    }
+}

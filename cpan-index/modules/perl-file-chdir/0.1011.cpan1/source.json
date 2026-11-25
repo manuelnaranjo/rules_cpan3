@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/File-chdir-0.1011.tar.gz",
+    "integrity": "sha256-Mev5Et9I1daB3vdLmIDXix86ykNRoO0f41cLjgOvbHk=",
+    "strip_prefix": "File-chdir-0.1011",
+    "overlay": {
+        "BUILD.bazel": "sha256-RfG/mAdUnp9QkV5grU0F0zJKW4XG8zhA5GfT4OEVLtw="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Class-Accessor-Chained-0.01.tar.gz",
+    "integrity": "sha256-pb9J04BPg60lobFvMn0U1MvuInATIQSyhwUDHbzMNNI=",
+    "strip_prefix": "Class-Accessor-Chained-0.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-7a70voh9hNGotiSGOcr6wXhiM9gMnvyHv3WbMtJVDUI="
+    }
+}

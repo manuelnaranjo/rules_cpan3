@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/String-Similarity-1.04.tar.gz",
+    "integrity": "sha256-H47aIpC7y3Ia7wzhsL/hOwEgHdPaphijN/LwLikcMkU=",
+    "strip_prefix": "String-Similarity-1.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-Vwn7ruQXTE7VQGzi3lGlaBUBATXWRimwPz/vA8GN4HQ="
+    }
+}

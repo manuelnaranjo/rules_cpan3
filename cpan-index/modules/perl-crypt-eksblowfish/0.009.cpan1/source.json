@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Crypt-Eksblowfish-0.009.tar.gz",
+    "integrity": "sha256-PMcSbVhBEHI3qb4txcf7wWfPPEtM40Z4qESLhQdXAUw=",
+    "strip_prefix": "Crypt-Eksblowfish-0.009",
+    "overlay": {
+        "BUILD.bazel": "sha256-QPucCSP1zrL1lZiUkTzKDm7pB08QuBwihOuG/Xs1dxc="
+    }
+}

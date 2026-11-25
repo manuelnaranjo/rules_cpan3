@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/MooX-Options-4.103.tar.gz",
+    "integrity": "sha256-TfnVdPjybbAivwbBvaRwgolFEJjC4VYzNd840jsHMm0=",
+    "strip_prefix": "MooX-Options-4.103",
+    "overlay": {
+        "BUILD.bazel": "sha256-NhR88NxCAKQ+eiSNQ+orBA0/kNCrJWFCepXfMjivpbw="
+    }
+}

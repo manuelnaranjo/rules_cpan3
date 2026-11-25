@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/MaxMind-DB-Common",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.040001.cpan1"
+    ],
+    "yanked_versions": {}
+}

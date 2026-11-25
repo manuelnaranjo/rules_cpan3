@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/YAML-Tiny-1.76.tar.gz",
+    "integrity": "sha256-qNWEOUzwab+PF8uj3VCZADsJf84xbDH7CU8bHBccCKM=",
+    "strip_prefix": "YAML-Tiny-1.76",
+    "overlay": {
+        "BUILD.bazel": "sha256-jodpip+EnkX4pKOdBxYkv9gmAC+d3DTI3hDlr6O6Og4="
+    }
+}

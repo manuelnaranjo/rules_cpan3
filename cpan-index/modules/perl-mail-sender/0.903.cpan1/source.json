@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/Mail-Sender-0.903.tar.gz",
+    "integrity": "sha256-RBPrSfUgqDGBUYEcywWo1UKXOq2iCqUDrTL5/8mKOb8=",
+    "strip_prefix": "Mail-Sender-0.903",
+    "overlay": {
+        "BUILD.bazel": "sha256-/RR6VB3bACjproO9c5asqclHmwxxOXtumfJYLfOtzHA="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Devel-GlobalDestruction-0.14.tar.gz",
+    "integrity": "sha256-NLil8pmRMRRo/mkTytq6df1dKws+47tB/ltT76uRVKs=",
+    "strip_prefix": "Devel-GlobalDestruction-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-vwm6JrEsE/Zg1zj+x5WnqyQJ4XlJsKXJc2bgbRjScaA="
+    }
+}

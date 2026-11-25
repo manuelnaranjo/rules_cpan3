@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LB/LBROCARD/Term-ProgressBar-Quiet-0.31.tar.gz",
+    "integrity": "sha256-JWdSkvWIvCnTLnEM82Z9qaKhdR4TmAF3Cp/bGM0hhKY=",
+    "strip_prefix": "Term-ProgressBar-Quiet-0.31",
+    "overlay": {
+        "BUILD.bazel": "sha256-RYMk1kVsCuF7BV2ZyRHX63kMUyUAtZupVwR/sjinuak="
+    }
+}

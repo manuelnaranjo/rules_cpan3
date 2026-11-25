@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Syntax-Operator-Equ-0.11.tar.gz",
+    "integrity": "sha256-KN2gaKt8PxJNYja5rtnQei1iguwX9/YHfi/i6Dgi6j8=",
+    "strip_prefix": "Syntax-Operator-Equ-0.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-neVMfmj8fVOTcSmr8y37fa4J3QklM8HxkDn3oi4czo0="
+    }
+}

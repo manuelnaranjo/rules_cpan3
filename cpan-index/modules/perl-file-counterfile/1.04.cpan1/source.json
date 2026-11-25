@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/File-CounterFile-1.04.tar.gz",
+    "integrity": "sha256-P9bWb/qSuIT8n+tPIA2vRyUFcFIMaVX9yn5xf9SmrB8=",
+    "strip_prefix": "File-CounterFile-1.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-FABnbTMHPtEwl7hFiJQAUMuJdycvF3VUmCRUs0KaaXY="
+    }
+}

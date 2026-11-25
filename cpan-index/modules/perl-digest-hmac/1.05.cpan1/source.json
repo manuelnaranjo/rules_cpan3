@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AR/ARODLAND/Digest-HMAC-1.05.tar.gz",
+    "integrity": "sha256-IVy1nLphB0XPstSz+O91bVkOV+OteYapkuh8SWn83Ho=",
+    "strip_prefix": "Digest-HMAC-1.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-nm+t8wWWk9bPcEEFTYGHiFSjSiE3cqzKsBw1naRKWhI="
+    }
+}

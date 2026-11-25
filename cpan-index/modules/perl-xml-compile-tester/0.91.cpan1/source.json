@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/XML-Compile-Tester-0.91.tar.gz",
+    "integrity": "sha256-5czG+WVUM5GkPSUIei+ai9UiBCX8YkTgdNmkyOPnP7c=",
+    "strip_prefix": "XML-Compile-Tester-0.91",
+    "overlay": {
+        "BUILD.bazel": "sha256-fTQ+J5OgkijblnCMOlf3h+uCeZ2whBoG94dD24K3I/Y="
+    }
+}

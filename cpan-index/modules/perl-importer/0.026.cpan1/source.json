@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Importer-0.026.tar.gz",
+    "integrity": "sha256-4I+oThPLmYt6iX/I7Jw0WfzBcWr/Jcw0Pjbvh1iRsO8=",
+    "strip_prefix": "Importer-0.026",
+    "overlay": {
+        "BUILD.bazel": "sha256-E+plTDoaUBX+nIV+ACBR3M/USxHRTKzwlZNStL7+xGg="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Params-Classify-0.015.tar.gz",
+    "integrity": "sha256-OY7BXNiZ/Ni+89ueoXSL9jHxX2wyviA+R1tn31EKWRQ=",
+    "strip_prefix": "Params-Classify-0.015",
+    "overlay": {
+        "BUILD.bazel": "sha256-z0dfOALwo2PPBmqOw/DoPKoSHiGH2o8DQ44QOCdSqVo="
+    }
+}

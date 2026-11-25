@@ -1,0 +1,10 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Type-Tiny-XS-0.025.tar.gz",
+    "integrity": "sha256-mmFFDdqQKU9gbNej+kTzsaNmvNiKQZkXsFTuXiPRSL0=",
+    "strip_prefix": "Type-Tiny-XS-0.025",
+    "overlay": {
+        "const-xs.inc": "sha256-CdRkcwCzstC+M2scl+VieY8Ol7Tof89/67ZT2PBjL/M=",
+        "const-c.inc": "sha256-Dgcv1Q4jKqPSZB8BUmTjzcTaRkpYvEeiSlKEG7YnQws=",
+        "BUILD.bazel": "sha256-I48zQmHfEhWlljG2H2+KPkO5JmSsdHXAoFvLREx4SlE="
+    }
+}

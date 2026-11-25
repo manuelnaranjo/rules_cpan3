@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/IO-TieCombine",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.005.cpan1"
+    ],
+    "yanked_versions": {}
+}

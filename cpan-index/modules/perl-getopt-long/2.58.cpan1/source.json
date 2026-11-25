@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JV/JV/Getopt-Long-2.58.tar.gz",
+    "integrity": "sha256-EwXtRuoh95QwTpeqPc06OFGQWXhenbdBXa8sIYUGxWk=",
+    "strip_prefix": "Getopt-Long-2.58",
+    "overlay": {
+        "BUILD.bazel": "sha256-TwltjjpZIGU/3OxWgMREJh8QN+m/GFNcLlYBZFEYkmw="
+    }
+}

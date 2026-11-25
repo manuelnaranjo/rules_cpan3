@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JI/JIRO/Digest-FarmHash-0.02.tar.gz",
+    "integrity": "sha256-HAcfhJpz8XJ9uMiR/fuIqWzs2HQCbb/SDF0RLQKVNo0=",
+    "strip_prefix": "Digest-FarmHash-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-G5t1i0aO4bAStvht6TJi3P/iJojoM56mmj1N6CtCqWU="
+    }
+}

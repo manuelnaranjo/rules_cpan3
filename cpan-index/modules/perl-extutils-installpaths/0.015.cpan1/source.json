@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-InstallPaths-0.015.tar.gz",
+    "integrity": "sha256-fWTrLfqH6tAQzfVcihvf3lC3tYUtfLjPIwT1W+ousAc=",
+    "strip_prefix": "ExtUtils-InstallPaths-0.015",
+    "overlay": {
+        "BUILD.bazel": "sha256-9GwKy9K6dgBpzS6Nu71hl8yD0GMpdAx+1QUmqQ6Qkr8="
+    }
+}

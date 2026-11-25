@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TE/TEVERETT/Data-BitMask-1.00.tar.gz",
+    "integrity": "sha256-EaV3XKfX7yRS4qapak2R+S4xEx6kfCTQ2Zl16K7VhK4=",
+    "strip_prefix": "Data-BitMask-1.00",
+    "overlay": {
+        "BUILD.bazel": "sha256-T41AfrS3VBmrPHKgdFlu2AFY7nJyICn8C5uTxT0qGkw="
+    }
+}

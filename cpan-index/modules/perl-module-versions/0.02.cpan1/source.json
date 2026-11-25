@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TH/THW/Module-Versions-0.02.zip",
+    "integrity": "sha256-DTimWxenrFGI1zh8/+f6oSY4Rw3JNxYevz2kh7fR+Dw=",
+    "strip_prefix": "Module-Versions-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-xJZYjV/gTGv/kZQwYrRl3pmvU11ZzqMoxD75hGJ6CZc="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Algorithm-Heapify-XS",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.08.cpan1"
+    ],
+    "yanked_versions": {}
+}

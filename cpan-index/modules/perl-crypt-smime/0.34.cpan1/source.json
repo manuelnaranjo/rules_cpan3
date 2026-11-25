@@ -1,0 +1,9 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIKAGE/Crypt-SMIME-0.34.tar.gz",
+    "integrity": "sha256-o0DqZpNW9KAGCMbR7xQcEM4Q3OAjLpdv6Nt58W/W5TU=",
+    "strip_prefix": "Crypt-SMIME-0.34",
+    "overlay": {
+        "const-autoload.inc": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+        "BUILD.bazel": "sha256-84X78ScKUqmexg5BO3Ei3VQqpHXGj61VpMWETpvS0Yk="
+    }
+}

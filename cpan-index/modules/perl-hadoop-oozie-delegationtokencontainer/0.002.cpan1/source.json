@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Hadoop-Oozie-DelegationTokenContainer-0.002.tar.gz",
+    "integrity": "sha256-7Qw1efNVV9vDxRgQwmYxIHMYlIB1lFUOX/y82B6LPLM=",
+    "strip_prefix": "Hadoop-Oozie-DelegationTokenContainer-0.002",
+    "overlay": {
+        "BUILD.bazel": "sha256-iMPVnqFb03NlcK+Ar0XOoZRbzJQothSOyoPgmkjdbHE="
+    }
+}

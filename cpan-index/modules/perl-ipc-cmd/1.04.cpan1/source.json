@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/IPC-Cmd-1.04.tar.gz",
+    "integrity": "sha256-0RCg9g41xlchRUIA8NLw+JZVKaKt2WSdH6b0+ezLZDA=",
+    "strip_prefix": "IPC-Cmd-1.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-IYUVckIahUkVpK7wIRD6USVM0LYsl4jjnXKW3pygMAY="
+    }
+}

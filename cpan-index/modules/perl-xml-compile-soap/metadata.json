@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/XML-Compile-SOAP",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.28.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.049.tar.gz",
+    "integrity": "sha256-nQSK57muY4cbrpdroB4IHYhzktkE5dSLBOItNe0iARo=",
+    "strip_prefix": "IPC-Run3-0.049",
+    "overlay": {
+        "BUILD.bazel": "sha256-A1vEQvV4wsaCF5G/dFgkrAZVPrPP0qLl54ald1Z4n4E="
+    }
+}

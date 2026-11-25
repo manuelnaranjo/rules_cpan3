@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/REST-Client",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "281.cpan1"
+    ],
+    "yanked_versions": {}
+}

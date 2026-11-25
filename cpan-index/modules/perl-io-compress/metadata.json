@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/IO-Compress",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.225.cpan1"
+    ],
+    "yanked_versions": {}
+}

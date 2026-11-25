@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCAPUTO/IO-Pipely-0.006.tar.gz",
+    "integrity": "sha256-Dj/NhBoyfvtUn6AbIIPcNpXnLqDGMwPlbtUWG/gQQTs=",
+    "strip_prefix": "IO-Pipely-0.006",
+    "overlay": {
+        "BUILD.bazel": "sha256-M3vi4hJyv8dAfYH7+9pfszysdxi9Gu8k1RbPL91JJtY="
+    }
+}

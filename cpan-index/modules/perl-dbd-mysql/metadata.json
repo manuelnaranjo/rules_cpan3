@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/DBD-mysql",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "5.014.cpan1"
+    ],
+    "yanked_versions": {}
+}

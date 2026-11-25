@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/PBKDF2-Tiny-0.005.tar.gz",
+    "integrity": "sha256-tOIdxZswJl6qpBtwUIfsA0R9nGVaFKxA/0bk3inqv44=",
+    "strip_prefix": "PBKDF2-Tiny-0.005",
+    "overlay": {
+        "BUILD.bazel": "sha256-CidwuoE2uGFh+rysE5vMkttGsLORy67zDIVEqukejFw="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIKER/NetAddr-IP-4.079.tar.gz",
+    "integrity": "sha256-7FqC37cCi80ouz1Wn5XYfdQWbMGYZ/IYTtOln21soOc=",
+    "strip_prefix": "NetAddr-IP-4.079",
+    "overlay": {
+        "BUILD.bazel": "sha256-Cq952IcuFg9Wd2tZmc77JQHpka6X+BWKLk3FQTjzFU8="
+    }
+}

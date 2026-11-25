@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Sub-Install-0.929.tar.gz",
+    "integrity": "sha256-gLHigdjNOysx2scR9cihZXqHzYC75przkkvL605dsHc=",
+    "strip_prefix": "Sub-Install-0.929",
+    "overlay": {
+        "BUILD.bazel": "sha256-WxIz8bGrEs4MaIgYF3WMwoRWzUpCN+3IZkM5AZ0be/U="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz",
+    "integrity": "sha256-jjvCUwsBIWGIw6plrNvS9ZxOYx864IXfxDmr2J+PCs8=",
+    "strip_prefix": "DBICx-TestDatabase-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-VeGMv2BvqCva18mG1Krw18YSld5kPuJBunYMzcvl0f0="
+    }
+}

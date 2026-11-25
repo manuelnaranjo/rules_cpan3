@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Cookie-Baker-XS-0.14.tar.gz",
+    "integrity": "sha256-CpRoLrqknCbY8Y5bpbzXfmioXMyPPnM7kg7eCZGj884=",
+    "strip_prefix": "Cookie-Baker-XS-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-ohnqsOytNn48LnsS49rKocQel3DCjjEuAODU85sXxFI="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RI/RITOU/OAuth-Lite2-0.11.tar.gz",
+    "integrity": "sha256-AUF+worO/SWoOb20uEYFYDauEiwYHauQfkjgvbk4aGo=",
+    "strip_prefix": "OAuth-Lite2-0.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-27TPhjEvZ2v87NcBpEq3ItmvbxviDA3HbfKmyW3AnOw="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Y/YA/YANICK/Promises-1.05.tar.gz",
+    "integrity": "sha256-V6GE/0zbB4UJxIB3NDsLZkaqon7Qq4POsy+ioqps0UA=",
+    "strip_prefix": "Promises-1.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-Ugu7IHVD1aZXJlMg0+6c24H/DGgMGzDAbv4Phy1o1Do="
+    }
+}

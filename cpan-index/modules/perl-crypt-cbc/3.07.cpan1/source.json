@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-CBC-3.07.tar.gz",
+    "integrity": "sha256-9N37TdasUBPfg0G/pzTZye4PEOLnEhXsj+W/eAt8kSc=",
+    "strip_prefix": "Crypt-CBC-3.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-MILkiBflpz4qz2mB8l3x2wVCpmdOrwamKCyxV+YIfwA="
+    }
+}

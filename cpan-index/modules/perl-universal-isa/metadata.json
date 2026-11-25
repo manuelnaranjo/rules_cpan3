@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/UNIVERSAL-isa",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.20171012.cpan1"
+    ],
+    "yanked_versions": {}
+}

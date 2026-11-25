@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Time-Crontab-0.04.tar.gz",
+    "integrity": "sha256-tdx7ssMEJLQRRFI73IyQuQTv7bEsc2YkwMdJo2OVum8=",
+    "strip_prefix": "Time-Crontab-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-42YcAM8t+iHPwp/MnCOmsJQJwBgo9Ht901iNc5eJISM="
+    }
+}

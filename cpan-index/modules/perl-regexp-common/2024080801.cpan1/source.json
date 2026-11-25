@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2024080801.tar.gz",
+    "integrity": "sha256-BnevrsjhMAzv4ka02AnnXN9V4swPd8SG0TBztpq0+90=",
+    "strip_prefix": "Regexp-Common-2024080801",
+    "overlay": {
+        "BUILD.bazel": "sha256-vI1AT+XsE+4DL1K3BJg1uePD7W9od8v7oTi884aGQY4="
+    }
+}

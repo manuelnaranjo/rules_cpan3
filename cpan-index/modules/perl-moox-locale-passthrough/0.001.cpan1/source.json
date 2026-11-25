@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/MooX-Locale-Passthrough-0.001.tar.gz",
+    "integrity": "sha256-egWCflKrWh3eLqXHEpJ7HljI0lFmTZZmJ6353TDsBRI=",
+    "strip_prefix": "MooX-Locale-Passthrough-0.001",
+    "overlay": {
+        "BUILD.bazel": "sha256-WJM1FhH38vTUq9cSYC4BC9L6JJl3Ip5YUzK2vZacBuQ="
+    }
+}

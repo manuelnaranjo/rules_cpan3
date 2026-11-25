@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Sub-Exporter-ForMethods-0.100055.tar.gz",
+    "integrity": "sha256-eR9CA7p8D32DgLwBvsICFffIvHDX7QPlUu7kRUGr6U4=",
+    "strip_prefix": "Sub-Exporter-ForMethods-0.100055",
+    "overlay": {
+        "BUILD.bazel": "sha256-fneaq16ovShFJ3c/PVLpEXcq0xvuKprIHt3tie4OaxU="
+    }
+}

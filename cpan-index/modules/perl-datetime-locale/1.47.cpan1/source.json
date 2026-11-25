@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Locale-1.47.tar.gz",
+    "integrity": "sha256-wLJeHNsoJdRGm5bHu9HX8gxfxfxa5/Xiv25p4Iv7ns0=",
+    "strip_prefix": "DateTime-Locale-1.47",
+    "overlay": {
+        "BUILD.bazel": "sha256-+4lPQasuf62C6/hhYEZDRMprH5D0mebfwhaNzjmBN5w="
+    }
+}

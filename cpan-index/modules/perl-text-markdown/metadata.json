@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Text-Markdown",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.000031.cpan1"
+    ],
+    "yanked_versions": {}
+}

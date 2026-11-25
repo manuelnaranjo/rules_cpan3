@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Spreadsheet-WriteExcel",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.40.cpan1"
+    ],
+    "yanked_versions": {}
+}

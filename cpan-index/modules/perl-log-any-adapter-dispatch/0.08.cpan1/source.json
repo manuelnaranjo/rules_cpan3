@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PR/PREACTION/Log-Any-Adapter-Dispatch-0.08.tar.gz",
+    "integrity": "sha256-rsk7V+XqCtucPu4IWNIW+5JjyGpOztR+RWXteSM9tNk=",
+    "strip_prefix": "Log-Any-Adapter-Dispatch-0.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-8nggoRzMMtw7osdIf7lWrB2x3CXegp01BjT+Y8j7dNM="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/Encode-Locale-1.05.tar.gz",
+    "integrity": "sha256-F2+gJ3H1QqTvsdvCpMko6PQ5G/QHhHO9YEDY8RrbDsE=",
+    "strip_prefix": "Encode-Locale-1.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-JoGZ7iiD09h9MWM6NVOOTQoRCrIITgV3GxrlLvghM5E="
+    }
+}

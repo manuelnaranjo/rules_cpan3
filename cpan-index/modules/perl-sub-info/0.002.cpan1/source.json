@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Sub-Info-0.002.tar.gz",
+    "integrity": "sha256-6jBW1pa97/IamdNA1VcIh9OajMR7/yOt/ILfZ1jN0Oo=",
+    "strip_prefix": "Sub-Info-0.002",
+    "overlay": {
+        "BUILD.bazel": "sha256-RMHt3TWlARTju3WH5ZAwMUNK3k71ewOjKw1MjQcVTJI="
+    }
+}

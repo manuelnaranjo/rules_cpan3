@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/autodie-2.37.tar.gz",
+    "integrity": "sha256-SSHSEbDOpjwsoG38DJSKcgOj1IrYCgb0O0YQQ1TywcM=",
+    "strip_prefix": "autodie-2.37",
+    "overlay": {
+        "BUILD.bazel": "sha256-P9xEr1EvXCctGRZ0m22KJGkT9al/lmGnO10LieKOTfM="
+    }
+}

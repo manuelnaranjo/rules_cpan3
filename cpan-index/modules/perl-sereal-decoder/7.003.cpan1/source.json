@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Sereal-Decoder-7.003.tar.gz",
+    "integrity": "sha256-MuHXIJ/B9wvO7Q2PxZF0JiupUdYZNlm+BWSAjYiKMsw=",
+    "strip_prefix": "Sereal-Decoder-7.003",
+    "overlay": {
+        "BUILD.bazel": "sha256-82mnPa0Whtq/kGBL4K7ElmAj4QhxFzgx60RXdlBJLoc="
+    }
+}

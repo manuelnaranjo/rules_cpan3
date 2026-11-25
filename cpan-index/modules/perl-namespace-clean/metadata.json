@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/namespace-clean",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.27.cpan1"
+    ],
+    "yanked_versions": {}
+}

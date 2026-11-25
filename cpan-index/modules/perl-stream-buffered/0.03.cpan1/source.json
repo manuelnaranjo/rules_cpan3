@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/Stream-Buffered-0.03.tar.gz",
+    "integrity": "sha256-my1DkLXeawz0VY5K0EMXpzxeE90ZrykUnE5Hw3+yQjs=",
+    "strip_prefix": "Stream-Buffered-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-+eAsSEijTsEgqEoKEyypRbiDaFa9vZlJ1/84mcI3aeY="
+    }
+}

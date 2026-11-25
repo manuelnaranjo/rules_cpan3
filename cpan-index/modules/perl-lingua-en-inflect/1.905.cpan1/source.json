@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/Lingua-EN-Inflect-1.905.tar.gz",
+    "integrity": "sha256-BcKew0guVyMTpg2iGBsLMMXbfPAfiudhatZ+G2YmMpY=",
+    "strip_prefix": "Lingua-EN-Inflect-1.905",
+    "overlay": {
+        "BUILD.bazel": "sha256-47mdm3EIm2y0XjN2SOD8PAcDZLuoU0P7bPO0w6bShHg="
+    }
+}

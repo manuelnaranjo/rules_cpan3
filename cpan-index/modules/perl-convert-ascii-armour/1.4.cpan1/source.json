@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/V/VI/VIPUL/Convert-ASCII-Armour-1.4.tar.gz",
+    "integrity": "sha256-l+istusqKpGvfWzw0t/2+kKq+Tn8fW0cYFek8N9SyQQ=",
+    "strip_prefix": "Convert-ASCII-Armour-1.4",
+    "overlay": {
+        "BUILD.bazel": "sha256-pr+KbGEJSV4ol/AAMoceYYEbk9VolPMbMBObIoO4i0M="
+    }
+}

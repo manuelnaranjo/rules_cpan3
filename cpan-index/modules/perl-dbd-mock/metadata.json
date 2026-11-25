@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/DBD-Mock",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.60.cpan1"
+    ],
+    "yanked_versions": {}
+}

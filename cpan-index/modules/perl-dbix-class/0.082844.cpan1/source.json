@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RI/RIBASUSHI/DBIx-Class-0.082844.tar.gz",
+    "integrity": "sha256-4HhOOGGhl61aoXOW8YkB8KqourBKQzDLUAODN+wwyn8=",
+    "strip_prefix": "DBIx-Class-0.082844",
+    "overlay": {
+        "BUILD.bazel": "sha256-/KBIIzbjCqcOahwvCyL2DbcG5rI/HmPQ3Kub2SPeqRo="
+    }
+}

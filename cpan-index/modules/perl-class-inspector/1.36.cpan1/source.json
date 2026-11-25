@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Class-Inspector-1.36.tar.gz",
+    "integrity": "sha256-zCldI6RyaHwkSJ1YIm6tI7n9wliOUi8LXwdHdBcAaU4=",
+    "strip_prefix": "Class-Inspector-1.36",
+    "overlay": {
+        "BUILD.bazel": "sha256-F22jkKPVBsmCKxUtKR0S7Cw1gbNbeA+8V9+nU3cYuHM="
+    }
+}

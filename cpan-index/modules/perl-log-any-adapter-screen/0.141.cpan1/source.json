@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PERLANCAR/Log-Any-Adapter-Screen-0.141.tar.gz",
+    "integrity": "sha256-UTk0sgjoUTiDE3rjGaspxecGy6w2kSQtvdu6hbeRZIc=",
+    "strip_prefix": "Log-Any-Adapter-Screen-0.141",
+    "overlay": {
+        "BUILD.bazel": "sha256-ZHT5dLoyehkrGWwEwOQtJCok6UZ266hJTxAPupKooyc="
+    }
+}

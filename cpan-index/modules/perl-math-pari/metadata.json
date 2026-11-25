@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Math-Pari",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.030528.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-FillInForm-2.22.tar.gz",
+    "integrity": "sha256-EO7l8w5zY0LCWiT6aHBNf0U19aVikiu42MuF+21CpNg=",
+    "strip_prefix": "HTML-FillInForm-2.22",
+    "overlay": {
+        "BUILD.bazel": "sha256-2iZws11lVVw7NutwCk6coTSUW4xDTB4cjx02EHGyo00="
+    }
+}

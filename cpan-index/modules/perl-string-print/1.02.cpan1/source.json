@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/String-Print-1.02.tar.gz",
+    "integrity": "sha256-MElTZIZFnjjh15HAfOAiMmqRowK+rwHc2w57cDpdpsw=",
+    "strip_prefix": "String-Print-1.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-GHvcA1LjEnacXMSyyAeLGPr2nYiPcwldWira/Wpi8Pk="
+    }
+}

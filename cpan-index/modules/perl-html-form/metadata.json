@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/HTML-Form",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "6.13.cpan1"
+    ],
+    "yanked_versions": {}
+}

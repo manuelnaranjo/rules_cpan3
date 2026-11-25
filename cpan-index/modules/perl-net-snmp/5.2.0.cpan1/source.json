@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DT/DTOWN/Net-SNMP-5.2.0.tar.gz",
+    "integrity": "sha256-Lk0KQh5jKTDeR1+QASfm5F1FnfXuqfHDEDn2CR1nw1g=",
+    "strip_prefix": "Net-SNMP-5.2.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-Ylq7wChjw94YvQbx7M/qie4vIKpt/g+flWLWH9KhIPQ="
+    }
+}

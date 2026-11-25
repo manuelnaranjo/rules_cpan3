@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Z/ZA/ZAKAME/Hashids-1.001013.tar.gz",
+    "integrity": "sha256-RuVODxrb0RSvpEvJDNQ23Hl/rhBu7ybFc/FHthOxcG0=",
+    "strip_prefix": "Hashids-1.001013",
+    "overlay": {
+        "BUILD.bazel": "sha256-KdIa584ScFiYzwChXamyFYztpJfA08GvYupSDWvM8e0="
+    }
+}

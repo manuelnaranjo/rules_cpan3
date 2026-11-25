@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Getopt-Yath-2.000011.tar.gz",
+    "integrity": "sha256-Kw94+U0kbq1cjyFVDF8AvN6T/ZV+RbZKbbJhE3ZG9c4=",
+    "strip_prefix": "Getopt-Yath-2.000011",
+    "overlay": {
+        "BUILD.bazel": "sha256-v7yFIetdKrRe3uUwKBU4o/n1wLpSDrhFalphkDCr7lw="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SL/SLANNING/Net-Graphite-0.19.tar.gz",
+    "integrity": "sha256-N8Jw9/61d6A5GWuj5Z9apPEmHtOs91FgdROl+2Lm3KY=",
+    "strip_prefix": "Net-Graphite-0.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-fB8U+b0dWpbixZ1ZhSYhRvoXlQ7woi/e0mfKtUE5eMs="
+    }
+}

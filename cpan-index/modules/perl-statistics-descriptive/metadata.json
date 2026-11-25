@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Statistics-Descriptive",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.0801.cpan1"
+    ],
+    "yanked_versions": {}
+}

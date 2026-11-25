@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANAJ/Math-Prime-Util-0.75.tar.gz",
+    "integrity": "sha256-hcF8vrWSfXHwJKLh8Ze/9h4cptokkFPhaDtiyJS7iIE=",
+    "strip_prefix": "Math-Prime-Util-0.75",
+    "overlay": {
+        "BUILD.bazel": "sha256-hMqtXgRreabJDV1EMPnkMvMxTY/9n2V1pm6df0WBjJc="
+    }
+}

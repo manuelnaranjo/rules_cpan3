@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BB/BBC/Hash-Flatten-1.19.tar.gz",
+    "integrity": "sha256-cMbEnYtsRgdGQXpQmO3SoP0x/YuGxUv4SS6FPB9OS5g=",
+    "strip_prefix": "Hash-Flatten-1.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-5UwOu2Gia/9RnmdkFRic33c44uK+YNmrQulXxHRxehA="
+    }
+}

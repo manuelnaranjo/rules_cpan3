@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Text-Diff",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.46.cpan1"
+    ],
+    "yanked_versions": {}
+}

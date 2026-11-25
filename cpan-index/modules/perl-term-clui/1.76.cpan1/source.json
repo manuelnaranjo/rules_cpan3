@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Term-Clui-1.76.tar.gz",
+    "integrity": "sha256-uO6M0iUqQyRNH4S3brBAfnLq/CTl1TqrrHGdhp378R8=",
+    "strip_prefix": "Term-Clui-1.76",
+    "overlay": {
+        "BUILD.bazel": "sha256-dGnbPBHYVVZrZ51PjHNq6V99q2ikxDUc4dqSxK9w6RY="
+    }
+}

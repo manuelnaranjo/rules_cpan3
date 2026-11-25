@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-DES_EDE3-0.03.tar.gz",
+    "integrity": "sha256-KFktt7njR0WqkfPhnl27uDqvRyop5we5eR0NArPiJ/U=",
+    "strip_prefix": "Crypt-DES_EDE3-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-+E7vtaKqsBX542jGx0qRBwD3njxICjH1xqHMf7YC1Y4="
+    }
+}

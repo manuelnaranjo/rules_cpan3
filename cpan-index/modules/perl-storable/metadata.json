@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Storable",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.41.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/File-Find-Rule-Perl",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.16.cpan1"
+    ],
+    "yanked_versions": {}
+}

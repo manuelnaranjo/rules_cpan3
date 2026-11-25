@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AU/AUTRIJUS/Lingua-ZH-HanDetect-0.04.tar.gz",
+    "integrity": "sha256-ks/zRR0TEDr73KEmjD3FGrkzQyM6BrY9RfEdmlPSmuw=",
+    "strip_prefix": "Lingua-ZH-HanDetect-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-oeJ9xvKAMzQUCdqiExjGD+epvT4QdcUQO8pLKGXE4hU="
+    }
+}

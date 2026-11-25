@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/Test-Spelling-0.25.tar.gz",
+    "integrity": "sha256-OMZZ8DpNc2LhaDKjSJ0X+Gouo2Rx0zXhfOMjRX31vGA=",
+    "strip_prefix": "Test-Spelling-0.25",
+    "overlay": {
+        "BUILD.bazel": "sha256-lFm6E+yXrt8qJmbsmPCUxC/fiS3eyrAlAsoNGHZXjew="
+    }
+}

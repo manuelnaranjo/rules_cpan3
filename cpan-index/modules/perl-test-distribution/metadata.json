@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Test-Distribution",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.00.cpan1"
+    ],
+    "yanked_versions": {}
+}

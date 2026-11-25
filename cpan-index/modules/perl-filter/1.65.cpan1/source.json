@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Filter-1.65.tar.gz",
+    "integrity": "sha256-y3DaeuXhkTigsi+ztjh8OuaXo80/P27N5CUVLpEk0eY=",
+    "strip_prefix": "Filter-1.65",
+    "overlay": {
+        "BUILD.bazel": "sha256-MrGV24szjQJtziTLGaa7jzBSKZvWXZdXnIm36fCelPM="
+    }
+}

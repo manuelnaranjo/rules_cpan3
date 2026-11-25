@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/List-BinarySearch",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.25.cpan1"
+    ],
+    "yanked_versions": {}
+}

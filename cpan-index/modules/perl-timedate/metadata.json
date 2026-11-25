@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/TimeDate",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.35.cpan1"
+    ],
+    "yanked_versions": {}
+}

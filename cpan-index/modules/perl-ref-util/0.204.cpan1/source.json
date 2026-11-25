@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AR/ARC/Ref-Util-0.204.tar.gz",
+    "integrity": "sha256-QV+nPbrPRPPV15wUiIzJlFYnIKtGjm9x+RzR92nxBeE=",
+    "strip_prefix": "Ref-Util-0.204",
+    "overlay": {
+        "BUILD.bazel": "sha256-awNTllZNAXj10nktjoH2oXG/Jy9J8xHt7SB4HYWNLh4="
+    }
+}

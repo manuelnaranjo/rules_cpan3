@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Hash-Merge-Simple-0.052.tar.gz",
+    "integrity": "sha256-wn8giVgUqW4MW9DKMxW/kB15cG47q0qw2UbevCxCnAs=",
+    "strip_prefix": "Hash-Merge-Simple-0.052",
+    "overlay": {
+        "BUILD.bazel": "sha256-ZM7LVoSudBgNyJopWKmIqUCMglIA+sSJi98P4wpgHpk="
+    }
+}

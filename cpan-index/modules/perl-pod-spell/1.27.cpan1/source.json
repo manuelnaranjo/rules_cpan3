@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Pod-Spell-1.27.tar.gz",
+    "integrity": "sha256-fvVskinz77xxoEYs5ESQwN1J+/OyH+hbsIse6sb3sGM=",
+    "strip_prefix": "Pod-Spell-1.27",
+    "overlay": {
+        "BUILD.bazel": "sha256-kn38n0CaGrTt69Y1SA+B8iFnPwfyRf7AuWH6uu13liQ="
+    }
+}

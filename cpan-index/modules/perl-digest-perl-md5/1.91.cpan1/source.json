@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DE/DELTA/Digest-Perl-MD5-1.91.tar.gz",
+    "integrity": "sha256-cY5BcX+4Kpqz8ICdIR/dzb3vkdwZiIfYK4hyOqVK/NU=",
+    "strip_prefix": "Digest-Perl-MD5-1.91",
+    "overlay": {
+        "BUILD.bazel": "sha256-aPBHIl8EX0bfbOnPjA6wBx/bMFAlHSVmxqwMDdOMsiY="
+    }
+}

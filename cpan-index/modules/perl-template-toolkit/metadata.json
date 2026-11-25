@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Template-Toolkit",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.106.cpan1"
+    ],
+    "yanked_versions": {}
+}

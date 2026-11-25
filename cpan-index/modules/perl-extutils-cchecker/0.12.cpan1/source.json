@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/ExtUtils-CChecker-0.12.tar.gz",
+    "integrity": "sha256-i4fRRTN97B7nVNMIcdCxBcGArUySx9wMf63XbOyMV9M=",
+    "strip_prefix": "ExtUtils-CChecker-0.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-Nw/zecgZLAWTP3Ry70r+NRzFIwJwqskcMk24mIhMpag="
+    }
+}

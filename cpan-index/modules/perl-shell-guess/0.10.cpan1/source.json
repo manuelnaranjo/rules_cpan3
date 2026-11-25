@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Shell-Guess-0.10.tar.gz",
+    "integrity": "sha256-s+hxutqP58yCvLQzVa5B0BSTI0mCEjjKq8gVdsxh9G8=",
+    "strip_prefix": "Shell-Guess-0.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-N07zxousaOJCSJ2dEu6Ay0lOguUEBdGtdiPt4kvpuzY="
+    }
+}

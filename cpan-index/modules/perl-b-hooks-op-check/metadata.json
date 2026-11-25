@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/B-Hooks-OP-Check",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.22.cpan1"
+    ],
+    "yanked_versions": {}
+}

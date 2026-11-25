@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AS/ASKSH/Snowball-Swedish-1.2.tar.gz",
+    "integrity": "sha256-76qSNVhZj06IjZelEtYPvMRIHB+cXn3tUnWWKUVg/Ck=",
+    "strip_prefix": "Snowball-Swedish-1.2",
+    "overlay": {
+        "BUILD.bazel": "sha256-gCdtwbN3ozk3gc7dafHkKHyssb1b/UPjHhvhfMcTGS8="
+    }
+}

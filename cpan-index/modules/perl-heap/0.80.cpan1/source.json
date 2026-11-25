@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JM/JMM/Heap-0.80.tar.gz",
+    "integrity": "sha256-zNop88kxdq0P3/9N1vXkrJCzcMuksCg4a3NDv2QTm94=",
+    "strip_prefix": "Heap-0.80",
+    "overlay": {
+        "BUILD.bazel": "sha256-48OeSz4eS5dw7DtyfTYiANpCQJ9QVHPBX7JvKKakRCo="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Parser-GraphQL-XS",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.000004.cpan1"
+    ],
+    "yanked_versions": {}
+}

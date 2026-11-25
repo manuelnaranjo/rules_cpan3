@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SI/SIXTEASE/XML-Entities-1.0002.tar.gz",
+    "integrity": "sha256-wyqk8wlXPXZIqy5Bb2K2sgZS8q2c/T7sgv1REB/nMQ0=",
+    "strip_prefix": "XML-Entities-1.0002",
+    "overlay": {
+        "BUILD.bazel": "sha256-48PObc5o3O3kMSojtdlywEaN0xKCSdwALNQL5nFNdzo="
+    }
+}

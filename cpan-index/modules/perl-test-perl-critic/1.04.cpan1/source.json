@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Test-Perl-Critic-1.04.tar.gz",
+    "integrity": "sha256-KPgGtUEseQi1bPFnMIS4tEzhy1TJQX14TZFCjhoECW4=",
+    "strip_prefix": "Test-Perl-Critic-1.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-5AmEm7G98Ec8+4R1WiRZM8RlYB93cNamJp/fLvIek38="
+    }
+}

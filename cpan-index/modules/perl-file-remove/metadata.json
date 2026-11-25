@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/File-Remove",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.61.cpan1"
+    ],
+    "yanked_versions": {}
+}

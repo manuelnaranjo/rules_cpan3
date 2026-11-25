@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/UNIVERSAL-can",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.20140328.cpan1"
+    ],
+    "yanked_versions": {}
+}

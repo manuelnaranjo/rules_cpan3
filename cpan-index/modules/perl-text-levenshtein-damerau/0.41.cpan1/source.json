@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/U/UG/UGEXE/Text-Levenshtein-Damerau-0.41.tar.gz",
+    "integrity": "sha256-Pn0U+pfzH0hi6vJPpfokiSqut7Nj4VIi3NzIKnyvXlA=",
+    "strip_prefix": "Text-Levenshtein-Damerau-0.41",
+    "overlay": {
+        "BUILD.bazel": "sha256-1fstxX4elT3kWV2dcRxHJLBw1VngavbMGwAWPC5S1Kg="
+    }
+}

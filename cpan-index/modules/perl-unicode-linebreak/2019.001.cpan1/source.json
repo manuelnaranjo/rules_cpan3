@@ -1,0 +1,9 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz",
+    "integrity": "sha256-SGdi5MrN3Md7E5ifl5oCn4RjC4F15/7xeYnhV9S2MYo=",
+    "strip_prefix": "Unicode-LineBreak-2019.001",
+    "overlay": {
+        "sombok/include/sombok.h": "sha256-q+5FMZtceqYjhFsGUMCekWgOnlV06Yie0rT2QZRXhsI=",
+        "BUILD.bazel": "sha256-tiT6Lx6C14FvjuVdXnNLuaCisP8C/+W/uw1CTSc7BZA="
+    }
+}

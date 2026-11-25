@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LU/LUNATIC/Text-ASCIITable-0.22.tar.gz",
+    "integrity": "sha256-5NOVN9s11164gDLS0mpwdzP+M7a66yEvnHM/xL/wfkM=",
+    "strip_prefix": "Text-ASCIITable-0.22",
+    "overlay": {
+        "BUILD.bazel": "sha256-W1Pza/DmhRUrLjGHjDs5udR/ead3x+/sxdLY6pD7eTo="
+    }
+}

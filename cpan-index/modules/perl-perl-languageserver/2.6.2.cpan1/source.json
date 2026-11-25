@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GR/GRICHTER/Perl-LanguageServer-2.6.2.tar.gz",
+    "integrity": "sha256-bQk3kK/nBOvdjH4SnI8GA1LvgULb2884cnZnCzWAvWo=",
+    "strip_prefix": "Perl-LanguageServer-2.6.2",
+    "overlay": {
+        "BUILD.bazel": "sha256-2SOYdkQFLyQ15QCJ8ctoCP5dAl7+NvsgfUvr1G39aUQ="
+    }
+}

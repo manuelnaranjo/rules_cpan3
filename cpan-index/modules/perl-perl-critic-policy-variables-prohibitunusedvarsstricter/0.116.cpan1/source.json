@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/W/WY/WYANT/Perl-Critic-Policy-Variables-ProhibitUnusedVarsStricter-0.116.tar.gz",
+    "integrity": "sha256-hjN3GSKG1EQg4RGeOIlJdU7Tvg16kw4oMdlwl1j9cxw=",
+    "strip_prefix": "Perl-Critic-Policy-Variables-ProhibitUnusedVarsStricter-0.116",
+    "overlay": {
+        "BUILD.bazel": "sha256-lfVjCuacrpWCi019UA4Np/JsaIK67mhq47jI5d6L8vc="
+    }
+}

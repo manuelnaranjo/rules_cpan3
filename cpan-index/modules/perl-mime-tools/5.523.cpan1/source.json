@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DS/DSKOLL/MIME-tools-5.523.tar.gz",
+    "integrity": "sha256-ZRBKppJVJN9wvhFJZnR3Pmr9Dgj6ZIt01AJHNGcFct4=",
+    "strip_prefix": "MIME-tools-5.523",
+    "overlay": {
+        "BUILD.bazel": "sha256-80pYPMxRKnmX0XD6u4UJr+XfDVm7uH7ky7IbCw1DwSE="
+    }
+}

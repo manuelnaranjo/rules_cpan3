@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Devel-CheckBin-0.04.tar.gz",
+    "integrity": "sha256-FX89tZwp7R1JEzpGnO53LIha1O5k6GkqkbPr/b4v4+Q=",
+    "strip_prefix": "Devel-CheckBin-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-wLXMHipAVstGuyelylksYI14s23be+bje8/QsmaZa+k="
+    }
+}

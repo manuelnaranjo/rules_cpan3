@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/MooX-Types-MooseLike",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.29.cpan1"
+    ],
+    "yanked_versions": {}
+}

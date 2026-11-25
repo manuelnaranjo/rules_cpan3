@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Ref-Util-XS-0.117.tar.gz",
+    "integrity": "sha256-+2TFqCN4f2YAJXkY/r2fvG8DBZNvwyh7gaMMCZtlYzw=",
+    "strip_prefix": "Ref-Util-XS-0.117",
+    "overlay": {
+        "BUILD.bazel": "sha256-xcIJrkQNfU3PstkThjAAsNtvROese04j4BENEWK/Wxo="
+    }
+}

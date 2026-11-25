@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/URI-Escape-XS",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.15.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Authen-SCRAM",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.011.cpan1"
+    ],
+    "yanked_versions": {}
+}

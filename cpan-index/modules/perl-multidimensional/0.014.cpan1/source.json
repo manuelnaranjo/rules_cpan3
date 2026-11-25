@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IL/ILMARI/multidimensional-0.014.tar.gz",
+    "integrity": "sha256-EusUMXRHvRWrl5lnfbntog54TYsRPkSl9vEfUp6GLF8=",
+    "strip_prefix": "multidimensional-0.014",
+    "overlay": {
+        "BUILD.bazel": "sha256-/00cw/td1GyD4E4DA+fMwWnhQekS/vulEiNLTkCdx+c="
+    }
+}

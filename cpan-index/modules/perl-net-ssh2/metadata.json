@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Net-SSH2",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.74.cpan1"
+    ],
+    "yanked_versions": {}
+}

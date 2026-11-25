@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Algorithm-ConsistentHash-JumpHash-0.05.tar.gz",
+    "integrity": "sha256-4uHxJ8dxwjuOHXgqtdlU/zFxREsH8K4tbJvIlbQMvSI=",
+    "strip_prefix": "Algorithm-ConsistentHash-JumpHash-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-bWu14p2v9fc9Ai90IiYbqmBEWwx2Z7W8ZVkdGgEno/Q="
+    }
+}

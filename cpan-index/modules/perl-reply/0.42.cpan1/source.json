@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/Reply-0.42.tar.gz",
+    "integrity": "sha256-StoqRad6VK4QxOmkgUTqgm1dea0FDLlibp94PQOrefI=",
+    "strip_prefix": "Reply-0.42",
+    "overlay": {
+        "BUILD.bazel": "sha256-ceuuN/wnF9F3GYoKWjMnHSa+ei2rQfIpsQFJuO7cmm0="
+    }
+}

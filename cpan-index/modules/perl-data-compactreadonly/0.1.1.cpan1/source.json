@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Data-CompactReadonly-0.1.1.tar.gz",
+    "integrity": "sha256-Dyrr+7EuQ0vEpYg+/zu61aABbXxVyEZYfbJA+dPrVBo=",
+    "strip_prefix": "Data-CompactReadonly-0.1.1",
+    "overlay": {
+        "BUILD.bazel": "sha256-bLmvTmiVRWVkF9RbKFpyAqJlvma97uVxUD0fyWR/CIw="
+    }
+}

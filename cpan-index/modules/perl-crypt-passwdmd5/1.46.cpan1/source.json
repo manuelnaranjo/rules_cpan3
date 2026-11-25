@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/Crypt-PasswdMD5-1.46.tgz",
+    "integrity": "sha256-IKdompoD6HWHis449lZeYjB+Jg3rQRh7xSnHs0k51+c=",
+    "strip_prefix": "Crypt-PasswdMD5-1.46",
+    "overlay": {
+        "BUILD.bazel": "sha256-eIoX+dznwu3lbImlLtX8fQN2xmk4Ho8MLBfTe31Ddaw="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Text-Levenshtein-Damerau-XS",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.2.cpan1"
+    ],
+    "yanked_versions": {}
+}

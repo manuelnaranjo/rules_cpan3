@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Object-Realize-Later-4.00.tar.gz",
+    "integrity": "sha256-xHU9WjXxR+7eCc29Xm1ifd472qq/6eVvLP9yty0Zl5s=",
+    "strip_prefix": "Object-Realize-Later-4.00",
+    "overlay": {
+        "BUILD.bazel": "sha256-Ja31FGEO0Jme19jRl3hN4agZFlzl9f0gbsxE2231yb4="
+    }
+}

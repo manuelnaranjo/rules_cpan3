@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IN/INGY/Inline-0.87.tar.gz",
+    "integrity": "sha256-EF5CcazhwbWiZNdx/xEdi5KLJWACiIIihix76WhvOcU=",
+    "strip_prefix": "Inline-0.87",
+    "overlay": {
+        "BUILD.bazel": "sha256-wM5waHNW1bWeRt+zZvjPK2/VWYzCeI2uayuZQVgbEFI="
+    }
+}

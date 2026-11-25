@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Hash-Merge-Simple",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.052.cpan1"
+    ],
+    "yanked_versions": {}
+}

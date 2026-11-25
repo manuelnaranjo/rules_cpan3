@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Sub-Attribute",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.07.cpan1"
+    ],
+    "yanked_versions": {}
+}

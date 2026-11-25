@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MM/MMIMS/Redis-ScriptCache-0.05.tar.gz",
+    "integrity": "sha256-IbgeywOwhYqvTm3aJ/WzoulHfuHeDD0FVYWgMZLHBlo=",
+    "strip_prefix": "Redis-ScriptCache-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-giewBKtA86HMfb67L20J6zkYsM1IdskSvm9Q4ycuj5s="
+    }
+}

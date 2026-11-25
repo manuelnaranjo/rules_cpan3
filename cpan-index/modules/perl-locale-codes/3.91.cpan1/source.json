@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SB/SBECK/Locale-Codes-3.91.tar.gz",
+    "integrity": "sha256-XruyUrspbmos5M9UTuN4kZJSxLfk/+zZr9Z6VzW1d0k=",
+    "strip_prefix": "Locale-Codes-3.91",
+    "overlay": {
+        "BUILD.bazel": "sha256-jYGg2kOrRf5C6ySQeRbtNyN1har9wTIdgWReCoQwHPg="
+    }
+}

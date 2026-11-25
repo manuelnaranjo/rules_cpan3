@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Test-MockObject",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.20200122.cpan1"
+    ],
+    "yanked_versions": {}
+}

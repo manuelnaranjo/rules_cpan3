@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Getopt-0.78.tar.gz",
+    "integrity": "sha256-euiWIPOIJ9utIxOk5fc0BJlY9dYhK9Yqvby4rpNty8c=",
+    "strip_prefix": "MooseX-Getopt-0.78",
+    "overlay": {
+        "BUILD.bazel": "sha256-E5ARBjhYQB5k4NPjVcofB3XIq9UiEaKoR3SbgzV5nkk="
+    }
+}

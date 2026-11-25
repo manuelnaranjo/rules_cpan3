@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/XML-Compile-WSDL11",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.08.cpan1"
+    ],
+    "yanked_versions": {}
+}

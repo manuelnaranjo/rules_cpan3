@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Lingua-EN-Syllable-0.31.tar.gz",
+    "integrity": "sha256-F5gd641ITRwb3qi/ampUEwOxkAk8BrQbKp1Rdlx3BM0=",
+    "strip_prefix": "Lingua-EN-Syllable-0.31",
+    "overlay": {
+        "BUILD.bazel": "sha256-KTTkoHfTRoMEdrplyotXVLRY0dvi4tFYGnZ444kgKjY="
+    }
+}

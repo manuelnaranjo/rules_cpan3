@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Sereal-7.003.tar.gz",
+    "integrity": "sha256-hFoi3j/9rqBsPydeGDRxGCD9kmZN8+W9GXKnyOVVrUs=",
+    "strip_prefix": "Sereal-7.003",
+    "overlay": {
+        "BUILD.bazel": "sha256-x0SMId3O60vXzDmFcLWkMpRr1l8ArwRYvWVsqd0ZKE4="
+    }
+}

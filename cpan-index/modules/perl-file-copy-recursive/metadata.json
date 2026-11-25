@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/File-Copy-Recursive",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.45.cpan1"
+    ],
+    "yanked_versions": {}
+}

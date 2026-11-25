@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/Text-Markdown-1.000031.tar.gz",
+    "integrity": "sha256-wZHG1ezrjLdcBWUZI2BmLSAtcWutB6IzxLMppChNxxs=",
+    "strip_prefix": "Text-Markdown-1.000031",
+    "overlay": {
+        "BUILD.bazel": "sha256-loxmwjF9VRF4vu1NILSghL990pdJeyulQE0sUazzPa0="
+    }
+}

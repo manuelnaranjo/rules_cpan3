@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-LexAlias-0.05.tar.gz",
+    "integrity": "sha256-XgrZ1D4mYDOFbkJOEEoACfjmNEnkDNWrpZrZTLG87nI=",
+    "strip_prefix": "Devel-LexAlias-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-t/I5Keq5TDzGssddbsgCxqfUAITfSSzKNA6NoPcHUak="
+    }
+}

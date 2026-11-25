@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Test-HTTP-Server-0.04.tar.gz",
+    "integrity": "sha256-OtKkaZRFWM+3BCEzCcpkY0jFdeO9cSw6c6eysYlbyBU=",
+    "strip_prefix": "Test-HTTP-Server-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-pTwCMKmJ/HnJQOZrjH3m9ylxqSJduvMMWzbRL22zUCU="
+    }
+}

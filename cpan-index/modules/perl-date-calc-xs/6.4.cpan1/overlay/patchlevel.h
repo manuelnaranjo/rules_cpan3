@@ -1,0 +1,2 @@
+#define PATCHLEVEL 40
+#define SUBVERSION 1

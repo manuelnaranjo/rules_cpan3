@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Text-TabularDisplay",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.38.cpan1"
+    ],
+    "yanked_versions": {}
+}

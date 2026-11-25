@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RO/ROLAND/jmx4perl-1.13.tar.gz",
+    "integrity": "sha256-VLBi3HuJezC5bjfNKr55SlJFbUu4WQqEyqTrCtmPNKA=",
+    "strip_prefix": "jmx4perl-1.13",
+    "overlay": {
+        "BUILD.bazel": "sha256-4zSB/Pk4fU5oUS1MQHxh/2TH6Y4OBM3fvrxUxR/sOp0="
+    }
+}

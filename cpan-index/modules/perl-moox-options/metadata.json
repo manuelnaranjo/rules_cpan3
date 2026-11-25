@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/MooX-Options",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "4.103.cpan1"
+    ],
+    "yanked_versions": {}
+}

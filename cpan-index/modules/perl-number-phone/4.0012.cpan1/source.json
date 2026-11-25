@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Number-Phone-4.0012.tar.gz",
+    "integrity": "sha256-fP+q6tgxCphkAN54THU7cc2i12ycmyxrP+57/o7ersU=",
+    "strip_prefix": "Number-Phone-4.0012",
+    "overlay": {
+        "BUILD.bazel": "sha256-XbgJlQ/iwIgl71bN0P50YNj1DVthB9jURJsj2yW+M3g="
+    }
+}

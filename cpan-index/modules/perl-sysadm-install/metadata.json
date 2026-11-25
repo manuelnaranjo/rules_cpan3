@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Sysadm-Install",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.48.cpan1"
+    ],
+    "yanked_versions": {}
+}

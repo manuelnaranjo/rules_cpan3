@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/IPC-System-Simple",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.30.cpan1"
+    ],
+    "yanked_versions": {}
+}

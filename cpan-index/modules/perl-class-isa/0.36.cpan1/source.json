@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Class-ISA-0.36.tar.gz",
+    "integrity": "sha256-iBbzTpo46EmhDfdWAw3M+f4GGhlsEaw/qv1xE8kpuWQ=",
+    "strip_prefix": "Class-ISA-0.36",
+    "overlay": {
+        "BUILD.bazel": "sha256-DGzPeX2cAGgL9W/vglvLoYIt2tGRYXWC49G88QkL25U="
+    }
+}

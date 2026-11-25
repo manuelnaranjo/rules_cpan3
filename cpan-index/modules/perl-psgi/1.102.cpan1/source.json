@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/PSGI-1.102.tar.gz",
+    "integrity": "sha256-pWxEZ0CRfahpJcKfxmM7nfg5shz5j2onCGWY7ZDuH0c=",
+    "strip_prefix": "PSGI-1.102",
+    "overlay": {
+        "BUILD.bazel": "sha256-qm1bLY4JNDrFYzMPAPRRSP4es3WONRFpYyAs6yaS9DM="
+    }
+}

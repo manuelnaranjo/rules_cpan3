@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/String-Binary-Interpolation",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.0.1.cpan1"
+    ],
+    "yanked_versions": {}
+}

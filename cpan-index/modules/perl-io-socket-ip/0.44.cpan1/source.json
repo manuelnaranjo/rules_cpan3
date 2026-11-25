@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/IO-Socket-IP-0.44.tar.gz",
+    "integrity": "sha256-3DkkIVS68naptIAqKla552mo7Ge0wvt+CJto42Zs8ok=",
+    "strip_prefix": "IO-Socket-IP-0.44",
+    "overlay": {
+        "BUILD.bazel": "sha256-m/B3GGqL7XVu0bs4DhoMB4ixqO/FiwodXMD3KoJ5ml8="
+    }
+}

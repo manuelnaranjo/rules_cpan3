@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Text-Table-1.135.tar.gz",
+    "integrity": "sha256-/KPBboMSf3xE3ePT9+PHPqUNEJoQVERd6Agv6nlMpdI=",
+    "strip_prefix": "Text-Table-1.135",
+    "overlay": {
+        "BUILD.bazel": "sha256-2X3jECWkRB+nNDWuXuO8ibmxhQ264PV5qpsHDrjWWdc="
+    }
+}

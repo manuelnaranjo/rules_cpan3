@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CA/CAUGUSTIN/UUID-Tiny-1.04.tar.gz",
+    "integrity": "sha256-bc2SYE1k6WzGwYgZSuFqnTpGVWIk93tvPR0TEraPmj0=",
+    "strip_prefix": "UUID-Tiny-1.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-joeWMjqsXNzclRDgnW9mCGcRb+LTVnkStJMxKV+hpOA="
+    }
+}

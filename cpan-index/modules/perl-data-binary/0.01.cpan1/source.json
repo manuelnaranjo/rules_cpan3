@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SN/SNKWATT/Data-Binary-0.01.tar.gz",
+    "integrity": "sha256-SCGi3hCscQj03LKEpxuHaYGwyx6mxe1q+xd78ufLjXM=",
+    "strip_prefix": "Data-Binary-0.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-tlAAaQRumwkE/3PgCchatCcVZ0Ow3l3/5/5tCD8aNW0="
+    }
+}

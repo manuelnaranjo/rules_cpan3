@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GU/GUGOD/Data-HanConvert-1.5.tar.gz",
+    "integrity": "sha256-AnMXF42tzXibf9YcT3TGr0Pv2/AC9CTXGuKQPTHeyCw=",
+    "strip_prefix": "Data-HanConvert-1.5",
+    "overlay": {
+        "BUILD.bazel": "sha256-Mv15CVfkN0XOG+6dYbAdvxmMA6G5fGoD26YQcNxHV/s="
+    }
+}

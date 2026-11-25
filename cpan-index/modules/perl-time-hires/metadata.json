@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Time-HiRes",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.9764.cpan1"
+    ],
+    "yanked_versions": {}
+}

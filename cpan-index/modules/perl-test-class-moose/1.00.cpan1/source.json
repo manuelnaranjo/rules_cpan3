@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Class-Moose-1.00.tar.gz",
+    "integrity": "sha256-QiffR0YX8sfqVZgf1h6J5zKGxe+lUQgt3f42mtPhTxM=",
+    "strip_prefix": "Test-Class-Moose-1.00",
+    "overlay": {
+        "BUILD.bazel": "sha256-2RYkFU6TKdg4vEb0D8/OcQMjMr+CT4gJE0wCWJkS5ZE="
+    }
+}

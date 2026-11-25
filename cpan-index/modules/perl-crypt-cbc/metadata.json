@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Crypt-CBC",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.07.cpan1"
+    ],
+    "yanked_versions": {}
+}

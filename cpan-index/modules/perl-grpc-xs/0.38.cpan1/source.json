@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JO/JOYREX/grpc-xs-0.38.tar.gz",
+    "integrity": "sha256-V5ALaEuwC1S4z3LMFzglhWO2IW1O/5cuDZM5PkpSB4E=",
+    "strip_prefix": "grpc-xs-0.38",
+    "overlay": {
+        "BUILD.bazel": "sha256-mwQwZJU1qRd49Zus//rc2TgqTkLQ1jip8N1ehCUdDNU="
+    }
+}

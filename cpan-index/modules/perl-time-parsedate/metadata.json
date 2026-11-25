@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Time-ParseDate",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2026.0330.cpan1"
+    ],
+    "yanked_versions": {}
+}

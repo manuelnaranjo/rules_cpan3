@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Data-DPath",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.60.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Test-Trap",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.3.5.cpan1"
+    ],
+    "yanked_versions": {}
+}

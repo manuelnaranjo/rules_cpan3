@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JJ/JJNAPIORK/DBIx-Class-Schema-PopulateMore-0.19.tar.gz",
+    "integrity": "sha256-iXVVozZa1GC6hkRxyBCCjWufhB4wPQFkqDVsNCv4FLg=",
+    "strip_prefix": "DBIx-Class-Schema-PopulateMore-0.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-1W9BlXPh0K8X33ZVQxVVuVNrtZPZ8L8uZT26WIJJqY0="
+    }
+}

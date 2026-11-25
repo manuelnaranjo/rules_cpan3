@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Socket",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.043.cpan1"
+    ],
+    "yanked_versions": {}
+}

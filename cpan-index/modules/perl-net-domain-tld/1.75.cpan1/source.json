@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AL/ALEXP/Net-Domain-TLD-1.75.tar.gz",
+    "integrity": "sha256-TDf4ERhNaKxBedSMEOoxki3V/KLBv/zc2VxaKjtAAu4=",
+    "strip_prefix": "Net-Domain-TLD-1.75",
+    "overlay": {
+        "BUILD.bazel": "sha256-/tLIY4vH9RnoRiAKnKs+Salt015reVcoOVulLsjCo98="
+    }
+}

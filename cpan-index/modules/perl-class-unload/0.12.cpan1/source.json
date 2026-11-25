@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IL/ILMARI/Class-Unload-0.12.tar.gz",
+    "integrity": "sha256-JQgDlXj7VFf9/7Itj6b5C+KVwwQXkB0P2XV0TlWSJpY=",
+    "strip_prefix": "Class-Unload-0.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-VKveKgnMDtWbOQBAO3RnYvXg5Hz9FUjSu5+St88N6T4="
+    }
+}

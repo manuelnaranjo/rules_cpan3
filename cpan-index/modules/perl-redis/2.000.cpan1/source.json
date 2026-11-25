@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAMS/Redis-2.000.tar.gz",
+    "integrity": "sha256-FMuJl5chJhW06T+Rbcva+0jQHF6qsgOP5ssXm/lcb+s=",
+    "strip_prefix": "Redis-2.000",
+    "overlay": {
+        "BUILD.bazel": "sha256-L7+6h4EuIae5M+dQ0E6970iGrenRikArUAIuZ3p9QN4="
+    }
+}

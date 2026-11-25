@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MATEU/MooX-Types-MooseLike-0.29.tar.gz",
+    "integrity": "sha256-HTeAqpvqQwr75lqox25xjxBFzniKrdpBFvWdO3p60rQ=",
+    "strip_prefix": "MooX-Types-MooseLike-0.29",
+    "overlay": {
+        "BUILD.bazel": "sha256-Kk9b3KX/ZRVJCSwUEt/HtquqBLFk4cMHRTJRaPEPGeg="
+    }
+}

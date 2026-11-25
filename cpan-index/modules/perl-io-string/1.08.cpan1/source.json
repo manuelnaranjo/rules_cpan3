@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/IO-String-1.08.tar.gz",
+    "integrity": "sha256-Kj9K2EQtkHB4DljvQ3ItGdHuIagDv3yCBod6EEgt5aA=",
+    "strip_prefix": "IO-String-1.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-AsAEeoVwJ5F0Ppa3t4DT1/XFbpE8q64t2imAe95Ov58="
+    }
+}

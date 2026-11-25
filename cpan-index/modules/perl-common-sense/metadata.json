@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/common-sense",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.75.cpan1"
+    ],
+    "yanked_versions": {}
+}

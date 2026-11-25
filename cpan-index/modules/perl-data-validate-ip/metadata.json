@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Data-Validate-IP",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.31.cpan1"
+    ],
+    "yanked_versions": {}
+}

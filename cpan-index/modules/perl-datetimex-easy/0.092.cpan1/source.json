@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JJ/JJNAPIORK/DateTimeX-Easy-0.092.tar.gz",
+    "integrity": "sha256-O75v3cCeJ/lJUfSWQdXPpsHRxg9ojwqn/tvjP0oB5l0=",
+    "strip_prefix": "DateTimeX-Easy-0.092",
+    "overlay": {
+        "BUILD.bazel": "sha256-AXF6pd5ht/+CXgL3cSaTVCKJzqjrrez+aHwVZdJx7zc="
+    }
+}
