@@ -620,7 +620,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "dMA6Rw+jcXh+k13uJjEi/MUdJTR4DXKxbvnie5zL6Y8=",
-        "usagesDigest": "66QEW/hb/p8GmUh5siN7ChQcsIhXlygL4WSJUrJIw84=",
+        "usagesDigest": "/JBKS5r2opb+0vr/QshAgxtiAkc7rwmVvVcn8Pmjyww=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -17339,7 +17339,9 @@
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/sendmail.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -80972,7 +80974,9 @@
               "manual_tests": [
                 "t/compile1.t",
                 "t/compile2.t",
-                "t/compile3.t"
+                "t/compile3.t",
+                "t/compile4.t",
+                "t/compile5.t"
               ],
               "strip_prefix": ""
             }
