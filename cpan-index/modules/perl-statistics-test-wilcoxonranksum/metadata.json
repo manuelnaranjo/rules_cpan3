@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Statistics-Test-WilcoxonRankSum",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.0.7.cpan1"
+    ],
+    "yanked_versions": {}
+}

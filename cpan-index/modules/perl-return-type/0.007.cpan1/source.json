@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Return-Type-0.007.tar.gz",
+    "integrity": "sha256-Df+k46emOIXaAp2PBOedmdBOD0izuJDUUJ4gm7hl4bQ=",
+    "strip_prefix": "Return-Type-0.007",
+    "overlay": {
+        "BUILD.bazel": "sha256-2C3ZuJu9PxNKJs8zERR3gZoUpVQUlu9h7cGTJ203N1A="
+    }
+}

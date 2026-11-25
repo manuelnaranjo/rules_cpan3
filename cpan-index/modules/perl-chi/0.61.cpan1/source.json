@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AS/ASB/CHI-0.61.tar.gz",
+    "integrity": "sha256-WDVFyeUxK7QZOrFt6fVf+PS0p97RKM7o3SywIdRni1s=",
+    "strip_prefix": "CHI-0.61",
+    "overlay": {
+        "BUILD.bazel": "sha256-Ttl0unBoANZr+z1LQgdD1OrpYrBMf5KVOSjkFnQ84Pg="
+    }
+}

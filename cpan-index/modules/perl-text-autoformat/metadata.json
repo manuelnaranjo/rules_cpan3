@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Text-Autoformat",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.75.cpan1"
+    ],
+    "yanked_versions": {}
+}

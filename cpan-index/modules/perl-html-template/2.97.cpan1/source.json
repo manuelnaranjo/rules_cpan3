@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SA/SAMTREGAR/HTML-Template-2.97.tar.gz",
+    "integrity": "sha256-ZUevYfOqhXk/hhYZCTjWd9eZX7O3IMFiWAQLyTXiEp8=",
+    "strip_prefix": "HTML-Template-2.97",
+    "overlay": {
+        "BUILD.bazel": "sha256-yZqNULUOuAE6P+XasWBd4ZWLXwB1dzrMf67rgTF0b4c="
+    }
+}

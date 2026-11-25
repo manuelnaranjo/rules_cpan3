@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-CheckOS-2.04.tar.gz",
+    "integrity": "sha256-qUk9EN5j4zxQl/emnJqyvRHsY49T04RFgjSrRcEfndo=",
+    "strip_prefix": "Devel-CheckOS-2.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-Yk4bjuFm4CfEkQcutNQhmRWceJizzONM4rPP04FtgzI="
+    }
+}

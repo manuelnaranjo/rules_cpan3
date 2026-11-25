@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Pod-Parser",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.67.cpan1"
+    ],
+    "yanked_versions": {}
+}

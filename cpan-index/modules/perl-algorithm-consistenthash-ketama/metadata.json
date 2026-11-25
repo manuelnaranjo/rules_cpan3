@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Algorithm-ConsistentHash-Ketama",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.00012.cpan1"
+    ],
+    "yanked_versions": {}
+}

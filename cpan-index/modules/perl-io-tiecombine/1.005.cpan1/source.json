@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/IO-TieCombine-1.005.tar.gz",
+    "integrity": "sha256-QC1NuDALPScWMvSZXgreMp2JKAp+R/K634s4r25Vaa8=",
+    "strip_prefix": "IO-TieCombine-1.005",
+    "overlay": {
+        "BUILD.bazel": "sha256-10F8XJfUGrRy6b8VvFWZLPlNZtmXb6CnCQZrYg/b82k="
+    }
+}

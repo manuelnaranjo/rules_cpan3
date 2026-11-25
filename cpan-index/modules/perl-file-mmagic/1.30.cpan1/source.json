@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KN/KNOK/File-MMagic-1.30.tar.gz",
+    "integrity": "sha256-zwwbHrKXBcAtl8KRNkgAnAvkLOk+wks2xpa/LU9evX4=",
+    "strip_prefix": "File-MMagic-1.30",
+    "overlay": {
+        "BUILD.bazel": "sha256-mgGSUkJUvt0ChtFC8kEyyr3wOpkLcRjd991DZCJl3WQ="
+    }
+}

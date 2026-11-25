@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Mail-Box-IMAP4",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "4.01.cpan1"
+    ],
+    "yanked_versions": {}
+}

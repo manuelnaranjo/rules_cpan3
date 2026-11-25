@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-Hide-0.0016.tar.gz",
+    "integrity": "sha256-eDC0pX9+x0EGINbAFQGFRJ17TJlkw5p9w5cFYDLDKgg=",
+    "strip_prefix": "Devel-Hide-0.0016",
+    "overlay": {
+        "BUILD.bazel": "sha256-gQ5jSe7vhSMSUF9fPmjEtrTLAF0qgw5Oau1UM1rxujY="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/POSIX-strftime-Compiler-0.46.tar.gz",
+    "integrity": "sha256-v4iHMkjviMxeaO0HRJNJa+aE7DNOESc9RlQwbdna5IU=",
+    "strip_prefix": "POSIX-strftime-Compiler-0.46",
+    "overlay": {
+        "BUILD.bazel": "sha256-3H5I+NQPWlS+nXu9GT3KtJHdGiSJ0jfPe+SmA4KjOKk="
+    }
+}

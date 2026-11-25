@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AM/AMBS/Config-AutoConf-0.320.tar.gz",
+    "integrity": "sha256-u1epWO9J0/cWInba4Up71a9D/R2FEyMa811mVFlFQCM=",
+    "strip_prefix": "Config-AutoConf-0.320",
+    "overlay": {
+        "BUILD.bazel": "sha256-KvJXrSbKH0lf6lcF2IyqX25O8ytrSizP5OLHO9pyal4="
+    }
+}

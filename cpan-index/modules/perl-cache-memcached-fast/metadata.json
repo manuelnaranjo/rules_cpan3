@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Cache-Memcached-Fast",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.28.cpan1"
+    ],
+    "yanked_versions": {}
+}

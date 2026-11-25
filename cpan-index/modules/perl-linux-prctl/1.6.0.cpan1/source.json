@@ -1,0 +1,10 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SE/SEVEAS/Linux-Prctl-1.6.0.tar.gz",
+    "integrity": "sha256-olr4hCtWEtkb5zMU9a6UgCfV79zuNclkzbtxnrAqN3Q=",
+    "strip_prefix": "Linux-Prctl-1.6.0",
+    "overlay": {
+        "const-c.inc": "sha256-lsXJoMWnk12AOHJ/IXi84dQqOY37QtichtRAtB3tMII=",
+        "const-xs.inc": "sha256-+40Z8tNRBlTwi7pWzqZ2/62AP2GyBzHDcna3Saatfx0=",
+        "BUILD.bazel": "sha256-PcZ7gObjt2dc0QVin8DnXoN76jssRJl2rAmoLwPjJNQ="
+    }
+}

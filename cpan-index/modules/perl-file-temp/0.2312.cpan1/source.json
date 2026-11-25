@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-Temp-0.2312.tar.gz",
+    "integrity": "sha256-b6lh2VXPhNW4fy8hmnI893y0S3koJ5P2gZzLGejQuIQ=",
+    "strip_prefix": "File-Temp-0.2312",
+    "overlay": {
+        "BUILD.bazel": "sha256-/UNogc/7HOSn7ww2R4l+z9D9bwkGeFfrNyT3IW5yu9U="
+    }
+}

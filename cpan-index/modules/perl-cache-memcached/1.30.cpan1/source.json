@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DO/DORMANDO/Cache-Memcached-1.30.tar.gz",
+    "integrity": "sha256-MbPFHsDqrwMALizI49fVy+YZGc/a2mHACOuYU6ysQqk=",
+    "strip_prefix": "Cache-Memcached-1.30",
+    "overlay": {
+        "BUILD.bazel": "sha256-AWvomNxGd8Q+Ob8STB0Xr2fGlBd8xGERl67knRqLYcg="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Carp-Assert-0.22.tar.gz",
+    "integrity": "sha256-gH6pfGvtdqwuSWnvun2uSP7+ufKHl/ESZxs6yKSTVfc=",
+    "strip_prefix": "Carp-Assert-0.22",
+    "overlay": {
+        "BUILD.bazel": "sha256-xh4tOldlOOo86ytfRUABZ605+7IMod0JeafVqmOM8mQ="
+    }
+}

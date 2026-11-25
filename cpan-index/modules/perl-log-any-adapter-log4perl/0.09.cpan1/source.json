@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PR/PREACTION/Log-Any-Adapter-Log4perl-0.09.tar.gz",
+    "integrity": "sha256-EZfT5BIhS+IIgAz3v1BXsf6hVCRTmip5J8/kb3FuwaU=",
+    "strip_prefix": "Log-Any-Adapter-Log4perl-0.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-KB35RY4XrdatypvJVbm76ut4Zg/LIWv8HT35d8KHdcw="
+    }
+}

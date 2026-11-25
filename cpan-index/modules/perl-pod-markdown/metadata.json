@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Pod-Markdown",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.400.cpan1"
+    ],
+    "yanked_versions": {}
+}

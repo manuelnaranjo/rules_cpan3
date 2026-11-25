@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Hash-Case-1.07.tar.gz",
+    "integrity": "sha256-9ZHbn5qDVcZ/upSuJ+BuYzm4AMp4xSUNdcdojAvDOWk=",
+    "strip_prefix": "Hash-Case-1.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-7u9dyj4/6IVRcJRyKwDLEi1mb/Xubap1qV0K1/CJYbk="
+    }
+}

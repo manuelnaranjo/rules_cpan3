@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Term-Encoding-0.03.tar.gz",
+    "integrity": "sha256-lbqWh9c10lo8vmRQjXiU8AnH+ioXJsPnhuniHaIlHQs=",
+    "strip_prefix": "Term-Encoding-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-Pva2YKEwQgxyO2+25I082twSJU7dPljQYIK2z+olJzU="
+    }
+}

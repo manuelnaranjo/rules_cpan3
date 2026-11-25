@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz",
+    "integrity": "sha256-vxKj5d5aLG6KRHs2T09aBQv3RiTFbjFQIq55kv8vQRw=",
+    "strip_prefix": "Class-Accessor-0.51",
+    "overlay": {
+        "BUILD.bazel": "sha256-JX8AxrTQOBqAnipG8A+6HyywVOhoC1HEiGy1MGFXLHU="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Sys-Sendfile-0.19.tar.gz",
+    "integrity": "sha256-cFMGBUrV6nMptYWW0wKdrynwYQpk4+7KfN7D8UHk08A=",
+    "strip_prefix": "Sys-Sendfile-0.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-XFlQv1KN9y0L8TN9Tkrcm1DgWGpBZLBzzazpccDcHf8="
+    }
+}

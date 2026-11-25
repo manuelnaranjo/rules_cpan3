@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Config-INI-Reader-Ordered",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.022.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/Devel-Size-0.87.tar.gz",
+    "integrity": "sha256-yJ/gTJ0OXO1sHTNDEdV23mCfPIpBIgkZ1FUenrAZH0c=",
+    "strip_prefix": "Devel-Size-0.87",
+    "overlay": {
+        "BUILD.bazel": "sha256-ouzqO4C6VpGhbDOy8qG94TQDlS4/2CmwwvN1pLWC0F4="
+    }
+}

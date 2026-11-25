@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NI/NIGELM/HTML-Scrubber-0.19.tar.gz",
+    "integrity": "sha256-rihVePhWX5FUxj5CNHBLV7aDX3ei+C/+ckiZ1FMmK7E=",
+    "strip_prefix": "HTML-Scrubber-0.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-vbP8JCz/PXjRQD12z+xZ96jRxaeUb1VvRdGxGSM4taQ="
+    }
+}

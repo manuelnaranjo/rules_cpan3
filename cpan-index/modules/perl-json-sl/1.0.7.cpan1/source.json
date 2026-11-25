@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MN/MNUNBERG/JSON-SL-1.0.7.tar.gz",
+    "integrity": "sha256-ZuR4Hx9kzg1oBOAg+7SON6j3osTPDLPzNsNt1vZTGIo=",
+    "strip_prefix": "JSON-SL-1.0.7",
+    "overlay": {
+        "BUILD.bazel": "sha256-3LFa4yVpJ02pkqhwMy1ClVnp/SrJhmcf4yl/5XzzpoI="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MANWAR/Check-ISA-0.09.tar.gz",
+    "integrity": "sha256-vEhl0pUllApc9XHLfzjoQwMW5H1MEAhfIn0g+/QdkEw=",
+    "strip_prefix": "Check-ISA-0.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-dRILDAKWpnl9/aX+A8lwlBNb6fz4Xg9YEX+1pMLT13E="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MASAKI/Test-Mock-LWP-Conditional-0.04.tar.gz",
+    "integrity": "sha256-iBcSlIjx6uSJaq5ZuOCelPcg/daXpzrvEyQegSOUBmc=",
+    "strip_prefix": "Test-Mock-LWP-Conditional-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-Bqzez5THMsyiQyN1u/obaKCdC81BVgQuiIBLfvoDHZM="
+    }
+}

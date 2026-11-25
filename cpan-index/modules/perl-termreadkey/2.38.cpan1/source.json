@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/TermReadKey-2.38.tar.gz",
+    "integrity": "sha256-WmRYeNxXCsM2YVgfuwkP8k684X1D6lP9IuEFqFakcpA=",
+    "strip_prefix": "TermReadKey-2.38",
+    "overlay": {
+        "BUILD.bazel": "sha256-j3m6XAXE4yz8K47QkYKGfQiSWGtbcOEOpCr50ZqzjAM="
+    }
+}

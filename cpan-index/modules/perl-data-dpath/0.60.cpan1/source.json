@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SC/SCHWIGON/Data-DPath-0.60.tar.gz",
+    "integrity": "sha256-mfRCbUWMW7jUxRDgwmKcioiuT0ZhwLHkXFVQNi+S7ME=",
+    "strip_prefix": "Data-DPath-0.60",
+    "overlay": {
+        "BUILD.bazel": "sha256-4n2CA7DIaj05Gh+2kjGPJ/2cz4HFKf7F1JNU97jexHI="
+    }
+}

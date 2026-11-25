@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/String-Binary-Interpolation-1.0.1.tar.gz",
+    "integrity": "sha256-wjcN0W6ipozmRpPnXnDw1VIqyyAPWTmehxBcR1gKy2Q=",
+    "strip_prefix": "String-Binary-Interpolation-1.0.1",
+    "overlay": {
+        "BUILD.bazel": "sha256-waPgr4LVmFU8Iqoqad8l39TOf4XWkq1APUZDspZTmds="
+    }
+}

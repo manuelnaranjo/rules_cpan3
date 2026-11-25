@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/DBIx-Class-DynamicDefault",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.04.cpan1"
+    ],
+    "yanked_versions": {}
+}

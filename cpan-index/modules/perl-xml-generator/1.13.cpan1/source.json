@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/XML-Generator-1.13.tar.gz",
+    "integrity": "sha256-MO8y+sMPJoo9kGLET9WrdRhJm/mTtQ747jcth4e8uag=",
+    "strip_prefix": "XML-Generator-1.13",
+    "overlay": {
+        "BUILD.bazel": "sha256-yJQblzImjlmcf+vldw1NVH+qlolsKImo059Zyd57niE="
+    }
+}

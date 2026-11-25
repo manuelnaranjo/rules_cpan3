@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DARREN/Text-TabularDisplay-1.38.tar.gz",
+    "integrity": "sha256-6wmQ+vpWtmfyPbdkvdpaTcX0sd3EsTg6pe7W8i7Rhug=",
+    "strip_prefix": "Text-TabularDisplay-1.38",
+    "overlay": {
+        "BUILD.bazel": "sha256-yuUVm6xSIlAdtZbptU3xDYHbKYuZQSJ6pVOcOCxr9VA="
+    }
+}

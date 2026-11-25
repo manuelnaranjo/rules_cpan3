@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-EOL-2.02.tar.gz",
+    "integrity": "sha256-KDGZ1/sngH/iImr3sSVxxtwlCNjlwP61BdCJ0xcgr8Q=",
+    "strip_prefix": "Test-EOL-2.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-Nc2C1O1lnUBrjd8VOxueJ7rUMFuL76Da/mz6Xq5gK/E="
+    }
+}

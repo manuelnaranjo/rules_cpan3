@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/DateTime-Format-Duration",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.06.cpan1"
+    ],
+    "yanked_versions": {}
+}

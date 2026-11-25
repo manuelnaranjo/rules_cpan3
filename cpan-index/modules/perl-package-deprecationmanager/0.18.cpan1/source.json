@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Package-DeprecationManager-0.18.tar.gz",
+    "integrity": "sha256-to0/DO1Vt2Ff3btgKbifkqNP4N2Mb9a87/wVfVaDT+g=",
+    "strip_prefix": "Package-DeprecationManager-0.18",
+    "overlay": {
+        "BUILD.bazel": "sha256-x0w2hSxCtsWgyqz5B1ilID+XeCjbP2ubHOuicbk3Dgk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BB/BBB/File-NFSLock-1.29.tar.gz",
+    "integrity": "sha256-YdQVmbSBFk7fm4vsq77y0j9iKpcn9sGDZekrV4LU+jc=",
+    "strip_prefix": "File-NFSLock-1.29",
+    "overlay": {
+        "BUILD.bazel": "sha256-2+JA7156J2n7NzhJNADzW1RgZlroIzMOKnvUCBAgETY="
+    }
+}

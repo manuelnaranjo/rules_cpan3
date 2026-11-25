@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SA/SANKO/Readonly-2.05.tar.gz",
+    "integrity": "sha256-SyNUJJGvAQ1EpcfIYSRHOKzHSrq65riDjTVN+xlGK14=",
+    "strip_prefix": "Readonly-2.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-ex+VSDb55tKXUsqqQeRUUDZC5PbLS9eiLS3uuJs5n4k="
+    }
+}

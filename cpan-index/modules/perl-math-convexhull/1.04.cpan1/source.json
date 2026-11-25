@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Math-ConvexHull-1.04.tar.gz",
+    "integrity": "sha256-uQQfCNWHkjCPIERVpnomV5noiyeeXC9U4/je6VlMCFI=",
+    "strip_prefix": "Math-ConvexHull-1.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-jtvwihBcGvg0R3DUfOa/CUiyN4BvIjpikhQ+VZ+CFKo="
+    }
+}

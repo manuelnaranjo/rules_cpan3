@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Struct-Diff",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.98.cpan1"
+    ],
+    "yanked_versions": {}
+}

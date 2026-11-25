@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Archive-Tar",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.14.cpan1"
+    ],
+    "yanked_versions": {}
+}

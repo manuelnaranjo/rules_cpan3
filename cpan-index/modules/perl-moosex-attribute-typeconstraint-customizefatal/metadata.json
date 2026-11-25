@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/MooseX-Attribute-TypeConstraint-CustomizeFatal",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.03.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.17.tar.gz",
+    "integrity": "sha256-FigVgMQOIxCNAoQ0aYtdfVNje/kEyd+CJIHiU8vskgw=",
+    "strip_prefix": "HTTP-Daemon-6.17",
+    "overlay": {
+        "BUILD.bazel": "sha256-Jw6ZtA4oYqI4Y04/WGOilnpvhgmtc6jUHNa9nRTTsjc="
+    }
+}

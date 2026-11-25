@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/XML-Enc",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.16.cpan1"
+    ],
+    "yanked_versions": {}
+}

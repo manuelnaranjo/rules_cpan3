@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PO/POPEFELIX/JSON-Path-1.0.6.tar.gz",
+    "integrity": "sha256-s28/rpFZDLIKbFT4DGvmsrLWypIkeiowqrc9iGRwAv8=",
+    "strip_prefix": "JSON-Path-1.0.6",
+    "overlay": {
+        "BUILD.bazel": "sha256-1UTgds97CUQaxqyu+IMhVojMdUeVc5lYqcKPNGaYzB8="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/HTTP-Lite",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.44.cpan1"
+    ],
+    "yanked_versions": {}
+}

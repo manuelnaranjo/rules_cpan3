@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/Array-RefElem-1.00.tar.gz",
+    "integrity": "sha256-U7iAo67AQ+TjcM4SaCtHVt5F3XQtq1cpT+IaFUU87+M=",
+    "strip_prefix": "Array-RefElem-1.00",
+    "overlay": {
+        "BUILD.bazel": "sha256-4LOm79xcgQcqlQrIb6FYH4EkmaDJ51/dQsjrNdKxbZQ="
+    }
+}

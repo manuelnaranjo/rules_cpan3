@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Plack-Middleware-Rewrite",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.102.cpan1"
+    ],
+    "yanked_versions": {}
+}

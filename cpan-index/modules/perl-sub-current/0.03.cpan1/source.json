@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Current-0.03.tar.gz",
+    "integrity": "sha256-xqgATQAVlbHPdkueQJxfJFyD2qJJDuG7vlcM58aV5hA=",
+    "strip_prefix": "Sub-Current-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-z5H6A2uTRrws25C63pNceNIA2IIomLKlaSMfLhOKv8E="
+    }
+}

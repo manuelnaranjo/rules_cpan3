@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Mozilla-CA",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "20261105.cpan1"
+    ],
+    "yanked_versions": {}
+}

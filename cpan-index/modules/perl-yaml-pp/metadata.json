@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/YAML-PP",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.43.0.cpan1"
+    ],
+    "yanked_versions": {}
+}

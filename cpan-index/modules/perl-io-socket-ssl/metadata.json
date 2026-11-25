@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/IO-Socket-SSL",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.099.cpan1"
+    ],
+    "yanked_versions": {}
+}

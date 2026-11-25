@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.40.tar.gz",
+    "integrity": "sha256-710u8Jmhokpug//lQ95zM3gF09OcALhPogXXJa0aG2M=",
+    "strip_prefix": "URI-5.40",
+    "overlay": {
+        "BUILD.bazel": "sha256-plqTccLq00pYxedfX7f3Sw0R+mgCB2osiMDPvOCHv48="
+    }
+}

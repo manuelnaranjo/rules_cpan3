@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RL/RLB/MooseX-Iterator-0.11.tar.gz",
+    "integrity": "sha256-G+VY0TyMlA6UomOslfcH+dfz5AdgICQIXvC3n5soLv4=",
+    "strip_prefix": "MooseX-Iterator-0.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-e4+Q2QMPV+mr+AadQgvABXkY0fu5yVHpDTv/w7FPW0M="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BP/BPHILLIPS/DateTimeX-ISO8601-Interval-0.004.tar.gz",
+    "integrity": "sha256-V3a344vcbWlcz6J5btISoKGWOzyFiJTrnjeKBhrbmnM=",
+    "strip_prefix": "DateTimeX-ISO8601-Interval-0.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-XO2EQwiN7U6LU63258P8ZN9k/rpTYVkPOn0OdejJ0M0="
+    }
+}

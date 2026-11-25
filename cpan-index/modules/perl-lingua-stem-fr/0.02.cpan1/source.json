@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SD/SDP/Lingua-Stem-Fr-0.02.tar.gz",
+    "integrity": "sha256-nU9ks6iJihhTQyGFJtWsaKSh+ObEQY1rqV1i9fnV2W8=",
+    "strip_prefix": "Lingua-Stem-Fr-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-kaaWAN7LjRYqfn3QCf9KjzlvFM1WT8XGQjs2ZA/PMtY="
+    }
+}

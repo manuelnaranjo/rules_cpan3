@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Mac-PropertyList-1.608.tar.gz",
+    "integrity": "sha256-ns8Cq+Pq7AubA8p1XncamJbKAgPSmxbyuZ6VdjqSny0=",
+    "strip_prefix": "Mac-PropertyList-1.608",
+    "overlay": {
+        "BUILD.bazel": "sha256-p93OgQPXu5edSQAzxbYTs17y1pO+4ot+Vk5s6JpOceg="
+    }
+}

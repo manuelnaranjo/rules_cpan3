@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GARU/Data-Dump-1.27.tar.gz",
+    "integrity": "sha256-AJ3PnlFDmoYVZB3CmlgmcuGjJbVcLaEpdbm0lBc1bAo=",
+    "strip_prefix": "Data-Dump-1.27",
+    "overlay": {
+        "BUILD.bazel": "sha256-qtzyxhUNqigsd0J4DhKWekqsaqXfXfTPnvgfH9jdQwA="
+    }
+}

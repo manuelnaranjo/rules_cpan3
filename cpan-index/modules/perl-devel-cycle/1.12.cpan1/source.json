@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LD/LDS/Devel-Cycle-1.12.tar.gz",
+    "integrity": "sha256-/TNlxNiYsrK927eKRtUHoYzKhJCikBmVR9q38ec5C8I=",
+    "strip_prefix": "Devel-Cycle-1.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-CyL3W92h5r3JHlCZu5EhG8lkJNLBT1eEAR+mLcf6ckA="
+    }
+}

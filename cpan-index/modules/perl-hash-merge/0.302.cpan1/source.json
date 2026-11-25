@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HE/HERMES/Hash-Merge-0.302.tar.gz",
+    "integrity": "sha256-rgUi92U5YIth3eFGcOeWd+DzkQNoMvcKIfMa3eJThkQ=",
+    "strip_prefix": "Hash-Merge-0.302",
+    "overlay": {
+        "BUILD.bazel": "sha256-ixd3vvBTSQSp9u7zjsa9m8k/DGexkq9t4Onp7FYrvBg="
+    }
+}

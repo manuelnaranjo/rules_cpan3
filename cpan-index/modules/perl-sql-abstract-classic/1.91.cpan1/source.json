@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RI/RIBASUSHI/SQL-Abstract-Classic-1.91.tar.gz",
+    "integrity": "sha256-Tj0d/QlbISMmhYa7BrhpKepXE4jU6UGszL3NoeEI7yg=",
+    "strip_prefix": "SQL-Abstract-Classic-1.91",
+    "overlay": {
+        "BUILD.bazel": "sha256-jOl1iGci5K022TGEGI1IJAp4fmmjL/K/y9J540JN+i0="
+    }
+}

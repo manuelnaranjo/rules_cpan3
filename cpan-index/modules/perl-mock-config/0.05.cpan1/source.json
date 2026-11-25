@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.05.tar.gz",
+    "integrity": "sha256-IAFwlsZGT71ZrnVJ+8Zjv7DJAU16w6RXqBp+QIJo9iw=",
+    "strip_prefix": "Mock-Config-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-k+D9Tz97aW9wldzXbuNv/HecRryQgzyVjpb4knoeU/Q="
+    }
+}

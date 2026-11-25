@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AK/AKHUETTEL/REST-Client-281.tar.gz",
+    "integrity": "sha256-+hDSGgA35oJgHv5mc4p1j/dSEJSqASKek8iIpnmyyPY=",
+    "strip_prefix": "REST-Client-281",
+    "overlay": {
+        "BUILD.bazel": "sha256-bycM57ZUUfjvkabos4u7vRBxJcvE8AosQooMUneqHBM="
+    }
+}

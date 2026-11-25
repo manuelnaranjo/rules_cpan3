@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSCHILLI/Sysadm-Install-0.48.tar.gz",
+    "integrity": "sha256-/98cQpHa6UZQpyjiUb66jm/NLlxpe83g15G1+5xrjJk=",
+    "strip_prefix": "Sysadm-Install-0.48",
+    "overlay": {
+        "BUILD.bazel": "sha256-39L4Zcx1x4ZLl1hgi1ymFziwKAa75oh3z1pjIEhL7gs="
+    }
+}

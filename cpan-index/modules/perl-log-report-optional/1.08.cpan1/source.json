@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Log-Report-Optional-1.08.tar.gz",
+    "integrity": "sha256-d7JI1M9/7Kp+hlkw5y3wudWzMzWNAMW9ReLHHV3xE60=",
+    "strip_prefix": "Log-Report-Optional-1.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-5AVKM904nAxt2fwJIdkCtrtgyunn4+tYX43b2Pvb8fI="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AV/AVAR/App-Inotify-Hookable-0.09.tar.gz",
+    "integrity": "sha256-G34xzP+ZVAne3N1U99YoNksa8pNLu/Ksw58toZgi6qY=",
+    "strip_prefix": "App-Inotify-Hookable-0.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-jUS7LeZ0eBosWav06GbIGJyuCEkTi0zP25HPtfTTq6w="
+    }
+}

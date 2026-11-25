@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Exporter-Tiny-1.006003.tar.gz",
+    "integrity": "sha256-ZJnwmmQyz4exM/uVgKipqabFZoITRrH97pX3tkwDF7E=",
+    "strip_prefix": "Exporter-Tiny-1.006003",
+    "overlay": {
+        "BUILD.bazel": "sha256-VhwGExYUGFpKk7i4St1COznaqAK6CMQv/PtOF7NnFAY="
+    }
+}

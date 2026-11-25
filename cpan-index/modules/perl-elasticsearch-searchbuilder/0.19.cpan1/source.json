@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DRTECH/ElasticSearch-SearchBuilder-0.19.tar.gz",
+    "integrity": "sha256-Zddsn6gi3io2eT+1QjN9MT+LJU6wvXTgT9XG+bx8n1E=",
+    "strip_prefix": "ElasticSearch-SearchBuilder-0.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-/0f97GmbxE8a70CQsB4KZLK+CrNKb79EUMmMORrIanM="
+    }
+}

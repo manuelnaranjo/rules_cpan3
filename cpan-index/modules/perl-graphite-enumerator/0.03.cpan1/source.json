@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Graphite-Enumerator-0.03.tar.gz",
+    "integrity": "sha256-zd7i6LJEtsBDQFw9e2bo/oKBA50oYJbPkK60KAZMUmI=",
+    "strip_prefix": "Graphite-Enumerator-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-r/lZV3YRqTXUPhGEhXrrGmZOjfzDmrIlkeDOS3LiaFE="
+    }
+}

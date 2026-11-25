@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CR/CROMEDOME/Dancer2-2.3.0.tar.gz",
+    "integrity": "sha256-R2RWMnfWZ6dXBwSD7GmqIkFVXUBeYwglLj/+/hFkXns=",
+    "strip_prefix": "Dancer2-2.3.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-7ITRUmY3trka62xotxD+kxQZOuMXHkFEG5HYgadkUB0="
+    }
+}

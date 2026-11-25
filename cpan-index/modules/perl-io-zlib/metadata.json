@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/IO-Zlib",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.15.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Parse-Distname-0.05.tar.gz",
+    "integrity": "sha256-pfqTvsLat22IPaEtTzRLc7+L6wzEtmwkN28+Dzh67wc=",
+    "strip_prefix": "Parse-Distname-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-bY+d27Ljs0vmok2YmD1oQuoEbFqgDqDcRznMw48QRdU="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Convert-BinHex",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.125.cpan1"
+    ],
+    "yanked_versions": {}
+}

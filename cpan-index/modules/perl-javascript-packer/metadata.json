@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/JavaScript-Packer",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.12.cpan1"
+    ],
+    "yanked_versions": {}
+}

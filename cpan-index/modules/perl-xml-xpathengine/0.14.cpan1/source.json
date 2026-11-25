@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIROD/XML-XPathEngine-0.14.tar.gz",
+    "integrity": "sha256-0v57y70L66FET0pzNAHnuKpSgvrUJm1Cc13XRYKy4mQ=",
+    "strip_prefix": "XML-XPathEngine-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-IbBI5ioFdF9INXngkgJ8EEJVMt+6r9aoV3w0tMJZnUo="
+    }
+}

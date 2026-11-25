@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAXMIND/MaxMind-DB-Writer-0.300004.tar.gz",
+    "integrity": "sha256-mVaTQrXUnerhaFLO3/DONhDiBwHBWKFrg8yZuJCmR+s=",
+    "strip_prefix": "MaxMind-DB-Writer-0.300004",
+    "overlay": {
+        "BUILD.bazel": "sha256-YgHEN0H7I4xY1A7ESvx8FLpBKjz+BiNdPNyIiAu3/eU="
+    }
+}

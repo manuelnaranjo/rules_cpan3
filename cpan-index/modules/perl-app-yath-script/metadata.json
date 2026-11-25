@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/App-Yath-Script",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.000017.cpan1"
+    ],
+    "yanked_versions": {}
+}

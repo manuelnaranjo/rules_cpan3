@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAXMIND/Data-IEEE754-0.02.tar.gz",
+    "integrity": "sha256-xvSrE0ZygjQTtQ8HR5saGwUfTO5C3Tzn6xWD1mkbZx0=",
+    "strip_prefix": "Data-IEEE754-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-8G2rWhFsIlNXY/FdchqGTx2cgU2FWTCIAzwC7GI3jIM="
+    }
+}

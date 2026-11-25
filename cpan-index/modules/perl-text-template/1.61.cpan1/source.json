@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Text-Template-1.61.tar.gz",
+    "integrity": "sha256-opXqfR7yQa4mQMH3hktij45vmewU+x2ngbL18haNzwk=",
+    "strip_prefix": "Text-Template-1.61",
+    "overlay": {
+        "BUILD.bazel": "sha256-OGpKaAAIthuWDyKAmxW538txJS1A6Azj1FuGFvV1m4A="
+    }
+}

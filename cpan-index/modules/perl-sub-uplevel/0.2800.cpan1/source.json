@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Sub-Uplevel-0.2800.tar.gz",
+    "integrity": "sha256-tPP2O4D2gKQhMy2IUd2+Wo5y/Kp01dHZjzyMxKPs4pM=",
+    "strip_prefix": "Sub-Uplevel-0.2800",
+    "overlay": {
+        "BUILD.bazel": "sha256-4BXAbUnTF9RGwpdRGxxtv5laMh7iQkq7t83mVOg9ax4="
+    }
+}

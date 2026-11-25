@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MILAD/GD-Persian-0.9.tar.gz",
+    "integrity": "sha256-SFwaDsn9qSJJkAlEVEV4p9LoL0apHAYZISjvdBxhroU=",
+    "strip_prefix": "GD-Persian-0.9",
+    "overlay": {
+        "BUILD.bazel": "sha256-vaJXLKqEU8J8k1qjpVvw/HFJ5kSTqkyTUdjWwuYNDZ8="
+    }
+}

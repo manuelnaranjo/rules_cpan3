@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/XML-Enc-0.16.tar.gz",
+    "integrity": "sha256-wuGGpf01Yk8C8QLxYLVEPtxE4FJif1sS5sWuKS4ZvSQ=",
+    "strip_prefix": "XML-Enc-0.16",
+    "overlay": {
+        "BUILD.bazel": "sha256-rXhj0XS4osJZ9M+iSfPr4IHMPDdD6q4gOd7qjgQAPxs="
+    }
+}

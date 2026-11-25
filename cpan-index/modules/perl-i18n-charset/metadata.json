@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/I18N-Charset",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.417.cpan1"
+    ],
+    "yanked_versions": {}
+}

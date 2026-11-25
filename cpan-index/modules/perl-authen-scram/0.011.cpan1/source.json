@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Authen-SCRAM-0.011.tar.gz",
+    "integrity": "sha256-RRCMI5pzc9AJQdzw0XGs0D58FqY85vfZVo/wUrF89ag=",
+    "strip_prefix": "Authen-SCRAM-0.011",
+    "overlay": {
+        "BUILD.bazel": "sha256-pfYCzIBvZmS7Gxh4paVTxrSBaYGaQkG5XMOOGwuNKjs="
+    }
+}

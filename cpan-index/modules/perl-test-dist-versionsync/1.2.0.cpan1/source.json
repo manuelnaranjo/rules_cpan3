@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AU/AUBERTG/Test-Dist-VersionSync-v1.2.0.tar.gz",
+    "integrity": "sha256-iQF4ZxyrGn5Eu4dUIJEnrF8tK1tdU+o5lVLPzCqx/xk=",
+    "strip_prefix": "Test-Dist-VersionSync-v1.2.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-02xUOES//M1fIjeQ5JAxBA2cBURi4XTuIpqS4siTcsA="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Net-Hadoop-YARN",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.203.cpan1"
+    ],
+    "yanked_versions": {}
+}

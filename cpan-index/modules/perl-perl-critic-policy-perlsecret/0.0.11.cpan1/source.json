@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LA/LANCEW/Perl-Critic-Policy-Perlsecret-0.0.11.tar.gz",
+    "integrity": "sha256-iGaRT/FTybMsF2z/Ta8LwkhoEReEFZVmvn0bjOl7qj4=",
+    "strip_prefix": "Perl-Critic-Policy-Perlsecret-0.0.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-Fdgo9YZS5ji+p6pImghSnbDijknGN3aonk0Ln79aXeI="
+    }
+}

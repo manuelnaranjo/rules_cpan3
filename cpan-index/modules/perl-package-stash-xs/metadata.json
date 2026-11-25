@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Package-Stash-XS",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.32.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Term-Size-Perl",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.031.cpan1"
+    ],
+    "yanked_versions": {}
+}

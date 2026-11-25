@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Libxml2-0.20.tar.gz",
+    "integrity": "sha256-Vqrnszm76wL3fFgB9XqCG+V5G1H0O/f5Biuzv6REwyg=",
+    "strip_prefix": "Alien-Libxml2-0.20",
+    "overlay": {
+        "BUILD.bazel": "sha256-1aJ3XgpJ8BXPV89VjFNPAPZ/HSeBEn620DD9Cx02yw4="
+    }
+}

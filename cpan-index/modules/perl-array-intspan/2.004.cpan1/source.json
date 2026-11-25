@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DD/DDUMONT/Array-IntSpan-2.004.tar.gz",
+    "integrity": "sha256-Tc0Xr84JVe5rKpvdbgZmm5+h2soWHhG0gI8OM6DODJk=",
+    "strip_prefix": "Array-IntSpan-2.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-dgcv/R9ZdjtyhhaG9S1TcxkybD45P7Bhkb3X9ebdyXU="
+    }
+}

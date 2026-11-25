@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KH/KHW/Pod-Simple-3.48.tar.gz",
+    "integrity": "sha256-MpfPPAeN6dgpeUJCPsarWeheMN+zi3giQmmeOGcnxjo=",
+    "strip_prefix": "Pod-Simple-3.48",
+    "overlay": {
+        "BUILD.bazel": "sha256-FMeeMNIDgt5KvwAvDL4vwDHSHiwo0DwyM56aGKZMyIg="
+    }
+}

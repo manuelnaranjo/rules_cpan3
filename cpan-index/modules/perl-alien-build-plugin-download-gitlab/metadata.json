@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Alien-Build-Plugin-Download-GitLab",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.01.cpan1"
+    ],
+    "yanked_versions": {}
+}

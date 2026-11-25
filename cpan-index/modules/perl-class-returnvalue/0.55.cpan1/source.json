@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JE/JESSE/Class-ReturnValue-0.55.tar.gz",
+    "integrity": "sha256-7Tg2iF149zTM16mFUOxCKmFt98MTEMG3sfZFn1+w5L0=",
+    "strip_prefix": "Class-ReturnValue-0.55",
+    "overlay": {
+        "BUILD.bazel": "sha256-YnO2HYSDHmKYu1ijwRInGi/qwTHnZOR0BUxm09PLJPw="
+    }
+}

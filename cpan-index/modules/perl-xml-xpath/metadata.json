@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/XML-XPath",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.49.cpan1"
+    ],
+    "yanked_versions": {}
+}

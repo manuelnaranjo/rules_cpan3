@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DM/DMOR/Schedule-AdaptiveThrottler-0.06.tar.gz",
+    "integrity": "sha256-/spLoYvNaJlqvIbOFRjOs806sqLVhso7de2mfMWthVY=",
+    "strip_prefix": "Schedule-AdaptiveThrottler-0.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-ZdzPiMtOI6RjqQyvWh6hDkML2K+SItr/BWQ1CzbxOEk="
+    }
+}

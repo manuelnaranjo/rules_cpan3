@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Net-HTTP",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "6.24.cpan1"
+    ],
+    "yanked_versions": {}
+}

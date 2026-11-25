@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/JSON-SL",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.0.7.cpan1"
+    ],
+    "yanked_versions": {}
+}

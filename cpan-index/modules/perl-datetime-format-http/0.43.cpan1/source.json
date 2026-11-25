@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CK/CKRAS/DateTime-Format-HTTP-0.43.tar.gz",
+    "integrity": "sha256-Tn6CIR83Sac/byVW9wSM/wclx9flLLgZ/VGxu6n6C1g=",
+    "strip_prefix": "DateTime-Format-HTTP-0.43",
+    "overlay": {
+        "BUILD.bazel": "sha256-afwetNOwpeOFSaPHuchxKC8VLziY7luzpR/ssr2UAD4="
+    }
+}

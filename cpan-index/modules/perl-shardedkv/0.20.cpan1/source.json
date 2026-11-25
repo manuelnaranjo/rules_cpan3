@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AV/AVAR/ShardedKV-0.20.tar.gz",
+    "integrity": "sha256-NQidJdeIU3N58KtNm3tcwXL9oUyDUuxDyKlktRfnAvU=",
+    "strip_prefix": "ShardedKV-0.20",
+    "overlay": {
+        "BUILD.bazel": "sha256-XAAIBMobw4Ouwi/jzdXJIMoj/GK0QSkjl/5dwpvh+OQ="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Module-Build-Tiny",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.053.cpan1"
+    ],
+    "yanked_versions": {}
+}

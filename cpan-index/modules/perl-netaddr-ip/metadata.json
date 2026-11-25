@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/NetAddr-IP",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "4.079.cpan1"
+    ],
+    "yanked_versions": {}
+}

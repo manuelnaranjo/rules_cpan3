@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/Daemon-Control-0.001010.tar.gz",
+    "integrity": "sha256-hEA4moMWb1uZP4Btn2BGBnfuKvHGE2AJaJiTM9cNRwc=",
+    "strip_prefix": "Daemon-Control-0.001010",
+    "overlay": {
+        "BUILD.bazel": "sha256-70cp+9l2lg9o4UeU9LYs73T/jFNg72VMj+uHz7Ku5SM="
+    }
+}

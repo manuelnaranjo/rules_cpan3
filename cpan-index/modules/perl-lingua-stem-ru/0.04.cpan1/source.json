@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Lingua-Stem-Ru-0.04.tar.gz",
+    "integrity": "sha256-EnDOt0dk/blYNwqAiDSvl26H9pqFRw+LxGJYeX6rUig=",
+    "strip_prefix": "Lingua-Stem-Ru-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-xPPIEqPs4+75p8RS/YKB0Jm4Ew4kn/cvBU6qyrizbcA="
+    }
+}

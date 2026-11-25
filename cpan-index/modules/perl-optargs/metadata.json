@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/OptArgs",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.1.21.cpan1"
+    ],
+    "yanked_versions": {}
+}

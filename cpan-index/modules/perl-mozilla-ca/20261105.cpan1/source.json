@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20261105.tar.gz",
+    "integrity": "sha256-sp39BdDwA4CR+rnXoYTo5Ha8JPtd5ZY80j0h0mLgvhA=",
+    "strip_prefix": "Mozilla-CA-20261105",
+    "overlay": {
+        "BUILD.bazel": "sha256-7Eg2h+ncvky3h4k06OpF/ECBhHv1pYrfPHFMP93h7lI="
+    }
+}

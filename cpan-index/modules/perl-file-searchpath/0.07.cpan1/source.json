@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TJ/TJENNESS/File-SearchPath-0.07.tar.gz",
+    "integrity": "sha256-vkollO8adXfncxNa3ZQBecajJOB+Erz9xGPLSRGaLLk=",
+    "strip_prefix": "File-SearchPath-0.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-glKNtoRlVOdaaUTT+drH/FkU7YkrdN1K8CGsGYnuc1U="
+    }
+}

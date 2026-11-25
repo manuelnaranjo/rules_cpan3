@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/W/WA/WATERKIP/Test-Mock-One-0.011.tar.gz",
+    "integrity": "sha256-QrCwhM6yo6CVRPA0Es4PexXTWp6OeCvXGj+UknKoTi4=",
+    "strip_prefix": "Test-Mock-One-0.011",
+    "overlay": {
+        "BUILD.bazel": "sha256-pgyw5joVf4URDPhDuCdZk8ncZGZTes3s4NlgR5hoViQ="
+    }
+}

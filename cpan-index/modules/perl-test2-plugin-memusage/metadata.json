@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Test2-Plugin-MemUsage",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.002006.cpan1"
+    ],
+    "yanked_versions": {}
+}

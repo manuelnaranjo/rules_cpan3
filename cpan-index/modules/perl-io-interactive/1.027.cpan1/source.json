@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/IO-Interactive-1.027.tar.gz",
+    "integrity": "sha256-MKqjRqD2ZPg3dQsbmztRHnjHd5KW+4874xquW3P377c=",
+    "strip_prefix": "IO-Interactive-1.027",
+    "overlay": {
+        "BUILD.bazel": "sha256-2lK4OJRmlPEu1atmWlR+bW3qdyPc3CzTKr9n4Ugxm4Q="
+    }
+}

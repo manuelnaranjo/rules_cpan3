@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/DateTime",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.68.cpan1"
+    ],
+    "yanked_versions": {}
+}

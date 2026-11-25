@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Lingua-EN-Inflect",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.905.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DP/DPARIS/Crypt-Blowfish-2.14.tar.gz",
+    "integrity": "sha256-RrNDH/tr9bnLNZ95Vl1IQH5lKtKwT99cpipp5xl6Z7E=",
+    "strip_prefix": "Crypt-Blowfish-2.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-YHUbbYqedBs5dD75JYwHEj0THNpU1u+auYOAQ05Gs1Q="
+    }
+}

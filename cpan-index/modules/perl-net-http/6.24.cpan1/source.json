@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Net-HTTP-6.24.tar.gz",
+    "integrity": "sha256-KQ7ZqXsFx5NbBI5tKjVgNYcfypitcsAcWWFyat+FyDw=",
+    "strip_prefix": "Net-HTTP-6.24",
+    "overlay": {
+        "BUILD.bazel": "sha256-u52bjg240Xm84+RFrgk2FX6CYDvIrgBK6sLSUJsWieg="
+    }
+}

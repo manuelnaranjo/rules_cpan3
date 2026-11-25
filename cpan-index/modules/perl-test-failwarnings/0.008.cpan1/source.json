@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Test-FailWarnings-0.008.tar.gz",
+    "integrity": "sha256-2jTvkCn2hJ1gJiAdSRJ9BU7mrEuXnIIhAxX1chlkqW8=",
+    "strip_prefix": "Test-FailWarnings-0.008",
+    "overlay": {
+        "BUILD.bazel": "sha256-s1Eu5sV/D6e1WZF/Cxt9zAHjixtTBKfpyj3e1SkevXw="
+    }
+}

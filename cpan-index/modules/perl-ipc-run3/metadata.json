@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/IPC-Run3",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.049.cpan1"
+    ],
+    "yanked_versions": {}
+}

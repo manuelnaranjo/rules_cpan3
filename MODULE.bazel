@@ -134,3 +134,6 @@ http_archive(
     strip_prefix = "Compress-Raw-Zlib-2.226",
     urls = ["https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.226.tar.gz"],
 )
+
+# CPAN dependencies indexed by rules_cpan indexer
+bazel_dep(name = "perl-algorithm-diff", version = "1.201.cpan1")

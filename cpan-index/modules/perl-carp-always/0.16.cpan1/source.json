@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Carp-Always-0.16.tar.gz",
+    "integrity": "sha256-mKoRSSFxwBb7CCdYGrH6XtAbHpnGNXSJ3fOoJzFYZvE=",
+    "strip_prefix": "Carp-Always-0.16",
+    "overlay": {
+        "BUILD.bazel": "sha256-21YKyvY7l7tP0eoVrVMxMXad3au67knIShpV/V6Pv4c="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/File-DesktopEntry-0.23.tar.gz",
+    "integrity": "sha256-Y/lXmNgLgeqM6khI80LyZZPGDxUtvQTYmByEb5eeaDU=",
+    "strip_prefix": "File-DesktopEntry-0.23",
+    "overlay": {
+        "BUILD.bazel": "sha256-6dNCrT6KMsbk1c4P2sPYelnYCbFtOuLryOLJbJXyKRU="
+    }
+}

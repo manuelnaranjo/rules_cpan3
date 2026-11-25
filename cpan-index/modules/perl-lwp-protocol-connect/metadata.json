@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/LWP-Protocol-connect",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "6.09.cpan1"
+    ],
+    "yanked_versions": {}
+}

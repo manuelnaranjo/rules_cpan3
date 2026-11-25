@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Net-DNS",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.58.cpan1"
+    ],
+    "yanked_versions": {}
+}

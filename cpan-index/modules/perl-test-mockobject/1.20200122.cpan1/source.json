@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/Test-MockObject-1.20200122.tar.gz",
+    "integrity": "sha256-K3+A2of1pv4DYNnuUhBRBTAXRCw6Juhdto36yfgwdiM=",
+    "strip_prefix": "Test-MockObject-1.20200122",
+    "overlay": {
+        "BUILD.bazel": "sha256-VZnPx7LVaucCJMZxEGBg5LDfBpe++UfusrKvS8cuvtA="
+    }
+}

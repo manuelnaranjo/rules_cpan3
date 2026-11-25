@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/AnyEvent-AIO-1.1.tar.gz",
+    "integrity": "sha256-axBbjGQVYWMfUz7DQj6AZ6PX1YBDv4Xw9eCdcGkFcGs=",
+    "strip_prefix": "AnyEvent-AIO-1.1",
+    "overlay": {
+        "BUILD.bazel": "sha256-ZlYQacRAo0LdXpGL7S8VTVK4ekJVm5bRtLBmGS3Z1hA="
+    }
+}

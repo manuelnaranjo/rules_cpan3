@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/ExtUtils-LibBuilder",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.09.cpan1"
+    ],
+    "yanked_versions": {}
+}

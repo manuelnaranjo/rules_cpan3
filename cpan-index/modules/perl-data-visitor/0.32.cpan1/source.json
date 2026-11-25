@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Data-Visitor-0.32.tar.gz",
+    "integrity": "sha256-sZQpDyV8xidaA5N0ERVUxmahZQ5MAa15nB4KJ39HkX0=",
+    "strip_prefix": "Data-Visitor-0.32",
+    "overlay": {
+        "BUILD.bazel": "sha256-XIPgh4fHo4DgLPGPjQ52dLpaWzo9oi5yRVJiXKZpK6M="
+    }
+}

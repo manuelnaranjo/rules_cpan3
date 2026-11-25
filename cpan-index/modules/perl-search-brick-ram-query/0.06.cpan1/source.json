@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JA/JACKDOE/Search-Brick-RAM-Query-0.06.tar.gz",
+    "integrity": "sha256-PhshpmEOImkqlu/yosYY+zF+o4toZQnMyL/oLWQm01w=",
+    "strip_prefix": "Search-Brick-RAM-Query-0.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-I00t33cvBczekWR7gkODaE+D8k5O2+pic4Kuu+qqA3s="
+    }
+}

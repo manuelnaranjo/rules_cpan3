@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-LibYAML-0.005.tar.gz",
+    "integrity": "sha256-xG+wHqojP1n4MbWGGQUG00c5TjVJaoT3cyFtvdA4tsg=",
+    "strip_prefix": "YAML-PP-LibYAML-0.005",
+    "overlay": {
+        "BUILD.bazel": "sha256-c9mFp6Ng3k1Yj2ijv9G+wkk+xOhA6Jwm6iinUOhZF6s="
+    }
+}

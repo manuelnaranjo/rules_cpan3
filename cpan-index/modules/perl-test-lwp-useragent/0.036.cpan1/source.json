@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-LWP-UserAgent-0.036.tar.gz",
+    "integrity": "sha256-BTJ1MNNGuAphpulD+9dJmGvcqJIRpOswHAjC0XkxThE=",
+    "strip_prefix": "Test-LWP-UserAgent-0.036",
+    "overlay": {
+        "BUILD.bazel": "sha256-gaad0AhayzYp58x9hgWk6UhG871Nfac8EIdL2F6pGKQ="
+    }
+}

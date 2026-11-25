@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/String-InterpolatedVariables",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.000000.cpan1"
+    ],
+    "yanked_versions": {}
+}

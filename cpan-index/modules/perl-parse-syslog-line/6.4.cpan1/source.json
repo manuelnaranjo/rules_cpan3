@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BL/BLHOTSKY/Parse-Syslog-Line-6.4.tar.gz",
+    "integrity": "sha256-jO1mbEphzoGFjptO1WtBPWQqtjbiAWrDYkFEwHGDdzc=",
+    "strip_prefix": "Parse-Syslog-Line-6.4",
+    "overlay": {
+        "BUILD.bazel": "sha256-QKbUja6bgmkEsnYJ9Br1qegGHdBxOclHFpXaITZiElA="
+    }
+}

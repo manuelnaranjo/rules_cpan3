@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BB/BBC/Test-Assertions-1.054.tar.gz",
+    "integrity": "sha256-/NzkHVcnOIFYGt9oCiCmrfUaTDt+McP2mGb7kQk3AoA=",
+    "strip_prefix": "Test-Assertions-1.054",
+    "overlay": {
+        "BUILD.bazel": "sha256-tYPOIElTv3fhh8EQBXJMK9KDkNBFjAOyTsLqHAChof0="
+    }
+}

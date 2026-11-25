@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/Regexp-Trie-0.02.tar.gz",
+    "integrity": "sha256-+yv5TtjbwfSpXZ/I9xDLZ7P3lsbvycS7TCz6Prqhxfo=",
+    "strip_prefix": "Regexp-Trie-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-LfZ8engnq0gm7vtcvGLAmTZ9oCrSIigROjqzhIfP2Qk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AU/AUDREYT/Term-ANSIScreen-1.50.tar.gz",
+    "integrity": "sha256-6NRY9oJ6J/YMQEUCRH0KY19yCQpLLF9qT7TF3HIfUrM=",
+    "strip_prefix": "Term-ANSIScreen-1.50",
+    "overlay": {
+        "BUILD.bazel": "sha256-NIwy1ORTlWpF0I7M0rQaFipql0fV2YJ587M48+mICVA="
+    }
+}

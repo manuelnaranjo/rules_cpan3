@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Encode",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.25.cpan1"
+    ],
+    "yanked_versions": {}
+}

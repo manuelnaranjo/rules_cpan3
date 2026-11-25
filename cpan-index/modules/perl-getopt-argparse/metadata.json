@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Getopt-ArgParse",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.0.6.cpan1"
+    ],
+    "yanked_versions": {}
+}

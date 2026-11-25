@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-ShareDir-Install-0.14.tar.gz",
+    "integrity": "sha256-j5UzsZjy1KmlKIy8fSJPdnmtBaeoVzdFWZeJQovFrqA=",
+    "strip_prefix": "File-ShareDir-Install-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-chhrGdqjTAvP9FGVT6QF3BqHZxszqZcpKYRqKP0SaXc="
+    }
+}

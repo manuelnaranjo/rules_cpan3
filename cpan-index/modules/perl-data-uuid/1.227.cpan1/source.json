@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GT/GTERMARS/Data-UUID-1.227.tar.gz",
+    "integrity": "sha256-lb2nJ2Jl9XvEj/3t3sXvKM1vdl46GDdX+l8J8M5rmKw=",
+    "strip_prefix": "Data-UUID-1.227",
+    "overlay": {
+        "BUILD.bazel": "sha256-H+ZY5TQGEFD4nRGafv15iik9ONFyA34BPIZI6a/iIE0="
+    }
+}

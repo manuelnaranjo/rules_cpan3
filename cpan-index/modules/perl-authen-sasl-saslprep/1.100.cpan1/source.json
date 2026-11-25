@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/Authen-SASL-SASLprep-1.100.tar.gz",
+    "integrity": "sha256-pMzMNLs/U6zwunjJ/GGvjRVtEJ0cEEh7pZiKVQd9H3A=",
+    "strip_prefix": "Authen-SASL-SASLprep-1.100",
+    "overlay": {
+        "BUILD.bazel": "sha256-hIjeRDjRJwb4t1DeUHK6LTpsL+t2lA7ZrkQc5hvT+dE="
+    }
+}

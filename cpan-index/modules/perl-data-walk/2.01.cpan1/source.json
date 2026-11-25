@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GU/GUIDO/Data-Walk-2.01.tar.gz",
+    "integrity": "sha256-iEYVYYOfy/6+ESHOvum63iDmCaEvjHyzhurCLIxUM0o=",
+    "strip_prefix": "Data-Walk-2.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-PV2VoXi+9JiAXUHGXoLBA8vHLrmAUOf+Qe60W/TLAd4="
+    }
+}

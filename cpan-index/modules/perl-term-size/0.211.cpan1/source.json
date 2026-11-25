@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Term-Size-0.211.tar.gz",
+    "integrity": "sha256-WWK0veUjKXdHGClskjFek22n+cRFHpIYbPBy8neQs/s=",
+    "strip_prefix": "Term-Size-0.211",
+    "overlay": {
+        "BUILD.bazel": "sha256-FKo4iRHIPmmrVRcR/Q4kGimUUWAJmtwZqVgnVvaw2D0="
+    }
+}

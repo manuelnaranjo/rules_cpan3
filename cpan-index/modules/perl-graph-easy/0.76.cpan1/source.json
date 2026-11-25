@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Graph-Easy-0.76.tar.gz",
+    "integrity": "sha256-1KLBCuvvZjtZjqN/OqPjt1Ks8fu7lhIyw9vhFVAI0fo=",
+    "strip_prefix": "Graph-Easy-0.76",
+    "overlay": {
+        "BUILD.bazel": "sha256-mCelxXw0HS9JU1OVlPRyI1QViGHrHC+VZDArSQZjbeQ="
+    }
+}

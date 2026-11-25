@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LB/LBAXTER/Sys-SigAction-0.24.tar.gz",
+    "integrity": "sha256-4Eyaf990XT6c2eiy1aRtgmupWMXh4MSLPNEyuxU5YlU=",
+    "strip_prefix": "Sys-SigAction-0.24",
+    "overlay": {
+        "BUILD.bazel": "sha256-gUVPMPEMjkEB6lG7SHPQ5HPr3aV94BKhvlfeOkvvGq8="
+    }
+}

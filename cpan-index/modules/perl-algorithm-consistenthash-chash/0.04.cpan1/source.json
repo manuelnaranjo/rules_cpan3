@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EH/EHERMAN/Algorithm-ConsistentHash-CHash-0.04.tar.gz",
+    "integrity": "sha256-yE2t94mMyeamRJPkUfC5GIHd0u9QlCc4E1TpxXOVAac=",
+    "strip_prefix": "Algorithm-ConsistentHash-CHash-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-4e4NEvvKc9+iePugc3TC9SDrhJkxIWSXMwm8v/RZdCw="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/PerlIO-utf8_strict",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.010.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EV/EVDB/Term-ProgressBar-Simple-0.03.tar.gz",
+    "integrity": "sha256-og2zxn1b39DB+rOSxtHCaICn7oQ69gKvT5tTpwQ1eaY=",
+    "strip_prefix": "Term-ProgressBar-Simple-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-9J6mRkXRkyioM7iPgVofT6dLgUG+zEdzrwghGYMLy08="
+    }
+}

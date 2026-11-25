@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SA/SALVA/Test-PureASCII-0.02.tar.gz",
+    "integrity": "sha256-vhqA3Fgl11Ichca/Ol3OYHBYggQMQDZya2avkjkCbek=",
+    "strip_prefix": "Test-PureASCII-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-/sQse9aQcKyV8Kb+B1LJQfzauYVSunufinGurKy2obM="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Net-SFTP-Foreign",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.93.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IL/ILMARI/Devel-OverloadInfo-0.008.tar.gz",
+    "integrity": "sha256-kTR9OguaJpGAo+oODUPxLFXew925dGQvDhkJP5B1Q9Q=",
+    "strip_prefix": "Devel-OverloadInfo-0.008",
+    "overlay": {
+        "BUILD.bazel": "sha256-Pm4n5XTEL46WHynqv2p1sgYIzFEnoizfSpHC0m2qVlU="
+    }
+}

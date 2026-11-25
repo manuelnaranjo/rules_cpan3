@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Git-Repository",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.326.cpan1"
+    ],
+    "yanked_versions": {}
+}

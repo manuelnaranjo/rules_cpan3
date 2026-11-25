@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/App-Cmd",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.340.cpan1"
+    ],
+    "yanked_versions": {}
+}

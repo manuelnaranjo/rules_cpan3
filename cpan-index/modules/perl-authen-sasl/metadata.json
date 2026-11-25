@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Authen-SASL",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.2100.cpan1"
+    ],
+    "yanked_versions": {}
+}

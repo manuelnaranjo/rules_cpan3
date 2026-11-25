@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/F/FR/FRACTAL/Callback-Frame-1.102.tar.gz",
+    "integrity": "sha256-6KR8fPBM6i/uWALe7HnWq8VIz0oZmmaiUci/XQjf6cA=",
+    "strip_prefix": "Callback-Frame-1.102",
+    "overlay": {
+        "BUILD.bazel": "sha256-foTBt0+8xnDOilAVLxTDk4I6M7N7l7Vj6907cu623V4="
+    }
+}

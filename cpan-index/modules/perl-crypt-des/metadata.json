@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Crypt-DES",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.09.cpan1"
+    ],
+    "yanked_versions": {}
+}

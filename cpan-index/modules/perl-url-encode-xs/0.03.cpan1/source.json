@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHANSEN/URL-Encode-XS-0.03.tar.gz",
+    "integrity": "sha256-1E9Ba9PljjszZqtCBwXaAscRj8hIqXzgiTZuoEYfqCM=",
+    "strip_prefix": "URL-Encode-XS-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-fp+eZ5Q+191Jh6uDstA1q9rA8qHWUtgZhlMBXLrf3Qs="
+    }
+}

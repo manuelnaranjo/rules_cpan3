@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Data-Validate-Domain-0.15.tar.gz",
+    "integrity": "sha256-PJ95GHsNPHGt0fj1WbgN8VmTAKbSA+CxYcvhjhdqqzY=",
+    "strip_prefix": "Data-Validate-Domain-0.15",
+    "overlay": {
+        "BUILD.bazel": "sha256-ODPyTcV8TPBLQm/YB2R8QJ41H7UmiS47LIoJSzIe4Uw="
+    }
+}

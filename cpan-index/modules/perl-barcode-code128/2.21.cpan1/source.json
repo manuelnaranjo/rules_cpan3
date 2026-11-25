@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/W/WR/WRW/Barcode-Code128-2.21.tar.gz",
+    "integrity": "sha256-+MkIEdkW4TvbzjSJJNtF853HaIWAUFqJfSGWqHgbbwY=",
+    "strip_prefix": "Barcode-Code128-2.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-Yy6z5QP4yEHQ2n/CWRB1I39wKzbqsBFaxKoC7HRpMzw="
+    }
+}

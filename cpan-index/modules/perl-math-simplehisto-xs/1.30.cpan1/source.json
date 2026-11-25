@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Math-SimpleHisto-XS-1.30.tar.gz",
+    "integrity": "sha256-2MTHedaJhcoTWp8Pkyf6ohSX4zjTNqoIs5i9ZTobUPE=",
+    "strip_prefix": "Math-SimpleHisto-XS-1.30",
+    "overlay": {
+        "BUILD.bazel": "sha256-RfGzoBGiP78Wcc5CgajGEb5sro7IFhG2ttGgoKqmVUU="
+    }
+}

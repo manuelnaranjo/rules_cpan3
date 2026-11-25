@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/Config-Tiny-2.30.tgz",
+    "integrity": "sha256-svc0VhmzuOY23TnqAQcxydwr+48CK8vYauatF4ZuEQ0=",
+    "strip_prefix": "Config-Tiny-2.30",
+    "overlay": {
+        "BUILD.bazel": "sha256-6wVERQ/l5ccPX+nrqbuETPkzKXBCtjBlHrQB9B/6Gns="
+    }
+}

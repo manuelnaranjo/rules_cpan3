@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/IO-Prompt-Tiny-0.003.tar.gz",
+    "integrity": "sha256-AMxaRU9zM2dAPc27ohlmBH+SDFq8XwPmhH0vU+DFeZY=",
+    "strip_prefix": "IO-Prompt-Tiny-0.003",
+    "overlay": {
+        "BUILD.bazel": "sha256-Yz8riUaEqK8EJBVOSGPU+wWiT4zG/1z98z+/du79XvE="
+    }
+}

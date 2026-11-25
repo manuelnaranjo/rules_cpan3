@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/ST/STEPHEN/Convert-BinHex-1.125.tar.gz",
+    "integrity": "sha256-UTWRtL5GvX65HoMZdyG0oEWpdTo90vEd6CydMBMiY5c=",
+    "strip_prefix": "Convert-BinHex-1.125",
+    "overlay": {
+        "BUILD.bazel": "sha256-QExFVDKAOVHuorb7MLZWz9HD7Wjty4oJrjXtcd1tBEw="
+    }
+}

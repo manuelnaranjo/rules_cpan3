@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Config-INI",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.029.cpan1"
+    ],
+    "yanked_versions": {}
+}

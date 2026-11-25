@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LL/LLAP/Data-Pageset-1.06.tar.gz",
+    "integrity": "sha256-u+PCNINk9qbdx1wHwvssXItfPXrBZKlzpjUm6A/otIo=",
+    "strip_prefix": "Data-Pageset-1.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-Un2y1KSl999v3rOekDXzdHaMCYuCX0H5/HF6NDkeUm4="
+    }
+}

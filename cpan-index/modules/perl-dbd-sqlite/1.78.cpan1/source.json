@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/DBD-SQLite-1.78.tar.gz",
+    "integrity": "sha256-77rXeUuvqk50dsB0RaM7v+EEDjgLqjOVoCY17r44WdU=",
+    "strip_prefix": "DBD-SQLite-1.78",
+    "overlay": {
+        "BUILD.bazel": "sha256-o2uzy8fZ7fzCo/y1Cjsm6VLe7ZgYd3R5frYOP3hUNE0="
+    }
+}

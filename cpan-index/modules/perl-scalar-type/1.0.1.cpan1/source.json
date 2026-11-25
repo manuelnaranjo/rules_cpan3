@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Scalar-Type-1.0.1.tar.gz",
+    "integrity": "sha256-l62UulpGAF2bPliay4sFGxOZ3/30Yav3/Hx9718BnsU=",
+    "strip_prefix": "Scalar-Type-1.0.1",
+    "overlay": {
+        "BUILD.bazel": "sha256-N4G9WmBf2/C1nU4UMZkhVQ6MnOqQJS55dUcpvLJ7fDs="
+    }
+}

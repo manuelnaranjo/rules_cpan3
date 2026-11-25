@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JE/JEFFCPAN/Devel-Cover-Report-Cobertura-1.0.tar.gz",
+    "integrity": "sha256-gjneW9/3gF4vr1R7jRiAcHcHOp5/ZMoRdtUisR2NruM=",
+    "strip_prefix": "Devel-Cover-Report-Cobertura-1.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-KkhFbOYlfBnRo9pBZ1RIbWcj5q+JnJit2S7mN80hdg0="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Perl-Critic-Moose-1.05.tar.gz",
+    "integrity": "sha256-UuuOIsQmQ/F/4peiFxQBfv254phsJOMzfgMPNlD5IgE=",
+    "strip_prefix": "Perl-Critic-Moose-1.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-bN+c/fSGUzox13GvzmNqRGPdm00CQ1Hh+3Lbpb+lcI8="
+    }
+}

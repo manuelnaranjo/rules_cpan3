@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Task-Weaken-1.06.tar.gz",
+    "integrity": "sha256-I4P+252672RkaOqCSvv3yAEHZyDPug3yp6B0cm3NZr4=",
+    "strip_prefix": "Task-Weaken-1.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-yUuXFaH5x8KjZGqtoICOZaIW+MLGsN7A4Xs083+ieK8="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Test-LeakTrace",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.17.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANAJ/Crypt-DSA-GMP-0.02.tar.gz",
+    "integrity": "sha256-PQ7lesF5x38PfiV4rLD/v8OAIxQIPJ6yJuXto2YiCcU=",
+    "strip_prefix": "Crypt-DSA-GMP-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-3KGOz5cWPlpk+qzrXsNVJrGikMwP6Y7X5wwS6v1ctl8="
+    }
+}

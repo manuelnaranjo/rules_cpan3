@@ -1,0 +1,15 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/Encode-3.25.tar.gz",
+    "integrity": "sha256-KKg+8OapdAMm6aPkzFI7HxEp12kuWAogBaYRfGRt/Kc=",
+    "strip_prefix": "Encode-3.25",
+    "overlay": {
+        "KR/KR.xs": "sha256-lsnFP3y6ya8A4TovJ4mADKeSTmZnNagpYxZ3wr868dY=",
+        "Byte/Byte.xs": "sha256-wG19mxSdz/uLDPwVEZWZiwD+yFUfzw6tv9DcfFRixIk=",
+        "CN/CN.xs": "sha256-jbR2u5HU3pjmkMgtLp479rvGqHLt51guwNaV9MaSjB4=",
+        "JP/JP.xs": "sha256-S/SD/c8yxiZl/kX1Y8t7zrww/9hhJWoysHeNz+oKjOI=",
+        "TW/TW.xs": "sha256-UThDHVqNbZuPC2dFlUdMPl8I5Dtqhlf7p0NbWKofF5M=",
+        "Symbol/Symbol.xs": "sha256-Bg/RiB2YKlkeDaVbiQLFQV7PmiUWYcB7ORH8HISeCaQ=",
+        "EBCDIC/EBCDIC.xs": "sha256-7t9TIfa6D2iSfIiHuQ9MxP0gShhAQr3HlZTAIxDC/Is=",
+        "BUILD.bazel": "sha256-lp9HA0hlAArZobcU656QrwYroZBIuJ26Gh9JfuSx6UY="
+    }
+}

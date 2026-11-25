@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-Regexp-0.092.tar.gz",
+    "integrity": "sha256-6cZpwB18lR+b/uiZwUf8jI3dmNPzIyn5QADHsC9TNms=",
+    "strip_prefix": "PPIx-Regexp-0.092",
+    "overlay": {
+        "BUILD.bazel": "sha256-yzzdl6pP/SuQbFcMNMcPpSG7TPzCU5jYQiwkyW0qxdc="
+    }
+}

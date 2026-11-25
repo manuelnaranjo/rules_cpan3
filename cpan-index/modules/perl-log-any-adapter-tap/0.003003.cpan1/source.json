@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NERDVANA/Log-Any-Adapter-TAP-0.003003.tar.gz",
+    "integrity": "sha256-Ex8GibK0KxsxRJcUxu2o+BHdlqfIZ0jx4DsjnP0BIcA=",
+    "strip_prefix": "Log-Any-Adapter-TAP-0.003003",
+    "overlay": {
+        "BUILD.bazel": "sha256-h/1TXilhpseQeK9n5y8Xu9lWpv/qLtqETGBmoRVkLos="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CF/CFRANKS/Perl6-Junction-1.60000.tar.gz",
+    "integrity": "sha256-0CN16FGX6PkbTLLTM0rpqJ9gAi949c1gdtzU7G+ycWQ=",
+    "strip_prefix": "Perl6-Junction-1.60000",
+    "overlay": {
+        "BUILD.bazel": "sha256-p663twytAVr2lQHiLs+hb79hgX+rwJT4aQxpLp60o0Q="
+    }
+}

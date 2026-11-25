@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BK/BKB/Convert-Moji-0.11.tar.gz",
+    "integrity": "sha256-KN5WPSAvx8+iKctxIsmnhKMKMhDrL+XmAJz8ohMOhdU=",
+    "strip_prefix": "Convert-Moji-0.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-zKIWqFIS1cspfELT8aVTn0UVjZaQwyMj/534m6Kun6o="
+    }
+}

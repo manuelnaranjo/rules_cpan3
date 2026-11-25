@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Math-SimpleHisto-XS-CLI-1.07.tar.gz",
+    "integrity": "sha256-oe2j3pgxiYcYCu98cqbvjqF6i2piYT35HZ4MeZNM950=",
+    "strip_prefix": "Math-SimpleHisto-XS-CLI-1.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-kHmsq1CFTamtTUdmDOr4z6/HZQhZ3RyNdlSZC8T6A2M="
+    }
+}

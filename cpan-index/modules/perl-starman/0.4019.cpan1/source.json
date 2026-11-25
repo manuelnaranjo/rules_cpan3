@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Starman-0.4019.tar.gz",
+    "integrity": "sha256-SjPyCmoyUJOPyF4hd540xW4VaJX+So+oyDrE6W7K72E=",
+    "strip_prefix": "Starman-0.4019",
+    "overlay": {
+        "BUILD.bazel": "sha256-CkuwvVfKT9zSreGaMs0QDCu+hF86Qj0ZvQ2Hh+qvSJE="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/App-ElasticSearch-Utilities",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "9.1.cpan1"
+    ],
+    "yanked_versions": {}
+}

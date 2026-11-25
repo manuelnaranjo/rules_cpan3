@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/MooX-HandlesVia-0.001009.tar.gz",
+    "integrity": "sha256-cWNT44iU7Lfo5MF7yVSD219ZACsDVBtUpywn8qjzbBI=",
+    "strip_prefix": "MooX-HandlesVia-0.001009",
+    "overlay": {
+        "BUILD.bazel": "sha256-oZ6TQ/dmUIIRgW4YzE9xWXAGKRotmDXZbPpVTTI6B9c="
+    }
+}

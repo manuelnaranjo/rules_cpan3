@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/String-Format",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.18.cpan1"
+    ],
+    "yanked_versions": {}
+}

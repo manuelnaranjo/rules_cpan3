@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/SQL-Abstract-Limit",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.143.cpan1"
+    ],
+    "yanked_versions": {}
+}

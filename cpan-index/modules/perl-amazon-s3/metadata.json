@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Amazon-S3",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.1.4.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MASAKI/Test-Fake-HTTPD-0.09.tar.gz",
+    "integrity": "sha256-FPecsGepCSLpvlVPjks509aXeK5Mj/9E9WD2N/tvLR4=",
+    "strip_prefix": "Test-Fake-HTTPD-0.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-Byopr2UvI6ob6/KZI8xbhiiXC7jCJfw6PnqNSppyMVM="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.028.tar.gz",
+    "integrity": "sha256-yFdIdczgc+fcU0WnsG1QLlIETWiJT5FgID/KqzeVFP4=",
+    "strip_prefix": "ExtUtils-Helpers-0.028",
+    "overlay": {
+        "BUILD.bazel": "sha256-y9sN8bJIYDfXXMi2/TssAM5mTR5t3BGJF7FSnsn2VJk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-URI-0.10.tar.gz",
+    "integrity": "sha256-Mwqx0TTu+FQq4raFLwEx61PX2QOgL5B0DMANyY7uCMw=",
+    "strip_prefix": "MooseX-Types-URI-0.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-R7Z1ctH9g5P1t3Fo+Mo6Mqp70e5IDcbMiZT6vuVfVMA="
+    }
+}

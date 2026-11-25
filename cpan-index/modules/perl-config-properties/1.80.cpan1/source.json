@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SA/SALVA/Config-Properties-1.80.tar.gz",
+    "integrity": "sha256-XQQ5W+fhTpcKA+qVL7dimuME2XwDH5DMHCm9Cmpi/EA=",
+    "strip_prefix": "Config-Properties-1.80",
+    "overlay": {
+        "BUILD.bazel": "sha256-rfC7XLq6i5JdtRsl8N+zkTiwbvZtTR2gTH9kIKiVEqE="
+    }
+}

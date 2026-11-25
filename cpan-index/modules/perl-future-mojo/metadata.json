@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Future-Mojo",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.003.cpan1"
+    ],
+    "yanked_versions": {}
+}

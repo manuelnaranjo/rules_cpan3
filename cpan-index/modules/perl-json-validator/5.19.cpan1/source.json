@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JH/JHTHORSEN/JSON-Validator-5.19.tar.gz",
+    "integrity": "sha256-nx2G9v72OKr2EOO+KNICeuxKSOLcDuulLvjNVkUV4AQ=",
+    "strip_prefix": "JSON-Validator-5.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-nFPGvr4KFF6T7fsyG38BQ4tWKpIiGbiHopfxAj3P9lE="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Net-Ping",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.77.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Term-VT102",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.91.cpan1"
+    ],
+    "yanked_versions": {}
+}

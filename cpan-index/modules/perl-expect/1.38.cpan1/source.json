@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JA/JACOBY/Expect-1.38.tar.gz",
+    "integrity": "sha256-exBIM18yeViQOGfOoHncBy6gf06vrhtAwubyXbIWhsA=",
+    "strip_prefix": "Expect-1.38",
+    "overlay": {
+        "BUILD.bazel": "sha256-2GeKeaGtYudRH0trjc8BhmFt9IsHoebXp5kRuGerTtA="
+    }
+}

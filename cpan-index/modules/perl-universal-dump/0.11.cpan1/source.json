@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LN/LNATION/UNIVERSAL-dump-0.11.tar.gz",
+    "integrity": "sha256-qGglEJwiWfANFU7Z8mPOYF2fI5rOvzu2bxl6b8mJxuI=",
+    "strip_prefix": "UNIVERSAL-dump-0.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-1bAv0fo6HGLwUWYbWsxkHm5y9UBxrq69u9YKcRJe/8w="
+    }
+}

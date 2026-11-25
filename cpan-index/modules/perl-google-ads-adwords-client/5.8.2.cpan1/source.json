@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SU/SUNDQUIST/Google-Ads-AdWords-Client-5.8.2.tar.gz",
+    "integrity": "sha256-3CqEHoLBFy+FjnpjJM8eHpb4j7rmfOVmkfuTw9G/9EU=",
+    "strip_prefix": "Google-Ads-AdWords-Client-5.8.2",
+    "overlay": {
+        "BUILD.bazel": "sha256-KTnLaizinRDqzLeBdwa61JnlQe+tKJxE0fPjE3OViy0="
+    }
+}

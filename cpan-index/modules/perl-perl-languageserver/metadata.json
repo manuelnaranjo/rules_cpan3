@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Perl-LanguageServer",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.6.2.cpan1"
+    ],
+    "yanked_versions": {}
+}

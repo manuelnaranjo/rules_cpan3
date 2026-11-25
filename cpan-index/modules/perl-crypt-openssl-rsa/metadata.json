@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Crypt-OpenSSL-RSA",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.41.cpan1"
+    ],
+    "yanked_versions": {}
+}

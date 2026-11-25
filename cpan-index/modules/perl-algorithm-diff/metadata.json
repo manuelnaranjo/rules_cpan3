@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Algorithm-Diff",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.201.cpan1"
+    ],
+    "yanked_versions": {}
+}

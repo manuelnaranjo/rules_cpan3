@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Parser-1.67.tar.gz",
+    "integrity": "sha256-XezL9V11DOZViM0hHBoD+h7zqqFdGsK42FODpCwUJ+o=",
+    "strip_prefix": "Pod-Parser-1.67",
+    "overlay": {
+        "BUILD.bazel": "sha256-ZHkvyPoeNWeu01+sPd9BGC2grPA68Ho1yTVjOT3nUMk="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Number-Format",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.79.cpan1"
+    ],
+    "yanked_versions": {}
+}

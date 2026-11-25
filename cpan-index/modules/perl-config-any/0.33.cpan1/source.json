@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.33.tar.gz",
+    "integrity": "sha256-wGaOtfLNNVvyBVfwTcGKJUdLegvPp5Vi4xZdmjx4kzM=",
+    "strip_prefix": "Config-Any-0.33",
+    "overlay": {
+        "BUILD.bazel": "sha256-2UNMlSb1s7XzqZIk1srK9/wudjog8pQVsdOXEXvPuUA="
+    }
+}

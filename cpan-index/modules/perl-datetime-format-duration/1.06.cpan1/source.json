@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/DateTime-Format-Duration-1.06.tar.gz",
+    "integrity": "sha256-V22WKVCrvfMvbyrX7geqJ9/gCSaligV8D7UU9nliedo=",
+    "strip_prefix": "DateTime-Format-Duration-1.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-3i6XNYcAri0tFxZChwkV2F/uK6lulkHBOgWZ/E/bAAI="
+    }
+}

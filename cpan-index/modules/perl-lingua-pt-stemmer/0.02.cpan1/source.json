@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Lingua-PT-Stemmer-0.02.tar.gz",
+    "integrity": "sha256-WW3wH4q3n//9RQ6Ug2pUQ3HYpMk6FffojqLxt5xGhJ0=",
+    "strip_prefix": "Lingua-PT-Stemmer-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-3boscCa3/BE+WJFxMbs0cP6DFhjuM83Dq8v2D517dsE="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Throwable-1.001.tar.gz",
+    "integrity": "sha256-0MtenX0G1w8sxW7s+FeoOkXqykOFDc3akdP+tN3eTFE=",
+    "strip_prefix": "Throwable-1.001",
+    "overlay": {
+        "BUILD.bazel": "sha256-TXzrL9+CwSP7Rt8D52D0e3V+GWld8l/xfeOajKRSXA8="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Params-Validate",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.31.cpan1"
+    ],
+    "yanked_versions": {}
+}

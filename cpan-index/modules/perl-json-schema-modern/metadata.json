@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/JSON-Schema-Modern",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.654.cpan1"
+    ],
+    "yanked_versions": {}
+}

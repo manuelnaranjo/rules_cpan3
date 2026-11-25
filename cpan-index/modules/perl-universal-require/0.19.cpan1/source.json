@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/UNIVERSAL-require-0.19.tar.gz",
+    "integrity": "sha256-1GfNJuBsjDsgP9O8B5aubIN6xeMQCTyCJn/134UPGgM=",
+    "strip_prefix": "UNIVERSAL-require-0.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-KiV8qmtIKMkuAv+E+yCQ6s4V5rjKeSG57mjt1Y4KzHk="
+    }
+}

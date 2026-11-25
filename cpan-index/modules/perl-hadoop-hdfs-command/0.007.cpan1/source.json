@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Hadoop-HDFS-Command-0.007.tar.gz",
+    "integrity": "sha256-rf9r1kgzsbS/O5VZbxMO8VzrZ0G5pyM4IdQ1tzHim9o=",
+    "strip_prefix": "Hadoop-HDFS-Command-0.007",
+    "overlay": {
+        "BUILD.bazel": "sha256-ijEBLFsa58mZIfdFMl4EDedgH/dt9VTj+FEmBpPIoxU="
+    }
+}

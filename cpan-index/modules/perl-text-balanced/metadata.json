@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Text-Balanced",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.08.cpan1"
+    ],
+    "yanked_versions": {}
+}

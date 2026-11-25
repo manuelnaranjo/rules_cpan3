@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-C3-0.35.tar.gz",
+    "integrity": "sha256-hAU88aaPzIwSBWwvEgrfBPf2jjvjT0QI6V0Cb+5n4z4=",
+    "strip_prefix": "Class-C3-0.35",
+    "overlay": {
+        "BUILD.bazel": "sha256-dQlcDgxPtVo4PZIFzIjvk2FOU+rDTDDcM0omvKXFvAo="
+    }
+}

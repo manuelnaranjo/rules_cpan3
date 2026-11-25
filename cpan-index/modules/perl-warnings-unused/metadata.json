@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/warnings-unused",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.06.cpan1"
+    ],
+    "yanked_versions": {}
+}

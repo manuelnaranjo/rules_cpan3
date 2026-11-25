@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Devel-Cover-Report-Cobertura",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.0.cpan1"
+    ],
+    "yanked_versions": {}
+}

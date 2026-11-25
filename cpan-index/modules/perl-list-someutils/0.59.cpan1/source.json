@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.59.tar.gz",
+    "integrity": "sha256-+rMDcuTGe/WkYGLaONHQyHVief6tqGbrQ5+ilXGi3Hs=",
+    "strip_prefix": "List-SomeUtils-0.59",
+    "overlay": {
+        "BUILD.bazel": "sha256-JxYJ0a3T9dBddnGiMqhOjJvEyQDknBsXv94Fc2yslfc="
+    }
+}

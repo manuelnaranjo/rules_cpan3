@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/HTML-Tagset",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.24.cpan1"
+    ],
+    "yanked_versions": {}
+}

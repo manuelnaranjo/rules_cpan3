@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/HTTP-CookieJar-0.014.tar.gz",
+    "integrity": "sha256-cJTqXJH1NtJjuF6Dq06alj4RxECM4I7K5VP6nAzEfnM=",
+    "strip_prefix": "HTTP-CookieJar-0.014",
+    "overlay": {
+        "BUILD.bazel": "sha256-E8tzoVoVO3nLekrlcpsbA3uTVb8GNL3Z0wm9BzSRywU="
+    }
+}

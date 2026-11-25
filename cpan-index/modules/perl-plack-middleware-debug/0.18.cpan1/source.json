@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Plack-Middleware-Debug-0.18.tar.gz",
+    "integrity": "sha256-GS73nlIckMbv9vQUmtLkv8kR0sld94k1hV6Q1lnprJo=",
+    "strip_prefix": "Plack-Middleware-Debug-0.18",
+    "overlay": {
+        "BUILD.bazel": "sha256-BoppCYP7DPD76TOmGmPAhzYycDCktvwYSYCpVjR1Jak="
+    }
+}

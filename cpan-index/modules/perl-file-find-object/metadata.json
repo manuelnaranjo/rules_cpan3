@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/File-Find-Object",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.3.9.cpan1"
+    ],
+    "yanked_versions": {}
+}

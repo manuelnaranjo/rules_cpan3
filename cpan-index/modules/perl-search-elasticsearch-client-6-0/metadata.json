@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Search-Elasticsearch-Client-6_0",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "7.717.cpan1"
+    ],
+    "yanked_versions": {}
+}

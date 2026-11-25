@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KA/KAZUHO/MIME-Base64-URLSafe-0.01.tar.gz",
+    "integrity": "sha256-y5lmxQU4u2dqtnvECnyEEBmyO6IkPQ/8wszwhOXDN5g=",
+    "strip_prefix": "MIME-Base64-URLSafe-0.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-avz2Y/0r/FMhUT//UT+WWsNvimCq+exCBSRoKTLlmUo="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.053.tar.gz",
+    "integrity": "sha256-NybWItpvZV6I/fieT9WXcJxElwtH3mUIIAPo2GteGTo=",
+    "strip_prefix": "Module-Build-Tiny-0.053",
+    "overlay": {
+        "BUILD.bazel": "sha256-BKG9Ne+QYeXLda6hRJGN8F26utqI+QJEJCW1XYdLVhc="
+    }
+}

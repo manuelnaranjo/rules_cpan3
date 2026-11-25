@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SW/SWEETKID/Plack-Middleware-RemoveRedundantBody-0.09.tar.gz",
+    "integrity": "sha256-gNRfk9a3KQsL2LPO3YSjf8UBRWzD3sAux6rYHAAYCH4=",
+    "strip_prefix": "Plack-Middleware-RemoveRedundantBody-0.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-Hnr7MLYw2FnkHwNsQEW2SZz/H2OuXbwPGrK3tKETuA0="
+    }
+}

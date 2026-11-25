@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Sub-Quote",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.006009.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Email-Simple",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.218.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Furl",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.16.cpan1"
+    ],
+    "yanked_versions": {}
+}

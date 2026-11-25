@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Mojolicious",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "9.54.cpan1"
+    ],
+    "yanked_versions": {}
+}

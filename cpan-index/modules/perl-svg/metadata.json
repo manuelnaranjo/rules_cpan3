@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/SVG",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.89.cpan1"
+    ],
+    "yanked_versions": {}
+}

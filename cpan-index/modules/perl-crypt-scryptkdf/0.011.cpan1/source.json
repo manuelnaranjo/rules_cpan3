@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIK/Crypt-ScryptKDF-0.011.tar.gz",
+    "integrity": "sha256-IZLJ8E8rX/cHN/XNrz9PZ6VXE8MeoIVAOMvzXjttFrQ=",
+    "strip_prefix": "Crypt-ScryptKDF-0.011",
+    "overlay": {
+        "BUILD.bazel": "sha256-4i6GKOD5LTEhrH4paro3MXI3608YQXbc9GEDg6MT3A8="
+    }
+}

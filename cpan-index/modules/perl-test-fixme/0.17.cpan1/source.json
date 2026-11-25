@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Test-Fixme-0.17.tar.gz",
+    "integrity": "sha256-nvhYBCCwVR8R6BVBoiAGg3yb3yZSTQuL81qihqzKh44=",
+    "strip_prefix": "Test-Fixme-0.17",
+    "overlay": {
+        "BUILD.bazel": "sha256-avs72mTiLna9mjN1qc+4KgF/acNekrdxLJNTtvy2J0g="
+    }
+}

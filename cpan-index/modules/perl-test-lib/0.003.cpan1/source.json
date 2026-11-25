@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Test-Lib-0.003.tar.gz",
+    "integrity": "sha256-2EtI2SVny6PQr7HoF1qrg2v6ioOOGayQgMq8Lj+dyfU=",
+    "strip_prefix": "Test-Lib-0.003",
+    "overlay": {
+        "BUILD.bazel": "sha256-UET8DvJSqi+s2bA2D3BNxl56qa/5wm8rH76tjF2dw5E="
+    }
+}

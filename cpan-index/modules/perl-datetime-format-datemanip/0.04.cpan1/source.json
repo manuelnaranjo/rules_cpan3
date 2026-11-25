@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BB/BBENNETT/dt-fmt-datemanip/DateTime-Format-DateManip-0.04.tar.gz",
+    "integrity": "sha256-IHfJpCDjwGWbYSmL/07eEmkSDPaQv+s19J9ubGvo7kM=",
+    "strip_prefix": "DateTime-Format-DateManip-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-e/GcQRZM0X3sUocr3DXDuHfxAUFEGL9yL/Qpwlyg1U0="
+    }
+}

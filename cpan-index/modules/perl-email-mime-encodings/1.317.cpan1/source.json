@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-MIME-Encodings-1.317.tar.gz",
+    "integrity": "sha256-SppBZxqdFQTE2iQb5BmpUD+jSGJiUm7bgeyp4uvqC68=",
+    "strip_prefix": "Email-MIME-Encodings-1.317",
+    "overlay": {
+        "BUILD.bazel": "sha256-gDgrh62yCN3b4ASVSeMH9/wtBS+j1y3cS8VD3tSTg/M="
+    }
+}

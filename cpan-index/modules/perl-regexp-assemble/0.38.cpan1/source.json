@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/Regexp-Assemble-0.38.tgz",
+    "integrity": "sha256-oGvn+a4bc8m/1bZmKxQcDXBGnpwZu0QTpu5W+Cra5EI=",
+    "strip_prefix": "Regexp-Assemble-0.38",
+    "overlay": {
+        "BUILD.bazel": "sha256-a4OUDLmSLTH3Xc0MfdGbUywlUgA0XF/1hkblGnAniNI="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/jmx4perl",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.13.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.150.tar.gz",
+    "integrity": "sha256-/yBxPRoU0levnHggkAH0DcF35LnRSWEVy9hybVd5Rsc=",
+    "strip_prefix": "Path-Tiny-0.150",
+    "overlay": {
+        "BUILD.bazel": "sha256-bQFJGGSnB9ZsmgEU4QmUS4gd4UmkJ/ys58WVLylq1is="
+    }
+}

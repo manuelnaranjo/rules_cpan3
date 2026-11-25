@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.96.tar.gz",
+    "integrity": "sha256-qyE2kWhfsqV2xmnLyNkmb4FloxVjrRW3xAMLlK38B1M=",
+    "strip_prefix": "Net-SSLeay-1.96",
+    "overlay": {
+        "BUILD.bazel": "sha256-RuaWvy2BdIscFaHi1vKF0tYhuAZK7vWFCHcWG92Yc0I="
+    }
+}

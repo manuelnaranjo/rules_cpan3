@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Image-Info",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.45.cpan1"
+    ],
+    "yanked_versions": {}
+}

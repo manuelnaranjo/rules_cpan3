@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Builder-0.83.tar.gz",
+    "integrity": "sha256-Yf+yPYWzyheGstoyiembV+BiX+DknbAqbcDLYsaJ4vI=",
+    "strip_prefix": "DateTime-Format-Builder-0.83",
+    "overlay": {
+        "BUILD.bazel": "sha256-cZrY08RIIyVAGQaioPNiG6UZn9+kd3Xn/5dc4sgYhhE="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AL/ALEXMV/LWP-UserAgent-Determined-1.07.tar.gz",
+    "integrity": "sha256-BtjVDozTaSoRy0+0Si+E5UdqmPDi5qSg386fZ+Vd21M=",
+    "strip_prefix": "LWP-UserAgent-Determined-1.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-Tl1Zy32y1+JwSQlzBqFShKd0t4wqqVV1jYOlKZXvnqg="
+    }
+}

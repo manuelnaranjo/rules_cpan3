@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.73.tar.gz",
+    "integrity": "sha256-PBE/TiXDgyOj/lmS0wwzcmTQDvhyrs/S2UMcqOoAg+I=",
+    "strip_prefix": "Test-Differences-0.73",
+    "overlay": {
+        "BUILD.bazel": "sha256-ENij8yN61O/MLcpHqSWLK7wwAyOu+6UEsPMGAK8ZhMY="
+    }
+}

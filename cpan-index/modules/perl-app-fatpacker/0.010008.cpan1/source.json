@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/App-FatPacker-0.010008.tar.gz",
+    "integrity": "sha256-Ep2zbchFZhpYIoaBDP4tUhbrLOCCutQK4fzc4PRd7M8=",
+    "strip_prefix": "App-FatPacker-0.010008",
+    "overlay": {
+        "BUILD.bazel": "sha256-yCNDwAbgx9rjAuQC8ShVxdgNkFrJA7qO3qaiCHFVsZI="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/V/VP/VPIT/indirect-0.39.tar.gz",
+    "integrity": "sha256-cXM8TDSOmP3VdbRKUgQkKMOYiKGMJWVu/lnvPX0NJ+U=",
+    "strip_prefix": "indirect-0.39",
+    "overlay": {
+        "BUILD.bazel": "sha256-gkvrWUWnNlOukftUfCMMCRpmMGa3AReqXC3W29d3emg="
+    }
+}

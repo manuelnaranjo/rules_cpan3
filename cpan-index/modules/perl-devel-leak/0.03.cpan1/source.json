@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NI/NI-S/Devel-Leak-0.03.tar.gz",
+    "integrity": "sha256-b0LDTxHitOPqLg5rlBaoimha3UR5EMr02R3SwXgXclI=",
+    "strip_prefix": "Devel-Leak-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-K/v+iGr1pvumhYhe+TiUywVbwdSRaq9+qxTFBJdd1MQ="
+    }
+}

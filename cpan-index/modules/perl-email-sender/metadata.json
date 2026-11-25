@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Email-Sender",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.603.cpan1"
+    ],
+    "yanked_versions": {}
+}

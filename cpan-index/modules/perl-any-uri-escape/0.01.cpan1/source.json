@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PH/PHRED/Any-URI-Escape-0.01.tar.gz",
+    "integrity": "sha256-44E87J8Qj6XAvmbgjBmGv7pNJCFRsPn07F4MXhcQjEw=",
+    "strip_prefix": "Any-URI-Escape-0.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-31lImOGO5Ey+QTl06HXs29b4P8L7lu9VjRPfYiU9Ihk="
+    }
+}

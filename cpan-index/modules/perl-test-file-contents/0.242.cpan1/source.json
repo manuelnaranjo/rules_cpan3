@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AR/ARISTOTLE/Test-File-Contents-0.242.tar.gz",
+    "integrity": "sha256-qDisC29uEOiWE7UMphdzzbqbpHh7qC57tl2q9whKpQs=",
+    "strip_prefix": "Test-File-Contents-0.242",
+    "overlay": {
+        "BUILD.bazel": "sha256-VEOs1O6m21Oj3yPJDYjA8Q0aMWiiAYcBNml2HHO6r0c="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DB/DBOOK/Net-Amazon-Signature-V4-0.22.tar.gz",
+    "integrity": "sha256-Ui/qJmyLMabD3n475dtxWXIDhxSgI5v7vh/MrU0GXP4=",
+    "strip_prefix": "Net-Amazon-Signature-V4-0.22",
+    "overlay": {
+        "BUILD.bazel": "sha256-qr+9QR+yLRi7Tysk+ycdcJCUBZrKDS2bgrtplJYasA4="
+    }
+}

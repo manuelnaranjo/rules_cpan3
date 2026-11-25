@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/AnyEvent-AIO",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.1.cpan1"
+    ],
+    "yanked_versions": {}
+}

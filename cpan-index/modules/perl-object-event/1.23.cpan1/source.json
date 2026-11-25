@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EL/ELMEX/Object-Event-1.23.tar.gz",
+    "integrity": "sha256-q2u4BQj0/dry1RsgyodqqwOFgqhrUijmQ1QRNIr1PII=",
+    "strip_prefix": "Object-Event-1.23",
+    "overlay": {
+        "BUILD.bazel": "sha256-fYuTmKjqe14UjZ2vexFdemtcH/3Fsb8qqEfKHDMX7hk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MICKEY/MetaCPAN-Client-2.044000.tar.gz",
+    "integrity": "sha256-Fj8ddclXL1fs+L2kGNILhh7J+Mv4Roi7neu8yQj1geE=",
+    "strip_prefix": "MetaCPAN-Client-2.044000",
+    "overlay": {
+        "BUILD.bazel": "sha256-QV1e6+NKwddarhEQtNo/7saMWpe0N3WX0k2bphDkbSo="
+    }
+}

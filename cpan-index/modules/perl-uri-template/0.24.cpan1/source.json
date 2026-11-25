@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BR/BRICAS/URI-Template-0.24.tar.gz",
+    "integrity": "sha256-aK4tYbV+FNytD4Kvr/3F7AW1B6HpyN9aphOKqipbEd4=",
+    "strip_prefix": "URI-Template-0.24",
+    "overlay": {
+        "BUILD.bazel": "sha256-v0cY1Q49saWU8F8cFqlgmmnXF4H/sEh2W+2C4fF3B34="
+    }
+}

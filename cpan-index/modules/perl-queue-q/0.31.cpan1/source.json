@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MATTK/Queue-Q-0.31.tar.gz",
+    "integrity": "sha256-q1yARTZLbaCWyvHz3f5xDoRZyBssTDjkwCjdfpoSDlg=",
+    "strip_prefix": "Queue-Q-0.31",
+    "overlay": {
+        "BUILD.bazel": "sha256-KaVt3ikDsfZkaCSlZLachmuDWJKj+8f5ErunrJMPjt8="
+    }
+}

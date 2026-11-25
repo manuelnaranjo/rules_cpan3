@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MO/MOB/Sys-CpuAffinity-1.12.tar.gz",
+    "integrity": "sha256-/jLAXz6wWXCMZH8ruFslBFhZHyupBR2Nhm9Uajh+6Eg=",
+    "strip_prefix": "Sys-CpuAffinity-1.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-61xoyw2qn2zBRnpH9jKkOvXnJhDZNKAaoIm/QkbtYug="
+    }
+}

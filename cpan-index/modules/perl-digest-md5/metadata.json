@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Digest-MD5",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.59.cpan1"
+    ],
+    "yanked_versions": {}
+}

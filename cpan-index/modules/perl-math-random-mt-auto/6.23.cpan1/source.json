@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JD/JDHEDDEN/Math-Random-MT-Auto-6.23.tar.gz",
+    "integrity": "sha256-WLy1rTFilk/1oMTS3LqgICwshdnEcElvO3qZh1d3YxM=",
+    "strip_prefix": "Math-Random-MT-Auto-6.23",
+    "overlay": {
+        "BUILD.bazel": "sha256-Q/EnSsr+OBYkGnYLICQ1Ghp00WBBdoNl5IcAkCye2Z4="
+    }
+}

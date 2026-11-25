@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SC/SCOTT/Sys-Hostname-Long-1.5.tar.gz",
+    "integrity": "sha256-6Rht83Bqh379YUnyxxHWz4fdbPcvark1uoEhsiWyZcs=",
+    "strip_prefix": "Sys-Hostname-Long-1.5",
+    "overlay": {
+        "BUILD.bazel": "sha256-QE5rnIISesPGPh1wNXyhyrJ/ce/iHK5wO47EhJr91AU="
+    }
+}

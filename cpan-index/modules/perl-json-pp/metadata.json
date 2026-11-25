@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/JSON-PP",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "4.18.cpan1"
+    ],
+    "yanked_versions": {}
+}

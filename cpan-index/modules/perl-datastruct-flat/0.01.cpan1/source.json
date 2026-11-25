@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JL/JLMARTIN/DataStruct-Flat-0.01.tar.gz",
+    "integrity": "sha256-b2TixvR15tCsahd68Gmg5ShfURHeWWUKv5Mx0iqcC7s=",
+    "strip_prefix": "DataStruct-Flat-0.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-aUzStxZtXfIFWAvSz+jpDTUOwynK90ISfmJPZDPiE2Y="
+    }
+}

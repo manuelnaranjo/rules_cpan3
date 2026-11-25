@@ -1,0 +1,10 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SA/SAPER/Sys-Syslog-0.36.tar.gz",
+    "integrity": "sha256-7UKp5boErUhWzAy1040onDxdN2RUPsBO+vxK9+M3jfg=",
+    "strip_prefix": "Sys-Syslog-0.36",
+    "overlay": {
+        "const-c.inc": "sha256-zFCqJQt/Khcg5B7/6aHf0oTA8dE7lrwIred5D2uSrS4=",
+        "const-xs.inc": "sha256-ryMU5WIqhwGDTeCw22/xW9tsF9bRmLMsnUsRdva7yRQ=",
+        "BUILD.bazel": "sha256-ObIlawFai+6FZk/3x5wc5fK7o1j5/ZUKAxNum0fH5YQ="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MALLEN/Test-RequiresInternet-0.05.tar.gz",
+    "integrity": "sha256-u6ezKhzA1Yzi7CCyAKc0fGljFkHoyuj/RWetJO8egz4=",
+    "strip_prefix": "Test-RequiresInternet-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-VBBYdJ3+eNeMoffLpLk7QI43mnHtFYtiG9ms0zX4yMM="
+    }
+}

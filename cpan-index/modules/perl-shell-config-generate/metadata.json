@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Shell-Config-Generate",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.36.cpan1"
+    ],
+    "yanked_versions": {}
+}

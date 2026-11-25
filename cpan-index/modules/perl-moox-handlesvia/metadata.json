@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/MooX-HandlesVia",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.001009.cpan1"
+    ],
+    "yanked_versions": {}
+}

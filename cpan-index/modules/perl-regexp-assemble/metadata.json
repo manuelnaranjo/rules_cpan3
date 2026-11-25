@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Regexp-Assemble",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.38.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Hook-LexWrap-0.26.tar.gz",
+    "integrity": "sha256-tgvcX5j5T5KUsGre+CsdmW2hktXxg/n0NLYQ/RE37C0=",
+    "strip_prefix": "Hook-LexWrap-0.26",
+    "overlay": {
+        "BUILD.bazel": "sha256-chL5MfZGJ3458nT2iIJPY7Ce9M+RqtCjukrT3b5s57Y="
+    }
+}

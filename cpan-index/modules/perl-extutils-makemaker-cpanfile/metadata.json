@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/ExtUtils-MakeMaker-CPANfile",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.11.cpan1"
+    ],
+    "yanked_versions": {}
+}

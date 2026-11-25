@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BT/BTYLER/Devel-Optic-0.015.tar.gz",
+    "integrity": "sha256-JEh2jWegUH1rgmIyJsgrqbkFgiqBxCbDaEk0YAlFquY=",
+    "strip_prefix": "Devel-Optic-0.015",
+    "overlay": {
+        "BUILD.bazel": "sha256-9ae+ee7du9R8cvWP18k+Q8NsGboVOhgqOc5VhErUY4I="
+    }
+}

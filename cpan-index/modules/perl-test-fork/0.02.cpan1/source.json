@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSCHWERN/Test-Fork-0.02.tar.gz",
+    "integrity": "sha256-/P77+yT4havoJ8KtB6w9Th/s8hOhRxf8rzw3F1BF0D4=",
+    "strip_prefix": "Test-Fork-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-VJTwogN4BC9w0nS7i9ldSkdJ0wBQLXLm2LBnYLw1saw="
+    }
+}

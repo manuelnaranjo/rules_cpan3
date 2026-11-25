@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Data-Perl-0.002011.tar.gz",
+    "integrity": "sha256-jTTb4xTPotmb2arlRrvelMOLsFt0sHyJveFnOm9sVfQ=",
+    "strip_prefix": "Data-Perl-0.002011",
+    "overlay": {
+        "BUILD.bazel": "sha256-BYQucc4OAaSRlfzz1XwsjaK3kXPA+pNFh7dbFYJT6MM="
+    }
+}

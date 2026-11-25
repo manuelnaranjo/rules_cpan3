@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Devel-LexAlias",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.05.cpan1"
+    ],
+    "yanked_versions": {}
+}

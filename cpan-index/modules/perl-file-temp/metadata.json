@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/File-Temp",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.2312.cpan1"
+    ],
+    "yanked_versions": {}
+}

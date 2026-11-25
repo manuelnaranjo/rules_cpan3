@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Math-Prime-Util-GMP",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.54.cpan1"
+    ],
+    "yanked_versions": {}
+}

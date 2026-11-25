@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PJ/PJCJ/Net-IDN-Encode-2.600.tar.gz",
+    "integrity": "sha256-EE9WwCXKfJFHQb2GDQ+u6YgkK5+lBDiF/fAk6HDfe/M=",
+    "strip_prefix": "Net-IDN-Encode-2.600",
+    "overlay": {
+        "BUILD.bazel": "sha256-Sbnd15aDSwyIuJLYUk05OEo9m/mewZCBAjsw/CU3ipM="
+    }
+}

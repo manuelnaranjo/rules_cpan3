@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Dancer2-Plugin-Ajax",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.400000.cpan1"
+    ],
+    "yanked_versions": {}
+}

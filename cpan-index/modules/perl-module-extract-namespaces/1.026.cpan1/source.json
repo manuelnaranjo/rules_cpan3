@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Module-Extract-Namespaces-1.026.tar.gz",
+    "integrity": "sha256-S9chfmNmAaGxennJ3702Vsbbi8i6pm8NN2x6Mh3A3Bc=",
+    "strip_prefix": "Module-Extract-Namespaces-1.026",
+    "overlay": {
+        "BUILD.bazel": "sha256-F7nTso16/VzCDwo84vCd60kiBAehxm+5WTK6JftW8h8="
+    }
+}

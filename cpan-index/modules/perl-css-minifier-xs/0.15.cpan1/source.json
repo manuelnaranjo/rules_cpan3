@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GT/GTERMARS/CSS-Minifier-XS-0.15.tar.gz",
+    "integrity": "sha256-iprSIxYtpGceP4EsSlXyl3OUg70xar2kH0wn6K3XhVM=",
+    "strip_prefix": "CSS-Minifier-XS-0.15",
+    "overlay": {
+        "BUILD.bazel": "sha256-P8Xxse14W+pA8eazlSTHHQIBlSTp0zsWVyrtMz2H9z4="
+    }
+}

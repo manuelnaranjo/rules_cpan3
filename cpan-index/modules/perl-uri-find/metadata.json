@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/URI-Find",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "20160806.cpan1"
+    ],
+    "yanked_versions": {}
+}

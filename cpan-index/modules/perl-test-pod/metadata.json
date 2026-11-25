@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Test-Pod",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.52.cpan1"
+    ],
+    "yanked_versions": {}
+}

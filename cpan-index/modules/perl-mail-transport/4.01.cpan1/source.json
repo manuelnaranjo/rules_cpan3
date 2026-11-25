@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Mail-Transport-4.01.tar.gz",
+    "integrity": "sha256-T4UUkIlvPcZdnlCMraIqmTnMRdutsVl2EqQGph52JNI=",
+    "strip_prefix": "Mail-Transport-4.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-g5BqlPmPCOm6tL7fy5/KRolzp2hwEWhlihY17nW55NM="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/LWP-MediaTypes-6.05.tar.gz",
+    "integrity": "sha256-q7Lc+/BpMX/mWwmOOyrVjF6zPpqDm5GQzObTcfiWbME=",
+    "strip_prefix": "LWP-MediaTypes-6.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-a+H1VZLUG8q/nB2WcQ5OstO5QqC9JLUiy3ssQVEKODs="
+    }
+}

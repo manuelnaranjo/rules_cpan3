@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.84.tar.gz",
+    "integrity": "sha256-h4DmLwGxzw20PJy3BclP9JSbAyIzvkvpH8kavHkVOfg=",
+    "strip_prefix": "Net-OpenSSH-0.84",
+    "overlay": {
+        "BUILD.bazel": "sha256-UnJihdGdrOcNCcTiQpFE1xffju2sq1FWHdT/d8vl8/8="
+    }
+}

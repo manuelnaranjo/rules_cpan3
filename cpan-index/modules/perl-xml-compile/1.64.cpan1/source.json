@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/XML-Compile-1.64.tar.gz",
+    "integrity": "sha256-i2LK0LKIRTKAOcShIFbNxnI3ZnTkjNfYSGyHyCXOTHk=",
+    "strip_prefix": "XML-Compile-1.64",
+    "overlay": {
+        "BUILD.bazel": "sha256-9NOa5XlWZVRJqryH/UMfu69pa/1zZevvM58YuVB1kW8="
+    }
+}

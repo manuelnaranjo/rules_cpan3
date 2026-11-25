@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PJ/PJCJ/Devel-Cover-1.52.tar.gz",
+    "integrity": "sha256-nZC0SrYCyjc/oiElVwjeTRnfhgJvTXEQvvYIhG7tRPs=",
+    "strip_prefix": "Devel-Cover-1.52",
+    "overlay": {
+        "BUILD.bazel": "sha256-wajrmJz1VkCNqVNpSllEmRywJM9LLsK2vzmiOM7ba3k="
+    }
+}

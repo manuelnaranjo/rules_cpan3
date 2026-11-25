@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.005005.tar.gz",
+    "integrity": "sha256-+1opUmSfrtBzc/Igt4AEqcaro4dzkTN0DBdw6bH0sQg=",
+    "strip_prefix": "Moo-2.005005",
+    "overlay": {
+        "BUILD.bazel": "sha256-jzQs2NMjgbrU1c+qSGYlh4zDNza8Ntgv/LYiPaQ+ZNI="
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Function-Parameters",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "2.002006.cpan1"
+    ],
+    "yanked_versions": {}
+}

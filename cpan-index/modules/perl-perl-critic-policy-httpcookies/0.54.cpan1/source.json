@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOMHUKINS/Perl-Critic-Policy-HTTPCookies-0.54.tar.gz",
+    "integrity": "sha256-8lMmfTAzjQGCWt7abAVNckJQpAtmYaSC2/49JM80pqQ=",
+    "strip_prefix": "Perl-Critic-Policy-HTTPCookies-0.54",
+    "overlay": {
+        "BUILD.bazel": "sha256-qUhqyaJj+xbGxYbLSc7gXTAZ8HcZiHtGjFng+6YJE8Q="
+    }
+}

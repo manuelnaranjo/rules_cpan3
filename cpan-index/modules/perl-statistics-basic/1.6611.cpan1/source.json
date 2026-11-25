@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JE/JETTERO/Statistics-Basic-1.6611.tar.gz",
+    "integrity": "sha256-aFXOVhX9Phr0z8RRqb9E/ymjFAtOcTADTx8K8lEalPs=",
+    "strip_prefix": "Statistics-Basic-1.6611",
+    "overlay": {
+        "BUILD.bazel": "sha256-jKotB+Kyug+BqN2R0U/TXmUCQZN53KL2KP0LnwXIiVc="
+    }
+}

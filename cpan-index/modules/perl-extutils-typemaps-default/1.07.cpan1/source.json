@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/ExtUtils-Typemaps-Default-1.07.tar.gz",
+    "integrity": "sha256-Jorqub3wmXxDYRUZjkrb2wqCzF+uw1xinkrW20jtjXg=",
+    "strip_prefix": "ExtUtils-Typemaps-Default-1.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-gVOOL1faOhp0ROmBmLQ0PeYnb8aMVi3qnFld25uQqIo="
+    }
+}

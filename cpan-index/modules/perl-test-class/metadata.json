@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Test-Class",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.52.cpan1"
+    ],
+    "yanked_versions": {}
+}

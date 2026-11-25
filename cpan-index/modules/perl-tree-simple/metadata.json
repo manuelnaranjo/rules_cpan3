@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Tree-Simple",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "1.34.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Perl-Critic-Policy-Perlsecret",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.0.11.cpan1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Class-Std-Fast",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.0.8.cpan1"
+    ],
+    "yanked_versions": {}
+}

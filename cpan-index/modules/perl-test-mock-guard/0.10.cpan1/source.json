@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/X/XA/XAICRON/Test-Mock-Guard-0.10.tar.gz",
+    "integrity": "sha256-fyKKY/jWzrkqp4QIChPoUHMSGyg17KBteU+XCZUNvT0=",
+    "strip_prefix": "Test-Mock-Guard-0.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-kDLekoHnNPdnv/k22Kc8zZvNs91s9JeCrowaPT9ILDs="
+    }
+}

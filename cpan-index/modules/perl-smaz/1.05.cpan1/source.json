@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LN/LNATION/Smaz-1.05.tar.gz",
+    "integrity": "sha256-4MuE98d/7PlJapIlhCyXgbtXfa9ddajh92og9jBo8xE=",
+    "strip_prefix": "Smaz-1.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-WLX96mVVgp/H0+9OdIZoIZfUCB36C+GsMs8jeLzelq0="
+    }
+}

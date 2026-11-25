@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/HTML-Parser",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "3.87.cpan1"
+    ],
+    "yanked_versions": {}
+}

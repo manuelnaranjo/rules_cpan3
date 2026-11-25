@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Clone-PP-1.09.tar.gz",
+    "integrity": "sha256-S7RGl++CEFvY1iBOVQeWoe6onOcQipjgt7865HANHDQ=",
+    "strip_prefix": "Clone-PP-1.09",
+    "overlay": {
+        "BUILD.bazel": "sha256-ZW9H2RSszorR4sKDU8iPDNM/RG6Q4VfNJWqcZ63dE9c="
+    }
+}

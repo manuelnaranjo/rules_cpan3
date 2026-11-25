@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Statistics-CaseResampling",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.18.cpan1"
+    ],
+    "yanked_versions": {}
+}

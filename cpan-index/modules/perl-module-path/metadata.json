@@ -1,0 +1,13 @@
+{
+    "homepage": "https://metacpan.org/dist/Module-Path",
+    "maintainers": [
+        {
+            "name": "rules_cpan maintainers",
+            "github": "manuelnaranjo"
+        }
+    ],
+    "versions": [
+        "0.19.cpan1"
+    ],
+    "yanked_versions": {}
+}

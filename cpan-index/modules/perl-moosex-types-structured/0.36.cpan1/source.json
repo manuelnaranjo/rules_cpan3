@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Structured-0.36.tar.gz",
+    "integrity": "sha256-Q822UvljhyPjV3yw+LVGhiAkTJY252WYEeW0qAFgPVc=",
+    "strip_prefix": "MooseX-Types-Structured-0.36",
+    "overlay": {
+        "BUILD.bazel": "sha256-zY9dOcMOXT6hXVvoMUz3VUHJqGuc3D4o6z1XyG9Q4nw="
+    }
+}
