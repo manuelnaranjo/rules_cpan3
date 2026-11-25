@@ -18,10 +18,10 @@ cpan_xs(
             "t/**",
             "fallback/**",
             "conf/**",
-            "libsass/src/cencode.c",
-            "libsass/src/c99func.c",
             "plugins/sassc/sassc.c",
             "plugins/sassc/win/posix/getopt.c",
+            "libsass/src/cencode.c",
+            "libsass/src/c99func.c",
         ],
     ),
     defines = [],
@@ -44,12 +44,13 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
     deps = [
         "@libsass",
+        "@libsass//:sass",
     ],
 )
 

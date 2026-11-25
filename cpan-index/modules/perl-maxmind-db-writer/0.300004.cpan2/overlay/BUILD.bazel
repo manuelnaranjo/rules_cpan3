@@ -21,7 +21,6 @@ cpan_xs(
         ],
     ),
     defines = [
-        "B",
         "INT64_T",
         "__INT64",
         "INT64_DI",
@@ -47,7 +46,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

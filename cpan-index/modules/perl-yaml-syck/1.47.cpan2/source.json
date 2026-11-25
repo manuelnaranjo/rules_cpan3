@@ -3,6 +3,6 @@
     "integrity": "sha256-ZyGWyhwCHjxo9LX3tK7DBa1HG7v0SMU8fkADTW67fh0=",
     "strip_prefix": "YAML-Syck-1.47",
     "overlay": {
-        "BUILD.bazel": "sha256-fwQyM0LV9btcgLV+kMXEOx1ufyy2TItwD5ha3V13j+8="
+        "BUILD.bazel": "sha256-QcdrmVo/CGRyRS+Wb7bShzPWb30oIL8NtZYGoKNBdiQ="
     }
 }

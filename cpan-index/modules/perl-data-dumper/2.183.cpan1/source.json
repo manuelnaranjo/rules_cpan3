@@ -3,6 +3,6 @@
     "integrity": "sha256-5Cc2iQt9rhs3gY2cXvofH9xS3sBPRGozpIGb8dSrWtM=",
     "strip_prefix": "Data-Dumper-2.183",
     "overlay": {
-        "BUILD.bazel": "sha256-BN/bFPc7d5XBk3/fy+IFwkV4A6YuvmK+9DmZAyJJVIs="
+        "BUILD.bazel": "sha256-8suXD3QrmxIGleooYaMOc5+UBNeYraz9NJyRR5NEN5w="
     }
 }

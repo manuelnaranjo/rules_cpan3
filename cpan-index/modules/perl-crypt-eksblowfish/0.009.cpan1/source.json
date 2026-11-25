@@ -3,6 +3,6 @@
     "integrity": "sha256-PMcSbVhBEHI3qb4txcf7wWfPPEtM40Z4qESLhQdXAUw=",
     "strip_prefix": "Crypt-Eksblowfish-0.009",
     "overlay": {
-        "BUILD.bazel": "sha256-QPucCSP1zrL1lZiUkTzKDm7pB08QuBwihOuG/Xs1dxc="
+        "BUILD.bazel": "sha256-3h6WS6rbkE/yCCXJZg1jw8H2e1mrld9ci28P/7D/5jg="
     }
 }

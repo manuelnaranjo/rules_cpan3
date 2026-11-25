@@ -3,6 +3,6 @@
     "integrity": "sha256-IpCUPxwG8COM11HKuyGOtqHtIqG+6AcsgSPb2Y1LaGs=",
     "strip_prefix": "Gzip-Faster-0.23",
     "overlay": {
-        "BUILD.bazel": "sha256-SHE9Wo+eNw0QC0VWbaXHJYsNinUICfg9/7ZXrRJH0zo="
+        "BUILD.bazel": "sha256-cPxG3O2voJy9ZEC/we8CLgFboUuc1JsHDDlRChm71x8="
     }
 }

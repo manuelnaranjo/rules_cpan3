@@ -21,7 +21,7 @@ cpan_xs(
         ],
     ),
     defines = [
-        "OPENSSL_API_COMPAT=$api_ver",
+        "OPENSSL_API_COMPAT",
     ],
     output_loc = "auto/Crypt/OpenSSL/X509/X509",
     textual_hdrs = glob(
@@ -42,12 +42,14 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
     deps = [
         "@openssl",
+        "@openssl//:crypto",
+        "@openssl//:ssl",
         "@zlib",
     ],
 )

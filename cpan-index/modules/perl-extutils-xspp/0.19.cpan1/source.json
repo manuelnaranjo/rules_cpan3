@@ -3,6 +3,6 @@
     "integrity": "sha256-AKc3JpX8EPnzov4zQ6t1jziHyjWGVSDCoutns2DAPTQ=",
     "strip_prefix": "ExtUtils-XSpp-0.19",
     "overlay": {
-        "BUILD.bazel": "sha256-9vvRh8lyQlslrQMjsprb2fuhvqCqeRbgw6knydStfhY="
+        "BUILD.bazel": "sha256-CzHZch+WTb7eGshmvjjFy0WMnUHz7cBCTrLcqCVb+Hg="
     }
 }

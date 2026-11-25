@@ -44,11 +44,13 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
-    deps = [],
+    deps = [
+        "@snappy//:snappy-c",
+    ],
 )
 
 perl_library(

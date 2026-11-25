@@ -3,6 +3,6 @@
     "integrity": "sha256-xVU3OfvN8Gmd9HVU/F4yxOaMp4dlEe73rO/7bbJ7rdo=",
     "strip_prefix": "Devel-NYTProf-6.16",
     "overlay": {
-        "BUILD.bazel": "sha256-XFXKEItwZnBGmgztk9aep/yxkus7zLI7U3659vaCj0o="
+        "BUILD.bazel": "sha256-72iqsUtfOgU6bsZUA98nLK7a97LrzsIyMaP0Mw/VglE="
     }
 }

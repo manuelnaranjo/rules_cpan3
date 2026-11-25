@@ -3,6 +3,6 @@
     "integrity": "sha256-MuHXIJ/B9wvO7Q2PxZF0JiupUdYZNlm+BWSAjYiKMsw=",
     "strip_prefix": "Sereal-Decoder-7.003",
     "overlay": {
-        "BUILD.bazel": "sha256-HBwO+ni7MgJdTKu/w8Iqm7fASFrgRj8j4a4astLD604="
+        "BUILD.bazel": "sha256-sVX+gxBJorTktWlyBtrVAZ2musvqB+oLsbPPvpwP2RY="
     }
 }

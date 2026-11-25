@@ -3,6 +3,6 @@
     "integrity": "sha256-csKllW4ezxCLZkb9XdSgM4CaBElkEzBXMz6qZ1+7vgQ=",
     "strip_prefix": "Cassandra-Client-0.21",
     "overlay": {
-        "BUILD.bazel": "sha256-+ViVBaT6o6InAWND64PxMbuZ+x1tz9hIesWy1QFYorA="
+        "BUILD.bazel": "sha256-26TV0jystAlDD0FcoA5G6ANuZsh2wOCgVZdX7sTu4/8="
     }
 }

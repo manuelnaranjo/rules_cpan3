@@ -3,6 +3,6 @@
     "integrity": "sha256-x7XRvvWe+Qh/9n6zFo0mJL6UrlRkRp4lmtEb+4rYzc0=",
     "strip_prefix": "B-Hooks-OP-Check-0.22",
     "overlay": {
-        "BUILD.bazel": "sha256-PQJEtW+mFSHTuVBmp7Oi6CYNd68d6PD8zuCHRm78lQ8="
+        "BUILD.bazel": "sha256-ekWY7ahwjwSZvnbHaRKmbJIqdFuYeKZQTyHyjhm9l6o="
     }
 }

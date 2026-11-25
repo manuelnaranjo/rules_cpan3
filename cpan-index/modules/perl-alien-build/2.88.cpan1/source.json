@@ -3,6 +3,6 @@
     "integrity": "sha256-wUNGus4rUMrmLx7nCpB/THOD+r+QsDQnLuUqWxNF+7o=",
     "strip_prefix": "Alien-Build-2.88",
     "overlay": {
-        "BUILD.bazel": "sha256-M9nGZEcGrboLTum7vlxs/CzXD16DAvmRDmA13KaipWY="
+        "BUILD.bazel": "sha256-Fj9oblVU1zxDE28Uc2otrJySw2Cn+QIVfFNzQH6ymwU="
     }
 }

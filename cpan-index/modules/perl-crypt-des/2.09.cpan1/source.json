@@ -3,6 +3,6 @@
     "integrity": "sha256-FJzcChTpRLTMXu+3Vgx42MslJU+fl3RUfIgDVafp9Aw=",
     "strip_prefix": "Crypt-DES-2.09",
     "overlay": {
-        "BUILD.bazel": "sha256-AaeW0oY/kMjfK9ECuZ2kzqfXnouhNMju1wOc56vlJCY="
+        "BUILD.bazel": "sha256-KJlJYmSDvJIraBKu4DwDQoyvdOee7YrLq0S9LcxgOK4="
     }
 }

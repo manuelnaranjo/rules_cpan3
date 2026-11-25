@@ -3,6 +3,6 @@
     "integrity": "sha256-cEAFY1r8eb5fzk0WRlLr+ye3nBA0v74J1BbvuAiBlUs=",
     "strip_prefix": "POE-XS-Queue-Array-0.006",
     "overlay": {
-        "BUILD.bazel": "sha256-38WUSXIqLsEyubufcxELlrFibpX1WoiAjX7QtqAHhVk="
+        "BUILD.bazel": "sha256-RAOG+VWZ1mbLyGbVqNSdb/u8IBQzPx7m6I/SoqXjt3g="
     }
 }

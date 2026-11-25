@@ -3,6 +3,7 @@
     "integrity": "sha256-HxhdBjSBdYGtQVymf8Az1SfNtMbUbSG2D7fvpmqdORw=",
     "strip_prefix": "AnyEvent-Redis-RipeRedis-1.62",
     "overlay": {
+        "t/tlib/Test/RedisRunner.pm": "sha256-90OD05THos1VJoumu/OBIznh4SLk/NNS9hc+WWpECqw=",
         "BUILD.bazel": "sha256-YiWTc7LxYU1CyRsGQVlLJ0gTcUC8cdKRuRBS4BOCDzI="
     }
 }

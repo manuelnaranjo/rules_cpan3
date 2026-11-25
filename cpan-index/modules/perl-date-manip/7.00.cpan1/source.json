@@ -3,6 +3,6 @@
     "integrity": "sha256-NxM+6wnTbabUYVRswha49qIpekMzHGgKaEjz//kll1w=",
     "strip_prefix": "Date-Manip-7.00",
     "overlay": {
-        "BUILD.bazel": "sha256-7s875RlYsTyp4H8eyVX+o6i33kNwDvKOpTZUJPWT0tg="
+        "BUILD.bazel": "sha256-OybdVaMDd2aaZ4Otuth6ZgksLkDxb7Hi6sshaNE+cSw="
     }
 }

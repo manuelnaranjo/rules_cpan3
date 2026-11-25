@@ -21,7 +21,6 @@ cpan_xs(
         ],
     ),
     defines = [
-        "PERL_EXT",
         "HAVE_SIZE_T",
         "HAVE_SSIZE_T",
     ],
@@ -44,7 +43,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

@@ -3,6 +3,6 @@
     "integrity": "sha256-I6xkxMscixnf2OUPG8kq3jvnP5C2tdziNZ9GL4Jhe+w=",
     "strip_prefix": "WWW-Form-UrlEncoded-XS-0.28",
     "overlay": {
-        "BUILD.bazel": "sha256-/Ph1j5oNnrBMlyI3IA4mm+vc/PEttCJCU8i/1r6UEGw="
+        "BUILD.bazel": "sha256-P9/ZEdcQ++XUwSQX3Fkcy+wV6HG4r1si+oLh4HAdzVk="
     }
 }

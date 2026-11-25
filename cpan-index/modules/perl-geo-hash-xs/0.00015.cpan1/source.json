@@ -3,6 +3,6 @@
     "integrity": "sha256-vZiuwJO6hyfzM1thfL+WcmO7Lu6415sySX0Yq/KUhCs=",
     "strip_prefix": "Geo-Hash-XS-0.00015",
     "overlay": {
-        "BUILD.bazel": "sha256-fqL+ouByTecjK3A7nBvxIzzWZi8TtoyKvOWhen8TolU="
+        "BUILD.bazel": "sha256-mFn4ygduxzMvPH7WeafsyZLtIyYKQNwLZB6SPwL8wKE="
     }
 }

@@ -24,12 +24,9 @@ cpan_xs(
         ],
     ),
     defines = [
-        "USE_INT64_T",
-        "USE___INT64",
-        "USE_INT64_DI",
-        "HAS_STDINT_H",
-        "INT64_BACKEND_",
         "INT64_BACKEND_IV",
+        "USE_INT64_T",
+        "HAS_STDINT_H",
     ],
     output_loc = "auto/Math/Int64/Int64",
     textual_hdrs = glob(
@@ -50,7 +47,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

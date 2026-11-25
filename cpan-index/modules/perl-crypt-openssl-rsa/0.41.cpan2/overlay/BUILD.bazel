@@ -40,12 +40,14 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
     deps = [
         "@openssl",
+        "@openssl//:crypto",
+        "@openssl//:ssl",
         "@zlib",
     ],
 )

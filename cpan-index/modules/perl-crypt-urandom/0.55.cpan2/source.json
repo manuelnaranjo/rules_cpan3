@@ -3,6 +3,6 @@
     "integrity": "sha256-759EFBBzwTVz6FsUj/mpCJxFglt9ZgjYMuQmOJnTotQ=",
     "strip_prefix": "Crypt-URandom-0.55",
     "overlay": {
-        "BUILD.bazel": "sha256-bkdxIrkJrPwypCq0f8jzRgJakly25AaCDGwzgbQZoTo="
+        "BUILD.bazel": "sha256-pM5hQjn9eQtfP2+wt0AYNjsSF6HiLl67gUFtNYBpi4c="
     }
 }

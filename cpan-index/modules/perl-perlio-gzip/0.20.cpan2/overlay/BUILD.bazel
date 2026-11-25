@@ -21,7 +21,7 @@ cpan_xs(
         ],
     ),
     defines = [
-        "LAYERGZIP_DEFAULT_OS_TYPE=$ostype",
+        "LAYERGZIP_DEFAULT_OS_TYPE",
         "DEBUG_LAYERGZIP",
         "OS",
     ],
@@ -44,7 +44,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

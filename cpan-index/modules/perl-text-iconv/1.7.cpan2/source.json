@@ -4,6 +4,6 @@
     "strip_prefix": "Text-Iconv-1.7",
     "overlay": {
         "lib/Text/Iconv.pm": "sha256-zR9ai7+thYbiZX0/TrlqVYwUAJGXiFNPRF/HlJryLX4=",
-        "BUILD.bazel": "sha256-U2s57hUV4yVcux5aJbkIREl0O+0KwgTm8d5KJFz+K0M="
+        "BUILD.bazel": "sha256-6XuyCna63oWNk1m+FRPzWH8eO0gS9PDiBYzPiWhaXM8="
     }
 }

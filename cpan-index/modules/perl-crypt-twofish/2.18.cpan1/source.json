@@ -4,6 +4,6 @@
     "strip_prefix": "Crypt-Twofish-2.18",
     "overlay": {
         "platform.h": "sha256-lVyQkhUwMf80I2Ui6pDAivJPHv792MF4qQr8m+zzkKw=",
-        "BUILD.bazel": "sha256-5z9oKsxasQYbsATenhdxPmIe0jrHm34rHwNtIitrRl0="
+        "BUILD.bazel": "sha256-u8onUQT3U9qCwsh7yTvRC0yUKq98fR45as58fdz1Ywk="
     }
 }

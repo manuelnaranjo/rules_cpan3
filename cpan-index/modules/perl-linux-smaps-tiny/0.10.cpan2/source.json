@@ -3,6 +3,6 @@
     "integrity": "sha256-vox7jEtDOF1SGIM25aCRE/PmPzd7eB2k4m3sMPrvHkk=",
     "strip_prefix": "Linux-Smaps-Tiny-0.10",
     "overlay": {
-        "BUILD.bazel": "sha256-xEyifcmSj3227o/gxSsFHyVdnVQqitPItlVeh73txKM="
+        "BUILD.bazel": "sha256-mbfaeF7hzfx6YvTRTUnTqfsoVYFW/U3yT/IMv7ww41k="
     }
 }

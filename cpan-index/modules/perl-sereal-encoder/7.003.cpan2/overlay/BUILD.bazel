@@ -24,7 +24,6 @@ cpan_xs(
         ],
     ),
     defines = [
-        "HAVE_BUILTIN_CTZ",
         "ZSTD_DISABLE_ASM",
     ],
     output_loc = "auto/Sereal/Encoder/Encoder",
@@ -46,7 +45,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

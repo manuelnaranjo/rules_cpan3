@@ -3,17 +3,17 @@
     "integrity": "sha256-VUfdQQFBFjDjP6BOn0Pf2gb1XW88NCDWIH76rHvENjM=",
     "strip_prefix": "Compress-Raw-Bzip2-2.225",
     "overlay": {
+        "bzlib_private.h": "sha256-pYmFozAiraX+W1UyfZiErFTh4Fw4Z9PvChVfTCCsb3w=",
+        "crctable.c": "sha256-+i20GO0tkp3z27YcdY1pErbzCajcGeztI9SnQSIhv2s=",
+        "compress.c": "sha256-rzyuiFCknJtB04OZnC4ITkoDMSp1Li3y1/ybGhiJA5Y=",
+        "huffman.c": "sha256-oDV6zR4GevC5XGtGx/LAAW2qSfqENO6phA2XGEbo51Q=",
+        "bzlib.h": "sha256-8c8tM1/3tDby4IBw0GtldTcLOv7ECPp7PnDruYBIIjQ=",
         "constants.h": "sha256-CWe4nhHhfFcMzbcuq5EjzU81AS1ckETjNwvt7kvkchw=",
         "constants.xs": "sha256-6qKiHFwxECK89MDBhc4Mg3CMvv9AejOyLA/mYSJAbPU=",
         "decompress.c": "sha256-eT+eKH55vcSBr4Z2mlKy+6hORIX0s6O4ASIl5fgjzHs=",
-        "compress.c": "sha256-rzyuiFCknJtB04OZnC4ITkoDMSp1Li3y1/ybGhiJA5Y=",
-        "huffman.c": "sha256-oDV6zR4GevC5XGtGx/LAAW2qSfqENO6phA2XGEbo51Q=",
-        "blocksort.c": "sha256-b5FPtusBrDp8Z9kzPHDM1TRItKfdCMITpdCXntKg0Z4=",
         "bzlib.c": "sha256-YcHmwayigrGptk2mpEyMuXNXHoIeA/B9+X9qjZDEJVg=",
+        "blocksort.c": "sha256-b5FPtusBrDp8Z9kzPHDM1TRItKfdCMITpdCXntKg0Z4=",
         "randtable.c": "sha256-ZC0qf5Srw50Eg8XddbK03ExgUY8YyZGBaSQzmD0juDQ=",
-        "bzlib.h": "sha256-8c8tM1/3tDby4IBw0GtldTcLOv7ECPp7PnDruYBIIjQ=",
-        "bzlib_private.h": "sha256-pYmFozAiraX+W1UyfZiErFTh4Fw4Z9PvChVfTCCsb3w=",
-        "crctable.c": "sha256-+i20GO0tkp3z27YcdY1pErbzCajcGeztI9SnQSIhv2s=",
-        "BUILD.bazel": "sha256-RlME2gxNVWIn4iNNQDk+qZQjJs3X0pq3g7FPFCUy+CA="
+        "BUILD.bazel": "sha256-pdzlY8bMTnEDijha7tMEZS2EFhPS4aE3Oos60sbeVTA="
     }
 }

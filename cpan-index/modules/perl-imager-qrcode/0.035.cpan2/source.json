@@ -3,6 +3,6 @@
     "integrity": "sha256-KoSN66Kes5QsRHCaaFPjGKyrDEaMv+27m6rlR2ADJRM=",
     "strip_prefix": "Imager-QRCode-0.035",
     "overlay": {
-        "BUILD.bazel": "sha256-TaBsQTbXJPAgSkJirmsWTvpsOB/wvQq7qzI5brVNf7Y="
+        "BUILD.bazel": "sha256-IzNzhFr8wUhiLxIsZKCjIsk0Hzwsi0WDZa1Ny85w8I8="
     }
 }

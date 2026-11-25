@@ -3,6 +3,6 @@
     "integrity": "sha256-+iashv6N3Xw0414MW5hg2dpf/X+eocmhiEfSc1Z1D+k=",
     "strip_prefix": "UV-2.002",
     "overlay": {
-        "BUILD.bazel": "sha256-KqizXwyy1o+090EFzU3iIgiFG1ZWhnb28HtCUYV1lE8="
+        "BUILD.bazel": "sha256-ddTKJU8xoouQSn1iJMps87/HF9XKeEhEzGGd73F9Cdo="
     }
 }

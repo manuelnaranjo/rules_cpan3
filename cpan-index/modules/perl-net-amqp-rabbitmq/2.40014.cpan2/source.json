@@ -3,6 +3,6 @@
     "integrity": "sha256-mzqRaW74xQ6GrjQDKwL2t2yegLKGD3hkTJPuwa7tCk4=",
     "strip_prefix": "Net-AMQP-RabbitMQ-2.40014",
     "overlay": {
-        "BUILD.bazel": "sha256-hNkMncuDZ4+9ryRake8tVFLm1zmVWBFagClq8X++6LY="
+        "BUILD.bazel": "sha256-RUUHusj9z4FL5wErL1i9vy3c0+nXU7kXWw0SjWTnetc="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-NUssuXvzxiUU9dG0LF82N7Re8tdOS0JY5xQfCqrcYKs=",
     "strip_prefix": "Authen-Simple-PAM-0.2",
     "overlay": {
-        "BUILD.bazel": "sha256-XvJCU6iD8AcJlplPiiusdm3DAGYMnTp78b7PQYtfPSo="
+        "BUILD.bazel": "sha256-dvGn6tJWIiu9acQ3DQmO/Dla2TJAsbf/TaiNFxYnYO4="
     }
 }

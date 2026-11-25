@@ -30,6 +30,8 @@ cpan_xs(
             "**/*.h",
             "*.xs",
             "**/*.xs",
+            "*.xsi",
+            "**/*.xsi",
             "*.inc",
             "**/*.inc",
         ],
@@ -38,7 +40,9 @@ cpan_xs(
     typemaps = glob(
         [
             "*typemap*",
-            "**/typemap",
+            "**/*typemap*",
+            "*TYPEMAP*",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
