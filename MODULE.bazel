@@ -5,11 +5,11 @@ module(
 )
 
 # Registries configured in .bazelrc:
-# 1. file://%workspace%/bazel/3rdparty (Local BCR registry for 3rdparty native C/C++ dependencies)
+# 1. file://%workspace%/cpan-index (Local BCR registry for CPAN and 3rdparty native C/C++ dependencies)
 # 2. https://bcr.bazel.build (Public Bazel Central Registry)
-# registry = ["file://%workspace%/bazel/3rdparty", "https://bcr.bazel.build"]
+# registry = ["file://%workspace%/cpan-index", "https://bcr.bazel.build"]
 
-# Native C/C++ dependencies (consumed from BCR or local bazel/3rdparty)
+# Native C/C++ dependencies (consumed from BCR or local cpan-index)
 bazel_dep(name = "zlib", version = "1.3.1.bcr.5")
 bazel_dep(name = "bzip2", version = "1.0.8.bcr.4")
 bazel_dep(name = "libexpat", version = "2.7.1.bcr.1")
@@ -22,11 +22,11 @@ bazel_dep(name = "ncurses", version = "6.4.20221231.bcr.15")
 bazel_dep(name = "linux-pam", version = "1.7.3")
 bazel_dep(name = "libsodium", version = "1.0.19")
 bazel_dep(name = "gmp", version = "6.3.0.bcr.5")
-bazel_dep(name = "cmark", version = "0.31.1")
-bazel_dep(name = "libsass", version = "3.6.6")
-bazel_dep(name = "discount", version = "3.0.2.0")
-bazel_dep(name = "libiconv", version = "1.18")
-bazel_dep(name = "krb5", version = "1.22.3")
+bazel_dep(name = "cmark", version = "0.31.1.cpan-external.1")
+bazel_dep(name = "libsass", version = "3.6.6.cpan-external.1")
+bazel_dep(name = "discount", version = "3.0.2.0.cpan-external.1")
+bazel_dep(name = "libiconv", version = "1.18.cpan-external.1")
+bazel_dep(name = "krb5", version = "1.22.3.cpan-external.1")
 bazel_dep(name = "grpc", version = "1.85.4")
 bazel_dep(name = "bazel_skylib", version = "1.9.2")
 bazel_dep(name = "package_metadata", version = "0.0.15")
@@ -49,7 +49,7 @@ go_sdk = use_extension("@io_bazel_rules_go//go:extensions.bzl", "go_sdk", dev_de
 go_sdk.download(version = "1.27.4")
 
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.10.0")
-bazel_dep(name = "perl-compress-raw-zlib", version = "2.226")
+bazel_dep(name = "perl-compress-raw-zlib", version = "2.226.cpan1")
 
 # CPAN dependency installation via Bzlmod module extension
 cpan = use_extension("//cpan:extensions.bzl", "cpan")

@@ -1,0 +1,10 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.226.tar.gz",
+    "integrity": "sha256-gNwQSnM5duukDb6Scs0y6/GDGVIE4L3TDiFKN9KsQss=",
+    "strip_prefix": "Compress-Raw-Zlib-2.226",
+    "overlay": {
+        "BUILD.bazel": "sha256-aIc/nd306i1uLsOBDYrpuyd3tsstwM1RBAPJ0P9YM/c=",
+        "constants.h": "sha256-7F14UZQ6VlG0x6pJDR6+acD7RszVn9dMZrb8qvW6Muc=",
+        "constants.xs": "sha256-r01iqaC+9H6O7rI3EoR0LjYvb2Z6DKaHAbjF97IVqkI="
+    }
+}

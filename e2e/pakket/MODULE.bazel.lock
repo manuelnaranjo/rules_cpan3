@@ -641,7 +641,7 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "V2ecd4/i3wB0ecJAo699Abp82wgJwn6X0NecDe24O5A=",
+        "bzlTransitiveDigest": "dMA6Rw+jcXh+k13uJjEi/MUdJTR4DXKxbvnie5zL6Y8=",
         "usagesDigest": "AZiTSSI/S3aboiSnZTLjFR0xJnbyVgfjNQ++2MF8ZaM=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",

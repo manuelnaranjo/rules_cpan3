@@ -1,6 +1,6 @@
 # Porting 3rdparty Native C/C++ Dependencies for CPAN with `any2bazel`
 
-This document outlines how to port external non-BCR C/C++ libraries needed by Perl CPAN distributions into the local Bazel Central Registry (BCR) index at `bazel/3rdparty` using the `any2bazel` workflow.
+This document outlines how to port external non-BCR C/C++ libraries needed by Perl CPAN distributions into the local Bazel Central Registry (BCR) index at `cpan-index` using the `any2bazel` workflow.
 
 ---
 
@@ -8,30 +8,30 @@ This document outlines how to port external non-BCR C/C++ libraries needed by Pe
 
 `rules_cpan` consumes dependencies through Bzlmod and Bazel Central Registry (BCR).
 
-### When to Port to `bazel/3rdparty`
+### When to Port to `cpan-index`
 - **BCR-available libraries**: Do **not** port libraries that already exist in the public BCR (such as `zlib`, `curl`, `libxml2`, `boringssl`, `mimalloc`). Always consume these directly via `bazel_dep` from the public BCR (`https://bcr.bazel.build`).
-- **Non-BCR native libraries**: Only port native C/C++ libraries that are required by CPAN XS modules and are **not** present in BCR (e.g. `gdbm`, `libdb`, `libtidy`).
+- **Non-BCR native libraries**: Only port native C/C++ libraries that are required by CPAN XS modules and are **not** present in BCR (e.g. `gdbm`, `libdb`, `libtidy`). Native C/C++ ports in `cpan-index` use the version format `<upstream>.cpan-external.<build-id>`.
 
 ### Registry Configuration
 
 The registry precedence is defined in `.bazelrc`:
 
 ```ini
-# Local BCR registry first, followed by public BCR
-common --registry=file://%workspace%/bazel/3rdparty
+# cpan-index registry first, followed by public BCR
+common --registry=file://%workspace%/cpan-index
 common --registry=https://bcr.bazel.build
 ```
 
 In `MODULE.bazel`:
 ```python
 # Registries configured in .bazelrc:
-# 1. file://%workspace%/bazel/3rdparty (Local BCR registry for 3rdparty native C/C++ dependencies)
+# 1. file://%workspace%/cpan-index (Local BCR registry for CPAN and 3rdparty native C/C++ dependencies)
 # 2. https://bcr.bazel.build (Public Bazel Central Registry)
-# registry = ["file://%workspace%/bazel/3rdparty", "https://bcr.bazel.build"]
+# registry = ["file://%workspace%/cpan-index", "https://bcr.bazel.build"]
 ```
 
 When resolving dependencies:
-1. Bazel inspects `file://%workspace%/bazel/3rdparty` first.
+1. Bazel inspects `file://%workspace%/cpan-index` first.
 2. If the module is not found locally, Bazel falls back to the public BCR index at `https://bcr.bazel.build`.
 
 ---
@@ -139,19 +139,19 @@ Iterate on `BUILD.bazel` (copts, defines, includes, deps) and `any2bazel.json` u
 
 ---
 
-## 4. Packaging into `bazel/3rdparty`
+## 4. Packaging into `cpan-index`
 
 Once the Bazel build reaches parity with upstream, package the library into the local BCR registry:
 
 1. **Directory Structure**:
    ```
-   bazel/3rdparty/modules/<name>/
+   cpan-index/modules/<name>/
    ├── metadata.json
-   └── <version>/
+   └── <version>.cpan-external.1/
        ├── MODULE.bazel
        ├── source.json
-       └── patches/
-           └── add_build_file.patch
+       └── overlay/
+           └── BUILD.bazel
    ```
 
 2. **Compute SRI Hashes**:

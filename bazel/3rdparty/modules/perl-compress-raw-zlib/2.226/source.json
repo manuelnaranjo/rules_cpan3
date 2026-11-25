@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.226.tar.gz",
-    "integrity": "sha256-gNwQSnM5duukDb6Scs0y6/GDGVIE4L3TDiFKN9KsQss=",
-    "strip_prefix": "Compress-Raw-Zlib-2.226",
-    "patch_strip": 1,
-    "patches": {
-        "add_build_file.patch": "sha256-KneL/Z4m5oLhCrY+LGFwkTarnnH3AZpZRdzIutOh8CM="
-    }
-}
