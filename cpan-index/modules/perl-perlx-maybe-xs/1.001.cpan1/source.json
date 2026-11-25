@@ -4,7 +4,7 @@
     "strip_prefix": "PerlX-Maybe-XS-1.001",
     "overlay": {
         "const-xs.inc": "sha256-LbL0uCRg+bdRw3kLdtQ4JCiaXsDsRJhHtI1Mu7BuSq0=",
-        "const-c.inc": "sha256-P8G9BNUjZjAXn4fBM+uwRbCPLiB5pk/5E6iLySyUuBs=",
+        "const-c.inc": "sha256-eA5nX1E3J4VsNZDHhQMsnAL951R9mGNZzMc7zU+19Is=",
         "BUILD.bazel": "sha256-4eHDkUlOlYDkBcmyp/GB0IMluU8Yq21L8nhd18T0R1A="
     }
 }

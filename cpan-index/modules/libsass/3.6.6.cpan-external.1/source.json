@@ -3,7 +3,7 @@
     "strip_prefix": "libsass-3.6.6",
     "url": "https://github.com/sass/libsass/archive/refs/tags/3.6.6.tar.gz",
     "overlay": {
-        "BUILD.bazel": "sha256-ivWREYBPBoRv/4Y1RRx/fYagOuUAEH0EUH7SzP2+34U=",
+        "BUILD.bazel": "sha256-qnDFTFFmjRZKhDayJ/sHnG8o3KztGGpqWrpTGwEuCLs=",
         "include/sass/version.h": "sha256-8q5ysfsguNJ2I1NZKJWtZODCgzDfU1gn1fE+BpLPgUs="
     }
 }

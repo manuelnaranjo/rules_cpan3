@@ -4,7 +4,7 @@
     "strip_prefix": "Time-HiRes-1.9764",
     "overlay": {
         "const-xs.inc": "sha256-ZeU1CavxTJvCIhd9CM4Ogt4l0TrDPBCYVF9ZM+D6zPk=",
-        "const-c.inc": "sha256-tdnnvcQHIbaKzbylLdtf9kTq20fggp/4m41d/plzfF4=",
+        "const-c.inc": "sha256-Js36zRnu+8UbYJkMJVB31xsB1vtQmPsnfy2jnf1xBWg=",
         "BUILD.bazel": "sha256-swM2/k4RUIsMvOurEMrzY+wwxpPmFc/Mg6U5jLPBQvI="
     }
 }

@@ -3,7 +3,7 @@
     "integrity": "sha256-SGdi5MrN3Md7E5ifl5oCn4RjC4F15/7xeYnhV9S2MYo=",
     "strip_prefix": "Unicode-LineBreak-2019.001",
     "overlay": {
-        "sombok/include/sombok.h": "sha256-q+5FMZtceqYjhFsGUMCekWgOnlV06Yie0rT2QZRXhsI=",
+        "sombok/include/sombok.h": "sha256-hLANkbgxa+1t3zhHVZfG4Ly8jopQaSqpqZ2G2SBRS1A=",
         "BUILD.bazel": "sha256-tiT6Lx6C14FvjuVdXnNLuaCisP8C/+W/uw1CTSc7BZA="
     }
 }

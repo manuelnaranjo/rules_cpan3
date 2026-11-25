@@ -32,3 +32,8 @@ cc_library(
         "libcharset/include",
     ],
 )
+
+alias(
+    name = "libiconv",
+    actual = ":iconv",
+)
