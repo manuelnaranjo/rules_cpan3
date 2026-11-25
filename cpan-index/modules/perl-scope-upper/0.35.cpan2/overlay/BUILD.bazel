@@ -21,7 +21,7 @@ cpan_xs(
         ],
     ),
     defines = [
-        "SU_RELEASE=$is_release",
+        "SU_RELEASE",
         "XSH_MULTIPLICITY=0",
     ],
     output_loc = "auto/Scope/Upper/Upper",
@@ -43,7 +43,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

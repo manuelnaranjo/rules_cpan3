@@ -26,6 +26,7 @@ perl_library(
     includes = [
         "lib",
     ],
+    target_compatible_with = ["@platforms//os:linux"],
     deps = [],
 )
 
@@ -64,6 +65,7 @@ perl_test(
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/base.t"],
     tags = ["no-remote"],
+    target_compatible_with = ["@platforms//os:linux"],
     deps = [":Algorithm-Diff_test_lib"],
 )
 
@@ -73,6 +75,7 @@ perl_test(
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/oo.t"],
     tags = ["no-remote"],
+    target_compatible_with = ["@platforms//os:linux"],
     deps = [":Algorithm-Diff_test_lib"],
 )
 

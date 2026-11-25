@@ -3,6 +3,6 @@
     "integrity": "sha256-+zA4YRVYnb3HH/OrCvG2fDPCAt9LvbTgAJPxxQos8vg=",
     "strip_prefix": "IO-Compress-Brotli-0.023",
     "overlay": {
-        "BUILD.bazel": "sha256-Hr0rsh8snD8HjgVTlW4ip3I1MarQH8xmsXNtF4iWm+o="
+        "BUILD.bazel": "sha256-siiNRSmQf9fMvPY9rrSWuLh7NIhbkXaxW8bLHlqT2v8="
     }
 }

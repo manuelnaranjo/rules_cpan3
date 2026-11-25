@@ -3,6 +3,6 @@
     "integrity": "sha256-FU43apCcs1jK/oVx0Cgy8lg4vX3RHfP4e2Gf2B7rWf4=",
     "strip_prefix": "Text-Levenshtein-Damerau-XS-3.2",
     "overlay": {
-        "BUILD.bazel": "sha256-PZLcBF+2j9PZzJSLHD6yWZYrBXAKhw4A0YTQFTPKiBs="
+        "BUILD.bazel": "sha256-6h00ucs1WJ7iqBQNJz4wBqnFtcnWrV+95tNuDNtJu6A="
     }
 }

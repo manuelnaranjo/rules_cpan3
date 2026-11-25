@@ -4,6 +4,6 @@
     "strip_prefix": "Crypt-OpenSSL-Bignum-0.09",
     "overlay": {
         "lib/Crypt/OpenSSL/Bignum.pm": "sha256-2QXIpjuTpUn5H0+HUakBYmd5BER7XyAHNi7/KiZkIDo=",
-        "BUILD.bazel": "sha256-SIGdLnVTXD/YHSXWL9EcLDpypFwPvY8jeSmLqrHrteA="
+        "BUILD.bazel": "sha256-8ZbBZmu7L8TwPSQU43wUJgfJgiwPqeIm9rxYPWmzwNY="
     }
 }

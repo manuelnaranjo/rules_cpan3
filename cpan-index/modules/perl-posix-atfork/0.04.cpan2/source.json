@@ -4,6 +4,6 @@
     "strip_prefix": "POSIX-AtFork-0.04",
     "overlay": {
         "ppport.h": "sha256-AyX+3Cl8jndgVPW0unhD2OH1owcYxAouHhKb1AvfyGo=",
-        "BUILD.bazel": "sha256-X8Z0EGWRunU1BweuVIg2LRz2Sa9Odhi0VpLAp0bE6ts="
+        "BUILD.bazel": "sha256-HMdVEfZlH/fgGWqW+FcETnKrCzp6oWlcjb/F3eQSgBg="
     }
 }

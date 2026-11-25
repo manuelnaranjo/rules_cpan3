@@ -3,8 +3,8 @@
     "integrity": "sha256-SO+X8GlJ5lJ30aCsJp+8VDsssIvWE/Ag3iCYvtakC7Y=",
     "strip_prefix": "PerlX-Maybe-XS-1.001",
     "overlay": {
-        "const-c.inc": "sha256-eA5nX1E3J4VsNZDHhQMsnAL951R9mGNZzMc7zU+19Is=",
         "const-xs.inc": "sha256-LbL0uCRg+bdRw3kLdtQ4JCiaXsDsRJhHtI1Mu7BuSq0=",
-        "BUILD.bazel": "sha256-MC6DByjjtfM8q04VpRgUVv+JCOLNWYrAit3UpYFbNUE="
+        "const-c.inc": "sha256-eA5nX1E3J4VsNZDHhQMsnAL951R9mGNZzMc7zU+19Is=",
+        "BUILD.bazel": "sha256-3q9d1hiABTpQ2uyG2bznp2IHGI2b2tfc/tsxZt8LcVw="
     }
 }

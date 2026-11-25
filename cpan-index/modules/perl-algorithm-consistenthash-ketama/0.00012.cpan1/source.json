@@ -3,6 +3,6 @@
     "integrity": "sha256-xJI/ndrtGD2gOUobfY89O96pTXwPk5GwUl5fdTICxM0=",
     "strip_prefix": "Algorithm-ConsistentHash-Ketama-0.00012",
     "overlay": {
-        "BUILD.bazel": "sha256-cDBT/9GL845HsZwnjU8eXxa0pMKzjjaXCZXMYLp7I30="
+        "BUILD.bazel": "sha256-VXYJU2e7yfX/aIRgQxYuZnjwujlf3akFdB1sKFNPq/s="
     }
 }

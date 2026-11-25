@@ -3,6 +3,6 @@
     "integrity": "sha256-KenC3h/G1Wck6ij0RdB15FCbtCjhTyYnP7ux794oFnk=",
     "strip_prefix": "Thrift-XS-1.11",
     "overlay": {
-        "BUILD.bazel": "sha256-KsaCfcFd7TEHEQHnaG17joznjb+yUpBc4qtpV71iBAU="
+        "BUILD.bazel": "sha256-5wwNXbsEmwYQbRMS2zT1lclXMQsE+i9Xp6ogXBdZKUY="
     }
 }

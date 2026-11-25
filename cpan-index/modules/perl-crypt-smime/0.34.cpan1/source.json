@@ -4,6 +4,6 @@
     "strip_prefix": "Crypt-SMIME-0.34",
     "overlay": {
         "const-autoload.inc": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-        "BUILD.bazel": "sha256-84X78ScKUqmexg5BO3Ei3VQqpHXGj61VpMWETpvS0Yk="
+        "BUILD.bazel": "sha256-ycpLIc442F6vu76+de4rMHLvQyEeoSJr7VcEM3t1PEM="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-43T/eyN5Gc5eqSRfNW0ctSzIf9JrOlo4s/Pl/4KgFJE=",
     "strip_prefix": "Text-LevenshteinXS-0.03",
     "overlay": {
-        "BUILD.bazel": "sha256-ctz+t0o3W6r3LzDJqNo3ODw7CJxOlvQ0nQ6wOSbsJ90="
+        "BUILD.bazel": "sha256-8rmXNLRysFmrJebgMlaaAI7Dnz9XEh6c5gE4qSrEFOA="
     }
 }

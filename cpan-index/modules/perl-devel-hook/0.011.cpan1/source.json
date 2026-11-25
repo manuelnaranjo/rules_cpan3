@@ -3,6 +3,6 @@
     "integrity": "sha256-MAXUXp2muMKo537+wcWI0cacXg10RiRao88V5+K/q6A=",
     "strip_prefix": "Devel-Hook-0.011",
     "overlay": {
-        "BUILD.bazel": "sha256-oo9zRwedIHn6wJWIip9g6KZ62NHhVZRWfGsWZ8GUqlM="
+        "BUILD.bazel": "sha256-ZsDJSUs/vQVoJ3xuKia5pb2DjDTcsg6V1NX1uQnbSDY="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-pVhQOqax+McnwAczOQgad4iGBqpwGtoa1i3Z2MP5RaI=",
     "strip_prefix": "PathTools-3.75",
     "overlay": {
-        "BUILD.bazel": "sha256-ZFhjEwBccJxSml2rSpbvnBJZYQcNafhhUPGZNP7fiiw="
+        "BUILD.bazel": "sha256-LM6bkftcm/SyXeODPJQf6emPdhtppGq4lXOk3zWDh7c="
     }
 }

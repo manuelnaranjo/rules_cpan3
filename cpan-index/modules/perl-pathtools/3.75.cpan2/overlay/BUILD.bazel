@@ -21,7 +21,7 @@ cpan_xs(
         ],
     ),
     defines = [
-        "DOUBLE_SLASHES_SPECIAL=@{[$^O",
+        "DOUBLE_SLASHES_SPECIAL=@{[",
         "NO_PPPORT_H",
     ],
     output_loc = "auto/PathTools/PathTools",
@@ -43,7 +43,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

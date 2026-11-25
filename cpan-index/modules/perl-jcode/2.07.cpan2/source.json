@@ -3,6 +3,6 @@
     "integrity": "sha256-7Rzkc+yGkInlIBbPyDVRZevDe+lpS6ToKcfrS6HEX40=",
     "strip_prefix": "Jcode-2.07",
     "overlay": {
-        "BUILD.bazel": "sha256-FIgqE2yAkbKGHKjJHGMdPigbyzH2DZz0YJIMgCjhvZM="
+        "BUILD.bazel": "sha256-XPMl6eqX15/PY/PBBF8dv6Jh3+isskn/zKYJjUAJzHo="
     }
 }

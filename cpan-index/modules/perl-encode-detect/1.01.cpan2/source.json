@@ -3,6 +3,6 @@
     "integrity": "sha256-g02JOqfbbOPxWK+9DkMtbtFaJ24JQNsKdL4T/ZxLu/E=",
     "strip_prefix": "Encode-Detect-1.01",
     "overlay": {
-        "BUILD.bazel": "sha256-Vbxd+/+5almAwdSRB9eoy8z7MXxqIOaYq/XJwDBLaok="
+        "BUILD.bazel": "sha256-YWwEI2GipMh9y8dV0lBzNsiaxaVfWpjOGKDEwW+bgyk="
     }
 }

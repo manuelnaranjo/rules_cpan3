@@ -3,6 +3,6 @@
     "integrity": "sha256-mVaTQrXUnerhaFLO3/DONhDiBwHBWKFrg8yZuJCmR+s=",
     "strip_prefix": "MaxMind-DB-Writer-0.300004",
     "overlay": {
-        "BUILD.bazel": "sha256-LlMoDivuCd3FGRnIiUFCA1dr0rN563ZVR0hWwmVVCEQ="
+        "BUILD.bazel": "sha256-5/1Xtr5h1aXeO7gM4Ze9FOuTkeVYte1ECtopOsTjFWM="
     }
 }

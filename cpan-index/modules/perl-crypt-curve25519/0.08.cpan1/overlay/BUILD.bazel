@@ -23,7 +23,7 @@ cpan_xs(
         ],
     ),
     defines = [
-        "USE_X64=$x64",
+        "USE_X64",
     ],
     output_loc = "auto/Crypt/Curve25519/Curve25519",
     textual_hdrs = glob(
@@ -32,6 +32,8 @@ cpan_xs(
             "**/*.h",
             "*.xs",
             "**/*.xs",
+            "*.xsi",
+            "**/*.xsi",
             "*.inc",
             "**/*.inc",
         ],
@@ -40,7 +42,9 @@ cpan_xs(
     typemaps = glob(
         [
             "*typemap*",
-            "**/typemap",
+            "**/*typemap*",
+            "*TYPEMAP*",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

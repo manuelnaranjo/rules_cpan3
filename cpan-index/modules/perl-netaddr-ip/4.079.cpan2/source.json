@@ -3,8 +3,8 @@
     "integrity": "sha256-7FqC37cCi80ouz1Wn5XYfdQWbMGYZ/IYTtOln21soOc=",
     "strip_prefix": "NetAddr-IP-4.079",
     "overlay": {
-        "Lite/Util/config.h": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
         "Lite/Util/localperl.h": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-        "BUILD.bazel": "sha256-i2mlMYvJdcOVJQ5yWn3P5/f+O51TVy7zxzVnTWo9BX4="
+        "Lite/Util/config.h": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+        "BUILD.bazel": "sha256-U9R3hL80RWCkx5EpC53mJ3neUsX0LwYmZde4cjk89ag="
     }
 }

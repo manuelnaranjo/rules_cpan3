@@ -1,3 +1,2 @@
 manual_tests:
 - '*'
-strip_prefix: Digest-CRC-0.22

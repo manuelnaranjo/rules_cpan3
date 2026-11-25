@@ -3,6 +3,6 @@
     "integrity": "sha256-FRC38Q1nIBA3zVDSLJ1rJu7KVe3tpM20a7yiflmk6hY=",
     "strip_prefix": "Email-Address-XS-1.05",
     "overlay": {
-        "BUILD.bazel": "sha256-AAxGfDOiQmeRwi+oS4Y9Ah+s3kZVsRMC5X1ARoi8oKE="
+        "BUILD.bazel": "sha256-fWDe6PVg4YVcNNJEPjJpy+T4EvROSIvV3oA9NcFQyDM="
     }
 }

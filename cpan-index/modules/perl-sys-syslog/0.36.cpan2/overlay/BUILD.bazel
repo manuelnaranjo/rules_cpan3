@@ -21,7 +21,6 @@ cpan_xs(
         ],
     ),
     defines = [
-        "USE_PPPORT_H",
         "I_SYSLOG",
     ],
     output_loc = "auto/Sys/Syslog/Syslog",
@@ -43,7 +42,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

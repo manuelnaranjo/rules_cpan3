@@ -22,8 +22,6 @@ cpan_xs(
         ],
     ),
     defines = [
-        "PERL_GCC_PEDANTIC",
-        "DBI_NO_THREADS",
         "XS_VERSION=\"1.656\"",
         "VERSION=\"1.656\"",
     ],
@@ -46,7 +44,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

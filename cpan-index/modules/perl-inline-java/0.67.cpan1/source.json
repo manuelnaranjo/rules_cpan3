@@ -3,6 +3,6 @@
     "integrity": "sha256-9YVLMcvOFjwz4mJN0jFODA2X4JRDcbcYjlkBuj9vpMk=",
     "strip_prefix": "Inline-Java-0.67",
     "overlay": {
-        "BUILD.bazel": "sha256-OZeDgawSGWk42eF7D4y5MGuTlB/b8WqB3EqbL+XhNgE="
+        "BUILD.bazel": "sha256-Hsp1IdYJ2PznW7pIxsXdwgbhIpjEnshds/9xbOLKppQ="
     }
 }

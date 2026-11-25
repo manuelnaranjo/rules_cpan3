@@ -21,7 +21,6 @@ cpan_xs(
         ],
     ),
     defines = [
-        "USE_LOCAL_ADMINH",
         "HAVE_KDB_H",
     ],
     output_loc = "auto/Authen/Krb5/Admin/Admin",
@@ -43,11 +42,15 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
     deps = [
+        "@krb5",
+        "@krb5//:com_err",
+        "@krb5//:k5crypto",
+        "@krb5//:kadm5clnt",
         "@openssl",
     ],
 )

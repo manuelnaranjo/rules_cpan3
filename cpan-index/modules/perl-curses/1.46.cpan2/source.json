@@ -4,6 +4,13 @@
     "strip_prefix": "Curses-1.46",
     "overlay": {
         "c-config.h": "sha256-l28iwg1lWuy5nfR1o5eCIv6Fhe2RJ0z8jlYKwhFP4Bs=",
-        "BUILD.bazel": "sha256-XhAAyO5RCfoWW2Gb5M9KCqoiMiGF2afcsdGC942Hj08="
+        "Curses.c": "sha256-mHXV7HIMOocDgSGK7dSxiaeLH/vwqOYXJEGDFEClFI0=",
+        "CursesBoot.inc": "sha256-6hVJjMEduaZXP+yuFdfb7IIDNPUGxf5B/EX/DVqCERs=",
+        "CursesCon.inc": "sha256-V84tKki3BgcGivQpr2q238WfnWCOERQ4yQvuKmIEKpU=",
+        "CursesVar.inc": "sha256-y5zD4FF4Q8XS9X37NJIF9vyhzV0Vz4CFMq/G2M1j+0k=",
+        "CursesFunWide.inc": "sha256-s2RVkHcpaNxxr+bKRjRdXE5rop+3X0hEFRGOfS0Fg88=",
+        "CursesFun.inc": "sha256-+ZfkhLgiuHnT0GyhtgFFilrH4+06QMGvV7w7Yc5Ve1g=",
+        "CursesWide.inc": "sha256-4/S1FXCotOw+jnKW7HcW9TTgY1DjowpeZ7/IQpVZ1yk=",
+        "BUILD.bazel": "sha256-6SuPlqrT62sGApxrXofdKBZWgBcgfp1P/140s6Mx/8k="
     }
 }

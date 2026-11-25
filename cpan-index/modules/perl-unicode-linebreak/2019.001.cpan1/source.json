@@ -4,6 +4,6 @@
     "strip_prefix": "Unicode-LineBreak-2019.001",
     "overlay": {
         "sombok/include/sombok.h": "sha256-hLANkbgxa+1t3zhHVZfG4Ly8jopQaSqpqZ2G2SBRS1A=",
-        "BUILD.bazel": "sha256-tiT6Lx6C14FvjuVdXnNLuaCisP8C/+W/uw1CTSc7BZA="
+        "BUILD.bazel": "sha256-bsmiqLPIMUiOT6OEtFBG4QAcnbt9g4hRBB7B1TmbShY="
     }
 }

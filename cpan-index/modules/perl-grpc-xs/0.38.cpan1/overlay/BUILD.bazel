@@ -32,13 +32,15 @@ cpan_xs(
         "GRPC_NO_INSECURE_BUILD",
         "GRPC_HAS_SHUTDOWN_BLOCKING",
     ],
-    output_loc = "auto/Grpc/Client/AbstractCall/AbstractCall",
+    output_loc = "auto/grpc/xs/xs",
     textual_hdrs = glob(
         [
             "*.h",
             "**/*.h",
             "*.xs",
             "**/*.xs",
+            "*.xsi",
+            "**/*.xsi",
             "*.inc",
             "**/*.inc",
         ],
@@ -47,7 +49,9 @@ cpan_xs(
     typemaps = glob(
         [
             "*typemap*",
-            "**/typemap",
+            "**/*typemap*",
+            "*TYPEMAP*",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

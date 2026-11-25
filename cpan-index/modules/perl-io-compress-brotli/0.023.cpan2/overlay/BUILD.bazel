@@ -22,7 +22,6 @@ cpan_xs(
     ),
     defines = [
         "BUILD_SHARED_LIBS=OFF",
-        "CMAKE_MAKE_PROGRAM=\\$(MAKE)",
         "CMAKE_POSITION_INDEPENDENT_CODE=ON",
         "CMAKE_BUILD_TYPE=Release",
         "CMAKE_INSTALL_PREFIX=./installed",
@@ -46,7 +45,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

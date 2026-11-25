@@ -21,7 +21,6 @@ cpan_xs(
         ],
     ),
     defines = [
-        "USE_PPPORT_H",
         "BZ_NO_STDIO",
     ],
     output_loc = "auto/Compress/Raw/Bzip2/Bzip2",
@@ -43,12 +42,13 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
     deps = [
         "@bzip2",
+        "@bzip2//:bz2",
     ],
 )
 

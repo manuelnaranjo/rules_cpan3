@@ -4,6 +4,6 @@
     "strip_prefix": "List-MoreUtils-XS-0.430",
     "overlay": {
         "LMUconfig.h": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-        "BUILD.bazel": "sha256-2QFLRH6ks9DPaduqUbwdyS2eVfPK+H14fPEpzPUm8+w="
+        "BUILD.bazel": "sha256-2fAiFXfn3KV1ilasw01ECPVTrVvSqEtXnHDvximO9Vk="
     }
 }

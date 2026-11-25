@@ -21,7 +21,7 @@ cpan_xs(
         ],
     ),
     defines = [
-        "ALIGN_BITS=$ptr_bits",
+        "ALIGN_BITS",
     ],
     output_loc = "auto/Devel/Size/Size",
     textual_hdrs = glob(
@@ -42,7 +42,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

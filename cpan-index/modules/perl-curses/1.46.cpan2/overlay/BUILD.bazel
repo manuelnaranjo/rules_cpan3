@@ -18,10 +18,16 @@ cpan_xs(
             "t/**",
             "fallback/**",
             "conf/**",
+            "CursesCon.c",
             "cdemo.c",
+            "CursesFun.c",
+            "CursesVar.c",
             "testsym.c",
+            "CursesBoot.c",
             "testint.c",
             "testtyp.c",
+            "CursesWide.c",
+            "CursesFunWide.c",
         ],
     ),
     defines = [
@@ -46,13 +52,11 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
-    deps = [
-        "@ncurses",
-    ],
+    deps = ["@ncurses"],
 )
 
 perl_library(

@@ -40,11 +40,13 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
-    deps = [],
+    deps = [
+        "@perl-b-hooks-op-check//:B-Hooks-OP-Check_xs",
+    ],
 )
 
 perl_library(

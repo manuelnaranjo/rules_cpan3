@@ -20,9 +20,7 @@ cpan_xs(
             "conf/**",
         ],
     ),
-    defines = [
-        "B",
-    ],
+    defines = [],
     output_loc = "auto/MaxMind/DB/Reader/XS/XS",
     textual_hdrs = glob(
         [
@@ -42,7 +40,7 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

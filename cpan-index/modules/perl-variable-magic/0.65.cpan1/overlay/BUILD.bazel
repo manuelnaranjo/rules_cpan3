@@ -20,7 +20,11 @@ cpan_xs(
             "conf/**",
         ],
     ),
-    defines = [],
+    defines = [
+        "VMG_COMPAT_ARRAY_PUSH_NOLEN=1",
+        "XSH_MULTIPLICITY=0",
+        "XSH_FORKSAFE=0",
+    ],
     output_loc = "auto/Variable/Magic/Magic",
     textual_hdrs = glob(
         [
@@ -28,6 +32,8 @@ cpan_xs(
             "**/*.h",
             "*.xs",
             "**/*.xs",
+            "*.xsi",
+            "**/*.xsi",
             "*.inc",
             "**/*.inc",
         ],
@@ -36,7 +42,9 @@ cpan_xs(
     typemaps = glob(
         [
             "*typemap*",
-            "**/typemap",
+            "**/*typemap*",
+            "*TYPEMAP*",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),

@@ -24,6 +24,7 @@ cpan_xs(
         "STATIC_CONV_FUNC",
     ],
     output_loc = "auto/Authen/PAM/PAM",
+    target_compatible_with = ["@platforms//os:linux"],
     textual_hdrs = glob(
         [
             "*.h",
@@ -42,12 +43,13 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
     deps = [
         "@linux-pam",
+        "@linux-pam//:linux-pam",
     ],
 )
 
@@ -76,6 +78,7 @@ perl_library(
     includes = [
         "lib",
     ],
+    target_compatible_with = ["@platforms//os:linux"],
     deps = [],
 )
 

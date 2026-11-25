@@ -40,13 +40,11 @@ cpan_xs(
             "*typemap*",
             "**/*typemap*",
             "*TYPEMAP*",
-            "**/TYPEMAP",
+            "**/*TYPEMAP*",
         ],
         allow_empty = True,
     ),
-    deps = [
-        "@cmark",
-    ],
+    deps = ["@cmark"],
 )
 
 perl_library(

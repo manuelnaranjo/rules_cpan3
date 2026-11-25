@@ -3,6 +3,6 @@
     "integrity": "sha256-xYmPD2EraZquTKnucE3uPqfeWBXSpUQjGxBKBCrDCew=",
     "strip_prefix": "Overload-FileCheck-0.015",
     "overlay": {
-        "BUILD.bazel": "sha256-I2yvaXY326ej52ptz5HLcNs96teYZ+lnIl2tnrdgtyQ="
+        "BUILD.bazel": "sha256-sSovwjAKtu3p+FjD+Ux+AyuP2HlxYAR0RK+vO2Wjpx0="
     }
 }
