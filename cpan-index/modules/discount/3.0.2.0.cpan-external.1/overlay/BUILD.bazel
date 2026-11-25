@@ -48,3 +48,8 @@ cc_library(
     ],
     includes = ["."],
 )
+
+alias(
+    name = "discount",
+    actual = ":markdown",
+)

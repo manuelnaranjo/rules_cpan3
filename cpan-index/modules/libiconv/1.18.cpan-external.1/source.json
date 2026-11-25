@@ -3,7 +3,7 @@
     "strip_prefix": "libiconv-1.18",
     "url": "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
     "overlay": {
-        "BUILD.bazel": "sha256-yXT/+d+u+DrCtaTl+fWBRkkynzvwnW/ynlO54tPfMuw=",
+        "BUILD.bazel": "sha256-1qvADAALWfWBwWn8z9fBwmdy2rNtJgjlfBKxVK2NaO0=",
         "config.h": "sha256-5ZNzLqiwRge5B6UgRdjpBZoD1+fFcGPQtGxRLRaAiOw=",
         "include/iconv.h": "sha256-hFRHFtHTPg2abgcuCOrb5q2+s27ff3i6bMi9717YpSE=",
         "lib/config.h": "sha256-rOOrkEfHeiszCBS2lAKqF5ME8PKP6Oedc258WAMCmyE=",

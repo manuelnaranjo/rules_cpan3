@@ -45,3 +45,8 @@ cc_library(
         ":sass_c",
     ],
 )
+
+alias(
+    name = "libsass",
+    actual = ":sass",
+)

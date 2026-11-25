@@ -3,7 +3,7 @@
     "integrity": "sha256-t13Qe7wlKTexuHBkv3nM0KG37pk7jPDoD0dAbDIFY58=",
     "strip_prefix": "Unicode-Collate-1.31",
     "overlay": {
-        "ucatbl.h": "sha256-oX+nz3BdSqp3nHRgfyJCWicSBX/PsbOxOS0cvY1IPyM=",
+        "ucatbl.h": "sha256-jYeb6x/rWGdYSejIy+BW5efXM5Rng//1JCoaKJW8P/g=",
         "BUILD.bazel": "sha256-iokr1LD+NCPcfMr0W++2Qt6/DKS2Glddlqe94cRmZBw="
     }
 }

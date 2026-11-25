@@ -4,7 +4,7 @@
     "strip_prefix": "Unix-Sysexits-0.06",
     "overlay": {
         "const-xs.inc": "sha256-m7xk3dL4OcpTgWuWJST7Uax+Ay/+iqnirZdrL5ocmKc=",
-        "const-c.inc": "sha256-SApkUEW3ASaNJFnBccKP496QWji5wZl9weSEXNOUNcM=",
+        "const-c.inc": "sha256-HMp/KDg1qHP9+qnZVX7BHW/B9+QFUudgcho/1heqBk8=",
         "BUILD.bazel": "sha256-uy59dcXBc1A04BgF0Hrwa2uKo+qCHyrnqwlHHdb8NnA="
     }
 }
