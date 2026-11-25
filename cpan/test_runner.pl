@@ -13,25 +13,46 @@ if (File::Spec->file_name_is_absolute($test_file) && -f $test_file) {
     $target_test = $test_file;
 } elsif (-f $test_file) {
     $target_test = abs_path($test_file);
-} elsif ($ENV{TEST_SRCDIR}) {
-    my $candidate = File::Spec->catfile($ENV{TEST_SRCDIR}, $test_file);
-    if (-f $candidate) {
-        $target_test = abs_path($candidate);
-    } else {
-        require File::Find;
-        my $target_leaf = (File::Spec->splitpath($test_file))[2];
-        File::Find::find({
-            wanted => sub {
-                if ($_ eq $target_leaf && -f $_) {
-                    my $rel = File::Spec->abs2rel($File::Find::name, $ENV{TEST_SRCDIR});
-                    if ($rel =~ m{\Q$test_file\E$}) {
-                        $target_test = abs_path($File::Find::name);
-                    }
-                }
-            },
-            no_chdir => 1,
-        }, $ENV{TEST_SRCDIR});
+}
+
+# Determine manifest or runfiles directory
+my @manifest_candidates = (
+    $ENV{RUNFILES_MANIFEST_FILE},
+    ($ENV{RUNFILES_DIR} ? "$ENV{RUNFILES_DIR}_manifest" : undef),
+    ($ENV{TEST_SRCDIR} ? "$ENV{TEST_SRCDIR}_manifest" : undef),
+    "$0.runfiles_manifest",
+);
+
+for my $mf (@manifest_candidates) {
+    next unless defined $mf && -f $mf;
+    if (open my $mfh, '<', $mf) {
+        while (my $mline = <$mfh>) {
+            chomp $mline;
+            my ($rpath, $fpath) = split ' ', $mline, 2;
+            if ($rpath && $fpath && $rpath =~ m{\Q$test_file\E$} && -f $fpath) {
+                $target_test = abs_path($fpath);
+                last;
+            }
+        }
+        close $mfh;
+        last if $target_test;
     }
+}
+
+if (!$target_test && $ENV{TEST_SRCDIR} && -d $ENV{TEST_SRCDIR}) {
+    require File::Find;
+    my $target_leaf = (File::Spec->splitpath($test_file))[2];
+    File::Find::find({
+        wanted => sub {
+            if (File::Basename::basename($_) eq $target_leaf && -f $_) {
+                my $rel = File::Spec->abs2rel($_, $ENV{TEST_SRCDIR});
+                if ($rel =~ m{\Q$test_file\E$}) {
+                    $target_test = abs_path($_);
+                }
+            }
+        },
+        no_chdir => 1,
+    }, $ENV{TEST_SRCDIR});
 }
 
 die "Test file '$test_file' could not be found\n" unless defined $target_test && -f $target_test;
