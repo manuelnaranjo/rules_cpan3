@@ -1,0 +1,13 @@
+{
+    "homepage": "https://github.com/sass/libsass",
+    "maintainers": [
+        {
+            "github": "manuelnaranjo",
+            "name": "rules_cpan maintainers"
+        }
+    ],
+    "versions": [
+        "3.6.6.cpan-external.1"
+    ],
+    "yanked_versions": {}
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "https://www.gnu.org/software/libiconv/",
+    "maintainers": [
+        {
+            "github": "manuelnaranjo",
+            "name": "rules_cpan maintainers"
+        }
+    ],
+    "versions": [
+        "1.18.cpan-external.1"
+    ],
+    "yanked_versions": {}
+}

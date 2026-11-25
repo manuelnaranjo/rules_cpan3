@@ -1,6 +1,0 @@
-module(
-    name = "libiconv",
-    version = "1.18",
-)
-
-bazel_dep(name = "rules_cc", version = "0.2.28")

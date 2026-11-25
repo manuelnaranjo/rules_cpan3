@@ -1,0 +1,13 @@
+{
+    "homepage": "https://github.com/Orc/discount",
+    "maintainers": [
+        {
+            "github": "manuelnaranjo",
+            "name": "rules_cpan maintainers"
+        }
+    ],
+    "versions": [
+        "3.0.2.0.cpan-external.1"
+    ],
+    "yanked_versions": {}
+}

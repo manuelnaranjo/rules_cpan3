@@ -9,3 +9,4 @@ bazel-*
 agents.local.md
 *.local.md
 __pycache__/
+docs/plans/

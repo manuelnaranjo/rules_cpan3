@@ -1,8 +1,8 @@
 # Import shared configuration from repo root
 import %workspace%/../../shared.bazelrc
 
-# BCR Registries: local 3rdparty registry first, followed by public BCR
-common --registry=file://%workspace%/../../bazel/3rdparty
+# BCR Registries: cpan-index registry first, followed by public BCR
+common --registry=file://%workspace%/../../cpan-index
 common --registry=https://bcr.bazel.build
 
 try-import %workspace%/.bazelrc.user

@@ -13,8 +13,8 @@ common --config=ruleset
 # Bazel settings that apply to this repository.
 # Take care to document any settings that you expect users to apply.
 
-# BCR Registries: local 3rdparty registry first, followed by public BCR
-common --registry=file://%workspace%/bazel/3rdparty
+# BCR Registries: cpan-index registry first, followed by public BCR
+common --registry=file://%workspace%/cpan-index
 common --registry=https://bcr.bazel.build
 
 # Use prebuilt protoc rather than compiling from C++ source

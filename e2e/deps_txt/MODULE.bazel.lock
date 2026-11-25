@@ -620,7 +620,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "dMA6Rw+jcXh+k13uJjEi/MUdJTR4DXKxbvnie5zL6Y8=",
-        "usagesDigest": "TXO/kA/zIYWRFjwQFqa4OvJiSpvi0Evlxmd1DLAxiuA=",
+        "usagesDigest": "hdOwA22LGPs6jEjroJXvi3dZQXIc3Rt3k+7SYiVVrSQ=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -2576,7 +2576,9 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -74802,7 +74804,9 @@
                 "@cpan__Test-Needs//:Test-Needs"
               ],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/pod-coverage.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -80451,7 +80455,9 @@
               "test_deps": [
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [],
+              "test_tags": [
+                "manual"
+              ],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -87338,7 +87344,10 @@
               "extra_tags": [],
               "test_deps": [],
               "test_tags": [],
-              "manual_tests": [],
+              "manual_tests": [
+                "t/order1.t",
+                "t/order2.t"
+              ],
               "strip_prefix": ""
             }
           },
@@ -140997,6 +141006,7 @@
                 "AnyEvent-YACurl",
                 "Apache-Session",
                 "Apache-Session-Memcached",
+                "App-Daemon",
                 "App-ElasticSearch-Utilities",
                 "App-FatPacker",
                 "App-Oozie",
@@ -141317,6 +141327,7 @@
                 "String-Format",
                 "String-ShellQuote",
                 "String-Similarity",
+                "Sys-CpuAffinity",
                 "TAP-Formatter-HTML",
                 "Term-ProgressBar",
                 "Test-MockModule",
