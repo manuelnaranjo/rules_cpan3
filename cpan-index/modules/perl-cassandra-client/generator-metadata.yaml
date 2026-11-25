@@ -1,0 +1,5 @@
+manual_tests:
+- '*'
+test_services:
+- cassandra
+output_loc: auto/Cassandra/Client/Client

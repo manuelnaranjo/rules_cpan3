@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NU/NUFFIN/HTML-FromANSI-2.03.tar.gz",
+    "integrity": "sha256-IXdjRe1wGywEx7CTgK+UP5mEzH+ZYkCHrqRdtfwJw1k=",
+    "strip_prefix": "HTML-FromANSI-2.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-E0lkX5i0+C12B4oU9nAR06mlTLIFJmntVNeSvDWiiVo="
+    }
+}

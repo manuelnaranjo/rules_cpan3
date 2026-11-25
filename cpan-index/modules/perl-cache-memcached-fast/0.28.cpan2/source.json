@@ -1,0 +1,12 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RA/RAZ/Cache-Memcached-Fast-0.28.tar.gz",
+    "integrity": "sha256-fEJMJTtl/2LPFXe7QYgCGSoYgF6jH6/Ap65YnkRsidI=",
+    "strip_prefix": "Cache-Memcached-Fast-0.28",
+    "overlay": {
+        "src/parse_keyword.h": "sha256-sqxfUvErNA707PaNALc3QdAt0cHcUmaYbTD4+poTVsA=",
+        "src/parse_keyword.c": "sha256-HUkmf3We9h9yoIKD71DD2henh5dx7U2lOOJnJ5X+p1Q=",
+        "src/compute_crc32.h": "sha256-8LOeylv70a1YknUfieo9OKDWmydaSAI8weXvke3ayns=",
+        "src/compute_crc32.c": "sha256-zfB+Ub5WhsxtSuSIEnKhbikhBll4B47J2MpJM7dLdm4=",
+        "BUILD.bazel": "sha256-Sf1Pl8nN3xSX5ExbrxLfV66Sqo7Hj3LiF/Z7JjanZsY="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAMOD/Net-Facebook-Oauth2-0.12.tar.gz",
+    "integrity": "sha256-+XqXoct+sfuOXRFadMBYtGJkaht+pDIn7SzYAR9YAiU=",
+    "strip_prefix": "Net-Facebook-Oauth2-0.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-JHSxgeHIcw3bmK+QBIO7mbbvq9VXBdWAG+bQyaMJ728="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SC/SCHWIGON/TAP-Formatter-HTML-0.13.tar.gz",
+    "integrity": "sha256-IgPewz3ZjTPyV7b/ONraPF4fUQXvd5eXOlpgmFwT2TM=",
+    "strip_prefix": "TAP-Formatter-HTML-0.13",
+    "overlay": {
+        "BUILD.bazel": "sha256-y8TTmyEciupnM40WtSHpPa7+LOHBl7GTgGt4wsTJp0U="
+    }
+}

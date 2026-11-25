@@ -1,0 +1,2 @@
+native_deps:
+- '@gmp//:gmp'

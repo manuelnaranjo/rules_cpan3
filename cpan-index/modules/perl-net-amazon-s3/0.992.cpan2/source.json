@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BA/BARNEY/Net-Amazon-S3-0.992.tar.gz",
+    "integrity": "sha256-S3s7dilZULYO1EGENsc2Ph/Z/y3gnIxhwmUpZGjGuWw=",
+    "strip_prefix": "Net-Amazon-S3-0.992",
+    "overlay": {
+        "BUILD.bazel": "sha256-f2Eo6mK+fUI3q8e6l2XutPg95AwqgQhvHEA4c5CqZgU="
+    }
+}

@@ -1,0 +1,7 @@
+manual_tests:
+- t/chmod-filetemp.t
+- t/chown-chmod-nostrict.t
+- t/file_access_hooks.t
+- t/plugin-filetemp.t
+- t/readline.t
+- t/sysopen_strict.t

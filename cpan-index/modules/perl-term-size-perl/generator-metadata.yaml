@@ -1,0 +1,6 @@
+patch_cmds:
+- perl inc/Probe.pm
+- mkdir -p lib/Term/Size/Perl && cp Params.pm lib/Term/Size/Perl/Params.pm
+patch_cmds_win:
+- powershell -Command "perl inc/Probe.pm; New-Item -ItemType Directory -Force lib/Term/Size/Perl;
+  Copy-Item Params.pm lib/Term/Size/Perl/Params.pm"

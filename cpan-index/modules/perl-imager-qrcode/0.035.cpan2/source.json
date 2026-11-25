@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KU/KURIHARA/Imager-QRCode-0.035.tar.gz",
+    "integrity": "sha256-KoSN66Kes5QsRHCaaFPjGKyrDEaMv+27m6rlR2ADJRM=",
+    "strip_prefix": "Imager-QRCode-0.035",
+    "overlay": {
+        "BUILD.bazel": "sha256-TaBsQTbXJPAgSkJirmsWTvpsOB/wvQq7qzI5brVNf7Y="
+    }
+}

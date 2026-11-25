@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Cache-2.11.tar.gz",
+    "integrity": "sha256-4dLYlneYEWarxbtuXsxkcfAB8T61bVvpVE2AR9wIpZI=",
+    "strip_prefix": "Cache-2.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-DRxGTtSPFSgzIhPhxxISOO3VLWBukliOM/7jZKfVrmA="
+    }
+}

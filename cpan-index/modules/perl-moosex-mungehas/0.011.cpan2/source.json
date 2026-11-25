@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/MooseX-MungeHas-0.011.tar.gz",
+    "integrity": "sha256-hjvI6QSfLAbwrxX6S0E/KHviwIIdGYFmGAPOrjbQZJU=",
+    "strip_prefix": "MooseX-MungeHas-0.011",
+    "overlay": {
+        "BUILD.bazel": "sha256-wmDQHmuStu5KgthB2wcFj7xUsOYxcMo4R8OaQXrdFHA="
+    }
+}

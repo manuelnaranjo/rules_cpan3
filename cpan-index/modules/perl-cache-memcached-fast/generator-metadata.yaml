@@ -1,0 +1,13 @@
+test_services:
+- memcached
+defines:
+- HAVE_POLL_H
+output_loc: auto/Cache/Memcached/Fast/Fast
+patch_cmds:
+- perl src/gencrc32.pl src/compute_crc32.c src/compute_crc32.h
+- perl src/genparser.pl src/reply.kw src/parse_keyword.c src/parse_keyword.h
+- rm -f src/socket_win32.c src/addrinfo_hostent.c src/poll_select.c
+patch_cmds_win:
+- powershell -Command "perl src/gencrc32.pl src/compute_crc32.c src/compute_crc32.h;
+  perl src/genparser.pl src/reply.kw src/parse_keyword.c src/parse_keyword.h; Remove-Item
+  -Force src/socket_win32.c, src/addrinfo_hostent.c, src/poll_select.c"

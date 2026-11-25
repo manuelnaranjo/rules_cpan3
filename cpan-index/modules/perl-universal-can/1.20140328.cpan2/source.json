@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/UNIVERSAL-can-1.20140328.tar.gz",
+    "integrity": "sha256-Ui2p8nR4b+LLqZvHfMHIHSFhlHkD1/rRC9Yt+38RmQ8=",
+    "strip_prefix": "UNIVERSAL-can-1.20140328",
+    "overlay": {
+        "BUILD.bazel": "sha256-dgzw8UuofFBIKXed0jP8IjuNIjfcZ15u86IiX7kw2Ng="
+    }
+}

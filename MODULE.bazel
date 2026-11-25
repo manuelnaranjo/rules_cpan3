@@ -49,7 +49,7 @@ go_sdk = use_extension("@io_bazel_rules_go//go:extensions.bzl", "go_sdk", dev_de
 go_sdk.download(version = "1.27.4")
 
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.10.0")
-bazel_dep(name = "perl-compress-raw-zlib", version = "2.226.cpan1")
+bazel_dep(name = "perl-compress-raw-zlib", version = "2.226.cpan2")
 
 # CPAN dependency installation via Bzlmod module extension
 cpan = use_extension("//cpan:extensions.bzl", "cpan")
@@ -136,4 +136,4 @@ http_archive(
 )
 
 # CPAN dependencies indexed by rules_cpan indexer
-bazel_dep(name = "perl-algorithm-diff", version = "1.201.cpan1")
+bazel_dep(name = "perl-algorithm-diff", version = "1.201.cpan2")

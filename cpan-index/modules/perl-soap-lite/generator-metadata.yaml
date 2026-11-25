@@ -1,0 +1,3 @@
+manual_tests:
+- t/SOAP/Transport/HTTP.t
+- t/SOAP/Transport/HTTP/CGI.t

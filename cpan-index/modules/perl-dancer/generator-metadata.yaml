@@ -1,0 +1,5 @@
+manual_tests:
+- t/00_base/008_export.t
+- t/03_route_handler/08_errors.t
+- t/22_hooks/11_error_in_hook.t
+- t/25_exceptions/01_exceptions.t

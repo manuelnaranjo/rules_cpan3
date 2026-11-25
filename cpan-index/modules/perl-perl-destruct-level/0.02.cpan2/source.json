@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Perl-Destruct-Level-0.02.tar.gz",
+    "integrity": "sha256-QLSsCykrYM47h956o5vC+yWhnRDlyfaYZpYchLP20Ts=",
+    "strip_prefix": "Perl-Destruct-Level-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-bba8Z7tZ7v/V/aw9X0rJdUaSETqaA90K7rd4Cg9nNvI="
+    }
+}

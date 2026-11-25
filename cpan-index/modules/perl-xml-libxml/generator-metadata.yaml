@@ -1,0 +1,6 @@
+defines:
+- HAVE_UTF8
+native_deps:
+- '@libxml2//:xml2'
+patch_cmds:
+- mkdir -p lib/XML && cp LibXML.pm lib/XML/LibXML.pm && cp LibXML.pod lib/XML/LibXML.pod

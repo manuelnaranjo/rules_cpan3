@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NU/NUDDLEGG/Spreadsheet-ParseXLSX-0.37.tar.gz",
+    "integrity": "sha256-Jh1j8HJnYSP512M7+j8DMCOLfuXT74C2fqEay6s0930=",
+    "strip_prefix": "Spreadsheet-ParseXLSX-0.37",
+    "overlay": {
+        "BUILD.bazel": "sha256-BjMyTg+1a1LX/KeWLTehySQ/C+mxebbXHbLj5c7VEeI="
+    }
+}

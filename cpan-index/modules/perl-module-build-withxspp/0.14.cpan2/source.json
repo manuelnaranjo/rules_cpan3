@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Module-Build-WithXSpp-0.14.tar.gz",
+    "integrity": "sha256-U7PIyP29UPw9rT0Z2iDxtkFO9wZluTEXEMgClp50aTQ=",
+    "strip_prefix": "Module-Build-WithXSpp-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-XKaJQZklDOjO1fM6gL04KUcIwrzccLtdwKjihwBHPwo="
+    }
+}

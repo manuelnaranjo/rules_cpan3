@@ -13,8 +13,10 @@ import base64
 import json
 import logging
 import os
+import platform
 import re
 import shutil
+import subprocess
 import sys
 import tarfile
 import tempfile
@@ -28,20 +30,24 @@ from typing import Any, Dict, List, Optional, Set, Tuple
 try:
     from cpan.tools.indexer.heuristics import (
         DistributionInspection,
+        GeneratorMetadata,
         HeuristicsEngine,
         compute_output_loc,
         compute_sri_hash,
         hex_to_sri,
+        is_manual_test,
         sanitize_module_name,
     )
 except ImportError:
     try:
         from heuristics import (
             DistributionInspection,
+            GeneratorMetadata,
             HeuristicsEngine,
             compute_output_loc,
             compute_sri_hash,
             hex_to_sri,
+            is_manual_test,
             sanitize_module_name,
         )
     except ImportError:
@@ -49,10 +55,12 @@ except ImportError:
         sys.path.insert(0, str(Path(__file__).parent))
         from heuristics import (
             DistributionInspection,
+            GeneratorMetadata,
             HeuristicsEngine,
             compute_output_loc,
             compute_sri_hash,
             hex_to_sri,
+            is_manual_test,
             sanitize_module_name,
         )
 
@@ -82,6 +90,12 @@ class IndexManager:
 
     def get_module_dir(self, module_name: str) -> Path:
         return self.modules_dir / module_name
+
+    def get_generator_metadata(self, module_name: str) -> Optional[GeneratorMetadata]:
+        meta_file = self.get_module_dir(module_name) / "generator-metadata.yaml"
+        if meta_file.exists():
+            return GeneratorMetadata.from_yaml_file(meta_file)
+        return None
 
     def list_existing_versions(self, module_name: str) -> List[Tuple[str, int, str]]:
         """Returns list of (upstream_version, build_id, full_version_str) sorted."""
@@ -254,6 +268,15 @@ class IndexManager:
         src_dir = module_dir / latest_item[2]
         dest_dir = module_dir / new_version
 
+        # Check if generator-metadata exists and source.json is present
+        generator_metadata = self.get_generator_metadata(module_name)
+        source_json_file = src_dir / "source.json"
+        if generator_metadata and source_json_file.exists():
+            try:
+                return self.regenerate_port(module_name, upstream_version, bump_build_id=True)
+            except Exception as e:
+                logger.warning("Could not fully regenerate port from tarball for %s: %s", module_name, e)
+
         shutil.copytree(src_dir, dest_dir)
 
         # Update MODULE.bazel
@@ -272,6 +295,74 @@ class IndexManager:
         logger.info("Bumped build-id for %s: %s -> %s", module_name, latest_item[2], new_version)
         return new_version
 
+    def regenerate_port(
+        self,
+        module_name: str,
+        upstream_version: Optional[str] = None,
+        bump_build_id: bool = True,
+    ) -> str:
+        """Regenerates a port using generator-metadata.yaml, bumping build-id if requested."""
+        existing = self.list_existing_versions(module_name)
+        if not existing:
+            raise ValueError(f"No existing version for {module_name}")
+
+        if upstream_version:
+            matching = [item for item in existing if item[0] == upstream_version]
+            if not matching:
+                raise ValueError(f"Version {upstream_version} not found for {module_name}")
+            source_item = matching[-1]
+        else:
+            source_item = existing[-1]
+
+        target_upstream, current_build_id, current_full_ver = source_item
+        next_build_id = (current_build_id + 1) if bump_build_id else current_build_id
+        target_version = f"{target_upstream}.cpan{next_build_id}"
+
+        module_dir = self.get_module_dir(module_name)
+        src_ver_dir = module_dir / current_full_ver
+        source_json_file = src_ver_dir / "source.json"
+        if not source_json_file.exists():
+            raise FileNotFoundError(f"source.json not found in {src_ver_dir}")
+
+        source_data = json.loads(source_json_file.read_text(encoding="utf-8"))
+        archive_url = source_data.get("url", "")
+        # Extract dist_name from metadata or module_name
+        dist_name = module_name.removeprefix("perl-")
+        meta_file = module_dir / "metadata.json"
+        if meta_file.exists():
+            try:
+                mdata = json.loads(meta_file.read_text(encoding="utf-8"))
+                hp = mdata.get("homepage", "")
+                if "/dist/" in hp:
+                    dist_name = hp.split("/dist/")[-1]
+            except Exception:
+                pass
+
+        existing_overlay = src_ver_dir / "overlay"
+        dest_dir = self.create_new_port(
+            dist_name=dist_name,
+            upstream_version=target_upstream,
+            archive_url=archive_url,
+            archive_sha256="",
+            target_version=target_version,
+            existing_overlay_dir=existing_overlay if existing_overlay.exists() else None,
+        )
+
+        # Preserve and update MODULE.bazel from source version if available
+        src_mb = src_ver_dir / "MODULE.bazel"
+        dest_mb = dest_dir / "MODULE.bazel"
+        if src_mb.exists() and dest_mb.exists():
+            src_text = src_mb.read_text(encoding="utf-8")
+            updated_mb = re.sub(
+                r'version\s*=\s*"[^"]+"',
+                f'version = "{target_version}"',
+                src_text,
+                count=1,
+            )
+            dest_mb.write_text(updated_mb, encoding="utf-8")
+
+        return target_version
+
     def create_new_port(
         self,
         dist_name: str,
@@ -283,15 +374,20 @@ class IndexManager:
         provides: Optional[List[str]] = None,
         runtime_deps: Optional[List[str]] = None,
         test_deps: Optional[List[str]] = None,
+        target_version: Optional[str] = None,
+        existing_overlay_dir: Optional[Path] = None,
     ) -> Path:
         """Creates a brand new BCR module port using heuristics engine."""
         module_name = sanitize_module_name(dist_name)
-        target_version = f"{upstream_version.lstrip('v')}.cpan1"
+        if not target_version:
+            target_version = f"{upstream_version.lstrip('v')}.cpan1"
         module_dir = self.get_module_dir(module_name)
         dest_dir = module_dir / target_version
         dest_dir.mkdir(parents=True, exist_ok=True)
         dest_overlay = dest_dir / "overlay"
         dest_overlay.mkdir(parents=True, exist_ok=True)
+
+        generator_metadata = self.get_generator_metadata(module_name)
 
         with tempfile.TemporaryDirectory() as tmpdir:
             tmp_path = Path(tmpdir)
@@ -343,12 +439,52 @@ class IndexManager:
             entries = list(extract_dir.iterdir())
             top_dir = entries[0] if len(entries) == 1 and entries[0].is_dir() else extract_dir
 
+            # Seed synthesized overlay with existing overlay files if available
+            synthesized_overlay: Dict[str, bytes] = {}
+            if existing_overlay_dir and existing_overlay_dir.is_dir():
+                for fpath in existing_overlay_dir.rglob("*"):
+                    if fpath.is_file() and fpath.name != "BUILD.bazel":
+                        rel_str = fpath.relative_to(existing_overlay_dir).as_posix()
+                        synthesized_overlay[rel_str] = fpath.read_bytes()
+
+            # Apply patch_cmds if present
+            deleted_c_files: List[str] = []
+            if generator_metadata and (generator_metadata.patch_cmds or generator_metadata.patch_cmds_win):
+                cmds = generator_metadata.patch_cmds_win if platform.system() == "Windows" and generator_metadata.patch_cmds_win else generator_metadata.patch_cmds
+                pre_files = {p.relative_to(top_dir): p.read_bytes() for p in top_dir.rglob("*") if p.is_file()}
+                for cmd in cmds:
+                    try:
+                        subprocess.run(cmd, shell=True, cwd=str(top_dir), check=True)
+                    except Exception as e:
+                        logger.warning("Failed executing patch_cmd '%s': %s", cmd, e)
+                post_files = {p.relative_to(top_dir): p for p in top_dir.rglob("*") if p.is_file()}
+                for rel_p, p in post_files.items():
+                    rel_str = rel_p.as_posix()
+                    if any(part in ["blib", ".git"] for part in rel_p.parts):
+                        continue
+                    if rel_p not in pre_files or pre_files[rel_p] != p.read_bytes():
+                        synthesized_overlay[rel_str] = p.read_bytes()
+                for rel_p in pre_files:
+                    if rel_p not in post_files:
+                        rel_str = rel_p.as_posix()
+                        if rel_str.endswith((".c", ".xs")) and rel_str not in deleted_c_files:
+                            deleted_c_files.append(rel_str)
+
             inspection = self.heuristics.inspect_directory(
                 extract_dir=top_dir,
                 dist_name=dist_name,
                 provides=provides,
                 is_xs_hint=is_xs_hint,
+                generator_metadata=generator_metadata,
             )
+            if existing_overlay_dir and existing_overlay_dir.exists():
+                inspection.overlay_files = dict(synthesized_overlay)
+            else:
+                for s_rel, s_data in synthesized_overlay.items():
+                    inspection.overlay_files[s_rel] = s_data
+            for d_c in deleted_c_files:
+                if d_c not in inspection.included_c_files:
+                    inspection.included_c_files.append(d_c)
 
             # Write overlay files from inspection (constants.h, xssubs.c, etc.)
             overlay_sris: Dict[str, str] = {}
@@ -356,7 +492,7 @@ class IndexManager:
                 target_f = dest_overlay / rel_name
                 target_f.parent.mkdir(parents=True, exist_ok=True)
                 target_f.write_bytes(data)
-                if rel_name.endswith((".pl", ".sh")) or data.startswith(b"#!"):
+                if data.startswith(b"#!"):
                     try:
                         target_f.chmod(0o755)
                     except Exception:
@@ -369,6 +505,7 @@ class IndexManager:
                 module_name=module_name,
                 runtime_deps=runtime_deps,
                 test_deps=test_deps,
+                generator_metadata=generator_metadata,
             )
             build_file = dest_overlay / "BUILD.bazel"
             build_file.write_text(build_bazel_content, encoding="utf-8")
@@ -384,7 +521,10 @@ class IndexManager:
 
             # Write source.json
             archive_sri = hex_to_sri(archive_sha256)
-            strip_prefix = self._compute_strip_prefix(archive_url, dist_name, upstream_version)
+            if generator_metadata and generator_metadata.strip_prefix:
+                strip_prefix = generator_metadata.strip_prefix
+            else:
+                strip_prefix = self._compute_strip_prefix(archive_url, dist_name, upstream_version)
             source_data = {
                 "url": archive_url,
                 "integrity": archive_sri,
@@ -660,6 +800,11 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
         help="Force increment build-id if matching version is already in index.",
     )
     parser.add_argument(
+        "--regenerate",
+        action="store_true",
+        help="Regenerate BCR port from generator-metadata.yaml.",
+    )
+    parser.add_argument(
         "--verbose",
         action="store_true",
         help="Enable debug logging output.",
@@ -690,6 +835,33 @@ def main(argv: Optional[List[str]] = None) -> int:
         workspace_dir=workspace_dir,
         bump_build_id=args.bump_build_id,
     )
+
+    if args.regenerate:
+        if args.distribution:
+            mod_name = sanitize_module_name(args.distribution)
+            new_ver = indexer.index_mgr.regenerate_port(
+                module_name=mod_name,
+                upstream_version=args.version,
+                bump_build_id=args.bump_build_id,
+            )
+            print(f"[cpan_indexer] Successfully regenerated {mod_name} -> {new_ver}")
+            return 0
+        else:
+            # Regenerate all modules that have generator-metadata.yaml
+            count = 0
+            for mod_entry in sorted((index_dir / "modules").iterdir()):
+                if mod_entry.is_dir() and (mod_entry / "generator-metadata.yaml").exists():
+                    try:
+                        new_ver = indexer.index_mgr.regenerate_port(
+                            module_name=mod_entry.name,
+                            bump_build_id=args.bump_build_id,
+                        )
+                        print(f"[cpan_indexer] Regenerated {mod_entry.name} -> {new_ver}")
+                        count += 1
+                    except Exception as e:
+                        logger.warning("Failed regenerating %s: %s", mod_entry.name, e)
+            print(f"[cpan_indexer] Successfully regenerated {count} modules with generator-metadata.yaml")
+            return 0
 
     if args.lockfile:
         lock_path = Path(args.lockfile)

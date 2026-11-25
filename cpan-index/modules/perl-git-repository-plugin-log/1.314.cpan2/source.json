@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BO/BOOK/Git-Repository-Plugin-Log-1.314.tar.gz",
+    "integrity": "sha256-t6YgnCFGZac3veqJgle2dJb47kFqMFhQ9gZQEYj+Ybs=",
+    "strip_prefix": "Git-Repository-Plugin-Log-1.314",
+    "overlay": {
+        "BUILD.bazel": "sha256-kfRRrfx2chDA9fVM+jumeBnKtoU9im7bORPwKuq1NLU="
+    }
+}

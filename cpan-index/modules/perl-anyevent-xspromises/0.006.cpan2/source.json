@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TV/TVDW/AnyEvent-XSPromises-0.006.tar.gz",
+    "integrity": "sha256-FgiKZCDUwdTGKKm3zfenKG3n399rQI61cYRvZ4C8dOY=",
+    "strip_prefix": "AnyEvent-XSPromises-0.006",
+    "overlay": {
+        "BUILD.bazel": "sha256-dxetayhEKFRs1cjSH4bFMXIIv+fOKM+6gkXpCY3/G7w="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection-2.000001.tar.gz",
+    "integrity": "sha256-nGGMe33wvPFddUjrDy0aGDKTajFroyRw8ZpMA5cu+AM=",
+    "strip_prefix": "Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection-2.000001",
+    "overlay": {
+        "BUILD.bazel": "sha256-cE8nJBjWKWrQuc2jUl9wu0L9BGFolVx4gUtldWKlyU4="
+    }
+}

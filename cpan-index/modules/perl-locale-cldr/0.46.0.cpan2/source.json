@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JG/JGNI/Locale-CLDR-v0.46.0.tar.gz",
+    "integrity": "sha256-UMQgOSWX4L9LARxdPsQ/Ft9BT0vT+SleaAERh0xPMZI=",
+    "strip_prefix": "Locale-CLDR-v0.46.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-mE7yeJ3Swq5XHlIesD4vhOvTpJ0+wYqAFGWJkR/8788="
+    }
+}

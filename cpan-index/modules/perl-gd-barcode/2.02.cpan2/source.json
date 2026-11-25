@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/GD-Barcode-2.02.tar.gz",
+    "integrity": "sha256-E4TbvplRPRehYEXm9lkRCm3NEaekRRFKQlGLzvCL0qY=",
+    "strip_prefix": "GD-Barcode-2.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-8XF0tuUVhB+09m4trKNss8JQ72Mfab0nKoVq5pW9x94="
+    }
+}

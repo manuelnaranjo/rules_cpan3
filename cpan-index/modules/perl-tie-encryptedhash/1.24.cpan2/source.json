@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/V/VI/VIPUL/Tie-EncryptedHash-1.24.tar.gz",
+    "integrity": "sha256-qpoIOiMeQEYXCliUZE48WWecfb0KotEhfchRUN8sHiE=",
+    "strip_prefix": "Tie-EncryptedHash-1.24",
+    "overlay": {
+        "BUILD.bazel": "sha256-ScQebHbqlETeE0Q91SwaebINkm00rwdY+6rsEJyuHts="
+    }
+}

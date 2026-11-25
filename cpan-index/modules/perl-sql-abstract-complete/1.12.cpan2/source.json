@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GR/GRYPHON/SQL-Abstract-Complete-1.12.tar.gz",
+    "integrity": "sha256-VZ5y9G+TUyeSvk/Xo9yugaS6vaQXWyHY/ogfHf8EqB8=",
+    "strip_prefix": "SQL-Abstract-Complete-1.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-DZdFku3JBuS9qv0BsuCCMs6YtyFtE3kU5IT2fJwplOM="
+    }
+}

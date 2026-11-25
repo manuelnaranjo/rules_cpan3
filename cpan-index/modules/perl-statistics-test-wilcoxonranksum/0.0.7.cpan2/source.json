@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IN/INGRIF/Statistics-Test-WilcoxonRankSum-0.0.7.tar.gz",
+    "integrity": "sha256-MmX7J1/OBZ3S1Dgc4BeMAYGCa3K7Txj3COwa7Fw+6R8=",
+    "strip_prefix": "Statistics-Test-WilcoxonRankSum-0.0.7",
+    "overlay": {
+        "BUILD.bazel": "sha256-glPFCHSvWz4oCg+ef+Rlh+mnBynXLNQLHZhFfZXd3vk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLAWREN/OptArgs-0.1.21.tar.gz",
+    "integrity": "sha256-weexQmvqLvBo/zDdbGQTxbb+ElKpFe+dvG679kTOOXE=",
+    "strip_prefix": "OptArgs-0.1.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-ZGGD8cuBE0EgLx0eaADENUwrtz+6FYz/ZguTQFuLcaw="
+    }
+}

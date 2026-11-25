@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TE/TEODESIAN/Selenium-Remote-Driver-1.50.tar.gz",
+    "integrity": "sha256-P2PnAhV5q0TGK2VKA5glKTZIesk0vrVEHE1TrVsivh0=",
+    "strip_prefix": "Selenium-Remote-Driver-1.50",
+    "overlay": {
+        "BUILD.bazel": "sha256-mb85Ltg3qin0Wc7LLoo40WjPVpeJbvJ8npBZtvdh+2g="
+    }
+}

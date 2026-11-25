@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Algorithm-Heapify-XS-0.08.tar.gz",
+    "integrity": "sha256-NEWNCiwxIdO7CgQGVkTprTD4tIV8VgJXQ66hmBuQq4E=",
+    "strip_prefix": "Algorithm-Heapify-XS-0.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-OcGlL+yf7+2pP1KpbsxINwk26sB+/3xQqMexFxL9hzQ="
+    }
+}

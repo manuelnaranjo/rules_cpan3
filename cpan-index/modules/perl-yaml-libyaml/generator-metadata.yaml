@@ -1,0 +1,7 @@
+manual_tests:
+- '*'
+defines:
+- HAVE_CONFIG_H
+includes:
+- LibYAML/lib
+output_loc: auto/YAML/XS/LibYAML/LibYAML

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HM/HMBRAND/Text-CSV_XS-1.65.tgz",
+    "integrity": "sha256-TwwWRXyH3vKVqZTpxLo5eouq+tls768tYUgxJfkP+XQ=",
+    "strip_prefix": "Text-CSV_XS-1.65",
+    "overlay": {
+        "BUILD.bazel": "sha256-Rfz+wRp3pO5u3wi2Lnd6z1CCnaBBcw8fnBruI6Y8wHo="
+    }
+}

@@ -1,0 +1,2 @@
+native_deps:
+- '@perl-xs-parse-keyword//:XS-Parse-Keyword_xs'

@@ -1,0 +1,6 @@
+manual_tests:
+- '*'
+- t/20-modules/*
+- t/21-types/*
+- t/30-external/*
+- t/40-bugs/*

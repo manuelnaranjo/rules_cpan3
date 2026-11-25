@@ -1,0 +1,5 @@
+patch_cmds:
+- mkdir -p lib/Config/General && cp General/*.pm lib/Config/General/
+patch_cmds_win:
+- powershell -Command "New-Item -ItemType Directory -Force lib/Config/General; Copy-Item
+  General/*.pm lib/Config/General/"

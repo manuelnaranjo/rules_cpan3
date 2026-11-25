@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KW/KWILLIAMS/Parse-CSV-2.07.tar.gz",
+    "integrity": "sha256-gMItVrKNdi3epqpYnFXtwLCmTMj16DcAeAwiu5Fnn3E=",
+    "strip_prefix": "Parse-CSV-2.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-G2scaQBqud7KSEFy/39MSn0XAi9Wx5p08M0hkX6iu0Q="
+    }
+}

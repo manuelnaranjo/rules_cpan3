@@ -1,0 +1,10 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Time-HiRes-1.9764.tar.gz",
+    "integrity": "sha256-mEG+VYe/t80fL+JnteWsBM4l551cx35e+anFq9EB17E=",
+    "strip_prefix": "Time-HiRes-1.9764",
+    "overlay": {
+        "const-xs.inc": "sha256-CDGunqBmbazN10BS8nPYl3aclyRYt7Lulpieo0vIjZ0=",
+        "const-c.inc": "sha256-etZT/0NLfuSd2WmCsVODiHXgC3hekV6gzF8112a8xDI=",
+        "BUILD.bazel": "sha256-ImEWAf3Ys4JJvGLuXOtvjf0r4R9kWt/SHESXubpQEbA="
+    }
+}

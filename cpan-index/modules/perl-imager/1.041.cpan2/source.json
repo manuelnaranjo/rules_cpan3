@@ -1,0 +1,9 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TONYC/Imager-1.041.tar.gz",
+    "integrity": "sha256-3qTPRKshkzASpXpmu4yc0SAl8U08TAYlfGw1PrkFCdQ=",
+    "strip_prefix": "Imager-1.041",
+    "overlay": {
+        "imconfig.h": "sha256-v+hrT9EId9WFEtFRMCkM8BouO+5iwB5LHO5gYpi2rfU=",
+        "BUILD.bazel": "sha256-5d94kxM9oHgC3ZUjr9R2dK5wHU2VnFYGwZWm642naGo="
+    }
+}

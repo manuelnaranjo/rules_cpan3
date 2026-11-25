@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/IO-Prompt-0.997004.tar.gz",
+    "integrity": "sha256-8XuzBe5qyLWyA+bYJuuUDE8/bW9L/nGcOzoiX0b1hhU=",
+    "strip_prefix": "IO-Prompt-0.997004",
+    "overlay": {
+        "BUILD.bazel": "sha256-fXI5sfW0gcexlAmwQjI5EaoO8sBoWaRGIEVY6WgL0ZQ="
+    }
+}

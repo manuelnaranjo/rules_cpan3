@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAXMIND/GeoIP2-2.006002.tar.gz",
+    "integrity": "sha256-CQVCqO7pvTwS5ZxLZWJMidAf/ZQgTx8Hah20CybAmDQ=",
+    "strip_prefix": "GeoIP2-2.006002",
+    "overlay": {
+        "BUILD.bazel": "sha256-Whf+tqzdZyRu1wssXwGT/TkJO/9X/OB9speEw0qoX4A="
+    }
+}

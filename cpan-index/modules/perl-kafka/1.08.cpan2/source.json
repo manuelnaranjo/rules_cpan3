@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AS/ASOLOVEY/Kafka-1.08.tgz",
+    "integrity": "sha256-JXbowz1geQgnqosLcyfgU5RdWD76NE1d1O+jJnLWdiA=",
+    "strip_prefix": "Kafka-1.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-x1es0AUTR5sFcy00C7p+hUZXGWtsyTmHsK07W27o1Jg="
+    }
+}

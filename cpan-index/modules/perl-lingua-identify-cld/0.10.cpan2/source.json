@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AM/AMBS/Lingua-Identify-CLD-0.10.tar.gz",
+    "integrity": "sha256-34OUD16fZVASUDLsIjMQhlUm7cLltlpOD9D6KH3hcN8=",
+    "strip_prefix": "Lingua-Identify-CLD-0.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-NJuKJFKdeI/PNcQrWAECf29fpgpORYrooJueV8dSN8I="
+    }
+}

@@ -1,0 +1,4 @@
+defines:
+- INT64_BACKEND_IV
+- USE_INT64_T
+- HAS_STDINT_H

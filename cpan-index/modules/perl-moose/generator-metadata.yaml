@@ -1,0 +1,3 @@
+manual_tests:
+- t/attributes/attribute_delegation.t
+- t/basics/override_and_foreign_classes.t

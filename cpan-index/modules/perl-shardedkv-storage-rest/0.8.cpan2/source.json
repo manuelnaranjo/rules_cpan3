@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DG/DGRYSKI/ShardedKV-Storage-Rest-0.8.tar.gz",
+    "integrity": "sha256-iNd4cUCqcG859v5sO8XHzc/sxT67T+h9I7hx2IyrAZU=",
+    "strip_prefix": "ShardedKV-Storage-Rest-0.8",
+    "overlay": {
+        "BUILD.bazel": "sha256-/lozonYBOgQtxAnuFoxMJTcpr7AoFtFzZCocU9NFk1E="
+    }
+}

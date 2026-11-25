@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JR/JRYAN/Text-ParagraphDiff-2.70.tar.gz",
+    "integrity": "sha256-Al45RB4jbErFMWDNvQocJGm767POZlge8X8hAmFfITI=",
+    "strip_prefix": "Text-ParagraphDiff",
+    "overlay": {
+        "BUILD.bazel": "sha256-WxTNZhcR7+OLcEvKDgh2qRym2UoLTgY4uMF2Ao266Gk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IK/IKEGAMI/DateTime-Format-RFC3339-v1.10.0.tar.gz",
+    "integrity": "sha256-Ol5k576q/SxkoSEJ48wP7T2z+JOwMjtDtSlk/CwMhJY=",
+    "strip_prefix": "DateTime-Format-RFC3339-v1.10.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-yetjUPwMiGlAYmxyQg3zMjCcJ4ovbsXDZ2DAzYbbwGg="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TV/TVDW/AnyEvent-YACurl-0.23.tar.gz",
+    "integrity": "sha256-TcWf59r7gMbrpLogTZ7lKqCoiYzh2rdro66eS4Z9iYY=",
+    "strip_prefix": "AnyEvent-YACurl-0.23",
+    "overlay": {
+        "BUILD.bazel": "sha256-bBGjQ8+Rk0moPEiN7XJCrpRuwKv+FwE4gCR2V6E2pUM="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/IPC-Run-20260402.0.tar.gz",
+    "integrity": "sha256-1qMmqLH/sZSV3qT/WgnvE4vzViqxsGnT+377x3ufaso=",
+    "strip_prefix": "IPC-Run-20260402.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-Aq/25Dc2R/McQC7WWyFaoLlFxaPz4hAxCm6SOtoUJNw="
+    }
+}

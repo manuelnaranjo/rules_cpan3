@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Perl-Critic-Policy-ValuesAndExpressions-ProhibitSingleArgArraySlice-0.004.tar.gz",
+    "integrity": "sha256-gQa5cEVgNW19B80YfGRCZoL6pRJ59uRxTluLNlOxkOY=",
+    "strip_prefix": "Perl-Critic-Policy-ValuesAndExpressions-ProhibitSingleArgArraySlice-0.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-hYw6vkB3BOKwijdADn7MTl9Vk/CZcwRkNbqDH+fLvk8="
+    }
+}

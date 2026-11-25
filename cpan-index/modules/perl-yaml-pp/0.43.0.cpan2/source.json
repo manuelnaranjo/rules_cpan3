@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.43.0.tar.gz",
+    "integrity": "sha256-9KKm0isyox5BjevL0EuEO6CZf53qD8wflrCLLy68suc=",
+    "strip_prefix": "YAML-PP-v0.43.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-qEzvOTM0J3yr6ifq0U3B4Wn1Rep7ahFGXzQixi6vE/8="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.83.tar.gz",
+    "integrity": "sha256-518PqdPG8Nr1pacvqfixycDSPjqEqFIsy0+DUjK5VQU=",
+    "strip_prefix": "libwww-perl-6.83",
+    "overlay": {
+        "BUILD.bazel": "sha256-0n26bL8lczViTpTj1FiD9OiPzW+ag7rOe2xjq9FfeKc="
+    }
+}

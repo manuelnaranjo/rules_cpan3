@@ -1,0 +1,6 @@
+manual_tests:
+- '*'
+patch_cmds:
+- rm -rf contrib lib/xs
+patch_cmds_win:
+- powershell -Command "Remove-Item -Recurse -Force contrib,lib/xs"

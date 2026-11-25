@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/F/FA/FANGLY/Statistics-R-0.34.tar.gz",
+    "integrity": "sha256-eC3QZIdqyUaA2XiZ8k+w5yffQsBbpHTsCWqRFkOPvtQ=",
+    "strip_prefix": "Statistics-R-0.34",
+    "overlay": {
+        "BUILD.bazel": "sha256-MkXfwOmOW7A1FyeCf4SLbyOKx+Oj1DbJHLGR4MHA8Y4="
+    }
+}

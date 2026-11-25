@@ -1,0 +1,5 @@
+native_deps:
+- '@openssl//:crypto'
+- '@openssl//:ssl'
+patch_cmds:
+- mkdir -p lib/Crypt/OpenSSL && cp X509.pm lib/Crypt/OpenSSL/X509.pm

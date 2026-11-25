@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/JSON-XS-4.06.tar.gz",
+    "integrity": "sha256-B/CbNp9kV1yyaafWVy+yU/50fej6sd2cG6RuWuGc0qA=",
+    "strip_prefix": "JSON-XS-4.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-rW/51eCGi2d2rIivHkTIoEL6dWDHPM1ugBA+/nn5Omw="
+    }
+}

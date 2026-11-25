@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Number-Format-1.79.tar.gz",
+    "integrity": "sha256-QEsjFwmyikECSudr7dNJFF2n5TX5TGATtrtV7qOD4a0=",
+    "strip_prefix": "Number-Format-1.79",
+    "overlay": {
+        "BUILD.bazel": "sha256-77VTHq/YYH6i9nrK7G1osDtb03QFOMGm1YePIw9KREs="
+    }
+}

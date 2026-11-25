@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AG/AGRUNDMA/Image-Scale-0.14.tar.gz",
+    "integrity": "sha256-8JxfBmO4dzg2WsKBnhhrkJq+ue2F2DvBXudocslHzfg=",
+    "strip_prefix": "Image-Scale-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-iJdNVGmb54xTWeERRPs6DGft/QIo+pyL08P2ObRF5PY="
+    }
+}

@@ -1,0 +1,6 @@
+manual_tests:
+- '*'
+patch_cmds:
+- perl constants.pl.PL
+patch_cmds_win:
+- powershell -Command "perl constants.pl.PL"
