@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Package-Stash-0.40.tar.gz",
+    "integrity": "sha256-WpcixtnLKe4TPl97CKU2J2KgtWM/9RcGQqWwaG6V4GY=",
+    "strip_prefix": "Package-Stash-0.40",
+    "overlay": {
+        "BUILD.bazel": "sha256-bNc6kunCcP9BRe3Yue87LrBAVzII2e1YxGXswNh1zhs="
+    }
+}

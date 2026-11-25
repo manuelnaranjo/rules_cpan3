@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CR/CRUX/Protocol-HTTP2-1.14.tar.gz",
+    "integrity": "sha256-pT8n6i+6wVakzUmB2O90nBvvNmwpCRNLTTHaIWRLSW4=",
+    "strip_prefix": "Protocol-HTTP2-1.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-qQmWy4hNH5dvCs24z5S2IpmOHAYzJ5wz95JQ2ne82wk="
+    }
+}

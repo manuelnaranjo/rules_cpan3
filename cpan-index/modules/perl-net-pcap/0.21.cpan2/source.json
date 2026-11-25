@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CO/CORION/Net-Pcap-0.21.tar.gz",
+    "integrity": "sha256-li/9wcVHC/nkNBMpdyQwjpOMucnAKpBB18vUhbHd+xM=",
+    "strip_prefix": "Net-Pcap-0.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-xVaSp73zocufKvg3DC7UefmoR0LHCepw0+Lf15IqNyI="
+    }
+}

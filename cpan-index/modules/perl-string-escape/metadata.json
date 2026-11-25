@@ -7,7 +7,8 @@
         }
     ],
     "versions": [
-        "2010.002.cpan1"
+        "2010.002.cpan1",
+        "2010.002.cpan2"
     ],
     "yanked_versions": {}
 }

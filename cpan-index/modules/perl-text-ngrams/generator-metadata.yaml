@@ -1,0 +1,7 @@
+manual_tests:
+- t/06.t
+- t/10.t
+- t/11.t
+- t/12.t
+- t/13.t
+- t/14.t

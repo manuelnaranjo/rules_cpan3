@@ -1,0 +1,2 @@
+manual_tests:
+- t/04_complex_rdn.t

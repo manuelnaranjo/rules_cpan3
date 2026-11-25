@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Storage-0.53.tar.gz",
+    "integrity": "sha256-hwS/5QX2azQPYuhcn/MZwZ6WcLJtSwEskfThA7HarOA=",
+    "strip_prefix": "MooseX-Storage-0.53",
+    "overlay": {
+        "BUILD.bazel": "sha256-HQ/HzNamuscKB6BgWPKhAyIGfZvH4bNh0xXW5z+jscw="
+    }
+}

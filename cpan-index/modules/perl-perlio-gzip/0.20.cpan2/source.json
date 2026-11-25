@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/PerlIO-gzip-0.20.tar.gz",
+    "integrity": "sha256-SEhnmj8gHj87DF9vlSbmAq9Skj/6RxoqNlfbeGvTvcU=",
+    "strip_prefix": "PerlIO-gzip-0.20",
+    "overlay": {
+        "BUILD.bazel": "sha256-jUN8mDVBngn0zBPQntsIlJ1HV7wcotUoxyRAydkduiA="
+    }
+}

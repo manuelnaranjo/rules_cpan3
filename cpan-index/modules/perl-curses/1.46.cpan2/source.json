@@ -1,0 +1,9 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GI/GIRAFFED/Curses-1.46.tar.gz",
+    "integrity": "sha256-ljHW4+KFnIWRPYuHJPYfvrueky6eUKoEk6TgJ2Zgo/k=",
+    "strip_prefix": "Curses-1.46",
+    "overlay": {
+        "c-config.h": "sha256-l28iwg1lWuy5nfR1o5eCIv6Fhe2RJ0z8jlYKwhFP4Bs=",
+        "BUILD.bazel": "sha256-XhAAyO5RCfoWW2Gb5M9KCqoiMiGF2afcsdGC942Hj08="
+    }
+}

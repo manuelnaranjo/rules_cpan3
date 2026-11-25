@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/File-ShareDir-1.118.tar.gz",
+    "integrity": "sha256-O7KiC6Nd+VjcCk8jBvwF2QPYuMTePIvu/OF3OdKByVg=",
+    "strip_prefix": "File-ShareDir-1.118",
+    "overlay": {
+        "BUILD.bazel": "sha256-LEcL2lhVqd4991uxgKirJ7A4ltfp2JRz47eiT9NuGXE="
+    }
+}

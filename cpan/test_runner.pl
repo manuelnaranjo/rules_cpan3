@@ -5,6 +5,12 @@ use File::Basename qw(basename dirname);
 use File::Spec;
 use Cwd qw(abs_path);
 
+my @services;
+while (@ARGV && $ARGV[0] =~ /^--service=(.+)$/) {
+    push @services, $1;
+    shift @ARGV;
+}
+
 my $test_file = shift @ARGV;
 die "No test file specified to test_runner.pl\n" unless defined $test_file;
 
@@ -82,6 +88,100 @@ if (open my $fh, '<', $target_test) {
     }
 }
 
+my %KNOWN_SERVICES = (
+    'redis' => {
+        port => 6379,
+        image => 'redis:alpine',
+        cmd => 'docker run -d --rm --name %s -p 6379:6379 redis:alpine',
+    },
+    'memcached' => {
+        port => 11211,
+        image => 'memcached:alpine',
+        cmd => 'docker run -d --rm --name %s -p 11211:11211 memcached:alpine',
+    },
+    'mysql' => {
+        port => 3306,
+        image => 'mysql:8.0',
+        cmd => 'docker run -d --rm --name %s -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=test mysql:8.0',
+    },
+    'postgres' => {
+        port => 5432,
+        image => 'postgres:alpine',
+        cmd => 'docker run -d --rm --name %s -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_DB=test postgres:alpine',
+    },
+    'postgresql' => {
+        port => 5432,
+        image => 'postgres:alpine',
+        cmd => 'docker run -d --rm --name %s -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_DB=test postgres:alpine',
+    },
+    'cassandra' => {
+        port => 9042,
+        image => 'cassandra:latest',
+        cmd => 'docker run -d --rm --name %s -p 9042:9042 cassandra:latest',
+    },
+    'elasticsearch' => {
+        port => 9200,
+        image => 'elasticsearch:7.17.10',
+        cmd => 'docker run -d --rm --name %s -p 9200:9200 -e discovery.type=single-node -e xpack.security.enabled=false elasticsearch:7.17.10',
+    },
+);
+
+my @started_containers;
+if (@services) {
+    eval {
+        require IO::Socket::INET;
+        for my $svc (@services) {
+            my $info = $KNOWN_SERVICES{$svc};
+            next unless $info;
+            my $port = $info->{port};
+            my $is_open = sub {
+                my $sock = IO::Socket::INET->new(
+                    PeerAddr => '127.0.0.1',
+                    PeerPort => $port,
+                    Proto    => 'tcp',
+                    Timeout  => 1,
+                );
+                if ($sock) {
+                    close $sock;
+                    return 1;
+                }
+                return 0;
+            };
+
+            if (!$is_open->()) {
+                my $docker_ok = system("docker info >/dev/null 2>&1") == 0;
+                if ($docker_ok) {
+                    my $cname = "cpan_${svc}_" . $$ . "_" . int(rand(100000));
+                    my $cmd = sprintf($info->{cmd}, $cname);
+                    system("$cmd >/dev/null 2>&1");
+                    push @started_containers, $cname;
+
+                    for (1..30) {
+                        last if $is_open->();
+                        sleep 1;
+                    }
+                }
+            }
+        }
+    };
+}
+
+my $cleanup = sub {
+    for my $c (@started_containers) {
+        system("docker stop $c >/dev/null 2>&1");
+    }
+};
+
+$SIG{INT} = sub { $cleanup->(); exit 1; };
+$SIG{TERM} = sub { $cleanup->(); exit 1; };
+
 my @inc_flags = map { "-I$_" } @INC;
-exec $^X, @extra_flags, @inc_flags, $target_test, @ARGV
-    or die "Failed to exec $^X: $!\n";
+if (@started_containers) {
+    system($^X, @extra_flags, @inc_flags, $target_test, @ARGV);
+    my $exit_code = $? >> 8;
+    $cleanup->();
+    exit $exit_code;
+} else {
+    exec $^X, @extra_flags, @inc_flags, $target_test, @ARGV
+        or die "Failed to exec $^X: $!\n";
+}

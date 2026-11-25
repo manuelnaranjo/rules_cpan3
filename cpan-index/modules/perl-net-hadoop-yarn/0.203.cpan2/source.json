@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Net-Hadoop-YARN-0.203.tar.gz",
+    "integrity": "sha256-RvK9Kd2PnDG1nC1IQjbcyu/RDzsn4lBpgR0/niSZWcw=",
+    "strip_prefix": "Net-Hadoop-YARN-0.203",
+    "overlay": {
+        "BUILD.bazel": "sha256-9zNoV6kJOAcB9OV4lHeKgMd4NHb9d3u/QuxF/zsH+tw="
+    }
+}

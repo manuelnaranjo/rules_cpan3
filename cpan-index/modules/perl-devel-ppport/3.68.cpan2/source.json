@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Devel-PPPort-3.68.tar.gz",
+    "integrity": "sha256-UpDVu4TN6enmEROiDGe11HJn645loRmookjMlqrAuts=",
+    "strip_prefix": "Devel-PPPort-3.68",
+    "overlay": {
+        "BUILD.bazel": "sha256-aCBkuONPRsLdla192z+LfCexD/Hpj4hDUzKKjjtzC+0="
+    }
+}

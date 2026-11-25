@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Carp-Assert-More-2.9.0.tar.gz",
+    "integrity": "sha256-zffURaLK61X/Cj+S87D21Ymgurk1u2AoeS5+EmG0ixQ=",
+    "strip_prefix": "Carp-Assert-More-2.9.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-gHYB6iyD22Qg4i2x5b5jF1nv/y9gzH7DNWEql2EHUnY="
+    }
+}

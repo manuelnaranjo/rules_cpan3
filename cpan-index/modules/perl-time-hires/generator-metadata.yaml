@@ -1,0 +1,6 @@
+output_loc: auto/Time/HiRes/HiRes
+patch_cmds:
+- cp fallback/const-c.inc . && cp fallback/const-xs.inc .
+patch_cmds_win:
+- powershell -Command "Copy-Item fallback/const-c.inc .; Copy-Item fallback/const-xs.inc
+  ."

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAJENSEN/REST-Neo4p-0.4003.tar.gz",
+    "integrity": "sha256-cquxQeVFarTHfRMW4EsDHUHTo4PneNUDJOslO3IUVrw=",
+    "strip_prefix": "REST-Neo4p-0.4003",
+    "overlay": {
+        "BUILD.bazel": "sha256-qQlq2TUu0uRi5ICwHN2BirFti5DLcIbZ0wWoAuj+QFs="
+    }
+}

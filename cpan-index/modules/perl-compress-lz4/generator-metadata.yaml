@@ -1,0 +1,6 @@
+native_deps:
+- '@lz4//:lz4_hc'
+patch_cmds:
+- rm -rf src
+patch_cmds_win:
+- powershell -Command "Remove-Item -Recurse -Force src"

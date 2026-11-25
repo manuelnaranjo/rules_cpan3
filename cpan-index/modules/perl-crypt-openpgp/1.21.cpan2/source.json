@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-OpenPGP-1.21.tar.gz",
+    "integrity": "sha256-ncSX9B/LSyf2vlS/aCp2tYrg/1gJD/TcpzqC41hGNrk=",
+    "strip_prefix": "Crypt-OpenPGP-1.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-ROC5JMH9WcptMjVQVY8oWcJZpSP0DfV/AP4XKDSmRkM="
+    }
+}

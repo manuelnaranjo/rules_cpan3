@@ -1,0 +1,2 @@
+patch_cmds:
+- rm -f lib/Params/Classify.xs

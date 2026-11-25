@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/App-Oozie-0.020.tar.gz",
+    "integrity": "sha256-xGvftNwKuPxjZClOV2UOQOAKpxvtLJIFoxsogidKzC4=",
+    "strip_prefix": "App-Oozie-0.020",
+    "overlay": {
+        "BUILD.bazel": "sha256-dB0ol4Oo+ogn3xz1g5cAeNf/rxm/4qAcQc7P+GjIqwI="
+    }
+}

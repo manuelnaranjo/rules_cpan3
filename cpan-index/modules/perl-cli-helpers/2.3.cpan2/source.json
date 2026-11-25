@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BL/BLHOTSKY/CLI-Helpers-2.3.tar.gz",
+    "integrity": "sha256-/AIdFp5kK3Nq8fKT83W6ffINQwdbB0ulS38MxgocLr8=",
+    "strip_prefix": "CLI-Helpers-2.3",
+    "overlay": {
+        "BUILD.bazel": "sha256-7m3xLBKiqA/8XM9hvHeIbj5OTGAfZbff4di9CWYKRQo="
+    }
+}

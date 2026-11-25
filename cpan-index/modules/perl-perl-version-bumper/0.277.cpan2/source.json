@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BO/BOOK/Perl-Version-Bumper-0.277.tar.gz",
+    "integrity": "sha256-ncJgiQnbC94siaWWQadv69A6dY3Gmtfx+1LJcSC2g9s=",
+    "strip_prefix": "Perl-Version-Bumper-0.277",
+    "overlay": {
+        "BUILD.bazel": "sha256-tqaOVYksKE6YA9UVkhu1oL79ygZ+rDv1O5sVHM+DIO8="
+    }
+}

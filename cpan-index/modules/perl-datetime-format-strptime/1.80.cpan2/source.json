@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Strptime-1.80.tar.gz",
+    "integrity": "sha256-7+XivnBCXvwSOk5X9LlrLSO+sDIAyDJklbW0M7a3cVg=",
+    "strip_prefix": "DateTime-Format-Strptime-1.80",
+    "overlay": {
+        "BUILD.bazel": "sha256-LYW+cjd1ZvGBmNGnTMVRIMtEqmJMkCMhkjY46/oPJG4="
+    }
+}

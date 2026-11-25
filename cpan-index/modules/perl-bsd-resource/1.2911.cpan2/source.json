@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JH/JHI/BSD-Resource-1.2911.tar.gz",
+    "integrity": "sha256-nRz7oGPMGPckJ6IkUfeQiDa3MxrIeF2+B1U8WwQ6DD0=",
+    "strip_prefix": "BSD-Resource-1.2911",
+    "overlay": {
+        "BUILD.bazel": "sha256-kBwypAp5o5u9ER3UAdKcYH7cVMFPwl8aZYVkos6vmP4="
+    }
+}

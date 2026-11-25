@@ -1,0 +1,4 @@
+manual_tests:
+- t/00_prereqs.t
+- t/02_main.t
+- t/05_class.t

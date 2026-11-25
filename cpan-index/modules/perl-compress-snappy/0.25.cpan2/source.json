@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GR/GRAY/Compress-Snappy-0.25.tar.gz",
+    "integrity": "sha256-VElkjBSGEk8j5WHtsIbrrUDhsc1Q5jkl0qXuib6WhWE=",
+    "strip_prefix": "Compress-Snappy-0.25",
+    "overlay": {
+        "BUILD.bazel": "sha256-oW4S4dsFxPYWQ1NZ21XFNFt/6XDdr+WikAheC38hMHQ="
+    }
+}

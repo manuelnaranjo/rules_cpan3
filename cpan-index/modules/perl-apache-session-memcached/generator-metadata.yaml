@@ -1,0 +1,5 @@
+manual_tests:
+- t/01cache.t
+- t/02flex.t
+test_services:
+- memcached

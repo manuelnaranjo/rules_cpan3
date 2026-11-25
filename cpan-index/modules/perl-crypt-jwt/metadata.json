@@ -7,7 +7,8 @@
         }
     ],
     "versions": [
-        "0.038.cpan1"
+        "0.038.cpan1",
+        "0.038.cpan2"
     ],
     "yanked_versions": {}
 }

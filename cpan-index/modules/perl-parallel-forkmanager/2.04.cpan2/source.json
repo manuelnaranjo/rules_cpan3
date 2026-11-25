@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Y/YA/YANICK/Parallel-ForkManager-2.04.tar.gz",
+    "integrity": "sha256-YGiU/C6ffNE9nsCZqqwQOo8JQ9HYDCxIa64Ucwo5t/w=",
+    "strip_prefix": "Parallel-ForkManager-2.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-v2MxxbfZCNAl2CAYRTblLwnhYwJZ/8JfBO0DPrJcj3Y="
+    }
+}

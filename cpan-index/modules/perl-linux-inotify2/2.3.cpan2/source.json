@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Linux-Inotify2-2.3.tar.gz",
+    "integrity": "sha256-y5kVD5/6UdvDvl7pjY6RyYzf6uIuuI5xjyzzZ78nDRc=",
+    "strip_prefix": "Linux-Inotify2-2.3",
+    "overlay": {
+        "BUILD.bazel": "sha256-nnIzr5eK5BBxR5jJT4Z+LR3mGQ9U+nSJe/qGHOEBdYM="
+    }
+}

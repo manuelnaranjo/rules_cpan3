@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIK/Crypt-JWT-0.038.tar.gz",
+    "integrity": "sha256-Fg5k4mz86BVWufN22rRTX/Che4D0TR/+P0GXenhcUcM=",
+    "strip_prefix": "Crypt-JWT-0.038",
+    "overlay": {
+        "BUILD.bazel": "sha256-wqiI/xPx9xbku6yM2u8zbK2OVtB4Lfbu+ydejUNoZLs="
+    }
+}

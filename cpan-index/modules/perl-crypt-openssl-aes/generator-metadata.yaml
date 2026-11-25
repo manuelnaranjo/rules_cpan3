@@ -1,0 +1,3 @@
+native_deps:
+- '@openssl//:crypto'
+- '@openssl//:ssl'

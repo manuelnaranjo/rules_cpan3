@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BA/BAYASHI/Plack-Middleware-ChromeLogger-0.01.tar.gz",
+    "integrity": "sha256-B9abxV/6EBF3aDbdlQJ9M8sumYnJgXCtvLzu0/rUUzo=",
+    "strip_prefix": "Plack-Middleware-ChromeLogger-0.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-vFPpI+w+zksSFHwiE4y2l0WPdBYLF1q/JZgLkuVQdz4="
+    }
+}

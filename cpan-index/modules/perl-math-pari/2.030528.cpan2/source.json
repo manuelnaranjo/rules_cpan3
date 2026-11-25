@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IL/ILYAZ/modules/Math-Pari-2.030528.tar.gz",
+    "integrity": "sha256-Z/dNIWxpY1qxxuo+J84ZdQqUorVgrnKIuy1s9xT85sg=",
+    "strip_prefix": "Math-Pari-2.030528",
+    "overlay": {
+        "BUILD.bazel": "sha256-iiYuSKAyLaELnG/4IK6lSUrGa20hSQ+lyRXDzdXkhiA="
+    }
+}

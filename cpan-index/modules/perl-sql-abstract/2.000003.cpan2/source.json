@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GE/GETTY/SQL-Abstract-2.000003.tar.gz",
+    "integrity": "sha256-KXE8sZlJtCDBJmoRYwqZYVUs1QlD6q/wTIt6ykQklZI=",
+    "strip_prefix": "SQL-Abstract-2.000003",
+    "overlay": {
+        "BUILD.bazel": "sha256-haVtVfLQeg90GzL94UxljOI1pRPxS7zPbg08rM6D1M4="
+    }
+}

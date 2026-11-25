@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JO/JOSHUA/Package-Alias-0.13.tar.gz",
+    "integrity": "sha256-uuvhlPrRmkPJROKwdzIqAlI4xMyhPe4SFxIimuZ8gNc=",
+    "strip_prefix": "Package-Alias-0.13",
+    "overlay": {
+        "BUILD.bazel": "sha256-VkgXMg9YFCuehbOLuvc5f8aNeRVzbqjiARhh9Cqmh8A="
+    }
+}

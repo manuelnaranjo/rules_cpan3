@@ -22,6 +22,83 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 
+
+def parse_yaml_subset(text: str) -> Dict[str, Any]:
+    """Parses a YAML document with support for mappings, lists, and scalars."""
+    try:
+        import yaml
+        return yaml.safe_load(text) or {}
+    except Exception:
+        pass
+
+    result: Dict[str, Any] = {}
+    current_key: Optional[str] = None
+
+    for raw_line in text.splitlines():
+        line = raw_line.rstrip()
+        if not line or line.strip().startswith("#"):
+            continue
+
+        indent = len(line) - len(line.lstrip())
+        stripped = line.strip()
+
+        if indent == 0 and ":" in stripped:
+            parts = stripped.split(":", 1)
+            k = parts[0].strip()
+            v = parts[1].strip()
+            if not v:
+                result[k] = []
+                current_key = k
+            else:
+                if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
+                    v = v[1:-1]
+                result[k] = v
+                current_key = None
+            continue
+
+        if current_key is not None:
+            if stripped.startswith("- "):
+                val = stripped[2:].strip()
+                if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
+                    val = val[1:-1]
+                if not isinstance(result[current_key], list):
+                    result[current_key] = []
+                result[current_key].append(val)
+            elif ":" in stripped:
+                parts = stripped.split(":", 1)
+                sub_k = parts[0].strip()
+                sub_v = parts[1].strip()
+                if (sub_v.startswith('"') and sub_v.endswith('"')) or (sub_v.startswith("'") and sub_v.endswith("'")):
+                    sub_v = sub_v[1:-1]
+                if not isinstance(result[current_key], dict):
+                    result[current_key] = {}
+                result[current_key][sub_k] = sub_v
+
+    return result
+
+
+def dump_yaml_subset(data: Dict[str, Any]) -> str:
+    """Serializes a dictionary to YAML format."""
+    try:
+        import yaml
+        return yaml.dump(data, sort_keys=False, default_flow_style=False)
+    except Exception:
+        pass
+
+    lines = []
+    for k, v in data.items():
+        if isinstance(v, list):
+            lines.append(f"{k}:")
+            for item in v:
+                lines.append(f"  - {item}")
+        elif isinstance(v, dict):
+            lines.append(f"{k}:")
+            for sub_k, sub_v in v.items():
+                lines.append(f"  {sub_k}: \"{sub_v}\"")
+        elif isinstance(v, str):
+            lines.append(f"{k}: {v}")
+    return "\n".join(lines) + "\n"
+
 logger = logging.getLogger("cpan_indexer.heuristics")
 
 # Mapping of native library names to BCR modules and versions
@@ -44,6 +121,7 @@ NATIVE_DEP_MAP: Dict[str, Dict[str, str]] = {
     "libiconv": {"bazel_dep": "libiconv", "version": "1.18.cpan-external.1", "target": "@libiconv"},
     "krb5": {"bazel_dep": "krb5", "version": "1.22.3.cpan-external.1", "target": "@krb5"},
     "libyaml": {"bazel_dep": "libyaml", "version": "0.2.5", "target": "@libyaml"},
+    "grpc": {"bazel_dep": "grpc", "version": "1.85.4", "target": "@grpc"},
 }
 
 NATIVE_DEP_CONFIGS: List[Dict[str, Any]] = [
@@ -162,6 +240,113 @@ def compute_output_loc(dist_name: str, provides: List[str]) -> str:
 
 
 @dataclass
+class GeneratorMetadata:
+    """Per-module generator metadata loaded from generator-metadata.yaml."""
+
+    manual_tests: List[str] = field(default_factory=list)
+    test_services: List[str] = field(default_factory=list)
+    test_exec_properties: Dict[str, str] = field(default_factory=dict)
+    execution_requirements: Dict[str, str] = field(default_factory=dict)
+    defines: List[str] = field(default_factory=list)
+    includes: List[str] = field(default_factory=list)
+    output_loc: Optional[str] = None
+    native_deps: List[str] = field(default_factory=list)
+    strip_prefix: Optional[str] = None
+    target_compatible_with: List[str] = field(default_factory=list)
+    exec_compatible_with: List[str] = field(default_factory=list)
+    cc_srcs_exclude: List[str] = field(default_factory=list)
+    patch_cmds: List[str] = field(default_factory=list)
+    patch_cmds_win: List[str] = field(default_factory=list)
+
+    @classmethod
+    def from_yaml_file(cls, path: Path) -> GeneratorMetadata:
+        if not path.exists():
+            return cls()
+        try:
+            data = parse_yaml_subset(path.read_text(encoding="utf-8"))
+        except Exception as e:
+            logger.warning("Failed to load %s: %s", path, e)
+            return cls()
+        return cls.from_dict(data)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> GeneratorMetadata:
+        return cls(
+            manual_tests=list(data.get("manual_tests") or []),
+            test_services=list(data.get("test_services") or []),
+            test_exec_properties=dict(data.get("test_exec_properties") or {}),
+            execution_requirements=dict(data.get("execution_requirements") or {}),
+            defines=list(data.get("defines") or []),
+            includes=list(data.get("includes") or []),
+            output_loc=data.get("output_loc"),
+            native_deps=list(data.get("native_deps") or []),
+            strip_prefix=data.get("strip_prefix"),
+            target_compatible_with=list(data.get("target_compatible_with") or []),
+            exec_compatible_with=list(data.get("exec_compatible_with") or []),
+            cc_srcs_exclude=list(data.get("cc_srcs_exclude") or data.get("cc_excludes") or []),
+            patch_cmds=list(data.get("patch_cmds") or []),
+            patch_cmds_win=list(data.get("patch_cmds_win") or []),
+        )
+
+    def to_dict(self) -> Dict[str, Any]:
+        res: Dict[str, Any] = {}
+        if self.manual_tests:
+            res["manual_tests"] = self.manual_tests
+        if self.test_services:
+            res["test_services"] = self.test_services
+        if self.test_exec_properties:
+            res["test_exec_properties"] = self.test_exec_properties
+        if self.execution_requirements:
+            res["execution_requirements"] = self.execution_requirements
+        if self.defines:
+            res["defines"] = self.defines
+        if self.includes:
+            res["includes"] = self.includes
+        if self.output_loc:
+            res["output_loc"] = self.output_loc
+        if self.native_deps:
+            res["native_deps"] = self.native_deps
+        if self.strip_prefix:
+            res["strip_prefix"] = self.strip_prefix
+        if self.target_compatible_with:
+            res["target_compatible_with"] = self.target_compatible_with
+        if self.exec_compatible_with:
+            res["exec_compatible_with"] = self.exec_compatible_with
+        if self.cc_srcs_exclude:
+            res["cc_srcs_exclude"] = self.cc_srcs_exclude
+        if self.patch_cmds:
+            res["patch_cmds"] = self.patch_cmds
+        if self.patch_cmds_win:
+            res["patch_cmds_win"] = self.patch_cmds_win
+        return res
+
+
+def is_manual_test(rel_path: str, manual_patterns: List[str]) -> bool:
+    """Checks whether a test path matches any manual test pattern or glob."""
+    if not manual_patterns:
+        return False
+    clean_rel = rel_path.lstrip("./")
+    leaf = Path(clean_rel).name
+    t_name = clean_rel.replace("/", "_")
+    if t_name.endswith(".t"):
+        t_name = t_name[:-2]
+    target_name = f"test_{re.sub(r'[^a-zA-Z0-9_.-]+', '_', t_name)}"
+
+    for pat in manual_patterns:
+        p = pat.strip()
+        if p.startswith(":"):
+            p = p[1:]
+        if p == "*" or p == clean_rel or p == leaf or p == target_name or p == t_name:
+            return True
+        import fnmatch
+        if fnmatch.fnmatch(clean_rel, p) or fnmatch.fnmatch(leaf, p) or fnmatch.fnmatch(target_name, p):
+            return True
+        if p.endswith("*") and (clean_rel.startswith(p[:-1]) or target_name.startswith(p[:-1])):
+            return True
+    return False
+
+
+@dataclass
 class DistributionInspection:
     """Results of inspecting a CPAN distribution directory or archive."""
 
@@ -175,7 +360,11 @@ class DistributionInspection:
     typemaps: List[str] = field(default_factory=list)
     included_c_files: List[str] = field(default_factory=list)
     defines: List[str] = field(default_factory=list)
+    includes: List[str] = field(default_factory=list)
     native_deps: List[str] = field(default_factory=list)
+    execution_requirements: Dict[str, str] = field(default_factory=dict)
+    target_compatible_with: List[str] = field(default_factory=list)
+    exec_compatible_with: List[str] = field(default_factory=list)
     overlay_files: Dict[str, bytes] = field(default_factory=dict)
     output_loc: str = ""
     t_files: List[str] = field(default_factory=list)
@@ -193,6 +382,7 @@ class HeuristicsEngine:
         dist_name: str,
         provides: Optional[List[str]] = None,
         is_xs_hint: Optional[bool] = None,
+        generator_metadata: Optional[GeneratorMetadata] = None,
     ) -> DistributionInspection:
         """Inspects an unpacked CPAN distribution directory."""
         all_provides = list(provides or [])
@@ -229,7 +419,7 @@ class HeuristicsEngine:
                     c_files.append(rel_file)
                 elif f.endswith((".h", ".inc")):
                     h_files.append(rel_file)
-                elif f == "typemap" or f.endswith(".typemap"):
+                elif f == "typemap" or f.endswith(".typemap") or f.upper() == "TYPEMAP":
                     typemaps.append(rel_file)
 
         # Determine whether this is an XS distribution
@@ -282,7 +472,17 @@ class HeuristicsEngine:
         if fallback_xs.exists():
             inspection.overlay_files["constants.xs"] = fallback_xs.read_bytes()
 
-        # 4. Discover test files in t/
+        # 4. Synthesize Driver.xsi and DBI headers for DBD drivers
+        if dist_name.startswith("DBD-") and dist_name != "DBD-Mock":
+            driver_name = dist_name.removeprefix("DBD-")
+            driver_xst = Path(__file__).resolve().parent.parent.parent / "resources" / "dbi" / "Driver.xst"
+            if driver_xst.exists():
+                xsi_content = driver_xst.read_text(encoding="utf-8").replace("~DRIVER~", driver_name)
+                inspection.overlay_files[f"{driver_name}.xsi"] = xsi_content.encode("utf-8")
+                for h_f in driver_xst.parent.glob("*.h"):
+                    inspection.overlay_files[h_f.name] = h_f.read_bytes()
+
+        # 5. Discover test files in t/
         t_dir = extract_dir / "t"
         t_files: List[str] = []
         if t_dir.is_dir():
@@ -295,8 +495,34 @@ class HeuristicsEngine:
         t_files.sort()
         inspection.t_files = t_files
 
-        # 5. Inspect Makefile.PL and Build.PL for native libs, defines, and run build simulation
+        # 6. Inspect Makefile.PL and Build.PL for native libs, defines, and run build simulation
         self._inspect_build_scripts(extract_dir, inspection)
+
+        # 7. Incorporate GeneratorMetadata customizations
+        if generator_metadata:
+            if generator_metadata.output_loc:
+                inspection.output_loc = generator_metadata.output_loc
+            if generator_metadata.defines:
+                for d in generator_metadata.defines:
+                    if d not in inspection.defines:
+                        inspection.defines.append(d)
+            if generator_metadata.native_deps:
+                for n in generator_metadata.native_deps:
+                    if n not in inspection.native_deps:
+                        inspection.native_deps.append(n)
+            if generator_metadata.includes:
+                for inc in generator_metadata.includes:
+                    if inc not in inspection.includes:
+                        inspection.includes.append(inc)
+            if generator_metadata.execution_requirements:
+                inspection.execution_requirements.update(generator_metadata.execution_requirements)
+            if generator_metadata.target_compatible_with:
+                inspection.target_compatible_with = list(generator_metadata.target_compatible_with)
+            if generator_metadata.exec_compatible_with:
+                inspection.exec_compatible_with = list(generator_metadata.exec_compatible_with)
+            if generator_metadata.defines or generator_metadata.output_loc or generator_metadata.includes:
+                if len(xs_files) > 0 or len(c_files) > 0 or generator_metadata.output_loc:
+                    inspection.is_xs = True
 
         return inspection
 
@@ -342,10 +568,10 @@ class HeuristicsEngine:
                     break
 
         # Search for preprocessor defines: -D...
-        define_matches = re.findall(r"-D([A-Za-z0-9_]+(?:=[^\s\'\"]+)?)", script_text)
+        define_matches = re.findall(r"-D([A-Za-z0-9_]+(?:=[^\s\'\"\$]+)?)", script_text)
         for define in define_matches:
             clean_def = re.sub(r'[\'\"\\/]+$', '', define).strip()
-            if clean_def and clean_def not in inspection.defines:
+            if clean_def and "$" not in clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
                 inspection.defines.append(clean_def)
 
         # Attempt build system dry-run if Makefile.PL exists
@@ -398,6 +624,7 @@ class HeuristicsEngine:
         runtime_deps: Optional[List[str]] = None,
         test_deps: Optional[List[str]] = None,
         test_runner_label: str = "@rules_cpan//cpan:test_runner.pl",
+        generator_metadata: Optional[GeneratorMetadata] = None,
     ) -> str:
         """Generates BUILD.bazel content for overlay/BUILD.bazel."""
         dist = inspection.dist_name
@@ -409,12 +636,40 @@ class HeuristicsEngine:
             items = [f'"{d}"' for d in valid_runtime_deps]
             cpan_deps_str = "\n        " + ",\n        ".join(items) + ",\n    "
 
+        # Target and exec constraints
+        target_compat_items = (
+            generator_metadata.target_compatible_with if generator_metadata and generator_metadata.target_compatible_with
+            else inspection.target_compatible_with
+        )
+        target_compat_str = ""
+        if target_compat_items:
+            target_compat_str = "\n    target_compatible_with = [" + ", ".join([f'"{c}"' for c in target_compat_items]) + "],"
+
+        exec_compat_items = (
+            generator_metadata.exec_compatible_with if generator_metadata and generator_metadata.exec_compatible_with
+            else inspection.exec_compatible_with
+        )
+        exec_compat_str = ""
+        if exec_compat_items:
+            exec_compat_str = "\n    exec_compatible_with = [" + ", ".join([f'"{c}"' for c in exec_compat_items]) + "],"
+
+        # Includes
+        extra_includes = list(inspection.includes)
+        if generator_metadata and generator_metadata.includes:
+            for inc in generator_metadata.includes:
+                if inc not in extra_includes:
+                    extra_includes.append(inc)
+
+        perl_lib_includes = ["lib"] + [inc for inc in extra_includes if inc != "lib"]
+        perl_lib_includes_str = "\n        " + ",\n        ".join([f'"{inc}"' for inc in perl_lib_includes]) + ",\n    "
+
         # Build test rules if t/ directory has test files
         test_content = ""
         load_perl_test = ', "perl_test"' if inspection.t_files else ""
         if inspection.t_files:
-            test_target_names: List[str] = []
+            test_target_names: List[Tuple[str, bool]] = []
             test_target_blocks: List[str] = []
+            manual_tests = generator_metadata.manual_tests if generator_metadata else []
 
             for rel_path in inspection.t_files:
                 clean_name = rel_path.replace("/", "_")
@@ -422,17 +677,63 @@ class HeuristicsEngine:
                     clean_name = clean_name[:-2]
                 sanitized = re.sub(r"[^a-zA-Z0-9_.-]+", "_", clean_name)
                 target_name = f"test_{sanitized}"
-                test_target_names.append(f'":{target_name}"')
+
+                is_manual = is_manual_test(rel_path, manual_tests)
+                tags: List[str] = []
+                if is_manual:
+                    tags.append("manual")
+                if generator_metadata and generator_metadata.execution_requirements:
+                    for req_k in generator_metadata.execution_requirements:
+                        if req_k not in tags:
+                            tags.append(req_k)
+                tags_str = ""
+                if tags:
+                    tags_items = [f'"{t}"' for t in tags]
+                    tags_str = "\n    tags = [" + ", ".join(tags_items) + "],"
+
+                test_services = generator_metadata.test_services if generator_metadata else []
+                test_args = []
+                for svc in test_services:
+                    test_args.append(f"--service={svc}")
+                test_args.append(rel_path)
+                args_items = [f'"{a}"' for a in test_args]
+                args_str = "[" + ", ".join(args_items) + "]"
+
+                test_size = "medium" if test_services else "small"
+
+                exec_props: Dict[str, str] = {}
+                if test_services:
+                    exec_props["init-dockerd"] = "true"
+                    exec_props["test.init-dockerd"] = "true"
+                    exec_props["test.workload-isolation-type"] = "firecracker"
+                    exec_props["workload-isolation-type"] = "firecracker"
+                if generator_metadata and generator_metadata.test_exec_properties:
+                    exec_props.update(generator_metadata.test_exec_properties)
+
+                exec_props_str = ""
+                if exec_props:
+                    exec_props_str = "\n    exec_properties = {\n" + ",\n".join(
+                        [f'        "{k}": "{v}"' for k, v in sorted(exec_props.items())]
+                    ) + ",\n    },"
+
+                test_target_names.append((f'":{target_name}"', is_manual))
 
                 test_target_blocks.append(f"""perl_test(
     name = "{target_name}",
-    size = "small",
+    size = "{test_size}",
     srcs = ["{test_runner_label}"],
-    args = ["{rel_path}"],
+    args = {args_str},{tags_str}{exec_props_str}{target_compat_str}{exec_compat_str}
     deps = [":{dist}_test_lib"],
 )""")
 
-            tests_str = ",\n        ".join(test_target_names)
+            non_manual_tests = [t for t, is_man in test_target_names if not is_man]
+            if non_manual_tests:
+                tests_str = ",\n        ".join(non_manual_tests)
+                suite_tags = ""
+            else:
+                tests_str = ",\n        ".join([t for t, _ in test_target_names])
+                suite_tags = '\n    tags = ["manual"],'
+
             test_deps_items = [f'"{d}"' for d in valid_test_deps]
             test_deps_str = (",\n        " + ",\n        ".join(test_deps_items)) if test_deps_items else ""
 
@@ -455,7 +756,7 @@ perl_library(
 """ + "\n\n".join(test_target_blocks) + f"""
 
 test_suite(
-    name = "test",
+    name = "test",{suite_tags}
     tests = [
         {tests_str},
     ],
@@ -481,9 +782,7 @@ perl_library(
         "lib/**/*.pm",
         "lib/**/*.pod",
     ], allow_empty = True),
-    includes = [
-        "lib",
-    ],
+    includes = [{perl_lib_includes_str}],{target_compat_str}{exec_compat_str}
     deps = [{cpan_deps_str}],
 )
 
@@ -494,8 +793,17 @@ alias(
 {test_content}"""
 
         # XS extension BUILD.bazel
-        output_loc = inspection.output_loc
-        native_deps_items = [f'"{d}"' for d in inspection.native_deps]
+        output_loc = (
+            generator_metadata.output_loc
+            if generator_metadata and generator_metadata.output_loc
+            else inspection.output_loc
+        )
+        all_native_deps = list(inspection.native_deps)
+        if generator_metadata and generator_metadata.native_deps:
+            for n in generator_metadata.native_deps:
+                if n not in all_native_deps:
+                    all_native_deps.append(n)
+        native_deps_items = [f'"{d}"' for d in all_native_deps]
         native_deps_str = ""
         if native_deps_items:
             native_deps_str = "\n        " + ",\n        ".join(native_deps_items) + ",\n    "
@@ -509,16 +817,42 @@ alias(
             '"fallback/**"',
             '"conf/**"',
         ]
+        if generator_metadata and generator_metadata.cc_srcs_exclude:
+            for exc in generator_metadata.cc_srcs_exclude:
+                quoted = f'"{exc}"'
+                if quoted not in cc_excludes:
+                    cc_excludes.append(quoted)
         for inc_c in inspection.included_c_files:
             quoted = f'"{inc_c}"'
             if quoted not in cc_excludes:
                 cc_excludes.append(quoted)
         cc_excludes_str = "\n        " + ",\n        ".join(cc_excludes) + ",\n    "
 
-        defines_items = [f'"{d}"' for d in inspection.defines]
+        if generator_metadata and generator_metadata.defines:
+            all_defines = list(generator_metadata.defines)
+        else:
+            all_defines = [
+                d for d in inspection.defines
+                if "$" not in d and " " not in d and not d.endswith("=") and not d.startswith("/") and len(d) > 1
+            ]
+        defines_items = [f'"{d}"' for d in all_defines]
         defines_str = ""
         if defines_items:
             defines_str = "\n        " + ",\n        ".join(defines_items) + ",\n    "
+
+        xs_includes_str = ""
+        if extra_includes:
+            xs_includes_items = [f'"{inc}"' for inc in extra_includes]
+            xs_includes_str = "\n    includes = [\n        " + ",\n        ".join(xs_includes_items) + ",\n    ],"
+
+        xs_exec_reqs_str = ""
+        xs_exec_reqs = dict(inspection.execution_requirements)
+        if generator_metadata and generator_metadata.execution_requirements:
+            xs_exec_reqs.update(generator_metadata.execution_requirements)
+        if xs_exec_reqs:
+            xs_exec_reqs_str = "\n    execution_requirements = {\n" + ",\n".join(
+                [f'        "{k}": "{v}"' for k, v in sorted(xs_exec_reqs.items())]
+            ) + ",\n    },"
 
         return f"""# Auto-generated by rules_cpan for {dist} (XS extension)
 load("@rules_cpan//cpan:defs.bzl", "cpan_xs")
@@ -533,19 +867,23 @@ cpan_xs(
         "*.c",
         "**/*.c",
     ], exclude = [{cc_excludes_str}], allow_empty = True),
-    defines = [{defines_str}],
+    defines = [{defines_str}],{xs_includes_str}{xs_exec_reqs_str}{target_compat_str}{exec_compat_str}
     output_loc = "{output_loc}",
     textual_hdrs = glob([
         "*.h",
         "**/*.h",
         "*.xs",
         "**/*.xs",
+        "*.xsi",
+        "**/*.xsi",
         "*.inc",
         "**/*.inc",
     ], allow_empty = True),
     typemaps = glob([
         "*typemap*",
         "**/*typemap*",
+        "*TYPEMAP*",
+        "**/*TYPEMAP*",
     ], allow_empty = True),
     deps = [{native_deps_str}],
 )
@@ -565,9 +903,7 @@ perl_library(
         "lib/**/*.pm",
         "lib/**/*.pod",
     ], allow_empty = True),
-    includes = [
-        "lib",
-    ],
+    includes = [{perl_lib_includes_str}],{target_compat_str}{exec_compat_str}
     deps = [{cpan_deps_str}],
 )
 
@@ -599,10 +935,16 @@ alias(
 
         if native_deps:
             for nat_target in native_deps:
-                dep_name = nat_target.lstrip("@").split("//")[0]
-                dep_info = NATIVE_DEP_MAP.get(dep_name)
+                dep_label = nat_target.lstrip("@").split("//")[0].split(":")[0]
+                if dep_label.startswith("cpan__"):
+                    dep_label = sanitize_module_name(dep_label.removeprefix("cpan__"))
+                dep_info = NATIVE_DEP_MAP.get(dep_label)
                 if dep_info:
                     lines.append(f'bazel_dep(name = "{dep_info["bazel_dep"]}", version = "{dep_info["version"]}")')
+                elif dep_label.startswith("perl-"):
+                    lines.append(f'bazel_dep(name = "{dep_label}", version = "0.0.0")')
+                else:
+                    lines.append(f'bazel_dep(name = "{dep_label}", version = "0.0.0")')
 
         if cpan_deps:
             for cpan_mod, cpan_ver in cpan_deps:

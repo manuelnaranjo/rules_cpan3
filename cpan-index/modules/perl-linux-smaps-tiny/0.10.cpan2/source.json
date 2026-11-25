@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AV/AVAR/Linux-Smaps-Tiny-0.10.tar.gz",
+    "integrity": "sha256-vox7jEtDOF1SGIM25aCRE/PmPzd7eB2k4m3sMPrvHkk=",
+    "strip_prefix": "Linux-Smaps-Tiny-0.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-xEyifcmSj3227o/gxSsFHyVdnVQqitPItlVeh73txKM="
+    }
+}

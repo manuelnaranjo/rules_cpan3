@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GO/GONZUS/Devel-QuickCover-0.900014.tar.gz",
+    "integrity": "sha256-s2R1LV5HKpt+U1P+nQl5xN2y9mZwGFwi6ZvDUFxyUoU=",
+    "strip_prefix": "Devel-QuickCover-0.900014",
+    "overlay": {
+        "BUILD.bazel": "sha256-zSPVCETtrz2muimhgt8zNeS9gUpznYbkcinC8KcIp6Y="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-OpenSSL-AES-0.23.tar.gz",
+    "integrity": "sha256-pwvInI1eq96bg97HExt1bCR7XB+4mA8jpCvdR3UdSIc=",
+    "strip_prefix": "Crypt-OpenSSL-AES-0.23",
+    "overlay": {
+        "BUILD.bazel": "sha256-je5eUKeiGGHaI9PbK6O5jpyd03NtVkGFNaw3FYfEmv0="
+    }
+}

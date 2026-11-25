@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DM/DMUEY/IO-Socket-PortState-0.03.tar.gz",
+    "integrity": "sha256-m2JyaZ0q/W9lqqEY4mE9ooqfO6eoDDC9DPsWYZ2xMbw=",
+    "strip_prefix": "IO-Socket-PortState-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-hmJ5FW+6q9Ev3yzn63mcI0S07Er5d2gJZ/Twa45nSJE="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSHELOR/Digest-SHA3-1.05.tar.gz",
+    "integrity": "sha256-rfG5B5sreBdV5XBId6FDCl8SmX6oIgX9KWbJzEZahSI=",
+    "strip_prefix": "Digest-SHA3-1.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-CbJpqEUaG6ysLpDnhIsQFOy3QGAmVdUgs8X0nm95sgY="
+    }
+}

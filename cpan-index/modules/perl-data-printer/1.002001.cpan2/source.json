@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GARU/Data-Printer-1.002001.tar.gz",
+    "integrity": "sha256-liktKe34XsoQckoA4K9QnECxe5tWOMADMtcDWZtvO3Q=",
+    "strip_prefix": "Data-Printer-1.002001",
+    "overlay": {
+        "BUILD.bazel": "sha256-ikhcQduOSZz1vGDahndVZ59yvfZQhQcbJVUEKhOEQHE="
+    }
+}

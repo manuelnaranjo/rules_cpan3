@@ -1,0 +1,2 @@
+manual_tests:
+- t/class.t

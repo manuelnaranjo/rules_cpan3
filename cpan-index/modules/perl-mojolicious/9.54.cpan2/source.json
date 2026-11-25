@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SR/SRI/Mojolicious-9.54.tar.gz",
+    "integrity": "sha256-hWjN2Zoqfv1WiSDFBPAKLlqG8GO3/RyJVSUztTCXc70=",
+    "strip_prefix": "Mojolicious-9.54",
+    "overlay": {
+        "BUILD.bazel": "sha256-MzG9V3cQgjuQFxUiqGSEdMVWSKkpswf03HZ6atnPCVc="
+    }
+}

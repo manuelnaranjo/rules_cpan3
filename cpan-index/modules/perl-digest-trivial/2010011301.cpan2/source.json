@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AB/ABIGAIL/Digest-Trivial-2010011301.tar.gz",
+    "integrity": "sha256-GnBybDTpsHOlhUnGoz9rpElOKVeMk7dIoAd8EniDCPI=",
+    "strip_prefix": "Digest-Trivial-2010011301",
+    "overlay": {
+        "BUILD.bazel": "sha256-KxZMsXQ92lolSr/EfNmIzd+qCEivD+aOoEGHpCp5KBE="
+    }
+}

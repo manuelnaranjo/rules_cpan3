@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/V/VO/VOJ/File-Hotfolder-0.06.tar.gz",
+    "integrity": "sha256-8SIJqh1pfqDC2twyF5CkikZ0JAdE8VzBtQG++awussk=",
+    "strip_prefix": "File-Hotfolder-0.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-rf4YEkXzX9pA4u2+zim1Ido/sARi3yz13qIiGxmyDm0="
+    }
+}

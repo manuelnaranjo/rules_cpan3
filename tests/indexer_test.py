@@ -12,10 +12,12 @@ from unittest.mock import MagicMock, patch
 
 from cpan.tools.indexer.heuristics import (
     DistributionInspection,
+    GeneratorMetadata,
     HeuristicsEngine,
     compute_output_loc,
     compute_sri_hash,
     hex_to_sri,
+    is_manual_test,
     sanitize_module_name,
 )
 from cpan.tools.indexer.indexer import (
@@ -191,6 +193,49 @@ newCONSTSUB(stash, "TIOCNOTTY", newSViv(TIOCNOTTY));
         wrapped = self.heuristics.wrap_constants_in_ifdef(raw_c)
         self.assertIn("#ifdef TIOCGWINSZ\nnewCONSTSUB(stash, \"TIOCGWINSZ\", newSViv(TIOCGWINSZ));\n#else\nnewCONSTSUB(stash, \"TIOCGWINSZ\", newSV(0));\n#endif", wrapped)
         self.assertIn("#ifdef TIOCNOTTY\nnewCONSTSUB(stash, \"TIOCNOTTY\", newSViv(TIOCNOTTY));\n#else\nnewCONSTSUB(stash, \"TIOCNOTTY\", newSV(0));\n#endif", wrapped)
+
+    def test_is_manual_test(self) -> None:
+        patterns = ["t/85gofer.t", "t/20-modules/*", "foo.t"]
+        self.assertTrue(is_manual_test("t/85gofer.t", patterns))
+        self.assertTrue(is_manual_test("t/20-modules/sub.t", patterns))
+        self.assertTrue(is_manual_test("t/foo.t", patterns))
+        self.assertFalse(is_manual_test("t/01basic.t", patterns))
+        self.assertTrue(is_manual_test("t/anything.t", ["*"]))
+
+    def test_generator_metadata_build_bazel(self) -> None:
+        meta = GeneratorMetadata(
+            manual_tests=["t/broken.t"],
+            test_services=["redis"],
+            test_exec_properties={"workload-isolation-type": "firecracker"},
+            defines=["CUSTOM_FLAG"],
+            includes=["custom/include"],
+            output_loc="auto/My/Mod/Mod",
+            target_compatible_with=["@platforms//os:linux"],
+            exec_compatible_with=["@platforms//os:linux"],
+            execution_requirements={"no-remote": "1"},
+        )
+        inspection = DistributionInspection(
+            dist_name="My-Mod",
+            is_xs=True,
+            top_level_xs=["Mod.xs"],
+            t_files=["t/ok.t", "t/broken.t"],
+        )
+        content = self.heuristics.generate_build_bazel(
+            inspection=inspection,
+            module_name="perl-my-mod",
+            generator_metadata=meta,
+        )
+        self.assertIn('CUSTOM_FLAG', content)
+        self.assertIn('"custom/include"', content)
+        self.assertIn('output_loc = "auto/My/Mod/Mod"', content)
+        self.assertIn('target_compatible_with = ["@platforms//os:linux"]', content)
+        self.assertIn('--service=redis', content)
+        self.assertIn('"init-dockerd": "true"', content)
+        self.assertIn('name = "test_t_broken"', content)
+        self.assertIn('tags = ["manual", "no-remote"]', content)
+        # Verify test_suite only has non-manual tests
+        self.assertIn('":test_t_ok"', content)
+        self.assertNotIn('":test_t_broken"', content.split('name = "test"')[1])
 
 
 class IndexManagerTest(unittest.TestCase):

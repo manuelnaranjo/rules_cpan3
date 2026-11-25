@@ -127,6 +127,10 @@ def _cpan_xs_cc_lib(ctx, toolchain, srcs, is_windows, is_macos):
 
     pkg_includes = ["."] + [f.dirname for f in xs_headers.to_list()]
     sub_includes = []
+    for inc in ctx.attr.includes:
+        if inc not in pkg_includes:
+            pkg_includes.append(inc)
+            sub_includes.append(inc)
     textual_hdrs = []
     for hdrs in ctx.attr.textual_hdrs:
         for hdr in hdrs.files.to_list():
@@ -336,6 +340,10 @@ cpan_xs = rule(
         "execution_requirements": attr.string_dict(
             doc = "Execution requirements for Perl actions spawned by this rule (e.g. {'no-remote': '1'}).",
             default = {},
+        ),
+        "includes": attr.string_list(
+            doc = "Additional include directories to pass to the compiler.",
+            default = [],
         ),
         "linkopts": attr.string_list(
             doc = "Extra linker flags passed when linking the shared library.",

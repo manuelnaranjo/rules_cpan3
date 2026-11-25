@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KI/KILINRAX/HTML-Strip-2.12.tar.gz",
+    "integrity": "sha256-GbBGFrnhro3M982BK3ArDDHbESR5WIifx5T2DtbV9SU=",
+    "strip_prefix": "HTML-Strip-2.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-RrweDZgCVk6XHI3zBoNKsiErB/emiMPV96UwrOSFHok="
+    }
+}

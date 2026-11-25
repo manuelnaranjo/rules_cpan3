@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-Primes-0.52.tar.gz",
+    "integrity": "sha256-jTLH+BDHVTWaloEs+RbULiu0RQtdHqIES3vxkHfXCB8=",
+    "strip_prefix": "Crypt-Primes-0.52",
+    "overlay": {
+        "BUILD.bazel": "sha256-5yaUxu+4wd8+YsSrQnr9FErBKLvStsmQ1tGA9J6YT24="
+    }
+}

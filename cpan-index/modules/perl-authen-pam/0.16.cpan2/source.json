@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NI/NIKIP/Authen-PAM-0.16.tar.gz",
+    "integrity": "sha256-DpSb2aKp3w+CmXEDD+kWnLr2zseLkvryL1R/9sYVXJs=",
+    "strip_prefix": "Authen-PAM-0.16",
+    "overlay": {
+        "BUILD.bazel": "sha256-eUn2gneN5fkMfye7pp7zhyYMEACzNfBokGilNOL1zZI="
+    }
+}

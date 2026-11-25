@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-Random-1.57.tar.gz",
+    "integrity": "sha256-lQRnbAzgQRA636cCP4yGHECAYckCljQUwe27LYhydRU=",
+    "strip_prefix": "Crypt-Random-1.57",
+    "overlay": {
+        "BUILD.bazel": "sha256-sYNXtA2myzavCD0h2vGxvIsyMumSUtd1LsiPlEZBNv4="
+    }
+}

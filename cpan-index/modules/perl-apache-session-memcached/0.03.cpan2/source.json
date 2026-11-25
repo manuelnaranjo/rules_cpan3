@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/EN/ENRYS/Apache-Session-Memcached-0.03.tar.gz",
+    "integrity": "sha256-YhMyrTA0nnNTM+eLPkwr5ePun6Mckde9SGtHcye0By8=",
+    "strip_prefix": "Apache-Session-Memcached-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-LvxN4V481lYBANeVSkv2YNr5hyl3xsy+wTsOL6n2P84="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/F/FA/FAYLAND/Lingua-Han-Utils-0.13.tar.gz",
+    "integrity": "sha256-mBGU2UMCRWHF3oaJtRjpRvLteDtc+H6BBJEytavBZO0=",
+    "strip_prefix": "Lingua-Han-Utils-0.13",
+    "overlay": {
+        "BUILD.bazel": "sha256-pVYFt7zVQpeNzkfuAxl7E1nih1bpWPrIi73LlepiBtk="
+    }
+}

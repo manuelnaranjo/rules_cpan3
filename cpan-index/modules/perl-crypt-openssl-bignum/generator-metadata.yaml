@@ -1,0 +1,5 @@
+native_deps:
+- '@openssl//:crypto'
+- '@openssl//:ssl'
+patch_cmds:
+- mkdir -p lib/Crypt/OpenSSL && cp Bignum.pm lib/Crypt/OpenSSL/Bignum.pm

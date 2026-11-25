@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Test-Pod-Coverage-1.10.tar.gz",
+    "integrity": "sha256-SMnMqffZnu50EXZEW0Ma3wnAKeGqV8RwPJ9G92AdQNQ=",
+    "strip_prefix": "Test-Pod-Coverage-1.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-ByLdjeK129J/vv6LCGqNI7pmLHCOzMzskqZEhxEIJCQ="
+    }
+}

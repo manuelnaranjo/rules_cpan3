@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MATTK/IPC-ConcurrencyLimit-0.17.tar.gz",
+    "integrity": "sha256-Lk11vlLpD8YFg31ajp+yacCofdPTYfMBLA/5Sl+9z+8=",
+    "strip_prefix": "IPC-ConcurrencyLimit-0.17",
+    "overlay": {
+        "BUILD.bazel": "sha256-O6nTtkriv5q9Pp6/kl8M4oQnLDkrfppG/MdSAgW+QH0="
+    }
+}

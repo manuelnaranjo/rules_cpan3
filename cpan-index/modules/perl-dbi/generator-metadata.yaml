@@ -1,0 +1,10 @@
+manual_tests:
+- t/85gofer.t
+defines:
+- XS_VERSION=\"1.656\"
+- VERSION=\"1.656\"
+output_loc: auto/DBI/DBI
+patch_cmds:
+- rm -f Perl.xs Perl.xsi
+patch_cmds_win:
+- powershell -Command "Remove-Item -Force Perl.xs, Perl.xsi"

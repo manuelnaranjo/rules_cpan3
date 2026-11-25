@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-LibYAML-API-v0.14.0.tar.gz",
+    "integrity": "sha256-MaD+3XfYJNqziYO+mjtCaGP4qrEwE765XE7PgJWXM+E=",
+    "strip_prefix": "YAML-LibYAML-API-v0.14.0",
+    "overlay": {
+        "BUILD.bazel": "sha256-WlYneR43xAbxgqd0JPaY75OLfnoxtRJfpZCRDuI6P+4="
+    }
+}

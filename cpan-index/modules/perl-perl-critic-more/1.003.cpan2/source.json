@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TH/THALJEF/Perl-Critic-More-1.003.tar.gz",
+    "integrity": "sha256-aeKs/2G3vq10VyGZHiuDyIYkroI51DcaeFo84tlnGHs=",
+    "strip_prefix": "Perl-Critic-More-1.003",
+    "overlay": {
+        "BUILD.bazel": "sha256-XjkVW1Gog3t5FitbhAzcW+j7Rl3LYYvG6Mpzd/gtk0w="
+    }
+}

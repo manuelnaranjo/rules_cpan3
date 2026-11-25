@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIROD/HTML-TreeBuilder-XPath-0.14.tar.gz",
+    "integrity": "sha256-Jeu9skRKClma5eekV9deCe/N8yZqXFcAsUA8y3SIpPM=",
+    "strip_prefix": "HTML-TreeBuilder-XPath-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-TTRMB9eaS61G8Sy1k0wArIiXP39fVLH9z4wnQ7AiSog="
+    }
+}
