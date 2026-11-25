@@ -61,13 +61,13 @@ cpan.install(
         "AnyEvent-Handle-UDP",
         "AnyEvent-Promise",
         "AnyEvent-Promises",
-        "AnyEvent-Redis-RipeRedis",
         "AnyEvent-Subprocess",
         "AnyEvent-XMPP",
         "AnyEvent-XSPromises",
         "AnyEvent-YACurl",
         "Apache-Session",
-        "Apache-Session-Memcached",
+        "Apache-Session-Memcached:t/01cache.t",
+        "Apache-Session-Memcached:t/02flex.t",
         "App-Cmd:t/basic.t",
         "App-Cmd:t/simple-version.t",
         "App-Cmd:t/tester-exit.t",
@@ -84,12 +84,9 @@ cpan.install(
         "BSD-Resource",
         "Business-CreditCard",
         "Business-OnlinePayment:t/fd_precharge.t",
-        "CHI",
         "CLI-Helpers",
         "Cache",
         "Cache-Cache",
-        "Cache-Memcached",
-        "Cache-Memcached-Fast",
         "Carp-Always",
         "Carp-Assert-More",
         "Cassandra-Client",
@@ -107,15 +104,11 @@ cpan.install(
         "Crypt-URandom",
         "CryptX",
         "DBD-Cassandra",
-        "DBD-Mock",
         "DBD-ODBC",
-        "DBD-SQLite",
         "DBD-mysql",
-        "DBI",
-        "DBIx-Class",
-        "DBIx-Class-Helpers",
-        "DBIx-ContextualFetch",
-        "DBIx-Placeholder-Named",
+        "DBI:t/85gofer.t",
+        "DBIx-Placeholder-Named:t/04-both.t",
+        "DBIx-Placeholder-Named:t/05-root.t",
         "Daemon-Control:t/02_sleep_system.t",
         "Daemon-Control:t/06_stderr_stdout.t",
         "Dancer:t/00_base/008_export.t",
@@ -390,7 +383,6 @@ cpan.install(
         "REST-Neo4p",
         "RPC-XML:t/40_server.t",
         "RPC-XML:t/50_client.t",
-        "Redis",
         "Redis-ScriptCache",
         "Regexp-Util",
         "Role-Kerberos",
@@ -684,11 +676,73 @@ cpan.annotation(
     hub = "cpan",
     output_loc = "auto/DBI/DBI",
     patch_cmds = [
-        "perl -p -e 's/~DRIVER~/Perl/g' Driver.xst > Perl.xsi",
+        "rm -f Perl.xs Perl.xsi",
     ],
     patch_cmds_win = [
-        "powershell -Command \"(Get-Content Driver.xst) -replace '~DRIVER~', 'Perl' | Set-Content Perl.xsi\"",
+        "powershell -Command \"Remove-Item -Force Perl.xs, Perl.xsi\"",
     ],
+)
+cpan.annotation(
+    distribution = "DBIx-Class",
+    hub = "cpan",
+    patch_cmds = [
+        "touch Makefile",
+    ],
+    patch_cmds_win = [
+        "powershell -Command \"New-Item -ItemType File -Force Makefile\"",
+    ],
+)
+cpan.annotation(
+    defines = ["HAVE_POLL_H"],
+    distribution = "Cache-Memcached-Fast",
+    hub = "cpan",
+    output_loc = "auto/Cache/Memcached/Fast/Fast",
+    patch_cmds = [
+        "perl src/gencrc32.pl src/compute_crc32.c src/compute_crc32.h",
+        "perl src/genparser.pl src/reply.kw src/parse_keyword.c src/parse_keyword.h",
+        "rm -f src/socket_win32.c src/addrinfo_hostent.c src/poll_select.c",
+    ],
+    patch_cmds_win = [
+        "powershell -Command \"perl src/gencrc32.pl src/compute_crc32.c src/compute_crc32.h; perl src/genparser.pl src/reply.kw src/parse_keyword.c src/parse_keyword.h; Remove-Item -Force src/socket_win32.c, src/addrinfo_hostent.c, src/poll_select.c\"",
+    ],
+    test_services = ["memcached"],
+)
+cpan.annotation(
+    distribution = "Apache-Session-Memcached",
+    hub = "cpan",
+    test_services = ["memcached"],
+)
+cpan.annotation(
+    distribution = "AnyEvent-Redis-RipeRedis",
+    hub = "cpan",
+    patch_cmds = [
+        "perl -pi -e 's/sleep \\$elapsed \\+= 0\\.1/sleep(\\$elapsed += 0.1)/' t/tlib/Test/RedisRunner.pm",
+    ],
+    patch_cmds_win = [
+        "powershell -Command \"(Get-Content t/tlib/Test/RedisRunner.pm) -replace 'sleep \\$elapsed \\+= 0\\.1', 'sleep(\\$elapsed += 0.1)' | Set-Content t/tlib/Test/RedisRunner.pm\"",
+    ],
+    test_services = ["redis"],
+)
+cpan.annotation(
+    distribution = "Cassandra-Client",
+    hub = "cpan",
+    output_loc = "auto/Cassandra/Client/Client",
+    test_services = ["cassandra"],
+)
+cpan.annotation(
+    distribution = "DBD-Cassandra",
+    hub = "cpan",
+    test_services = ["cassandra"],
+)
+cpan.annotation(
+    distribution = "Search-Elasticsearch",
+    hub = "cpan",
+    test_services = ["elasticsearch"],
+)
+cpan.annotation(
+    distribution = "DBD-mysql",
+    hub = "cpan",
+    test_services = ["mysql"],
 )
 cpan.annotation(
     defines = ["ZSTD_DISABLE_ASM"],

@@ -1,0 +1,12 @@
+package(default_visibility = ["//visibility:public"])
+
+exports_files([
+    "DBIXS.h",
+    "Driver.xst",
+    "Driver_xst.h",
+    "dbd_xsh.h",
+    "dbi_sql.h",
+    "dbipport.h",
+    "dbivport.h",
+    "dbixs_rev.h",
+])
