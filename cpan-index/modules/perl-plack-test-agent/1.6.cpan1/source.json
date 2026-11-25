@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Plack-Test-Agent-1.6.tar.gz",
-    "integrity": "sha256-QsqXD8wnYmA4COyGikN7eGLHjwmD7Oai/duZD7rp4IA=",
-    "strip_prefix": "Plack-Test-Agent-1.6",
-    "overlay": {
-        "BUILD.bazel": "sha256-uOPVHZ3hwYFI0YOJIxTMXLKjNAFb7xWekLPUe/ppTDE="
-    }
-}

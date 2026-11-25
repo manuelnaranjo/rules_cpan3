@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STEVAN/Directory-Scanner-0.04.tar.gz",
-    "integrity": "sha256-yy4lbcXGTKI1SVgO9apxx57CjrzSvIVN+hBBTFUjYK4=",
-    "strip_prefix": "Directory-Scanner-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-UcMVLtBNb7bAWkRArBtN00CQlqFGdKkltUa/95ScKwg="
-    }
-}

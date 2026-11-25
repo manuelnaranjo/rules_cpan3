@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Net-Hadoop-WebHDFS-LWP-0.012.tar.gz",
-    "integrity": "sha256-jO+RmvXVN3XqLNsHXee3cbG1K5TzjXH6Zy4iVNZvGRg=",
-    "strip_prefix": "Net-Hadoop-WebHDFS-LWP-0.012",
-    "overlay": {
-        "BUILD.bazel": "sha256-zsIn1W1I6b68jbY/fjRB/oAU5V8AVZmaHVs6QxtNRXI="
-    }
-}

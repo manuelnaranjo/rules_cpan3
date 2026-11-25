@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Plack-Middleware-Camelcadedb-0.03.tar.gz",
-    "integrity": "sha256-Dg7XzSPesEZfbs44HA+pf0+5kz5aCJka6u6vvT4POZ0=",
-    "strip_prefix": "Plack-Middleware-Camelcadedb-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-cGTUnALGfd9w0rKrANOBzdw93kywffaI32us43P9muo="
-    }
-}

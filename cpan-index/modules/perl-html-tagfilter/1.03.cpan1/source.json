@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/W/WR/WROSS/HTML-TagFilter-1.03.tar.gz",
-    "integrity": "sha256-2vIotflk0WtPMj7/MZiVVknjchd5HeCD/8U9L4UFN/U=",
-    "strip_prefix": "HTML-TagFilter-1.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-NJESdmfl1+TtvV3yfhViNsw9ls0/lPmNeZUXyLfUZ5c="
-    }
-}

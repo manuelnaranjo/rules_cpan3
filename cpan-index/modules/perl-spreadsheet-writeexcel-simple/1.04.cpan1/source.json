@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TM/TMTM/Spreadsheet-WriteExcel-Simple-1.04.tar.gz",
-    "integrity": "sha256-93dapDdAf5UaE9lHwOCsz0rA+Qk5fYQRxfu6QnhYt8M=",
-    "strip_prefix": "Spreadsheet-WriteExcel-Simple-1.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-rrQnIm347lfHWmU2kpNXKjCsdTZY8brNORcDqXhZdU8="
-    }
-}

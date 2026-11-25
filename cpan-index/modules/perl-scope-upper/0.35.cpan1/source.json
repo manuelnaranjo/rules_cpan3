@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/V/VP/VPIT/Scope-Upper-0.35.tar.gz",
-    "integrity": "sha256-pcvcbYU7CZ/RGPVlXjDjuDWGH0wAh+pU+XjnHrFxfDE=",
-    "strip_prefix": "Scope-Upper-0.35",
-    "overlay": {
-        "BUILD.bazel": "sha256-4E2tweawm7ym7cm4uumLrixSUR1YVgbHuytg70LQ9Cw="
-    }
-}

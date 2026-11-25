@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHANSEN/HTTP-MultiPartParser-0.02.tar.gz",
-    "integrity": "sha256-Xt3aFZ9U0W+GjgMkQKwrAk5VqsSJMYcbYmJ/GhbQCxI=",
-    "strip_prefix": "HTTP-MultiPartParser-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-11r72Wn3hS5mtoPzPmv9hbVj2Aw1z+25QDr3U1Mblvo="
-    }
-}

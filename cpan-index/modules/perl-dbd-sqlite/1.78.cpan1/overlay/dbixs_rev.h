@@ -1,4 +1,0 @@
-/* Sun Oct 18 13:19:42 2026 */
-#define DBIXS_RELEASE  1
-#define DBIXS_VERSION  656
-#define DBIXS_REVISION 1871

@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MJ/MJEVANS/DBD-ODBC-1.61.tar.gz",
-    "integrity": "sha256-lt70OMlhDXLQ4k0AfqDqzQBZtSA8F+rbYjveoi+p9Ao=",
-    "strip_prefix": "DBD-ODBC-1.61",
-    "overlay": {
-        "dbdodbc.h": "sha256-Koq83JMopclL/l96k1x4kn5KCujqRZCzbJy1xJ6ObJQ=",
-        "BUILD.bazel": "sha256-/9W351lqMZDxXWqVBSirrWOUNnC6coQxwt+pL4wt6KA="
-    }
-}

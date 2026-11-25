@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Google-ProtocolBuffers-Dynamic-0.44.tar.gz",
-    "integrity": "sha256-FZq6Yfq2Lmvh7DZyjgQW9lkJ5Is8HevsPZAWubHwN6Y=",
-    "strip_prefix": "Google-ProtocolBuffers-Dynamic-0.44",
-    "overlay": {
-        "BUILD.bazel": "sha256-rdhvV4RtkUd8sV3NqOl4g87FvC+SyN+Soy9m24jT1uc="
-    }
-}

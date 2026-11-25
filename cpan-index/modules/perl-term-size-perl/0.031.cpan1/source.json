@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Term-Size-Perl-0.031.tar.gz",
-    "integrity": "sha256-rppnRssbMF3cj42MpGh4VSucESNiiXHhOidRg4IvIJ4=",
-    "strip_prefix": "Term-Size-Perl-0.031",
-    "overlay": {
-        "BUILD.bazel": "sha256-eQbqa+W54IZaWJ1Yb7F6Rwg9Q86OXKbiCpmSIisTwOs="
-    }
-}

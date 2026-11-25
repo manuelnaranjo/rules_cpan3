@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302226.tar.gz",
-    "integrity": "sha256-yt25Yu6w+z7kdOKyW+7TAlRjjXRAcQa7wSvyXjEY7IA=",
-    "strip_prefix": "Test-Simple-1.302226",
-    "overlay": {
-        "BUILD.bazel": "sha256-9xz/1Uuf4bsW+/TDEZEuWSy9WwGnYmqf0VcoprztIwc="
-    }
-}

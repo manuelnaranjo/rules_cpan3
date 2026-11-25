@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MY/MYTRAM/Getopt-ArgParse-1.0.6.tar.gz",
-    "integrity": "sha256-uXsSvJOqs+vY4pTvYYgkECLshN7Y16yDUbZ16gwSPn0=",
-    "strip_prefix": "Getopt-ArgParse-1.0.6",
-    "overlay": {
-        "BUILD.bazel": "sha256-xJ5uwJgkN3AmTdT3AhGaiSNZ+kl0P6780pakfyPK9JE="
-    }
-}

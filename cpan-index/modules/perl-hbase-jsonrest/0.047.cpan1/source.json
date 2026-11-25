@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHCAT/HBase-JSONRest-0.047.tar.gz",
-    "integrity": "sha256-cvjdmxDhPBUp/2mpMLeGn11SzadCAZYAm/2Vl7vr3g0=",
-    "strip_prefix": "HBase-JSONRest-0.047",
-    "overlay": {
-        "BUILD.bazel": "sha256-zfTLjznHuC0Z/Y5rM0hixVFU9edTBKjvDF2uz7Bh8UY="
-    }
-}

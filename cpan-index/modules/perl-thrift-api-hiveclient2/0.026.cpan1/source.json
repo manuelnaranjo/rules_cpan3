@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Thrift-API-HiveClient2-0.026.tar.gz",
-    "integrity": "sha256-eiPaX5zUS3gkBXbNY9Oa5UBvvvxcJgao3VJyxsyQyDM=",
-    "strip_prefix": "Thrift-API-HiveClient2-0.026",
-    "overlay": {
-        "BUILD.bazel": "sha256-qmmc+tnei6k/SmfYv9AeEs4cOk06ueHVi+xMOutIcKQ="
-    }
-}

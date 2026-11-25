@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/common-sense-3.75.tar.gz",
-    "integrity": "sha256-qGocTKTzAG10eQZEJaCfpbZonlcmH8uZT+Z9Bhy6Dn4=",
-    "strip_prefix": "common-sense-3.75",
-    "overlay": {
-        "BUILD.bazel": "sha256-ZszNcJ+6vu5JVriIfQ9ub6XaXacNSTiJU27z5ZFzE8Y="
-    }
-}

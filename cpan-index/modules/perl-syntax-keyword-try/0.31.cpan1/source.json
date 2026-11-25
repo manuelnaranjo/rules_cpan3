@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Syntax-Keyword-Try-0.31.tar.gz",
-    "integrity": "sha256-e8YkLXRjeJgqWZs03jXwfT3syeCdVkb4+juH9FlBSko=",
-    "strip_prefix": "Syntax-Keyword-Try-0.31",
-    "overlay": {
-        "BUILD.bazel": "sha256-4DNqKlgzvptAjZyxlrFwrAccTffBgo97pg6Ck0I6CPY="
-    }
-}

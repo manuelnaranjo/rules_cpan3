@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-Sender-2.603.tar.gz",
-    "integrity": "sha256-nW8qShs3TAKFNZmWZz+Rn5rslRnYjFUQBnn4i56+AHU=",
-    "strip_prefix": "Email-Sender-2.603",
-    "overlay": {
-        "BUILD.bazel": "sha256-aua8fzEGPPGS7mwxBXGFckoz/XsM+wOoR1l28RLiR/U="
-    }
-}

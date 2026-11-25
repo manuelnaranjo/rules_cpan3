@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOMK/Devel-Cover-Report-SonarGeneric-0.7.tar.gz",
-    "integrity": "sha256-KcMQB2GpG8COpFOawVujj0r12f9ENgDDFatMAmwYogA=",
-    "strip_prefix": "Devel-Cover-Report-SonarGeneric-0.7",
-    "overlay": {
-        "BUILD.bazel": "sha256-92MpeLsATgtkmwWisuJWAcxzMaqtExMjQukG+6HKPqc="
-    }
-}

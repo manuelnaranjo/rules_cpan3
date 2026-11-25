@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AG/AGROLMS/LWP-Authen-Negotiate-0.08.tar.gz",
-    "integrity": "sha256-UJSOGcUyt4ZOiqr8aHRBXKB1s+oUvHPbWCNcR12sSrs=",
-    "strip_prefix": "LWP-Authen-Negotiate-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-tj49/mJIZYpsvDUiFMjjowCKF6L2+Y9xbqF4mfA0FXM="
-    }
-}

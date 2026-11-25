@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-OpenSSL-RSA-0.41.tar.gz",
-    "integrity": "sha256-gvqDmJe4jpwkW2Jl874m07yHnK5MeoFR+tSjB8M2aCI=",
-    "strip_prefix": "Crypt-OpenSSL-RSA-0.41",
-    "overlay": {
-        "BUILD.bazel": "sha256-GJR++vvG1hIKj9d4PJMiABwQb+rcZo2VlF3pIrKSsdM="
-    }
-}

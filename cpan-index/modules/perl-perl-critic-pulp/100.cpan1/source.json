@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KR/KRYDE/Perl-Critic-Pulp-100.tar.gz",
-    "integrity": "sha256-F9M63SJgrEl5ElDM0y2ovKgGO/b89AbdsSs6AHZXjpg=",
-    "strip_prefix": "Perl-Critic-Pulp-100",
-    "overlay": {
-        "BUILD.bazel": "sha256-YGdMjQVOxh6b6AQZIpB8qvD8ttkrjonKQo6ubp6jHX8="
-    }
-}

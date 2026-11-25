@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BO/BOOK/Git-Repository-1.326.tar.gz",
-    "integrity": "sha256-BEl9JZL4+BG8ZvTjL22o/kQwhvjCe4unvOOVv4Lw+fs=",
-    "strip_prefix": "Git-Repository-1.326",
-    "overlay": {
-        "BUILD.bazel": "sha256-auRiz+NuwQW6k6IlbFH2nlOZYVAkg80JE+tij8xcCCY="
-    }
-}

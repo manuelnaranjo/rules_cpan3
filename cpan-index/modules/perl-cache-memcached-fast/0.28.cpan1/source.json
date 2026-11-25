@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RA/RAZ/Cache-Memcached-Fast-0.28.tar.gz",
-    "integrity": "sha256-fEJMJTtl/2LPFXe7QYgCGSoYgF6jH6/Ap65YnkRsidI=",
-    "strip_prefix": "Cache-Memcached-Fast-0.28",
-    "overlay": {
-        "BUILD.bazel": "sha256-QRKxwhV315cUnSXCM0ZAOvjYCluVjsPHg4GMjBjvYTw="
-    }
-}

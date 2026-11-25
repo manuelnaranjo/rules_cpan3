@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAXMIND/MaxMind-DB-Reader-1.000014.tar.gz",
-    "integrity": "sha256-OCAHj5yWf5qIch6kDKBeSZnBxTAb68HRGQYPntXOOak=",
-    "strip_prefix": "MaxMind-DB-Reader-1.000014",
-    "overlay": {
-        "BUILD.bazel": "sha256-tFPtvvd+zezKesD5eVNQmYdiOvPl6gcT9Mo7yRYXttI="
-    }
-}

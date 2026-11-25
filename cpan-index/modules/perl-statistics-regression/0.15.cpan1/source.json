@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IA/IAWELCH/Statistics-Regression-0.53.tar.gz",
-    "integrity": "sha256-LMU+OZbdpNzrXXp5S6FRB623pmFOGbSFwLjkelq4tpo=",
-    "strip_prefix": "Statistics-Regression-0.53",
-    "overlay": {
-        "BUILD.bazel": "sha256-AUOdEJYqzYq+/ziXS8/jB1WpHE1Myx2TopwqXC4aHeQ="
-    }
-}

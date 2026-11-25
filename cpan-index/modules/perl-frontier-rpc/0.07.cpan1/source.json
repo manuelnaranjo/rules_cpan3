@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RT/RTFIREFLY/Frontier-RPC-0.07b4p1.tar.gz",
-    "integrity": "sha256-anqtWCLGvniUeFRy8QrlSKoohsgoa0f5CsGSBn8F51Q=",
-    "strip_prefix": "Frontier-RPC-0.07b4p1",
-    "overlay": {
-        "BUILD.bazel": "sha256-A+NdAwji47B3EMgDdfe2LFCWMVRy4CRplkx9caEYfDI="
-    }
-}

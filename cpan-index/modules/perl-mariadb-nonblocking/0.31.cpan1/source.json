@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HU/HUGMEIR/MariaDB-NonBlocking-0.31.tar.gz",
-    "integrity": "sha256-/T6NczsCjjxmnqx3mFAc1wxmMP/CEWoRapfPhUpNkoY=",
-    "strip_prefix": "MariaDB-NonBlocking-0.31",
-    "overlay": {
-        "BUILD.bazel": "sha256-Bn+C1eGtDhckD+XG4g5dZ9vl8hqilVL+TeFrCkHvW3s="
-    }
-}

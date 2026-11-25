@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Perl-Critic-1.156.tar.gz",
-    "integrity": "sha256-Vyp8h1i6HAq22vC9QCl8Tw3PFRbwhFIt8sK/BNUl4jI=",
-    "strip_prefix": "Perl-Critic-1.156",
-    "overlay": {
-        "BUILD.bazel": "sha256-GdcbgDRl5Xuu8V2sUEHAs8HglLVby9xpsKY+K0FMirc="
-    }
-}

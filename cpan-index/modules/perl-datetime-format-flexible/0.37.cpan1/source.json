@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TH/THINC/DateTime-Format-Flexible-0.37.tar.gz",
-    "integrity": "sha256-0wun8s5RL1gg1t1RxuLQK7wb99PuB6C3KCsc75oucs0=",
-    "strip_prefix": "DateTime-Format-Flexible-0.37",
-    "overlay": {
-        "BUILD.bazel": "sha256-gdkmKhyjE8NJc6Zue6+Ngo1vfQjRKAozMuahQbe6k6Q="
-    }
-}

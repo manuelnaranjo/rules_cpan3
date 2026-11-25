@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/V/VI/VIPUL/Crypt-RSA-1.99.tar.gz",
-    "integrity": "sha256-Rwb9ZgXJIM0cefSvwANrFOIzYgFis5V6vptfG+ULJL4=",
-    "strip_prefix": "Crypt-RSA-1.99",
-    "overlay": {
-        "BUILD.bazel": "sha256-M4S1ccf6djHPo/cH26ko2uXFaRESeWMWdWBYy+JAVmI="
-    }
-}

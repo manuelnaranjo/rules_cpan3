@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/F/FA/FANGLY/Math-Random-MT-1.17.tar.gz",
-    "integrity": "sha256-BpodmKYZy6Hxq5H71u3OtkLoTn0WLE8OJEITkDe1sNo=",
-    "strip_prefix": "Math-Random-MT-1.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-BK9gBkQuwYyTgLoW7vx6hmC5KYZZX3Fjd+9gfY2hjcU="
-    }
-}

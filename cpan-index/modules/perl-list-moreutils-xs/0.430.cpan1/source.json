@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-XS-0.430.tar.gz",
-    "integrity": "sha256-6M5G1XwXnuzYdYKT6UAP8wCq8g/v4KnRW5/iMCucskI=",
-    "strip_prefix": "List-MoreUtils-XS-0.430",
-    "overlay": {
-        "LMUconfig.h": "sha256-ngY0J7TnJghY1jH0l2v3/K7fpPU64LK7G2kKv5w3W0c=",
-        "BUILD.bazel": "sha256-yZ/tsMoY6TUKhVqbntIYVEpAI/TtSv5/R53ld59rH24="
-    }
-}

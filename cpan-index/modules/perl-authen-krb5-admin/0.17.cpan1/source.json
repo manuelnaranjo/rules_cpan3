@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SJ/SJQUINNEY/Authen-Krb5-Admin-0.17.tar.gz",
-    "integrity": "sha256-XdScrNmD79YajD8aVlcbtzeF6xVZCLXXvsl+7XjfDFQ=",
-    "strip_prefix": "Authen-Krb5-Admin-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-vGy5qWOAW9W8P7RvuFY2V0WOGPVFR6FTheZZkVbgvK0="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Plack-Middleware-Deflater-0.14.tar.gz",
-    "integrity": "sha256-O+YLOD6eAtxfMkCbqIs3zXWEwnXQKDLardZOcxFnhYY=",
-    "strip_prefix": "Plack-Middleware-Deflater-0.14",
-    "overlay": {
-        "BUILD.bazel": "sha256-vZvvDqKLVf77LGjob+JU4ff2Kk/aoOAB2GZeKdSe8NY="
-    }
-}

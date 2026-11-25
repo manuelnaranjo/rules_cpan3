@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/AutoLoader-5.74.tar.gz",
-    "integrity": "sha256-L6x1sFMJ9xpocYBM0l4aO6Cij0PylPtUUoB3VY2jr/Q=",
-    "strip_prefix": "AutoLoader-5.74",
-    "overlay": {
-        "BUILD.bazel": "sha256-gRt/eJFUXRqpbsFu/+EKEvRvaxLUGarCF1FZMfjJamU="
-    }
-}

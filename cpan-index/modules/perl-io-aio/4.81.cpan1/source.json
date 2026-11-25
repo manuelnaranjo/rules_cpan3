@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/IO-AIO-4.81.tar.gz",
-    "integrity": "sha256-ZwKfIOm3NKwfSD9xddTORfkkWBx96P30TiDHm+bcByk=",
-    "strip_prefix": "IO-AIO-4.81",
-    "overlay": {
-        "BUILD.bazel": "sha256-C7PcWIC0nCMqcGUKs92KSTdVuGken0J/j0tTeWxm8VY="
-    }
-}

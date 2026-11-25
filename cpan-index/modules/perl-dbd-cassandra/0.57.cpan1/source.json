@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TV/TVDW/DBD-Cassandra-0.57.tar.gz",
-    "integrity": "sha256-098XDQbDrhgIaPfYHgAMABVjRQlIn7YPx/SeYmsaRmU=",
-    "strip_prefix": "DBD-Cassandra-0.57",
-    "overlay": {
-        "BUILD.bazel": "sha256-sTKJZ1Tpar6cTIDhE1nuQS0eeMrdPwOtLtR89+4i/k0="
-    }
-}

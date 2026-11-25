@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/Lingua-EN-Inflexion-0.002009.tar.gz",
-    "integrity": "sha256-IrDNYutiEokzhdtPXUydtQGK1/ejtz+hiHZ9BvWfhEQ=",
-    "strip_prefix": "Lingua-EN-Inflexion-0.002009",
-    "overlay": {
-        "BUILD.bazel": "sha256-Hbd5Enmi/Hvrccq/ScikA6wEhHGi5DIuSOHJvxTxqC8="
-    }
-}

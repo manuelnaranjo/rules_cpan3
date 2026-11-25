@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Y/YA/YANICK/Dancer2-Plugin-REST-1.03.tar.gz",
-    "integrity": "sha256-/eKBeuaMPSGJMI0EuFAfNievjoVzan9SWNS+wfMc248=",
-    "strip_prefix": "Dancer2-Plugin-REST-1.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-G+HwKJyBb2l5+jMdT3zTwCtCwn78WNOH8dYe0N9Wxlo="
-    }
-}

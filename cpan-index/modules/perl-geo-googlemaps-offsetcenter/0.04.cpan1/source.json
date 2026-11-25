@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IF/IFTEKHAR/Geo-GoogleMaps-OffsetCenter-0.04.tar.gz",
-    "integrity": "sha256-JwEXhhuoMHcx3EZcCRTciUjhJ8A7Jug4x4dhEDQYK0E=",
-    "strip_prefix": "Geo-GoogleMaps-OffsetCenter-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-lrKsU1+VW91ffD9vdCFXTBcCj0GXd2Fjwa7Nq4u+N+E="
-    }
-}

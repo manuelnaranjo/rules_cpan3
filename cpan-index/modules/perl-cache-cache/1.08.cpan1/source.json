@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Cache-Cache-1.08.tar.gz",
-    "integrity": "sha256-0sf9Xbpd0BC32JI1FokLtsz2tfGIzLafNcsP1sAx0eg=",
-    "strip_prefix": "Cache-Cache-1.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-4Ltv7sgQdjmJabCdTxSGCgaNjWMEo60eyHu4m7YO+8c="
-    }
-}

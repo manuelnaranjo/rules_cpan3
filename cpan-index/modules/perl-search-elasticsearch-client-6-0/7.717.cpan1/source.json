@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EZ/EZIMUEL/Search-Elasticsearch-Client-6_0-7.717.tar.gz",
-    "integrity": "sha256-X+YdEl7P3l6zXoFB+j6GBvHqIEGNeAb3nKlS3g5aDx0=",
-    "strip_prefix": "Search-Elasticsearch-Client-6_0-7.717",
-    "overlay": {
-        "BUILD.bazel": "sha256-uWbHhg7ONnf/8dGC6XoBd4pOXGguCIyuyQ+xEMkG7s4="
-    }
-}
