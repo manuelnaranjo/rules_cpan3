@@ -620,7 +620,7 @@
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "dMA6Rw+jcXh+k13uJjEi/MUdJTR4DXKxbvnie5zL6Y8=",
-        "usagesDigest": "/JBKS5r2opb+0vr/QshAgxtiAkc7rwmVvVcn8Pmjyww=",
+        "usagesDigest": "TXO/kA/zIYWRFjwQFqa4OvJiSpvi0Evlxmd1DLAxiuA=",
         "recordedInputs": [
           "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "REPO_MAPPING:,perl-io-tty perl-io-tty+",
@@ -1911,8 +1911,12 @@
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "perl constants.pl.PL"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"perl constants.pl.PL\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -1958,9 +1962,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2574,9 +2576,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -2727,9 +2727,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6058,9 +6056,7 @@
               "test_deps": [
                 "@cpan__IO-Stringy//:IO-Stringy"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6273,9 +6269,7 @@
               "test_deps": [
                 "@cpan__Test-Most//:Test-Most"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6309,9 +6303,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6731,17 +6723,19 @@
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "mkdir -p lib/Config/General && cp General/*.pm lib/Config/General/"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"New-Item -ItemType Directory -Force lib/Config/General; Copy-Item General/*.pm lib/Config/General/\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -6992,9 +6986,7 @@
               "test_deps": [
                 "@cpan__Test-Class//:Test-Class"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7063,9 +7055,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -7270,9 +7260,7 @@
                 "@cpan__File-Slurp//:File-Slurp",
                 "@cpan__Test-Most//:Test-Most"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -9493,15 +9481,22 @@
                 "DBI::Util::CacheMemory"
               ],
               "runtime_deps": [],
-              "defines": [],
+              "defines": [
+                "XS_VERSION=\\\"1.656\\\"",
+                "VERSION=\\\"1.656\\\""
+              ],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/DBI/DBI",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "perl -p -e 's/~DRIVER~/Perl/g' Driver.xst > Perl.xsi"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"(Get-Content Driver.xst) -replace '~DRIVER~', 'Perl' | Set-Content Perl.xsi\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -10186,10 +10181,11 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/02_sleep_system.t",
+                "t/06_stderr_stdout.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -10701,9 +10697,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -10887,10 +10881,15 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/01-mysql.t",
+                "t/02-mysql.t",
+                "t/03-mysql.t",
+                "t/04-mysql.t",
+                "t/05-mysql.t",
+                "t/50-dir.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -10934,9 +10933,7 @@
               "test_deps": [
                 "@cpan__Test-Deep//:Test-Deep"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -11006,10 +11003,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/readonly.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -11115,10 +11112,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/10basic.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -11162,9 +11159,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -11683,10 +11678,11 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/000.2-warn.t",
+                "t/026-caller_message.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -31493,15 +31489,22 @@
                 "List::MoreUtils::XS"
               ],
               "runtime_deps": [],
-              "defines": [],
+              "defines": [
+                "HAVE_SIZE_T",
+                "HAVE_SSIZE_T"
+              ],
               "includes": [],
               "native_deps": [],
               "output_loc": "",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "touch LMUconfig.h"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"New-Item -ItemType File -Name LMUconfig.h\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -36409,9 +36412,7 @@
               "test_deps": [
                 "@cpan__Capture-Tiny//:Capture-Tiny"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -36458,9 +36459,7 @@
                 "@cpan__Test-Exception//:Test-Exception",
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -36540,9 +36539,7 @@
               "test_deps": [
                 "@cpan__Test-Trap//:Test-Trap"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -36732,9 +36729,7 @@
                 "@cpan__Moo//:Moo",
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -37225,10 +37220,11 @@
                 "@cpan__Test-Needs//:Test-Needs",
                 "@cpan__Dist-CheckConflicts//:Dist-CheckConflicts"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/attributes/attribute_delegation.t",
+                "t/basics/override_and_foreign_classes.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -37615,9 +37611,7 @@
               "test_deps": [
                 "@cpan__IO-Stringy//:IO-Stringy"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -37652,10 +37646,10 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/01basic.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -37696,9 +37690,7 @@
                 "@cpan__Moose//:Moose",
                 "@cpan__Test-Fatal//:Test-Fatal"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -37969,10 +37961,10 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/040_basic_utils.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -38183,10 +38175,10 @@
                 "@cpan__Test-Fatal//:Test-Fatal",
                 "@cpan__Module-Build-Tiny//:Module-Build-Tiny"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/01_basic.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -73039,9 +73031,7 @@
               "test_deps": [
                 "@cpan__Perl-Critic//:Perl-Critic"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -73241,9 +73231,7 @@
                 "@cpan__Perl-Critic//:Perl-Critic",
                 "@cpan__Module-Build-Tiny//:Module-Build-Tiny"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -74813,9 +74801,7 @@
               "test_deps": [
                 "@cpan__Test-Needs//:Test-Needs"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -75433,21 +75419,23 @@
               "defines": [],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/Proc/ProcessTable/ProcessTable",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "sh -c 'if [ \"$$(uname)\" = \"Darwin\" ]; then cp os/darwin.c OS.c; else cp os/Linux.c OS.c; fi && rm -f os/*.c'"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"Copy-Item os/MSWin32.c OS.c; Remove-Item os/*.c\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -77819,15 +77807,21 @@
                 "Sereal::Performance"
               ],
               "runtime_deps": [],
-              "defines": [],
+              "defines": [
+                "ZSTD_DISABLE_ASM"
+              ],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/Sereal/Decoder/Decoder",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "rm -rf author_tools"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"Remove-Item -Recurse -Force author_tools\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -77862,15 +77856,21 @@
               "runtime_deps": [
                 "@cpan__Sereal-Decoder//:Sereal-Decoder"
               ],
-              "defines": [],
+              "defines": [
+                "ZSTD_DISABLE_ASM"
+              ],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/Sereal/Encoder/Encoder",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "rm -rf author_tools"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"Remove-Item -Recurse -Force author_tools\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -79858,9 +79858,7 @@
               "test_deps": [
                 "@cpan__Clone//:Clone"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -80439,8 +80437,12 @@
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "rm -rf contrib lib/xs"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"Remove-Item -Recurse -Force contrib,lib/xs\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -80449,9 +80451,7 @@
               "test_deps": [
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -80515,9 +80515,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -80601,24 +80599,28 @@
                 "Sys::Syslog::Win32"
               ],
               "runtime_deps": [],
-              "defines": [],
+              "defines": [
+                "I_SYSLOG"
+              ],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/Sys/Syslog/Syslog",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "cp fallback/const-c.inc . && cp fallback/const-xs.inc . && rm -rf fallback"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"Copy-Item fallback/const-c.inc .; Copy-Item fallback/const-xs.inc .; Remove-Item -Recurse -Force fallback\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -80777,9 +80779,7 @@
                 "@cpan__Test-DiagINC//:Test-DiagINC",
                 "@cpan__Test-XML//:Test-XML"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -80817,9 +80817,7 @@
                 "@cpan__Test-Deep//:Test-Deep",
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -81324,9 +81322,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -81350,17 +81346,20 @@
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "perl inc/Probe.pm",
+                "mkdir -p lib/Term/Size/Perl && cp Params.pm lib/Term/Size/Perl/Params.pm"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"perl inc/Probe.pm; New-Item -ItemType Directory -Force lib/Term/Size/Perl; Copy-Item Params.pm lib/Term/Size/Perl/Params.pm\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -81446,21 +81445,25 @@
               "defines": [],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/Term/ReadKey/ReadKey",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "perl genchars.pl",
+                "perl ReadKey.pm.PL",
+                "mkdir -p lib/Term && cp ReadKey.pm lib/Term/ReadKey.pm"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"perl genchars.pl; perl ReadKey.pm.PL; New-Item -ItemType Directory -Force lib/Term; Copy-Item ReadKey.pm lib/Term/ReadKey.pm\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -81784,9 +81787,7 @@
                 "@cpan__Test-Requires//:Test-Requires",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -81856,10 +81857,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/100-internal-basic.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -81932,10 +81933,14 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/03-merge-configs.t",
+                "t/04-load-fixtures.t",
+                "t/05-example-schema.t",
+                "t/11-fixtures_ok_populate.t",
+                "t/20-fixtures_ok_populate_hash.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -82677,9 +82682,7 @@
               "test_deps": [
                 "@cpan__AnyEvent-HTTP//:AnyEvent-HTTP"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -82991,9 +82994,7 @@
                 "@cpan__Test-RequiresInternet//:Test-RequiresInternet",
                 "@cpan__Test-Warnings//:Test-Warnings"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -83122,9 +83123,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -83355,10 +83354,15 @@
                 "@cpan__Test2-Plugin-NoWarnings//:Test2-Plugin-NoWarnings",
                 "@cpan__Test2-Tools-Explain//:Test2-Tools-Explain"
               ],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/chmod-filetemp.t",
+                "t/chown-chmod-nostrict.t",
+                "t/file_access_hooks.t",
+                "t/plugin-filetemp.t",
+                "t/readline.t",
+                "t/sysopen_strict.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -83430,9 +83434,7 @@
                 "@cpan__Test-Exception//:Test-Exception",
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -83464,9 +83466,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -83607,9 +83607,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -83842,9 +83840,7 @@
               "test_deps": [
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -83944,10 +83940,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/all_modules.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -85681,9 +85677,7 @@
               "test_deps": [
                 "@cpan__Test-Most//:Test-Most"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -86075,9 +86069,7 @@
                 "@cpan__Test-Differences//:Test-Differences",
                 "@cpan__Test-Exception//:Test-Exception"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -86183,10 +86175,15 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/06.t",
+                "t/10.t",
+                "t/11.t",
+                "t/12.t",
+                "t/13.t",
+                "t/14.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -86450,9 +86447,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -86625,9 +86620,7 @@
               "test_deps": [
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -87129,9 +87122,7 @@
               "test_deps": [
                 "@cpan__Module-Build//:Module-Build"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -87217,21 +87208,23 @@
               "defines": [],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/Time/HiRes/HiRes",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "cp fallback/const-c.inc . && cp fallback/const-xs.inc ."
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"Copy-Item fallback/const-c.inc .; Copy-Item fallback/const-xs.inc .\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -87268,9 +87261,7 @@
                 "@cpan__Test-Number-Delta//:Test-Number-Delta",
                 "@cpan__Test-Requires//:Test-Requires"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -87310,9 +87301,7 @@
                 "@cpan__Test-Needs//:Test-Needs",
                 "@cpan__ExtUtils-MakeMaker-CPANfile//:ExtUtils-MakeMaker-CPANfile"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -87348,9 +87337,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -87870,10 +87857,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/class.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -87968,9 +87955,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -90079,9 +90064,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -90125,9 +90108,7 @@
                 "@cpan__XML-Catalog//:XML-Catalog",
                 "@cpan__XML-Parser//:XML-Parser"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -90170,9 +90151,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -90206,9 +90185,7 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -90266,9 +90243,7 @@
               "test_deps": [
                 "@cpan__Path-Tiny//:Path-Tiny"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -90500,10 +90475,14 @@
               "runtime_deps": [
                 "@cpan__YAML-PP//:YAML-PP"
               ],
-              "defines": [],
-              "includes": [],
+              "defines": [
+                "HAVE_CONFIG_H"
+              ],
+              "includes": [
+                "LibYAML/lib"
+              ],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/YAML/LibYAML/API/XS/XS",
               "patch_args": [
                 "-p0"
               ],
@@ -90581,10 +90560,10 @@
               "execution_requirements": {},
               "extra_tags": [],
               "test_deps": [],
-              "test_tags": [
-                "manual"
+              "test_tags": [],
+              "manual_tests": [
+                "t/32.cyclic-refs.t"
               ],
-              "manual_tests": [],
               "strip_prefix": ""
             }
           },
@@ -90622,9 +90601,7 @@
               "test_deps": [
                 "@cpan__YAML-PP//:YAML-PP"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -91963,12 +91940,16 @@
               "defines": [],
               "includes": [],
               "native_deps": [],
-              "output_loc": "",
+              "output_loc": "auto/warnings/unused/unused",
               "patch_args": [
                 "-p0"
               ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
+              "patch_cmds": [
+                "perl -MDevel::PPPort -e 'Devel::PPPort::WriteFile()'"
+              ],
+              "patch_cmds_win": [
+                "powershell -Command \"perl -MDevel::PPPort -e 'Devel::PPPort::WriteFile()'\""
+              ],
               "patches": [],
               "target_compatible_with": [],
               "exec_compatible_with": [],
@@ -91977,9 +91958,7 @@
               "test_deps": [
                 "@cpan__Test-Warn//:Test-Warn"
               ],
-              "test_tags": [
-                "manual"
-              ],
+              "test_tags": [],
               "manual_tests": [],
               "strip_prefix": ""
             }
@@ -141007,7 +140986,6 @@
                 "Algorithm-Heapify-XS",
                 "Amazon-S3",
                 "AnyEvent",
-                "AnyEvent-AIO",
                 "AnyEvent-HTTP",
                 "AnyEvent-Handle-UDP",
                 "AnyEvent-Promise",
@@ -141019,10 +140997,8 @@
                 "AnyEvent-YACurl",
                 "Apache-Session",
                 "Apache-Session-Memcached",
-                "App-Daemon",
                 "App-ElasticSearch-Utilities",
                 "App-FatPacker",
-                "App-Inotify-Hookable",
                 "App-Oozie",
                 "Authen-SASL-XS",
                 "AutoLoader",
@@ -141039,13 +141015,6 @@
                 "Cassandra-Client",
                 "Class-MethodMaker",
                 "Class-Std-Fast",
-                "Class-Trigger",
-                "CodeGen-Protection",
-                "Common-CLI",
-                "Config-General",
-                "Config-Validate",
-                "Constant-Export-Lazy",
-                "Convert-BinHex",
                 "Cpanel-JSON-XS",
                 "Crypt-JWT",
                 "Crypt-OpenPGP",
@@ -141066,21 +141035,13 @@
                 "DBIx-Class-Helpers",
                 "DBIx-ContextualFetch",
                 "DBIx-Placeholder-Named",
-                "Daemon-Control",
                 "Dancer2",
                 "Dancer2-Template-MojoTemplate",
-                "Data-Buffer",
-                "Data-Consumer",
-                "Data-DPath",
-                "Data-Dump-Streamer",
-                "Data-FlexSerializer",
-                "Data-FormValidator",
                 "Data-GUID",
                 "Data-ICal",
                 "Data-MessagePack",
                 "Data-MessagePack-Stream",
                 "Data-Perl",
-                "Data-Printer",
                 "Data-Structure-Util",
                 "Data-UUID",
                 "Data-Undump",
@@ -141239,17 +141200,7 @@
                 "Module-Pluggable",
                 "Module-Reader",
                 "Module-Util",
-                "MooX-Cmd",
-                "MooX-HandlesVia",
-                "MooX-Options",
-                "MooX-Types-MooseLike-Numeric",
-                "Moose",
                 "MooseX-Getopt-Usage",
-                "MooseX-Log-Log4perl",
-                "MooseX-MungeHas",
-                "MooseX-NonMoose",
-                "MooseX-Storage",
-                "MooseX-Types-DateTime",
                 "Mozilla-PublicSuffix",
                 "Net-AMQP-RabbitMQ",
                 "Net-Amazon-S3",
@@ -141292,12 +141243,10 @@
                 "Perl-Critic",
                 "Perl-Critic-Community",
                 "Perl-Critic-Lax",
-                "Perl-Critic-Moose",
                 "Perl-Critic-More",
                 "Perl-Critic-Policy-BuiltinFunctions-ProhibitDeleteOnArrays",
                 "Perl-Critic-Policy-BuiltinFunctions-ProhibitReturnOr",
                 "Perl-Critic-Policy-HTTPCookies",
-                "Perl-Critic-Policy-Moo-ProhibitMakeImmutable",
                 "Perl-Critic-Policy-Perlsecret",
                 "Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection",
                 "Perl-Critic-Policy-ValuesAndExpressions-ProhibitSingleArgArraySlice",
@@ -141317,11 +141266,9 @@
                 "Plack-Middleware-ChromeLogger",
                 "Plack-Middleware-Deflater",
                 "Plack-Test-Agent",
-                "Pod-Coverage-TrustMe",
                 "Pod-POM",
                 "Pod-Usage",
                 "Proc-Daemon",
-                "Proc-ProcessTable",
                 "Promises",
                 "Protocol-HTTP2",
                 "Queue-Q",
@@ -141370,72 +141317,31 @@
                 "String-Format",
                 "String-ShellQuote",
                 "String-Similarity",
-                "Struct-Diff",
-                "Sys-CpuAffinity",
-                "Sys-RunAlone",
-                "Sys-Syslog",
                 "TAP-Formatter-HTML",
-                "TAP-Formatter-JUnit",
-                "TAP-Harness-JUnit",
                 "Term-ProgressBar",
-                "Term-Size",
-                "Term-Size-Perl",
-                "TermReadKey",
-                "Test-Class-Moose",
-                "Test-Compile",
-                "Test-DBIx-Class",
-                "Test-HTTP-AnyEvent-Server",
-                "Test-LWP-UserAgent",
-                "Test-Manifest",
-                "Test-MockFile",
                 "Test-MockModule",
-                "Test-MockObject",
-                "Test-MockTime",
-                "Test-Most",
-                "Test-Perl-Critic",
-                "Test-Pod-Coverage",
-                "Text-CSV-Slurp",
                 "Text-CSV_XS",
                 "Text-Levenshtein-Damerau-XS",
                 "Text-LevenshteinXS",
-                "Text-Markdown",
-                "Text-Ngrams",
                 "Text-ParagraphDiff",
-                "Text-TabularDisplay",
-                "Text-WordDiff",
                 "Thrift-API-HiveClient2",
                 "Thrift-SASL-Transport",
                 "Tie-EncryptedHash",
-                "Time-Crontab",
-                "Time-HiRes",
-                "Time-Moment",
-                "Time-Out",
-                "Time-ParseDate",
                 "Type-Tiny",
                 "Types-Serialiser",
-                "UNIVERSAL-can",
-                "UNIVERSAL-moniker",
                 "UV",
                 "Unicode-Collate",
                 "Unicode-Map8",
                 "Unicode-MapUTF8",
                 "Unix-Sysexits",
                 "WWW-Mechanize",
-                "XML-Simple",
-                "XML-TreeBuilder",
-                "XML-Twig",
-                "XML-Writer",
-                "XML-XPath",
                 "YAML-LibYAML",
-                "YAML-PP",
-                "YAML-PP-LibYAML",
                 "YAML-Syck",
                 "ack",
                 "decorators",
                 "fs-Promises",
                 "jmx4perl",
-                "libwww-perl",
-                "warnings-unused"
+                "libwww-perl"
               ],
               "test_modules": {
                 "YAML-LibYAML": "YAML::XS"
