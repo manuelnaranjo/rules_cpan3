@@ -1,0 +1,26 @@
+load("@aspect_rules_py//py:defs.bzl", "py_binary", "py_library")
+
+package(default_visibility = ["//visibility:public"])
+
+py_library(
+    name = "indexer_lib",
+    srcs = [
+        "heuristics.py",
+        "indexer.py",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+py_binary(
+    name = "indexer",
+    srcs = ["indexer.py"],
+    main = "indexer.py",
+    visibility = ["//visibility:public"],
+    deps = [":indexer_lib"],
+)
+
+alias(
+    name = "cpan_indexer",
+    actual = ":indexer",
+    visibility = ["//visibility:public"],
+)
