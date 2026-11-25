@@ -117,6 +117,14 @@ py_test(
     deps = ["//cpan/tools/resolver:resolver_lib"],
 )
 
+# 6. Indexer tool unit and integration test
+py_test(
+    name = "indexer_test",
+    size = "small",
+    srcs = ["indexer_test.py"],
+    deps = ["//cpan/tools/indexer:indexer_lib"],
+)
+
 # 6. Bzlmod module extension & repository rules tests
 perl_test(
     name = "cpan_pureperl_test",

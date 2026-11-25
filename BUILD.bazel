@@ -21,3 +21,8 @@ alias(
     name = "gazelle",
     actual = "//tools:gazelle",
 )
+
+alias(
+    name = "cpan_indexer",
+    actual = "//cpan/tools/indexer:indexer",
+)
