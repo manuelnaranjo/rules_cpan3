@@ -117,6 +117,16 @@ def deduplicate_module_bazel_deps(content: str) -> str:
     return "\n".join(new_lines).strip() + "\n"
 
 
+def format_with_buildifier(file_path: Path) -> None:
+    """Formats a Bazel file with buildifier if available on PATH."""
+    buildifier_bin = shutil.which("buildifier")
+    if buildifier_bin and file_path.exists():
+        try:
+            subprocess.run([buildifier_bin, str(file_path)], check=True, capture_output=True)
+        except Exception as e:
+            logger.debug("Buildifier failed on %s: %s", file_path, e)
+
+
 @dataclass
 class IndexResolution:
     """Result of checking a distribution in the cpan-index."""
@@ -280,6 +290,7 @@ class IndexManager:
                 count=1,
             )
             (dest_dir / "MODULE.bazel").write_text(updated_content, encoding="utf-8")
+            format_with_buildifier(dest_dir / "MODULE.bazel")
         else:
             # Generate minimal MODULE.bazel
             content = self.heuristics.generate_module_bazel(
@@ -288,6 +299,7 @@ class IndexManager:
                 modules_dir=self.modules_dir,
             )
             (dest_dir / "MODULE.bazel").write_text(content, encoding="utf-8")
+            format_with_buildifier(dest_dir / "MODULE.bazel")
 
         # 2. Clone overlay/ directory
         src_overlay = src_dir / "overlay"
@@ -433,11 +445,19 @@ class IndexManager:
             existing_mb_text = src_mb.read_text(encoding="utf-8")
 
         existing_overlay = src_ver_dir / "overlay"
+        archive_sha256 = ""
+        if "integrity" in source_data and source_data["integrity"].startswith("sha256-"):
+            raw_b64 = source_data["integrity"].removeprefix("sha256-")
+            try:
+                archive_sha256 = base64.b64decode(raw_b64).hex()
+            except Exception:
+                archive_sha256 = ""
+
         dest_dir = self.create_new_port(
             dist_name=dist_name,
             upstream_version=target_upstream,
             archive_url=archive_url,
-            archive_sha256="",
+            archive_sha256=archive_sha256,
             target_version=target_version,
             existing_overlay_dir=existing_overlay if existing_overlay.exists() else None,
         )
@@ -452,6 +472,7 @@ class IndexManager:
             ]
             merged = new_mb_text.rstrip() + "\n" + "\n".join(existing_deps) + "\n"
             dest_mb.write_text(deduplicate_module_bazel_deps(merged), encoding="utf-8")
+            format_with_buildifier(dest_mb)
         elif existing_mb_text:
             updated_mb = re.sub(
                 r'version\s*=\s*"[^"]+"',
@@ -460,8 +481,10 @@ class IndexManager:
                 count=1,
             )
             dest_mb.write_text(deduplicate_module_bazel_deps(updated_mb), encoding="utf-8")
+            format_with_buildifier(dest_mb)
         elif dest_mb.exists():
             dest_mb.write_text(deduplicate_module_bazel_deps(new_mb_text), encoding="utf-8")
+            format_with_buildifier(dest_mb)
 
         return target_version
 
@@ -490,7 +513,8 @@ class IndexManager:
         dest_overlay.mkdir(parents=True, exist_ok=True)
 
         if test_deps is None or runtime_deps is None or provides is None:
-            if not self.lock_distributions:
+            lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
+            if not lock_info:
                 ws_root = self.index_dir.parent
                 for candidate in [
                     ws_root / "e2e" / "deps_txt" / "cpan.lock.json",
@@ -500,8 +524,8 @@ class IndexManager:
                 ]:
                     if candidate.exists():
                         self.load_lockfile(candidate)
+                lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
 
-            lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
             if lock_info:
                 deps = lock_info.get("dependencies", {})
                 if test_deps is None:
@@ -612,8 +636,8 @@ class IndexManager:
                 for s_rel, s_data in synthesized_overlay.items():
                     inspection.overlay_files[s_rel] = s_data
             for d_c in deleted_c_files:
-                if d_c not in inspection.included_c_files:
-                    inspection.included_c_files.append(d_c)
+                if d_c not in inspection.deleted_files:
+                    inspection.deleted_files.append(d_c)
 
             # Write overlay files from inspection (constants.h, xssubs.c, etc.)
             overlay_sris: Dict[str, str] = {}
@@ -639,17 +663,40 @@ class IndexManager:
             )
             build_file = dest_overlay / "BUILD.bazel"
             build_file.write_text(build_bazel_content, encoding="utf-8")
+            format_with_buildifier(build_file)
             overlay_sris["BUILD.bazel"] = compute_sri_hash(build_file.read_bytes())
 
             # Write MODULE.bazel
+            all_rt_deps = list(runtime_deps or [])
+            if generator_metadata and generator_metadata.extra_deps:
+                all_rt_deps.extend(generator_metadata.extra_deps)
+
+            resolved_cpan_deps: List[Tuple[str, str]] = []
+            for rd in all_rt_deps:
+                if not rd:
+                    continue
+                rd_clean = rd.lstrip("@").split("//")[0].split(":")[0]
+                rd_mod = sanitize_module_name(rd_clean)
+                if rd_mod != module_name:
+                    rd_ver = self.heuristics._resolve_dep_version(rd_mod, None, self.modules_dir)
+                    if rd_ver == "0.0.0":
+                        d_info = self.lock_distributions.get(rd) or self.lock_distributions_by_mod.get(rd_mod)
+                        if d_info and d_info.get("version"):
+                            rd_ver = f"{str(d_info['version']).lstrip('v')}.cpan1"
+                    if (rd_mod, rd_ver) not in resolved_cpan_deps:
+                        resolved_cpan_deps.append((rd_mod, rd_ver))
+
             module_bazel_content = self.heuristics.generate_module_bazel(
                 module_name=module_name,
                 version=target_version,
                 native_deps=inspection.native_deps,
+                cpan_deps=resolved_cpan_deps,
                 test_deps=test_deps if inspection.t_files else None,
                 modules_dir=self.modules_dir,
             )
-            (dest_dir / "MODULE.bazel").write_text(module_bazel_content, encoding="utf-8")
+            mb_file = dest_dir / "MODULE.bazel"
+            mb_file.write_text(module_bazel_content, encoding="utf-8")
+            format_with_buildifier(mb_file)
 
             # Write source.json
             archive_sri = hex_to_sri(archive_sha256)

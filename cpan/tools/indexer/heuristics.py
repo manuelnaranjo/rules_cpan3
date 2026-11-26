@@ -249,6 +249,9 @@ class GeneratorMetadata:
     test_exec_properties: Dict[str, str] = field(default_factory=dict)
     execution_requirements: Dict[str, str] = field(default_factory=dict)
     defines: List[str] = field(default_factory=list)
+    defines_select: Dict[str, List[str]] = field(default_factory=dict)
+    linkopts: List[str] = field(default_factory=list)
+    linkopts_select: Dict[str, List[str]] = field(default_factory=dict)
     includes: List[str] = field(default_factory=list)
     output_loc: Optional[str] = None
     native_deps: List[str] = field(default_factory=list)
@@ -256,6 +259,7 @@ class GeneratorMetadata:
     target_compatible_with: List[str] = field(default_factory=list)
     exec_compatible_with: List[str] = field(default_factory=list)
     cc_srcs_exclude: List[str] = field(default_factory=list)
+    extra_deps: List[str] = field(default_factory=list)
     patch_cmds: List[str] = field(default_factory=list)
     patch_cmds_win: List[str] = field(default_factory=list)
 
@@ -282,6 +286,9 @@ class GeneratorMetadata:
             test_exec_properties=dict(data.get("test_exec_properties") or {}),
             execution_requirements=dict(data.get("execution_requirements") or {}),
             defines=list(data.get("defines") or []),
+            defines_select=dict(data.get("defines_select") or {}),
+            linkopts=list(data.get("linkopts") or []),
+            linkopts_select=dict(data.get("linkopts_select") or {}),
             includes=list(data.get("includes") or []),
             output_loc=data.get("output_loc"),
             native_deps=list(data.get("native_deps") or []),
@@ -289,6 +296,7 @@ class GeneratorMetadata:
             target_compatible_with=list(data.get("target_compatible_with") or []),
             exec_compatible_with=list(data.get("exec_compatible_with") or []),
             cc_srcs_exclude=list(data.get("cc_srcs_exclude") or data.get("cc_excludes") or []),
+            extra_deps=list(data.get("extra_deps") or data.get("runtime_deps") or []),
             patch_cmds=list(data.get("patch_cmds") or []),
             patch_cmds_win=list(data.get("patch_cmds_win") or []),
         )
@@ -307,6 +315,12 @@ class GeneratorMetadata:
             res["execution_requirements"] = self.execution_requirements
         if self.defines:
             res["defines"] = self.defines
+        if self.defines_select:
+            res["defines_select"] = self.defines_select
+        if self.linkopts:
+            res["linkopts"] = self.linkopts
+        if self.linkopts_select:
+            res["linkopts_select"] = self.linkopts_select
         if self.includes:
             res["includes"] = self.includes
         if self.output_loc:
@@ -321,6 +335,8 @@ class GeneratorMetadata:
             res["exec_compatible_with"] = self.exec_compatible_with
         if self.cc_srcs_exclude:
             res["cc_srcs_exclude"] = self.cc_srcs_exclude
+        if self.extra_deps:
+            res["extra_deps"] = self.extra_deps
         if self.patch_cmds:
             res["patch_cmds"] = self.patch_cmds
         if self.patch_cmds_win:
@@ -366,6 +382,7 @@ class DistributionInspection:
     h_files: List[str] = field(default_factory=list)
     typemaps: List[str] = field(default_factory=list)
     included_c_files: List[str] = field(default_factory=list)
+    deleted_files: List[str] = field(default_factory=list)
     defines: List[str] = field(default_factory=list)
     includes: List[str] = field(default_factory=list)
     native_deps: List[str] = field(default_factory=list)
@@ -461,14 +478,19 @@ class HeuristicsEngine:
                 if sline.startswith("INCLUDE:"):
                     inc_target = sline.removeprefix("INCLUDE:").strip()
                     if inc_target.endswith(".xs"):
-                        if inc_target not in fragment_xs:
-                            fragment_xs.append(inc_target)
+                        rel_dir = Path(xs).parent
+                        resolved = (rel_dir / inc_target).as_posix() if rel_dir != Path(".") else inc_target
+                        for candidate in (inc_target, resolved):
+                            if candidate not in fragment_xs:
+                                fragment_xs.append(candidate)
                 elif sline.startswith("#") and "include" in sline:
                     c_includes = self._extract_c_includes(sline)
                     for c_inc in c_includes:
                         if c_inc not in included_c_files:
                             included_c_files.append(c_inc)
 
+        # Included XS fragments must not be compiled as top-level XS units
+        top_level_xs = [x for x in top_level_xs if x not in fragment_xs]
         inspection.top_level_xs = top_level_xs
         inspection.fragment_xs = fragment_xs
         inspection.included_c_files = included_c_files
@@ -642,7 +664,27 @@ class HeuristicsEngine:
     ) -> str:
         """Generates BUILD.bazel content for overlay/BUILD.bazel."""
         dist = inspection.dist_name
-        valid_runtime_deps = [d for d in (runtime_deps or []) if d.startswith(("@", ":"))]
+        valid_runtime_deps: List[str] = []
+        raw_runtime = list(runtime_deps or [])
+        if generator_metadata and generator_metadata.extra_deps:
+            raw_runtime.extend(generator_metadata.extra_deps)
+
+        for d in raw_runtime:
+            if not d:
+                continue
+            if d.startswith(("@", ":")):
+                label = d
+                if label in (f":{dist}", f":{module_name}", f"@{module_name}"):
+                    continue
+            else:
+                s_name = sanitize_module_name(d)
+                if s_name == module_name:
+                    continue
+                label = f"@{s_name}"
+            if label not in valid_runtime_deps:
+                valid_runtime_deps.append(label)
+        valid_runtime_deps.sort()
+
         valid_test_deps: List[str] = []
         for d in (test_deps or []):
             if not d:
@@ -691,6 +733,24 @@ class HeuristicsEngine:
 
         perl_lib_includes = ["lib"] + [inc for inc in extra_includes if inc != "lib"]
         perl_lib_includes_str = "\n        " + ",\n        ".join([f'"{inc}"' for inc in perl_lib_includes]) + ",\n    "
+
+        srcs_patterns: List[str] = []
+        data_patterns: List[str] = []
+        data_excludes: List[str] = []
+        for inc in perl_lib_includes:
+            if inc in (".", ""):
+                srcs_patterns.extend(['"*.pm"', '"*.pod"'])
+                data_excludes.extend(['"*.pm"', '"*.pod"'])
+            else:
+                srcs_patterns.extend([f'"{inc}/**/*.pm"', f'"{inc}/**/*.pod"'])
+                data_patterns.append(f'"{inc}/**/*"')
+                data_excludes.extend([f'"{inc}/**/*.pm"', f'"{inc}/**/*.pod"'])
+        if '"*.pm"' not in srcs_patterns:
+            srcs_patterns.append('"*.pm"')
+
+        srcs_patterns_str = "\n        " + ",\n        ".join(srcs_patterns) + ",\n    "
+        data_patterns_str = "\n        " + ",\n        ".join(data_patterns) + ",\n    "
+        data_excludes_str = "\n        " + ",\n        ".join(data_excludes) + ",\n    "
 
         # Build test rules if t/ directory has test files
         test_content = ""
@@ -806,17 +866,8 @@ package(default_visibility = ["//visibility:public"])
 
 perl_library(
     name = "{dist}",
-    srcs = glob([
-        "lib/**/*.pm",
-        "lib/**/*.pod",
-        "*.pm",
-    ], allow_empty = True),
-    data = glob([
-        "lib/**/*",
-    ], exclude = [
-        "lib/**/*.pm",
-        "lib/**/*.pod",
-    ], allow_empty = True),
+    srcs = glob([{srcs_patterns_str}], allow_empty = True),
+    data = glob([{data_patterns_str}], exclude = [{data_excludes_str}], allow_empty = True),
     includes = [{perl_lib_includes_str}],{target_compat_str}{exec_compat_str}
     deps = [{cpan_deps_str}],
 )
@@ -879,19 +930,45 @@ alias(
             quoted = f'"{inc_c}"'
             if quoted not in cc_excludes:
                 cc_excludes.append(quoted)
+        for d_f in inspection.deleted_files:
+            quoted = f'"{d_f}"'
+            if quoted not in cc_excludes:
+                cc_excludes.append(quoted)
         cc_excludes_str = "\n        " + ",\n        ".join(cc_excludes) + ",\n    "
 
-        if generator_metadata and generator_metadata.defines:
-            all_defines = list(generator_metadata.defines)
+        if generator_metadata and generator_metadata.defines_select:
+            defines_lines = ["\n    defines = select({"]
+            for cond, defs in sorted(generator_metadata.defines_select.items()):
+                defs_items = [f'"{d}"' for d in defs]
+                inner = ", ".join(defs_items)
+                defines_lines.append(f'        "{cond}": [{inner}],')
+            defines_lines.append("    }),")
+            defines_block = "\n".join(defines_lines)
         else:
-            all_defines = [
-                d for d in inspection.defines
-                if "$" not in d and " " not in d and not d.endswith("=") and not d.startswith("/") and len(d) > 1
-            ]
-        defines_items = [f'"{d}"' for d in all_defines]
-        defines_str = ""
-        if defines_items:
-            defines_str = "\n        " + ",\n        ".join(defines_items) + ",\n    "
+            if generator_metadata and generator_metadata.defines:
+                all_defines = list(generator_metadata.defines)
+            else:
+                all_defines = [
+                    d for d in inspection.defines
+                    if "$" not in d and " " not in d and not d.endswith("=") and not d.startswith("/") and len(d) > 1
+                ]
+            defines_items = [f'"{d}"' for d in all_defines]
+            defines_block = ""
+            if defines_items:
+                defines_block = "\n    defines = [\n        " + ",\n        ".join(defines_items) + ",\n    ],"
+
+        linkopts_block = ""
+        if generator_metadata and generator_metadata.linkopts_select:
+            l_lines = ["\n    linkopts = select({"]
+            for cond, lopts in sorted(generator_metadata.linkopts_select.items()):
+                l_items = [f'"{o}"' for o in lopts]
+                inner = ", ".join(l_items)
+                l_lines.append(f'        "{cond}": [{inner}],')
+            l_lines.append("    }),")
+            linkopts_block = "\n".join(l_lines)
+        elif generator_metadata and generator_metadata.linkopts:
+            l_items = [f'"{o}"' for o in generator_metadata.linkopts]
+            linkopts_block = "\n    linkopts = [" + ", ".join(l_items) + "],"
 
         xs_includes_str = ""
         if extra_includes:
@@ -907,6 +984,33 @@ alias(
                 [f'        "{k}": "{v}"' for k, v in sorted(xs_exec_reqs.items())]
             ) + ",\n    },"
 
+        extra_textual = [
+            f'"{inc_c}"'
+            for inc_c in inspection.included_c_files
+            if inc_c.endswith(".c")
+        ]
+        # Deduplicate
+        seen_extra: set[str] = set()
+        dedup_extra: List[str] = []
+        for x in extra_textual:
+            if x not in seen_extra:
+                seen_extra.add(x)
+                dedup_extra.append(x)
+        if dedup_extra:
+            prefix = "[\n        " + ",\n        ".join(dedup_extra) + ",\n    ] + "
+        else:
+            prefix = ""
+        textual_hdrs_str = prefix + """glob([
+        "*.h",
+        "**/*.h",
+        "*.xs",
+        "**/*.xs",
+        "*.xsi",
+        "**/*.xsi",
+        "*.inc",
+        "**/*.inc",
+    ], allow_empty = True)"""
+
         return f"""# Auto-generated by rules_cpan for {dist} (XS extension)
 load("@rules_cpan//cpan:defs.bzl", "cpan_xs")
 load("@rules_perl//perl:defs.bzl", "perl_library"{load_perl_test})
@@ -919,19 +1023,9 @@ cpan_xs(
     cc_srcs = glob([
         "*.c",
         "**/*.c",
-    ], exclude = [{cc_excludes_str}], allow_empty = True),
-    defines = [{defines_str}],{xs_includes_str}{xs_exec_reqs_str}{target_compat_str}{exec_compat_str}
+    ], exclude = [{cc_excludes_str}], allow_empty = True),{defines_block}{linkopts_block}{xs_includes_str}{xs_exec_reqs_str}{target_compat_str}{exec_compat_str}
     output_loc = "{output_loc}",
-    textual_hdrs = glob([
-        "*.h",
-        "**/*.h",
-        "*.xs",
-        "**/*.xs",
-        "*.xsi",
-        "**/*.xsi",
-        "*.inc",
-        "**/*.inc",
-    ], allow_empty = True),
+    textual_hdrs = {textual_hdrs_str},
     typemaps = glob([
         "*typemap*",
         "**/*typemap*",
@@ -943,19 +1037,10 @@ cpan_xs(
 
 perl_library(
     name = "{dist}",
-    srcs = glob([
-        "lib/**/*.pm",
-        "lib/**/*.pod",
-        "*.pm",
-    ], allow_empty = True),
+    srcs = glob([{srcs_patterns_str}], allow_empty = True),
     data = [
         ":{dist}_xs",
-    ] + glob([
-        "lib/**/*",
-    ], exclude = [
-        "lib/**/*.pm",
-        "lib/**/*.pod",
-    ], allow_empty = True),
+    ] + glob([{data_patterns_str}], exclude = [{data_excludes_str}], allow_empty = True),
     includes = [{perl_lib_includes_str}],{target_compat_str}{exec_compat_str}
     deps = [{cpan_deps_str}],
 )
