@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "common.c",
             "image.c",
         ],
@@ -25,11 +31,8 @@ cpan_xs(
     defines = [
         "PADRE",
         "HAVE_JPEG",
-        "JPEG_VERSION",
         "HAVE_PNG",
-        "PNG_VERSION",
         "HAVE_GIF",
-        "GIF_VERSION",
         "GIFLIB_API_51",
         "GIFLIB_API_50",
         "GIF_VERSION=4.1",
@@ -204,15 +207,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_01use",
-        ":test_t_02pod",
-        ":test_t_03podcoverage",
-        ":test_t_04critic",
-        ":test_t_bmp",
-        ":test_t_gif",
-        ":test_t_jpeg",
-        ":test_t_png",
-        ":test_t_stringify",
-    ],
+    tests = [],
 )

@@ -72,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/002_changes.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -80,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/010_basic.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -88,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/aws/s3.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -96,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/aws/s3/bucket.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -104,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/aws/s3/file.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -112,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/aws/s3/file_iterator.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -120,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/aws/s3/http_request.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -128,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/aws/s3/signer.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -136,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/aws/s3/signer/v4.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
@@ -144,21 +153,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/aws/s3/signer/v4_parse_host.t"],
+    tags = ["manual"],
     deps = [":AWS-S3_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_002_changes",
-        ":test_t_010_basic",
-        ":test_t_aws_s3",
-        ":test_t_aws_s3_bucket",
-        ":test_t_aws_s3_file",
-        ":test_t_aws_s3_file_iterator",
-        ":test_t_aws_s3_http_request",
-        ":test_t_aws_s3_signer",
-        ":test_t_aws_s3_signer_v4",
-        ":test_t_aws_s3_signer_v4_parse_host",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

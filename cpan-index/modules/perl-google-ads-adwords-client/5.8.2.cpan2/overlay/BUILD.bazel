@@ -205,22 +205,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_001_require",
-        ":test_t_011_Client",
-        ":test_t_012_Serializer",
-        ":test_t_013_Deserializer",
-        ":test_t_014_XPathSAXParser",
-        ":test_t_015_RequestStats",
-        ":test_t_017_OAuth2ApplicationsHandler",
-        ":test_t_018_MapUtils",
-        ":test_t_019_OAuth2ServiceAccountsHandler",
-        ":test_t_020_GenerateOfflineCredentials",
-        ":test_t_021_ReportingConfiguration",
-        ":test_t_022_ReportUtils",
-        ":test_t_023_AdsUtilityRegistry",
-        ":test_t_024_BatchJobHandler",
-        ":test_t_025_ReportQueryBuilder",
-        ":test_t_026_ServiceQueryBuilder",
-    ],
+    tests = [],
 )

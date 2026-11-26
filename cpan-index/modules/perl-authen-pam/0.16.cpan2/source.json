@@ -4,6 +4,7 @@
     "strip_prefix": "Authen-PAM-0.16",
     "overlay": {
         "lib/Authen/PAM.pm": "sha256-2PyVLZfTxmT309Pq6daRveK+x78XkDWFRvc6b2Ts/38=",
-        "BUILD.bazel": "sha256-rGDwE7FSxFSPhc05kmKKLo90+kEijDDWkTbMwqWeGC8="
+        "BUILD.bazel": "sha256-TFeXIzCCXz6dHKekbwUz1qb8fNEeo9GHq5HHSiSO0xs=",
+        "PAM_config.h": "sha256-Ib9y2gxYvWLG35QTKLdRjgU2nejpP54t0VjOOXyh13A="
     }
 }

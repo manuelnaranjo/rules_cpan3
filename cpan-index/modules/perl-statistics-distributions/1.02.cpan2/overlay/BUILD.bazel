@@ -33,3 +33,9 @@ alias(
     name = "perl-statistics-distributions",
     actual = ":Statistics-Distributions",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

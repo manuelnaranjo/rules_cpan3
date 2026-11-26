@@ -3,6 +3,6 @@
     "integrity": "sha256-YhMyrTA0nnNTM+eLPkwr5ePun6Mckde9SGtHcye0By8=",
     "strip_prefix": "Apache-Session-Memcached-0.03",
     "overlay": {
-        "BUILD.bazel": "sha256-LvxN4V481lYBANeVSkv2YNr5hyl3xsy+wTsOL6n2P84="
+        "BUILD.bazel": "sha256-FANxfvcGuOF6bLf6PFYEM1uZ3cC90SR0rY4Sjeb0+VI="
     }
 }

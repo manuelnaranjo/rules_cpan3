@@ -3,6 +3,6 @@
     "integrity": "sha256-+4qLXgAryP4hk2M0ANrL0Yo4LL7dW4IilK13xY9x98U=",
     "strip_prefix": "Pipeworks-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-wtiHUCTzR/31ZH8JNTdLF/xBr9WJ0PqJceUmuqY9Ta8="
+        "BUILD.bazel": "sha256-ZfuDgIZmI6Yt8pQeh5eZrRKz9Bypv0hI6eRGtvCkayI="
     }
 }

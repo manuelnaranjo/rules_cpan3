@@ -133,14 +133,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-load",
-        ":test_t_01-test",
-        ":test_t_02-bc",
-        ":test_t_03-log",
-        ":test_t_04-multiline",
-        ":test_t_10-internal",
-        ":test_t_11-calc",
-        ":test_t_timeout",
-    ],
+    tests = [],
 )

@@ -3,6 +3,6 @@
     "integrity": "sha256-9gCYdoMjea9YDL06XwwEs8fz/vNS2JwtbUcZL35V+is=",
     "strip_prefix": "Text-Markdown-Discount-0.19",
     "overlay": {
-        "BUILD.bazel": "sha256-wNkvvthfFn5A5CMXsj4+SGA/Jgc0pFX+H9eFOm5hYN8="
+        "BUILD.bazel": "sha256-Gtsdv44tvH1KlkjoNHEfcZ7PosUqTPG7kksrWCgiJsY="
     }
 }

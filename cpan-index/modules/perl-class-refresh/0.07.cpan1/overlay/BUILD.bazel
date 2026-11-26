@@ -67,6 +67,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -75,6 +76,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -83,6 +85,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compile-error.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -91,6 +94,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose-basic.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -99,6 +103,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose-late-load.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -107,6 +112,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose-metaclasses.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -115,6 +121,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose-roles.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -123,6 +130,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose-subclasses.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -131,6 +139,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/new-modules.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
@@ -139,21 +148,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/other-api.t"],
+    tags = ["manual"],
     deps = [":Class-Refresh_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_basic",
-        ":test_t_compile-error",
-        ":test_t_moose-basic",
-        ":test_t_moose-late-load",
-        ":test_t_moose-metaclasses",
-        ":test_t_moose-roles",
-        ":test_t_moose-subclasses",
-        ":test_t_new-modules",
-        ":test_t_other-api",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

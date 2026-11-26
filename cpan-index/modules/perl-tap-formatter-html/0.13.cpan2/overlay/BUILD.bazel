@@ -205,22 +205,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_01_basic",
-        ":test_t_02_escape_output",
-        ":test_t_03_silent",
-        ":test_t_04_really_quiet",
-        ":test_t_05_quiet",
-        ":test_t_06_output",
-        ":test_t_07_multiple_aggregate",
-        ":test_t_08_env_vars",
-        ":test_t_09_empty_testdir",
-        ":test_t_10_win32",
-        ":test_t_11_force_inline",
-        ":test_t_20_prove_html",
-        ":test_t_30_tap_harness_compat",
-        ":test_t_31_inc_path",
-        ":test_t_99_test_pod",
-        ":test_t_selenium_basic",
-    ],
+    tests = [],
 )

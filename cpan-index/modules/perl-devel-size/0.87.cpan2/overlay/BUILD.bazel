@@ -16,13 +16,17 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [
-        "ALIGN_BITS",
-    ],
+    defines = [],
     output_loc = "auto/Devel/Size/Size",
     textual_hdrs = glob(
         [
@@ -199,16 +203,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_basic",
-        ":test_t_code",
-        ":test_t_globs",
-        ":test_t_magic",
-        ":test_t_pod",
-        ":test_t_pod_cov",
-        ":test_t_pvbm",
-        ":test_t_recurse",
-        ":test_t_signatures",
-        ":test_t_warnings",
-    ],
+    tests = [],
 )

@@ -20,9 +20,7 @@ cpan_xs(
             "conf/**",
         ],
     ),
-    defines = [
-        "STATIC_CONV_FUNC",
-    ],
+    defines = [],
     output_loc = "auto/Authen/PAM/PAM",
     target_compatible_with = ["@platforms//os:linux"],
     textual_hdrs = glob(
@@ -48,7 +46,6 @@ cpan_xs(
         allow_empty = True,
     ),
     deps = [
-        "@linux-pam",
         "@linux-pam//:linux-pam",
     ],
 )
@@ -85,4 +82,10 @@ perl_library(
 alias(
     name = "perl-authen-pam",
     actual = ":Authen-PAM",
+)
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
 )

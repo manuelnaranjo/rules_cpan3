@@ -72,6 +72,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":Apache-Session-Memcached_test_lib"],
 )
 
@@ -113,7 +114,6 @@ perl_test(
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00base",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

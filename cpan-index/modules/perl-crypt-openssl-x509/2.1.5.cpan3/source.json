@@ -1,0 +1,9 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JO/JONASBN/Crypt-OpenSSL-X509-2.1.5.tar.gz",
+    "integrity": "sha256-ykC428dBqd95K7BJXywdzoBDxjyO5lRnPVVl2uQPRWA=",
+    "strip_prefix": "Crypt-OpenSSL-X509-2.1.5",
+    "overlay": {
+        "lib/Crypt/OpenSSL/X509.pm": "sha256-HZUrCBYKisdmcDhL6sMWGlXrHUB9G5gACxaAhx9Mf4E=",
+        "BUILD.bazel": "sha256-37WIJXKjM5HFlhlLK1qLXdhQaNYfO//mmI+qxTXCmAk="
+    }
+}

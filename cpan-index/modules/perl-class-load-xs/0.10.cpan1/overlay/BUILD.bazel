@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -114,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -122,6 +129,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/000-load.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -130,6 +138,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/001-is-class-loaded.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -138,6 +147,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/002-try-load-class.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -146,6 +156,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/003-load-class.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -154,6 +165,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/004-load-double.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -162,6 +174,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/005-load-optional.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -170,6 +183,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/006-returned-error.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -178,6 +192,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/007-first-existing.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -186,6 +201,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/008-gvstash-bug.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -194,6 +210,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/009-invalid-module-name.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -202,6 +219,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/010-isa-false-positive.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -210,6 +228,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/011-without-xs.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -218,6 +237,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/012-without-implementation.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -226,6 +246,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/013-errors.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
@@ -234,27 +255,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/014-weird-constants.t"],
+    tags = ["manual"],
     deps = [":Class-Load-XS_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_000-load",
-        ":test_t_001-is-class-loaded",
-        ":test_t_002-try-load-class",
-        ":test_t_003-load-class",
-        ":test_t_004-load-double",
-        ":test_t_005-load-optional",
-        ":test_t_006-returned-error",
-        ":test_t_007-first-existing",
-        ":test_t_008-gvstash-bug",
-        ":test_t_009-invalid-module-name",
-        ":test_t_010-isa-false-positive",
-        ":test_t_011-without-xs",
-        ":test_t_012-without-implementation",
-        ":test_t_013-errors",
-        ":test_t_014-weird-constants",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

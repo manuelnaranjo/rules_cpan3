@@ -4,6 +4,6 @@
     "strip_prefix": "Unicode-Collate-1.31",
     "overlay": {
         "ucatbl.h": "sha256-jYeb6x/rWGdYSejIy+BW5efXM5Rng//1JCoaKJW8P/g=",
-        "BUILD.bazel": "sha256-9p5UZvqB8mi/6vaGr44qGT6MJi6ckxryqD4hnsFEGCM="
+        "BUILD.bazel": "sha256-B5oKmNhSX5xtKDNrZp6iTQOwvRYXXR7A8BZSXfBbl5A="
     }
 }

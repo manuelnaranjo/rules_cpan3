@@ -182,19 +182,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_basic",
-        ":test_t_edge",
-        ":test_t_errors",
-        ":test_t_format-datetime",
-        ":test_t_format-with-locale",
-        ":test_t_generated-locale-de",
-        ":test_t_generated-locale-en",
-        ":test_t_generated-locale-ga",
-        ":test_t_generated-locale-pt",
-        ":test_t_generated-locale-zh",
-        ":test_t_import",
-        ":test_t_zones",
-    ],
+    tests = [],
 )

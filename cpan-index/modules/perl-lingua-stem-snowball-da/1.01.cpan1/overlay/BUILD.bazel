@@ -33,3 +33,9 @@ alias(
     name = "perl-lingua-stem-snowball-da",
     actual = ":Lingua-Stem-Snowball-Da",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

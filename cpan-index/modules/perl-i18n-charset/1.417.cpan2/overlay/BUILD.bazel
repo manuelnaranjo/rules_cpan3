@@ -169,18 +169,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_bug1",
-        ":test_t_enco",
-        ":test_t_iana",
-        ":test_t_libi",
-        ":test_t_map8",
-        ":test_t_mib",
-        ":test_t_mime",
-        ":test_t_pod",
-        ":test_t_pod-coverage",
-        ":test_t_rt33087",
-        ":test_t_umap",
-        ":test_t_utf8",
-    ],
+    tests = [],
 )

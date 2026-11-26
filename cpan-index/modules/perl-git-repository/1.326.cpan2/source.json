@@ -3,6 +3,6 @@
     "integrity": "sha256-BEl9JZL4+BG8ZvTjL22o/kQwhvjCe4unvOOVv4Lw+fs=",
     "strip_prefix": "Git-Repository-1.326",
     "overlay": {
-        "BUILD.bazel": "sha256-R6t+2PsohBKQx8rNv8XoPZB41bOIVZ3Giqp6Sz1KK4s="
+        "BUILD.bazel": "sha256-nTeNHfcafZ3KVtTdxCaMTFVWWG7HKrrwrvwNJlXwem8="
     }
 }

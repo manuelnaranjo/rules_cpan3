@@ -3,6 +3,6 @@
     "integrity": "sha256-y/s/h70eyvk/Ah4KC/wTL1jMcMvTLG1KcPvPdQUekXU=",
     "strip_prefix": "File-Lockfile-v1.0.5",
     "overlay": {
-        "BUILD.bazel": "sha256-vChx9pMAfE+9EyJ5NcTArEuABZAMdjOZNLnFPedhFqk="
+        "BUILD.bazel": "sha256-YHgkJht6GxlCYNtSDUj/0JzhDvRSnNoCKuiqzFsWSDQ="
     }
 }

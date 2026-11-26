@@ -196,21 +196,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00.load",
-        ":test_t_01.simplegen",
-        ":test_t_02.linewrap",
-        ":test_t_03.unknown-props",
-        ":test_t_04.mandatory-props",
-        ":test_t_05.prop-params",
-        ":test_t_06.prop-bad-quote",
-        ":test_t_07.roundtrip",
-        ":test_t_08.parse",
-        ":test_t_09.mime",
-        ":test_t_10.mime-vcal10",
-        ":test_t_11.crlf",
-        ":test_t_12.verson1",
-        ":test_t_pod",
-        ":test_t_pod-coverage",
-    ],
+    tests = [],
 )

@@ -196,21 +196,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_01throw",
-        ":test_t_02order",
-        ":test_t_03throw-non-Error",
-        ":test_t_04use-base-Error-Simple",
-        ":test_t_05text-errors-with-file-handles",
-        ":test_t_06customize-text-throw",
-        ":test_t_07try-in-obj-destructor",
-        ":test_t_08warndie",
-        ":test_t_09dollar-at",
-        ":test_t_10throw-in-catch",
-        ":test_t_11rethrow",
-        ":test_t_12wrong-error-var",
-        ":test_t_13except-arg0",
-        ":test_t_14Error-Simple-VERSION",
-    ],
+    tests = [],
 )

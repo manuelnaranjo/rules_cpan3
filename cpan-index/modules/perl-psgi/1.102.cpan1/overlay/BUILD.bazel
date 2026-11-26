@@ -33,3 +33,9 @@ alias(
     name = "perl-psgi",
     actual = ":PSGI",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

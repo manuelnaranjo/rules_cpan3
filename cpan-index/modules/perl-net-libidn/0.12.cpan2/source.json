@@ -4,6 +4,6 @@
     "strip_prefix": "Net-LibIDN-0.12",
     "overlay": {
         "__test1.c": "sha256-rShYE5OJD6a/LUZUzIgWP8n7Gek+RRHMCGr15iil12o=",
-        "BUILD.bazel": "sha256-RsFgJTKHdFfHUvm/+Ts4mlSYwX6iIZCljufxKRIih10="
+        "BUILD.bazel": "sha256-H/di2pIti9gaDQ4u0Llua0MmB9RiE2OBoLQHiHlejzQ="
     }
 }

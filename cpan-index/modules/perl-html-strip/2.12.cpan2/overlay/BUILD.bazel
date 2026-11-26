@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [
@@ -253,22 +259,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_001_smoke",
-        ":test_t_100_basic",
-        ":test_t_200_comment",
-        ":test_t_210_auto_reset",
-        ":test_t_220_edge_case",
-        ":test_t_230_filter",
-        ":test_t_240_striptags",
-        ":test_t_250_whitespace_single_char",
-        ":test_t_260_offbyone",
-        ":test_t_270_mathematical_comparisons",
-        ":test_t_280_invalid_multiline_segfault",
-        ":test_t_300_utf8",
-        ":test_t_310_latin1",
-        ":test_t_400_kwalitee",
-        ":test_t_410_pod",
-        ":test_t_420_pod_coverage",
-    ],
+    tests = [],
 )

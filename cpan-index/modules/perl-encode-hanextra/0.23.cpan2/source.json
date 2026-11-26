@@ -3,6 +3,6 @@
     "integrity": "sha256-H9SwbK2nCFgAOvFT+UyGOzuV8uPQO6GNBFGoHVHbRDo=",
     "strip_prefix": "Encode-HanExtra-0.23",
     "overlay": {
-        "BUILD.bazel": "sha256-1+Q8+a8ngCAoa0SpEBKYwzQU/PrLs7H80deSKVM0Sno="
+        "BUILD.bazel": "sha256-mNb7H8GznWuKozF1jf8kYP7lNpiDL0uTRVpDBRmFxww="
     }
 }

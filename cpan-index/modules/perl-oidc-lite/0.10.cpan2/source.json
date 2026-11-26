@@ -3,6 +3,6 @@
     "integrity": "sha256-UpCWJyoWDYzZR77HngG0hjnbk3JkMrTZMDmnUHQhJFo=",
     "strip_prefix": "OIDC-Lite-0.10",
     "overlay": {
-        "BUILD.bazel": "sha256-fjhIXQqxA9OhfE2P3nfgQDMVb4YHa2/2/YFolnWWgDg="
+        "BUILD.bazel": "sha256-GLYalIaZrgqEdXBYG21C0P9O+zjh2QIZzl60Hge7DRE="
     }
 }

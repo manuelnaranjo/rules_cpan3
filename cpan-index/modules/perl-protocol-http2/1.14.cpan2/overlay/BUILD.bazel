@@ -211,22 +211,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00_compile",
-        ":test_t_01_HeaderCompression",
-        ":test_t_02_Huffman",
-        ":test_t_03_connection",
-        ":test_t_04_continuation",
-        ":test_t_05_trace",
-        ":test_t_06_upgrade",
-        ":test_t_07_ping",
-        ":test_t_08_priority",
-        ":test_t_09_client_server_tcp",
-        ":test_t_10_settings",
-        ":test_t_11_server_stream",
-        ":test_t_12_leaks",
-        ":test_t_13_request_with_body",
-        ":test_t_14_keepalive",
-        ":test_t_15_headersize",
-    ],
+    tests = [],
 )

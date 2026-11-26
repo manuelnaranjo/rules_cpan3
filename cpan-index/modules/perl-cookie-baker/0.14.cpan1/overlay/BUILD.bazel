@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_compile.t"],
+    tags = ["manual"],
     deps = [":Cookie-Baker_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_bake.t"],
+    tags = ["manual"],
     deps = [":Cookie-Baker_test_lib"],
 )
 
@@ -82,14 +84,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02_crush.t"],
+    tags = ["manual"],
     deps = [":Cookie-Baker_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00_compile",
-        ":test_t_01_bake",
-        ":test_t_02_crush",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

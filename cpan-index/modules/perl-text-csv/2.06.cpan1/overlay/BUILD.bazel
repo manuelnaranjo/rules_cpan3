@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_pod.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_is_pp.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_base.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12_acc.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/15_flags.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/16_import.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20_file.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/21_lexicalio.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/22_scalario.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/30_types.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/40_misc.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/41_null.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/45_eol.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -167,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/46_eol_si.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -175,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/47_comment.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -183,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/50_utf8.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -191,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/51_utf8.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -199,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/55_combi.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -207,6 +225,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/60_samples.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -215,6 +234,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/65_allow.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -223,6 +243,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/66_formula.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -231,6 +252,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/67_emptrow.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -239,6 +261,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/68_header.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -247,6 +270,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/70_rt.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -255,6 +279,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/71_pp.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -263,6 +288,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/71_strict.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -271,6 +297,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/75_hashref.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -279,6 +306,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/76_magic.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -287,6 +315,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/77_getall.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -295,6 +324,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/78_fragment.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -303,6 +333,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/79_callbacks.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -311,6 +342,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/80_diag.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -319,6 +351,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/81_subclass.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -327,6 +360,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/85_util.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -335,6 +369,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_csv.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -343,6 +378,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/91_csv_cb.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -351,6 +387,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/92_stream.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -359,6 +396,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/csv_method.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -367,6 +405,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/fields_containing_0.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
@@ -375,51 +414,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/rt99774.t"],
+    tags = ["manual"],
     deps = [":Text-CSV_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00_pod",
-        ":test_t_01_is_pp",
-        ":test_t_10_base",
-        ":test_t_12_acc",
-        ":test_t_15_flags",
-        ":test_t_16_import",
-        ":test_t_20_file",
-        ":test_t_21_lexicalio",
-        ":test_t_22_scalario",
-        ":test_t_30_types",
-        ":test_t_40_misc",
-        ":test_t_41_null",
-        ":test_t_45_eol",
-        ":test_t_46_eol_si",
-        ":test_t_47_comment",
-        ":test_t_50_utf8",
-        ":test_t_51_utf8",
-        ":test_t_55_combi",
-        ":test_t_60_samples",
-        ":test_t_65_allow",
-        ":test_t_66_formula",
-        ":test_t_67_emptrow",
-        ":test_t_68_header",
-        ":test_t_70_rt",
-        ":test_t_71_pp",
-        ":test_t_71_strict",
-        ":test_t_75_hashref",
-        ":test_t_76_magic",
-        ":test_t_77_getall",
-        ":test_t_78_fragment",
-        ":test_t_79_callbacks",
-        ":test_t_80_diag",
-        ":test_t_81_subclass",
-        ":test_t_85_util",
-        ":test_t_90_csv",
-        ":test_t_91_csv_cb",
-        ":test_t_92_stream",
-        ":test_t_csv_method",
-        ":test_t_fields_containing_0",
-        ":test_t_rt99774",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

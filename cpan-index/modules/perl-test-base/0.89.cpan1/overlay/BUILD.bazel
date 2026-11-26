@@ -67,6 +67,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/000-require-modules.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -75,6 +76,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/append.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -83,6 +85,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/arguments.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -91,6 +94,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/array.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -99,6 +103,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-syntax.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -107,6 +112,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/autoload.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -115,6 +121,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/base64.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -123,6 +130,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/blocks-scalar.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -131,6 +139,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/blocks_grep.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -139,6 +148,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/chomp.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -147,6 +157,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/chop.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -155,6 +166,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compact.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -163,6 +175,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compile.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -171,6 +184,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/deep.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -179,6 +193,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/delimiters.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -187,6 +202,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/description.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -195,6 +211,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/diff_is.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -203,6 +220,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/dumper.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -211,6 +229,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/embed_perl.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -219,6 +238,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/escape.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -227,6 +247,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eval.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -235,6 +256,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eval_all.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -243,6 +265,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eval_stderr.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -251,6 +274,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eval_stdout.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -259,6 +283,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/expected-zero.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -267,6 +292,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/export.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -275,6 +301,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exported_func.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -283,6 +310,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/filter_arguments.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -291,6 +319,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/filter_delay.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -299,6 +328,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/filter_functions.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -307,6 +337,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/filters-append.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -315,6 +346,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/filters.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -323,6 +355,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/filters_map.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -331,6 +364,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/first_block.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -339,6 +373,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/flatten.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -347,6 +382,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/get_url.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -355,6 +391,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/hash.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -363,6 +400,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/head.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -371,6 +409,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/internals.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -379,6 +418,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/is.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -387,6 +427,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/jit-run.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -395,6 +436,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/join-deep.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -403,6 +445,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/join.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -411,6 +454,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/last.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -419,6 +463,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/late.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -427,6 +472,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/lazy-filters.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -435,6 +481,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/lines.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -443,6 +490,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/list.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -451,6 +499,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/main_filters.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -459,6 +508,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/multi-level-inherit.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -467,6 +517,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/name.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -475,6 +526,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/next.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -483,6 +535,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/no_diff.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -491,6 +544,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/no_plan.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -499,6 +553,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/normalize.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -507,6 +562,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/only-with-implicit.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -515,6 +571,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/only.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -523,6 +580,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/oo.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -531,6 +589,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/oo_run.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -539,6 +598,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parentheses.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -547,6 +607,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/prepend.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -555,6 +616,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/preserve-order.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -563,6 +625,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/prototypes.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -571,6 +634,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/quick-plan.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -579,6 +643,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/quick_test.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -587,6 +652,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/read_file.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -595,6 +661,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/regexp.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -603,6 +670,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/repeated-filters.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -611,6 +679,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/require.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -619,6 +688,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/reserved_names.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -627,6 +697,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/reverse-deep.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -635,6 +706,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/reverse.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -643,6 +715,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/run-args.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -651,6 +724,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/run_compare.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -659,6 +733,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/run_is.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -667,6 +742,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/run_is_deep.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -675,6 +751,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/run_is_deeply.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -683,6 +760,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/run_like.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -691,6 +769,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/run_unlike.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -699,6 +778,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/simple.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -707,6 +787,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/skip.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -715,6 +796,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/slice.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -723,6 +805,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/sort-deep.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -731,6 +814,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/sort.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -739,6 +823,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/spec_file.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -747,6 +832,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/spec_string.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -755,6 +841,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/split-deep.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -763,6 +850,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/split-regexp.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -771,6 +859,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/split.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -779,6 +868,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/strict-warnings.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -787,6 +877,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/strict.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -795,6 +886,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/subclass-autoclass.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -803,6 +895,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/subclass-import.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -811,6 +904,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/subclass.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -819,6 +913,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/subclass_late.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -827,6 +922,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tail.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -835,6 +931,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tie_output.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -843,6 +940,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/trim.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -851,6 +949,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/unchomp.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -859,6 +958,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/undef.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -867,6 +967,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/use-test-more.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -875,6 +976,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/use.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -883,6 +985,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/write_file.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -891,6 +994,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xxx.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -899,6 +1003,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/yaml.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
@@ -907,117 +1012,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/zero-blocks.t"],
+    tags = ["manual"],
     deps = [":Test-Base_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_000-require-modules",
-        ":test_t_append",
-        ":test_t_arguments",
-        ":test_t_array",
-        ":test_t_author-pod-syntax",
-        ":test_t_autoload",
-        ":test_t_base64",
-        ":test_t_blocks-scalar",
-        ":test_t_blocks_grep",
-        ":test_t_chomp",
-        ":test_t_chop",
-        ":test_t_compact",
-        ":test_t_compile",
-        ":test_t_deep",
-        ":test_t_delimiters",
-        ":test_t_description",
-        ":test_t_diff_is",
-        ":test_t_dumper",
-        ":test_t_embed_perl",
-        ":test_t_escape",
-        ":test_t_eval",
-        ":test_t_eval_all",
-        ":test_t_eval_stderr",
-        ":test_t_eval_stdout",
-        ":test_t_expected-zero",
-        ":test_t_export",
-        ":test_t_exported_func",
-        ":test_t_filter_arguments",
-        ":test_t_filter_delay",
-        ":test_t_filter_functions",
-        ":test_t_filters",
-        ":test_t_filters-append",
-        ":test_t_filters_map",
-        ":test_t_first_block",
-        ":test_t_flatten",
-        ":test_t_get_url",
-        ":test_t_hash",
-        ":test_t_head",
-        ":test_t_internals",
-        ":test_t_is",
-        ":test_t_jit-run",
-        ":test_t_join",
-        ":test_t_join-deep",
-        ":test_t_last",
-        ":test_t_late",
-        ":test_t_lazy-filters",
-        ":test_t_lines",
-        ":test_t_list",
-        ":test_t_main_filters",
-        ":test_t_multi-level-inherit",
-        ":test_t_name",
-        ":test_t_next",
-        ":test_t_no_diff",
-        ":test_t_no_plan",
-        ":test_t_normalize",
-        ":test_t_only",
-        ":test_t_only-with-implicit",
-        ":test_t_oo",
-        ":test_t_oo_run",
-        ":test_t_parentheses",
-        ":test_t_prepend",
-        ":test_t_preserve-order",
-        ":test_t_prototypes",
-        ":test_t_quick-plan",
-        ":test_t_quick_test",
-        ":test_t_read_file",
-        ":test_t_regexp",
-        ":test_t_repeated-filters",
-        ":test_t_require",
-        ":test_t_reserved_names",
-        ":test_t_reverse",
-        ":test_t_reverse-deep",
-        ":test_t_run-args",
-        ":test_t_run_compare",
-        ":test_t_run_is",
-        ":test_t_run_is_deep",
-        ":test_t_run_is_deeply",
-        ":test_t_run_like",
-        ":test_t_run_unlike",
-        ":test_t_simple",
-        ":test_t_skip",
-        ":test_t_slice",
-        ":test_t_sort",
-        ":test_t_sort-deep",
-        ":test_t_spec_file",
-        ":test_t_spec_string",
-        ":test_t_split",
-        ":test_t_split-deep",
-        ":test_t_split-regexp",
-        ":test_t_strict",
-        ":test_t_strict-warnings",
-        ":test_t_subclass",
-        ":test_t_subclass-autoclass",
-        ":test_t_subclass-import",
-        ":test_t_subclass_late",
-        ":test_t_tail",
-        ":test_t_tie_output",
-        ":test_t_trim",
-        ":test_t_unchomp",
-        ":test_t_undef",
-        ":test_t_use",
-        ":test_t_use-test-more",
-        ":test_t_write_file",
-        ":test_t_xxx",
-        ":test_t_yaml",
-        ":test_t_zero-blocks",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

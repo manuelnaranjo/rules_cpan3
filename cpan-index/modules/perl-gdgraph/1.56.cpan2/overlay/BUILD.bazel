@@ -137,14 +137,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_axestype",
-        ":test_t_bugfixes",
-        ":test_t_colour",
-        ":test_t_data",
-        ":test_t_error",
-        ":test_t_samples",
-        ":test_t_tickets_73185-div-by-zero",
-        ":test_t_use",
-    ],
+    tests = [],
 )

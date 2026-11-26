@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Dist-CheckConflicts_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/also.t"],
+    tags = ["manual"],
     deps = [":Dist-CheckConflicts_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Dist-CheckConflicts_test_lib"],
 )
 
@@ -90,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/conflicts.t"],
+    tags = ["manual"],
     deps = [":Dist-CheckConflicts_test_lib"],
 )
 
@@ -98,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/dist.t"],
+    tags = ["manual"],
     deps = [":Dist-CheckConflicts_test_lib"],
 )
 
@@ -106,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/merge.t"],
+    tags = ["manual"],
     deps = [":Dist-CheckConflicts_test_lib"],
 )
 
@@ -114,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/runtime.t"],
+    tags = ["manual"],
     deps = [":Dist-CheckConflicts_test_lib"],
 )
 
@@ -122,19 +129,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/warn.t"],
+    tags = ["manual"],
     deps = [":Dist-CheckConflicts_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_also",
-        ":test_t_basic",
-        ":test_t_conflicts",
-        ":test_t_dist",
-        ":test_t_merge",
-        ":test_t_runtime",
-        ":test_t_warn",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

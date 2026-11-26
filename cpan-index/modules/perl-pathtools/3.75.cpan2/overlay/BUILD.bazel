@@ -16,12 +16,17 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [
-        "DOUBLE_SLASHES_SPECIAL=@{[",
         "NO_PPPORT_H",
     ],
     output_loc = "auto/Cwd/Cwd",
@@ -209,17 +214,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_Functions",
-        ":test_t_Spec",
-        ":test_t_Spec-taint",
-        ":test_t_abs2rel",
-        ":test_t_crossplatform",
-        ":test_t_cwd",
-        ":test_t_cwd_enoent",
-        ":test_t_rel2abs2rel",
-        ":test_t_taint",
-        ":test_t_tmpdir",
-        ":test_t_win32",
-    ],
+    tests = [],
 )

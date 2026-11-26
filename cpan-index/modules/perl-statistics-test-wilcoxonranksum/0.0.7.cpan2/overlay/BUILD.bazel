@@ -187,20 +187,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00.load",
-        ":test_t_01.load_data",
-        ":test_t_02.compute_ranks",
-        ":test_t_03.rankSums",
-        ":test_t_031.rankSums",
-        ":test_t_04.exact",
-        ":test_t_05.probabilities",
-        ":test_t_05.probability_approx",
-        ":test_t_05.probability_exact",
-        ":test_t_05.probability_greater_1",
-        ":test_t_051.probability_exact",
-        ":test_t_perlcritic",
-        ":test_t_pod",
-        ":test_t_pod-coverage",
-    ],
+    tests = [],
 )

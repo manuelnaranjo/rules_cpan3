@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-SAX-1.02.tar.gz",
+    "integrity": "sha256-RQbDhwQ6pqd7RV8A9XQJ83IKp+VTSVqyU1JjtO0eoSo=",
+    "strip_prefix": "XML-SAX-1.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-uXTS13+rO4Us1t9xFhZ/o4MyEVuKB3XRuBCg6a4TRWA="
+    }
+}

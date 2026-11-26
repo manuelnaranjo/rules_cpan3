@@ -33,3 +33,9 @@ alias(
     name = "perl-thrift",
     actual = ":Thrift",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

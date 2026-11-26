@@ -3,6 +3,6 @@
     "integrity": "sha256-AqUA+RxOwOXyP8zI/dnriikNP6XueeNWF2DIENyeZ0Q=",
     "strip_prefix": "Dancer2-Template-MojoTemplate",
     "overlay": {
-        "BUILD.bazel": "sha256-GH2WazzhcLNly2ej6OQ01Hl07cxPvPMRrbuW1dhudYk="
+        "BUILD.bazel": "sha256-b7tes94rO0OkfdSqBJhD+op32LZVWeOz4q2Idy3Z/OY="
     }
 }

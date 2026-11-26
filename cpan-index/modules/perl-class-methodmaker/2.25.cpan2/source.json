@@ -3,6 +3,6 @@
     "integrity": "sha256-cL06ZZXMQOVKlSHq4yR+fWkWbmeD6l+uvVm4RTfhtYg=",
     "strip_prefix": "Class-MethodMaker-2.25",
     "overlay": {
-        "BUILD.bazel": "sha256-yoyBriM1VY8qo7JSuEJ//zQTn0JLYmTiZnoFLNGY/XQ="
+        "BUILD.bazel": "sha256-8GzWC+HMtIeRKtD5c/9ZXRwHPw0oakUnVh3UHsteHIY="
     }
 }

@@ -33,3 +33,9 @@ alias(
     name = "perl-lingua-en-nums2words",
     actual = ":Lingua-EN-Nums2Words",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

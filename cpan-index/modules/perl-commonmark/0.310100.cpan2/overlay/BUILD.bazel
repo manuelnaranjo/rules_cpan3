@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -44,7 +50,9 @@ cpan_xs(
         ],
         allow_empty = True,
     ),
-    deps = ["@cmark"],
+    deps = [
+        "@cmark",
+    ],
 )
 
 perl_library(

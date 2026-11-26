@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "damerau-int.c",
         ],
     ),
@@ -137,9 +143,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00_compile",
-        ":test_t_01_imports",
-        ":test_t_02_xs_edistance",
-    ],
+    tests = [],
 )

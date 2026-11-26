@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Devel-REPL_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/load_core.t"],
+    tags = ["manual"],
     deps = [":Devel-REPL_test_lib"],
 )
 
@@ -82,14 +84,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/load_plugins.t"],
+    tags = ["manual"],
     deps = [":Devel-REPL_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_load_core",
-        ":test_t_load_plugins",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

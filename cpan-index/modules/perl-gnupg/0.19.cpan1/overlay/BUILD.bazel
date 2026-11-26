@@ -33,3 +33,9 @@ alias(
     name = "perl-gnupg",
     actual = ":GnuPG",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

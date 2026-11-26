@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-load.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/abbrev.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -99,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/callback.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -107,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/capture-ext.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -115,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/setup-broken.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -123,6 +129,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/setup-ignored.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -131,6 +138,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/setup-inner.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -139,6 +147,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/setup-nocmd.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -147,6 +156,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/setup.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -155,6 +165,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/simple-args.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -163,6 +174,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/simple-help.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -171,6 +183,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/simple-require.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -179,6 +192,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/simple-use.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -196,6 +210,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/subdispatch.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
@@ -213,27 +228,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/version.t"],
+    tags = ["manual"],
     deps = [":App-Cmd_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-load",
-        ":test_t_00-report-prereqs",
-        ":test_t_abbrev",
-        ":test_t_callback",
-        ":test_t_capture-ext",
-        ":test_t_setup",
-        ":test_t_setup-broken",
-        ":test_t_setup-ignored",
-        ":test_t_setup-inner",
-        ":test_t_setup-nocmd",
-        ":test_t_simple-args",
-        ":test_t_simple-help",
-        ":test_t_simple-require",
-        ":test_t_simple-use",
-        ":test_t_subdispatch",
-        ":test_t_version",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

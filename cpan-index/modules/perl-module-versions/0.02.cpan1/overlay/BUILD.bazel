@@ -33,3 +33,9 @@ alias(
     name = "perl-module-versions",
     actual = ":Module-Versions",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

@@ -133,14 +133,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00_compile",
-        ":test_t_20_policies",
-        ":test_t_20_policies_codelayout",
-        ":test_t_20_policies_editor",
-        ":test_t_20_policies_modules",
-        ":test_t_20_policies_valuesandexpressions",
-        ":test_t_98_pod_syntax",
-        ":test_t_99_pod_coverage",
-    ],
+    tests = [],
 )

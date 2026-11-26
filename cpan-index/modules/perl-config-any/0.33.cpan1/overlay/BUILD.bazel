@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10-branches.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20-parse.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/50-general.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/51-ini.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/52-json.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/53-perl.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/54-xml.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/55-yaml.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/61-features.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/62-multi.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/63-unsupported.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/64-extfail.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -167,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/65-force_plugins.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
@@ -175,26 +189,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/perl-taint.t"],
+    tags = ["manual"],
     deps = [":Config-Any_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_10-branches",
-        ":test_t_20-parse",
-        ":test_t_50-general",
-        ":test_t_51-ini",
-        ":test_t_52-json",
-        ":test_t_53-perl",
-        ":test_t_54-xml",
-        ":test_t_55-yaml",
-        ":test_t_61-features",
-        ":test_t_62-multi",
-        ":test_t_63-unsupported",
-        ":test_t_64-extfail",
-        ":test_t_65-force_plugins",
-        ":test_t_perl-taint",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

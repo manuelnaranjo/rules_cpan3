@@ -3,6 +3,6 @@
     "integrity": "sha256-aI8+fCSpfK1C651KfI8LWDAZHwKNLpTKLbxRYQcKHN8=",
     "strip_prefix": "PDF-API2-2.049",
     "overlay": {
-        "BUILD.bazel": "sha256-ADDxzNtQqFsu63InsqzX+B6eoVwHf1WN5KwZELh0pMo="
+        "BUILD.bazel": "sha256-YEElZ+bpQ5vcCDI50V4yYvWXsTPFIQD1KyaIRZisuyc="
     }
 }

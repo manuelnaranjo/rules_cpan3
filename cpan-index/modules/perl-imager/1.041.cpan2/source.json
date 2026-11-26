@@ -4,6 +4,6 @@
     "strip_prefix": "Imager-1.041",
     "overlay": {
         "imconfig.h": "sha256-v+hrT9EId9WFEtFRMCkM8BouO+5iwB5LHO5gYpi2rfU=",
-        "BUILD.bazel": "sha256-ebirvWU9Q6wcyzM1n7PAINPnEc2FVlmjTXtO7mUOdB0="
+        "BUILD.bazel": "sha256-OQeQ4nkisnpT6fOBEPjITQtfe5/4+8AGwGM/Z9sLzaY="
     }
 }

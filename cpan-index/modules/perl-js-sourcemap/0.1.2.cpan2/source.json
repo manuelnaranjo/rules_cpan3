@@ -3,6 +3,6 @@
     "integrity": "sha256-PtiSf5yem1LXu/i+NH7zR2QbFPe7MNsQ/2XRRo3Jax0=",
     "strip_prefix": "JS-SourceMap-0.1.2",
     "overlay": {
-        "BUILD.bazel": "sha256-juw+JSUaLOF8P7JepVo7CnqgpF0gORPFTsNeus24YG0="
+        "BUILD.bazel": "sha256-JM8HERJuXvgZSb4UpP967JAjsUyx+1/yPD+ep5u837Q="
     }
 }

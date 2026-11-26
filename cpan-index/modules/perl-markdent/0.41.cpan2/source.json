@@ -3,6 +3,6 @@
     "integrity": "sha256-/mXh51dxJTVpVs0qZNwLP41a+fWIB+KIEvBfOjp9/18=",
     "strip_prefix": "Markdent-0.41",
     "overlay": {
-        "BUILD.bazel": "sha256-7rHGdTwuySWhrgeY5ecBAzf8ML5T3hzyO6k9GinTAkk="
+        "BUILD.bazel": "sha256-z3Pg/OlKVO6qZk4tsYy9cWONm5tDtnPfx2nj9YwwzXQ="
     }
 }

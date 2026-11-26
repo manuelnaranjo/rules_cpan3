@@ -33,3 +33,9 @@ alias(
     name = "perl-string-shellquote",
     actual = ":String-ShellQuote",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

@@ -6,7 +6,10 @@ package(default_visibility = ["//visibility:public"])
 
 cpan_xs(
     name = "Curses_xs",
-    srcs = ["*.xs"],
+    srcs = glob(
+        ["*.xs"],
+        allow_empty = True,
+    ),
     cc_srcs = glob(
         [
             "*.c",
@@ -16,8 +19,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "CursesCon.c",
             "cdemo.c",
             "CursesFun.c",

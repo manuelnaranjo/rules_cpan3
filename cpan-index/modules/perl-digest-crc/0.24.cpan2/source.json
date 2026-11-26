@@ -4,6 +4,6 @@
     "strip_prefix": "Digest-CRC-0.24",
     "overlay": {
         "test.c": "sha256-3qxmzLefbTHA+n01jeSOCDwVwC/1DsHr1LZDFLnm4ZY=",
-        "BUILD.bazel": "sha256-XCe2mWp5FxfJKdwFAwE07jwLHukNgZuVWNJG4Mmk9n4="
+        "BUILD.bazel": "sha256-Uq1d5BHCPvDt6PrO2i0vRpI5jAFzA6ekfZM7lodO3fY="
     }
 }

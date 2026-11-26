@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00load.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01basic.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02weird.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03comments.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04import.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05hash.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06oo.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07misc.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/08group.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/09case.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10delta.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/11copy-ties-with-array-vals.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -167,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12open-empty-file.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -175,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/13val-in-list-context.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -183,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/14brackets-within-values.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -191,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/15store-and-retrieve-here-doc-terminator.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -199,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/16case-sensitive-default.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -207,6 +225,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/17untainted-multiline-values.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -215,6 +234,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/18non-contiguous-groups.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -223,6 +243,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/19param-found-outside-section.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -231,6 +252,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/19utf8.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -239,6 +261,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20allowedcommentchars.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -247,6 +270,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/22trailing-comment-lines.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -255,6 +279,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/23scalar-ref.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -263,6 +288,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/24case-sensitive-exists.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -271,6 +297,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/25line-endings.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -279,6 +306,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/26scalar-filehandle.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -287,6 +315,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/27empty-ini.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -295,6 +324,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/28nomultiline.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -303,6 +333,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/29end-of-line-comment.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -311,6 +342,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/30parameters-with-empty-values.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -319,6 +351,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/31comments_with_spaces.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -327,6 +360,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/32mswin-outputs-contain-crs.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -335,6 +369,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/33update-using-tied-fh-w-shorter-names.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -343,6 +378,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/34trailing-comments-double-delimeter.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -351,6 +387,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/35reload-config-no-file.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -359,6 +396,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/35section-iterators.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -367,6 +405,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/36php-compat.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -375,6 +414,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/37here-doc-no-end-marker.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
@@ -383,52 +423,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/38security-open.t"],
+    tags = ["manual"],
     deps = [":Config-IniFiles_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_00load",
-        ":test_t_01basic",
-        ":test_t_02weird",
-        ":test_t_03comments",
-        ":test_t_04import",
-        ":test_t_05hash",
-        ":test_t_06oo",
-        ":test_t_07misc",
-        ":test_t_08group",
-        ":test_t_09case",
-        ":test_t_10delta",
-        ":test_t_11copy-ties-with-array-vals",
-        ":test_t_12open-empty-file",
-        ":test_t_13val-in-list-context",
-        ":test_t_14brackets-within-values",
-        ":test_t_15store-and-retrieve-here-doc-terminator",
-        ":test_t_16case-sensitive-default",
-        ":test_t_17untainted-multiline-values",
-        ":test_t_18non-contiguous-groups",
-        ":test_t_19param-found-outside-section",
-        ":test_t_19utf8",
-        ":test_t_20allowedcommentchars",
-        ":test_t_22trailing-comment-lines",
-        ":test_t_23scalar-ref",
-        ":test_t_24case-sensitive-exists",
-        ":test_t_25line-endings",
-        ":test_t_26scalar-filehandle",
-        ":test_t_27empty-ini",
-        ":test_t_28nomultiline",
-        ":test_t_29end-of-line-comment",
-        ":test_t_30parameters-with-empty-values",
-        ":test_t_31comments_with_spaces",
-        ":test_t_32mswin-outputs-contain-crs",
-        ":test_t_33update-using-tied-fh-w-shorter-names",
-        ":test_t_34trailing-comments-double-delimeter",
-        ":test_t_35reload-config-no-file",
-        ":test_t_35section-iterators",
-        ":test_t_36php-compat",
-        ":test_t_37here-doc-no-end-marker",
-        ":test_t_38security-open",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

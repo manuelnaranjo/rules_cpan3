@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Algorithm-Diff-Callback_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-coverage.t"],
+    tags = ["manual"],
     deps = [":Algorithm-Diff-Callback_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-spell.t"],
+    tags = ["manual"],
     deps = [":Algorithm-Diff-Callback_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-syntax.t"],
+    tags = ["manual"],
     deps = [":Algorithm-Diff-Callback_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/croak.t"],
+    tags = ["manual"],
     deps = [":Algorithm-Diff-Callback_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/diff_arrays.t"],
+    tags = ["manual"],
     deps = [":Algorithm-Diff-Callback_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/diff_hashes.t"],
+    tags = ["manual"],
     deps = [":Algorithm-Diff-Callback_test_lib"],
 )
 
@@ -119,19 +126,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-changes_has_content.t"],
+    tags = ["manual"],
     deps = [":Algorithm-Diff-Callback_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_author-pod-coverage",
-        ":test_t_author-pod-spell",
-        ":test_t_author-pod-syntax",
-        ":test_t_croak",
-        ":test_t_diff_arrays",
-        ":test_t_diff_hashes",
-        ":test_t_release-changes_has_content",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

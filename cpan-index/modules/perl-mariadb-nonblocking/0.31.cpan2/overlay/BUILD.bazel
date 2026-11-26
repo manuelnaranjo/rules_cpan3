@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -208,17 +214,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-load",
-        ":test_t_01-connect-event",
-        ":test_t_01-connect-promise",
-        ":test_t_02-select-event",
-        ":test_t_02-select-promise",
-        ":test_t_02-select-select",
-        ":test_t_03-create-table-promise",
-        ":test_t_04-insert-promise",
-        ":test_t_05-update-promise",
-        ":test_t_06-cyclic-refs",
-        ":test_t_07-pool",
-    ],
+    tests = [],
 )

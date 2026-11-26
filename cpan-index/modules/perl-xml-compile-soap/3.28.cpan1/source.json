@@ -3,6 +3,6 @@
     "integrity": "sha256-CSFpnEUiU395MOFPrAVkkt54Aam5FA0OH68zQUrmmY8=",
     "strip_prefix": "XML-Compile-SOAP-3.28",
     "overlay": {
-        "BUILD.bazel": "sha256-XB+BYVxLb+xNqzk9V2xRirMEius3sBn/ylBu/TSL3s0="
+        "BUILD.bazel": "sha256-b5UPcp/bJusx3XyXyha4y8RogZyhNf44YpWXeb5MUmg="
     }
 }

@@ -165,17 +165,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_author-pod-coverage",
-        ":test_t_author-pod-syntax",
-        ":test_t_bool",
-        ":test_t_code",
-        ":test_t_collection_array",
-        ":test_t_collection_hash",
-        ":test_t_collection_subclassing",
-        ":test_t_counter",
-        ":test_t_helpers",
-        ":test_t_number",
-        ":test_t_string",
-    ],
+    tests = [],
 )

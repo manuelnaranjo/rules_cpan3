@@ -72,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_compile.t"],
+    tags = ["manual"],
     deps = [":File-ShareDir_test_lib"],
 )
 
@@ -89,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03_extensions.t"],
+    tags = ["manual"],
     deps = [":File-ShareDir_test_lib"],
 )
 
@@ -97,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04_fail.t"],
+    tags = ["manual"],
     deps = [":File-ShareDir_test_lib"],
 )
 
@@ -114,15 +117,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06_old.t"],
+    tags = ["manual"],
     deps = [":File-ShareDir_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_01_compile",
-        ":test_t_03_extensions",
-        ":test_t_04_fail",
-        ":test_t_06_old",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

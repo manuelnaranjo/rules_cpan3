@@ -160,17 +160,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00_compile",
-        ":test_t_030_server_authorization_endpoint_authorization",
-        ":test_t_030_server_protected_resource_middleware",
-        ":test_t_030_server_token_endpoint_authorization_code",
-        ":test_t_040_unit_client_token_response_parser",
-        ":test_t_040_unit_client_web_server",
-        ":test_t_040_unit_model_auth_info",
-        ":test_t_040_unit_model_id_token",
-        ":test_t_040_unit_server_data_handler",
-        ":test_t_040_unit_server_scope",
-        ":test_t_040_unit_util_jwt",
-    ],
+    tests = [],
 )

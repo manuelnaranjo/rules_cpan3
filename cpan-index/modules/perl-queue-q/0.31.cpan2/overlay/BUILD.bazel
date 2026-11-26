@@ -133,14 +133,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_001_load",
-        ":test_t_110_perl_naivefifo",
-        ":test_t_120_perl_claimfifo",
-        ":test_t_130_perl_distfifo",
-        ":test_t_210_redis_naivefifo",
-        ":test_t_220_redis_claimfifo",
-        ":test_t_230_redis_distfifo",
-        ":test_t_240_redis_reliablefifo",
-    ],
+    tests = [],
 )

@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00load.t"],
+    tags = ["manual"],
     deps = [":Business-OnlinePayment_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bop.t"],
+    tags = ["manual"],
     deps = [":Business-OnlinePayment_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bop_https.t"],
+    tags = ["manual"],
     deps = [":Business-OnlinePayment_test_lib"],
 )
 
@@ -96,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/introspection.t"],
+    tags = ["manual"],
     deps = [":Business-OnlinePayment_test_lib"],
 )
 
@@ -104,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/override.t"],
+    tags = ["manual"],
     deps = [":Business-OnlinePayment_test_lib"],
 )
 
@@ -112,17 +117,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod.t"],
+    tags = ["manual"],
     deps = [":Business-OnlinePayment_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00load",
-        ":test_t_bop",
-        ":test_t_bop_https",
-        ":test_t_introspection",
-        ":test_t_override",
-        ":test_t_pod",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

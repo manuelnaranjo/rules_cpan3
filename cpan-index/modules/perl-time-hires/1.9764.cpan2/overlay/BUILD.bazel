@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [
@@ -41,9 +47,7 @@ cpan_xs(
         "HAS_FUTIMENS",
         "HAS_UTIMENSAT",
         "TIME_HIRES_UTIME",
-        "TIME_HIRES_STAT=(\\d+)/)",
         "HAS_SOMETHING",
-        "TIME_HIRES_STAT=(\\d+)/);",
     ],
     output_loc = "auto/Time/HiRes/HiRes",
     textual_hdrs = glob(

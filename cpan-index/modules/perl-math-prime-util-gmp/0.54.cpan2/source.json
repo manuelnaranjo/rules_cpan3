@@ -3,6 +3,6 @@
     "integrity": "sha256-WtS+D400lDL74Q32e8OoK0vEsLreKhPiyKNbf7nd/R8=",
     "strip_prefix": "Math-Prime-Util-GMP-0.54",
     "overlay": {
-        "BUILD.bazel": "sha256-JS/dz5VB+4DSEBlzjfS4udnr34xfIjX++/U+JO9eGOk="
+        "BUILD.bazel": "sha256-Om1cMOCiFP/zvWOh8MxZJgikwrW2dMG9/GL6kqTkvt8="
     }
 }

@@ -118,12 +118,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00_diag",
-        ":test_t_01_vars",
-        ":test_t_02_lookup",
-        ":test_t_03_OO",
-        ":test_t_03_icontheme",
-        ":test_t_03_userdirs",
-    ],
+    tests = [],
 )

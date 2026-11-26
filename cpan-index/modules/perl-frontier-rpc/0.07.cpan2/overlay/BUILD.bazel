@@ -33,3 +33,9 @@ alias(
     name = "perl-frontier-rpc",
     actual = ":Frontier-RPC",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

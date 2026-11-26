@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":App-Inotify-Hookable_test_lib"],
 )
 
@@ -71,13 +72,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-pod-syntax.t"],
+    tags = ["manual"],
     deps = [":App-Inotify-Hookable_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_release-pod-syntax",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

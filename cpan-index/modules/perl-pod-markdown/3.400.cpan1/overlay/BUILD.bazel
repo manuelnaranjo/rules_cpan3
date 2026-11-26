@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/back-compat.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -90,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -98,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/codes.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -106,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/encoding.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -114,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/entities.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -122,6 +129,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/escape.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -130,6 +138,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/formats.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -138,6 +147,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/links.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -146,6 +156,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/lists.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -154,6 +165,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/meta.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -162,6 +174,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/misc.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -170,6 +183,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/nested.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -178,6 +192,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/new.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -186,6 +201,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/perldoc.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -194,6 +210,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod2markdown.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
@@ -202,29 +219,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/verbatim.t"],
+    tags = ["manual"],
     deps = [":Pod-Markdown_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_00-report-prereqs",
-        ":test_t_back-compat",
-        ":test_t_basic",
-        ":test_t_codes",
-        ":test_t_encoding",
-        ":test_t_entities",
-        ":test_t_escape",
-        ":test_t_formats",
-        ":test_t_links",
-        ":test_t_lists",
-        ":test_t_meta",
-        ":test_t_misc",
-        ":test_t_nested",
-        ":test_t_new",
-        ":test_t_perldoc",
-        ":test_t_pod2markdown",
-        ":test_t_verbatim",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

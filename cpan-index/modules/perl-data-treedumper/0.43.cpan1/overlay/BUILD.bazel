@@ -33,3 +33,9 @@ alias(
     name = "perl-data-treedumper",
     actual = ":Data-TreeDumper",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

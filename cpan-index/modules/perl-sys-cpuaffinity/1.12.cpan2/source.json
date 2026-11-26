@@ -3,6 +3,6 @@
     "integrity": "sha256-/jLAXz6wWXCMZH8ruFslBFhZHyupBR2Nhm9Uajh+6Eg=",
     "strip_prefix": "Sys-CpuAffinity-1.12",
     "overlay": {
-        "BUILD.bazel": "sha256-KvhgVBEauSII3I4YVgalqsO1woOkA1PpUKOSBXYBOQI="
+        "BUILD.bazel": "sha256-fF9rg/yMcCduY3FExE706BmlmNM2tIQtN7IaYwXmKpo="
     }
 }

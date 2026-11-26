@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "constants.c",
         ],
     ),
@@ -51,6 +57,8 @@ cpan_xs(
     ),
     deps = [
         "@openssl",
+        "@openssl//:crypto",
+        "@openssl//:ssl",
     ],
 )
 

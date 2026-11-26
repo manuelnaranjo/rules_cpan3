@@ -115,12 +115,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_pod_headwithmarkup",
-        ":test_t_pod_pod2usage",
-        ":test_t_pod_pod2usage2",
-        ":test_t_pod_selectheaders",
-        ":test_t_pod_selectsections",
-    ],
+    tests = [],
 )

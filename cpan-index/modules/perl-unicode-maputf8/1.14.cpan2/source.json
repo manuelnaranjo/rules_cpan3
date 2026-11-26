@@ -3,6 +3,6 @@
     "integrity": "sha256-hd2x3ojcluTyEcpX2WheQc5NoHZGcRF9zusOBcrYpbA=",
     "strip_prefix": "Unicode-MapUTF8-1.14",
     "overlay": {
-        "BUILD.bazel": "sha256-IyNcg7dSugf1K7PIedkVfXRiDddQTpfYOIn7Y/383UU="
+        "BUILD.bazel": "sha256-7jRTLBKK1eknB2TC4T0svwmv9vF8MnzF2FOWfNbIBPI="
     }
 }

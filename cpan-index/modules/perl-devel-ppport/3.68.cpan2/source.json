@@ -3,6 +3,6 @@
     "integrity": "sha256-UpDVu4TN6enmEROiDGe11HJn645loRmookjMlqrAuts=",
     "strip_prefix": "Devel-PPPort-3.68",
     "overlay": {
-        "BUILD.bazel": "sha256-iIMmU9OC/xCTXphFbYcaBs4ec/UwRSM7Wu8SxAeEdXg="
+        "BUILD.bazel": "sha256-YIMuyX4fWZrFfPQv1rwSIjV6qg+ZaI5FS3y5TLyleAI="
     }
 }

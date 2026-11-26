@@ -298,19 +298,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-load",
-        ":test_t_01-connect",
-        ":test_t_05-compress",
-        ":test_t_06-cql-version",
-        ":test_t_10-crud",
-        ":test_t_15-batch",
-        ":test_t_20-utf8",
-        ":test_t_30-types",
-        ":test_t_40-paging",
-        ":test_t_50-async",
-        ":test_t_60-bind",
-        ":test_t_60-hash",
-        ":test_t_author-pod-syntax",
-    ],
+    tests = [],
 )

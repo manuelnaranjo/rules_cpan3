@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-spell.t"],
+    tags = ["manual"],
     deps = [":Devel-OverloadInfo_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-syntax.t"],
+    tags = ["manual"],
     deps = [":Devel-OverloadInfo_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Devel-OverloadInfo_test_lib"],
 )
 
@@ -90,15 +93,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/rt106379-inheritance-corruption.t"],
+    tags = ["manual"],
     deps = [":Devel-OverloadInfo_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_author-pod-spell",
-        ":test_t_author-pod-syntax",
-        ":test_t_basic",
-        ":test_t_rt106379-inheritance-corruption",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

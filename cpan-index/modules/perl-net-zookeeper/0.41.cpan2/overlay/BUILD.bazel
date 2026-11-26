@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -206,17 +212,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_10_invalid",
-        ":test_t_15_thread",
-        ":test_t_20_tie",
-        ":test_t_22_stat_tie",
-        ":test_t_24_watch_tie",
-        ":test_t_30_connect",
-        ":test_t_35_log",
-        ":test_t_40_basic",
-        ":test_t_45_class",
-        ":test_t_50_access",
-        ":test_t_60_watch",
-    ],
+    tests = [],
 )

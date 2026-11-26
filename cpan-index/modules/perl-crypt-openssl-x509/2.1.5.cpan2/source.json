@@ -4,6 +4,6 @@
     "strip_prefix": "Crypt-OpenSSL-X509-2.1.5",
     "overlay": {
         "lib/Crypt/OpenSSL/X509.pm": "sha256-HZUrCBYKisdmcDhL6sMWGlXrHUB9G5gACxaAhx9Mf4E=",
-        "BUILD.bazel": "sha256-IwCKPr/VeQ56FQ3SrKtnav+AOKM4zmShe6M55bqmGQI="
+        "BUILD.bazel": "sha256-LXOBmVwCjIS6yZ2+wg+hckzK9PJkASmSX+b9XKjrmvI="
     }
 }

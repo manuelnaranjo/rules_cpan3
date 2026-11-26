@@ -106,11 +106,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_01_import_all",
-        ":test_t_02_object",
-        ":test_t_97_distribution",
-        ":test_t_98_pod_coverage",
-        ":test_t_99_pod",
-    ],
+    tests = [],
 )

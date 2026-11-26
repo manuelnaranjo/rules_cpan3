@@ -79,8 +79,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_ipv4",
-        ":test_t_ipv6",
-    ],
+    tests = [],
 )

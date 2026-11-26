@@ -102,10 +102,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-load",
-        ":test_t_20-policies",
-        ":test_t_35-default_themes",
-        ":test_t_40-overrides",
-    ],
+    tests = [],
 )

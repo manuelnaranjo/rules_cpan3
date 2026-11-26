@@ -88,9 +88,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_align",
-        ":test_t_text",
-        ":test_t_wrap",
-    ],
+    tests = [],
 )

@@ -136,14 +136,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_chmod-0xxx",
-        ":test_t_constant-left-side-equal",
-        ":test_t_empty-after-or",
-        ":test_t_end-with-true",
-        ":test_t_eval-require",
-        ":test_t_map-linebreak",
-        ":test_t_use-before-pkg",
-    ],
+    tests = [],
 )

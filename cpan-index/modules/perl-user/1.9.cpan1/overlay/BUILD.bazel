@@ -33,3 +33,9 @@ alias(
     name = "perl-user",
     actual = ":User",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

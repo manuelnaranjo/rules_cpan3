@@ -18,9 +18,18 @@ cpan_xs(
             "t/**",
             "fallback/**",
             "conf/**",
+            "ext/zstd/contrib/**",
+            "ext/zstd/doc/**",
+            "ext/zstd/examples/**",
+            "ext/zstd/programs/**",
+            "ext/zstd/tests/**",
+            "ext/zstd/zlibWrapper/**",
         ],
     ),
-    defines = [],
+    defines = [
+        "ZSTD_LEGACY_MULTITHREADED_API",
+    ],
+    includes = ["ext/zstd/lib"],
     output_loc = "auto/Compress/Zstd/Zstd",
     textual_hdrs = glob(
         [

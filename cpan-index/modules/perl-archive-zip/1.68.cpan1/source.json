@@ -3,6 +3,6 @@
     "integrity": "sha256-mE4YXXhbr2EpxudfjrREEXRawAv2Ei+xyOgio4YexlA=",
     "strip_prefix": "Archive-Zip-1.68",
     "overlay": {
-        "BUILD.bazel": "sha256-6XB+/+jtc327FeRMqZ89lwZ9q33zvHIGwOYRIPPmQIc="
+        "BUILD.bazel": "sha256-6lXD7Dmh3tJ+jUADwg83DHlfJQZ7IahGcnUy9CozM1g="
     }
 }

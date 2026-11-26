@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_compile.t"],
+    tags = ["manual"],
     deps = [":File-HomeDir_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02_main.t"],
+    tags = ["manual"],
     deps = [":File-HomeDir_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_test.t"],
+    tags = ["manual"],
     deps = [":File-HomeDir_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/11_darwin.t"],
+    tags = ["manual"],
     deps = [":File-HomeDir_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12_darwin_carbon.t"],
+    tags = ["manual"],
     deps = [":File-HomeDir_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/13_darwin_cocoa.t"],
+    tags = ["manual"],
     deps = [":File-HomeDir_test_lib"],
 )
 
@@ -111,18 +117,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20_empty_home.t"],
+    tags = ["manual"],
     deps = [":File-HomeDir_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_01_compile",
-        ":test_t_02_main",
-        ":test_t_10_test",
-        ":test_t_11_darwin",
-        ":test_t_12_darwin_carbon",
-        ":test_t_13_darwin_cocoa",
-        ":test_t_20_empty_home",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

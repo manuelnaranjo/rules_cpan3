@@ -30,8 +30,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -128,6 +134,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -136,6 +143,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/000_load.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -144,6 +152,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/accessor_context.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -152,6 +161,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/accessor_inlining.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -160,6 +170,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/accessor_override_method.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -168,6 +179,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/accessor_overwrite_warning.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -176,6 +188,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attr_dereference_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -184,6 +197,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_accessor_generation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -192,6 +206,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_custom_metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -209,6 +224,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_does.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -217,6 +233,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_inherited_slot_specs.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -225,6 +242,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_lazy_initializer.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -233,6 +251,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_names.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -241,6 +260,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_reader_generation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -249,6 +269,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_required.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -257,6 +278,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_traits.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -265,6 +287,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_traits_n_meta.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -273,6 +296,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_traits_parameterized.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -281,6 +305,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_traits_registered.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -289,6 +314,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_triggers.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -297,6 +323,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_type_unions.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -305,6 +332,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_without_any_methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -313,6 +341,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/attribute_writer_generation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -321,6 +350,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/bad_coerce.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -329,6 +359,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/chained_coercion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -337,6 +368,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/clone_weak.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -345,6 +377,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/default_class_role_types.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -353,6 +386,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/default_undef.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -361,6 +395,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/delegation_and_modifiers.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -369,6 +404,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/delegation_arg_aliasing.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -377,6 +413,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/delegation_target_not_loaded.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -385,6 +422,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/illegal_options_for_inheritance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -393,6 +431,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/inherit_lazy_build.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -401,6 +440,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/lazy_no_default.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -409,6 +449,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/method_generation_rules.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -417,6 +458,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/misc_attribute_coerce_lazy.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -425,6 +467,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/misc_attribute_tests.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -433,6 +476,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/more_attr_delegation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -441,6 +485,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/no_init_arg.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -449,6 +494,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/no_slot_access.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -457,6 +503,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/non_alpha_attr_names.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -465,6 +512,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/numeric_defaults.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -473,6 +521,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/trigger_and_coerce.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -481,6 +530,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/attributes/type_constraint.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -489,6 +539,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/always_strict_warnings.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -497,6 +548,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/basic_class_setup.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -505,6 +557,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/buildargs.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -513,6 +566,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/buildargs_warning.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -521,6 +575,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/create.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -529,6 +584,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/create_anon.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -537,6 +593,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/definition_context.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -545,6 +602,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/deprecations.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -553,6 +611,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/destruction.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -561,6 +620,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/error_handling.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -569,6 +629,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/global_destruction.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -577,6 +638,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/import_unimport.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -585,6 +647,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/inner_and_augment.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -593,6 +656,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/load_into_main.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -601,6 +665,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/method_modifier_with_regexp.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -609,6 +674,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -617,6 +683,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/moose_object_does.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -625,6 +692,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/moose_respects_type_constraints.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -642,6 +710,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/override_augment_inner_super.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -650,6 +719,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/rebless.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -658,6 +728,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/require_superclasses.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -666,6 +737,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/super_and_override.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -674,6 +746,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/super_warns_on_args.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -682,6 +755,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/universal_methods_wrappable.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -690,6 +764,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basics/wrapped_method_cxt_propagation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -698,6 +773,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/DEMOLISHALL.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -706,6 +782,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/DEMOLISHALL_shortcutted.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -714,6 +791,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/DEMOLISH_eats_exceptions.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -722,6 +800,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/DEMOLISH_eats_mini.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -730,6 +809,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/DEMOLISH_fails_without_metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -738,6 +818,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/Moose_Object_error.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -746,6 +827,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/anon_method_metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -754,6 +836,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/application_metarole_compat.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -762,6 +845,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/apply_role_to_one_instance_only.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -770,6 +854,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/attribute_trait_parameters.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -778,6 +863,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/augment_recursion_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -786,6 +872,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/coerce_without_coercion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -794,6 +881,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/constructor_object_overload.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -802,6 +890,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/create_anon_mkopt.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -810,6 +899,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/create_anon_recursion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -818,6 +908,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/create_anon_role_pass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -826,6 +917,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/delete_sub_stash.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -834,6 +926,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/find_custom_trait_rt_92089.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -842,6 +935,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/handles_foreign_class_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -850,6 +944,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/immutable_metaclass_does_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -858,6 +953,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/immutable_n_default_x2.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -866,6 +962,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/inheriting_from_roles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -874,6 +971,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/inline_reader_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -882,6 +980,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/instance_application_role_args.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -890,6 +989,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/lazybuild_required_undef.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -898,6 +998,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/mark_as_methods_overloading_breakage.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -906,6 +1007,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/moo_delegation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -914,6 +1016,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/moose_exporter_false_circular_reference_rt_63818.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -922,6 +1025,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/moose_octal_defaults.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -930,6 +1034,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/native_trait_handles_bad_value.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -938,6 +1043,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/overloading_edge_cases.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -946,6 +1052,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/reader_precedence_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -954,6 +1061,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/role_caller.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -962,6 +1070,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/subclass_use_base_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -970,6 +1079,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/subtype_conflict_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -978,6 +1088,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/subtype_quote_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -986,6 +1097,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/super_recursion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -994,6 +1106,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/traits_with_exporter.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1002,6 +1115,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugs/type_constraint_messages.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1010,6 +1124,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/ArrayBasedStorage_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1018,6 +1133,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/AttributesWithHistory_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1026,6 +1142,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/BinaryTree_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1034,6 +1151,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/C3MethodDispatchOrder_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1042,6 +1160,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/ClassEncapsulatedAttributes_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1050,6 +1169,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/Class_C3_compatibility.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1058,6 +1178,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/InsideOutClass_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1066,6 +1187,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/InstanceCountingClass_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1074,6 +1196,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/LazyClass_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1082,6 +1205,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/Perl6Attribute_test.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1090,6 +1214,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/RT_27329_fix.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1098,6 +1223,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/RT_39001_fix.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1106,6 +1232,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/RT_41255.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1114,6 +1241,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/add_attribute_alternate.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1122,6 +1250,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/add_method_debugmode.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1130,6 +1259,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/add_method_modifier.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1138,6 +1268,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/advanced_methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1146,6 +1277,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/anon_class.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1154,6 +1286,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/anon_class_create_init.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1162,6 +1295,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/anon_class_keep_alive.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1170,6 +1304,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/anon_class_leak.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1178,6 +1313,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/anon_class_removal.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1186,6 +1322,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/anon_packages.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1194,6 +1331,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/attribute.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1202,6 +1340,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/attribute_duplication.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1210,6 +1349,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/attribute_errors_and_edge_cases.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1218,6 +1358,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/attribute_get_read_write.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1226,6 +1367,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/attribute_initializer.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1234,6 +1376,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/attribute_introspection.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1242,6 +1385,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/attribute_non_alpha_name.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1250,6 +1394,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/attributes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1258,6 +1403,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/basic.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1266,6 +1412,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/before_after_dollar_under.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1274,6 +1421,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/class_errors_and_edge_cases.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1282,6 +1430,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/class_is_pristine.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1290,6 +1439,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/class_precedence_list.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1298,6 +1448,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/constant_codeinfo.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1306,6 +1457,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/create_class.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1314,6 +1466,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/custom_instance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1322,6 +1475,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/deprecated.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1330,6 +1484,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/get_code_info.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1338,6 +1493,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/immutable_custom_trait.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1346,6 +1502,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/immutable_metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1354,6 +1511,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/immutable_w_constructors.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1362,6 +1520,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/immutable_w_custom_metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1370,6 +1529,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/inline_and_dollar_at.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1378,6 +1538,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/inline_structor.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1386,6 +1547,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/insertion_order.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1394,6 +1556,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/instance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1402,6 +1565,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/instance_inline.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1410,6 +1574,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/instance_metaclass_incompat.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1418,6 +1583,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/instance_metaclass_incompat_dyn.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1426,6 +1592,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/load.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1434,6 +1601,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/magic.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1442,6 +1610,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/make_mutable.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1450,6 +1619,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/meta_method.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1458,6 +1628,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/meta_package.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1466,6 +1637,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/meta_package_extension.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1474,6 +1646,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1482,6 +1655,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/metaclass_incompatibility.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1490,6 +1664,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/metaclass_incompatibility_dyn.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1498,6 +1673,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/metaclass_inheritance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1506,6 +1682,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/metaclass_loads_classes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1514,6 +1691,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/metaclass_reinitialize.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1522,6 +1700,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/method.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1530,6 +1709,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/method_modifiers.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1538,6 +1718,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1546,6 +1727,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/modify_parent_method.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1554,6 +1736,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/new_and_clone_metaclasses.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1562,6 +1745,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/null_stash.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1570,6 +1754,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/numeric_defaults.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1578,6 +1763,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/package_variables.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1586,6 +1772,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/random_eval_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1594,6 +1781,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/rebless_instance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1602,6 +1790,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/rebless_instance_away.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1610,6 +1799,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/rebless_overload.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1618,6 +1808,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/rebless_with_extra_params.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1626,6 +1817,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/scala_style_mixin_composition.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1634,6 +1826,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/self_introspection.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1642,6 +1835,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/subclasses.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1650,6 +1844,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/subname.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1658,6 +1853,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cmop/universal_methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1666,6 +1862,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compat/composite_metaroles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1674,6 +1871,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compat/extends_nonmoose_that_isa_moose_with_metarole.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1682,6 +1880,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compat/foreign_inheritence.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1690,6 +1889,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compat/inc_hash.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1698,6 +1898,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compat/module_refresh_compat.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1706,6 +1907,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compat/moose_respects_base.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1714,6 +1916,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/examples/Child_Parent_attr_inherit.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1722,6 +1925,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/examples/example1.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1730,6 +1934,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/examples/example2.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1738,6 +1943,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/examples/example_Moose_POOP.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1746,6 +1952,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/examples/example_Protomoose.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1754,6 +1961,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/examples/example_w_DCS.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1762,6 +1970,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/examples/example_w_TestDeep.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1770,6 +1979,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/examples/record_set_iterator.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1778,6 +1988,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/attribute.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1786,6 +1997,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-attribute.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1794,6 +2006,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-class-immutable-trait.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1802,6 +2015,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-class.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1810,6 +2024,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-method-accessor.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1818,6 +2033,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-method-constructor.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1826,6 +2042,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-method-generated.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1834,6 +2051,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-method-meta.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1842,6 +2060,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-method-wrapped.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1850,6 +2069,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-method.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1858,6 +2078,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-mixin-hasattributes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1866,6 +2087,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-mixin-hasmethods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1874,6 +2096,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-module.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1882,6 +2105,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-object.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1890,6 +2114,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class-mop-package.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1898,6 +2123,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/class.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1906,6 +2132,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/cmop.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1914,6 +2141,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/exception-lazyattributeneedsadefault.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1922,6 +2150,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/frame-leak.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1930,6 +2159,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/meta-role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1938,6 +2168,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1946,6 +2177,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-exporter.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1954,6 +2186,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-attribute-native-traits.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1962,6 +2195,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-class-immutable-trait.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1970,6 +2204,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native-array.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1978,6 +2213,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native-collection.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1986,6 +2222,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native-grep.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -1994,6 +2231,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native-hash-set.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2002,6 +2240,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native-hash.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2010,6 +2249,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native-string-match.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2018,6 +2258,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native-string-replace.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2026,6 +2267,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native-string-substr.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2034,6 +2276,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor-native.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2042,6 +2285,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-accessor.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2050,6 +2294,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-augmented.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2058,6 +2303,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-constructor.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2066,6 +2312,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-delegation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2074,6 +2321,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-destructor.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2082,6 +2330,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-method-overridden.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2090,6 +2339,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-role-application-rolesummation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2098,6 +2348,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-role-application-toclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2106,6 +2357,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-role-application-torole.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2114,6 +2366,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-role-application.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2122,6 +2375,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-role-attribute.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2130,6 +2384,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-role-composite.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2138,6 +2393,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-typecoercion-union.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2146,6 +2402,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-typecoercion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2154,6 +2411,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-typeconstraint-enum.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2162,6 +2420,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-typeconstraint-parameterizable.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2170,6 +2429,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-typeconstraint-parameterized.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2178,6 +2438,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-typeconstraint-registry.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2186,6 +2447,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-meta-typeconstraint.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2194,6 +2456,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2202,6 +2465,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-util-metarole.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2210,6 +2474,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose-util-typeconstraints.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2218,6 +2483,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/moose.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2226,6 +2492,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/object.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2234,6 +2501,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/overload.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2242,6 +2510,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/rt-92818.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2250,6 +2519,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/rt-94795.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2258,6 +2528,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/stringify.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2266,6 +2537,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/traits.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2274,6 +2546,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/typeconstraints.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2282,6 +2555,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/util.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2290,6 +2564,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/with-debugging.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2298,6 +2573,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exceptions/without-debugging.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2306,6 +2582,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/apply_roles_to_immutable.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2314,6 +2591,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/buildargs.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2322,6 +2600,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/constructor_is_not_moose.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2330,6 +2609,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/constructor_is_wrapped.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2338,6 +2618,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/default_values.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2346,6 +2627,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/definition_context.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2354,6 +2636,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/immutable_constructor_error.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2362,6 +2645,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/immutable_destroy.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2370,6 +2654,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/immutable_meta_class.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2378,6 +2663,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/immutable_metaclass_with_traits.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2386,6 +2672,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/immutable_moose.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2394,6 +2681,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/immutable_roundtrip.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2402,6 +2690,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/immutable_trigger_from_constructor.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2410,6 +2699,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/inline_close_over.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2418,6 +2708,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/inline_fallbacks.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2426,6 +2717,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/inlined_constructors_n_types.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2434,6 +2726,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/immutable/multiple_demolish_inline.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2442,6 +2735,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/create_anon_with_required_attr.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2450,6 +2744,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/custom_attr_meta_as_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2458,6 +2753,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/custom_attr_meta_with_roles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2466,6 +2762,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/easy_init_meta.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2474,6 +2771,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/export_with_prototype.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2482,6 +2780,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/exporter_also_with_trait.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2490,6 +2789,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/exporter_meta_lookup.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2498,6 +2798,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/exporter_sub_names.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2506,6 +2807,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/goto_moose_import.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2514,6 +2816,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/immutable_metaclass_compat_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2522,6 +2825,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/meta_name.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2530,6 +2834,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metaclass_compat.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2538,6 +2843,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metaclass_compat_no_fixing_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2546,6 +2852,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metaclass_compat_role_conflicts.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2554,6 +2861,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metaclass_parameterized_traits.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2562,6 +2870,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metaclass_traits.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2570,6 +2879,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metarole.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2578,6 +2888,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metarole_combination.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2586,6 +2897,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metarole_on_anon.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2594,6 +2906,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metarole_w_metaclass_pm.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2602,6 +2915,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/metaroles_of_metaroles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2610,6 +2924,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/moose_exporter.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2618,6 +2933,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/moose_exporter_trait_aliases.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2626,6 +2942,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/moose_for_meta.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2634,6 +2951,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/moose_nonmoose_metatrait_init_order.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2642,6 +2960,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/moose_nonmoose_moose_chain_init_meta.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2650,6 +2969,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/moose_w_metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2658,6 +2978,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/new_metaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2666,6 +2987,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/new_object_BUILD.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2674,6 +2996,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/overloading.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2682,6 +3005,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/reinitialize.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2690,6 +3014,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/metaclasses/use_base_of_moose.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2698,6 +3023,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/apply_roles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2706,6 +3032,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/create_alias.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2714,6 +3041,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/ensure_all_roles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2722,6 +3050,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/method_mod_args.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2730,6 +3059,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/moose_util.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2738,6 +3068,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/moose_util_does_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2746,6 +3077,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/moose_util_search_class_by_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2754,6 +3086,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/resolve_alias.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2762,6 +3095,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose_util/with_traits.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2770,6 +3104,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/array_coerce.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2778,6 +3113,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/array_from_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2786,6 +3122,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/array_subtypes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2794,6 +3131,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/array_trigger.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2802,6 +3140,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/collection_with_roles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2810,6 +3149,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/custom_instance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2818,6 +3158,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/hash_coerce.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2826,6 +3167,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/hash_subtypes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2834,6 +3176,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/hash_trigger.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2842,6 +3185,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/remove_attribute.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2850,6 +3194,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/shallow_clone.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2858,6 +3203,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/trait_array.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2866,6 +3212,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/trait_bool.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2874,6 +3221,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/trait_code.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2882,6 +3230,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/trait_counter.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2890,6 +3239,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/trait_hash.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2898,6 +3248,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/trait_number.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2906,6 +3257,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/native_traits/trait_string.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2914,6 +3266,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/basics_bankaccount_methodmodifiersandsubclassing.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2922,6 +3275,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/basics_binarytree_attributefeatures.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2930,6 +3284,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/basics_company_subtypes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2938,6 +3293,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/basics_datetime_extendingnonmooseparent.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2946,6 +3302,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/basics_document_augmentandinner.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2954,6 +3311,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/basics_genome_overloadingsubtypesandcoercion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2962,6 +3320,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/basics_http_subtypesandcoercion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2970,6 +3329,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/basics_point_attributesandsubclassing.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2978,6 +3338,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/extending_debugging_baseclassrole.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2986,6 +3347,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/extending_mooseish_moosesugar.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -2994,6 +3356,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/legacy_debugging_baseclassreplacement.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3002,6 +3365,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/legacy_labeled_attributemetaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3010,6 +3374,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/meta_globref_instancemetaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3018,6 +3383,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/meta_labeled_attributetrait.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3026,6 +3392,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/meta_privateorpublic_methodmetaclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3034,6 +3401,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/meta_table_metaclasstrait.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3042,6 +3410,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/roles_applicationtoinstance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3050,6 +3419,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/roles_comparable_codereuse.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3058,6 +3428,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recipes/roles_restartable_advancedcomposition.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3066,6 +3437,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/anonymous_roles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3074,6 +3446,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/application_toclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3082,6 +3455,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/apply_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3090,6 +3464,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/build.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3098,6 +3473,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/conflict_many_methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3106,6 +3482,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/create_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3114,6 +3491,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/create_role_subclass.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3122,6 +3500,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/empty_method_modifiers_meta_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3130,6 +3509,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/extending_role_attrs.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3138,6 +3518,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/free_anonymous_roles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3146,6 +3527,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/imported_required_method.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3154,6 +3536,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/meta_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3162,6 +3545,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/method_aliasing_in_composition.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3170,6 +3554,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/method_exclusion_in_composition.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3178,6 +3563,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/method_modifiers.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3186,6 +3572,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3194,6 +3581,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/more_alias_and_exclude.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3202,6 +3590,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/more_role_edge_cases.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3210,6 +3599,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/new_meta_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3218,6 +3608,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overloading_combine_to_class.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3226,6 +3617,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overloading_combine_to_instance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3234,6 +3626,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overloading_combine_to_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3242,6 +3635,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overloading_composition_errors.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3250,6 +3644,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overloading_remove_attributes_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3258,6 +3653,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overloading_to_class.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3266,6 +3662,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overloading_to_instance.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3274,6 +3671,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overloading_to_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3282,6 +3680,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/overriding.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3290,6 +3689,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/reinitialize_anon_role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3298,6 +3698,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3306,6 +3707,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_attr_application.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3314,6 +3716,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_attribute_conflict.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3322,6 +3725,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_attrs.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3330,6 +3734,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_compose_requires.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3338,6 +3743,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composite.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3346,6 +3752,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composite_exclusion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3354,6 +3761,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composition_attributes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3362,6 +3770,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composition_conflict_detection.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3370,6 +3779,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composition_errors.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3378,6 +3788,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composition_method_mods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3386,6 +3797,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composition_methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3394,6 +3806,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composition_override.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3402,6 +3815,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_composition_req_methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3410,6 +3824,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_conflict_detection.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3418,6 +3833,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_conflict_edge_cases.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3426,6 +3842,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_consumers.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3434,6 +3851,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_exclusion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3442,6 +3860,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_exclusion_and_alias_bug.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3450,6 +3869,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/role_for_combination.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3458,6 +3878,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/roles_and_method_cloning.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3466,6 +3887,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/roles_and_req_method_edge_cases.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3474,6 +3896,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/roles_applied_in_create.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3482,6 +3905,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/run_time_role_composition.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3490,6 +3914,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/runtime_roles_and_attrs.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3498,6 +3923,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/runtime_roles_and_nonmoose.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3506,6 +3932,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/runtime_roles_w_params.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3514,6 +3941,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/roles/use_base_does.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3522,6 +3950,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_moose/test_moose.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3530,6 +3959,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_moose/test_moose_does_ok.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3538,6 +3968,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_moose/test_moose_has_attribute_ok.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3546,6 +3977,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_moose/test_moose_meta_ok.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3554,6 +3986,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_moose/with_immutable.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3562,6 +3995,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/todo_tests/exception_reflects_failed_constraint.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3570,6 +4004,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/todo_tests/immutable_n_around.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3578,6 +4013,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/todo_tests/moose_and_threads.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3586,6 +4022,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/todo_tests/replacing_super_methods.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3594,6 +4031,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/todo_tests/required_role_accessors.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3602,6 +4040,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/todo_tests/role_insertion_order.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3610,6 +4049,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/todo_tests/various_role_features.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3618,6 +4058,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/todo_tests/wrong-inner.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3626,6 +4067,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/advanced_type_creation.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3634,6 +4076,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/class_subtypes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3642,6 +4085,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/class_type_constraint.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3650,6 +4094,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/coerced_parameterized_types.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3658,6 +4103,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/container_type_coercion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3666,6 +4112,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/container_type_constraint.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3674,6 +4121,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/custom_parameterized_types.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3682,6 +4130,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/custom_type_errors.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3690,6 +4139,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/define_type_twice_throws.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3698,6 +4148,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/duck_type_handles.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3706,6 +4157,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/duck_types.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3714,6 +4166,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/enum.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3722,6 +4175,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/inlining.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3730,6 +4184,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/match_type_operator.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3738,6 +4193,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/maybe_type_constraint.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3746,6 +4202,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/misc_type_tests.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3754,6 +4211,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/name_conflicts.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3762,6 +4220,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/normalize_type_name.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3770,6 +4229,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/parameterize_from.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3778,6 +4238,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/role_type_constraint.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3786,6 +4247,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/subtype_auto_vivify_parent.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3794,6 +4256,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/subtyping_parameterized_types.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3802,6 +4265,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/subtyping_union_types.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3810,6 +4274,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/throw_error.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3818,6 +4283,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/type_coersion_on_lazy_attributes.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3826,6 +4292,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/type_names.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3834,6 +4301,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/type_notation_parser.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3842,6 +4310,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/types_and_undef.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3850,6 +4319,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/union_is_a_type_of.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3858,6 +4328,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/union_types.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3866,6 +4337,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/union_types_and_coercions.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3874,6 +4346,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/util_find_type_constraint.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3882,6 +4355,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/util_more_type_coercion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3890,6 +4364,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/util_std_type_constraints.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3898,6 +4373,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/util_type_coercion.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3906,6 +4382,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/util_type_constraints.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3914,6 +4391,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/util_type_constraints_export.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3922,6 +4400,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/util_type_reloading.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3930,6 +4409,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/with-specio.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3938,6 +4418,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/type_constraints/with-type-tiny.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
@@ -3946,487 +4427,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/zzz-check-breaks.t"],
+    tags = ["manual"],
     deps = [":Moose_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_000_load",
-        ":test_t_attributes_accessor_context",
-        ":test_t_attributes_accessor_inlining",
-        ":test_t_attributes_accessor_override_method",
-        ":test_t_attributes_accessor_overwrite_warning",
-        ":test_t_attributes_attr_dereference_test",
-        ":test_t_attributes_attribute_accessor_generation",
-        ":test_t_attributes_attribute_custom_metaclass",
-        ":test_t_attributes_attribute_does",
-        ":test_t_attributes_attribute_inherited_slot_specs",
-        ":test_t_attributes_attribute_lazy_initializer",
-        ":test_t_attributes_attribute_names",
-        ":test_t_attributes_attribute_reader_generation",
-        ":test_t_attributes_attribute_required",
-        ":test_t_attributes_attribute_traits",
-        ":test_t_attributes_attribute_traits_n_meta",
-        ":test_t_attributes_attribute_traits_parameterized",
-        ":test_t_attributes_attribute_traits_registered",
-        ":test_t_attributes_attribute_triggers",
-        ":test_t_attributes_attribute_type_unions",
-        ":test_t_attributes_attribute_without_any_methods",
-        ":test_t_attributes_attribute_writer_generation",
-        ":test_t_attributes_bad_coerce",
-        ":test_t_attributes_chained_coercion",
-        ":test_t_attributes_clone_weak",
-        ":test_t_attributes_default_class_role_types",
-        ":test_t_attributes_default_undef",
-        ":test_t_attributes_delegation_and_modifiers",
-        ":test_t_attributes_delegation_arg_aliasing",
-        ":test_t_attributes_delegation_target_not_loaded",
-        ":test_t_attributes_illegal_options_for_inheritance",
-        ":test_t_attributes_inherit_lazy_build",
-        ":test_t_attributes_lazy_no_default",
-        ":test_t_attributes_method_generation_rules",
-        ":test_t_attributes_misc_attribute_coerce_lazy",
-        ":test_t_attributes_misc_attribute_tests",
-        ":test_t_attributes_more_attr_delegation",
-        ":test_t_attributes_no_init_arg",
-        ":test_t_attributes_no_slot_access",
-        ":test_t_attributes_non_alpha_attr_names",
-        ":test_t_attributes_numeric_defaults",
-        ":test_t_attributes_trigger_and_coerce",
-        ":test_t_attributes_type_constraint",
-        ":test_t_basics_always_strict_warnings",
-        ":test_t_basics_basic_class_setup",
-        ":test_t_basics_buildargs",
-        ":test_t_basics_buildargs_warning",
-        ":test_t_basics_create",
-        ":test_t_basics_create_anon",
-        ":test_t_basics_definition_context",
-        ":test_t_basics_deprecations",
-        ":test_t_basics_destruction",
-        ":test_t_basics_error_handling",
-        ":test_t_basics_global_destruction",
-        ":test_t_basics_import_unimport",
-        ":test_t_basics_inner_and_augment",
-        ":test_t_basics_load_into_main",
-        ":test_t_basics_method_modifier_with_regexp",
-        ":test_t_basics_methods",
-        ":test_t_basics_moose_object_does",
-        ":test_t_basics_moose_respects_type_constraints",
-        ":test_t_basics_override_augment_inner_super",
-        ":test_t_basics_rebless",
-        ":test_t_basics_require_superclasses",
-        ":test_t_basics_super_and_override",
-        ":test_t_basics_super_warns_on_args",
-        ":test_t_basics_universal_methods_wrappable",
-        ":test_t_basics_wrapped_method_cxt_propagation",
-        ":test_t_bugs_DEMOLISHALL",
-        ":test_t_bugs_DEMOLISHALL_shortcutted",
-        ":test_t_bugs_DEMOLISH_eats_exceptions",
-        ":test_t_bugs_DEMOLISH_eats_mini",
-        ":test_t_bugs_DEMOLISH_fails_without_metaclass",
-        ":test_t_bugs_Moose_Object_error",
-        ":test_t_bugs_anon_method_metaclass",
-        ":test_t_bugs_application_metarole_compat",
-        ":test_t_bugs_apply_role_to_one_instance_only",
-        ":test_t_bugs_attribute_trait_parameters",
-        ":test_t_bugs_augment_recursion_bug",
-        ":test_t_bugs_coerce_without_coercion",
-        ":test_t_bugs_constructor_object_overload",
-        ":test_t_bugs_create_anon_mkopt",
-        ":test_t_bugs_create_anon_recursion",
-        ":test_t_bugs_create_anon_role_pass",
-        ":test_t_bugs_delete_sub_stash",
-        ":test_t_bugs_find_custom_trait_rt_92089",
-        ":test_t_bugs_handles_foreign_class_bug",
-        ":test_t_bugs_immutable_metaclass_does_role",
-        ":test_t_bugs_immutable_n_default_x2",
-        ":test_t_bugs_inheriting_from_roles",
-        ":test_t_bugs_inline_reader_bug",
-        ":test_t_bugs_instance_application_role_args",
-        ":test_t_bugs_lazybuild_required_undef",
-        ":test_t_bugs_mark_as_methods_overloading_breakage",
-        ":test_t_bugs_moo_delegation",
-        ":test_t_bugs_moose_exporter_false_circular_reference_rt_63818",
-        ":test_t_bugs_moose_octal_defaults",
-        ":test_t_bugs_native_trait_handles_bad_value",
-        ":test_t_bugs_overloading_edge_cases",
-        ":test_t_bugs_reader_precedence_bug",
-        ":test_t_bugs_role_caller",
-        ":test_t_bugs_subclass_use_base_bug",
-        ":test_t_bugs_subtype_conflict_bug",
-        ":test_t_bugs_subtype_quote_bug",
-        ":test_t_bugs_super_recursion",
-        ":test_t_bugs_traits_with_exporter",
-        ":test_t_bugs_type_constraint_messages",
-        ":test_t_cmop_ArrayBasedStorage_test",
-        ":test_t_cmop_AttributesWithHistory_test",
-        ":test_t_cmop_BinaryTree_test",
-        ":test_t_cmop_C3MethodDispatchOrder_test",
-        ":test_t_cmop_ClassEncapsulatedAttributes_test",
-        ":test_t_cmop_Class_C3_compatibility",
-        ":test_t_cmop_InsideOutClass_test",
-        ":test_t_cmop_InstanceCountingClass_test",
-        ":test_t_cmop_LazyClass_test",
-        ":test_t_cmop_Perl6Attribute_test",
-        ":test_t_cmop_RT_27329_fix",
-        ":test_t_cmop_RT_39001_fix",
-        ":test_t_cmop_RT_41255",
-        ":test_t_cmop_add_attribute_alternate",
-        ":test_t_cmop_add_method_debugmode",
-        ":test_t_cmop_add_method_modifier",
-        ":test_t_cmop_advanced_methods",
-        ":test_t_cmop_anon_class",
-        ":test_t_cmop_anon_class_create_init",
-        ":test_t_cmop_anon_class_keep_alive",
-        ":test_t_cmop_anon_class_leak",
-        ":test_t_cmop_anon_class_removal",
-        ":test_t_cmop_anon_packages",
-        ":test_t_cmop_attribute",
-        ":test_t_cmop_attribute_duplication",
-        ":test_t_cmop_attribute_errors_and_edge_cases",
-        ":test_t_cmop_attribute_get_read_write",
-        ":test_t_cmop_attribute_initializer",
-        ":test_t_cmop_attribute_introspection",
-        ":test_t_cmop_attribute_non_alpha_name",
-        ":test_t_cmop_attributes",
-        ":test_t_cmop_basic",
-        ":test_t_cmop_before_after_dollar_under",
-        ":test_t_cmop_class_errors_and_edge_cases",
-        ":test_t_cmop_class_is_pristine",
-        ":test_t_cmop_class_precedence_list",
-        ":test_t_cmop_constant_codeinfo",
-        ":test_t_cmop_create_class",
-        ":test_t_cmop_custom_instance",
-        ":test_t_cmop_deprecated",
-        ":test_t_cmop_get_code_info",
-        ":test_t_cmop_immutable_custom_trait",
-        ":test_t_cmop_immutable_metaclass",
-        ":test_t_cmop_immutable_w_constructors",
-        ":test_t_cmop_immutable_w_custom_metaclass",
-        ":test_t_cmop_inline_and_dollar_at",
-        ":test_t_cmop_inline_structor",
-        ":test_t_cmop_insertion_order",
-        ":test_t_cmop_instance",
-        ":test_t_cmop_instance_inline",
-        ":test_t_cmop_instance_metaclass_incompat",
-        ":test_t_cmop_instance_metaclass_incompat_dyn",
-        ":test_t_cmop_load",
-        ":test_t_cmop_magic",
-        ":test_t_cmop_make_mutable",
-        ":test_t_cmop_meta_method",
-        ":test_t_cmop_meta_package",
-        ":test_t_cmop_meta_package_extension",
-        ":test_t_cmop_metaclass",
-        ":test_t_cmop_metaclass_incompatibility",
-        ":test_t_cmop_metaclass_incompatibility_dyn",
-        ":test_t_cmop_metaclass_inheritance",
-        ":test_t_cmop_metaclass_loads_classes",
-        ":test_t_cmop_metaclass_reinitialize",
-        ":test_t_cmop_method",
-        ":test_t_cmop_method_modifiers",
-        ":test_t_cmop_methods",
-        ":test_t_cmop_modify_parent_method",
-        ":test_t_cmop_new_and_clone_metaclasses",
-        ":test_t_cmop_null_stash",
-        ":test_t_cmop_numeric_defaults",
-        ":test_t_cmop_package_variables",
-        ":test_t_cmop_random_eval_bug",
-        ":test_t_cmop_rebless_instance",
-        ":test_t_cmop_rebless_instance_away",
-        ":test_t_cmop_rebless_overload",
-        ":test_t_cmop_rebless_with_extra_params",
-        ":test_t_cmop_scala_style_mixin_composition",
-        ":test_t_cmop_self_introspection",
-        ":test_t_cmop_subclasses",
-        ":test_t_cmop_subname",
-        ":test_t_cmop_universal_methods",
-        ":test_t_compat_composite_metaroles",
-        ":test_t_compat_extends_nonmoose_that_isa_moose_with_metarole",
-        ":test_t_compat_foreign_inheritence",
-        ":test_t_compat_inc_hash",
-        ":test_t_compat_module_refresh_compat",
-        ":test_t_compat_moose_respects_base",
-        ":test_t_examples_Child_Parent_attr_inherit",
-        ":test_t_examples_example1",
-        ":test_t_examples_example2",
-        ":test_t_examples_example_Moose_POOP",
-        ":test_t_examples_example_Protomoose",
-        ":test_t_examples_example_w_DCS",
-        ":test_t_examples_example_w_TestDeep",
-        ":test_t_examples_record_set_iterator",
-        ":test_t_exceptions_attribute",
-        ":test_t_exceptions_class",
-        ":test_t_exceptions_class-mop-attribute",
-        ":test_t_exceptions_class-mop-class",
-        ":test_t_exceptions_class-mop-class-immutable-trait",
-        ":test_t_exceptions_class-mop-method",
-        ":test_t_exceptions_class-mop-method-accessor",
-        ":test_t_exceptions_class-mop-method-constructor",
-        ":test_t_exceptions_class-mop-method-generated",
-        ":test_t_exceptions_class-mop-method-meta",
-        ":test_t_exceptions_class-mop-method-wrapped",
-        ":test_t_exceptions_class-mop-mixin-hasattributes",
-        ":test_t_exceptions_class-mop-mixin-hasmethods",
-        ":test_t_exceptions_class-mop-module",
-        ":test_t_exceptions_class-mop-object",
-        ":test_t_exceptions_class-mop-package",
-        ":test_t_exceptions_cmop",
-        ":test_t_exceptions_exception-lazyattributeneedsadefault",
-        ":test_t_exceptions_frame-leak",
-        ":test_t_exceptions_meta-role",
-        ":test_t_exceptions_metaclass",
-        ":test_t_exceptions_moose",
-        ":test_t_exceptions_moose-exporter",
-        ":test_t_exceptions_moose-meta-attribute-native-traits",
-        ":test_t_exceptions_moose-meta-class-immutable-trait",
-        ":test_t_exceptions_moose-meta-method-accessor",
-        ":test_t_exceptions_moose-meta-method-accessor-native",
-        ":test_t_exceptions_moose-meta-method-accessor-native-array",
-        ":test_t_exceptions_moose-meta-method-accessor-native-collection",
-        ":test_t_exceptions_moose-meta-method-accessor-native-grep",
-        ":test_t_exceptions_moose-meta-method-accessor-native-hash",
-        ":test_t_exceptions_moose-meta-method-accessor-native-hash-set",
-        ":test_t_exceptions_moose-meta-method-accessor-native-string-match",
-        ":test_t_exceptions_moose-meta-method-accessor-native-string-replace",
-        ":test_t_exceptions_moose-meta-method-accessor-native-string-substr",
-        ":test_t_exceptions_moose-meta-method-augmented",
-        ":test_t_exceptions_moose-meta-method-constructor",
-        ":test_t_exceptions_moose-meta-method-delegation",
-        ":test_t_exceptions_moose-meta-method-destructor",
-        ":test_t_exceptions_moose-meta-method-overridden",
-        ":test_t_exceptions_moose-meta-role-application",
-        ":test_t_exceptions_moose-meta-role-application-rolesummation",
-        ":test_t_exceptions_moose-meta-role-application-toclass",
-        ":test_t_exceptions_moose-meta-role-application-torole",
-        ":test_t_exceptions_moose-meta-role-attribute",
-        ":test_t_exceptions_moose-meta-role-composite",
-        ":test_t_exceptions_moose-meta-typecoercion",
-        ":test_t_exceptions_moose-meta-typecoercion-union",
-        ":test_t_exceptions_moose-meta-typeconstraint",
-        ":test_t_exceptions_moose-meta-typeconstraint-enum",
-        ":test_t_exceptions_moose-meta-typeconstraint-parameterizable",
-        ":test_t_exceptions_moose-meta-typeconstraint-parameterized",
-        ":test_t_exceptions_moose-meta-typeconstraint-registry",
-        ":test_t_exceptions_moose-role",
-        ":test_t_exceptions_moose-util-metarole",
-        ":test_t_exceptions_moose-util-typeconstraints",
-        ":test_t_exceptions_object",
-        ":test_t_exceptions_overload",
-        ":test_t_exceptions_rt-92818",
-        ":test_t_exceptions_rt-94795",
-        ":test_t_exceptions_stringify",
-        ":test_t_exceptions_traits",
-        ":test_t_exceptions_typeconstraints",
-        ":test_t_exceptions_util",
-        ":test_t_exceptions_with-debugging",
-        ":test_t_exceptions_without-debugging",
-        ":test_t_immutable_apply_roles_to_immutable",
-        ":test_t_immutable_buildargs",
-        ":test_t_immutable_constructor_is_not_moose",
-        ":test_t_immutable_constructor_is_wrapped",
-        ":test_t_immutable_default_values",
-        ":test_t_immutable_definition_context",
-        ":test_t_immutable_immutable_constructor_error",
-        ":test_t_immutable_immutable_destroy",
-        ":test_t_immutable_immutable_meta_class",
-        ":test_t_immutable_immutable_metaclass_with_traits",
-        ":test_t_immutable_immutable_moose",
-        ":test_t_immutable_immutable_roundtrip",
-        ":test_t_immutable_immutable_trigger_from_constructor",
-        ":test_t_immutable_inline_close_over",
-        ":test_t_immutable_inline_fallbacks",
-        ":test_t_immutable_inlined_constructors_n_types",
-        ":test_t_immutable_multiple_demolish_inline",
-        ":test_t_metaclasses_create_anon_with_required_attr",
-        ":test_t_metaclasses_custom_attr_meta_as_role",
-        ":test_t_metaclasses_custom_attr_meta_with_roles",
-        ":test_t_metaclasses_easy_init_meta",
-        ":test_t_metaclasses_export_with_prototype",
-        ":test_t_metaclasses_exporter_also_with_trait",
-        ":test_t_metaclasses_exporter_meta_lookup",
-        ":test_t_metaclasses_exporter_sub_names",
-        ":test_t_metaclasses_goto_moose_import",
-        ":test_t_metaclasses_immutable_metaclass_compat_bug",
-        ":test_t_metaclasses_meta_name",
-        ":test_t_metaclasses_metaclass_compat",
-        ":test_t_metaclasses_metaclass_compat_no_fixing_bug",
-        ":test_t_metaclasses_metaclass_compat_role_conflicts",
-        ":test_t_metaclasses_metaclass_parameterized_traits",
-        ":test_t_metaclasses_metaclass_traits",
-        ":test_t_metaclasses_metarole",
-        ":test_t_metaclasses_metarole_combination",
-        ":test_t_metaclasses_metarole_on_anon",
-        ":test_t_metaclasses_metarole_w_metaclass_pm",
-        ":test_t_metaclasses_metaroles_of_metaroles",
-        ":test_t_metaclasses_moose_exporter",
-        ":test_t_metaclasses_moose_exporter_trait_aliases",
-        ":test_t_metaclasses_moose_for_meta",
-        ":test_t_metaclasses_moose_nonmoose_metatrait_init_order",
-        ":test_t_metaclasses_moose_nonmoose_moose_chain_init_meta",
-        ":test_t_metaclasses_moose_w_metaclass",
-        ":test_t_metaclasses_new_metaclass",
-        ":test_t_metaclasses_new_object_BUILD",
-        ":test_t_metaclasses_overloading",
-        ":test_t_metaclasses_reinitialize",
-        ":test_t_metaclasses_use_base_of_moose",
-        ":test_t_moose_util_apply_roles",
-        ":test_t_moose_util_create_alias",
-        ":test_t_moose_util_ensure_all_roles",
-        ":test_t_moose_util_method_mod_args",
-        ":test_t_moose_util_moose_util",
-        ":test_t_moose_util_moose_util_does_role",
-        ":test_t_moose_util_moose_util_search_class_by_role",
-        ":test_t_moose_util_resolve_alias",
-        ":test_t_moose_util_with_traits",
-        ":test_t_native_traits_array_coerce",
-        ":test_t_native_traits_array_from_role",
-        ":test_t_native_traits_array_subtypes",
-        ":test_t_native_traits_array_trigger",
-        ":test_t_native_traits_collection_with_roles",
-        ":test_t_native_traits_custom_instance",
-        ":test_t_native_traits_hash_coerce",
-        ":test_t_native_traits_hash_subtypes",
-        ":test_t_native_traits_hash_trigger",
-        ":test_t_native_traits_remove_attribute",
-        ":test_t_native_traits_shallow_clone",
-        ":test_t_native_traits_trait_array",
-        ":test_t_native_traits_trait_bool",
-        ":test_t_native_traits_trait_code",
-        ":test_t_native_traits_trait_counter",
-        ":test_t_native_traits_trait_hash",
-        ":test_t_native_traits_trait_number",
-        ":test_t_native_traits_trait_string",
-        ":test_t_recipes_basics_bankaccount_methodmodifiersandsubclassing",
-        ":test_t_recipes_basics_binarytree_attributefeatures",
-        ":test_t_recipes_basics_company_subtypes",
-        ":test_t_recipes_basics_datetime_extendingnonmooseparent",
-        ":test_t_recipes_basics_document_augmentandinner",
-        ":test_t_recipes_basics_genome_overloadingsubtypesandcoercion",
-        ":test_t_recipes_basics_http_subtypesandcoercion",
-        ":test_t_recipes_basics_point_attributesandsubclassing",
-        ":test_t_recipes_extending_debugging_baseclassrole",
-        ":test_t_recipes_extending_mooseish_moosesugar",
-        ":test_t_recipes_legacy_debugging_baseclassreplacement",
-        ":test_t_recipes_legacy_labeled_attributemetaclass",
-        ":test_t_recipes_meta_globref_instancemetaclass",
-        ":test_t_recipes_meta_labeled_attributetrait",
-        ":test_t_recipes_meta_privateorpublic_methodmetaclass",
-        ":test_t_recipes_meta_table_metaclasstrait",
-        ":test_t_recipes_roles_applicationtoinstance",
-        ":test_t_recipes_roles_comparable_codereuse",
-        ":test_t_recipes_roles_restartable_advancedcomposition",
-        ":test_t_roles_anonymous_roles",
-        ":test_t_roles_application_toclass",
-        ":test_t_roles_apply_role",
-        ":test_t_roles_build",
-        ":test_t_roles_conflict_many_methods",
-        ":test_t_roles_create_role",
-        ":test_t_roles_create_role_subclass",
-        ":test_t_roles_empty_method_modifiers_meta_bug",
-        ":test_t_roles_extending_role_attrs",
-        ":test_t_roles_free_anonymous_roles",
-        ":test_t_roles_imported_required_method",
-        ":test_t_roles_meta_role",
-        ":test_t_roles_method_aliasing_in_composition",
-        ":test_t_roles_method_exclusion_in_composition",
-        ":test_t_roles_method_modifiers",
-        ":test_t_roles_methods",
-        ":test_t_roles_more_alias_and_exclude",
-        ":test_t_roles_more_role_edge_cases",
-        ":test_t_roles_new_meta_role",
-        ":test_t_roles_overloading_combine_to_class",
-        ":test_t_roles_overloading_combine_to_instance",
-        ":test_t_roles_overloading_combine_to_role",
-        ":test_t_roles_overloading_composition_errors",
-        ":test_t_roles_overloading_remove_attributes_bug",
-        ":test_t_roles_overloading_to_class",
-        ":test_t_roles_overloading_to_instance",
-        ":test_t_roles_overloading_to_role",
-        ":test_t_roles_overriding",
-        ":test_t_roles_reinitialize_anon_role",
-        ":test_t_roles_role",
-        ":test_t_roles_role_attr_application",
-        ":test_t_roles_role_attribute_conflict",
-        ":test_t_roles_role_attrs",
-        ":test_t_roles_role_compose_requires",
-        ":test_t_roles_role_composite",
-        ":test_t_roles_role_composite_exclusion",
-        ":test_t_roles_role_composition_attributes",
-        ":test_t_roles_role_composition_conflict_detection",
-        ":test_t_roles_role_composition_errors",
-        ":test_t_roles_role_composition_method_mods",
-        ":test_t_roles_role_composition_methods",
-        ":test_t_roles_role_composition_override",
-        ":test_t_roles_role_composition_req_methods",
-        ":test_t_roles_role_conflict_detection",
-        ":test_t_roles_role_conflict_edge_cases",
-        ":test_t_roles_role_consumers",
-        ":test_t_roles_role_exclusion",
-        ":test_t_roles_role_exclusion_and_alias_bug",
-        ":test_t_roles_role_for_combination",
-        ":test_t_roles_roles_and_method_cloning",
-        ":test_t_roles_roles_and_req_method_edge_cases",
-        ":test_t_roles_roles_applied_in_create",
-        ":test_t_roles_run_time_role_composition",
-        ":test_t_roles_runtime_roles_and_attrs",
-        ":test_t_roles_runtime_roles_and_nonmoose",
-        ":test_t_roles_runtime_roles_w_params",
-        ":test_t_roles_use_base_does",
-        ":test_t_test_moose_test_moose",
-        ":test_t_test_moose_test_moose_does_ok",
-        ":test_t_test_moose_test_moose_has_attribute_ok",
-        ":test_t_test_moose_test_moose_meta_ok",
-        ":test_t_test_moose_with_immutable",
-        ":test_t_todo_tests_exception_reflects_failed_constraint",
-        ":test_t_todo_tests_immutable_n_around",
-        ":test_t_todo_tests_moose_and_threads",
-        ":test_t_todo_tests_replacing_super_methods",
-        ":test_t_todo_tests_required_role_accessors",
-        ":test_t_todo_tests_role_insertion_order",
-        ":test_t_todo_tests_various_role_features",
-        ":test_t_todo_tests_wrong-inner",
-        ":test_t_type_constraints_advanced_type_creation",
-        ":test_t_type_constraints_class_subtypes",
-        ":test_t_type_constraints_class_type_constraint",
-        ":test_t_type_constraints_coerced_parameterized_types",
-        ":test_t_type_constraints_container_type_coercion",
-        ":test_t_type_constraints_container_type_constraint",
-        ":test_t_type_constraints_custom_parameterized_types",
-        ":test_t_type_constraints_custom_type_errors",
-        ":test_t_type_constraints_define_type_twice_throws",
-        ":test_t_type_constraints_duck_type_handles",
-        ":test_t_type_constraints_duck_types",
-        ":test_t_type_constraints_enum",
-        ":test_t_type_constraints_inlining",
-        ":test_t_type_constraints_match_type_operator",
-        ":test_t_type_constraints_maybe_type_constraint",
-        ":test_t_type_constraints_misc_type_tests",
-        ":test_t_type_constraints_name_conflicts",
-        ":test_t_type_constraints_normalize_type_name",
-        ":test_t_type_constraints_parameterize_from",
-        ":test_t_type_constraints_role_type_constraint",
-        ":test_t_type_constraints_subtype_auto_vivify_parent",
-        ":test_t_type_constraints_subtyping_parameterized_types",
-        ":test_t_type_constraints_subtyping_union_types",
-        ":test_t_type_constraints_throw_error",
-        ":test_t_type_constraints_type_coersion_on_lazy_attributes",
-        ":test_t_type_constraints_type_names",
-        ":test_t_type_constraints_type_notation_parser",
-        ":test_t_type_constraints_types_and_undef",
-        ":test_t_type_constraints_union_is_a_type_of",
-        ":test_t_type_constraints_union_types",
-        ":test_t_type_constraints_union_types_and_coercions",
-        ":test_t_type_constraints_util_find_type_constraint",
-        ":test_t_type_constraints_util_more_type_coercion",
-        ":test_t_type_constraints_util_std_type_constraints",
-        ":test_t_type_constraints_util_type_coercion",
-        ":test_t_type_constraints_util_type_constraints",
-        ":test_t_type_constraints_util_type_constraints_export",
-        ":test_t_type_constraints_util_type_reloading",
-        ":test_t_type_constraints_with-specio",
-        ":test_t_type_constraints_with-type-tiny",
-        ":test_t_zzz-check-breaks",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

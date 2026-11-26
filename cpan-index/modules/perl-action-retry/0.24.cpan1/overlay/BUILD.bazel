@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Action-Retry_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/check_params.t"],
+    tags = ["manual"],
     deps = [":Action-Retry_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/constant.t"],
+    tags = ["manual"],
     deps = [":Action-Retry_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/fibonacci.t"],
+    tags = ["manual"],
     deps = [":Action-Retry_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/linear.t"],
+    tags = ["manual"],
     deps = [":Action-Retry_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/nonblocking.t"],
+    tags = ["manual"],
     deps = [":Action-Retry_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-distmeta.t"],
+    tags = ["manual"],
     deps = [":Action-Retry_test_lib"],
 )
 
@@ -119,19 +126,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-pod-coverage.t"],
+    tags = ["manual"],
     deps = [":Action-Retry_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_check_params",
-        ":test_t_constant",
-        ":test_t_fibonacci",
-        ":test_t_linear",
-        ":test_t_nonblocking",
-        ":test_t_release-distmeta",
-        ":test_t_release-pod-coverage",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

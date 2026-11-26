@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_use.t"],
+    tags = ["manual"],
     deps = [":MooseX-Test-Role_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02_exports.t"],
+    tags = ["manual"],
     deps = [":MooseX-Test-Role_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03_requires_ok.t"],
+    tags = ["manual"],
     deps = [":MooseX-Test-Role_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04_consumer_of.t"],
+    tags = ["manual"],
     deps = [":MooseX-Test-Role_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05_consuming_object.t"],
+    tags = ["manual"],
     deps = [":MooseX-Test-Role_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06_consuming_class.t"],
+    tags = ["manual"],
     deps = [":MooseX-Test-Role_test_lib"],
 )
 
@@ -111,18 +117,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07_unused.t"],
+    tags = ["manual"],
     deps = [":MooseX-Test-Role_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_01_use",
-        ":test_t_02_exports",
-        ":test_t_03_requires_ok",
-        ":test_t_04_consumer_of",
-        ":test_t_05_consuming_object",
-        ":test_t_06_consuming_class",
-        ":test_t_07_unused",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

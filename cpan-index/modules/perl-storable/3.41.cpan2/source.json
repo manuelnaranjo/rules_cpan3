@@ -3,6 +3,6 @@
     "integrity": "sha256-2VYT5i2sedx33yOkqRmQ9NROCroNHTH4HLlm93avhRA=",
     "strip_prefix": "Storable-3.41",
     "overlay": {
-        "BUILD.bazel": "sha256-sebkuLMl9kINU39pOOyLd+i/kXmpurj/OxstqMiJCic="
+        "BUILD.bazel": "sha256-+Rdn43n+APyZK5wKZXNiJjL6S4HoYPEwQmsMAQNvXa8="
     }
 }

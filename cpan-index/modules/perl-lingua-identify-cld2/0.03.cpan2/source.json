@@ -3,6 +3,6 @@
     "integrity": "sha256-y2Wtp9AX2zHdvjSrGd4WazHvQOC8V291g5oHPDXitgM=",
     "strip_prefix": "Lingua-Identify-CLD2-0.03",
     "overlay": {
-        "BUILD.bazel": "sha256-0fAQ2x4CFW7kAXgpHHrRr2UkjHGC1ZH1+72Z8q12jqc="
+        "BUILD.bazel": "sha256-HscekUe/k0cbyGT1s47BYaz5zMU2JL7xK/RYA1adFWQ="
     }
 }

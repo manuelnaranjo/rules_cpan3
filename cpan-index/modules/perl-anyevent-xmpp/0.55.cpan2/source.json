@@ -3,6 +3,6 @@
     "integrity": "sha256-7FayXmp4Yw957l44t5o5lXuLifseoDgE9U3vueNUQlY=",
     "strip_prefix": "AnyEvent-XMPP-0.55",
     "overlay": {
-        "BUILD.bazel": "sha256-lRF4b52i0qqynUzwKv9uYgtg+yfn3mcx7X2Sz1nUUVA="
+        "BUILD.bazel": "sha256-4wrhEZI2RFPzCcmUVpe5uHKk/NcP/DWsLPoprqZw/j4="
     }
 }

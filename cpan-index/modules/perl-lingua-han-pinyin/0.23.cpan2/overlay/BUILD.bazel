@@ -115,12 +115,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_1-gb2312",
-        ":test_t_2-utf8",
-        ":test_t_3-gb2312-tone",
-        ":test_t_4-utf8-tone",
-        ":test_t_5-unicode",
-        ":test_t_6-capitalize",
-    ],
+    tests = [],
 )

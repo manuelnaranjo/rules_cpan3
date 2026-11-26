@@ -3,6 +3,6 @@
     "integrity": "sha256-BA8W8wZmR9dhtySjtwdU0oy9Hm/l6gHGPtHNhXEX1jk=",
     "strip_prefix": "Net-IP-1.26",
     "overlay": {
-        "BUILD.bazel": "sha256-/Z90OmC8aYcxG8Ic+XG17BvTeBiH2E4cyFmOtSiJjvs="
+        "BUILD.bazel": "sha256-19676NtxXxoKvdQx7uUGiXlDPUstBOWNlMowM+s9xIQ="
     }
 }

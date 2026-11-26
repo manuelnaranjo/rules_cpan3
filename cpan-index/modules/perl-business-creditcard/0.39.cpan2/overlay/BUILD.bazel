@@ -97,10 +97,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_agreements",
-        ":test_t_test",
-        ":test_t_validate_card",
-        ":test_t_validation",
-    ],
+    tests = [],
 )

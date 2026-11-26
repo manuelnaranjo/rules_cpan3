@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-basic.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01-eval.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02-localise.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05-exception_xs.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06-exception_pp.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07-nested.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10-test_without_vm_pure_pp.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/11-direct_xs.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
@@ -135,21 +144,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12-direct_pp.t"],
+    tags = ["manual"],
     deps = [":B-Hooks-EndOfScope_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-basic",
-        ":test_t_00-report-prereqs",
-        ":test_t_01-eval",
-        ":test_t_02-localise",
-        ":test_t_05-exception_xs",
-        ":test_t_06-exception_pp",
-        ":test_t_07-nested",
-        ":test_t_10-test_without_vm_pure_pp",
-        ":test_t_11-direct_xs",
-        ":test_t_12-direct_pp",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

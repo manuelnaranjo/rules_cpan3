@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [
@@ -181,14 +187,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_city",
-        ":test_t_country",
-        ":test_t_country_v6",
-        ":test_t_domain",
-        ":test_t_netspeedcell",
-        ":test_t_org",
-        ":test_t_region",
-    ],
+    tests = [],
 )

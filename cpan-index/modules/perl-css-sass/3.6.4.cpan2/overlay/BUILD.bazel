@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "plugins/sassc/sassc.c",
             "plugins/sassc/win/posix/getopt.c",
             "libsass/src/cencode.c",
@@ -49,7 +55,6 @@ cpan_xs(
         allow_empty = True,
     ),
     deps = [
-        "@libsass",
         "@libsass//:sass",
     ],
 )

@@ -33,3 +33,9 @@ alias(
     name = "perl-crypt-rc4",
     actual = ":Crypt-RC4",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

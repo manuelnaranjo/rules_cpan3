@@ -160,17 +160,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_01-exceptions",
-        ":test_t_02-optargs",
-        ":test_t_03-alias",
-        ":test_t_04-dash",
-        ":test_t_05-counter",
-        ":test_t_06-default",
-        ":test_t_07-rest",
-        ":test_t_08-fallback",
-        ":test_t_09-utf8",
-        ":test_t_41-subcommand",
-        ":test_t_42-optargs",
-    ],
+    tests = [],
 )

@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_info.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/01_pod/01_pod.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/01_pod/02_pod_coverage.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/01_pod/03_pod_no404s.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/01_pod/04_pod_linkcheck.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/02_pipes/01_base.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/02_pipes/02_oneway.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/02_pipes/03_twoway.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/01_poe.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/03_component.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/04_driver.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/05_filter.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/06_loop.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -167,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/07_queue.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -175,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/08_resource.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -183,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/09_resources.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -191,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/10_wheel.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -199,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/11_assert_usage.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -207,6 +225,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/12_assert_retval.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -215,6 +234,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/13_assert_data.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -223,6 +243,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/14_kernel.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -231,6 +252,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/15_kernel_internal.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -239,6 +261,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/16_nfa_usage.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -247,6 +270,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/03_base/17_detach_start.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -255,6 +279,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/04_drivers/01_sysrw.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -263,6 +288,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/01_block.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -271,6 +297,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/02_grep.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -279,6 +306,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/03_http.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -287,6 +315,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/04_line.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -295,6 +324,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/05_map.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -303,6 +333,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/06_recordblock.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -311,6 +342,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/07_reference.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -319,6 +351,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/08_stream.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -327,6 +360,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/50_stackable.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -335,6 +369,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/51_reference_die.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -343,6 +378,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/05_filters/99_filterchange.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -351,6 +387,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/06_queues/01_array.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -359,6 +396,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/07_exceptions/01_normal.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -367,6 +405,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/07_exceptions/02_turn_off.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -375,6 +414,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/07_exceptions/03_not_handled.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -383,6 +423,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/01_explicit_loop.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -391,6 +432,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/02_explicit_loop_fail.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -399,6 +441,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/03_explicit_loop_poll.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -407,6 +450,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/04_explicit_loop_envvar.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -415,6 +459,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/05_kernel_loop.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -423,6 +468,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/06_kernel_loop_poll.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -431,6 +477,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/07_kernel_loop_fail.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -439,6 +486,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/08_kernel_loop_search_poll.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -447,6 +495,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/09_naive_loop_load.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -455,6 +504,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/10_naive_loop_load_poll.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -463,6 +513,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_units/08_loops/11_double_loop.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -471,6 +522,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/agaran-filter-httpd.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -479,6 +531,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/averell-callback-ret.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -487,6 +540,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/bingos-followtail.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -495,6 +549,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/broeren-win32-nbio.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -503,6 +558,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/cfedde-filter-httpd.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -511,6 +567,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/ferrari-server-unix.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -519,6 +576,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/grinnz-die-in-die.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -527,6 +585,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/hinrik-wheel-run-die.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -535,6 +594,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/kjeldahl-stop-start-polling.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -543,6 +603,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/kjeldahl-stop-start-sig-nopipe.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -551,6 +612,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/kjeldahl-stop-start-sig-pipe.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -559,6 +621,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/leolo-sig-die.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -567,6 +630,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/meh-startstop-return.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -575,6 +639,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/neyuki_detach.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -583,6 +648,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/pipe-followtail.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -591,6 +657,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/prumike-win32-stat.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -599,6 +666,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/rt14444-arg1.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -607,6 +675,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/rt1648-tied-stderr.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -615,6 +684,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/rt19908-merlyn-stop.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -623,6 +693,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/rt23181-sigchld-rc.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -631,6 +702,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/rt47966-sigchld.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -639,6 +711,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/rt56417-wheel-run.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -647,6 +720,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/rt65460-forking.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -655,6 +729,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/socketfactory-timeout.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -663,6 +738,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/somni-poco-server-tcp.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -671,6 +747,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/steinert-passed-wheel.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -679,6 +756,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/suzman_windows.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -687,6 +765,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/ton-stop-corruption.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -695,6 +774,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/tracing-sane-exit.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -703,6 +783,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/whelan-dieprop.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
@@ -711,93 +792,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_regression/whjackson-followtail.t"],
+    tags = ["manual"],
     deps = [":POE_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00_info",
-        ":test_t_10_units_01_pod_01_pod",
-        ":test_t_10_units_01_pod_02_pod_coverage",
-        ":test_t_10_units_01_pod_03_pod_no404s",
-        ":test_t_10_units_01_pod_04_pod_linkcheck",
-        ":test_t_10_units_02_pipes_01_base",
-        ":test_t_10_units_02_pipes_02_oneway",
-        ":test_t_10_units_02_pipes_03_twoway",
-        ":test_t_10_units_03_base_01_poe",
-        ":test_t_10_units_03_base_03_component",
-        ":test_t_10_units_03_base_04_driver",
-        ":test_t_10_units_03_base_05_filter",
-        ":test_t_10_units_03_base_06_loop",
-        ":test_t_10_units_03_base_07_queue",
-        ":test_t_10_units_03_base_08_resource",
-        ":test_t_10_units_03_base_09_resources",
-        ":test_t_10_units_03_base_10_wheel",
-        ":test_t_10_units_03_base_11_assert_usage",
-        ":test_t_10_units_03_base_12_assert_retval",
-        ":test_t_10_units_03_base_13_assert_data",
-        ":test_t_10_units_03_base_14_kernel",
-        ":test_t_10_units_03_base_15_kernel_internal",
-        ":test_t_10_units_03_base_16_nfa_usage",
-        ":test_t_10_units_03_base_17_detach_start",
-        ":test_t_10_units_04_drivers_01_sysrw",
-        ":test_t_10_units_05_filters_01_block",
-        ":test_t_10_units_05_filters_02_grep",
-        ":test_t_10_units_05_filters_03_http",
-        ":test_t_10_units_05_filters_04_line",
-        ":test_t_10_units_05_filters_05_map",
-        ":test_t_10_units_05_filters_06_recordblock",
-        ":test_t_10_units_05_filters_07_reference",
-        ":test_t_10_units_05_filters_08_stream",
-        ":test_t_10_units_05_filters_50_stackable",
-        ":test_t_10_units_05_filters_51_reference_die",
-        ":test_t_10_units_05_filters_99_filterchange",
-        ":test_t_10_units_06_queues_01_array",
-        ":test_t_10_units_07_exceptions_01_normal",
-        ":test_t_10_units_07_exceptions_02_turn_off",
-        ":test_t_10_units_07_exceptions_03_not_handled",
-        ":test_t_10_units_08_loops_01_explicit_loop",
-        ":test_t_10_units_08_loops_02_explicit_loop_fail",
-        ":test_t_10_units_08_loops_03_explicit_loop_poll",
-        ":test_t_10_units_08_loops_04_explicit_loop_envvar",
-        ":test_t_10_units_08_loops_05_kernel_loop",
-        ":test_t_10_units_08_loops_06_kernel_loop_poll",
-        ":test_t_10_units_08_loops_07_kernel_loop_fail",
-        ":test_t_10_units_08_loops_08_kernel_loop_search_poll",
-        ":test_t_10_units_08_loops_09_naive_loop_load",
-        ":test_t_10_units_08_loops_10_naive_loop_load_poll",
-        ":test_t_10_units_08_loops_11_double_loop",
-        ":test_t_90_regression_agaran-filter-httpd",
-        ":test_t_90_regression_averell-callback-ret",
-        ":test_t_90_regression_bingos-followtail",
-        ":test_t_90_regression_broeren-win32-nbio",
-        ":test_t_90_regression_cfedde-filter-httpd",
-        ":test_t_90_regression_ferrari-server-unix",
-        ":test_t_90_regression_grinnz-die-in-die",
-        ":test_t_90_regression_hinrik-wheel-run-die",
-        ":test_t_90_regression_kjeldahl-stop-start-polling",
-        ":test_t_90_regression_kjeldahl-stop-start-sig-nopipe",
-        ":test_t_90_regression_kjeldahl-stop-start-sig-pipe",
-        ":test_t_90_regression_leolo-sig-die",
-        ":test_t_90_regression_meh-startstop-return",
-        ":test_t_90_regression_neyuki_detach",
-        ":test_t_90_regression_pipe-followtail",
-        ":test_t_90_regression_prumike-win32-stat",
-        ":test_t_90_regression_rt14444-arg1",
-        ":test_t_90_regression_rt1648-tied-stderr",
-        ":test_t_90_regression_rt19908-merlyn-stop",
-        ":test_t_90_regression_rt23181-sigchld-rc",
-        ":test_t_90_regression_rt47966-sigchld",
-        ":test_t_90_regression_rt56417-wheel-run",
-        ":test_t_90_regression_rt65460-forking",
-        ":test_t_90_regression_socketfactory-timeout",
-        ":test_t_90_regression_somni-poco-server-tcp",
-        ":test_t_90_regression_steinert-passed-wheel",
-        ":test_t_90_regression_suzman_windows",
-        ":test_t_90_regression_ton-stop-corruption",
-        ":test_t_90_regression_tracing-sane-exit",
-        ":test_t_90_regression_whelan-dieprop",
-        ":test_t_90_regression_whjackson-followtail",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

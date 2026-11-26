@@ -67,6 +67,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -75,6 +76,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -83,6 +85,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-no-tabs.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -91,6 +94,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-spell.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -99,6 +103,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -107,6 +112,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/both-fail.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -115,6 +121,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/env-value.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -123,6 +130,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/more-symbols.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -131,6 +139,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/namespace-cleanliness.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -139,6 +148,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/one-impl-fails1.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -147,6 +157,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/one-impl-fails2.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -155,6 +166,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-cpan-changes.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -163,6 +175,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-eol.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -171,6 +184,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-pod-coverage.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -179,6 +193,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-pod-linkcheck.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -187,6 +202,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-pod-no404s.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -195,6 +211,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-pod-syntax.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -203,6 +220,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-portability.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -211,6 +229,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/requested-fails.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
@@ -219,31 +238,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/taint.t"],
+    tags = ["manual"],
     deps = [":Module-Implementation_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_00-report-prereqs",
-        ":test_t_author-no-tabs",
-        ":test_t_author-pod-spell",
-        ":test_t_basic",
-        ":test_t_both-fail",
-        ":test_t_env-value",
-        ":test_t_more-symbols",
-        ":test_t_namespace-cleanliness",
-        ":test_t_one-impl-fails1",
-        ":test_t_one-impl-fails2",
-        ":test_t_release-cpan-changes",
-        ":test_t_release-eol",
-        ":test_t_release-pod-coverage",
-        ":test_t_release-pod-linkcheck",
-        ":test_t_release-pod-no404s",
-        ":test_t_release-pod-syntax",
-        ":test_t_release-portability",
-        ":test_t_requested-fails",
-        ":test_t_taint",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

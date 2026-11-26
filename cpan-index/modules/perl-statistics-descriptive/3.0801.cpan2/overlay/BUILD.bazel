@@ -178,19 +178,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_boilerplate",
-        ":test_t_descr",
-        ":test_t_descr_smooth_methods",
-        ":test_t_freq_distribution-1-rt-34999",
-        ":test_t_median_absolute_deviation",
-        ":test_t_mode",
-        ":test_t_outliers",
-        ":test_t_quantile",
-        ":test_t_smoother",
-        ":test_t_smoother_exponential",
-        ":test_t_smoother_weightedexponential",
-        ":test_t_summary",
-    ],
+    tests = [],
 )

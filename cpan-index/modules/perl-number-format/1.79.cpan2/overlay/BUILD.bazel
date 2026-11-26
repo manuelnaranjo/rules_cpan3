@@ -151,16 +151,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_format_bytes",
-        ":test_t_format_negative",
-        ":test_t_format_number",
-        ":test_t_format_picture",
-        ":test_t_format_price",
-        ":test_t_locale",
-        ":test_t_object",
-        ":test_t_round",
-        ":test_t_unformat_number",
-    ],
+    tests = [],
 )

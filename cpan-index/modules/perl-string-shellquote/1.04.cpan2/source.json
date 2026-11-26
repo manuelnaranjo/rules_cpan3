@@ -3,6 +3,6 @@
     "integrity": "sha256-5gY2UDjOINZG0lXIBe/90y+GR18Y1DynVFWwDk2G3TU=",
     "strip_prefix": "String-ShellQuote-1.04",
     "overlay": {
-        "BUILD.bazel": "sha256-hHP0o2tHdApeDEFmVtQaYik5Pf+hkAfcRjjtLra2gbI="
+        "BUILD.bazel": "sha256-jfRMgk2hmdS8aGj/3o/GVily/9gfQUe2CLPKga5pQJQ="
     }
 }

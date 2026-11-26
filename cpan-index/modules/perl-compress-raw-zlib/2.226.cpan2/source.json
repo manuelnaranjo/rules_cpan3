@@ -5,6 +5,6 @@
     "overlay": {
         "constants.h": "sha256-7F14UZQ6VlG0x6pJDR6+acD7RszVn9dMZrb8qvW6Muc=",
         "constants.xs": "sha256-r01iqaC+9H6O7rI3EoR0LjYvb2Z6DKaHAbjF97IVqkI=",
-        "BUILD.bazel": "sha256-EP/co49OYj69bUFwvjmWrxULgF6+8RnBYyggZz6tqjQ="
+        "BUILD.bazel": "sha256-ZFu+uXXVrEPWZZpNg8Vnh1KNp7IDiY8vWeJftgUz9RY="
     }
 }

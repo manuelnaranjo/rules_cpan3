@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10isa.t"],
+    tags = ["manual"],
     deps = [":Object-Realize-Later_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20can.t"],
+    tags = ["manual"],
     deps = [":Object-Realize-Later_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/30realize.t"],
+    tags = ["manual"],
     deps = [":Object-Realize-Later_test_lib"],
 )
 
@@ -90,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/40autoload.t"],
+    tags = ["manual"],
     deps = [":Object-Realize-Later_test_lib"],
 )
 
@@ -98,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/41autoload.t"],
+    tags = ["manual"],
     deps = [":Object-Realize-Later_test_lib"],
 )
 
@@ -106,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/50again.t"],
+    tags = ["manual"],
     deps = [":Object-Realize-Later_test_lib"],
 )
 
@@ -114,18 +120,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/60module.t"],
+    tags = ["manual"],
     deps = [":Object-Realize-Later_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_10isa",
-        ":test_t_20can",
-        ":test_t_30realize",
-        ":test_t_40autoload",
-        ":test_t_41autoload",
-        ":test_t_50again",
-        ":test_t_60module",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

@@ -3,6 +3,6 @@
     "integrity": "sha256-yai9NzTiAwa8x1GvQ+xpiziQ81rdU8Kr9WoNkux1UKw=",
     "strip_prefix": "Pod-Snippets-0.14",
     "overlay": {
-        "BUILD.bazel": "sha256-MD0XDOOkrWGt90aI0qNIKYfkM8Z4K4ql+dQNl3OUml8="
+        "BUILD.bazel": "sha256-fp0pBQkIFTB90pIlWViFEQfgYin+GMFZ658ZImDeBo0="
     }
 }

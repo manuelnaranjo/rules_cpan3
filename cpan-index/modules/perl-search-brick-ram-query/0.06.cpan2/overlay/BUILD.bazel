@@ -178,19 +178,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_0.prepare_index",
-        ":test_t_1.multi-request",
-        ":test_t_2.1.index-noarray",
-        ":test_t_2.index",
-        ":test_t_3.filter-query",
-        ":test_t_4.lucene-query",
-        ":test_t_5.alias",
-        ":test_t_6.tcp",
-        ":test_t_6.timeout",
-        ":test_t_7.size",
-        ":test_t_8.similarity",
-        ":test_t_9.span_near",
-        ":test_t_Search-Brick-RAM-Query",
-    ],
+    tests = [],
 )

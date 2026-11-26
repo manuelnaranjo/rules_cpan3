@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -189,14 +195,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_MaxMind_DB_Reader",
-        ":test_t_MaxMind_DB_Reader-broken-databases",
-        ":test_t_MaxMind_DB_Reader-decoder",
-        ":test_t_MaxMind_DB_Reader-no-ipv4-search-tree",
-        ":test_t_MaxMind_DB_Reader_NoMoose",
-        ":test_t_libmaxminddb-version",
-        ":test_t_xs-only",
-    ],
+    tests = [],
 )

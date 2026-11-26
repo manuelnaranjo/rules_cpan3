@@ -3,6 +3,6 @@
     "integrity": "sha256-2MGFcK2BPAHWgkYHt+vamH9ZCxDiqlNt/6u+KSBILoI=",
     "strip_prefix": "Net-SSH-Perl-2.144",
     "overlay": {
-        "BUILD.bazel": "sha256-u5kUv0ivt0cgJlaa2/yzMaSNk0h9CQi0oa3r5z1SBLM="
+        "BUILD.bazel": "sha256-aNYp9Po1C9WUyvyfzAsZZX2Fe0F3XJFGH6G4MYmzY20="
     }
 }
