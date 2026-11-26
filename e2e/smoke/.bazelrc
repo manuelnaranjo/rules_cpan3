@@ -6,3 +6,4 @@ common --registry=file://%workspace%/../../cpan-index
 common --registry=https://bcr.bazel.build
 
 try-import %workspace%/.bazelrc.user
+try-import %workspace%/../../.bazelrc.user

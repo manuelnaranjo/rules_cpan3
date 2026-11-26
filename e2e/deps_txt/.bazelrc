@@ -13,3 +13,4 @@ build --nobuild_runfile_links
 
 # Load any settings specific to the current user.
 try-import %workspace%/.bazelrc.user
+try-import %workspace%/../../.bazelrc.user
