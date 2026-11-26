@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Alien-Sodium"],
+    deps = [
+        ":Alien-Sodium",
+        "@perl-alien-build",
+    ],
 )
 
 perl_test(

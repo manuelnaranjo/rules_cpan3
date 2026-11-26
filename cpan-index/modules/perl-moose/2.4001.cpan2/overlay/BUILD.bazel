@@ -115,7 +115,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Moose"],
+    deps = [
+        ":Moose",
+        "@perl-cpan-meta-check",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

@@ -3,8 +3,8 @@
     "integrity": "sha256-rppnRssbMF3cj42MpGh4VSucESNiiXHhOidRg4IvIJ4=",
     "strip_prefix": "Term-Size-Perl-0.031",
     "overlay": {
-        "Params.pm": "sha256-IGj7/DJnk/vw1semB8eCUig6P7AY0prMuOVVrf2nnRw=",
-        "lib/Term/Size/Perl/Params.pm": "sha256-IGj7/DJnk/vw1semB8eCUig6P7AY0prMuOVVrf2nnRw=",
+        "Params.pm": "sha256-yNzagzpcFx0m1TOuYFynCLjaO+pdRD4iP4AUyqoomB4=",
+        "lib/Term/Size/Perl/Params.pm": "sha256-yNzagzpcFx0m1TOuYFynCLjaO+pdRD4iP4AUyqoomB4=",
         "BUILD.bazel": "sha256-eQbqa+W54IZaWJ1Yb7F6Rwg9Q86OXKbiCpmSIisTwOs="
     }
 }

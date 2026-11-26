@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooX-HandlesVia"],
+    deps = [
+        ":MooX-HandlesVia",
+        "@perl-moox-types-mooselike",
+        "@perl-test-exception",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

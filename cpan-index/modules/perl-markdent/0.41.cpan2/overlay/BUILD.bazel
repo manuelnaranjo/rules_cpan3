@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Markdent"],
+    deps = [
+        ":Markdent",
+        "@perl-test-requires",
+        "@perl-tree-simple-visitorfactory",
+    ],
 )
 
 perl_test(

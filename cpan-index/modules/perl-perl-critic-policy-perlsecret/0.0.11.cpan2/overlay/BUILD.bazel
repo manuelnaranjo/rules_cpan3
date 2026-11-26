@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Perl-Critic-Policy-Perlsecret"],
+    deps = [
+        ":Perl-Critic-Policy-Perlsecret",
+        "@perl-perl-critic",
+        "@perl-test-failwarnings",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

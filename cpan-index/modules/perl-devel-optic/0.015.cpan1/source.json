@@ -3,6 +3,6 @@
     "integrity": "sha256-JEh2jWegUH1rgmIyJsgrqbkFgiqBxCbDaEk0YAlFquY=",
     "strip_prefix": "Devel-Optic-0.015",
     "overlay": {
-        "BUILD.bazel": "sha256-9ae+ee7du9R8cvWP18k+Q8NsGboVOhgqOc5VhErUY4I="
+        "BUILD.bazel": "sha256-U9fciJGbZt2pdEfRqqs7ust/my5tGLWlQ2dUN2E80ro="
     }
 }

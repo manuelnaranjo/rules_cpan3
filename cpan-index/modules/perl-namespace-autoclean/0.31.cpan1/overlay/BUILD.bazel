@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":namespace-autoclean"],
+    deps = [
+        ":namespace-autoclean",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

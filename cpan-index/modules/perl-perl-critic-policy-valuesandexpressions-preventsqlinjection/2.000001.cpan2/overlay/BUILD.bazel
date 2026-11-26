@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection"],
+    deps = [
+        ":Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection",
+        "@perl-perl-critic",
+        "@perl-ppi",
+        "@perl-test-failwarnings",
+        "@perl-test-perl-critic",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Parse-Distname"],
+    deps = [
+        ":Parse-Distname",
+        "@perl-test-differences",
+        "@perl-test-useallmodules",
+    ],
 )
 
 perl_test(

@@ -3,6 +3,6 @@
     "integrity": "sha256-cJTqXJH1NtJjuF6Dq06alj4RxECM4I7K5VP6nAzEfnM=",
     "strip_prefix": "HTTP-CookieJar-0.014",
     "overlay": {
-        "BUILD.bazel": "sha256-WsD9Q2F7yO41db5o+Quix0BqpLkcd/HfG9AGahPRWcI="
+        "BUILD.bazel": "sha256-1Jf4KDcOT1DCo2GnC9z0x9PLkQngAMbszQG9gWpRN9E="
     }
 }

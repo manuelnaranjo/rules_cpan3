@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTTP-CookieJar"],
+    deps = [
+        ":HTTP-CookieJar",
+        "@perl-test-deep",
+        "@perl-test-requires",
+        "@perl-uri",
+    ],
 )
 
 perl_test(

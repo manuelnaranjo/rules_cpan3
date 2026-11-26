@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Hash-Ordered"],
+    deps = [
+        ":Hash-Ordered",
+        "@perl-test-deep",
+        "@perl-test-failwarnings",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

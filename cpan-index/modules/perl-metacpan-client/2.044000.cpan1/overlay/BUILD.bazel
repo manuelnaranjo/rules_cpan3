@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MetaCPAN-Client"],
+    deps = [
+        ":MetaCPAN-Client",
+        "@perl-lwp-protocol-https",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

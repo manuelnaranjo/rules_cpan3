@@ -3,6 +3,6 @@
     "integrity": "sha256-rCccXOj1BiMqzfPFqnFxG7zBxFlAXlRxQGpImzPpa1Y=",
     "strip_prefix": "Alien-gmake-0.24",
     "overlay": {
-        "BUILD.bazel": "sha256-q7eJk/+7ki3NAf7fLxoYB+HoqSUTxNmM2r+yAEotZ3w="
+        "BUILD.bazel": "sha256-WGkZPDjoWG/4vWsJOYjD2KAdYPUXBVPdfCkIg0SP99c="
     }
 }

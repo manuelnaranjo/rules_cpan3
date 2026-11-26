@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Plack-Middleware-CrossOrigin"],
+    deps = [
+        ":Plack-Middleware-CrossOrigin",
+        "@perl-plack",
+    ],
 )
 
 perl_test(

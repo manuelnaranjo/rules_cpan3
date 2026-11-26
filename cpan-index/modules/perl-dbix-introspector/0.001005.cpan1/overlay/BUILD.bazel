@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DBIx-Introspector"],
+    deps = [
+        ":DBIx-Introspector",
+        "@perl-dbd-sqlite",
+        "@perl-test-roo",
+    ],
 )
 
 perl_test(

@@ -3,6 +3,6 @@
     "integrity": "sha256-XruyUrspbmos5M9UTuN4kZJSxLfk/+zZr9Z6VzW1d0k=",
     "strip_prefix": "Locale-Codes-3.91",
     "overlay": {
-        "BUILD.bazel": "sha256-jYGg2kOrRf5C6ySQeRbtNyN1har9wTIdgWReCoQwHPg="
+        "BUILD.bazel": "sha256-RIa/R2yI3+wNMjgXoPjFP11jS3gLUW5yPmPYataJY7g="
     }
 }

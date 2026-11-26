@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":String-Print"],
+    deps = [
+        ":String-Print",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

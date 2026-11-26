@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":File-Slurper"],
+    deps = [
+        ":File-Slurper",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

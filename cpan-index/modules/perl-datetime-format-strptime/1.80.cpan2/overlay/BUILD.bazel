@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DateTime-Format-Strptime"],
+    deps = [
+        ":DateTime-Format-Strptime",
+        "@perl-test-fatal",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

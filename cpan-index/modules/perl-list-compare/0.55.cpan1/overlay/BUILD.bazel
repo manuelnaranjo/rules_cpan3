@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":List-Compare"],
+    deps = [
+        ":List-Compare",
+        "@perl-capture-tiny",
+    ],
 )
 
 perl_test(

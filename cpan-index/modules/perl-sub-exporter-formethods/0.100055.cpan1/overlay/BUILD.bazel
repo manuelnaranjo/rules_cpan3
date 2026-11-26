@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Sub-Exporter-ForMethods"],
+    deps = [
+        ":Sub-Exporter-ForMethods",
+        "@perl-namespace-autoclean",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Tdd"],
+    deps = [
+        ":Test-Tdd",
+        "@perl-moose",
+        "@perl-test-differences",
+        "@perl-test-spec",
+    ],
 )
 
 perl_test(

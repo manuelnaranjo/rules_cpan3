@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Tree-Simple"],
+    deps = [
+        ":Tree-Simple",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

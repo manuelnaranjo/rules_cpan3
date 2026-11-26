@@ -3,6 +3,6 @@
     "integrity": "sha256-NX/e2eVflesvUWoY9dwbRyCp3u+eLA52vNX+SuubPLs=",
     "strip_prefix": "Git-Version-Compare-1.005",
     "overlay": {
-        "BUILD.bazel": "sha256-eT8mXteJVsi4SuYDMPE23l50gHO8BeYkbWGmMC0pOgE="
+        "BUILD.bazel": "sha256-rfy2DD+NRkZ6pwtT++ULxHPGy2rPXvCBVE7DNdleexU="
     }
 }

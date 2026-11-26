@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-Random-Source"],
+    deps = [
+        ":Crypt-Random-Source",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

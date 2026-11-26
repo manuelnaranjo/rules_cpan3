@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Module-ScanDeps"],
+    deps = [
+        ":Module-ScanDeps",
+        "@perl-ipc-run3",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

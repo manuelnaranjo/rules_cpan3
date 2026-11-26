@@ -113,7 +113,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Devel-NYTProf"],
+    deps = [
+        ":Devel-NYTProf",
+        "@perl-capture-tiny",
+        "@perl-sub-name",
+        "@perl-test-differences",
+    ],
 )
 
 perl_test(

@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Net-IDN-Encode"],
+    deps = [
+        ":Net-IDN-Encode",
+        "@perl-test-nowarnings",
+    ],
 )
 
 perl_test(

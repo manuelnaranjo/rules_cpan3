@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Filesys-Notify-Simple"],
+    deps = [
+        ":Filesys-Notify-Simple",
+        "@perl-test-sharedfork",
+    ],
 )
 
 perl_test(

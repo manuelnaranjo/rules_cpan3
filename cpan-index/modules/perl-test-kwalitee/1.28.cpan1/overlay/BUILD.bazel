@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Kwalitee"],
+    deps = [
+        ":Test-Kwalitee",
+        "@perl-cpan-meta-check",
+        "@perl-test-deep",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

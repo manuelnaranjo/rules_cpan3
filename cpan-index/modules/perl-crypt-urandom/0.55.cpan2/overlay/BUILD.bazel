@@ -104,7 +104,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-URandom"],
+    deps = [
+        ":Crypt-URandom",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":CLI-Osprey"],
+    deps = [
+        ":CLI-Osprey",
+        "@perl-capture-tiny",
+        "@perl-test-lib",
+    ],
 )
 
 perl_test(

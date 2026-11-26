@@ -3,6 +3,6 @@
     "integrity": "sha256-njv/dIYZP6fkyAd0qhdRiP91px1VjswGUB3askxFGI0=",
     "strip_prefix": "Git-Wrapper-0.048",
     "overlay": {
-        "BUILD.bazel": "sha256-V0dRh/pRRLQ88PxfdqjzSUkjIgd6CHZZ9qC1L5AM5Sg="
+        "BUILD.bazel": "sha256-7EKXjexOspy9aPLvQ9fyIiS9iOSsdS/hKJwIzp/xQQw="
     }
 }

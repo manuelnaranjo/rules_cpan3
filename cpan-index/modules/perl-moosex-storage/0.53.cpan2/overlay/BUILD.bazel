@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Storage"],
+    deps = [
+        ":MooseX-Storage",
+        "@perl-moose",
+        "@perl-test-deep",
+        "@perl-test-deep-type",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

@@ -101,7 +101,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Overload-FileCheck"],
+    deps = [
+        ":Overload-FileCheck",
+        "@perl-test2-plugin-nowarnings",
+        "@perl-test2-tools-explain",
+    ],
 )
 
 perl_test(

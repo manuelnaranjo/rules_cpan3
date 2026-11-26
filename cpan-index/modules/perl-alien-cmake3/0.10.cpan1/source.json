@@ -3,6 +3,6 @@
     "integrity": "sha256-yHoJ2Gh7XFBXuCXFYylRPYsbd0Gx7E/KNGRl7gIZSF8=",
     "strip_prefix": "Alien-cmake3-0.10",
     "overlay": {
-        "BUILD.bazel": "sha256-XUD2pepYtwJsnfQtpn+lwCbmHrDFglsJN7Jxnun/bUE="
+        "BUILD.bazel": "sha256-POdvIAI6mVaYnLFuC/d2mdDd0gT4klK2RRzfkR5TOGg="
     }
 }

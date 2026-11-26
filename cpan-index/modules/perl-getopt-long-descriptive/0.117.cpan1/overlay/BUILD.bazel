@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Getopt-Long-Descriptive"],
+    deps = [
+        ":Getopt-Long-Descriptive",
+        "@perl-cpan-meta-check",
+        "@perl-test-fatal",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

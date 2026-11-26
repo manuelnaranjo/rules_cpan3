@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Mock-One"],
+    deps = [
+        ":Test-Mock-One",
+        "@perl-test-deep",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

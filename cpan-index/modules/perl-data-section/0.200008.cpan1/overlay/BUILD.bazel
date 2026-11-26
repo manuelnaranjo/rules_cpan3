@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-Section"],
+    deps = [
+        ":Data-Section",
+        "@perl-test-failwarnings",
+    ],
 )
 
 perl_test(

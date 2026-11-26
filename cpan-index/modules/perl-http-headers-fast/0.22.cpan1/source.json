@@ -3,6 +3,6 @@
     "integrity": "sha256-zEMdtoSW3YhNtLwMC3ESwfSk8dxoxPWjyqdXoedIG0g=",
     "strip_prefix": "HTTP-Headers-Fast-0.22",
     "overlay": {
-        "BUILD.bazel": "sha256-jbv0Sz89ukKZlUk7oDw2KqGrqvturRzCHhrrhe0GnrE="
+        "BUILD.bazel": "sha256-ZUBTZxGMbHP0F+7Qk2Jf4vFe2onXmQ9TtXpgkKyMpvg="
     }
 }

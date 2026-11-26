@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Spreadsheet-XLSX"],
+    deps = [
+        ":Spreadsheet-XLSX",
+        "@perl-test-nowarnings",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

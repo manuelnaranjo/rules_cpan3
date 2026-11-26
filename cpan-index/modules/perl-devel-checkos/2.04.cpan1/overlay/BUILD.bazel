@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Devel-CheckOS"],
+    deps = [
+        ":Devel-CheckOS",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

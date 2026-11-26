@@ -103,7 +103,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Authen-SASL-XS"],
+    deps = [
+        ":Authen-SASL-XS",
+        "@perl-authen-sasl",
+    ],
 )
 
 perl_test(

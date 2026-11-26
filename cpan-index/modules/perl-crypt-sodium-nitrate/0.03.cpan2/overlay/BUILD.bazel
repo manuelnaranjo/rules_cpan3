@@ -103,7 +103,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-Sodium-Nitrate"],
+    deps = [
+        ":Crypt-Sodium-Nitrate",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

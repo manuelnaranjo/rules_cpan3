@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":CSS-Minifier-XS"],
+    deps = [
+        ":CSS-Minifier-XS",
+        "@perl-test-diaginc",
+    ],
 )
 
 perl_test(

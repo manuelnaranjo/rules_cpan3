@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Role-Parameterized"],
+    deps = [
+        ":MooseX-Role-Parameterized",
+        "@perl-cpan-meta-check",
+        "@perl-moose",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

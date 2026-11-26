@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":JSON-WebToken"],
+    deps = [
+        ":JSON-WebToken",
+        "@perl-test-mock-guard",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

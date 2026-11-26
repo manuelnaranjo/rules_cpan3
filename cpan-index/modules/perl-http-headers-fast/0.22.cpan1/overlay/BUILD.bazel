@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTTP-Headers-Fast"],
+    deps = [
+        ":HTTP-Headers-Fast",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

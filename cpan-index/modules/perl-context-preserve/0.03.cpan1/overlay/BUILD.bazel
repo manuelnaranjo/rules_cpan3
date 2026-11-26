@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Context-Preserve"],
+    deps = [
+        ":Context-Preserve",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

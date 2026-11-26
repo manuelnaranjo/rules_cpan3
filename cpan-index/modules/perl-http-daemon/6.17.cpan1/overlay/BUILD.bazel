@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTTP-Daemon"],
+    deps = [
+        ":HTTP-Daemon",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

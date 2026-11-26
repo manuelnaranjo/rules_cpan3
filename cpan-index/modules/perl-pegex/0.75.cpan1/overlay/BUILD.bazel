@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Pegex"],
+    deps = [
+        ":Pegex",
+        "@perl-test-pod",
+        "@perl-tie-ixhash",
+    ],
 )
 
 perl_test(

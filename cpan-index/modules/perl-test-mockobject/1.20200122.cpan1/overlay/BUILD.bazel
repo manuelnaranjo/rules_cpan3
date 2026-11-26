@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-MockObject"],
+    deps = [
+        ":Test-MockObject",
+        "@perl-test-exception",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

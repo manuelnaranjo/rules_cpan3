@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-JSON-Schema-Acceptance"],
+    deps = [
+        ":Test-JSON-Schema-Acceptance",
+        "@perl-builtin-compat",
+        "@perl-test-deep",
+        "@perl-test-file-sharedir",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":PPI"],
+    deps = [
+        ":PPI",
+        "@perl-class-inspector",
+        "@perl-test-nowarnings",
+        "@perl-test-object",
+        "@perl-test-subcalls",
+    ],
 )
 
 perl_test(

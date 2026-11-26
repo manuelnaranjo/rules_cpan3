@@ -3,6 +3,6 @@
     "integrity": "sha256-SjPyCmoyUJOPyF4hd540xW4VaJX+So+oyDrE6W7K72E=",
     "strip_prefix": "Starman-0.4019",
     "overlay": {
-        "BUILD.bazel": "sha256-amoEmK94L/Gb+vRVy1tDV95FHy6AHCR412r9qJpUVxI="
+        "BUILD.bazel": "sha256-kV/dlH7r0ImRnXpA17UIOtbiKY59mcXQ06KxJyxGCFQ="
     }
 }

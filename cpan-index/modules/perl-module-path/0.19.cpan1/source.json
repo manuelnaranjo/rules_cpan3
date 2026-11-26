@@ -3,6 +3,6 @@
     "integrity": "sha256-szF5zk3XPfzefUaAiAS5/7sR2wJF/kVafQAXR1Yv6so=",
     "strip_prefix": "Module-Path-0.19",
     "overlay": {
-        "BUILD.bazel": "sha256-q+2mu14eLI5mCUkHk4wHbo14x7xjjNtry/gfziWdCEA="
+        "BUILD.bazel": "sha256-o5BbYTPrp8MzAb0YhChC+89eJsrC3e+lAzhNLWIOvC8="
     }
 }

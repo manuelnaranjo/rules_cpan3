@@ -3,6 +3,6 @@
     "integrity": "sha256-iO++LppkLc6qGGQw/t/PmZqvDgb2zO0opxS45WtRSSE=",
     "strip_prefix": "Module-CPANfile-1.1004",
     "overlay": {
-        "BUILD.bazel": "sha256-anz/tf7naqteRslOmkg1h1Q0btGVcp1ejnIaPOh7fcA="
+        "BUILD.bazel": "sha256-3K9D3iE4UmMuVE64Rl5JKTsJrGOJHseaz6vMuIGkOYU="
     }
 }

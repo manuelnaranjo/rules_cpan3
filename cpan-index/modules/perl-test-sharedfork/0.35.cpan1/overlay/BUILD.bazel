@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-SharedFork"],
+    deps = [
+        ":Test-SharedFork",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

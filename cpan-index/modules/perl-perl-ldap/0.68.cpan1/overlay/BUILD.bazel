@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":perl-ldap"],
+    deps = [
+        ":perl-ldap",
+        "@perl-text-soundex",
+    ],
 )
 
 perl_test(

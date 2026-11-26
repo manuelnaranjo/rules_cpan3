@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Git-Wrapper"],
+    deps = [
+        ":Git-Wrapper",
+        "@perl-sort-versions",
+        "@perl-test-deep",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

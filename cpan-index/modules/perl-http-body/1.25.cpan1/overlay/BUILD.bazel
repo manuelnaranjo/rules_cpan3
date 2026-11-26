@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTTP-Body"],
+    deps = [
+        ":HTTP-Body",
+        "@perl-http-message",
+        "@perl-test-deep",
+    ],
 )
 
 perl_test(

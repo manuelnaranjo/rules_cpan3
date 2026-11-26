@@ -130,7 +130,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":GD"],
+    deps = [
+        ":GD",
+        "@perl-test-fork",
+        "@perl-test-nowarnings",
+    ],
 )
 
 perl_test(

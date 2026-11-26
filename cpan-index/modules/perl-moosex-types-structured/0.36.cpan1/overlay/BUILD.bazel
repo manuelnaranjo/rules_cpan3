@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Types-Structured"],
+    deps = [
+        ":MooseX-Types-Structured",
+        "@perl-datetime",
+        "@perl-moosex-types",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

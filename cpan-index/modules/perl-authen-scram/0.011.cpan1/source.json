@@ -3,6 +3,6 @@
     "integrity": "sha256-RRCMI5pzc9AJQdzw0XGs0D58FqY85vfZVo/wUrF89ag=",
     "strip_prefix": "Authen-SCRAM-0.011",
     "overlay": {
-        "BUILD.bazel": "sha256-pfYCzIBvZmS7Gxh4paVTxrSBaYGaQkG5XMOOGwuNKjs="
+        "BUILD.bazel": "sha256-D2/G4F86Xv5stArx1or20vCJrfLfm7rHyWV4RL0TA5s="
     }
 }

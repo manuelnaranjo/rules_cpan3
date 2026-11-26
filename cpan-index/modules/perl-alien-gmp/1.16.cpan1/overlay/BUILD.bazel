@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Alien-GMP"],
+    deps = [
+        ":Alien-GMP",
+        "@perl-alien-build",
+    ],
 )
 
 perl_test(

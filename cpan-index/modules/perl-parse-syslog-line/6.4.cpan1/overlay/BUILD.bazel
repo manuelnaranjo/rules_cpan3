@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Parse-Syslog-Line"],
+    deps = [
+        ":Parse-Syslog-Line",
+        "@perl-cli-helpers",
+        "@perl-path-tiny",
+        "@perl-test-deep",
+        "@perl-test-mocktime",
+    ],
 )
 
 perl_test(

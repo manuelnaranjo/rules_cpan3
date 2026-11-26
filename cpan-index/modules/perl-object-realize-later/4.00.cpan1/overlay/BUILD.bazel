@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Object-Realize-Later"],
+    deps = [
+        ":Object-Realize-Later",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

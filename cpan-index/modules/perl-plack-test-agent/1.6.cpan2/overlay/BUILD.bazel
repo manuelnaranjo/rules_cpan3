@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Plack-Test-Agent"],
+    deps = [
+        ":Plack-Test-Agent",
+        "@perl-http-server-simple-psgi",
+        "@perl-modern-perl",
+        "@perl-plack",
+        "@perl-test-memory-cycle",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

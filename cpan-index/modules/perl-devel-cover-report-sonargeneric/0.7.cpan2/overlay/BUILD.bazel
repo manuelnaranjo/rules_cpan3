@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Devel-Cover-Report-SonarGeneric"],
+    deps = [
+        ":Devel-Cover-Report-SonarGeneric",
+        "@perl-json-maybexs",
+    ],
 )
 
 perl_test(

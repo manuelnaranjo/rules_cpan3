@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Net-Amazon-Signature-V4"],
+    deps = [
+        ":Net-Amazon-Signature-V4",
+        "@perl-file-slurper",
+        "@perl-http-message",
+    ],
 )
 
 perl_test(

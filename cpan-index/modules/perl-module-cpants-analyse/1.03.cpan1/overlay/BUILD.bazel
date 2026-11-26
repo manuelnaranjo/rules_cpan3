@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Module-CPANTS-Analyse"],
+    deps = [
+        ":Module-CPANTS-Analyse",
+        "@perl-test-failwarnings",
+    ],
 )
 
 perl_test(

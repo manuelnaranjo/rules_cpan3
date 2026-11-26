@@ -3,6 +3,6 @@
     "integrity": "sha256-hNISYZ2K+jQtTSFsgO3p2JbxFAZcMUbKnokUwyHwGHI=",
     "strip_prefix": "Alien-Role-Dino-0.08",
     "overlay": {
-        "BUILD.bazel": "sha256-l/V80Buxw8TYk+fC8v2aQ0J+jW5KQcQS5phx29sABWU="
+        "BUILD.bazel": "sha256-XQDlwD9vkkCwhPVoo6jR0rvaStjARCAntwyl4oJRj5o="
     }
 }

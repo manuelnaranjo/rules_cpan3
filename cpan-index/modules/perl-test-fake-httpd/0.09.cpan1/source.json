@@ -3,6 +3,6 @@
     "integrity": "sha256-FPecsGepCSLpvlVPjks509aXeK5Mj/9E9WD2N/tvLR4=",
     "strip_prefix": "Test-Fake-HTTPD-0.09",
     "overlay": {
-        "BUILD.bazel": "sha256-Byopr2UvI6ob6/KZI8xbhiiXC7jCJfw6PnqNSppyMVM="
+        "BUILD.bazel": "sha256-6H7ekhAFp+QuoioQQqUFqev7JGebNnw+/qDXO4g3Zes="
     }
 }

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-DPath"],
+    deps = [
+        ":Data-DPath",
+        "@perl-test-deep",
+    ],
 )
 
 perl_test(

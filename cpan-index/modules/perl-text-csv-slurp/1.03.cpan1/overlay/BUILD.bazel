@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Text-CSV-Slurp"],
+    deps = [
+        ":Text-CSV-Slurp",
+        "@perl-test-most",
+    ],
 )
 
 perl_test(

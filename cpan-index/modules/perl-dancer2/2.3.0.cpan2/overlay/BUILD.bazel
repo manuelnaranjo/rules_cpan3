@@ -55,7 +55,16 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Dancer2"],
+    deps = [
+        ":Dancer2",
+        "@perl-capture-tiny",
+        "@perl-http-cookies",
+        "@perl-http-message",
+        "@perl-template-toolkit",
+        "@perl-test-eol",
+        "@perl-test-exception",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

@@ -32,7 +32,7 @@ cpan_xs(
         "GRPC_NO_INSECURE_BUILD",
         "GRPC_HAS_SHUTDOWN_BLOCKING",
     ],
-    output_loc = "auto/grpc/xs/xs",
+    output_loc = "auto/Grpc/Client/AbstractCall/AbstractCall",
     textual_hdrs = glob(
         [
             "*.h",

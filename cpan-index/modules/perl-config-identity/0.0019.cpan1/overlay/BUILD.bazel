@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Config-Identity"],
+    deps = [
+        ":Config-Identity",
+        "@perl-test-deep",
+    ],
 )
 
 perl_test(

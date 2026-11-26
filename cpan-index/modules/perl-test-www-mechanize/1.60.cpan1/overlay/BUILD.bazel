@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-WWW-Mechanize"],
+    deps = [
+        ":Test-WWW-Mechanize",
+        "@perl-http-server-simple",
+        "@perl-uri",
+    ],
 )
 
 perl_test(

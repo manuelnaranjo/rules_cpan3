@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DateTime-TimeZone"],
+    deps = [
+        ":DateTime-TimeZone",
+        "@perl-test-fatal",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

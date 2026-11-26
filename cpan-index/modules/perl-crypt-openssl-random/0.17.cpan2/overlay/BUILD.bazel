@@ -106,7 +106,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-OpenSSL-Random"],
+    deps = [
+        ":Crypt-OpenSSL-Random",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

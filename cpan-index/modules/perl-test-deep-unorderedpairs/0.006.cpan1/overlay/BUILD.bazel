@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Deep-UnorderedPairs"],
+    deps = [
+        ":Test-Deep-UnorderedPairs",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

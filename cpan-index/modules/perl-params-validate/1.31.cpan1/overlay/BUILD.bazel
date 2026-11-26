@@ -101,7 +101,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Params-Validate"],
+    deps = [
+        ":Params-Validate",
+        "@perl-test-fatal",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

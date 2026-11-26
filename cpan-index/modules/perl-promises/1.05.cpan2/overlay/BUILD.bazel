@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Promises"],
+    deps = [
+        ":Promises",
+        "@perl-test-exception",
+        "@perl-test-fatal",
+        "@perl-test-pod",
+        "@perl-test-requires",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

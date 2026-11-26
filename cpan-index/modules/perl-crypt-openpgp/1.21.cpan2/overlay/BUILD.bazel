@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-OpenPGP"],
+    deps = [
+        ":Crypt-OpenPGP",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

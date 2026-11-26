@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":File-Hotfolder"],
+    deps = [
+        ":File-Hotfolder",
+        "@perl-capture-tiny",
+    ],
 )
 
 perl_test(

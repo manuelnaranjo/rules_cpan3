@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Redis"],
+    deps = [
+        ":Redis",
+        "@perl-io-string",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+        "@perl-test-sharedfork",
+        "@perl-test-tcp",
+    ],
 )
 
 perl_test(

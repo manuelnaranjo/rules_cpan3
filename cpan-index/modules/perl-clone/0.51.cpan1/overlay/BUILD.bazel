@@ -103,7 +103,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Clone"],
+    deps = [
+        ":Clone",
+        "@perl-b-cow",
+    ],
 )
 
 perl_test(

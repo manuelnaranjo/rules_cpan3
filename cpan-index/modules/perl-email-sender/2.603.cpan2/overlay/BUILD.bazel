@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Email-Sender"],
+    deps = [
+        ":Email-Sender",
+        "@perl-capture-tiny",
+    ],
 )
 
 perl_test(

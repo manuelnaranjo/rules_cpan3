@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":URI-FromHash"],
+    deps = [
+        ":URI-FromHash",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

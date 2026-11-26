@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DBIx-Class-Candy"],
+    deps = [
+        ":DBIx-Class-Candy",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

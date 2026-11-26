@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Perl-Critic-Policy-HTTPCookies"],
+    deps = [
+        ":Perl-Critic-Policy-HTTPCookies",
+        "@perl-perl-critic",
+    ],
 )
 
 perl_test(

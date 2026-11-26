@@ -55,7 +55,17 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":XML-Enc"],
+    deps = [
+        ":XML-Enc",
+        "@perl-crypt-openssl-guess",
+        "@perl-cryptx",
+        "@perl-file-slurper",
+        "@perl-file-which",
+        "@perl-import-into",
+        "@perl-namespace-autoclean",
+        "@perl-test-lib",
+        "@perl-xml-libxml",
+    ],
 )
 
 perl_test(

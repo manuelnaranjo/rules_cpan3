@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Class-Moose"],
+    deps = [
+        ":Test-Class-Moose",
+        "@perl-test-requires",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

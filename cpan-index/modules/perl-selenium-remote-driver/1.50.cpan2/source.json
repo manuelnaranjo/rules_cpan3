@@ -3,6 +3,6 @@
     "integrity": "sha256-P2PnAhV5q0TGK2VKA5glKTZIesk0vrVEHE1TrVsivh0=",
     "strip_prefix": "Selenium-Remote-Driver-1.50",
     "overlay": {
-        "BUILD.bazel": "sha256-mb85Ltg3qin0Wc7LLoo40WjPVpeJbvJ8npBZtvdh+2g="
+        "BUILD.bazel": "sha256-F5filH2PFyiT+RIMLjShiKfZ6bP5QmLyyWy8nzaqCPU="
     }
 }

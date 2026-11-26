@@ -3,6 +3,6 @@
     "integrity": "sha256-QLTRlMAjdARvU3QIFxZ5iOeuP9ThERPCWcnsrh2ohQM=",
     "strip_prefix": "Neo4j-Driver-1.02",
     "overlay": {
-        "BUILD.bazel": "sha256-uU7iUgdIL8reqUUoIISgXdehlus4NN9bmfiClFHB0Ng="
+        "BUILD.bazel": "sha256-c6R5FGmfhc6V5t3disvkoCOvV8re+znFXnyetccRYAU="
     }
 }

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Devel-PartialDump"],
+    deps = [
+        ":Devel-PartialDump",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

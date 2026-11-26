@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Roo"],
+    deps = [
+        ":Test-Roo",
+        "@perl-capture-tiny",
+    ],
 )
 
 perl_test(

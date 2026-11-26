@@ -101,7 +101,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Parser-GraphQL-XS"],
+    deps = [
+        ":Parser-GraphQL-XS",
+        "@perl-json-xs",
+        "@perl-path-tiny",
+    ],
 )
 
 perl_test(

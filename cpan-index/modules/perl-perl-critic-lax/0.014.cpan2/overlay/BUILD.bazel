@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Perl-Critic-Lax"],
+    deps = [
+        ":Perl-Critic-Lax",
+        "@perl-perl-critic",
+    ],
 )
 
 perl_test(

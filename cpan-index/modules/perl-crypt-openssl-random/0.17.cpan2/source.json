@@ -4,6 +4,6 @@
     "strip_prefix": "Crypt-OpenSSL-Random-0.17",
     "overlay": {
         "lib/Crypt/OpenSSL/Random.pm": "sha256-f3v24NMuLI71T/3FdspN3CRdWktEj581Ns9WxwfT/vs=",
-        "BUILD.bazel": "sha256-ONCd235BG3rYWPL9fGhwwKIJwuhr8u487tPEM6TswDQ="
+        "BUILD.bazel": "sha256-GbscxQs3ET8aTMJR1LILNK+15ypwI+jeLymMWr7JyPU="
     }
 }

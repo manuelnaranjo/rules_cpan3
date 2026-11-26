@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Number-Phone"],
+    deps = [
+        ":Number-Phone",
+        "@perl-devel-hide",
+        "@perl-test-differences",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

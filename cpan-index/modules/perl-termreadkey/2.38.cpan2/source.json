@@ -3,7 +3,7 @@
     "integrity": "sha256-WmRYeNxXCsM2YVgfuwkP8k684X1D6lP9IuEFqFakcpA=",
     "strip_prefix": "TermReadKey-2.38",
     "overlay": {
-        "cchars.h": "sha256-8vEowyc1NiSjtite5xhQmyIxA6OYuiBGNVNCow/NeRI=",
+        "cchars.h": "sha256-bcbtDOZMnYYV9BRAdRMb85EcPiRv4I5My2FpVKaKYE4=",
         "ReadKey.pm": "sha256-I6qNsY6A38mDUqhRkqZ6wxQ/RArFM51/s+iXAwiIMO0=",
         "lib/Term/ReadKey.pm": "sha256-I6qNsY6A38mDUqhRkqZ6wxQ/RArFM51/s+iXAwiIMO0=",
         "BUILD.bazel": "sha256-hmjbFkBHlfccUHDPPepLWeTCDV0J9+lPsKTdW1y1lw8="

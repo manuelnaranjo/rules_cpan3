@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Mail-Message"],
+    deps = [
+        ":Mail-Message",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

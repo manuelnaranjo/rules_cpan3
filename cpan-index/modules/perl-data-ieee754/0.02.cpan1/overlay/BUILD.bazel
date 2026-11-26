@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-IEEE754"],
+    deps = [
+        ":Data-IEEE754",
+        "@perl-test-bits",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MOP"],
+    deps = [
+        ":MOP",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

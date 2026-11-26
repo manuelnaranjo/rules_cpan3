@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooX-StrictConstructor"],
+    deps = [
+        ":MooX-StrictConstructor",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":SQL-Translator"],
+    deps = [
+        ":SQL-Translator",
+        "@perl-json-maybexs",
+        "@perl-test-differences",
+        "@perl-test-exception",
+        "@perl-xml-writer",
+        "@perl-yaml",
+    ],
 )
 
 perl_test(

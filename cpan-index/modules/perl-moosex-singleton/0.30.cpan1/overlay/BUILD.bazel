@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Singleton"],
+    deps = [
+        ":MooseX-Singleton",
+        "@perl-test-fatal",
+        "@perl-test-requires",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

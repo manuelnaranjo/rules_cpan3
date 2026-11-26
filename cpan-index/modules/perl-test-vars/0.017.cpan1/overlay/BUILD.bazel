@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Vars"],
+    deps = [
+        ":Test-Vars",
+        "@perl-moose",
+        "@perl-test-output",
+    ],
 )
 
 perl_test(

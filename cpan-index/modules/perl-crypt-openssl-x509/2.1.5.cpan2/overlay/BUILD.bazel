@@ -108,7 +108,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-OpenSSL-X509"],
+    deps = [
+        ":Crypt-OpenSSL-X509",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

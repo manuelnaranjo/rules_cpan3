@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":JSON-Validator"],
+    deps = [
+        ":JSON-Validator",
+        "@perl-test-deep",
+    ],
 )
 
 perl_test(

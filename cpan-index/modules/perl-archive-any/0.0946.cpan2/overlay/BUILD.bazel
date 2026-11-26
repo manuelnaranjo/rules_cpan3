@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Archive-Any"],
+    deps = [
+        ":Archive-Any",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

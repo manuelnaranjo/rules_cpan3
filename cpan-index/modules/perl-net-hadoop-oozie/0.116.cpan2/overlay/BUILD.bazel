@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Net-Hadoop-Oozie"],
+    deps = [
+        ":Net-Hadoop-Oozie",
+        "@perl-test-cpan-meta",
+    ],
 )
 
 perl_test(

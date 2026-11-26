@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Parallel-ForkManager"],
+    deps = [
+        ":Parallel-ForkManager",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

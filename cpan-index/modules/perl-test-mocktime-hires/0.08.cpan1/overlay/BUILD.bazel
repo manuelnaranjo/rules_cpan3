@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-MockTime-HiRes"],
+    deps = [
+        ":Test-MockTime-HiRes",
+        "@perl-test-class",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

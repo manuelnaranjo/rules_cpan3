@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":CLI-Helpers"],
+    deps = [
+        ":CLI-Helpers",
+        "@perl-pod-coverage-trustpod",
+        "@perl-test-perl-critic",
+    ],
 )
 
 perl_test(

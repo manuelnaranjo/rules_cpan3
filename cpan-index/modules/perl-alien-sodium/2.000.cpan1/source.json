@@ -3,6 +3,6 @@
     "integrity": "sha256-II47OuEShsoSO/isbJ1apq4FCKZZLc1rMnfQ/PZPOC4=",
     "strip_prefix": "Alien-Sodium-2.000",
     "overlay": {
-        "BUILD.bazel": "sha256-gOhEF5m3yCeqLfBGgvlpzh5v09FIbWywEvWFouBypgM="
+        "BUILD.bazel": "sha256-F6HnbHQwQWTzDgLdUUQKSIGlN8J/y+5wI6D4ftpvlvc="
     }
 }

@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":URI"],
+    deps = [
+        ":URI",
+        "@perl-test-needs",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

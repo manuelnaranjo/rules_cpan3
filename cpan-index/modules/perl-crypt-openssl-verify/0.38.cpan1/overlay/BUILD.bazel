@@ -103,7 +103,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-OpenSSL-Verify"],
+    deps = [
+        ":Crypt-OpenSSL-Verify",
+        "@perl-file-slurper",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

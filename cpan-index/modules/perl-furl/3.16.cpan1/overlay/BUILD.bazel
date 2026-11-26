@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Furl"],
+    deps = [
+        ":Furl",
+        "@perl-test-requires",
+        "@perl-test-tcp",
+    ],
 )
 
 perl_test(

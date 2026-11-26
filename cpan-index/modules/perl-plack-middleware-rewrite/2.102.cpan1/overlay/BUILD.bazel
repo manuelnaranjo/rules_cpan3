@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Plack-Middleware-Rewrite"],
+    deps = [
+        ":Plack-Middleware-Rewrite",
+        "@perl-http-message",
+        "@perl-plack",
+    ],
 )
 
 perl_test(

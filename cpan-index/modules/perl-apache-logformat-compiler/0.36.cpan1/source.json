@@ -3,6 +3,6 @@
     "integrity": "sha256-lFCVA+506oIBg9BwwRYw7lvA/YwSy3T66VPtYuShrBc=",
     "strip_prefix": "Apache-LogFormat-Compiler-0.36",
     "overlay": {
-        "BUILD.bazel": "sha256-7soc6Dd49zAvzQd5i59fqGhHWMqIdR7dSeVyRpBD3pM="
+        "BUILD.bazel": "sha256-NaTw7Y1cYZmO4TmnlSpBKwpfR6TrPeMfJvsHuI+XoPQ="
     }
 }

@@ -55,7 +55,16 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":CHI"],
+    deps = [
+        ":CHI",
+        "@perl-cache-cache",
+        "@perl-module-mask",
+        "@perl-test-class",
+        "@perl-test-deep",
+        "@perl-test-exception",
+        "@perl-test-warn",
+        "@perl-timedate",
+    ],
 )
 
 perl_test(

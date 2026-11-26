@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Template-Toolkit"],
+    deps = [
+        ":Template-Toolkit",
+        "@perl-test-leaktrace",
+    ],
 )
 
 perl_test(

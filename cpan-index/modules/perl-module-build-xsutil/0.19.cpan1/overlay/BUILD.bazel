@@ -101,7 +101,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Module-Build-XSUtil"],
+    deps = [
+        ":Module-Build-XSUtil",
+        "@perl-capture-tiny",
+        "@perl-cwd-guard",
+        "@perl-file-copy-recursive-reduced",
+    ],
 )
 
 perl_test(

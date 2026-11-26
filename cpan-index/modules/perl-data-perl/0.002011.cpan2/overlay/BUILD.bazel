@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-Perl"],
+    deps = [
+        ":Data-Perl",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+        "@perl-test-output",
+    ],
 )
 
 perl_test(

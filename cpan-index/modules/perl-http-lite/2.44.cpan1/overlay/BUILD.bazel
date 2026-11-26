@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTTP-Lite"],
+    deps = [
+        ":HTTP-Lite",
+        "@perl-cgi",
+    ],
 )
 
 perl_test(

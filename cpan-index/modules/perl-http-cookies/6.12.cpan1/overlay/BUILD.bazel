@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTTP-Cookies"],
+    deps = [
+        ":HTTP-Cookies",
+        "@perl-http-message",
+        "@perl-uri",
+    ],
 )
 
 perl_test(

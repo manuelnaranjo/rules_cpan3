@@ -55,7 +55,16 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Elasticsearch-Model"],
+    deps = [
+        ":Elasticsearch-Model",
+        "@perl-datetime",
+        "@perl-ipc-system-simple",
+        "@perl-moose",
+        "@perl-moosex-types-structured",
+        "@perl-test-class",
+        "@perl-test-class-most",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

@@ -3,6 +3,6 @@
     "integrity": "sha256-CQzUjuU1v2LxeIlWF6hReDrhGqTGAGof1NhKQy8RPaU=",
     "strip_prefix": "Alien-GMP-1.16",
     "overlay": {
-        "BUILD.bazel": "sha256-20k6FUkBA/S2MASDrW8E/o2r3FcEs1A7bgYydwjIOGg="
+        "BUILD.bazel": "sha256-cLLioig3rjC8kS3T/ikJ+NkCZ7O1xUmb8B0AP5KH66M="
     }
 }

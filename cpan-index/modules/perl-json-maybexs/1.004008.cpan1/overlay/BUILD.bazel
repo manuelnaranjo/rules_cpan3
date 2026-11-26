@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":JSON-MaybeXS"],
+    deps = [
+        ":JSON-MaybeXS",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

@@ -3,6 +3,6 @@
     "integrity": "sha256-H14RnK3hRmw5xx5bw1qNT05nJjXbA9eaWg3PCMTitaM=",
     "strip_prefix": "Module-ScanDeps-1.37",
     "overlay": {
-        "BUILD.bazel": "sha256-+Q2jUZYgsNPYmBnYdL3cRbyVZmtzBxajWskL94Cf4lg="
+        "BUILD.bazel": "sha256-N7gRsPKy0ZjD4OHZFMry9P1WvQm7IL5vZAzGs7uGKuU="
     }
 }

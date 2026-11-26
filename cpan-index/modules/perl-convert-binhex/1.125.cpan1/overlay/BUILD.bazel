@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Convert-BinHex"],
+    deps = [
+        ":Convert-BinHex",
+        "@perl-file-slurp",
+        "@perl-test-most",
+    ],
 )
 
 perl_test(

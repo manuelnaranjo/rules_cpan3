@@ -24,7 +24,7 @@ cpan_xs(
         "DOUBLE_SLASHES_SPECIAL=@{[",
         "NO_PPPORT_H",
     ],
-    output_loc = "auto/PathTools/PathTools",
+    output_loc = "auto/Cwd/Cwd",
     textual_hdrs = glob(
         [
             "*.h",

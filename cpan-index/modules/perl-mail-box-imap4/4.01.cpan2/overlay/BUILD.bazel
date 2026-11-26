@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Mail-Box-IMAP4"],
+    deps = [
+        ":Mail-Box-IMAP4",
+        "@perl-mail-box",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

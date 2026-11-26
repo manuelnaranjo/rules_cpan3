@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Pod-POM"],
+    deps = [
+        ":Pod-POM",
+        "@perl-file-slurper",
+        "@perl-test-differences",
+        "@perl-text-diff",
+    ],
 )
 
 perl_test(

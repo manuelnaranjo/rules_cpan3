@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Attribute-TypeConstraint-CustomizeFatal"],
+    deps = [
+        ":MooseX-Attribute-TypeConstraint-CustomizeFatal",
+        "@perl-moose",
+    ],
 )
 
 perl_test(

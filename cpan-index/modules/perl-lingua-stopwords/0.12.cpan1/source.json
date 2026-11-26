@@ -3,6 +3,6 @@
     "integrity": "sha256-OY1W7UIQqRUYC7IR53vrHPrWlfcUciRSNFtCZHWlNcM=",
     "strip_prefix": "Lingua-StopWords-0.12",
     "overlay": {
-        "BUILD.bazel": "sha256-lkMGVYhBviTMcODPD3aVlBuaT7I2tcjltjbBt2s2V10="
+        "BUILD.bazel": "sha256-zRmZ1BQcyCRF0EQ/9D5XELdX2zOAOhCJtKT5+5nIjMI="
     }
 }

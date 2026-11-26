@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":File-Copy-Recursive"],
+    deps = [
+        ":File-Copy-Recursive",
+        "@perl-path-tiny",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+        "@perl-test-file",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

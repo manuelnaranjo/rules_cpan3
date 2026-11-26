@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-Page"],
+    deps = [
+        ":Data-Page",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

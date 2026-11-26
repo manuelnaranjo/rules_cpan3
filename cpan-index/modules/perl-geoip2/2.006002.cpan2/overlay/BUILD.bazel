@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":GeoIP2"],
+    deps = [
+        ":GeoIP2",
+        "@perl-http-message",
+        "@perl-maxmind-db-common",
+        "@perl-path-class",
+        "@perl-test-fatal",
+        "@perl-test-number-delta",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Spreadsheet-ParseXLSX"],
+    deps = [
+        ":Spreadsheet-ParseXLSX",
+        "@perl-spreadsheet-parseexcel",
+    ],
 )
 
 perl_test(

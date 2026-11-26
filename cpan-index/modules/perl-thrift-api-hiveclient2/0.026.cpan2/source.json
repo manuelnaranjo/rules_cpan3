@@ -3,6 +3,6 @@
     "integrity": "sha256-eiPaX5zUS3gkBXbNY9Oa5UBvvvxcJgao3VJyxsyQyDM=",
     "strip_prefix": "Thrift-API-HiveClient2-0.026",
     "overlay": {
-        "BUILD.bazel": "sha256-HTrqrYvZ8m8nTEar9fgJA79aM5Rokh6POVuz7cBI1pk="
+        "BUILD.bazel": "sha256-qObrsOWVgYNGg+cYly3Fe3quUA3elFK+rC+mMec7Ne0="
     }
 }

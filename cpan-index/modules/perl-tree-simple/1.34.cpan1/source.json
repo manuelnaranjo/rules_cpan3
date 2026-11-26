@@ -3,6 +3,6 @@
     "integrity": "sha256-t+l5m9Iiu5TP+ZP312WYDL6hts0qql7L6tY1q99H0pw=",
     "strip_prefix": "Tree-Simple-1.34",
     "overlay": {
-        "BUILD.bazel": "sha256-H/L+sOT/DKqJw3c/4U8umQqW+eEt6SwSfgn2G6tafcw="
+        "BUILD.bazel": "sha256-nZ7Nsvf5KnezLG75SeJrpYmmdBlpYu6CzDLuB6xCfXU="
     }
 }

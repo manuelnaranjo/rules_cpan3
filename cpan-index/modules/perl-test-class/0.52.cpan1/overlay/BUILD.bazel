@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Class"],
+    deps = [
+        ":Test-Class",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

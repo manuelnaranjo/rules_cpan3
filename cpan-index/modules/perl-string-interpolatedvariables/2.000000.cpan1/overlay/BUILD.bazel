@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":String-InterpolatedVariables"],
+    deps = [
+        ":String-InterpolatedVariables",
+        "@perl-test-deep",
+        "@perl-test-failwarnings",
+    ],
 )
 
 perl_test(

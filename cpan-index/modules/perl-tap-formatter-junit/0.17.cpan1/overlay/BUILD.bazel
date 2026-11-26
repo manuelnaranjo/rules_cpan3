@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":TAP-Formatter-JUnit"],
+    deps = [
+        ":TAP-Formatter-JUnit",
+        "@perl-io-stringy",
+        "@perl-ipc-run",
+        "@perl-test-diaginc",
+        "@perl-test-xml",
+    ],
 )
 
 perl_test(

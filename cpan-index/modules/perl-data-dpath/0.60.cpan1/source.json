@@ -3,6 +3,6 @@
     "integrity": "sha256-mfRCbUWMW7jUxRDgwmKcioiuT0ZhwLHkXFVQNi+S7ME=",
     "strip_prefix": "Data-DPath-0.60",
     "overlay": {
-        "BUILD.bazel": "sha256-4n2CA7DIaj05Gh+2kjGPJ/2cz4HFKf7F1JNU97jexHI="
+        "BUILD.bazel": "sha256-mm+epLfveOWn69M7r2BBD+Ut6P/2M793oKcvSL/1FWo="
     }
 }

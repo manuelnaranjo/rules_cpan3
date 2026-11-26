@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Email-Stuffer"],
+    deps = [
+        ":Email-Stuffer",
+        "@perl-email-sender",
+        "@perl-moo",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

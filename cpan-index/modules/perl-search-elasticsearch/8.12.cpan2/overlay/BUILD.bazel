@@ -55,7 +55,15 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Search-Elasticsearch"],
+    deps = [
+        ":Search-Elasticsearch",
+        "@perl-io-socket-ssl",
+        "@perl-log-any-adapter-callback",
+        "@perl-test-deep",
+        "@perl-test-exception",
+        "@perl-test-pod",
+        "@perl-test-sharedfork",
+    ],
 )
 
 perl_test(

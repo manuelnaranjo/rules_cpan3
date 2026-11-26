@@ -55,7 +55,21 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Net-SAML2"],
+    deps = [
+        ":Net-SAML2",
+        "@perl-import-into",
+        "@perl-moosex-test-role",
+        "@perl-path-tiny",
+        "@perl-sub-override",
+        "@perl-test-deep",
+        "@perl-test-exception",
+        "@perl-test-fatal",
+        "@perl-test-lib",
+        "@perl-test-mock-one",
+        "@perl-test-notabs",
+        "@perl-test-pod",
+        "@perl-test-pod-coverage",
+    ],
 )
 
 perl_test(

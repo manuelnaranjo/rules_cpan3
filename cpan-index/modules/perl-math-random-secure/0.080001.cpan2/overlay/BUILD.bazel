@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Math-Random-Secure"],
+    deps = [
+        ":Math-Random-Secure",
+        "@perl-list-moreutils",
+        "@perl-test-sharedfork",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

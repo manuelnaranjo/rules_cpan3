@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":File-Find-Object"],
+    deps = [
+        ":File-Find-Object",
+        "@perl-file-treecreate",
+        "@perl-test-file",
+    ],
 )
 
 perl_test(
