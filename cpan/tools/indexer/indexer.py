@@ -90,12 +90,23 @@ def normalize_overlay_text(rel_name: str, data: bytes) -> bytes:
 
 
 def deduplicate_module_bazel_deps(content: str) -> str:
-    """Removes duplicate bazel_dep declarations by dependency name."""
+    """Removes duplicate bazel_dep and module declarations by dependency name."""
     lines = content.splitlines()
     seen = set()
     new_lines = []
     dep_pattern = re.compile(r'^\s*bazel_dep\(\s*name\s*=\s*"(?P<name>[^"]+)"')
+    in_duplicate_module = False
+    saw_module = False
     for line in lines:
+        if line.strip().startswith("module("):
+            if saw_module:
+                in_duplicate_module = True
+                continue
+            saw_module = True
+        if in_duplicate_module:
+            if line.strip() == ")":
+                in_duplicate_module = False
+            continue
         m = dep_pattern.match(line)
         if m:
             dep_name = m.group("name")
@@ -441,6 +452,14 @@ class IndexManager:
             ]
             merged = new_mb_text.rstrip() + "\n" + "\n".join(existing_deps) + "\n"
             dest_mb.write_text(deduplicate_module_bazel_deps(merged), encoding="utf-8")
+        elif existing_mb_text:
+            updated_mb = re.sub(
+                r'version\s*=\s*"[^"]+"',
+                f'version = "{target_version}"',
+                existing_mb_text,
+                count=1,
+            )
+            dest_mb.write_text(deduplicate_module_bazel_deps(updated_mb), encoding="utf-8")
         elif dest_mb.exists():
             dest_mb.write_text(deduplicate_module_bazel_deps(new_mb_text), encoding="utf-8")
 
@@ -734,12 +753,14 @@ class IndexManager:
 def sync_workspace_module_bazel(
     module_bazel_path: Path,
     dependencies: Dict[str, str],
+    dist_names: Optional[Dict[str, str]] = None,
 ) -> bool:
-    """Synchronizes direct bazel_dep declarations in workspace MODULE.bazel.
+    """Synchronizes direct bazel_dep declarations and cpan.inject in workspace MODULE.bazel.
 
     Args:
         module_bazel_path: Path to workspace MODULE.bazel.
         dependencies: Dictionary mapping module_name -> version string.
+        dist_names: Optional dictionary mapping module_name -> distribution name.
 
     Returns:
         True if MODULE.bazel was modified, False otherwise.
@@ -782,6 +803,58 @@ def sync_workspace_module_bazel(
         new_lines.append("# CPAN dependencies indexed by rules_cpan indexer")
         for dep_name, dep_ver in sorted(remaining_deps.items()):
             new_lines.append(f'bazel_dep(name = "{dep_name}", version = "{dep_ver}")')
+
+    # Also synchronize cpan.inject calls for every perl-* bazel_dep
+    joined_content = "\n".join(new_lines)
+    inject_dist_regex = re.compile(r'cpan\.inject\(\s*distribution\s*=\s*"(?P<dist>[^"]+)"')
+    existing_injections = set(inject_dist_regex.findall(joined_content))
+
+    perl_deps_in_file = []
+    for line in new_lines:
+        m = dep_regex.match(line)
+        if m and m.group("name").startswith("perl-"):
+            perl_deps_in_file.append(m.group("name"))
+
+    new_injections = []
+    for mod_name in sorted(perl_deps_in_file):
+        dist = (dist_names or {}).get(mod_name)
+        if not dist:
+            # Check metadata.json in cpan-index
+            for p in [
+                module_bazel_path.parent / "cpan-index" / "modules" / mod_name / "metadata.json",
+                module_bazel_path.parent.parent.parent / "cpan-index" / "modules" / mod_name / "metadata.json",
+            ]:
+                if p.exists():
+                    try:
+                        mdata = json.loads(p.read_text(encoding="utf-8"))
+                        hp = mdata.get("homepage", "")
+                        if hp.startswith("https://metacpan.org/dist/"):
+                            dist = hp.split("/")[-1]
+                            break
+                    except Exception:
+                        pass
+        if not dist:
+            dist = mod_name.removeprefix("perl-")
+
+        if dist not in existing_injections:
+            new_injections.append(
+                f'cpan.inject(\n    distribution = "{dist}",\n    target = "@{mod_name}//:{dist}",\n)'
+            )
+            existing_injections.add(dist)
+
+    if new_injections:
+        modified = True
+        insert_idx = None
+        for i, l in enumerate(new_lines):
+            if "use_repo(" in l and "cpan" in l:
+                insert_idx = i
+                break
+        if insert_idx is not None:
+            new_lines[insert_idx:insert_idx] = new_injections
+        else:
+            new_lines.append("")
+            new_lines.append("# CPAN injections connecting registry entries to hub")
+            new_lines.extend(new_injections)
 
     if modified:
         module_bazel_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
@@ -907,14 +980,16 @@ class CPANIndexer:
         if sync_module_bazel:
             target_mb = module_bazel_path or (self.workspace_dir / "MODULE.bazel")
             direct_deps_to_sync: Dict[str, str] = {}
+            dist_names_to_sync: Dict[str, str] = {}
             for root_req in root_deps:
                 root_name = root_req.split()[0]
                 mod_name = sanitize_module_name(root_name)
                 if mod_name in resolved_versions:
                     direct_deps_to_sync[mod_name] = resolved_versions[mod_name]
+                    dist_names_to_sync[mod_name] = root_name
 
             if direct_deps_to_sync:
-                sync_workspace_module_bazel(target_mb, direct_deps_to_sync)
+                sync_workspace_module_bazel(target_mb, direct_deps_to_sync, dist_names_to_sync)
 
         return resolved_versions
 
@@ -1091,7 +1166,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         module_name = sanitize_module_name(dist_name)
         if args.sync_module_bazel:
             mb_path = Path(args.module_bazel) if args.module_bazel else workspace_dir / "MODULE.bazel"
-            sync_workspace_module_bazel(mb_path, {module_name: resolved_ver})
+            sync_workspace_module_bazel(mb_path, {module_name: resolved_ver}, {module_name: dist_name})
 
         print(f"[cpan_indexer] Successfully indexed {dist_name} -> {module_name} {resolved_ver}")
         return 0

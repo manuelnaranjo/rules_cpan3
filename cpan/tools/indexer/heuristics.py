@@ -243,6 +243,7 @@ def compute_output_loc(dist_name: str, provides: List[str]) -> str:
 class GeneratorMetadata:
     """Per-module generator metadata loaded from generator-metadata.yaml."""
 
+    is_xs: Optional[bool] = None
     manual_tests: List[str] = field(default_factory=list)
     test_services: List[str] = field(default_factory=list)
     test_exec_properties: Dict[str, str] = field(default_factory=dict)
@@ -271,7 +272,11 @@ class GeneratorMetadata:
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> GeneratorMetadata:
+        is_xs = data.get("is_xs")
+        if isinstance(is_xs, str):
+            is_xs = is_xs.lower() in ("true", "1", "yes")
         return cls(
+            is_xs=is_xs,
             manual_tests=list(data.get("manual_tests") or []),
             test_services=list(data.get("test_services") or []),
             test_exec_properties=dict(data.get("test_exec_properties") or {}),
@@ -290,6 +295,8 @@ class GeneratorMetadata:
 
     def to_dict(self) -> Dict[str, Any]:
         res: Dict[str, Any] = {}
+        if self.is_xs is not None:
+            res["is_xs"] = self.is_xs
         if self.manual_tests:
             res["manual_tests"] = self.manual_tests
         if self.test_services:
@@ -423,7 +430,9 @@ class HeuristicsEngine:
                     typemaps.append(rel_file)
 
         # Determine whether this is an XS distribution
-        if is_xs_hint is not None:
+        if generator_metadata and generator_metadata.is_xs is not None:
+            inspection.is_xs = generator_metadata.is_xs
+        elif is_xs_hint is not None:
             inspection.is_xs = is_xs_hint
         else:
             inspection.is_xs = len(xs_files) > 0 or len(c_files) > 0
@@ -507,9 +516,7 @@ class HeuristicsEngine:
                     if d not in inspection.defines:
                         inspection.defines.append(d)
             if generator_metadata.native_deps:
-                for n in generator_metadata.native_deps:
-                    if n not in inspection.native_deps:
-                        inspection.native_deps.append(n)
+                inspection.native_deps = list(generator_metadata.native_deps)
             if generator_metadata.includes:
                 for inc in generator_metadata.includes:
                     if inc not in inspection.includes:
@@ -568,10 +575,17 @@ class HeuristicsEngine:
                     break
 
         # Search for preprocessor defines: -D...
-        define_matches = re.findall(r"-D([A-Za-z0-9_]+(?:=[^\s\'\"\$]+)?)", script_text)
-        for define in define_matches:
-            clean_def = re.sub(r'[\'\"\\/]+$', '', define).strip()
-            if clean_def and "$" not in clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
+        for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", script_text):
+            name = m.group(1)
+            val = m.group(2)
+            if val is not None:
+                if "$" in val or not re.match(r'^[A-Za-z0-9_."\'-]+$', val):
+                    continue
+                clean_val = re.sub(r'[\'\"\\/]+$', '', val).strip()
+                clean_def = f"{name}={clean_val}"
+            else:
+                clean_def = name
+            if clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
                 inspection.defines.append(clean_def)
 
         # Attempt build system dry-run if Makefile.PL exists
@@ -743,10 +757,10 @@ class HeuristicsEngine:
 
             non_manual_tests = [t for t, is_man in test_target_names if not is_man]
             if non_manual_tests:
-                tests_str = ",\n        ".join(non_manual_tests)
+                tests_str = "\n        " + ",\n        ".join(non_manual_tests) + ",\n    "
                 suite_tags = ""
             else:
-                tests_str = ",\n        ".join([t for t, _ in test_target_names])
+                tests_str = ""
                 suite_tags = '\n    tags = ["manual"],'
 
             test_deps_items = [f'"{d}"' for d in valid_test_deps]
@@ -772,9 +786,15 @@ perl_library(
 
 test_suite(
     name = "test",{suite_tags}
-    tests = [
-        {tests_str},
-    ],
+    tests = [{tests_str}],
+)
+"""
+        else:
+            test_content = f"""
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
 )
 """
 
@@ -813,24 +833,42 @@ alias(
             if generator_metadata and generator_metadata.output_loc
             else inspection.output_loc
         )
-        all_native_deps = list(inspection.native_deps)
-        if generator_metadata and generator_metadata.native_deps:
-            for n in generator_metadata.native_deps:
-                if n not in all_native_deps:
-                    all_native_deps.append(n)
+        seen_native_deps: Set[str] = set()
+        all_native_deps: List[str] = []
+        raw_native_deps = (
+            list(generator_metadata.native_deps)
+            if generator_metadata and generator_metadata.native_deps
+            else list(inspection.native_deps)
+        )
+        for d in raw_native_deps:
+            d = d.strip()
+            canon = f"{d}//:{d.lstrip('@')}" if d.startswith("@") and "//" not in d and ":" not in d else d
+            if canon not in seen_native_deps and d not in seen_native_deps:
+                seen_native_deps.add(canon)
+                seen_native_deps.add(d)
+                all_native_deps.append(d)
         native_deps_items = [f'"{d}"' for d in all_native_deps]
         native_deps_str = ""
         if native_deps_items:
             native_deps_str = "\n        " + ",\n        ".join(native_deps_items) + ",\n    "
 
-        xs_srcs = [f'"{x}"' for x in inspection.top_level_xs] if inspection.top_level_xs else ['"*.xs"']
-        xs_srcs_str = ", ".join(xs_srcs)
+        if inspection.top_level_xs:
+            xs_srcs = [f'"{x}"' for x in inspection.top_level_xs]
+            xs_srcs_str = f"[{', '.join(xs_srcs)}]"
+        else:
+            xs_srcs_str = 'glob(["*.xs"], allow_empty = True)'
 
         cc_excludes = [
             '"_xs/**"',
             '"t/**"',
+            '"xt/**"',
             '"fallback/**"',
             '"conf/**"',
+            '"examples/**"',
+            '"example/**"',
+            '"eg/**"',
+            '"samples/**"',
+            '"demo/**"',
         ]
         if generator_metadata and generator_metadata.cc_srcs_exclude:
             for exc in generator_metadata.cc_srcs_exclude:
@@ -877,7 +915,7 @@ package(default_visibility = ["//visibility:public"])
 
 cpan_xs(
     name = "{dist}_xs",
-    srcs = [{xs_srcs_str}],
+    srcs = {xs_srcs_str},
     cc_srcs = glob([
         "*.c",
         "**/*.c",

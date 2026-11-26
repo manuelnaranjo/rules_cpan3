@@ -18,73 +18,32 @@ def sanitize_repo_name(name):
             res += "_"
     return res
 
-def get_strip_prefix(url):
-    """Compute archive strip prefix from tarball URL.
+def dist_to_bcr_module(dist_name):
+    """Computes BCR module name: perl-<lowercase_with_hyphens>.
 
     Args:
-        url: Upstream tarball URL.
+        dist_name: CPAN distribution name (e.g. 'Algorithm-Diff').
 
     Returns:
-        Archive directory prefix to strip.
+        BCR module name (e.g. 'perl-algorithm-diff').
     """
-    filename = url.split("/")[-1]
-    for ext in [".tar.gz", ".tgz", ".tar.bz2", ".tbz2", ".tar.xz", ".txz", ".zip"]:
-        if filename.endswith(ext):
-            return filename[:-len(ext)]
-    return ""
+    res = ""
+    for i in range(len(dist_name)):
+        c = dist_name[i].lower()
+        if (c >= "a" and c <= "z") or (c >= "0" and c <= "9") or c in [".", "-"]:
+            res += c
+        else:
+            res += "-"
 
-def prune_runtime_cycles(dists, root_dependencies):
-    """Prunes back-edges from runtime dependency graph to ensure a DAG in Bazel.
-
-    Args:
-        dists: Dictionary of distributions from lockfile.
-        root_dependencies: List of root dependencies from lockfile.
-
-    Returns:
-        Dictionary mapping distribution name to a cycle-free list of runtime dependencies.
-    """
-    raw_graph = {k: list(dists[k].get("dependencies", {}).get("runtime", [])) for k in dists}
-    state = {k: 0 for k in dists}
-    pruned_graph = {k: [] for k in dists}
-
-    start_nodes = []
-    for root in root_dependencies:
-        dist = root.split(" ")[0]
-        if dist in dists and dist not in start_nodes:
-            start_nodes.append(dist)
-    for dist in sorted(dists.keys()):
-        if dist not in start_nodes:
-            start_nodes.append(dist)
-
-    max_steps = (len(dists) + 1) * 20
-
-    for start in start_nodes:
-        if state[start] != 0:
-            continue
-        stack = [(start, 0)]
-        state[start] = 1
-        for _ in range(max_steps):
-            if not stack:
-                break
-            node, idx = stack[-1]
-            neighbors = raw_graph.get(node, [])
-            if idx < len(neighbors):
-                stack[-1] = (node, idx + 1)
-                v = neighbors[idx]
-                if v not in dists:
-                    continue
-                if state[v] == 1:
-                    # Back-edge forming a cycle; prune it
-                    continue
-                pruned_graph[node].append(v)
-                if state[v] == 0:
-                    state[v] = 1
-                    stack.append((v, 0))
-            else:
-                state[node] = 2
-                stack.pop()
-
-    return pruned_graph
+    # Strip leading and trailing hyphens
+    for _ in range(len(res)):
+        if res.startswith("-"):
+            res = res[1:]
+        elif res.endswith("-"):
+            res = res[:-1]
+        else:
+            break
+    return "perl-" + res
 
 def get_primary_module(dist_name, provides):
     """Determine the primary Perl module name for a distribution.
@@ -103,761 +62,12 @@ def get_primary_module(dist_name, provides):
         return provides[0]
     return canonical_mod
 
-def _compute_output_loc(dist_name, provides):
-    """Compute the DynaLoader/XSLoader auto/ directory location for an XS module."""
-    primary_mod = get_primary_module(dist_name, provides)
-    parts = primary_mod.split("::")
-    path_prefix = "/".join(parts)
-    leaf = parts[-1]
-    return "auto/" + path_prefix + "/" + leaf
-
-def _apply_patches(ctx):
-    strip = 0
-    for arg in ctx.attr.patch_args:
-        if arg.startswith("-p"):
-            strip = int(arg[2:])
-    for patch in ctx.attr.patches:
-        ctx.patch(patch, strip = strip)
-
-    patch_cmds = ctx.attr.patch_cmds
-    if ctx.os.name.startswith("windows"):
-        if ctx.attr.patch_cmds_win:
-            patch_cmds = ctx.attr.patch_cmds_win
-
-    for cmd in patch_cmds:
-        if ctx.os.name.startswith("windows"):
-            res = ctx.execute(["cmd.exe", "/c", cmd])
-        else:
-            res = ctx.execute(["sh", "-c", cmd])
-        if res.return_code != 0:
-            fail("Failed to execute patch_cmd '%s':\n%s\n%s" % (cmd, res.stdout, res.stderr))
-
-def _find_t_files(root_dir, max_depth = 5):
-    """Find all .t test files under root_dir."""
-    if not root_dir.exists:
-        return []
-    res = []
-    frontier = [root_dir]
-    for _ in range(max_depth):
-        if not frontier:
-            break
-        deeper = []
-        for d in frontier:
-            for entry in d.readdir():
-                if entry.is_dir:
-                    deeper.append(entry)
-                elif entry.basename.endswith(".t"):
-                    res.append(entry)
-        frontier = deeper
-    return res
-
-def _sanitize_target_name(path_str):
-    res = ""
-    for i in range(len(path_str)):
-        c = path_str[i]
-        if (c >= "a" and c <= "z") or (c >= "A" and c <= "Z") or (c >= "0" and c <= "9") or c in ["_", "-", "."]:
-            res += c
-        else:
-            res += "_"
-    return res
-
-def _append_target_and_leaf(target, target_list):
-    """Adds target and its glob leaf pattern to list if not already present."""
-    if not target or ".." in target:
-        return
-    if target not in target_list:
-        target_list.append(target)
-    leaf = target.split("/")[-1]
-    leaf_pattern = "**/" + leaf
-    if leaf and leaf_pattern not in target_list:
-        target_list.append(leaf_pattern)
-
-def _extract_included_c_files(line):
-    """Extracts .c file paths from #include statements."""
-    sline = line.strip()
-    if not (sline.startswith("#") and "include" in sline):
-        return []
-    parts = sline.split('"')
-    if len(parts) < 2:
-        return []
-    results = []
-    for part in parts:
-        if not part.endswith(".c") or ".." in part:
-            continue
-        results.append(part)
-    return results
-
-def _scan_xs_file(ctx, entry, extra_srcs_exclude, extra_cc_srcs_exclude, extra_textual_hdrs):
-    content = ctx.read(entry)
-    for line in content.splitlines():
-        sline = line.strip()
-        if sline.startswith("INCLUDE:"):
-            inc_target = sline.removeprefix("INCLUDE:").strip()
-            _append_target_and_leaf(inc_target, extra_srcs_exclude)
-            _append_target_and_leaf(inc_target, extra_textual_hdrs)
-            continue
-        c_includes = _extract_included_c_files(sline)
-        for c_file in c_includes:
-            _append_target_and_leaf(c_file, extra_cc_srcs_exclude)
-            _append_target_and_leaf(c_file, extra_textual_hdrs)
-
-def _scan_c_hdr_file(ctx, entry, extra_cc_srcs_exclude, extra_textual_hdrs):
-    content = ctx.read(entry)
-    for line in content.splitlines():
-        c_includes = _extract_included_c_files(line)
-        for c_file in c_includes:
-            _append_target_and_leaf(c_file, extra_cc_srcs_exclude)
-            _append_target_and_leaf(c_file, extra_textual_hdrs)
-
-def _scan_sources_for_includes(ctx):
-    """Scans repository sources for INCLUDE: and #include directives to adjust build targets."""
-    extra_srcs_exclude = []
-    extra_cc_srcs_exclude = []
-    extra_textual_hdrs = []
-
-    frontier = [ctx.path("")]
-    for _ in range(8):
-        if not frontier:
-            break
-        next_frontier = []
-        for d in frontier:
-            for entry in d.readdir():
-                if entry.is_dir:
-                    if entry.basename in ["t", "fallback", "inc", ".git", "_xs"]:
-                        continue
-                    next_frontier.append(entry)
-                    continue
-
-                if entry.basename.endswith(".xs"):
-                    _scan_xs_file(ctx, entry, extra_srcs_exclude, extra_cc_srcs_exclude, extra_textual_hdrs)
-                    continue
-
-                if entry.basename.endswith(".c") or entry.basename.endswith(".h"):
-                    _scan_c_hdr_file(ctx, entry, extra_cc_srcs_exclude, extra_textual_hdrs)
-                    continue
-
-        frontier = next_frontier
-
-    return struct(
-        srcs_exclude = extra_srcs_exclude,
-        cc_srcs_exclude = extra_cc_srcs_exclude,
-        textual_hdrs = extra_textual_hdrs,
-    )
-
-def _cpan_dist_repo_impl(ctx):
-    strip_prefix = ctx.attr.strip_prefix
-    if not strip_prefix:
-        strip_prefix = get_strip_prefix(ctx.attr.url)
-
-    ctx.download_and_extract(
-        url = ctx.attr.url,
-        sha256 = ctx.attr.sha256,
-        stripPrefix = strip_prefix,
-    )
-    _apply_patches(ctx)
-
-    if ctx.attr.build_file:
-        ctx.file("BUILD.bazel", ctx.read(ctx.attr.build_file))
-        return
-
-    # Check fallback directory for constants if present
-    if not ctx.attr.patch_cmds:
-        if ctx.path("fallback/constants.h").exists and not ctx.path("constants.h").exists:
-            ctx.file("constants.h", ctx.read(ctx.path("fallback/constants.h")))
-        if ctx.path("fallback/constants.xs").exists and not ctx.path("constants.xs").exists:
-            ctx.file("constants.xs", ctx.read(ctx.path("fallback/constants.xs")))
-
-    # Ensure root-level .pm files are accessible at their module paths (e.g. RefElem.pm -> lib/Array/RefElem.pm)
-    all_provides = list(ctx.attr.provides)
-    primary_mod = get_primary_module(ctx.attr.dist_name, ctx.attr.provides)
-    if primary_mod not in all_provides:
-        all_provides.append(primary_mod)
-
-    for mod in all_provides:
-        parts = mod.split("::")
-        expected_dest = "lib/" + "/".join(parts) + ".pm"
-        if not ctx.path(expected_dest).exists:
-            candidates = [parts[-1] + ".pm", ctx.attr.dist_name + ".pm"]
-            for cand in candidates:
-                cand_path = ctx.path(cand)
-                if cand_path.exists:
-                    ctx.file(expected_dest, ctx.read(cand_path))
-                    break
-
-    deps_items = ['"%s"' % d for d in ctx.attr.runtime_deps]
-    if deps_items:
-        deps_str = "\n        " + ",\n        ".join(deps_items) + ",\n    "
-    else:
-        deps_str = ""
-
-    target_compat_items = ['"%s"' % d for d in ctx.attr.target_compatible_with]
-    if target_compat_items:
-        target_compat_str = "\n    target_compatible_with = [\n        " + ",\n        ".join(target_compat_items) + ",\n    ],"
-    else:
-        target_compat_str = ""
-
-    exec_compat_items = ['"%s"' % d for d in ctx.attr.exec_compatible_with]
-    if exec_compat_items:
-        exec_compat_str = "\n    exec_compatible_with = [\n        " + ",\n        ".join(exec_compat_items) + ",\n    ],"
-    else:
-        exec_compat_str = ""
-
-    tags_items = ['"%s"' % d for d in ctx.attr.extra_tags]
-    if tags_items:
-        tags_str = "\n    tags = [\n        " + ",\n        ".join(tags_items) + ",\n    ],"
-    else:
-        tags_str = ""
-
-    if ctx.attr.execution_requirements:
-        reqs_items = ['"%s": "%s"' % (k, v) for k, v in ctx.attr.execution_requirements.items()]
-        exec_reqs_str = "\n    execution_requirements = {\n        " + ",\n        ".join(reqs_items) + ",\n    },"
-    else:
-        exec_reqs_str = ""
-
-    includes_list = ['"."', '"lib"']
-    for inc in ctx.attr.includes:
-        quoted = '"%s"' % inc
-        if quoted not in includes_list:
-            includes_list.append(quoted)
-    includes_str = "\n        " + ",\n        ".join(includes_list) + ",\n    "
-
-    src_patterns = ['"lib/**/*.pm"', '"lib/**/*.pod"', '"*.pm"']
-    data_patterns = ['"lib/**/*"']
-    exclude_patterns = ['"lib/**/*.pm"', '"lib/**/*.pod"']
-
-    for inc in ctx.attr.includes:
-        if inc in [".", ""]:
-            src_patterns.append('"**/*.pm"')
-            src_patterns.append('"**/*.pod"')
-            data_patterns.append('"**/*"')
-            exclude_patterns.append('"**/*.pm"')
-            exclude_patterns.append('"**/*.pod"')
-        else:
-            inc_clean = inc.removeprefix("./").rstrip("/")
-            src_patterns.append('"%s/**/*.pm"' % inc_clean)
-            src_patterns.append('"%s/**/*.pod"' % inc_clean)
-            data_patterns.append('"%s/**/*"' % inc_clean)
-            exclude_patterns.append('"%s/**/*.pm"' % inc_clean)
-            exclude_patterns.append('"%s/**/*.pod"' % inc_clean)
-
-    srcs_str = "\n        " + ",\n        ".join(src_patterns) + ",\n    "
-    data_str = "\n        " + ",\n        ".join(data_patterns) + ",\n    "
-    exclude_str = "\n        " + ",\n        ".join(exclude_patterns) + ",\n    "
-
-    actual_is_xs = ctx.attr.is_xs
-    if actual_is_xs:
-        has_xs_files = False
-        frontier = [ctx.path("")]
-        for _ in range(8):
-            if not frontier or has_xs_files:
-                break
-            deeper = []
-            for d in frontier:
-                for entry in d.readdir():
-                    if entry.is_dir:
-                        if entry.basename not in ["t", "fallback", "inc", ".git", "_xs"]:
-                            deeper.append(entry)
-                    elif entry.basename.endswith(".xs") or entry.basename.endswith(".c"):
-                        has_xs_files = True
-                        break
-            frontier = deeper
-        if not has_xs_files:
-            actual_is_xs = False
-
-    if not actual_is_xs:
-        # Pure Perl distribution
-        build_content = """# Auto-generated by rules_cpan for {dist_name}
-load("@rules_perl//perl:defs.bzl", "perl_library")
-
-package(default_visibility = ["//visibility:public"])
-
-perl_library(
-    name = "{dist_name}",
-    srcs = glob([{srcs_str}], allow_empty = True),
-    data = glob([{data_str}], exclude = [{exclude_str}], allow_empty = True),
-    includes = [{includes_str}],{exec_compat_str}{tags_str}{target_compat_str}
-    deps = [{deps_str}],
-)
-""".format(
-            dist_name = ctx.attr.dist_name,
-            srcs_str = srcs_str,
-            data_str = data_str,
-            exclude_str = exclude_str,
-            deps_str = deps_str,
-            exec_compat_str = exec_compat_str,
-            includes_str = includes_str,
-            tags_str = tags_str,
-            target_compat_str = target_compat_str,
-        )
-    else:
-        # XS (C extension) module
-        output_loc = ctx.attr.output_loc
-        if not output_loc:
-            output_loc = _compute_output_loc(ctx.attr.dist_name, ctx.attr.provides)
-
-        defines_items = ['"%s"' % d for d in ctx.attr.defines]
-        if defines_items:
-            defines_str = "\n        " + ",\n        ".join(defines_items) + ",\n    "
-        else:
-            defines_str = ""
-
-        native_deps_items = ['"%s"' % d for d in ctx.attr.native_deps]
-        if native_deps_items:
-            native_deps_str = "\n        " + ",\n        ".join(native_deps_items) + ",\n    "
-        else:
-            native_deps_str = ""
-
-        # Scan for INCLUDE: directives in .xs files and #include "*.c"
-        scan_results = _scan_sources_for_includes(ctx)
-        extra_srcs_exclude = scan_results.srcs_exclude
-        extra_cc_srcs_exclude = scan_results.cc_srcs_exclude
-        extra_textual_hdrs = scan_results.textual_hdrs
-
-        srcs_exclude_items = [
-            '"_xs/**"',
-            '"t/**"',
-            '"xt/**"',
-            '"example/**"',
-            '"examples/**"',
-            '"corpus/**"',
-            '"fallback/**"',
-            '"c_api_client/**"',
-            '"constants.xs"',
-            '"**/constants.xs"',
-            '"const-xs.inc"',
-            '"**/const-xs.inc"',
-        ]
-        for x in extra_srcs_exclude:
-            quoted = '"%s"' % x
-            if quoted not in srcs_exclude_items:
-                srcs_exclude_items.append(quoted)
-        srcs_exclude_str = "\n        " + ",\n        ".join(srcs_exclude_items) + ",\n    "
-
-        cc_srcs_exclude_items = [
-            '"_xs/**"',
-            '"t/**"',
-            '"xt/**"',
-            '"example/**"',
-            '"examples/**"',
-            '"corpus/**"',
-            '"fallback/**"',
-            '"c_api_client/**"',
-            '"bzip2-src/**"',
-            '"bzlib-src/**"',
-            '"ext/**"',
-        ]
-        for x in extra_cc_srcs_exclude:
-            quoted = '"%s"' % x
-            if quoted not in cc_srcs_exclude_items:
-                cc_srcs_exclude_items.append(quoted)
-        cc_srcs_exclude_str = "\n        " + ",\n        ".join(cc_srcs_exclude_items) + ",\n    "
-
-        textual_hdrs_patterns = [
-            '"*.h"',
-            '"**/*.h"',
-            '"*.xs"',
-            '"**/*.xs"',
-            '"*.inc"',
-            '"**/*.inc"',
-        ]
-        for x in extra_textual_hdrs:
-            quoted = '"%s"' % x
-            if quoted not in textual_hdrs_patterns:
-                textual_hdrs_patterns.append(quoted)
-        textual_hdrs_str = "\n        " + ",\n        ".join(textual_hdrs_patterns) + ",\n    "
-
-        textual_hdrs_exclude = [
-            "bzip2-src/**",
-            "bzlib-src/**",
-        ]
-        has_ext_included = any([x.startswith("ext/") or "/ext/" in x for x in extra_textual_hdrs])
-        if not has_ext_included:
-            textual_hdrs_exclude.append("ext/**")
-        textual_hdrs_exclude_items = ['"%s"' % x for x in textual_hdrs_exclude]
-        textual_hdrs_exclude_str = "\n        " + ",\n        ".join(textual_hdrs_exclude_items) + ",\n    "
-
-        build_content = """# Auto-generated by rules_cpan for {dist_name} (XS extension)
-load("@rules_cpan//cpan:defs.bzl", "cpan_xs")
-load("@rules_perl//perl:defs.bzl", "perl_library")
-
-package(default_visibility = ["//visibility:public"])
-
-cpan_xs(
-    name = "{dist_name}_xs",
-    srcs = glob([
-        "*.xs",
-        "**/*.xs",
-    ], exclude = [{srcs_exclude_str}], allow_empty = True),
-    cc_srcs = glob([
-        "*.c",
-        "**/*.c",
-    ], exclude = [{cc_srcs_exclude_str}], allow_empty = True),
-    defines = [{defines_str}],{exec_compat_str}{exec_reqs_str}
-    output_loc = "{output_loc}",{tags_str}{target_compat_str}
-    textual_hdrs = glob([{textual_hdrs_str}], exclude = [{textual_hdrs_exclude_str}], allow_empty = True),
-    typemaps = glob([
-        "typemap",
-        "**/typemap",
-    ], allow_empty = True),
-    deps = [{native_deps_str}],
-)
-
-perl_library(
-    name = "{dist_name}",
-    srcs = glob([{srcs_str}], allow_empty = True),
-    data = [
-        ":{dist_name}_xs",
-    ] + glob([{data_str}], exclude = [{exclude_str}], allow_empty = True),
-    includes = [{includes_str}],{exec_compat_str}{tags_str}{target_compat_str}
-    deps = [{deps_str}],
-)
-""".format(
-            dist_name = ctx.attr.dist_name,
-            output_loc = output_loc,
-            srcs_str = srcs_str,
-            srcs_exclude_str = srcs_exclude_str,
-            cc_srcs_exclude_str = cc_srcs_exclude_str,
-            textual_hdrs_str = textual_hdrs_str,
-            textual_hdrs_exclude_str = textual_hdrs_exclude_str,
-            data_str = data_str,
-            exclude_str = exclude_str,
-            defines_str = defines_str,
-            native_deps_str = native_deps_str,
-            deps_str = deps_str,
-            exec_compat_str = exec_compat_str,
-            exec_reqs_str = exec_reqs_str,
-            includes_str = includes_str,
-            tags_str = tags_str,
-            target_compat_str = target_compat_str,
-        )
-
-    # Discover test files in t/
-    t_entries = _find_t_files(ctx.path("t"))
-    repo_root_len = len(str(ctx.path(""))) + 1
-    test_lines = []
-    test_target_names = []
-
-    test_deps_items = ['"%s"' % d for d in ctx.attr.test_deps]
-    if test_deps_items:
-        test_deps_str = ",\n        " + ",\n        ".join(test_deps_items)
-    else:
-        test_deps_str = ""
-
-    cur_test_tags = list(ctx.attr.test_tags)
-    if cur_test_tags:
-        test_tags_str = "\n    tags = [" + ", ".join(['"%s"' % t for t in cur_test_tags]) + "],"
-    else:
-        test_tags_str = ""
-
-    if t_entries:
-        test_runner_content = """#!/usr/bin/env perl
-use strict;
-use warnings;
-use File::Basename qw(dirname);
-use File::Spec;
-use Cwd qw(abs_path);
-
-my $test_file = shift @ARGV;
-die "No test file specified to _test_runner.pl\\n" unless defined $test_file;
-
-my $dist_dir = dirname(abs_path(__FILE__));
-chdir($dist_dir) or die "Failed to chdir to $dist_dir: $!\\n";
-
-my $target_test = File::Spec->file_name_is_absolute($test_file)
-    ? $test_file
-    : File::Spec->catfile($dist_dir, $test_file);
-
-die "Test file '$target_test' does not exist in $dist_dir\\n" unless -f $target_test;
-
-$ENV{PERL5LIB} = join(':', @INC);
-$ENV{PERL_USE_UNSAFE_INC} = 1;
-
-my @extra_flags;
-if (open my $fh, '<', $target_test) {
-    my $first_line = <$fh>;
-    close $fh;
-    if (defined $first_line && $first_line =~ m{^#!\\s*\\S*perl\\S*(?:\\s+(.*?))?\\s*$}) {
-        my $opts = $1 // '';
-        $opts =~ s/#.*//;
-        for my $flag (split ' ', $opts) {
-            if ($flag =~ /^-[a-zA-Z0-9]+$/) {
-                push @extra_flags, $flag;
-            }
-        }
-    }
-}
-
-my @inc_flags = map { "-I$_" } @INC;
-exec $^X, @extra_flags, @inc_flags, $target_test, @ARGV
-    or die "Failed to exec $^X: $!\\n";
-"""
-        ctx.file("_test_runner.pl", test_runner_content)
-
-        test_lines.append("""load("@rules_perl//perl:defs.bzl", "perl_test")
-
-perl_library(
-    name = "{dist_name}_test_lib",
-    srcs = glob(["t/**/*.pm", "t/*.pm"], allow_empty = True),
-    data = glob(
-        ["**/*"],
-        exclude = [
-            "BUILD.bazel",
-            "REPO.bazel",
-            "_test_runner.pl",
-            "_xs/**",
-            "t/**/*.pm",
-            "t/*.pm",
-        ],
-        allow_empty = True,
-    ),
-    includes = [".", "lib", "t", "t/lib"],
-    deps = [":{dist_name}"{test_deps_str}],
-)
-""".format(
-            dist_name = ctx.attr.dist_name,
-            test_deps_str = test_deps_str,
-        ))
-
-        any_manual = False
-        all_manual = len(t_entries) > 0
-        for entry in t_entries:
-            rel_path = str(entry)[repo_root_len:]
-            t_name = _sanitize_target_name(rel_path.replace("/", "_").replace(".t", ""))
-            test_target = "test_%s" % t_name
-            test_target_names.append(":" + test_target)
-
-            is_manual = False
-            if "manual" in ctx.attr.test_tags:
-                is_manual = True
-            elif ctx.attr.manual_tests:
-                file_basename = rel_path.split("/")[-1]
-                for m in ctx.attr.manual_tests:
-                    m_clean = m.strip()
-                    if m_clean.startswith(":"):
-                        m_clean = m_clean[1:]
-                    if m_clean.endswith("*"):
-                        prefix = m_clean[:-1]
-                        if (rel_path.startswith(prefix) or
-                            test_target.startswith(prefix) or
-                            t_name.startswith(prefix)):
-                            is_manual = True
-                            break
-                    elif (m_clean == test_target or
-                          m_clean == rel_path or
-                          m_clean == file_basename or
-                          m_clean == t_name or
-                          m_clean == t_name.replace("t_", "", 1)):
-                        is_manual = True
-                        break
-
-            if is_manual:
-                any_manual = True
-                cur_target_tags = list(ctx.attr.test_tags)
-                if "manual" not in cur_target_tags:
-                    cur_target_tags.append("manual")
-                target_tags_str = "\n    tags = [" + ", ".join(['"%s"' % t for t in cur_target_tags]) + "],"
-            else:
-                all_manual = False
-                if ctx.attr.test_tags:
-                    target_tags_str = "\n    tags = [" + ", ".join(['"%s"' % t for t in ctx.attr.test_tags]) + "],"
-                else:
-                    target_tags_str = ""
-
-            test_lines.append("""perl_test(
-    name = "{test_target}",
-    size = "small",
-    srcs = ["_test_runner.pl"],
-    args = ["{rel_path}"],
-    data = glob(
-        ["**/*"],
-        exclude = [
-            "BUILD.bazel",
-            "REPO.bazel",
-            "_test_runner.pl",
-            "_xs/**",
-        ],
-        allow_empty = True,
-    ),{target_tags_str}
-    deps = [":{dist_name}_test_lib"],
-)
-""".format(
-                test_target = test_target,
-                rel_path = rel_path,
-                dist_name = ctx.attr.dist_name,
-                target_tags_str = target_tags_str,
-            ))
-
-        test_suite_tests = ",\n        ".join(['"%s"' % t for t in test_target_names])
-        if all_manual:
-            suite_tags_str = '\n    tags = ["manual"],'
-        elif any_manual:
-            suite_tags = [t for t in ctx.attr.test_tags if t != "manual"] + ["-manual"]
-            suite_tags_str = "\n    tags = [" + ", ".join(['"%s"' % t for t in suite_tags]) + "],"
-        elif ctx.attr.test_tags:
-            suite_tags_str = "\n    tags = [" + ", ".join(['"%s"' % t for t in ctx.attr.test_tags]) + "],"
-        else:
-            suite_tags_str = ""
-
-        test_lines.append("""test_suite(
-    name = "test",{suite_tags_str}
-    tests = [
-        {tests_str},
-    ],
-)
-""".format(
-            tests_str = test_suite_tests,
-            suite_tags_str = suite_tags_str,
-        ))
-    else:
-        # Fallback smoke test if no t/ directory exists
-        primary_mod = get_primary_module(ctx.attr.dist_name, ctx.attr.provides)
-        test_script_content = """#!/usr/bin/env perl
-use strict;
-use warnings;
-use Test::More;
-
-BEGIN {{
-    Test::More::use_ok('{primary_mod}') or Test::More::BAIL_OUT("Failed to load {primary_mod}");
-}}
-
-Test::More::done_testing();
-""".format(primary_mod = primary_mod)
-        ctx.file("test_smoke.t", test_script_content)
-        test_lines.append("""load("@rules_perl//perl:defs.bzl", "perl_test")
-
-perl_test(
-    name = "test_smoke",
-    size = "small",
-    srcs = ["test_smoke.t"],{test_tags_str}
-    deps = [":{dist_name}"{test_deps_str}],
-)
-
-test_suite(
-    name = "test",{test_tags_str}
-    tests = [":test_smoke"],
-)
-""".format(
-            dist_name = ctx.attr.dist_name,
-            test_deps_str = test_deps_str,
-            test_tags_str = test_tags_str,
-        ))
-
-    build_content += "\n".join(test_lines)
-
-    ctx.file("BUILD.bazel", build_content)
-
-cpan_dist_repo = repository_rule(
-    doc = "Hermetically fetches and builds a single CPAN distribution.",
-    implementation = _cpan_dist_repo_impl,
-    attrs = {
-        "build_file": attr.label(
-            doc = "Optional overlay BUILD file replacing generated build rules.",
-            default = None,
-        ),
-        "defines": attr.string_list(
-            doc = "Optional preprocessor defines for XS compilation.",
-            default = [],
-        ),
-        "dist_name": attr.string(
-            doc = "Original CPAN distribution name.",
-            mandatory = True,
-        ),
-        "exec_compatible_with": attr.string_list(
-            doc = "Optional execution platform constraints.",
-            default = [],
-        ),
-        "execution_requirements": attr.string_dict(
-            doc = "Optional execution requirements for actions (e.g. {'no-remote': '1'}).",
-            default = {},
-        ),
-        "includes": attr.string_list(
-            doc = "Optional extra include paths for Perl modules.",
-            default = [],
-        ),
-        "is_xs": attr.bool(
-            doc = "Whether this distribution is an XS C extension.",
-            default = False,
-        ),
-        "manual_tests": attr.string_list(
-            doc = "Optional list of specific test target names, relative file paths, or patterns to mark as manual in this distribution.",
-            default = [],
-        ),
-        "native_deps": attr.string_list(
-            doc = "Optional native C/C++ library dependencies (e.g. @zlib).",
-            default = [],
-        ),
-        "output_loc": attr.string(
-            doc = "Optional DynaLoader/XSLoader auto/ directory location for an XS module.",
-            default = "",
-        ),
-        "patch_args": attr.string_list(
-            default = ["-p0"],
-        ),
-        "patch_cmds": attr.string_list(
-            doc = "Optional bash patch commands to run after extraction.",
-            default = [],
-        ),
-        "patch_cmds_win": attr.string_list(
-            doc = "Optional Windows batch commands to run after extraction.",
-            default = [],
-        ),
-        "patch_tool": attr.string(
-            default = "",
-        ),
-        "patches": attr.label_list(
-            doc = "Optional patch files to apply.",
-            default = [],
-        ),
-        "provides": attr.string_list(
-            doc = "Perl packages provided by this distribution.",
-            default = [],
-        ),
-        "runtime_deps": attr.string_list(
-            doc = "Labels of runtime CPAN distribution dependencies.",
-            default = [],
-        ),
-        "sha256": attr.string(
-            doc = "SHA256 checksum of the upstream tarball.",
-            mandatory = True,
-        ),
-        "strip_prefix": attr.string(
-            doc = "Directory prefix to strip from archive.",
-            default = "",
-        ),
-        "test_deps": attr.string_list(
-            doc = "Labels of test dependencies for running t/*.t tests.",
-            default = [],
-        ),
-        "test_tags": attr.string_list(
-            doc = "Optional tags to add to generated test targets.",
-            default = [],
-        ),
-        "extra_tags": attr.string_list(
-            doc = "Optional target tags to add to generated BUILD targets.",
-            default = [],
-        ),
-        "target_compatible_with": attr.string_list(
-            doc = "Optional target platform constraints (e.g. ['@platforms//os:linux']).",
-            default = [],
-        ),
-        "url": attr.string(
-            doc = "Upstream archive download URL.",
-            mandatory = True,
-        ),
-        "version": attr.string(
-            doc = "Distribution release version.",
-            default = "",
-        ),
-    },
-)
-
 def _cpan_hub_repo_impl(ctx):
     direct_set = {d: True for d in ctx.attr.direct_deps}
     has_direct = len(direct_set) > 0 or len(ctx.attr.injected_targets) > 0
 
     root_lines = [
         "# Auto-generated hub repository for rules_cpan (%s)" % ctx.attr.hub_name,
-        "load(\"@rules_perl//perl:defs.bzl\", \"perl_test\")",
         "",
         "package(default_visibility = [\"//visibility:public\"])",
         "",
@@ -866,22 +76,22 @@ def _cpan_hub_repo_impl(ctx):
     all_dists_keys = dict(ctx.attr.all_dists)
     for dist_name in ctx.attr.injected_targets:
         if dist_name not in all_dists_keys:
-            all_dists_keys[dist_name] = ""
+            all_dists_keys[dist_name] = dist_to_bcr_module(dist_name)
 
     declared_tests = []
-    manual_test_targets = {}
-    manual_tests_set = {d: True for d in ctx.attr.manual_tests}
 
-    for dist_name, repo_name in all_dists_keys.items():
+    for dist_name, bcr_mod in all_dists_keys.items():
+        if not bcr_mod:
+            bcr_mod = dist_to_bcr_module(dist_name)
+
         is_direct = dist_name in direct_set or dist_name in ctx.attr.injected_targets
         vis = "[\"//visibility:public\"]" if (is_direct or not has_direct) else "[\"//visibility:private\"]"
 
         if dist_name in ctx.attr.injected_targets:
             actual = ctx.attr.injected_targets[dist_name]
         else:
-            actual = "@{repo_name}//:{dist_name}".format(
-                repo_name = repo_name,
-                dist_name = dist_name,
+            actual = "@@{bcr_mod}+//:{bcr_mod}".format(
+                bcr_mod = bcr_mod,
             )
 
         # Root alias: @cpan//:Algorithm-Diff
@@ -896,73 +106,44 @@ def _cpan_hub_repo_impl(ctx):
             vis = vis,
         ))
 
-        # Test generation for requested modules
-        should_test = is_direct if has_direct else True
-        if should_test:
-            cur_tags = list(ctx.attr.test_tags.get(dist_name, []))
-            if dist_name in manual_tests_set:
-                if "manual" not in cur_tags:
-                    cur_tags.append("manual")
-
-            if "manual" in cur_tags:
-                manual_test_targets[":{dist_name}_test".format(dist_name = dist_name)] = True
-                tags_str = "\n    tags = [\n        " + ",\n        ".join(['"%s"' % t for t in cur_tags]) + ",\n    ],"
-            else:
-                suite_tags = [t for t in cur_tags if t != "manual"]
-                if "-manual" not in suite_tags:
-                    suite_tags.append("-manual")
-                tags_str = "\n    tags = [\n        " + ",\n        ".join(['"%s"' % t for t in suite_tags]) + ",\n    ],"
-
-            test_target_name = "{dist_name}_test".format(dist_name = dist_name)
-            if dist_name in ctx.attr.injected_targets or repo_name == "":
-                primary_mod = ctx.attr.test_modules.get(dist_name, "")
-                if not primary_mod:
-                    provides = ctx.attr.dist_provides.get(dist_name, [])
-                    primary_mod = get_primary_module(dist_name, provides)
-                test_file_name = "test_%s.t" % sanitize_repo_name(dist_name)
-                test_content = """#!/usr/bin/env perl
-use strict;
-use warnings;
-use Test::More;
-
-BEGIN {{
-    Test::More::use_ok('{primary_mod}') or Test::More::BAIL_OUT("Failed to load {primary_mod}");
-}}
-
-Test::More::done_testing();
-""".format(primary_mod = primary_mod)
-                ctx.file(test_file_name, test_content)
-
-                root_lines.append("""perl_test(
-    name = "{test_target_name}",
-    size = "small",
-    srcs = ["{test_file_name}"],{tags_str}
-    deps = [":{dist_name}"],
-)
-""".format(
-                    test_target_name = test_target_name,
-                    dist_name = dist_name,
-                    test_file_name = test_file_name,
-                    tags_str = tags_str,
-                ))
-            else:
-                root_lines.append("""test_suite(
-    name = "{test_target_name}",{tags_str}
-    tests = ["@{repo_name}//:test"],
-)
-""".format(
-                    test_target_name = test_target_name,
-                    repo_name = repo_name,
-                    tags_str = tags_str,
-                ))
-
+        # Root alias for BCR module name if distinct: @cpan//:perl-algorithm-diff
+        if bcr_mod != dist_name:
             root_lines.append("""alias(
+    name = "{bcr_mod}",
+    actual = "{actual}",
+    visibility = {vis},
+)
+""".format(
+                bcr_mod = bcr_mod,
+                actual = actual,
+                vis = vis,
+            ))
+
+        sub_test_alias = ""
+
+        # Test targets for injected dependencies
+        if dist_name in ctx.attr.injected_targets:
+            test_target_name = "{dist_name}_test".format(dist_name = dist_name)
+            if "//" in actual:
+                inj_repo = actual.split("//")[0]
+                upstream_test = "{inj_repo}//:test".format(inj_repo = inj_repo)
+            else:
+                upstream_test = "{actual}_test".format(actual = actual)
+
+            root_lines.append("""test_suite(
+    name = "{test_target_name}",
+    tags = ["-manual"],
+    tests = ["{upstream_test}"],
+)
+
+alias(
     name = "test_{dist_name}",
     actual = ":{test_target_name}",
 )
 """.format(
-                dist_name = dist_name,
                 test_target_name = test_target_name,
+                upstream_test = upstream_test,
+                dist_name = dist_name,
             ))
             declared_tests.append(":{test_target_name}".format(test_target_name = test_target_name))
 
@@ -972,8 +153,6 @@ alias(
     actual = "//:{test_target_name}",
 )
 """.format(test_target_name = test_target_name)
-        else:
-            sub_test_alias = ""
 
         # Subpackage alias: @cpan//Algorithm-Diff (resolves to @cpan//Algorithm-Diff:Algorithm-Diff)
         sub_content = """# Auto-generated package alias for {dist_name}
@@ -991,13 +170,34 @@ alias(
         )
         ctx.file(dist_name + "/BUILD.bazel", sub_content)
 
-    tests_items = ['"%s"' % t for t in declared_tests if t not in manual_test_targets]
+        if bcr_mod != dist_name:
+            ctx.file(bcr_mod + "/BUILD.bazel", """# Auto-generated package alias for {bcr_mod}
+package(default_visibility = ["//visibility:public"])
+
+alias(
+    name = "{bcr_mod}",
+    actual = "{actual}",
+    visibility = {vis},
+){sub_test_alias}""".format(
+                bcr_mod = bcr_mod,
+                actual = actual,
+                vis = vis,
+                sub_test_alias = sub_test_alias,
+            ))
+
+    tests_items = ['"%s"' % t for t in sorted(declared_tests)]
     if tests_items:
         tests_str = "\n        " + ",\n        ".join(tests_items) + ",\n    "
     else:
         tests_str = ""
 
     root_lines.append("""test_suite(
+    name = "all_tests",
+    tags = ["-manual"],
+    tests = [{tests_str}],
+)
+
+test_suite(
     name = "test-rules-cpan-modules",
     tags = ["-manual"],
     tests = [{tests_str}],
@@ -1011,16 +211,12 @@ cpan_hub_repo = repository_rule(
     implementation = _cpan_hub_repo_impl,
     attrs = {
         "all_dists": attr.string_dict(
-            doc = "Mapping from distribution name to internal repo name.",
-            mandatory = True,
+            doc = "Mapping from distribution name to BCR module name.",
+            default = {},
         ),
         "direct_deps": attr.string_list(
             doc = "Direct top-level dependencies exposed with public visibility.",
             default = [],
-        ),
-        "dist_provides": attr.string_list_dict(
-            doc = "Provided packages per distribution.",
-            default = {},
         ),
         "hub_name": attr.string(
             doc = "Configured name of this hub repository.",
@@ -1028,18 +224,6 @@ cpan_hub_repo = repository_rule(
         ),
         "injected_targets": attr.string_dict(
             doc = "Mapping from distribution name to injected Bazel target label.",
-            default = {},
-        ),
-        "manual_tests": attr.string_list(
-            doc = "List of distribution names whose tests should be marked as manual.",
-            default = [],
-        ),
-        "test_modules": attr.string_dict(
-            doc = "Optional mapping from distribution name to custom Perl package to test.",
-            default = {},
-        ),
-        "test_tags": attr.string_list_dict(
-            doc = "Optional test tags per distribution.",
             default = {},
         ),
     },
