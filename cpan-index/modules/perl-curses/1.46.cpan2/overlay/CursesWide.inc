@@ -288,5 +288,3 @@ c_sv2wstr(SV *     const sv,
     }
     return ws;
 }
-
-
