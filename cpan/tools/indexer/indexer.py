@@ -126,6 +126,21 @@ class IndexManager:
         self.index_dir = index_dir.resolve()
         self.modules_dir = self.index_dir / "modules"
         self.heuristics = HeuristicsEngine()
+        self.lock_distributions: Dict[str, Dict[str, Any]] = {}
+        self.lock_distributions_by_mod: Dict[str, Dict[str, Any]] = {}
+
+    def load_lockfile(self, lockfile_path: Path) -> None:
+        """Loads distribution dependency information from a cpan.lock.json file."""
+        if not lockfile_path.exists():
+            return
+        try:
+            data = json.loads(lockfile_path.read_text(encoding="utf-8"))
+            dists = data.get("distributions", {})
+            for d_name, d_info in dists.items():
+                self.lock_distributions[d_name] = d_info
+                self.lock_distributions_by_mod[sanitize_module_name(d_name)] = d_info
+        except Exception as e:
+            logger.warning("Failed loading lockfile %s: %s", lockfile_path, e)
 
     def get_module_dir(self, module_name: str) -> Path:
         return self.modules_dir / module_name
@@ -418,16 +433,16 @@ class IndexManager:
 
         # Preserve and update MODULE.bazel from source version if available
         dest_mb = dest_dir / "MODULE.bazel"
-        if existing_mb_text:
-            updated_mb = re.sub(
-                r'version\s*=\s*"[^"]+"',
-                f'version = "{target_version}"',
-                existing_mb_text,
-                count=1,
-            )
-            dest_mb.write_text(deduplicate_module_bazel_deps(updated_mb), encoding="utf-8")
+        new_mb_text = dest_mb.read_text(encoding="utf-8") if dest_mb.exists() else ""
+        if existing_mb_text and new_mb_text:
+            existing_deps = [
+                line for line in existing_mb_text.splitlines()
+                if line.strip().startswith("bazel_dep(")
+            ]
+            merged = new_mb_text.rstrip() + "\n" + "\n".join(existing_deps) + "\n"
+            dest_mb.write_text(deduplicate_module_bazel_deps(merged), encoding="utf-8")
         elif dest_mb.exists():
-            dest_mb.write_text(deduplicate_module_bazel_deps(dest_mb.read_text(encoding="utf-8")), encoding="utf-8")
+            dest_mb.write_text(deduplicate_module_bazel_deps(new_mb_text), encoding="utf-8")
 
         return target_version
 
@@ -455,6 +470,30 @@ class IndexManager:
         dest_overlay = dest_dir / "overlay"
         dest_overlay.mkdir(parents=True, exist_ok=True)
 
+        if test_deps is None or runtime_deps is None or provides is None:
+            if not self.lock_distributions:
+                ws_root = self.index_dir.parent
+                for candidate in [
+                    ws_root / "e2e" / "deps_txt" / "cpan.lock.json",
+                    ws_root / "e2e" / "pakket" / "cpan.lock.json",
+                    ws_root / "tests" / "cpan.lock.json",
+                    ws_root / "cpan.lock.json",
+                ]:
+                    if candidate.exists():
+                        self.load_lockfile(candidate)
+
+            lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
+            if lock_info:
+                deps = lock_info.get("dependencies", {})
+                if test_deps is None:
+                    test_deps = deps.get("test", [])
+                if runtime_deps is None:
+                    runtime_deps = deps.get("runtime", [])
+                if provides is None:
+                    provides = lock_info.get("provides", [])
+                if is_xs_hint is None:
+                    is_xs_hint = bool(lock_info.get("is_xs", False))
+
         generator_metadata = self.get_generator_metadata(module_name)
 
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -475,21 +514,24 @@ class IndexManager:
                             break
 
                 if not found_in_cache:
-                    tar_file = tmp_path / "dist.tar.gz"
-                    logger.info("Downloading %s from %s ...", dist_name, archive_url)
-                    req = urllib.request.Request(
-                        archive_url,
-                        headers={"User-Agent": "rules_cpan/indexer"},
-                    )
-                    with urllib.request.urlopen(req, timeout=60) as resp:
-                        content = resp.read()
-                        tar_file.write_bytes(content)
-                        default_cache = Path.home() / ".cache" / "rules_cpan" / "dist"
-                        if default_cache.exists() and filename:
-                            try:
-                                (default_cache / filename).write_bytes(content)
-                            except Exception:
-                                pass
+                    if archive_url.startswith("file://"):
+                        tar_file = Path(archive_url.removeprefix("file://"))
+                    else:
+                        tar_file = tmp_path / "dist.tar.gz"
+                        logger.info("Downloading %s from %s ...", dist_name, archive_url)
+                        req = urllib.request.Request(
+                            archive_url,
+                            headers={"User-Agent": "rules_cpan/indexer"},
+                        )
+                        with urllib.request.urlopen(req, timeout=60) as resp:
+                            content = resp.read()
+                            tar_file.write_bytes(content)
+                            default_cache = Path.home() / ".cache" / "rules_cpan" / "dist"
+                            if default_cache.exists() and filename:
+                                try:
+                                    (default_cache / filename).write_bytes(content)
+                                except Exception:
+                                    pass
 
             if not archive_sha256 and tar_file and tar_file.exists():
                 import hashlib
@@ -585,6 +627,7 @@ class IndexManager:
                 module_name=module_name,
                 version=target_version,
                 native_deps=inspection.native_deps,
+                test_deps=test_deps if inspection.t_files else None,
                 modules_dir=self.modules_dir,
             )
             (dest_dir / "MODULE.bazel").write_text(module_bazel_content, encoding="utf-8")
@@ -755,11 +798,24 @@ class CPANIndexer:
         index_dir: Path,
         workspace_dir: Path,
         bump_build_id: bool = False,
+        lockfile_path: Optional[Path] = None,
     ) -> None:
         self.workspace_dir = workspace_dir
         self.index_dir = index_dir
         self.index_mgr = IndexManager(index_dir)
         self.bump_build_id = bump_build_id
+
+        if lockfile_path and lockfile_path.exists():
+            self.index_mgr.load_lockfile(lockfile_path)
+
+        for candidate in [
+            workspace_dir / "e2e" / "deps_txt" / "cpan.lock.json",
+            workspace_dir / "e2e" / "pakket" / "cpan.lock.json",
+            workspace_dir / "tests" / "cpan.lock.json",
+            workspace_dir / "cpan.lock.json",
+        ]:
+            if candidate.exists() and candidate != lockfile_path:
+                self.index_mgr.load_lockfile(candidate)
 
     def index_distribution(
         self,
@@ -819,6 +875,7 @@ class CPANIndexer:
         if not lockfile_path.exists():
             raise FileNotFoundError(f"Lockfile {lockfile_path} does not exist")
 
+        self.index_mgr.load_lockfile(lockfile_path)
         data = json.loads(lockfile_path.read_text(encoding="utf-8"))
         dists = data.get("distributions", {})
         root_deps = data.get("root_dependencies", [])
@@ -947,10 +1004,15 @@ def main(argv: Optional[List[str]] = None) -> int:
         logger.error("cpan-index directory not found at %s", index_dir)
         return 1
 
+    lock_path = Path(args.lockfile) if args.lockfile else None
+    if lock_path and not lock_path.is_absolute():
+        lock_path = workspace_dir / lock_path
+
     indexer = CPANIndexer(
         index_dir=index_dir,
         workspace_dir=workspace_dir,
         bump_build_id=args.bump_build_id,
+        lockfile_path=lock_path,
     )
 
     if args.regenerate:

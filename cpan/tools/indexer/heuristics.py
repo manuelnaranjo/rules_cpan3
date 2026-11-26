@@ -629,7 +629,22 @@ class HeuristicsEngine:
         """Generates BUILD.bazel content for overlay/BUILD.bazel."""
         dist = inspection.dist_name
         valid_runtime_deps = [d for d in (runtime_deps or []) if d.startswith(("@", ":"))]
-        valid_test_deps = [d for d in (test_deps or []) if d.startswith(("@", ":"))]
+        valid_test_deps: List[str] = []
+        for d in (test_deps or []):
+            if not d:
+                continue
+            if d.startswith(("@", ":")):
+                label = d
+                if label in (f":{dist}", f":{module_name}", f"@{module_name}"):
+                    continue
+            else:
+                s_name = sanitize_module_name(d)
+                if s_name == module_name:
+                    continue
+                label = f"@{s_name}"
+            if label not in valid_test_deps:
+                valid_test_deps.append(label)
+        valid_test_deps.sort()
 
         cpan_deps_str = ""
         if valid_runtime_deps:
@@ -951,6 +966,7 @@ alias(
         version: str,
         native_deps: Optional[List[str]] = None,
         cpan_deps: Optional[List[Tuple[str, str]]] = None,
+        test_deps: Optional[List[str]] = None,
         modules_dir: Optional[Path] = None,
     ) -> str:
         """Generates MODULE.bazel for the BCR module."""
@@ -994,5 +1010,16 @@ alias(
                 if cpan_mod not in seen_deps:
                     seen_deps.add(cpan_mod)
                     lines.append(f'bazel_dep(name = "{cpan_mod}", version = "{cpan_ver}")')
+
+        if test_deps:
+            for td in sorted(test_deps):
+                if not td:
+                    continue
+                dep_raw = td.lstrip("@").split("//")[0].split(":")[0]
+                dep_mod = sanitize_module_name(dep_raw)
+                if dep_mod != module_name and dep_mod not in seen_deps:
+                    seen_deps.add(dep_mod)
+                    dep_ver = self._resolve_dep_version(dep_mod, cpan_deps, modules_dir)
+                    lines.append(f'bazel_dep(name = "{dep_mod}", version = "{dep_ver}")')
 
         return "\n".join(lines) + "\n"

@@ -466,6 +466,95 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
         source_json = json.loads((dest_dir / "source.json").read_text(encoding="utf-8"))
         self.assertEqual(source_json["strip_prefix"], "Grpc-XS-0.38")
 
+    def test_generate_build_bazel_includes_cpan_test_deps(self) -> None:
+        """Verifies that generate_build_bazel adds CPAN lockfile test dependencies to test_lib."""
+        inspection = DistributionInspection(
+            dist_name="My-Module",
+            is_xs=False,
+            output_loc="auto/My/Module/Module",
+            t_files=["t/01_test.t"],
+        )
+        engine = HeuristicsEngine()
+        build_bazel = engine.generate_build_bazel(
+            inspection=inspection,
+            module_name="perl-my-module",
+            test_deps=["Test-Exception", "Test-Deep", "My-Module", ":extra_lib", "@custom//:dep"],
+        )
+        self.assertIn('name = "My-Module_test_lib"', build_bazel)
+        self.assertIn('":extra_lib"', build_bazel)
+        self.assertIn('"@custom//:dep"', build_bazel)
+        self.assertIn('"@perl-test-deep"', build_bazel)
+        self.assertIn('"@perl-test-exception"', build_bazel)
+        self.assertNotIn('"@perl-my-module"', build_bazel)
+
+    def test_create_and_regenerate_port_with_lockfile_test_deps(self) -> None:
+        """Verifies that create_new_port and regenerate_port wire test dependencies from lockfile."""
+        import io
+        import tarfile
+
+        tar_buf = io.BytesIO()
+        with tarfile.open(fileobj=tar_buf, mode="w:gz") as tar:
+            ti = tarfile.TarInfo("Sample-Dist-1.00/lib/Sample/Dist.pm")
+            content = b"package Sample::Dist;\nour $VERSION = '1.00';\n1;\n"
+            ti.size = len(content)
+            tar.addfile(ti, io.BytesIO(content))
+
+            ti_t = tarfile.TarInfo("Sample-Dist-1.00/t/test.t")
+            content_t = b"use Test::More;\nplan tests => 1;\nok(1);\n"
+            ti_t.size = len(content_t)
+            tar.addfile(ti_t, io.BytesIO(content_t))
+
+        tar_bytes = tar_buf.getvalue()
+        tar_path = self.root_path / "sample-dist-1.00.tar.gz"
+        tar_path.write_bytes(tar_bytes)
+
+        # Create metadata for dependency
+        dep_dir = self.index_dir / "modules" / "perl-test-exception"
+        dep_dir.mkdir(parents=True, exist_ok=True)
+        (dep_dir / "metadata.json").write_text(json.dumps({"versions": ["0.43.cpan1"]}), encoding="utf-8")
+
+        lockfile = self.root_path / "cpan.lock.json"
+        lockfile.write_text(
+            json.dumps({
+                "distributions": {
+                    "Sample-Dist": {
+                        "dependencies": {
+                            "runtime": [],
+                            "test": ["Test-Exception"],
+                        },
+                        "version": "1.00",
+                        "url": tar_path.as_uri(),
+                    }
+                }
+            }),
+            encoding="utf-8",
+        )
+
+        manager = IndexManager(index_dir=self.index_dir)
+        manager.load_lockfile(lockfile)
+        dest_dir = manager.create_new_port(
+            dist_name="Sample-Dist",
+            upstream_version="1.00",
+            archive_url=tar_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar_path,
+            target_version="1.00.cpan1",
+        )
+
+        build_text = (dest_dir / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn('"@perl-test-exception"', build_text)
+        mb_text = (dest_dir / "MODULE.bazel").read_text(encoding="utf-8")
+        self.assertIn('bazel_dep(name = "perl-test-exception", version = "0.43.cpan1")', mb_text)
+
+        # Now test regenerate_port in place
+        (dest_dir.parent / "metadata.json").write_text(json.dumps({"versions": ["1.00.cpan1"]}), encoding="utf-8")
+        regen_ver = manager.regenerate_port("perl-sample-dist", bump_build_id=False)
+        self.assertEqual(regen_ver, "1.00.cpan1")
+        build_text_regen = (dest_dir / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn('"@perl-test-exception"', build_text_regen)
+        mb_text_regen = (dest_dir / "MODULE.bazel").read_text(encoding="utf-8")
+        self.assertIn('bazel_dep(name = "perl-test-exception", version = "0.43.cpan1")', mb_text_regen)
+
 
 if __name__ == "__main__":
     unittest.main()
