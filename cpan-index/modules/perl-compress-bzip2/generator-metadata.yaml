@@ -1,0 +1,5 @@
+cc_srcs_exclude:
+- show_bzversion.c
+- bzlib-src/**
+native_deps:
+- '@bzip2//:bz2'

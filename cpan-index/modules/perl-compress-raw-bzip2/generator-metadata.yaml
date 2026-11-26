@@ -1,3 +1,5 @@
+cc_srcs_exclude:
+- bzip2-src/**
 defines:
 - BZ_NO_STDIO
 native_deps:

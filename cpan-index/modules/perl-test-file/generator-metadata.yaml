@@ -1,2 +1,5 @@
 patch_cmds:
 - rm -f File.xs
+manual_tests:
+- '*'
+is_xs: false

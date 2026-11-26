@@ -1,2 +1,2 @@
 manual_tests:
-- t/fd_precharge.t
+- '*'

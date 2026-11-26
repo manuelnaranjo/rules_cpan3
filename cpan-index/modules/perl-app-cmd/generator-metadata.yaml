@@ -1,4 +1,2 @@
 manual_tests:
-- t/basic.t
-- t/simple-version.t
-- t/tester-exit.t
+- '*'

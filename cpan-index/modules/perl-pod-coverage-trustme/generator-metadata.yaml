@@ -1,2 +1,2 @@
 manual_tests:
-- t/pod-coverage.t
+- '*'

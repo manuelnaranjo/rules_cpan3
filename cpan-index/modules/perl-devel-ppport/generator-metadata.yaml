@@ -1,2 +1,3 @@
+is_xs: false
 manual_tests:
 - '*'

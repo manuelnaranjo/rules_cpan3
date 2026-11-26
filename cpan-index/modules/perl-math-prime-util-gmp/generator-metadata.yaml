@@ -1,2 +1,5 @@
 native_deps:
 - '@gmp//:gmp'
+cc_srcs_exclude:
+- 'examples/**'
+- 'xt/**'
