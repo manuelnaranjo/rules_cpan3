@@ -3,3 +3,5 @@ patch_cmds:
 patch_cmds_win:
 - powershell -Command "New-Item -ItemType Directory -Force lib/Config/General; Copy-Item
   General/*.pm lib/Config/General/"
+manual_tests:
+- '*'

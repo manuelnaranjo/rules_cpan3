@@ -1,2 +1,2 @@
 manual_tests:
-- t/Test2/behavior/Taint.t
+- '*'
