@@ -24,6 +24,8 @@ from cpan.tools.indexer.indexer import (
     CPANIndexer,
     IndexManager,
     IndexResolution,
+    parse_args,
+    regenerate_modules,
     sync_workspace_module_bazel,
 )
 
@@ -661,6 +663,80 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
         self.assertIn('"LibYAML/lib/**/*.pod"', build_bazel)
         self.assertIn('"LibYAML/lib/**/*"', build_bazel)
         self.assertIn('"LibYAML/lib"', build_bazel)
+
+    def test_parse_args_jobs_and_all(self) -> None:
+        """Verifies that parse_args defaults --jobs to all CPU cores and accepts custom values."""
+        import os
+        args_default = parse_args([])
+        self.assertEqual(args_default.jobs, os.cpu_count() or 1)
+        self.assertFalse(args_default.all)
+
+        args_custom = parse_args(["-j", "4", "--all"])
+        self.assertEqual(args_custom.jobs, 4)
+        self.assertTrue(args_custom.all)
+
+        args_long = parse_args(["--jobs", "8"])
+        self.assertEqual(args_long.jobs, 8)
+
+    def test_regenerate_modules_parallel_and_resilience(self) -> None:
+        """Verifies parallel regeneration of modules across worker threads."""
+        import io
+        import tarfile
+
+        # Create two sample tarballs
+        tar1_buf = io.BytesIO()
+        with tarfile.open(fileobj=tar1_buf, mode="w:gz") as tar:
+            ti = tarfile.TarInfo("Sample-One-1.00/lib/Sample/One.pm")
+            content = b"package Sample::One;\nour $VERSION = '1.00';\n1;\n"
+            ti.size = len(content)
+            tar.addfile(ti, io.BytesIO(content))
+        tar1_path = self.root_path / "sample-one-1.00.tar.gz"
+        tar1_path.write_bytes(tar1_buf.getvalue())
+
+        tar2_buf = io.BytesIO()
+        with tarfile.open(fileobj=tar2_buf, mode="w:gz") as tar:
+            ti = tarfile.TarInfo("Sample-Two-2.00/lib/Sample/Two.pm")
+            content = b"package Sample::Two;\nour $VERSION = '2.00';\n1;\n"
+            ti.size = len(content)
+            tar.addfile(ti, io.BytesIO(content))
+        tar2_path = self.root_path / "sample-two-2.00.tar.gz"
+        tar2_path.write_bytes(tar2_buf.getvalue())
+
+        manager = IndexManager(index_dir=self.index_dir)
+        d1 = manager.create_new_port(
+            dist_name="Sample-One",
+            upstream_version="1.00",
+            archive_url=tar1_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar1_path,
+            target_version="1.00.cpan1",
+        )
+        (d1.parent / "metadata.json").write_text(json.dumps({"versions": ["1.00.cpan1"]}), encoding="utf-8")
+
+        d2 = manager.create_new_port(
+            dist_name="Sample-Two",
+            upstream_version="2.00",
+            archive_url=tar2_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar2_path,
+            target_version="2.00.cpan1",
+        )
+        (d2.parent / "metadata.json").write_text(json.dumps({"versions": ["2.00.cpan1"]}), encoding="utf-8")
+
+        indexer = CPANIndexer(
+            index_dir=self.index_dir,
+            workspace_dir=self.root_path,
+        )
+
+        # Regenerate in parallel with jobs=2 including an invalid module to verify resilience
+        count = indexer.regenerate_modules(
+            modules=["perl-sample-one", "non-existent-module", "perl-sample-two"],
+            bump_build_id=False,
+            jobs=2,
+        )
+        self.assertEqual(count, 2)
+        self.assertTrue((d1 / "overlay" / "BUILD.bazel").exists())
+        self.assertTrue((d2 / "overlay" / "BUILD.bazel").exists())
 
 
 if __name__ == "__main__":
