@@ -55,7 +55,19 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":SOAP-WSDL"],
+    deps = [
+        ":SOAP-WSDL",
+        "@perl-cgi",
+        "@perl-io-stringy",
+        "@perl-moose",
+        "@perl-test-class",
+        "@perl-test-cpan-meta",
+        "@perl-test-mockobject",
+        "@perl-test-pod-content",
+        "@perl-test-warn",
+        "@perl-test-xml",
+        "@perl-xml-libxml",
+    ],
 )
 
 perl_test(

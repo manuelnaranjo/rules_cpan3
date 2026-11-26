@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Types-Path-Class"],
+    deps = [
+        ":MooseX-Types-Path-Class",
+        "@perl-moose",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooX-Thunking"],
+    deps = [
+        ":MooX-Thunking",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Specio"],
+    deps = [
+        ":Specio",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

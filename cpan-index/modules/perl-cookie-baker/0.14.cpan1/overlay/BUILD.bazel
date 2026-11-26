@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Cookie-Baker"],
+    deps = [
+        ":Cookie-Baker",
+        "@perl-test-time",
+    ],
 )
 
 perl_test(

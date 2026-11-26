@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":match-simple"],
+    deps = [
+        ":match-simple",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

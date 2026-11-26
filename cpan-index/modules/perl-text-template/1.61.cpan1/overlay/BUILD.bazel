@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Text-Template"],
+    deps = [
+        ":Text-Template",
+        "@perl-test-more-utf8",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

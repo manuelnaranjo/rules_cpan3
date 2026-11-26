@@ -107,7 +107,21 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MaxMind-DB-Writer"],
+    deps = [
+        ":MaxMind-DB-Writer",
+        "@perl-data-printer",
+        "@perl-devel-refcount",
+        "@perl-json",
+        "@perl-list-allutils",
+        "@perl-maxmind-db-common",
+        "@perl-maxmind-db-reader",
+        "@perl-net-works",
+        "@perl-test-bits",
+        "@perl-test-fatal",
+        "@perl-test-hexdifferences",
+        "@perl-test-requires",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

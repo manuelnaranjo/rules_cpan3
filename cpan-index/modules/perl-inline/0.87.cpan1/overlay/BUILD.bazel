@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Inline"],
+    deps = [
+        ":Inline",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

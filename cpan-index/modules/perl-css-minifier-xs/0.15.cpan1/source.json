@@ -3,6 +3,6 @@
     "integrity": "sha256-iprSIxYtpGceP4EsSlXyl3OUg70xar2kH0wn6K3XhVM=",
     "strip_prefix": "CSS-Minifier-XS-0.15",
     "overlay": {
-        "BUILD.bazel": "sha256-TcuSKxOydzNw/MOBgwuajh+k3fTxBS0lGXdJSXYM5rY="
+        "BUILD.bazel": "sha256-OT9INC621BCWWH51RdBSHECeg8tef/sN2rs5wNC9wr0="
     }
 }

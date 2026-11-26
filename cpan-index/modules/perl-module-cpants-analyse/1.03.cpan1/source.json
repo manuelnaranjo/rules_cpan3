@@ -3,6 +3,6 @@
     "integrity": "sha256-0OqFHALrJwA9gkJUeDdVJTn/YdTwhwKM3q0Advu9Rjo=",
     "strip_prefix": "Module-CPANTS-Analyse-1.03",
     "overlay": {
-        "BUILD.bazel": "sha256-svZGf+vG2hijtL5WVMuP5H2RV34zoc3XLUjGbkmAviM="
+        "BUILD.bazel": "sha256-xRyD1yxhspfM2P6AnkIs66CsnXGu61q1ER/yXuAPiz4="
     }
 }

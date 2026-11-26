@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test2-Plugin-NoWarnings"],
+    deps = [
+        ":Test2-Plugin-NoWarnings",
+        "@perl-ipc-run3",
+        "@perl-module-pluggable",
+    ],
 )
 
 perl_test(

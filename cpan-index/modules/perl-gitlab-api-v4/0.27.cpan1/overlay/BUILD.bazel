@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":GitLab-API-v4"],
+    deps = [
+        ":GitLab-API-v4",
+        "@perl-log-any-adapter-tap",
+    ],
 )
 
 perl_test(

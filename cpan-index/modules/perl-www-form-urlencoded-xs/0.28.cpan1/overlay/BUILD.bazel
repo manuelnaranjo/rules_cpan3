@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":WWW-Form-UrlEncoded-XS"],
+    deps = [
+        ":WWW-Form-UrlEncoded-XS",
+        "@perl-json",
+    ],
 )
 
 perl_test(

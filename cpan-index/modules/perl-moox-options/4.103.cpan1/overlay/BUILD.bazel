@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooX-Options"],
+    deps = [
+        ":MooX-Options",
+        "@perl-test-trap",
+    ],
 )
 
 perl_test(

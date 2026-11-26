@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Object-Pluggable"],
+    deps = [
+        ":MooseX-Object-Pluggable",
+        "@perl-moose",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

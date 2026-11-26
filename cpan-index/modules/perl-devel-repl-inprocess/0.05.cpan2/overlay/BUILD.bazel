@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Devel-REPL-InProcess"],
+    deps = [
+        ":Devel-REPL-InProcess",
+        "@perl-test-differences",
+    ],
 )
 
 perl_test(

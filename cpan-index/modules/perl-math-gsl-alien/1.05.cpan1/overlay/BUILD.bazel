@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Math-GSL-Alien"],
+    deps = [
+        ":Math-GSL-Alien",
+        "@perl-alien-build",
+    ],
 )
 
 perl_test(

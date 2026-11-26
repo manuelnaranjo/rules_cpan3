@@ -55,7 +55,18 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":JSON-Schema-Modern"],
+    deps = [
+        ":JSON-Schema-Modern",
+        "@perl-cpan-meta-check",
+        "@perl-test-deep",
+        "@perl-test-deep-unorderedpairs",
+        "@perl-test-file-sharedir",
+        "@perl-test-json-schema-acceptance",
+        "@perl-test-memory-cycle",
+        "@perl-test-needs",
+        "@perl-test-warnings",
+        "@perl-test-without-module",
+    ],
 )
 
 perl_test(

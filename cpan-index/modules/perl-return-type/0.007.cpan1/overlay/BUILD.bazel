@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Return-Type"],
+    deps = [
+        ":Return-Type",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

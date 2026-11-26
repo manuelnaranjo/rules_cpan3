@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Class-Unload"],
+    deps = [
+        ":Class-Unload",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

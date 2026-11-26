@@ -3,6 +3,6 @@
     "integrity": "sha256-nPU4+qEsVP+0qRQ5lF5IjxhW9iuJrFByqSIRngGIDaY=",
     "strip_prefix": "Tree-Simple-VisitorFactory-0.16",
     "overlay": {
-        "BUILD.bazel": "sha256-e882W6Rj7vemhvznJZTlreEDT+cb0/eXFuKV8QEARtM="
+        "BUILD.bazel": "sha256-qaFqV5HN+atYsGdXxBamr9YCNgl1Vxd0VqbIXbiKUFc="
     }
 }

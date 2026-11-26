@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Perl-PrereqScanner-NotQuiteLite"],
+    deps = [
+        ":Perl-PrereqScanner-NotQuiteLite",
+        "@perl-test-failwarnings",
+        "@perl-test-useallmodules",
+    ],
 )
 
 perl_test(

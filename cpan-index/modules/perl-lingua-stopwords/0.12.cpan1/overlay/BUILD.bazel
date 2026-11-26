@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Lingua-StopWords"],
+    deps = [
+        ":Lingua-StopWords",
+        "@perl-test-more-utf8",
+    ],
 )
 
 perl_test(

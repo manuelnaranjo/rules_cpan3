@@ -55,7 +55,17 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Dancer"],
+    deps = [
+        ":Dancer",
+        "@perl-data-dump",
+        "@perl-devel-hide",
+        "@perl-http-cookiejar",
+        "@perl-http-message",
+        "@perl-json",
+        "@perl-plack",
+        "@perl-test-longstring",
+        "@perl-test-nowarnings",
+    ],
 )
 
 perl_test(

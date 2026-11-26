@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Devel-Optic"],
+    deps = [
+        ":Devel-Optic",
+        "@perl-test2-plugin-nowarnings",
+    ],
 )
 
 perl_test(

@@ -3,6 +3,6 @@
     "integrity": "sha256-8SIJqh1pfqDC2twyF5CkikZ0JAdE8VzBtQG++awussk=",
     "strip_prefix": "File-Hotfolder-0.06",
     "overlay": {
-        "BUILD.bazel": "sha256-rf4YEkXzX9pA4u2+zim1Ido/sARi3yz13qIiGxmyDm0="
+        "BUILD.bazel": "sha256-g5RjZYgHCcgkYI+7qzh8ygdEr6u6CKPeOpso0qau8eM="
     }
 }

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Carp-Always"],
+    deps = [
+        ":Carp-Always",
+        "@perl-test-base",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Path-Router"],
+    deps = [
+        ":Path-Router",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

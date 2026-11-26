@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Selenium-Remote-Driver"],
+    deps = [
+        ":Selenium-Remote-Driver",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+        "@perl-test-lwp-useragent",
+        "@perl-test-mockmodule",
+    ],
 )
 
 perl_test(

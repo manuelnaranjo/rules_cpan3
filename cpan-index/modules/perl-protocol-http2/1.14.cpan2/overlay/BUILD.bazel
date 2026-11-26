@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Protocol-HTTP2"],
+    deps = [
+        ":Protocol-HTTP2",
+        "@perl-anyevent",
+        "@perl-net-ssleay",
+        "@perl-test-leaktrace",
+        "@perl-test-tcp",
+    ],
 )
 
 perl_test(

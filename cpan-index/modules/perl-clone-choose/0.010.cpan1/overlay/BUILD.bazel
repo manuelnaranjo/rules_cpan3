@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Clone-Choose"],
+    deps = [
+        ":Clone-Choose",
+        "@perl-test-without-module",
+    ],
 )
 
 perl_test(

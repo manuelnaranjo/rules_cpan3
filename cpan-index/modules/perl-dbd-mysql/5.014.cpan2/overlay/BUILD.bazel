@@ -103,7 +103,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DBD-mysql"],
+    deps = [
+        ":DBD-mysql",
+        "@perl-test-deep",
+    ],
 )
 
 perl_test(

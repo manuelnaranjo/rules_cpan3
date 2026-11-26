@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Dist-CheckConflicts"],
+    deps = [
+        ":Dist-CheckConflicts",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Module-CPANfile"],
+    deps = [
+        ":Module-CPANfile",
+        "@perl-file-pushd",
+    ],
 )
 
 perl_test(

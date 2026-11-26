@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":SQL-Statement"],
+    deps = [
+        ":SQL-Statement",
+        "@perl-math-base-convert",
+        "@perl-test-deep",
+        "@perl-text-soundex",
+    ],
 )
 
 perl_test(

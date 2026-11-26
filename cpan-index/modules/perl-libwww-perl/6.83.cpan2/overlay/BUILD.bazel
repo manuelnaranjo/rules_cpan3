@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":libwww-perl"],
+    deps = [
+        ":libwww-perl",
+        "@perl-http-cookiejar",
+        "@perl-http-daemon",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+        "@perl-test-requiresinternet",
+    ],
 )
 
 perl_test(

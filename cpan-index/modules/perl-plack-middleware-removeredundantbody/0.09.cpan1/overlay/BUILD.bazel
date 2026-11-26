@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Plack-Middleware-RemoveRedundantBody"],
+    deps = [
+        ":Plack-Middleware-RemoveRedundantBody",
+        "@perl-http-message",
+        "@perl-plack",
+    ],
 )
 
 perl_test(

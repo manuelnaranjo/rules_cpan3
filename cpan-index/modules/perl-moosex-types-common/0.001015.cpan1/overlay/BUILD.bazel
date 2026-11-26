@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Types-Common"],
+    deps = [
+        ":MooseX-Types-Common",
+        "@perl-test-deep",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Timer"],
+    deps = [
+        ":Test-Timer",
+        "@perl-pod-coverage-trustpod",
+        "@perl-test-fatal",
+        "@perl-test-kwalitee",
+        "@perl-test-pod",
+        "@perl-test-pod-coverage",
+    ],
 )
 
 perl_test(

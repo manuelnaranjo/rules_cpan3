@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":GraphQL"],
+    deps = [
+        ":GraphQL",
+        "@perl-test-deep",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

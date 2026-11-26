@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":LWP-Protocol-connect"],
+    deps = [
+        ":LWP-Protocol-connect",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

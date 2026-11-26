@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Types-URI"],
+    deps = [
+        ":MooseX-Types-URI",
+        "@perl-moose",
+        "@perl-test-needs",
+        "@perl-test-without-module",
+    ],
 )
 
 perl_test(

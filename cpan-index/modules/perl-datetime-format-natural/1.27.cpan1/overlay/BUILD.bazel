@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DateTime-Format-Natural"],
+    deps = [
+        ":DateTime-Format-Natural",
+        "@perl-module-util",
+        "@perl-test-mocktime-hires",
+    ],
 )
 
 perl_test(

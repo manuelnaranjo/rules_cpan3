@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Perl-Critic-Policy-Moo-ProhibitMakeImmutable"],
+    deps = [
+        ":Perl-Critic-Policy-Moo-ProhibitMakeImmutable",
+        "@perl-perl-critic",
+    ],
 )
 
 perl_test(

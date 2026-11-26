@@ -3,6 +3,6 @@
     "integrity": "sha256-Ui/qJmyLMabD3n475dtxWXIDhxSgI5v7vh/MrU0GXP4=",
     "strip_prefix": "Net-Amazon-Signature-V4-0.22",
     "overlay": {
-        "BUILD.bazel": "sha256-qr+9QR+yLRi7Tysk+ycdcJCUBZrKDS2bgrtplJYasA4="
+        "BUILD.bazel": "sha256-9fzzyI9jjMM1UQVnCzTxVoG5ERDM5OgLjtb1ihkJgLg="
     }
 }

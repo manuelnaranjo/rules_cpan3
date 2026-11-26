@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Perl-Critic-StricterSubs"],
+    deps = [
+        ":Perl-Critic-StricterSubs",
+        "@perl-perl-critic",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

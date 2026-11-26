@@ -3,6 +3,6 @@
     "integrity": "sha256-qm+4f+0Z1UnymxNd55l+6SsSJ9Ymyw6JBgCpHK3DBTo=",
     "strip_prefix": "MaxMind-DB-Reader-XS-1.000009",
     "overlay": {
-        "BUILD.bazel": "sha256-pEzyThyX39d3kao8iTIrb4WBReNqSKyn2QcGs61wg5Q="
+        "BUILD.bazel": "sha256-AqVfjrXQZzqWFp7F46VAj57uIvTaclYHDF4g0sgqyB8="
     }
 }

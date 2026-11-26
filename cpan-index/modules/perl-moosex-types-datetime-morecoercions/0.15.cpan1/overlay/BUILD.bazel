@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Types-DateTime-MoreCoercions"],
+    deps = [
+        ":MooseX-Types-DateTime-MoreCoercions",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

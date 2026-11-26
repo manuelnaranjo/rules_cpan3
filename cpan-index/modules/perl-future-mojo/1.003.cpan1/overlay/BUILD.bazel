@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Future-Mojo"],
+    deps = [
+        ":Future-Mojo",
+        "@perl-test-identity",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

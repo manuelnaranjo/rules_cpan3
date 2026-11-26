@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Authen-SCRAM"],
+    deps = [
+        ":Authen-SCRAM",
+        "@perl-test-failwarnings",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

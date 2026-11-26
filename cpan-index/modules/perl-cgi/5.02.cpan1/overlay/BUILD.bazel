@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":CGI"],
+    deps = [
+        ":CGI",
+        "@perl-test-nowarnings",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

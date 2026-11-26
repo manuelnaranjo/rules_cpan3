@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-Visitor"],
+    deps = [
+        ":Data-Visitor",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

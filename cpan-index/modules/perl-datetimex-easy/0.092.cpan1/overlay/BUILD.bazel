@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DateTimeX-Easy"],
+    deps = [
+        ":DateTimeX-Easy",
+        "@perl-test-most",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Neo4j-Driver"],
+    deps = [
+        ":Neo4j-Driver",
+        "@perl-neo4j-types",
+        "@perl-test-exception",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

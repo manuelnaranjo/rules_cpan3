@@ -108,7 +108,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Thrift-XS"],
+    deps = [
+        ":Thrift-XS",
+        "@perl-test-binarydata",
+        "@perl-test-perl-critic",
+    ],
 )
 
 perl_test(

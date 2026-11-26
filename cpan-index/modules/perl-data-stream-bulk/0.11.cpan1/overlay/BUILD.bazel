@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-Stream-Bulk"],
+    deps = [
+        ":Data-Stream-Bulk",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-Section-Simple"],
+    deps = [
+        ":Data-Section-Simple",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

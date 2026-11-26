@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Net-Hadoop-WebHDFS-LWP"],
+    deps = [
+        ":Net-Hadoop-WebHDFS-LWP",
+        "@perl-http-message",
+        "@perl-libwww-perl",
+        "@perl-net-hadoop-webhdfs",
+        "@perl-ref-util",
+        "@perl-test-deep",
+    ],
 )
 
 perl_test(

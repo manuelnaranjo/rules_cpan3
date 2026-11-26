@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":LWP-Protocol-https"],
+    deps = [
+        ":LWP-Protocol-https",
+        "@perl-io-socket-ssl",
+        "@perl-libwww-perl",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

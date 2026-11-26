@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-UUID-MT"],
+    deps = [
+        ":Data-UUID-MT",
+        "@perl-list-allutils",
+    ],
 )
 
 perl_test(

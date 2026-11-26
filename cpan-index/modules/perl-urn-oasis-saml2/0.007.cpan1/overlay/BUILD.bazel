@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":URN-OASIS-SAML2"],
+    deps = [
+        ":URN-OASIS-SAML2",
+        "@perl-test-deep",
+    ],
 )
 
 perl_test(

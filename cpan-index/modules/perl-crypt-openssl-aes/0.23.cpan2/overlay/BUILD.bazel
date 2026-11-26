@@ -105,7 +105,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-OpenSSL-AES"],
+    deps = [
+        ":Crypt-OpenSSL-AES",
+        "@perl-crypt-openssl-guess",
+        "@perl-crypt-urandom",
+    ],
 )
 
 perl_test(

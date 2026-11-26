@@ -55,7 +55,17 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Getopt"],
+    deps = [
+        ":MooseX-Getopt",
+        "@perl-module-runtime",
+        "@perl-moose",
+        "@perl-path-tiny",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+        "@perl-test-trap",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

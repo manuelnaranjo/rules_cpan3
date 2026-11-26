@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Time-Duration-Parse"],
+    deps = [
+        ":Time-Duration-Parse",
+        "@perl-time-duration",
+    ],
 )
 
 perl_test(

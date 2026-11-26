@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Hijk"],
+    deps = [
+        ":Hijk",
+        "@perl-http-server-simple-psgi",
+        "@perl-net-server",
+        "@perl-plack",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

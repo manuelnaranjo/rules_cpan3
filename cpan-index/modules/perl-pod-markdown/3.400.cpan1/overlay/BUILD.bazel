@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Pod-Markdown"],
+    deps = [
+        ":Pod-Markdown",
+        "@perl-test-differences",
+    ],
 )
 
 perl_test(

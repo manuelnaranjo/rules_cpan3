@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Directory-Scanner"],
+    deps = [
+        ":Directory-Scanner",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Eval-Closure"],
+    deps = [
+        ":Eval-Closure",
+        "@perl-test-fatal",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

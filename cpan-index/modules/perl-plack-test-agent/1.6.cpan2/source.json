@@ -3,6 +3,6 @@
     "integrity": "sha256-QsqXD8wnYmA4COyGikN7eGLHjwmD7Oai/duZD7rp4IA=",
     "strip_prefix": "Plack-Test-Agent-1.6",
     "overlay": {
-        "BUILD.bazel": "sha256-SMR408r8SRDmHVMkKDL7gIbyMp3Jjbn2L9XPF66LBTI="
+        "BUILD.bazel": "sha256-tWy5PmWrkycfKQ1Ieonm8lvXx01jNEZXWI2wpNsdyQc="
     }
 }

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Plack"],
+    deps = [
+        ":Plack",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

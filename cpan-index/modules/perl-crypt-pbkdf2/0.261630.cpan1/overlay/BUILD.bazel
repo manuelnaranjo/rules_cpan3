@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-PBKDF2"],
+    deps = [
+        ":Crypt-PBKDF2",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

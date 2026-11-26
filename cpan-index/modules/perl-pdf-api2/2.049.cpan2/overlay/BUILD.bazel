@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":PDF-API2"],
+    deps = [
+        ":PDF-API2",
+        "@perl-test-exception",
+        "@perl-test-memory-cycle",
+    ],
 )
 
 perl_test(

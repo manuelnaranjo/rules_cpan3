@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":PerlIO-utf8_strict"],
+    deps = [
+        ":PerlIO-utf8_strict",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

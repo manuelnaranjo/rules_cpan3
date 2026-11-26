@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Google-ProtocolBuffers-Dynamic"],
+    deps = [
+        ":Google-ProtocolBuffers-Dynamic",
+        "@perl-test-differences",
+        "@perl-test-exception",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

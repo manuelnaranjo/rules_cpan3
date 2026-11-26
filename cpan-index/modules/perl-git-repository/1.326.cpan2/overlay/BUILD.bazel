@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Git-Repository"],
+    deps = [
+        ":Git-Repository",
+        "@perl-test-requires-git",
+    ],
 )
 
 perl_test(

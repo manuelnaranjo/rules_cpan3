@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Package-Stash"],
+    deps = [
+        ":Package-Stash",
+        "@perl-cpan-meta-check",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":File-Copy-Recursive-Reduced"],
+    deps = [
+        ":File-Copy-Recursive-Reduced",
+        "@perl-capture-tiny",
+        "@perl-path-tiny",
+    ],
 )
 
 perl_test(

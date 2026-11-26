@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-NonMoose"],
+    deps = [
+        ":MooseX-NonMoose",
+        "@perl-moose",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

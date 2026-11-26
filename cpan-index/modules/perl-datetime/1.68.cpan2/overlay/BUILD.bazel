@@ -101,7 +101,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DateTime"],
+    deps = [
+        ":DateTime",
+        "@perl-cpan-meta-check",
+        "@perl-test-fatal",
+        "@perl-test-warnings",
+        "@perl-test-without-module",
+    ],
 )
 
 perl_test(

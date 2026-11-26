@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Unicode-UTF8"],
+    deps = [
+        ":Unicode-UTF8",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

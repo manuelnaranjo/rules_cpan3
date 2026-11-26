@@ -55,7 +55,15 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":XML-Sig"],
+    deps = [
+        ":XML-Sig",
+        "@perl-crypt-openssl-guess",
+        "@perl-file-which",
+        "@perl-import-into",
+        "@perl-path-tiny",
+        "@perl-test-exception",
+        "@perl-test-lib",
+    ],
 )
 
 perl_test(

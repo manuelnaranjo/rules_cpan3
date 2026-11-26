@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Fake-HTTPD"],
+    deps = [
+        ":Test-Fake-HTTPD",
+        "@perl-libwww-perl",
+        "@perl-test-exception",
+        "@perl-test-tcp",
+        "@perl-test-useallmodules",
+    ],
 )
 
 perl_test(

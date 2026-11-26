@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Authorize-Rule"],
+    deps = [
+        ":Authorize-Rule",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

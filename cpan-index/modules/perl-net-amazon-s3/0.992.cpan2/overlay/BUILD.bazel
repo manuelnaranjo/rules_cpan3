@@ -55,7 +55,15 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Net-Amazon-S3"],
+    deps = [
+        ":Net-Amazon-S3",
+        "@perl-http-message",
+        "@perl-libwww-perl",
+        "@perl-test-deep",
+        "@perl-test-exception",
+        "@perl-test-mocktime",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

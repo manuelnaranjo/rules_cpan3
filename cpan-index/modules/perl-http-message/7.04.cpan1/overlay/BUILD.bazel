@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTTP-Message"],
+    deps = [
+        ":HTTP-Message",
+        "@perl-test-needs",
+        "@perl-try-tiny",
+        "@perl-uri",
+    ],
 )
 
 perl_test(

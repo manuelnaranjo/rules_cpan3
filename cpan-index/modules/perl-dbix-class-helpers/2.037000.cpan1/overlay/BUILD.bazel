@@ -55,7 +55,15 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DBIx-Class-Helpers"],
+    deps = [
+        ":DBIx-Class-Helpers",
+        "@perl-aliased",
+        "@perl-datetime-format-sqlite",
+        "@perl-dbd-sqlite",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+        "@perl-test-roo",
+    ],
 )
 
 perl_test(

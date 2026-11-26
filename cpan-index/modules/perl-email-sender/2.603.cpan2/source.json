@@ -3,6 +3,6 @@
     "integrity": "sha256-nW8qShs3TAKFNZmWZz+Rn5rslRnYjFUQBnn4i56+AHU=",
     "strip_prefix": "Email-Sender-2.603",
     "overlay": {
-        "BUILD.bazel": "sha256-ukGacAJxdyi6QENIFAwTmuJFaBHnoXSKnHN5RBv703w="
+        "BUILD.bazel": "sha256-lEg6U67W1l0lqn6BiOGf/PcycYJ8P8wtj+hzCLTtNOA="
     }
 }

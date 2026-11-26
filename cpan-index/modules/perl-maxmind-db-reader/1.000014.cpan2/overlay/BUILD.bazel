@@ -55,7 +55,15 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MaxMind-DB-Reader"],
+    deps = [
+        ":MaxMind-DB-Reader",
+        "@perl-maxmind-db-common",
+        "@perl-path-class",
+        "@perl-test-bits",
+        "@perl-test-fatal",
+        "@perl-test-number-delta",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

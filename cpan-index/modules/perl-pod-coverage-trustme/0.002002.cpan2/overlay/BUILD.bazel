@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Pod-Coverage-TrustMe"],
+    deps = [
+        ":Pod-Coverage-TrustMe",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

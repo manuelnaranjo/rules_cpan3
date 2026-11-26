@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Log-Dispatch"],
+    deps = [
+        ":Log-Dispatch",
+        "@perl-ipc-run3",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

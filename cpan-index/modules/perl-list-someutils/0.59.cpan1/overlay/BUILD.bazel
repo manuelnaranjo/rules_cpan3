@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":List-SomeUtils"],
+    deps = [
+        ":List-SomeUtils",
+        "@perl-test-leaktrace",
+    ],
 )
 
 perl_test(

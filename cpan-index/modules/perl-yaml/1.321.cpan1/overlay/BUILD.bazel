@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":YAML"],
+    deps = [
+        ":YAML",
+        "@perl-test-deep",
+        "@perl-test-yaml",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-ClassAttribute"],
+    deps = [
+        ":MooseX-ClassAttribute",
+        "@perl-test-fatal",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

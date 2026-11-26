@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-MessagePack"],
+    deps = [
+        ":Data-MessagePack",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

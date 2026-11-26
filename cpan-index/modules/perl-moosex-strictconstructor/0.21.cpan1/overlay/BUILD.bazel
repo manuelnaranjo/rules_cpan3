@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-StrictConstructor"],
+    deps = [
+        ":MooseX-StrictConstructor",
+        "@perl-moose",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+    ],
 )
 
 perl_test(

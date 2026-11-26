@@ -3,6 +3,6 @@
     "integrity": "sha256-hUmgn9yXmBKYvY86onVSlKyqeTnKJ504QL68JZpGhE4=",
     "strip_prefix": "CLI-Osprey-0.09",
     "overlay": {
-        "BUILD.bazel": "sha256-zAn/qH89EX/n0BgP8yFOnXs56KMOozIKwxBypR3EB2M="
+        "BUILD.bazel": "sha256-9lmsPNS5FcaOt3t3mTJ+Dt4/Kt1ulUrOuVy4SeM/Pz4="
     }
 }

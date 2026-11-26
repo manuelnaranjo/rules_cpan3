@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Class-C3-Componentised"],
+    deps = [
+        ":Class-C3-Componentised",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

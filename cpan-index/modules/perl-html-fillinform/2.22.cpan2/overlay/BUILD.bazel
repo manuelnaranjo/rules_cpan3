@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTML-FillInForm"],
+    deps = [
+        ":HTML-FillInForm",
+        "@perl-cgi",
+        "@perl-html-parser",
+    ],
 )
 
 perl_test(

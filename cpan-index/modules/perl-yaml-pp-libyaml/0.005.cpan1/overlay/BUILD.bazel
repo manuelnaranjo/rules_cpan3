@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":YAML-PP-LibYAML"],
+    deps = [
+        ":YAML-PP-LibYAML",
+        "@perl-yaml-pp",
+    ],
 )
 
 perl_test(

@@ -3,6 +3,6 @@
     "integrity": "sha256-pT8n6i+6wVakzUmB2O90nBvvNmwpCRNLTTHaIWRLSW4=",
     "strip_prefix": "Protocol-HTTP2-1.14",
     "overlay": {
-        "BUILD.bazel": "sha256-qQmWy4hNH5dvCs24z5S2IpmOHAYzJ5wz95JQ2ne82wk="
+        "BUILD.bazel": "sha256-exDmYjU1yjti1Ga9A06Y+qT44YHYhqg4JTrGfboUiwc="
     }
 }

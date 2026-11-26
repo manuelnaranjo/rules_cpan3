@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-FailWarnings"],
+    deps = [
+        ":Test-FailWarnings",
+        "@perl-capture-tiny",
+    ],
 )
 
 perl_test(

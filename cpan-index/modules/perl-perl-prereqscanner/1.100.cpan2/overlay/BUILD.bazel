@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Perl-PrereqScanner"],
+    deps = [
+        ":Perl-PrereqScanner",
+        "@perl-ppi",
+        "@perl-try-tiny",
+    ],
 )
 
 perl_test(

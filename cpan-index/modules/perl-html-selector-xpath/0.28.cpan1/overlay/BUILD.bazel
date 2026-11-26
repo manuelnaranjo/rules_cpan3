@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTML-Selector-XPath"],
+    deps = [
+        ":HTML-Selector-XPath",
+        "@perl-test-base",
+    ],
 )
 
 perl_test(

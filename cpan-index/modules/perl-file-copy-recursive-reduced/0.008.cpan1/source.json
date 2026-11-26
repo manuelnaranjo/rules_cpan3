@@ -3,6 +3,6 @@
     "integrity": "sha256-RivWa/VedLePKevcliavYi1PARW1GRsDFn6CFk25j1o=",
     "strip_prefix": "File-Copy-Recursive-Reduced-0.008",
     "overlay": {
-        "BUILD.bazel": "sha256-HWkXIARbxzO+Yj0P3g4NhJmIhEHqC9BzagjRAuznk/4="
+        "BUILD.bazel": "sha256-CvdQukKG/0X4PWNGVzOrZ883JDBsiAqdC/WRek0C/d0="
     }
 }

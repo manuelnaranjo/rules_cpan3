@@ -1,7 +1,6 @@
-
 package Term::Size::Perl::Params;
 
-# created Thu Nov 26 00:52:33 2026
+# created Thu Nov 26 06:44:46 2026
 
 use vars qw($VERSION);
 $VERSION = '0.031';

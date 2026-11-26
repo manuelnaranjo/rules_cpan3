@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Strict"],
+    deps = [
+        ":Test-Strict",
+        "@perl-io-stringy",
+    ],
 )
 
 perl_test(

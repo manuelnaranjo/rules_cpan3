@@ -101,7 +101,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Cassandra-Client"],
+    deps = [
+        ":Cassandra-Client",
+        "@perl-anyevent",
+        "@perl-compress-lz4",
+        "@perl-compress-snappy",
+        "@perl-devel-cycle",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

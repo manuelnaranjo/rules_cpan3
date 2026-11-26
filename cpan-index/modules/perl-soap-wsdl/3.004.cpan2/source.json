@@ -3,6 +3,6 @@
     "integrity": "sha256-4sweQurOjbs4TlCdBGRBka/N2N8P7BRDds66+tPxV0Q=",
     "strip_prefix": "SOAP-WSDL-3.004",
     "overlay": {
-        "BUILD.bazel": "sha256-WY33nlqPIKBSePOxhbPcqKzQUAGtF5gwX6WT35C2bp4="
+        "BUILD.bazel": "sha256-RJ9zBYCwAgfDwJMBWQ5kDawzx1tMmvWSb3Dk01C2WRU="
     }
 }

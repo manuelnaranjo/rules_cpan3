@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTTP-Headers-ActionPack"],
+    deps = [
+        ":HTTP-Headers-ActionPack",
+        "@perl-http-message",
+        "@perl-test-fatal",
+        "@perl-test-timer",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

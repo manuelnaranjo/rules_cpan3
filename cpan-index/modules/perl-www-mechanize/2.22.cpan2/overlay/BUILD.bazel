@@ -55,7 +55,18 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":WWW-Mechanize"],
+    deps = [
+        ":WWW-Mechanize",
+        "@perl-http-daemon",
+        "@perl-libwww-perl",
+        "@perl-path-tiny",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+        "@perl-test-memory-cycle",
+        "@perl-test-output",
+        "@perl-test-warnings",
+        "@perl-uri",
+    ],
 )
 
 perl_test(

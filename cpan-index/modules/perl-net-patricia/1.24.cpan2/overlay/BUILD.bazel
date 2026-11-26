@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Net-Patricia"],
+    deps = [
+        ":Net-Patricia",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

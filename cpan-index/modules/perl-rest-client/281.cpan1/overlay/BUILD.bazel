@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":REST-Client"],
+    deps = [
+        ":REST-Client",
+        "@perl-http-server-simple",
+    ],
 )
 
 perl_test(

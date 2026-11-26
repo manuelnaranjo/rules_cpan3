@@ -3,6 +3,6 @@
     "integrity": "sha256-U78AFqpgjLxXc1LaoL/Couc4lBvhz8/XCldApV47Cro=",
     "strip_prefix": "Math-GSL-Alien-1.05",
     "overlay": {
-        "BUILD.bazel": "sha256-DmXla7qtlU9NKJiB2M3Rjgd2ECxSuegDWnKENYXVZUc="
+        "BUILD.bazel": "sha256-Qmpt/arveDoasMSB/7pjoD4tJyTKP5XJi3VwbQBXIyQ="
     }
 }

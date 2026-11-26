@@ -55,7 +55,13 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Unicode-MapUTF8"],
+    deps = [
+        ":Unicode-MapUTF8",
+        "@perl-jcode",
+        "@perl-unicode-map",
+        "@perl-unicode-map8",
+        "@perl-unicode-string",
+    ],
 )
 
 perl_test(

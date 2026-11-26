@@ -3,6 +3,6 @@
     "integrity": "sha256-KcMQB2GpG8COpFOawVujj0r12f9ENgDDFatMAmwYogA=",
     "strip_prefix": "Devel-Cover-Report-SonarGeneric-0.7",
     "overlay": {
-        "BUILD.bazel": "sha256-T7ERzE3Y0JJaBMgIcSJeUuzuKuiz6cIVO9W4zTbI1mA="
+        "BUILD.bazel": "sha256-Yl55a4Incyu5/Vl4tV4xK1vSYjhQ7R72Z9r+7Cx5jE4="
     }
 }

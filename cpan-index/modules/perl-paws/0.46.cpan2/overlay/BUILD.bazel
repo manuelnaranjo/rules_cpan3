@@ -55,7 +55,16 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Paws"],
+    deps = [
+        ":Paws",
+        "@perl-class-unload",
+        "@perl-file-slurper",
+        "@perl-path-class",
+        "@perl-test-exception",
+        "@perl-test-timer",
+        "@perl-test-warnings",
+        "@perl-yaml",
+    ],
 )
 
 perl_test(

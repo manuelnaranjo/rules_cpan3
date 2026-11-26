@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":AnyEvent-Subprocess"],
+    deps = [
+        ":AnyEvent-Subprocess",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

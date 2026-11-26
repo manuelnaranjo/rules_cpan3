@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooseX-Types-Signal"],
+    deps = [
+        ":MooseX-Types-Signal",
+        "@perl-moose",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

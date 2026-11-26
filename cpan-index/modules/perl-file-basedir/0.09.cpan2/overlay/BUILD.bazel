@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":File-BaseDir"],
+    deps = [
+        ":File-BaseDir",
+        "@perl-file-which",
+    ],
 )
 
 perl_test(

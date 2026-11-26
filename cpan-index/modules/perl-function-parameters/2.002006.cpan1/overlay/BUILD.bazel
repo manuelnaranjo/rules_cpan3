@@ -101,7 +101,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Function-Parameters"],
+    deps = [
+        ":Function-Parameters",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

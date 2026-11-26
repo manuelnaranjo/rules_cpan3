@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTML-Scrubber"],
+    deps = [
+        ":HTML-Scrubber",
+        "@perl-test-differences",
+        "@perl-test-memory-cycle",
+    ],
 )
 
 perl_test(

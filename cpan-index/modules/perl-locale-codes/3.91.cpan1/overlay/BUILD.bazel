@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Locale-Codes"],
+    deps = [
+        ":Locale-Codes",
+        "@perl-test-inter",
+    ],
 )
 
 perl_test(

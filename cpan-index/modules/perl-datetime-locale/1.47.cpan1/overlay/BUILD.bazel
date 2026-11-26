@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DateTime-Locale"],
+    deps = [
+        ":DateTime-Locale",
+        "@perl-cpan-meta-check",
+        "@perl-ipc-system-simple",
+        "@perl-path-tiny",
+        "@perl-test-file-sharedir",
+        "@perl-test2-plugin-nowarnings",
+    ],
 )
 
 perl_test(

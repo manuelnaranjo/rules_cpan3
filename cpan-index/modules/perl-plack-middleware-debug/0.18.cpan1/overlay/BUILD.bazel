@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Plack-Middleware-Debug"],
+    deps = [
+        ":Plack-Middleware-Debug",
+        "@perl-plack",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

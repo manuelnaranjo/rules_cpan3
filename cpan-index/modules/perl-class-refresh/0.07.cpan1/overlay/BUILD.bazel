@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Class-Refresh"],
+    deps = [
+        ":Class-Refresh",
+        "@perl-test-fatal",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,16 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-LWP-UserAgent"],
+    deps = [
+        ":Test-LWP-UserAgent",
+        "@perl-http-message",
+        "@perl-path-tiny",
+        "@perl-test-deep",
+        "@perl-test-fatal",
+        "@perl-test-needs",
+        "@perl-test-requiresinternet",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

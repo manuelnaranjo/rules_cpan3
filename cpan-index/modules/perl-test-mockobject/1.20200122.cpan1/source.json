@@ -3,6 +3,6 @@
     "integrity": "sha256-K3+A2of1pv4DYNnuUhBRBTAXRCw6Juhdto36yfgwdiM=",
     "strip_prefix": "Test-MockObject-1.20200122",
     "overlay": {
-        "BUILD.bazel": "sha256-VZnPx7LVaucCJMZxEGBg5LDfBpe++UfusrKvS8cuvtA="
+        "BUILD.bazel": "sha256-cURwtAsm3j+RkKYR/fmO9+sjVH258+KXiv0Q1aEF8oo="
     }
 }

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MooX-Cmd"],
+    deps = [
+        ":MooX-Cmd",
+        "@perl-capture-tiny",
+    ],
 )
 
 perl_test(

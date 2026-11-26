@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTML-Tree"],
+    deps = [
+        ":HTML-Tree",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

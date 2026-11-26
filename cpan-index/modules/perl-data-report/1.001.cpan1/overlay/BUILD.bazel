@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-Report"],
+    deps = [
+        ":Data-Report",
+        "@perl-text-csv",
+    ],
 )
 
 perl_test(

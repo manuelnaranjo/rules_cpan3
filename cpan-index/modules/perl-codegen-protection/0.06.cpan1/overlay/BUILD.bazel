@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":CodeGen-Protection"],
+    deps = [
+        ":CodeGen-Protection",
+        "@perl-test-most",
+    ],
 )
 
 perl_test(

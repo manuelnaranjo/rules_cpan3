@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Authen-SASL"],
+    deps = [
+        ":Authen-SASL",
+        "@perl-pod-coverage-trustpod",
+        "@perl-test-pod",
+        "@perl-test-pod-coverage",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Alien-gmake"],
+    deps = [
+        ":Alien-gmake",
+        "@perl-alien-build",
+    ],
 )
 
 perl_test(

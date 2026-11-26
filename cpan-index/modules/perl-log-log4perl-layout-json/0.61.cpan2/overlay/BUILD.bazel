@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Log-Log4perl-Layout-JSON"],
+    deps = [
+        ":Log-Log4perl-Layout-JSON",
+        "@perl-log-log4perl",
+        "@perl-test-most",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

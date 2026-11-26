@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Devel-CheckLib"],
+    deps = [
+        ":Devel-CheckLib",
+        "@perl-capture-tiny",
+        "@perl-mock-config",
+    ],
 )
 
 perl_test(

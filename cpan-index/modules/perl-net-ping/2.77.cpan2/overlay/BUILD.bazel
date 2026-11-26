@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Net-Ping"],
+    deps = [
+        ":Net-Ping",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

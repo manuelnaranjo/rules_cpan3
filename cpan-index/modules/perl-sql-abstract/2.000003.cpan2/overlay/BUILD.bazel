@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":SQL-Abstract"],
+    deps = [
+        ":SQL-Abstract",
+        "@perl-data-dumper-concise",
+        "@perl-test-exception",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

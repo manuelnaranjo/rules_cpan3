@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":GDGraph"],
+    deps = [
+        ":GDGraph",
+        "@perl-capture-tiny",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

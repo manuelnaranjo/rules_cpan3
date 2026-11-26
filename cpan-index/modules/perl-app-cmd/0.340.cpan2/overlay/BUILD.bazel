@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":App-Cmd"],
+    deps = [
+        ":App-Cmd",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

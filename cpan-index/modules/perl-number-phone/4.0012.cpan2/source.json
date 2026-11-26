@@ -3,6 +3,6 @@
     "integrity": "sha256-fP+q6tgxCphkAN54THU7cc2i12ycmyxrP+57/o7ersU=",
     "strip_prefix": "Number-Phone-4.0012",
     "overlay": {
-        "BUILD.bazel": "sha256-WMylIHO5r8tUL4xX90jAvLdAKYI8qbwLBK9Oa1MGuMA="
+        "BUILD.bazel": "sha256-aw6GgESppwijt7O66UEJ1SdVquVk6rHDatXsnm32ABQ="
     }
 }

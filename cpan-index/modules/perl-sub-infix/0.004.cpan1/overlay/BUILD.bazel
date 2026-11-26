@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Sub-Infix"],
+    deps = [
+        ":Sub-Infix",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

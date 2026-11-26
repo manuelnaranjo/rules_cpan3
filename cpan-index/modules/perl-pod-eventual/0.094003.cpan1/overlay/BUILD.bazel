@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Pod-Eventual"],
+    deps = [
+        ":Pod-Eventual",
+        "@perl-test-deep",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":AnyEvent-Handle-UDP"],
+    deps = [
+        ":AnyEvent-Handle-UDP",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

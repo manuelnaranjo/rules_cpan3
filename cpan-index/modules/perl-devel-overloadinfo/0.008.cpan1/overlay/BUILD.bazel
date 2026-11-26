@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Devel-OverloadInfo"],
+    deps = [
+        ":Devel-OverloadInfo",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

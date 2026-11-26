@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Neo4j-Types"],
+    deps = [
+        ":Neo4j-Types",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

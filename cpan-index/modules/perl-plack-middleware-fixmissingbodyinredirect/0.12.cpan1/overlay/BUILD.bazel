@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Plack-Middleware-FixMissingBodyInRedirect"],
+    deps = [
+        ":Plack-Middleware-FixMissingBodyInRedirect",
+        "@perl-http-message",
+        "@perl-plack",
+    ],
 )
 
 perl_test(

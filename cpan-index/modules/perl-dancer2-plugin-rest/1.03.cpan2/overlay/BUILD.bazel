@@ -55,7 +55,15 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Dancer2-Plugin-REST"],
+    deps = [
+        ":Dancer2-Plugin-REST",
+        "@perl-dancer2",
+        "@perl-http-message",
+        "@perl-json",
+        "@perl-module-runtime",
+        "@perl-plack",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

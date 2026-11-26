@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":ElasticSearch"],
+    deps = [
+        ":ElasticSearch",
+        "@perl-elasticsearch-searchbuilder",
+        "@perl-test-differences",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

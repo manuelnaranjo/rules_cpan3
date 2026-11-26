@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Data-Validate-IP"],
+    deps = [
+        ":Data-Validate-IP",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

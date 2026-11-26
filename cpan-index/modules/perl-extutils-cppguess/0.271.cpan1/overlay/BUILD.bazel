@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":ExtUtils-CppGuess"],
+    deps = [
+        ":ExtUtils-CppGuess",
+        "@perl-capture-tiny",
+        "@perl-module-build",
+    ],
 )
 
 perl_test(

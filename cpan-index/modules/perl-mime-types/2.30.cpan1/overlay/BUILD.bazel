@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MIME-Types"],
+    deps = [
+        ":MIME-Types",
+        "@perl-test-pod",
+    ],
 )
 
 perl_test(

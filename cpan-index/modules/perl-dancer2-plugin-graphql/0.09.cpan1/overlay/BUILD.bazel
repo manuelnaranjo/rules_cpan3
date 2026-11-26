@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Dancer2-Plugin-GraphQL"],
+    deps = [
+        ":Dancer2-Plugin-GraphQL",
+        "@perl-dancer2",
+        "@perl-http-message",
+        "@perl-plack",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Neo4j-Error"],
+    deps = [
+        ":Neo4j-Error",
+        "@perl-test-exception",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

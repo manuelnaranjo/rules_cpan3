@@ -55,7 +55,14 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Apache-LogFormat-Compiler"],
+    deps = [
+        ":Apache-LogFormat-Compiler",
+        "@perl-http-message",
+        "@perl-test-mocktime",
+        "@perl-test-requires",
+        "@perl-try-tiny",
+        "@perl-uri",
+    ],
 )
 
 perl_test(

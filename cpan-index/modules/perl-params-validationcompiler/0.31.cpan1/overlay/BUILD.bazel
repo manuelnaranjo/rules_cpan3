@@ -55,7 +55,12 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Params-ValidationCompiler"],
+    deps = [
+        ":Params-ValidationCompiler",
+        "@perl-specio",
+        "@perl-test-without-module",
+        "@perl-test2-plugin-nowarnings",
+    ],
 )
 
 perl_test(

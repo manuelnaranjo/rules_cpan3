@@ -2,7 +2,7 @@
 
 /* Combined Normal/Wide-Character Functions */
 
-/* April 2014, Edgar Fuﬂ, Mathematisches Institut der Universit‰t Bonn,
+/* April 2014, Edgar Fu√ü, Mathematisches Institut der Universit√§t Bonn,
    <ef@math.uni-bonn.de>
 */
 

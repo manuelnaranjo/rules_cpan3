@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":DBD-Cassandra"],
+    deps = [
+        ":DBD-Cassandra",
+        "@perl-ref-util",
+    ],
 )
 
 perl_test(

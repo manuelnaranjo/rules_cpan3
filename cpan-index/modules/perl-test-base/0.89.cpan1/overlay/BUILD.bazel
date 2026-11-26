@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-Base"],
+    deps = [
+        ":Test-Base",
+        "@perl-algorithm-diff",
+        "@perl-text-diff",
+    ],
 )
 
 perl_test(

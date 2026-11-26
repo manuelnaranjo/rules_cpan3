@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTML-Form"],
+    deps = [
+        ":HTML-Form",
+        "@perl-http-message",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

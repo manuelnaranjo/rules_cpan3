@@ -107,7 +107,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":YAML-LibYAML"],
+    deps = [
+        ":YAML-LibYAML",
+        "@perl-test-warnings",
+    ],
 )
 
 perl_test(

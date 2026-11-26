@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Test-File-ShareDir"],
+    deps = [
+        ":Test-File-ShareDir",
+        "@perl-test-fatal",
+    ],
 )
 
 perl_test(

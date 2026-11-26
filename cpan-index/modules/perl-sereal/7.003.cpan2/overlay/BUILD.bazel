@@ -55,7 +55,15 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Sereal"],
+    deps = [
+        ":Sereal",
+        "@perl-sereal-decoder",
+        "@perl-sereal-encoder",
+        "@perl-test-deep",
+        "@perl-test-differences",
+        "@perl-test-longstring",
+        "@perl-test-warn",
+    ],
 )
 
 perl_test(

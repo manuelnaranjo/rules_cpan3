@@ -55,7 +55,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":SOAP-Lite"],
+    deps = [
+        ":SOAP-Lite",
+        "@perl-test-warn",
+        "@perl-xml-parser-lite",
+    ],
 )
 
 perl_test(

@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Tree-Simple-VisitorFactory"],
+    deps = [
+        ":Tree-Simple-VisitorFactory",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

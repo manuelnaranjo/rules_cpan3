@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Thrift-API-HiveClient2"],
+    deps = [
+        ":Thrift-API-HiveClient2",
+        "@perl-thrift-xs",
+    ],
 )
 
 perl_test(

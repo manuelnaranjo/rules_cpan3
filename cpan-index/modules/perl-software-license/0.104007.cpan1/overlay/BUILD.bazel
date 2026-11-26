@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Software-License"],
+    deps = [
+        ":Software-License",
+        "@perl-try-tiny",
+    ],
 )
 
 perl_test(

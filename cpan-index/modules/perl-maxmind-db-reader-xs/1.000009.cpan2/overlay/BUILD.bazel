@@ -101,7 +101,17 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":MaxMind-DB-Reader-XS"],
+    deps = [
+        ":MaxMind-DB-Reader-XS",
+        "@perl-maxmind-db-common",
+        "@perl-maxmind-db-reader",
+        "@perl-module-implementation",
+        "@perl-net-works",
+        "@perl-path-class",
+        "@perl-test-fatal",
+        "@perl-test-number-delta",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

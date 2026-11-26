@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Class-Accessor-Grouped"],
+    deps = [
+        ":Class-Accessor-Grouped",
+        "@perl-test-exception",
+    ],
 )
 
 perl_test(

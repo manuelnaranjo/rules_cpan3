@@ -3,6 +3,6 @@
     "integrity": "sha256-LtKMvupU3kDQjojrUvTdX8sFBi77ay/rnag3bKQwjmA=",
     "strip_prefix": "WWW-Mechanize-2.22",
     "overlay": {
-        "BUILD.bazel": "sha256-wvB6TCUG31rbTPvVs+k7ahI0XiY86OxT+FXs7pIqbk0="
+        "BUILD.bazel": "sha256-A+EqwRKAXOrNpLWUx5WNkC6jQAc7RnQZ1JqLZZfPpAQ="
     }
 }

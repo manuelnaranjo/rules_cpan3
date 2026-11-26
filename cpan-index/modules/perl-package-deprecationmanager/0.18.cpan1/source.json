@@ -3,6 +3,6 @@
     "integrity": "sha256-to0/DO1Vt2Ff3btgKbifkqNP4N2Mb9a87/wVfVaDT+g=",
     "strip_prefix": "Package-DeprecationManager-0.18",
     "overlay": {
-        "BUILD.bazel": "sha256-x0w2hSxCtsWgyqz5B1ilID+XeCjbP2ubHOuicbk3Dgk="
+        "BUILD.bazel": "sha256-CYFiHZ728+apyFvyEnagOayAVip9M+ln1y9clk9B1kY="
     }
 }

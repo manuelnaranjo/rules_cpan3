@@ -3,6 +3,6 @@
     "integrity": "sha256-c0r/hrb5ytQOHE2oHyj68Y4IAsdqVm2V5WE9QxgYL8E=",
     "strip_prefix": "Data-Validate-IP-0.31",
     "overlay": {
-        "BUILD.bazel": "sha256-cNbHCUbrZ4HuC6wm4v7BcEn2fP0ZCk7cz0CoI4W0Sko="
+        "BUILD.bazel": "sha256-5r1HJAb0398vrOxJ6Sqy64+cIlZPsIZ8NSUqXdri0oo="
     }
 }

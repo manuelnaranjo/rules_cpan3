@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":IO-Prompt-Tiny"],
+    deps = [
+        ":IO-Prompt-Tiny",
+        "@perl-capture-tiny",
+    ],
 )
 
 perl_test(

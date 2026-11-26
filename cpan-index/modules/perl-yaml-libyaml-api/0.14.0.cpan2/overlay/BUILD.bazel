@@ -108,7 +108,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":YAML-LibYAML-API"],
+    deps = [
+        ":YAML-LibYAML-API",
+        "@perl-yaml-pp",
+    ],
 )
 
 perl_test(

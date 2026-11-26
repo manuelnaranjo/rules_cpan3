@@ -3,6 +3,6 @@
     "integrity": "sha256-1aNkhzOYiMPNdY5kgWDuHXDrQVPKy6/1eEbbzvs0Sww=",
     "strip_prefix": "File-Slurper-0.014",
     "overlay": {
-        "BUILD.bazel": "sha256-g/ON1v/VNna9iYK1b7QM5rRt4+NsK257xEHPnkb5fCc="
+        "BUILD.bazel": "sha256-0+QNIhR+2I/R9pO9FxCQIgfBVt8yAhMxIlmpFYOyVH0="
     }
 }

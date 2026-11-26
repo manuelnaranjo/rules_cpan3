@@ -55,7 +55,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Git-Version-Compare"],
+    deps = [
+        ":Git-Version-Compare",
+        "@perl-test-nowarnings",
+    ],
 )
 
 perl_test(

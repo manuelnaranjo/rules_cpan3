@@ -105,7 +105,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":HTML-Parser"],
+    deps = [
+        ":HTML-Parser",
+        "@perl-uri",
+    ],
 )
 
 perl_test(

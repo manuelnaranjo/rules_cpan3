@@ -103,7 +103,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Params-Util"],
+    deps = [
+        ":Params-Util",
+        "@perl-test-leaktrace",
+    ],
 )
 
 perl_test(
