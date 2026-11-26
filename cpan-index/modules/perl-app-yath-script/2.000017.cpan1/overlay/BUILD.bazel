@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-getopt-yath",
+        "@perl-importer",
+    ],
 )
 
 alias(

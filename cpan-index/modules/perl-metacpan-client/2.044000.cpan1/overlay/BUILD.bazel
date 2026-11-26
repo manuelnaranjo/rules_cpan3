@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-io-socket-ssl",
+        "@perl-json-maybexs",
+        "@perl-moo",
+        "@perl-net-ssleay",
+        "@perl-ref-util",
+        "@perl-safe-isa",
+        "@perl-type-tiny",
+        "@perl-uri",
+    ],
 )
 
 alias(

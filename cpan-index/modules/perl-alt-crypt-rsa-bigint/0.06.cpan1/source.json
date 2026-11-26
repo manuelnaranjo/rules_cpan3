@@ -3,6 +3,6 @@
     "integrity": "sha256-dvQ0yrNpmc3wmBE0W7Oda3y+1+CFsCM4Mox/RuCLOPM=",
     "strip_prefix": "Alt-Crypt-RSA-BigInt-0.06",
     "overlay": {
-        "BUILD.bazel": "sha256-GFjbnt0tRSm97smTPxMasTgXTE4Eog0T4fbw2dzw2H0="
+        "BUILD.bazel": "sha256-IwMxhAOBs11KbJYD5/Hbrt7MiQBM+VLYIIGoN09dGqk="
     }
 }

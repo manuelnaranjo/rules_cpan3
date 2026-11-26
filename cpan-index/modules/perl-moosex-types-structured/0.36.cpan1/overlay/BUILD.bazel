@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-devel-partialdump",
+        "@perl-moose",
+        "@perl-moosex-types",
+        "@perl-namespace-clean",
+        "@perl-sub-exporter",
+    ],
 )
 
 alias(

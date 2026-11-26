@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-refresh",
+        "@perl-file-slurp",
+        "@perl-filesys-notify-simple",
+    ],
 )
 
 alias(

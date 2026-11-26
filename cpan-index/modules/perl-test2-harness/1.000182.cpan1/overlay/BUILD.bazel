@@ -26,7 +26,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-app-yath-script",
+        "@perl-data-uuid",
+        "@perl-goto-file",
+        "@perl-importer",
+        "@perl-long-jump",
+        "@perl-scope-guard",
+        "@perl-test2-plugin-memusage",
+        "@perl-test2-plugin-uuid",
+        "@perl-yaml-tiny",
+    ],
 )
 
 alias(

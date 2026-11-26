@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-clone-pp",
+        "@perl-eval-closure",
+        "@perl-moo",
+        "@perl-namespace-clean",
+        "@perl-sub-exporter",
+        "@perl-test-deep",
+        "@perl-try-tiny",
+        "@perl-type-tiny",
+    ],
 )
 
 alias(

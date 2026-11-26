@@ -3,6 +3,6 @@
     "integrity": "sha256-0dEVnip0CVzjFlk2v2Oc92XH+wOWiRhAOHy3ndRkk1c=",
     "strip_prefix": "Neo4j-Error-0.02",
     "overlay": {
-        "BUILD.bazel": "sha256-R1WM0CgAtz0QIBKcetrcalUWDE0xgYT49DvbZB9ktoE="
+        "BUILD.bazel": "sha256-vkBb6Uwn8Nqhegb8c5tG3PHMHk+40FArYiXk4mhVN+k="
     }
 }

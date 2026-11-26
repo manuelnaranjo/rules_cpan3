@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-slurper",
+        "@perl-libwww-perl",
+        "@perl-log-report",
+        "@perl-lwp-protocol-https",
+        "@perl-net-http",
+        "@perl-xml-compile",
+        "@perl-xml-compile-cache",
+        "@perl-xml-compile-tester",
+    ],
 )
 
 alias(

@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-config-ini-reader-ordered",
+        "@perl-devel-lexalias",
+        "@perl-eval-closure",
+        "@perl-file-homedir",
+        "@perl-module-runtime",
+        "@perl-package-stash",
+        "@perl-padwalker",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

@@ -26,7 +26,21 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-accessor",
+        "@perl-class-errorhandler",
+        "@perl-data-dump",
+        "@perl-hash-multivalue",
+        "@perl-io-string",
+        "@perl-json-xs",
+        "@perl-libwww-perl",
+        "@perl-params-validate",
+        "@perl-plack",
+        "@perl-string-random",
+        "@perl-try-tiny",
+        "@perl-uri",
+        "@perl-xml-libxml",
+    ],
 )
 
 alias(

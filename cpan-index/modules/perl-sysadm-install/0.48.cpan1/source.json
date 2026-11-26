@@ -3,6 +3,6 @@
     "integrity": "sha256-/98cQpHa6UZQpyjiUb66jm/NLlxpe83g15G1+5xrjJk=",
     "strip_prefix": "Sysadm-Install-0.48",
     "overlay": {
-        "BUILD.bazel": "sha256-39L4Zcx1x4ZLl1hgi1ymFziwKAa75oh3z1pjIEhL7gs="
+        "BUILD.bazel": "sha256-nkx+9XKVIYZZbfQjGAcNGT1YGJn+35jpgRe9I0IMLY8="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-W1R9Lgl5l5ydr/EerQUD9+g1+JlXopKQYXO4Au+OEJs=",
     "strip_prefix": "POE-Component-Client-eris-1.4",
     "overlay": {
-        "BUILD.bazel": "sha256-cVrQsJ2W4dlnYq2+CkCsY2iLqybQc71wmfZBPITtRJs="
+        "BUILD.bazel": "sha256-0PuYfgMU9/a4Z86q1e/Sxof7McpbAqdHToaFMOARE4o="
     }
 }

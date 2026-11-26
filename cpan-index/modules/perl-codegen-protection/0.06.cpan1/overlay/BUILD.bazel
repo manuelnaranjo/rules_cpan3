@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-module-runtime",
+        "@perl-moo",
+        "@perl-perl-tidy",
+        "@perl-type-tiny",
+    ],
 )
 
 alias(

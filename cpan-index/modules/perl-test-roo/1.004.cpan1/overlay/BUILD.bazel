@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-moo",
+        "@perl-moox-types-mooselike",
+        "@perl-strictures",
+        "@perl-sub-install",
+    ],
 )
 
 alias(

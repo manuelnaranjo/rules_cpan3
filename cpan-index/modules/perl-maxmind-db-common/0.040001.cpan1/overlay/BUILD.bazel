@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-dumper-concise",
+        "@perl-datetime",
+        "@perl-list-allutils",
+        "@perl-moo",
+        "@perl-moox-strictconstructor",
+        "@perl-namespace-autoclean",
+        "@perl-sub-quote",
+    ],
 )
 
 alias(

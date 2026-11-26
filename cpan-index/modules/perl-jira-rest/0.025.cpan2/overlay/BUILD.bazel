@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-config-identity",
+        "@perl-html-tree",
+        "@perl-http-cookiejar",
+        "@perl-http-message",
+        "@perl-json",
+        "@perl-rest-client",
+        "@perl-uri",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-ncSX9B/LSyf2vlS/aCp2tYrg/1gJD/TcpzqC41hGNrk=",
     "strip_prefix": "Crypt-OpenPGP-1.21",
     "overlay": {
-        "BUILD.bazel": "sha256-KC501pjBMLveyLFR7h9ov8KqcpCf4vfpbetjvqWHwZg="
+        "BUILD.bazel": "sha256-MtMXRfwfsaErdER96BVwJZRKfx8jzU0zWc3Llp+cfow="
     }
 }

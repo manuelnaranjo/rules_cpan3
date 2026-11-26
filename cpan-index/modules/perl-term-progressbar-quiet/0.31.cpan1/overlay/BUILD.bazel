@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-io-interactive",
+        "@perl-term-progressbar",
+        "@perl-test-mockobject",
+    ],
 )
 
 alias(

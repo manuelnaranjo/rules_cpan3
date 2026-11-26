@@ -3,6 +3,6 @@
     "integrity": "sha256-X0n3rviV0yfa/fJ0TznBdsirDkuCJ9LW495omiWb3sE=",
     "strip_prefix": "Test-MockTime-HiRes-0.08",
     "overlay": {
-        "BUILD.bazel": "sha256-gDCXqUSw45fNo/lUGl5uJ9aP3z3tgA2bo+bUzj4Sg9g="
+        "BUILD.bazel": "sha256-syYfwcgBKGYF5rbwuAdNg2HpqrpL6PXMA4hHdf1m7Uc="
     }
 }

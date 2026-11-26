@@ -3,6 +3,6 @@
     "integrity": "sha256-nRz7oGPMGPckJ6IkUfeQiDa3MxrIeF2+B1U8WwQ6DD0=",
     "strip_prefix": "BSD-Resource-1.2911",
     "overlay": {
-        "BUILD.bazel": "sha256-CHl9Ej9ovm1lhkbB9ye+PA/y77vH1RjxvMVFVMoIG0c="
+        "BUILD.bazel": "sha256-HrqeuuR6AQ0y7k5NiV6RkzJRddyDE0FsSJ6OVUGIx0M="
     }
 }

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-crypt-openssl-x509",
+        "@perl-cryptx",
+        "@perl-xml-libxml",
+    ],
 )
 
 alias(

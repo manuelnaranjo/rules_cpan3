@@ -3,6 +3,6 @@
     "integrity": "sha256-RvK9Kd2PnDG1nC1IQjbcyu/RDzsn4lBpgR0/niSZWcw=",
     "strip_prefix": "Net-Hadoop-YARN-0.203",
     "overlay": {
-        "BUILD.bazel": "sha256-GSDLRdYydctafO3FbaJ0cfOHBCqbRoeSfPGHE6UvR1Q="
+        "BUILD.bazel": "sha256-UjNqocgm71ZeKXGaVHwHn91wH76yJ+ILBr89AYQNDvA="
     }
 }

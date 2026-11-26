@@ -3,6 +3,6 @@
     "integrity": "sha256-pMzMNLs/U6zwunjJ/GGvjRVtEJ0cEEh7pZiKVQd9H3A=",
     "strip_prefix": "Authen-SASL-SASLprep-1.100",
     "overlay": {
-        "BUILD.bazel": "sha256-hIjeRDjRJwb4t1DeUHK6LTpsL+t2lA7ZrkQc5hvT+dE="
+        "BUILD.bazel": "sha256-6NzTuAcQtpynUKzdSvn2Q6dRa6bmfPGa7Ar9lBjJrlM="
     }
 }

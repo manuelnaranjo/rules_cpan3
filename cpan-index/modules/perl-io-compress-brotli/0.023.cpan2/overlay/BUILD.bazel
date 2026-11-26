@@ -30,7 +30,6 @@ cpan_xs(
         "BUILD_SHARED_LIBS=OFF",
         "CMAKE_POSITION_INDEPENDENT_CODE=ON",
         "CMAKE_BUILD_TYPE=Release",
-        "CMAKE_INSTALL_PREFIX=./installed",
     ],
     output_loc = "auto/IO/Compress/Brotli/Brotli",
     textual_hdrs = glob(
@@ -83,7 +82,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-slurper",
+    ],
 )
 
 alias(

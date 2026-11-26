@@ -3,6 +3,6 @@
     "integrity": "sha256-YzXp4lO8RXx/fiaq72c8YT9iveJquNHL3T3f60Aocac=",
     "strip_prefix": "Net-DNS-1.58",
     "overlay": {
-        "BUILD.bazel": "sha256-BW/WyxIbVOdliXJYSDvpJ/bD3Ii80N6u4JIUY0q0+sw="
+        "BUILD.bazel": "sha256-/ev6syChFPUbXXls/Hbadn96fhpKi6XRd20UZel3TdM="
     }
 }

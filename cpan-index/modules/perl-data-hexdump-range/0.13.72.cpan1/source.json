@@ -3,6 +3,6 @@
     "integrity": "sha256-hdgN+grYovyv+ry5/hxtO1KaeGTf1R0RoGJ6Awbz074=",
     "strip_prefix": "Data-HexDump-Range-0.13.72",
     "overlay": {
-        "BUILD.bazel": "sha256-6EEyYDnxp+pBrC0blsEwSPuXZieJDnoieRREb8kn7mw="
+        "BUILD.bazel": "sha256-UACKNxEmqTIKgu89V7p3m2m8qpMGgmw3qvgOsSQX6HQ="
     }
 }

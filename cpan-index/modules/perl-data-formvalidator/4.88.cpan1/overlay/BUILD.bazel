@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-date-calc",
+        "@perl-email-valid",
+        "@perl-file-mmagic",
+        "@perl-image-size",
+        "@perl-mime-types",
+        "@perl-regexp-common",
+    ],
 )
 
 alias(

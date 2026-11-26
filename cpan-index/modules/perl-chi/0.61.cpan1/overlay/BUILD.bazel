@@ -26,7 +26,24 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-carp-assert",
+        "@perl-class-load",
+        "@perl-data-uuid",
+        "@perl-digest-jhash",
+        "@perl-hash-moreutils",
+        "@perl-json-maybexs",
+        "@perl-list-moreutils",
+        "@perl-log-any",
+        "@perl-moo",
+        "@perl-moox-types-mooselike",
+        "@perl-moox-types-mooselike-numeric",
+        "@perl-string-rewriteprefix",
+        "@perl-task-weaken",
+        "@perl-time-duration",
+        "@perl-time-duration-parse",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

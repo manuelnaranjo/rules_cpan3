@@ -4,6 +4,6 @@
     "strip_prefix": "Date-Calc-XS-6.4",
     "overlay": {
         "patchlevel.h": "sha256-a0khSx9p1phGcLHi15jpOHbSmKaL3gPgqBlIPGHBoZA=",
-        "BUILD.bazel": "sha256-tllVneYecnQ1Vc+IvFJ/7WLUZGIAOqIT49Ds5lwnpes="
+        "BUILD.bazel": "sha256-yX7PucBSZ+mUX3ekEk58Mp8v/TzRS3B4NV+96uDZlmg="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-V94rY1sV+joxqeVd1REiFJ5UFOEVjugiNQYmNO4YppM=",
     "strip_prefix": "POE-1.370",
     "overlay": {
-        "BUILD.bazel": "sha256-Ys6arpJikxg1DkZFXVP4mgafF/CvBudNHGpGBIOkwxw="
+        "BUILD.bazel": "sha256-FEj5pv3CFDnwt6g4g4GmNOsJEFtW/n0+xozADVic8Hk="
     }
 }

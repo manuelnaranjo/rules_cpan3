@@ -26,7 +26,20 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-loader",
+        "@perl-convert-ascii-armour",
+        "@perl-crypt-blowfish",
+        "@perl-crypt-cbc",
+        "@perl-crypt-primes",
+        "@perl-crypt-random",
+        "@perl-data-buffer",
+        "@perl-digest-md2",
+        "@perl-digest-sha1",
+        "@perl-math-pari",
+        "@perl-sort-versions",
+        "@perl-tie-encryptedhash",
+    ],
 )
 
 alias(

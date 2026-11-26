@@ -3,6 +3,6 @@
     "integrity": "sha256-4vjAcI/43osbt74fqjzbJA/dl3S8dBYnNQV36n4OdqE=",
     "strip_prefix": "Exception-Class-1.46",
     "overlay": {
-        "BUILD.bazel": "sha256-fKuYWikybvvbVugty8uyXroX2Mmeb1aBeBeUBsszd1A="
+        "BUILD.bazel": "sha256-jHPJgVLpe8s2nn2kpNRcInEmkAGRCEpNfd1j4zKO1Eg="
     }
 }

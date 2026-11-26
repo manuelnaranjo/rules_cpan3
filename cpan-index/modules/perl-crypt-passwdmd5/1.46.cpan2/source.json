@@ -3,6 +3,6 @@
     "integrity": "sha256-IKdompoD6HWHis449lZeYjB+Jg3rQRh7xSnHs0k51+c=",
     "strip_prefix": "Crypt-PasswdMD5-1.46",
     "overlay": {
-        "BUILD.bazel": "sha256-DGxGm0IXa631twqtqmhVWZSASLkpHpvIhCI26OTWjYk="
+        "BUILD.bazel": "sha256-ESSdxVT0BMOQzbn7HjdcBZA/zn5g7dulJXUj5dSmPxc="
     }
 }

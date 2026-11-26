@@ -32,7 +32,10 @@ cpan_xs(
         "MARKED_SECTION",
     ],
     output_loc = "auto/HTML/Parser/Parser",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "util.c",
+        "hparser.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -82,7 +85,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-html-tagset",
+        "@perl-http-message",
+        "@perl-uri",
+    ],
 )
 
 alias(

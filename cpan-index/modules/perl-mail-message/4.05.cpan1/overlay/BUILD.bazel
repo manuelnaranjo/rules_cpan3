@@ -26,7 +26,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-hash-case",
+        "@perl-io-stringy",
+        "@perl-log-report",
+        "@perl-mailtools",
+        "@perl-mime-types",
+        "@perl-string-print",
+        "@perl-timedate",
+        "@perl-uri",
+        "@perl-user-identity",
+    ],
 )
 
 alias(

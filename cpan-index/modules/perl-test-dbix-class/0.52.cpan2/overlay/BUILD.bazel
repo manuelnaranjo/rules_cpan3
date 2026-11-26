@@ -26,7 +26,25 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-config-any",
+        "@perl-data-uuid",
+        "@perl-data-visitor",
+        "@perl-dbix-class",
+        "@perl-dbix-class-schema-populatemore",
+        "@perl-dbix-class-timestamp",
+        "@perl-dbix-class-uuidcolumns",
+        "@perl-hash-merge",
+        "@perl-list-moreutils",
+        "@perl-module-runtime",
+        "@perl-moose",
+        "@perl-moosex-attribute-env",
+        "@perl-moosex-types",
+        "@perl-path-class",
+        "@perl-sql-translator",
+        "@perl-sub-exporter",
+        "@perl-test-deep",
+    ],
 )
 
 alias(

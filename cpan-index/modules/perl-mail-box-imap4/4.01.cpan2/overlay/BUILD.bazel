@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-digest-hmac",
+        "@perl-log-report",
+        "@perl-mail-box",
+        "@perl-mail-imapclient",
+        "@perl-mail-message",
+        "@perl-mail-transport",
+        "@perl-timedate",
+    ],
 )
 
 alias(

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-padwalker",
+        "@perl-ref-util",
+        "@perl-sub-info",
+    ],
 )
 
 alias(

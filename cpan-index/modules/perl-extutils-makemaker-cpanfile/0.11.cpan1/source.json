@@ -3,6 +3,6 @@
     "integrity": "sha256-h0Z4V8p6Yky2Tl3ucG6vxqC/7tdzZGydbS8ELtcvsT4=",
     "strip_prefix": "ExtUtils-MakeMaker-CPANfile-0.11",
     "overlay": {
-        "BUILD.bazel": "sha256-yvXDYZRb/Vsmo/4ijmzlxBNZYBpCiOYh3mNokV9xAeU="
+        "BUILD.bazel": "sha256-flFzLkdptkIwCjZq6ub1EtbqcKWoGTv+YBEQFvBveMU="
     }
 }

@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-perl-critic",
+        "@perl-ppi",
+        "@perl-ppix-quotelike",
+        "@perl-readonly",
+        "@perl-string-interpolatedvariables",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

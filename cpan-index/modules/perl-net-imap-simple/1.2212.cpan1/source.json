@@ -3,6 +3,6 @@
     "integrity": "sha256-mBLNCqO+MzdotgaeixOnYfzZ/kLca4taXqGHDaxbf1U=",
     "strip_prefix": "Net-IMAP-Simple-1.2212",
     "overlay": {
-        "BUILD.bazel": "sha256-W42Gnpbyrze96avkI5GFpbFk71Qy+O0N4DmBTXfHy0o="
+        "BUILD.bazel": "sha256-4t7kEQ6tmYnDREkkDXimhEngfA8BxLpsSlnlRPj+aDE="
     }
 }

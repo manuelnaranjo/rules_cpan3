@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-accessor",
+        "@perl-data-dump",
+        "@perl-json-webtoken",
+        "@perl-json-xs",
+        "@perl-oauth-lite2",
+        "@perl-params-validate",
+    ],
 )
 
 alias(

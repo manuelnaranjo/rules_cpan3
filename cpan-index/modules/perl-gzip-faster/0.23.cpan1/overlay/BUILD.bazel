@@ -16,14 +16,21 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "gzip-faster-perl.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Gzip/Faster/Faster",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "gzip-faster-perl.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

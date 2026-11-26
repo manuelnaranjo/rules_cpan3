@@ -3,6 +3,6 @@
     "integrity": "sha256-kGOzw0bt60IoB//kn/sjA4xPkA1Kd7hFzktT2XvylAA=",
     "strip_prefix": "Module-Build-XSUtil-0.19",
     "overlay": {
-        "BUILD.bazel": "sha256-/K7QSsQVk4DH+pqhV61+AmVONL5fFQ7BmOBzlm4dTuM="
+        "BUILD.bazel": "sha256-g8tG4dBcWMSecIGR1UMGPBbVlcePKNFmYm3KS/bK9Mc="
     }
 }

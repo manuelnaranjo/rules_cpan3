@@ -3,6 +3,6 @@
     "integrity": "sha256-S+SC08PcOtHvR0P6s4DOuQG3QVZQeVOoNITfadolpqY=",
     "strip_prefix": "Devel-Deprecations-Environmental-1.101",
     "overlay": {
-        "BUILD.bazel": "sha256-VIh6JaW0RsL2qeO0pSjx+80HeXhkuxeNRsNsEZOkH74="
+        "BUILD.bazel": "sha256-E3Nj8CXJteVv5dy0ikCIRhVy9TWbPBHSI7qZwHpPIW0="
     }
 }

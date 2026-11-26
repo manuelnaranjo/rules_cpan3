@@ -3,6 +3,6 @@
     "integrity": "sha256-gQa5cEVgNW19B80YfGRCZoL6pRJ59uRxTluLNlOxkOY=",
     "strip_prefix": "Perl-Critic-Policy-ValuesAndExpressions-ProhibitSingleArgArraySlice-0.004",
     "overlay": {
-        "BUILD.bazel": "sha256-i3caUwIjpxYjk3DoPxCXY2J+IPosqNXzEkVQkUdTYIM="
+        "BUILD.bazel": "sha256-nZNFB4sUPfjhXL0oImvpY47AqP6dddLMOAb4wzxGX9U="
     }
 }

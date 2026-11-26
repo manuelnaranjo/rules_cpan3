@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-devel-hook",
+        "@perl-devel-overloadinfo",
+        "@perl-sub-metadata",
+        "@perl-universal-object",
+    ],
 )
 
 alias(

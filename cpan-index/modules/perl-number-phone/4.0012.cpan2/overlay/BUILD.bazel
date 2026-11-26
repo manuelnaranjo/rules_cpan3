@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-compactreadonly",
+        "@perl-data-dumper-concise",
+        "@perl-devel-checkos",
+        "@perl-devel-deprecations-environmental",
+        "@perl-file-find-rule",
+        "@perl-file-sharedir",
+    ],
 )
 
 alias(

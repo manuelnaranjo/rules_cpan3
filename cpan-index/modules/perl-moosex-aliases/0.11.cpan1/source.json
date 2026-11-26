@@ -3,6 +3,6 @@
     "integrity": "sha256-xIUPlyQmw0R6ru2Ny0Az6ERgylFwWtPqeLY6+Rn+B0g=",
     "strip_prefix": "MooseX-Aliases-0.11",
     "overlay": {
-        "BUILD.bazel": "sha256-fUXeWxtd8q9htvMGAisToQ+pQDAG0Yl6y/Ue9Wf2nhA="
+        "BUILD.bazel": "sha256-ZzWtuCm1jWJwGCTCZfRH6R/QDB+WwXyiuorAQWo1OlA="
     }
 }

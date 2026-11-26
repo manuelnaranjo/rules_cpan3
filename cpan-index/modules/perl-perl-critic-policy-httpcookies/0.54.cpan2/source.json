@@ -3,6 +3,6 @@
     "integrity": "sha256-8lMmfTAzjQGCWt7abAVNckJQpAtmYaSC2/49JM80pqQ=",
     "strip_prefix": "Perl-Critic-Policy-HTTPCookies-0.54",
     "overlay": {
-        "BUILD.bazel": "sha256-OHO37znAv1uGLRJhnZbs+peA0ogUDqdWnC1TcrGg2vk="
+        "BUILD.bazel": "sha256-qNJqyLH9pqoCBdekQUxvyut2dMQdc8B0ddX/fa3nVUY="
     }
 }

@@ -32,9 +32,15 @@ cpan_xs(
             "json-whitespace.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/JSON/Parse/Parse",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "unicode.c",
+        "json-common.c",
+        "json-perl.c",
+        "json-entry-points.c",
+        "json-random-test.c",
+        "json-whitespace.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

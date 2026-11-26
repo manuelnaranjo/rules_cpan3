@@ -3,6 +3,6 @@
     "integrity": "sha256-gQkAjWdVQOwMbHYQDlwK+pgVSA/xTYzmMx3hF+XvL0A=",
     "strip_prefix": "Text-CSV-Flatten-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-sM0aWaqSBrpVfwdw1sXxYaoqTxiPX6FVUipWBaIN+a4="
+        "BUILD.bazel": "sha256-/tuUedKL/DBY9Ir9ID+9wkFQ0rF4C0nnwY6x/gdV6Mc="
     }
 }

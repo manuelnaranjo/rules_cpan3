@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-ole-storage-lite",
+        "@perl-parse-recdescent",
+    ],
 )
 
 alias(

@@ -39,7 +39,10 @@ cpan_xs(
         "GIFLIB_API_41",
     ],
     output_loc = "auto/Image/Scale/Scale",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "common.c",
+        "image.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -91,7 +94,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-test-nowarnings",
+    ],
 )
 
 alias(

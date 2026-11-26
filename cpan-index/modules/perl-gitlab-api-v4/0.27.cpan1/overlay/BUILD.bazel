@@ -26,7 +26,21 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-const-fast",
+        "@perl-http-tiny-multipart",
+        "@perl-io-prompter",
+        "@perl-json-maybexs",
+        "@perl-log-any",
+        "@perl-log-any-adapter-screen",
+        "@perl-moo",
+        "@perl-namespace-clean",
+        "@perl-path-tiny",
+        "@perl-strictures",
+        "@perl-try-tiny",
+        "@perl-type-tiny",
+        "@perl-uri",
+    ],
 )
 
 alias(

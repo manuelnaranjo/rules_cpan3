@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-io-pipely",
+        "@perl-io-tty",
+        "@perl-poe-test-loops",
+    ],
 )
 
 alias(

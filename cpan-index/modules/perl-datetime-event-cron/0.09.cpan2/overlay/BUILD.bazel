@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-datetime",
+        "@perl-datetime-set",
+        "@perl-set-crontab",
+    ],
 )
 
 alias(

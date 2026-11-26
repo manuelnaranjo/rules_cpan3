@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-feature-compat-try",
+        "@perl-json-maybexs",
+        "@perl-neo4j-error",
+        "@perl-neo4j-types",
+        "@perl-uri",
+    ],
 )
 
 alias(

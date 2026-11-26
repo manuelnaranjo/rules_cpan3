@@ -26,7 +26,22 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-alt-crypt-rsa-bigint",
+        "@perl-bytes-random-secure",
+        "@perl-crypt-blowfish",
+        "@perl-crypt-cast5-pp",
+        "@perl-crypt-des-ede3",
+        "@perl-crypt-dsa-gmp",
+        "@perl-crypt-idea",
+        "@perl-crypt-rijndael",
+        "@perl-crypt-ripemd160",
+        "@perl-crypt-twofish",
+        "@perl-data-buffer",
+        "@perl-file-homedir",
+        "@perl-libwww-perl",
+        "@perl-uri",
+    ],
 )
 
 alias(

@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-constant-fromglobal",
+        "@perl-json-xs",
+        "@perl-moose",
+        "@perl-moosex-classattribute",
+        "@perl-moosex-types",
+        "@perl-moosex-types-structured",
+        "@perl-sereal-decoder",
+        "@perl-sereal-encoder",
+    ],
 )
 
 alias(

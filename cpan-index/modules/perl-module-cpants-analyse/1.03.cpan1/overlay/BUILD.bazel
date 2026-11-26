@@ -26,7 +26,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-archive-any-lite",
+        "@perl-array-diff",
+        "@perl-class-accessor",
+        "@perl-data-binary",
+        "@perl-file-find-object",
+        "@perl-module-find",
+        "@perl-parse-distname",
+        "@perl-perl-prereqscanner-notquitelite",
+        "@perl-software-license",
+    ],
 )
 
 alias(

@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-crypt-random-seed",
+        "@perl-data-buffer",
+        "@perl-math-bigint-gmp",
+        "@perl-math-prime-util-gmp",
+    ],
 )
 
 alias(

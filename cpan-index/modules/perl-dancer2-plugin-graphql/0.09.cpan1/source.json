@@ -3,6 +3,6 @@
     "integrity": "sha256-P7WgP0Kn5orjpkv64QnFUVIIx7pK65e2rPEPD+DdoLY=",
     "strip_prefix": "Dancer2-Plugin-GraphQL-0.09",
     "overlay": {
-        "BUILD.bazel": "sha256-vI9Su4XnyPXT9Fjr910CkjZuO6d5pkesEhr1rM9t//s="
+        "BUILD.bazel": "sha256-wjBZEsDiYNSb7Yq+fRKU4TEYc97n3f3JDR3csuoTwRM="
     }
 }

@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-devel-checkos",
+        "@perl-devel-hide",
+        "@perl-test-exception",
+        "@perl-test-time",
+    ],
 )
 
 alias(

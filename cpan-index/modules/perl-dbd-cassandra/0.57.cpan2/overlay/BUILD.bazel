@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-cassandra-client",
+        "@perl-dbi",
+        "@perl-devel-globaldestruction",
+    ],
 )
 
 alias(

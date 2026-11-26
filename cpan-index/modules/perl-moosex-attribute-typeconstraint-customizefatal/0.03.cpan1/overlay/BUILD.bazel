@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-moose",
+        "@perl-moosex-types",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

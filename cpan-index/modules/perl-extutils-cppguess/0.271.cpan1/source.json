@@ -3,6 +3,6 @@
     "integrity": "sha256-RyfP59pqupzcxrufiZhDhE2M+7En8tdjsZTDRfJDukM=",
     "strip_prefix": "ExtUtils-CppGuess-0.271",
     "overlay": {
-        "BUILD.bazel": "sha256-UYw/vO4M0ivAP/jdQqSxlgNJKR/CArq2B4CjZH/2gAA="
+        "BUILD.bazel": "sha256-nYFTrewKRV89Axzq09gBdc6xnsml/ntXD+9cuZ2r0Hs="
     }
 }

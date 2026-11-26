@@ -3,6 +3,6 @@
     "integrity": "sha256-Fj8ddclXL1fs+L2kGNILhh7J+Mv4Roi7neu8yQj1geE=",
     "strip_prefix": "MetaCPAN-Client-2.044000",
     "overlay": {
-        "BUILD.bazel": "sha256-dizFloNP0ikqagWow49HsYE3/WZEAqN2J2fWPUvjNB0="
+        "BUILD.bazel": "sha256-FU0JaEHed8e3aX15w84FsDXGMk+mzQYTumVvfC7eaTc="
     }
 }

@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/String/CRC32/CRC32",
     textual_hdrs = glob(
         [

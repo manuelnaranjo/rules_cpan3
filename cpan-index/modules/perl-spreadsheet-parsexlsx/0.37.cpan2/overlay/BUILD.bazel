@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-archive-zip",
+        "@perl-cryptx",
+        "@perl-graphics-colorutils",
+        "@perl-ole-storage-lite",
+        "@perl-spreadsheet-parseexcel",
+        "@perl-xml-twig",
+    ],
 )
 
 alias(

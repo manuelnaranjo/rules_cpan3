@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-net-http",
+        "@perl-shardedkv",
+        "@perl-test-http-server",
+        "@perl-uri",
+    ],
 )
 
 alias(

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-crypt-blowfish",
+        "@perl-crypt-cbc",
+        "@perl-crypt-des",
+    ],
 )
 
 alias(

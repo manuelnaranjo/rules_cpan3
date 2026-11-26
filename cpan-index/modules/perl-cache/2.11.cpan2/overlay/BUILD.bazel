@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-nfslock",
+        "@perl-heap",
+        "@perl-io-string",
+        "@perl-timedate",
+    ],
 )
 
 alias(

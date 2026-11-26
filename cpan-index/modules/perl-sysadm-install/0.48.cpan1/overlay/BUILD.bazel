@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-which",
+        "@perl-libwww-perl",
+        "@perl-log-log4perl",
+        "@perl-termreadkey",
+    ],
 )
 
 alias(

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-alien-build",
+        "@perl-path-tiny",
+        "@perl-uri",
+    ],
 )
 
 alias(

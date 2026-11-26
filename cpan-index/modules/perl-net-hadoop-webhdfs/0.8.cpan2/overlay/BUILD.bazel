@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-furl",
+        "@perl-json",
+        "@perl-json-xs",
+        "@perl-test-deep",
+        "@perl-try-tiny",
+        "@perl-uri",
+    ],
 )
 
 alias(

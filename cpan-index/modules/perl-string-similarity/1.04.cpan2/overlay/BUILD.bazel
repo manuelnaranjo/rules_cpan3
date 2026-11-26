@@ -27,9 +27,10 @@ cpan_xs(
             "fstrcmp.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/String/Similarity/Similarity",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "fstrcmp.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

@@ -3,6 +3,6 @@
     "integrity": "sha256-s4RJxguaJxLd5IFIXMerA7KgrBw/1ICzhT5BEawpTXE=",
     "strip_prefix": "Google-ProtocolBuffers-0.12",
     "overlay": {
-        "BUILD.bazel": "sha256-RemU3V/0tnZMs+5pVbFgLp5izE9lquAVY0MnnnEOcHw="
+        "BUILD.bazel": "sha256-vwHgnaqr9QXFQ2siogilLxSr+/PyE4N5e4JTfmPttwE="
     }
 }

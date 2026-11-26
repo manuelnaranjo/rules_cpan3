@@ -26,7 +26,18 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-hash-merge-simple",
+        "@perl-http-body",
+        "@perl-http-date",
+        "@perl-http-message",
+        "@perl-http-server-simple-psgi",
+        "@perl-mime-types",
+        "@perl-module-runtime",
+        "@perl-test-longstring",
+        "@perl-try-tiny",
+        "@perl-uri",
+    ],
 )
 
 alias(

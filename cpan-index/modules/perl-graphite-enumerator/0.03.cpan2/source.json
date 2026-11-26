@@ -3,6 +3,6 @@
     "integrity": "sha256-zd7i6LJEtsBDQFw9e2bo/oKBA50oYJbPkK60KAZMUmI=",
     "strip_prefix": "Graphite-Enumerator-0.03",
     "overlay": {
-        "BUILD.bazel": "sha256-wHbtFDdxFxqzmjIvsPQQk7vBriGCJjQSsdkgsPRXb7k="
+        "BUILD.bazel": "sha256-5cD3PZht5Ll/k1ujgtaaYZyU61XxEKXlaoyqsj3Rmxg="
     }
 }

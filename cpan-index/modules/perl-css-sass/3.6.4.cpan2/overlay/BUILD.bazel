@@ -30,7 +30,6 @@ cpan_xs(
             "libsass/src/c99func.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/CSS/Sass/Sass",
     textual_hdrs = glob(
         [

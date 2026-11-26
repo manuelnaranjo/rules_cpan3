@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-anyevent",
+        "@perl-devel-repl",
+        "@perl-io-tty",
+        "@perl-padwalker",
+        "@perl-termreadkey",
+    ],
 )
 
 alias(

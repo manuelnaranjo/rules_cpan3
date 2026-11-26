@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-c3",
+        "@perl-class-inspector",
+        "@perl-mro-compat",
+    ],
 )
 
 alias(

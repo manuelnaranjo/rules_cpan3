@@ -3,6 +3,6 @@
     "integrity": "sha256-YoPb4hl+LyAAnMS0SZl3Qhac3ZUb/ETLxuYsKpYtMUc=",
     "strip_prefix": "Devel-StackTrace-AsHTML-0.15",
     "overlay": {
-        "BUILD.bazel": "sha256-VRL7qG3MtTsh8EAAsmHL62Hzf20rZu0kYp9JITbLVoY="
+        "BUILD.bazel": "sha256-ENuT+qjofwYHPVpXniOFJkApFpU2taiNaCfjo1mFy8w="
     }
 }

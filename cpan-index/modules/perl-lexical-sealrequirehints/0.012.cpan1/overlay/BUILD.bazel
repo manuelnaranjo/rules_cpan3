@@ -16,11 +16,16 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Lexical/SealRequireHints/SealRequireHints",
     textual_hdrs = glob(
         [

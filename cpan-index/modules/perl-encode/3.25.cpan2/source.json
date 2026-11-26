@@ -10,6 +10,6 @@
         "Byte/Byte.xs": "sha256-wG19mxSdz/uLDPwVEZWZiwD+yFUfzw6tv9DcfFRixIk=",
         "TW/TW.xs": "sha256-UThDHVqNbZuPC2dFlUdMPl8I5Dtqhlf7p0NbWKofF5M=",
         "CN/CN.xs": "sha256-jbR2u5HU3pjmkMgtLp479rvGqHLt51guwNaV9MaSjB4=",
-        "BUILD.bazel": "sha256-X76mHGkyEzqETICQpgpTTVAdwlHIt8Xrhp87TAcqQs8="
+        "BUILD.bazel": "sha256-ZQFA4MelWTXnX2Tyqc15wTOEOGZp95ZMCQYLSng9rvE="
     }
 }

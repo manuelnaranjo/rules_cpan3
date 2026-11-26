@@ -16,11 +16,16 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Scalar/Type/Type",
     textual_hdrs = glob(
         [
@@ -72,7 +77,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-capture-tiny",
+    ],
 )
 
 alias(

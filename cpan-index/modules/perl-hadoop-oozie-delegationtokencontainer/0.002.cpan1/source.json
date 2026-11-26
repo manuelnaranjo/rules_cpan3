@@ -3,6 +3,6 @@
     "integrity": "sha256-7Qw1efNVV9vDxRgQwmYxIHMYlIB1lFUOX/y82B6LPLM=",
     "strip_prefix": "Hadoop-Oozie-DelegationTokenContainer-0.002",
     "overlay": {
-        "BUILD.bazel": "sha256-iMPVnqFb03NlcK+Ar0XOoZRbzJQothSOyoPgmkjdbHE="
+        "BUILD.bazel": "sha256-FANee41shRKIT1+0GMaegvap2CbAr2eqGVlT2wD6wOY="
     }
 }

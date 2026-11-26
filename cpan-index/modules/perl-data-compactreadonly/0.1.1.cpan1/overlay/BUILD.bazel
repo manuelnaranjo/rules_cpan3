@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-ieee754",
+        "@perl-devel-stacktrace",
+        "@perl-scalar-type",
+        "@perl-string-binary-interpolation",
+        "@perl-test-differences",
+        "@perl-test-exception",
+    ],
 )
 
 alias(

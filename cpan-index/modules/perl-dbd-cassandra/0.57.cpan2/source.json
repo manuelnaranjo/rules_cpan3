@@ -11,6 +11,6 @@
         "dbd_xsh.h": "sha256-5nyUc5m9UyxfMb2RH8fzV9RVLt0hXrpWDseg6Q0FrUs=",
         "Cassandra.xsi": "sha256-dZFaVS6oXO8MXqpR3O7expjFR1UD2/L3hhHefqQ610g=",
         "dbi_sql.h": "sha256-KpzCQbukAz1bVxEcUm6NCnqLuUqfuDwonW+oJpBUP3c=",
-        "BUILD.bazel": "sha256-dFXuhz6C5KwLdcCIVw9okLib7997//YC3+0n9ZfP9oo="
+        "BUILD.bazel": "sha256-rVY12C59SxxTzcuBmrZVwvirotMCjMUTQWzZyDZ2NfY="
     }
 }

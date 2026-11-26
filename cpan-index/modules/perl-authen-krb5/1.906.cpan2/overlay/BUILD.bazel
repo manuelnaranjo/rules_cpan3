@@ -16,14 +16,21 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
-            "**/krb5_constants.c",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
+            "krb5_constants.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Authen/Krb5/Krb5",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "krb5_constants.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -33,7 +40,6 @@ cpan_xs(
             "**/*.xsi",
             "*.inc",
             "**/*.inc",
-            "**/krb5_constants.c",
         ],
         allow_empty = True,
     ),

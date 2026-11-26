@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-optlist",
+        "@perl-params-someutil",
+        "@perl-sub-install",
+    ],
 )
 
 alias(

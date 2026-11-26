@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-validate-domain",
+        "@perl-data-validate-ip",
+        "@perl-mojolicious",
+        "@perl-net-idn-encode",
+        "@perl-yaml-libyaml",
+    ],
 )
 
 alias(

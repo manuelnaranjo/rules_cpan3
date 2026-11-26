@@ -3,6 +3,6 @@
     "integrity": "sha256-QA1BUf1hcxwM4KFFGUBTfqJtxVe2tOicP557HOt4L0A=",
     "strip_prefix": "Hadoop-IO-0.003",
     "overlay": {
-        "BUILD.bazel": "sha256-sA3ktYTcT2RMgM6b0vcifjaxMv5XKJEqDidmPsq0iVQ="
+        "BUILD.bazel": "sha256-/ftphRZsX+x5urA6/M62+1zti1SlKYGPGRSLQgUgXpI="
     }
 }

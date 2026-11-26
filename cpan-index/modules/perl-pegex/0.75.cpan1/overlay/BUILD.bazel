@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-sharedir-install",
+        "@perl-xxx",
+        "@perl-yaml-pp",
+    ],
 )
 
 alias(

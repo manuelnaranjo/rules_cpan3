@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     includes = [
         ".",
     ],
@@ -65,6 +64,7 @@ perl_library(
             "lib/**/*.pm",
             "lib/**/*.pod",
             "*.pm",
+            "*.pod",
         ],
         allow_empty = True,
     ),
@@ -78,13 +78,17 @@ perl_library(
         exclude = [
             "lib/**/*.pm",
             "lib/**/*.pod",
+            "*.pm",
+            "*.pod",
         ],
     ),
     includes = [
         ".",
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-sharedir",
+    ],
 )
 
 alias(

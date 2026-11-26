@@ -32,7 +32,10 @@ cpan_xs(
         "NO_SHA_384_512",
     ],
     output_loc = "auto/Digest/SHA/SHA",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "src/sdf.c",
+        "src/sha.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

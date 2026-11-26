@@ -34,7 +34,9 @@ cpan_xs(
         "LibYAML/lib",
     ],
     output_loc = "auto/YAML/LibYAML/API/XS/XS",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "etc/perl_libyaml.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -65,6 +67,8 @@ perl_library(
         [
             "lib/**/*.pm",
             "lib/**/*.pod",
+            "LibYAML/lib/**/*.pm",
+            "LibYAML/lib/**/*.pod",
             "*.pm",
         ],
         allow_empty = True,
@@ -74,18 +78,23 @@ perl_library(
     ] + glob(
         [
             "lib/**/*",
+            "LibYAML/lib/**/*",
         ],
         allow_empty = True,
         exclude = [
             "lib/**/*.pm",
             "lib/**/*.pod",
+            "LibYAML/lib/**/*.pm",
+            "LibYAML/lib/**/*.pod",
         ],
     ),
     includes = [
         "LibYAML/lib",
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-yaml-pp",
+    ],
 )
 
 alias(

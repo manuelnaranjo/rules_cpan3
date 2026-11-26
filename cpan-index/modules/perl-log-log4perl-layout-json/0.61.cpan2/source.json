@@ -3,6 +3,6 @@
     "integrity": "sha256-TmD+/otrXmJBXPY0Ul6troBhiusL81Miajs7aOqt6UM=",
     "strip_prefix": "Log-Log4perl-Layout-JSON-0.61",
     "overlay": {
-        "BUILD.bazel": "sha256-SCfk5/rMh/48lhyKuWC1bimgggZv7Hb6QmbtTwwX/QY="
+        "BUILD.bazel": "sha256-qbU8cNg5hp0TVq2bqBspghiGd9343v8FhrCtpwDshMI="
     }
 }

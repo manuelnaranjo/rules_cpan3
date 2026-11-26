@@ -6,12 +6,7 @@ package(default_visibility = ["//visibility:public"])
 
 cpan_xs(
     name = "Thrift-XS_xs",
-    srcs = [
-        "BinaryProtocol.xs",
-        "CompactProtocol.xs",
-        "MemoryBuffer.xs",
-        "XS.xs",
-    ],
+    srcs = ["XS.xs"],
     cc_srcs = glob(
         [
             "*.c",
@@ -21,15 +16,23 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "buffer.c",
             "Magic.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Thrift/XS/XS",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "buffer.c",
+        "Magic.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -79,7 +82,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-bit-vector",
+        "@perl-http-message",
+        "@perl-io-string",
+        "@perl-libwww-perl",
+        "@perl-thrift",
+    ],
 )
 
 alias(

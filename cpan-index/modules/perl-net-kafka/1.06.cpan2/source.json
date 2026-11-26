@@ -3,6 +3,6 @@
     "integrity": "sha256-AiBU+boHL30kN0YgQdONE3ZAnfU6FeBqLnMC0MgAoRc=",
     "strip_prefix": "Net-Kafka-1.06",
     "overlay": {
-        "BUILD.bazel": "sha256-OgEaTs7XmiPGeWnL5vUFMxZyaNKFghi0mf8VxOVXbcE="
+        "BUILD.bazel": "sha256-PPNlLAqbWqiodt3TbqWgTLfudKsSy/Acke84joxcC/4="
     }
 }

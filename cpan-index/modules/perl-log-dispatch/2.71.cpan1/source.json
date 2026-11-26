@@ -3,6 +3,6 @@
     "integrity": "sha256-nWDZZIw1zidUcx603rfwWAns4b1jO3TXR5Wu2exzJXA=",
     "strip_prefix": "Log-Dispatch-2.71",
     "overlay": {
-        "BUILD.bazel": "sha256-xMFfOXTFfExxgHjIQLd+WcCpchwYMXVow5z1Sh4LpdQ="
+        "BUILD.bazel": "sha256-AJiA+Tks2ruNwUv3B24mUXPLB33LOcSnCAxagavK540="
     }
 }

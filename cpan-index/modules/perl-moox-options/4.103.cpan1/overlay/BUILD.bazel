@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-getopt-long-descriptive",
+        "@perl-module-runtime",
+        "@perl-moo",
+        "@perl-moox-locale-passthrough",
+        "@perl-mro-compat",
+        "@perl-path-class",
+        "@perl-strictures",
+        "@perl-unicode-linebreak",
+    ],
 )
 
 alias(

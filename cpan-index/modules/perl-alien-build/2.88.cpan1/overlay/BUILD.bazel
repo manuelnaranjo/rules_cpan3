@@ -21,11 +21,16 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Alien/Build/Build",
     textual_hdrs = glob(
         [
@@ -77,7 +82,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-capture-tiny",
+        "@perl-ffi-checklib",
+        "@perl-file-chdir",
+        "@perl-file-which",
+        "@perl-path-tiny",
+    ],
 )
 
 alias(

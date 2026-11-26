@@ -64,6 +64,8 @@ perl_library(
         [
             "lib/**/*.pm",
             "lib/**/*.pod",
+            "LibYAML/lib/**/*.pm",
+            "LibYAML/lib/**/*.pod",
             "*.pm",
         ],
         allow_empty = True,
@@ -73,11 +75,14 @@ perl_library(
     ] + glob(
         [
             "lib/**/*",
+            "LibYAML/lib/**/*",
         ],
         allow_empty = True,
         exclude = [
             "lib/**/*.pm",
             "lib/**/*.pod",
+            "LibYAML/lib/**/*.pm",
+            "LibYAML/lib/**/*.pod",
         ],
     ),
     includes = [

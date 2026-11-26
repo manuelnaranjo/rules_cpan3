@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-math-fibonacci",
+        "@perl-module-runtime",
+        "@perl-moo",
+    ],
 )
 
 alias(

@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/multidimensional/multidimensional",
     textual_hdrs = glob(
         [
@@ -80,7 +79,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-b-hooks-op-check",
+    ],
 )
 
 alias(

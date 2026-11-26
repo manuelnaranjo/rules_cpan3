@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-apache-session",
+        "@perl-cache-memcached",
+    ],
 )
 
 alias(

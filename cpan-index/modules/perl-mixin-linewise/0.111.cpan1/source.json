@@ -3,6 +3,6 @@
     "integrity": "sha256-0o6IUWzptSlcMWMdzM3A/I8qt9ilzIdrsbIBMQh7Ads=",
     "strip_prefix": "Mixin-Linewise-0.111",
     "overlay": {
-        "BUILD.bazel": "sha256-xU4NaUbgcoO/G3UBztkVWFbqNpZ23YiDXJ+mvVZN2C0="
+        "BUILD.bazel": "sha256-cOzxUUTLz/79W1bNO0zEtX0zlUmJC+aw0sIhwqMiQ2s="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-AkTivm5Er8smDo+O4PZSt1dK1wgRnWJFCvZxgzOy09A=",
     "strip_prefix": "App-Yath-Script-2.000017",
     "overlay": {
-        "BUILD.bazel": "sha256-3zzrkP7g/e1HucD4HK36b/IvhKcpGejQQVlxyTsdxr0="
+        "BUILD.bazel": "sha256-25O5UtL5zYAk/2piXOKLGUtcRL3MiTa/9bnbYL6457U="
     }
 }

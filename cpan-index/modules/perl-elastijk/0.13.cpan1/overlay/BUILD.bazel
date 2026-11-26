@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-hijk",
+        "@perl-json",
+        "@perl-uri",
+    ],
 )
 
 alias(

@@ -89,7 +89,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-which",
+        "@perl-json-maybexs",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-v9wQPHRA1i2X/Z/ztOZP6FjKdlO7CEslsgzIIcuIxXw=",
     "strip_prefix": "MooX-Thunking-0.08",
     "overlay": {
-        "BUILD.bazel": "sha256-3a69EqXf8NeCPwHIftPV5DxvExbXKtzD75rA+LhVYws="
+        "BUILD.bazel": "sha256-1xr/v9hHeQbes2Vdp3UNODvN9lMUNKEpSYtVrrLqY3Q="
     }
 }

@@ -84,7 +84,22 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-dumper-concise",
+        "@perl-data-ieee754",
+        "@perl-math-int128",
+        "@perl-math-int64",
+        "@perl-maxmind-db-common",
+        "@perl-maxmind-db-reader",
+        "@perl-moose",
+        "@perl-moosex-params-validate",
+        "@perl-moosex-strictconstructor",
+        "@perl-namespace-autoclean",
+        "@perl-net-works",
+        "@perl-sereal-decoder",
+        "@perl-sereal-encoder",
+        "@perl-test-deep",
+    ],
 )
 
 alias(

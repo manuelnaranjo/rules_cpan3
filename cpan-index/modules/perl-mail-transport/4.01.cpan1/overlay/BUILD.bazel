@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-log-report",
+        "@perl-mail-message",
+        "@perl-string-print",
+    ],
 )
 
 alias(

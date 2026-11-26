@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-http-message",
+        "@perl-json",
+        "@perl-libwww-perl",
+        "@perl-log-log4perl",
+        "@perl-uri",
+    ],
 )
 
 alias(

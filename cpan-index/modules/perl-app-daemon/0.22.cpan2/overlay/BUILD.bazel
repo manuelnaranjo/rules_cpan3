@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-pid",
+        "@perl-log-log4perl",
+        "@perl-sysadm-install",
+    ],
 )
 
 alias(

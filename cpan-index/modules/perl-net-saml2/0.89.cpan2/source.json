@@ -3,6 +3,6 @@
     "integrity": "sha256-pv7LKhRlAXwo9TJDG3evOghcvBhMgQRmmj0Q4C61i2I=",
     "strip_prefix": "Net-SAML2-0.89",
     "overlay": {
-        "BUILD.bazel": "sha256-M77W5C1HYbqMKQRstkRk8TGw7eZJAz9U0BJ/BMeKoI0="
+        "BUILD.bazel": "sha256-YzaxqA9U6+XWBuGL3gi7ZjDFTXWHnZl2S03yu7aE7t8="
     }
 }

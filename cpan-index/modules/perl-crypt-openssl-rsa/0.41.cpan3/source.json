@@ -4,6 +4,6 @@
     "strip_prefix": "Crypt-OpenSSL-RSA-0.41",
     "overlay": {
         "lib/Crypt/OpenSSL/RSA.pm": "sha256-RYlB+pLICYPedxghFiBiYUypKH3LPGpK1qhwteSfHdU=",
-        "BUILD.bazel": "sha256-wW/SZAPTuVlpcDISnsx2bKi7VmaDStEwtfUA/Q4u4VE="
+        "BUILD.bazel": "sha256-z1jMKBi7OptIV2gsE+l4LjP/OlrQlZz7cQzpk6GfbA8="
     }
 }

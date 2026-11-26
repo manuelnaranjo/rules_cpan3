@@ -3,6 +3,6 @@
     "integrity": "sha256-yy4lbcXGTKI1SVgO9apxx57CjrzSvIVN+hBBTFUjYK4=",
     "strip_prefix": "Directory-Scanner-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-JDQFDb9fpxERSXKUDxaJK5JAF1pC6tAvRzFPMp4DxaI="
+        "BUILD.bazel": "sha256-gZAZVixrlyECD0vxv5R4ex6tWb/HXmcrdhBXkY9c2HM="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-TAFiE9DOfbLElOMAhrWZF7MC24wpLc0h853uvZeAyD8=",
     "strip_prefix": "XML-SAX-Expat-0.51",
     "overlay": {
-        "BUILD.bazel": "sha256-h85Q/6HdBbNzf7e+wD/M4/7cDf8k93EL3zbjYyINy7w="
+        "BUILD.bazel": "sha256-ucULLGxlHWGU/5M7NZXWvZIpL53CgWpo7H8N/VJeflo="
     }
 }

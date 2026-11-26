@@ -16,14 +16,21 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "skip32.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Crypt/Skip32/XS/XS",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "skip32.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

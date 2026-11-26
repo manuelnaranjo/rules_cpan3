@@ -3,6 +3,6 @@
     "integrity": "sha256-bCLQafWlesIG1GWbKLiGm7knBkC7lV793UUdzFjNs5E=",
     "strip_prefix": "Plack-Middleware-FixMissingBodyInRedirect-0.12",
     "overlay": {
-        "BUILD.bazel": "sha256-bkOUkI8TGHFN38LYDBi+Qrs0Sdpewk7BDHmCbJiSUJ4="
+        "BUILD.bazel": "sha256-vStCpzqfDACFBibjPsD38F995f1pt44uAS58g+Ft9Lo="
     }
 }

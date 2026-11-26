@@ -3,6 +3,6 @@
     "integrity": "sha256-O/aLshIpj6aZpSdJ3d/zVYOnTzapLKichDuFTynYfHc=",
     "strip_prefix": "MailTools-2.22",
     "overlay": {
-        "BUILD.bazel": "sha256-uBo1Oh4kyPmik92oiJGdpdvjyeTkJzb8S7Ex77GU8E8="
+        "BUILD.bazel": "sha256-xoVXe90a/JwE9Q/9lF6AWPcJ3dzD+XXWoJo7otbdl5w="
     }
 }

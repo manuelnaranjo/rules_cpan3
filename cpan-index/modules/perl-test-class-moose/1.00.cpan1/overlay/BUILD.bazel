@@ -26,7 +26,21 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-import-into",
+        "@perl-json-maybexs",
+        "@perl-list-someutils",
+        "@perl-module-runtime",
+        "@perl-module-util",
+        "@perl-moose",
+        "@perl-moosex-getopt",
+        "@perl-namespace-autoclean",
+        "@perl-package-deprecationmanager",
+        "@perl-parallel-forkmanager",
+        "@perl-sub-attribute",
+        "@perl-test-most",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

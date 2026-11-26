@@ -3,6 +3,6 @@
     "integrity": "sha256-4d7YWuPXa1nAO4aX9KbLAa4xvWKpNU9bt9GPnpJ7SF8=",
     "strip_prefix": "Term-VT102-Boundless-0.05",
     "overlay": {
-        "BUILD.bazel": "sha256-/I/V1ifbYe7Edz+srEb560mF3bfi+TB0zUcRVLLMY4s="
+        "BUILD.bazel": "sha256-vgTeZNSso2NBJ0XWsFLh2ZJopohJbg/1xNuvqG5UMWY="
     }
 }

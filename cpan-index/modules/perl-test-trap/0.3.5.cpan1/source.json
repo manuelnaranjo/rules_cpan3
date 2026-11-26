@@ -3,6 +3,6 @@
     "integrity": "sha256-VPmQFlYrWx1yEQEA8fK+Q3F4zfhDdvSV/9A3bx1+y5o=",
     "strip_prefix": "Test-Trap-v0.3.5",
     "overlay": {
-        "BUILD.bazel": "sha256-/ppXEWU3QpYtKRGke2Rnabiq+6Fwhxxd9uk03YsEtLQ="
+        "BUILD.bazel": "sha256-3HP1AHArEvFghpg3weGdUbhqGhA8dhq2fxmNWOiTwjU="
     }
 }

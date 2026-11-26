@@ -26,7 +26,24 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-anyevent",
+        "@perl-authen-scram",
+        "@perl-compress-lz4frame",
+        "@perl-compress-snappy",
+        "@perl-const-fast",
+        "@perl-data-compare",
+        "@perl-data-hexdump-range",
+        "@perl-data-validate-domain",
+        "@perl-data-validate-ip",
+        "@perl-exception-class",
+        "@perl-gzip-faster",
+        "@perl-params-util",
+        "@perl-scalar-util-numeric",
+        "@perl-string-crc32",
+        "@perl-sys-sigaction",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

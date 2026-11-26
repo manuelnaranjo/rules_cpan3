@@ -3,6 +3,6 @@
     "integrity": "sha256-fWTrLfqH6tAQzfVcihvf3lC3tYUtfLjPIwT1W+ousAc=",
     "strip_prefix": "ExtUtils-InstallPaths-0.015",
     "overlay": {
-        "BUILD.bazel": "sha256-9GwKy9K6dgBpzS6Nu71hl8yD0GMpdAx+1QUmqQ6Qkr8="
+        "BUILD.bazel": "sha256-yBtMGMlzNYPsLkE1XKQibQMLMj3D8fTtsola95IYIkM="
     }
 }

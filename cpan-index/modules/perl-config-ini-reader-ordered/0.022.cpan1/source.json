@@ -3,6 +3,6 @@
     "integrity": "sha256-Byv/OzL0GvgybsFyx9JKsosuXzYCH1Jo0MjC44ewY1Q=",
     "strip_prefix": "Config-INI-Reader-Ordered-0.022",
     "overlay": {
-        "BUILD.bazel": "sha256-br0cEB2dlmKBFjPjQhFgEV16XTOMACnZu6Fw1tS5gTw="
+        "BUILD.bazel": "sha256-eO2+Sg7kPyBU/RQPFeQfRaQDqk6sj66j4CQKuoV/bv4="
     }
 }

@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-capture-tiny",
+        "@perl-io-interactive",
+        "@perl-json-maybexs",
+        "@perl-ref-util",
+        "@perl-termreadkey",
+        "@perl-yaml-libyaml",
+    ],
 )
 
 alias(

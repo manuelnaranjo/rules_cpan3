@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-module-runtime",
+        "@perl-moose",
+        "@perl-namespace-autoclean",
+        "@perl-string-rewriteprefix",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-heL4Bb/IHNc4wpQxayelFTlwNvOXoP8cbI11TDhTAwY=",
     "strip_prefix": "DBIx-ContextualFetch-1.03",
     "overlay": {
-        "BUILD.bazel": "sha256-zSTB1iQq5us3vxkV0FwtK0CCxnAARX9JE3ik6drXVsc="
+        "BUILD.bazel": "sha256-djekpgMIxhYXUAkPMesb57uHgipGFB7C8X8/sdE0e48="
     }
 }

@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Net/Patricia/Patricia",
     textual_hdrs = glob(
         [
@@ -78,7 +77,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-net-cidr-lite",
+        "@perl-socket6",
+    ],
 )
 
 alias(

@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-anyevent",
+        "@perl-http-message",
+        "@perl-moo",
+        "@perl-moox-types-mooselike",
+    ],
 )
 
 alias(

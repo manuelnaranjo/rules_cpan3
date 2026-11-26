@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-crypt-random-source",
+        "@perl-math-random-isaac",
+        "@perl-moo",
+    ],
 )
 
 alias(

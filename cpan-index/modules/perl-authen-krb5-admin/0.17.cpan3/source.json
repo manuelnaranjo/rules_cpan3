@@ -4,6 +4,6 @@
     "strip_prefix": "Authen-Krb5-Admin-0.17",
     "overlay": {
         "lib/Authen/Krb5/Admin.pm": "sha256-t0zch4iFxe5npsi91+ibjLwgJB3gFKINkohVbSY5SUU=",
-        "BUILD.bazel": "sha256-p3kOnQWjhit2xAk31+3gyr9az50PZ1Anr0fYbYAjbHw="
+        "BUILD.bazel": "sha256-EOF3zGXlRMMKy3xDy38ioV6MDf4bL6ybPxO3483kkAE="
     }
 }

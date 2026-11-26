@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-accessor",
+        "@perl-config-tiny",
+        "@perl-math-calc-units",
+        "@perl-params-validate",
+    ],
 )
 
 alias(

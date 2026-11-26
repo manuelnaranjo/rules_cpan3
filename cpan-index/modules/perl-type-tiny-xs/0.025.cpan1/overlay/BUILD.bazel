@@ -19,11 +19,16 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Type/Tiny/XS/XS",
     textual_hdrs = glob(
         [

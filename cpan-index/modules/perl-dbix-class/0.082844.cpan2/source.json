@@ -4,6 +4,6 @@
     "strip_prefix": "DBIx-Class-0.082844",
     "overlay": {
         "Makefile": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-        "BUILD.bazel": "sha256-/KBIIzbjCqcOahwvCyL2DbcG5rI/HmPQ3Kub2SPeqRo="
+        "BUILD.bazel": "sha256-BjWgfsFv+ZitKGFdZsdOnWqvQPjcqXtPvqCOievjZw0="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-zB9OCuHTmw1MPd3M/XQjx3xnpwlQxLXsq/jKVTqylLQ=",
     "strip_prefix": "DateTime-Format-SQLite-0.11",
     "overlay": {
-        "BUILD.bazel": "sha256-PDuYdSm4xLJliDSRxE7uhjUKU3k1yaOg8YWtYVWjeYU="
+        "BUILD.bazel": "sha256-Snwo/KQKbQj6D9NDs+yaBaibPjAvJwVENgLHEwdenPU="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-Lc4daP3pnVPbnKQ+IRtpsWm6Lvrs+HpVyzOpM2BHyW0=",
     "strip_prefix": "Email-Simple-2.218",
     "overlay": {
-        "BUILD.bazel": "sha256-AQi4q2C8HrW+JcST90ffXTcADz9ybbk+1iNK0oV8kt4="
+        "BUILD.bazel": "sha256-UsY+cAoVYNLi9sJrkwPAOxKHZJeMhoR2JfRouZaPYMs="
     }
 }

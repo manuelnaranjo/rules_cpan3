@@ -3,6 +3,6 @@
     "integrity": "sha256-LGc91XyGIINw2hAPdfBIJTGwUwaqX3IQew6ukLbOthU=",
     "strip_prefix": "Geo-Distance-0.25",
     "overlay": {
-        "BUILD.bazel": "sha256-Yzujvz7qPwwh7XO/rv0NTmb/4bAYArf6yBmiD0bvdVk="
+        "BUILD.bazel": "sha256-qhc2i77l4Dyazz3APXUDz7pkbEtXEvYTsYcQHnZMrpo="
     }
 }

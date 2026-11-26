@@ -26,7 +26,26 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-archive-zip",
+        "@perl-config-general",
+        "@perl-crypt-blowfish-pp",
+        "@perl-digest-sha1",
+        "@perl-file-searchpath",
+        "@perl-io-socket-multicast",
+        "@perl-json",
+        "@perl-libwww-perl",
+        "@perl-module-find",
+        "@perl-monitoring-plugin",
+        "@perl-sys-sigaction",
+        "@perl-term-clui",
+        "@perl-term-progressbar",
+        "@perl-term-shellui",
+        "@perl-term-size",
+        "@perl-uri",
+        "@perl-xml-libxml",
+        "@perl-xml-twig",
+    ],
 )
 
 alias(

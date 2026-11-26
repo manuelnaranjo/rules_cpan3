@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-carp-assert-more",
+        "@perl-html-form",
+        "@perl-html-parser",
+        "@perl-http-message",
+        "@perl-libwww-perl",
+        "@perl-test-longstring",
+        "@perl-www-mechanize",
+    ],
 )
 
 alias(

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-dancer2",
+        "@perl-graphql",
+        "@perl-module-runtime",
+    ],
 )
 
 alias(

@@ -30,7 +30,6 @@ cpan_xs(
             "lib/Params/Classify.xs",
         ],
     ),
-    defines = [],
     output_loc = "auto/Params/Classify/Classify",
     textual_hdrs = glob(
         [

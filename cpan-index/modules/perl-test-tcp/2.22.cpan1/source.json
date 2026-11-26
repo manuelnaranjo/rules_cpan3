@@ -3,6 +3,6 @@
     "integrity": "sha256-PlPDwG1tCYCiv+uRVgK3FOaC7iEa6IwRdIzyzHFOe1c=",
     "strip_prefix": "Test-TCP-2.22",
     "overlay": {
-        "BUILD.bazel": "sha256-APTkY+9K2frtAHJfOFnZXQbvrLmuhLBN6VGOY6M0bnY="
+        "BUILD.bazel": "sha256-gGXj2yvw2TdSAmUaOW7DBgiHeKFZ0mvYDxT1AyWqJrs="
     }
 }

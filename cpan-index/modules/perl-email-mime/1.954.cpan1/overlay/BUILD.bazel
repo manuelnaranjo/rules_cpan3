@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-email-address-xs",
+        "@perl-email-messageid",
+        "@perl-email-mime-contenttype",
+        "@perl-email-mime-encodings",
+        "@perl-email-simple",
+        "@perl-mime-types",
+        "@perl-module-runtime",
+    ],
 )
 
 alias(

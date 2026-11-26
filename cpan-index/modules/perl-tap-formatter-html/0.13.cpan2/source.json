@@ -3,6 +3,6 @@
     "integrity": "sha256-IgPewz3ZjTPyV7b/ONraPF4fUQXvd5eXOlpgmFwT2TM=",
     "strip_prefix": "TAP-Formatter-HTML-0.13",
     "overlay": {
-        "BUILD.bazel": "sha256-i9ETlHHkrMS2Dco3hUXcVMExirFBBo0ekn1832JOA3I="
+        "BUILD.bazel": "sha256-N+AlUTE1Z42nZtHe2I9Uql2DsOmdq1zA0FxC9b25GJ4="
     }
 }

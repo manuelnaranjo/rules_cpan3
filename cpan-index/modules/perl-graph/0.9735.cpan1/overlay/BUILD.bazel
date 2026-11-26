@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-heap",
+        "@perl-set-object",
+    ],
 )
 
 alias(

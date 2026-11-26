@@ -3,6 +3,6 @@
     "integrity": "sha256-UnnrDRNsUz/4l/aTTDqtbyBQS5l/smBuUsXbvZJ1jnM=",
     "strip_prefix": "RPC-XML-0.82",
     "overlay": {
-        "BUILD.bazel": "sha256-7wbSxYaLVsDzQOGJSvrr6ukqiS5fOeukMS3hwsi2a5A="
+        "BUILD.bazel": "sha256-YSLGCaqBJYjzqwLRF3gBu075jWyZzy89nK87q3gHXMU="
     }
 }

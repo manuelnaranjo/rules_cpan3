@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-http-cookies",
+        "@perl-http-message",
+        "@perl-plack",
+        "@perl-test-tcp",
+        "@perl-test-www-mechanize",
+    ],
 )
 
 alias(

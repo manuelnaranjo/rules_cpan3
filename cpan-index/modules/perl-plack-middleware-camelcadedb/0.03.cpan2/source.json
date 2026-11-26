@@ -3,6 +3,6 @@
     "integrity": "sha256-Dg7XzSPesEZfbs44HA+pf0+5kz5aCJka6u6vvT4POZ0=",
     "strip_prefix": "Plack-Middleware-Camelcadedb-0.03",
     "overlay": {
-        "BUILD.bazel": "sha256-dsiykU0nGgGG3ab9ALIF/6jMGtJVB9hGZ90j45qJgjE="
+        "BUILD.bazel": "sha256-qTATaO4/gbga+ccRm5hIoBC2bCQolqFQt4DdRPyaEU4="
     }
 }

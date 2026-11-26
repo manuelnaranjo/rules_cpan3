@@ -26,7 +26,21 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-archive-zip",
+        "@perl-clone",
+        "@perl-file-which",
+        "@perl-http-message",
+        "@perl-io-string",
+        "@perl-json",
+        "@perl-libwww-perl",
+        "@perl-moo",
+        "@perl-namespace-clean",
+        "@perl-sub-install",
+        "@perl-test-longstring",
+        "@perl-try-tiny",
+        "@perl-xml-simple",
+    ],
 )
 
 alias(

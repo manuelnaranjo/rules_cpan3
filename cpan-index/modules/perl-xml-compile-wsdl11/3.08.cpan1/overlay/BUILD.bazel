@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-log-report",
+        "@perl-xml-compile",
+        "@perl-xml-compile-cache",
+        "@perl-xml-compile-soap",
+        "@perl-xml-compile-tester",
+    ],
 )
 
 alias(

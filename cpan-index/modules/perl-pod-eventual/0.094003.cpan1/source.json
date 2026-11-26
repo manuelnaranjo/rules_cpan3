@@ -3,6 +3,6 @@
     "integrity": "sha256-fwYMw00RZWzgadsGHj1g7cDKvI+JpKLcfqrpXayFbS0=",
     "strip_prefix": "Pod-Eventual-0.094003",
     "overlay": {
-        "BUILD.bazel": "sha256-jrcM7qbN8VWoxazvkc280kGWcs+TOzOYodn++g7QWGg="
+        "BUILD.bazel": "sha256-QqURVIoF7ThgZ3tKbwFdDvoEY/uADYLLwNkJlC8uxAI="
     }
 }

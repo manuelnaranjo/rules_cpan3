@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Data-OptList-0.115.tar.gz",
-    "integrity": "sha256-+g583BCSXbklqC+OuWCKcB8cK/XojVEtms1Gl34XQFY=",
-    "strip_prefix": "Data-OptList-0.115",
-    "overlay": {
-        "BUILD.bazel": "sha256-/kxvYnkx+XFoZK7r+dU0hbbIjz0l9mgmHWCrBBnp86k="
-    }
-}

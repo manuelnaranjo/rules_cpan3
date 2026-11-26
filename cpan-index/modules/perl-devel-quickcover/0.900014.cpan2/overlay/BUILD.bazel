@@ -83,7 +83,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-sharedir",
+        "@perl-json-maybexs",
+        "@perl-path-tiny",
+        "@perl-sereal",
+        "@perl-text-microtemplate",
+    ],
 )
 
 alias(

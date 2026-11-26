@@ -3,6 +3,6 @@
     "integrity": "sha256-xGvftNwKuPxjZClOV2UOQOAKpxvtLJIFoxsogidKzC4=",
     "strip_prefix": "App-Oozie-0.020",
     "overlay": {
-        "BUILD.bazel": "sha256-YfD86kHyTyumde9J7IPDizhX0P8qvvmvgVlE8iR0Kyw="
+        "BUILD.bazel": "sha256-ildnqHLVxip5AcLIgknyGeQxvWOUMoA42tAr5n5iG1M="
     }
 }

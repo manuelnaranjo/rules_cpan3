@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-devel-globalphase",
+        "@perl-package-stash",
+        "@perl-test-deep",
+        "@perl-test-trap",
+        "@perl-tie-ixhash",
+    ],
 )
 
 alias(

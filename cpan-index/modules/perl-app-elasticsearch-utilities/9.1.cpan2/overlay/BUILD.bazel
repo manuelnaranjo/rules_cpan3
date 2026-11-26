@@ -26,7 +26,32 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-chi",
+        "@perl-cli-helpers",
+        "@perl-clone",
+        "@perl-const-fast",
+        "@perl-datetime",
+        "@perl-file-slurp-tiny",
+        "@perl-getopt-long-descriptive",
+        "@perl-hash-flatten",
+        "@perl-hash-merge-simple",
+        "@perl-http-message",
+        "@perl-ipc-run3",
+        "@perl-json-maybexs",
+        "@perl-libwww-perl",
+        "@perl-module-pluggable",
+        "@perl-moo",
+        "@perl-namespace-autoclean",
+        "@perl-net-cidr-lite",
+        "@perl-ref-util",
+        "@perl-sub-exporter",
+        "@perl-test-deep",
+        "@perl-text-csv-xs",
+        "@perl-type-tiny",
+        "@perl-uri",
+        "@perl-yaml-libyaml",
+    ],
 )
 
 alias(

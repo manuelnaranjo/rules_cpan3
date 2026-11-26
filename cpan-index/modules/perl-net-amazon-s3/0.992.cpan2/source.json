@@ -3,6 +3,6 @@
     "integrity": "sha256-S3s7dilZULYO1EGENsc2Ph/Z/y3gnIxhwmUpZGjGuWw=",
     "strip_prefix": "Net-Amazon-S3-0.992",
     "overlay": {
-        "BUILD.bazel": "sha256-/nQC9ruFYJXiFRD+gMRwNTpvRyKb9mpjseinQcAVaVM="
+        "BUILD.bazel": "sha256-cEt9FVkVQZobY97PHR08qb7RJ10f74dGLfpI/PbpD0U="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-B9abxV/6EBF3aDbdlQJ9M8sumYnJgXCtvLzu0/rUUzo=",
     "strip_prefix": "Plack-Middleware-ChromeLogger-0.01",
     "overlay": {
-        "BUILD.bazel": "sha256-TkEWv8FAYgf7AaZ5Jkv3lJ/pKMUZL0N4JDKRfIhRP2g="
+        "BUILD.bazel": "sha256-6xPePqamntnnBOO8oc/1gQuTvtsvLJN4jCt9nG0KT0E="
     }
 }

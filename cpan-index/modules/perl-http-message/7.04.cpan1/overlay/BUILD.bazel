@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-clone",
+        "@perl-encode-locale",
+        "@perl-http-date",
+        "@perl-io-html",
+        "@perl-lwp-mediatypes",
+        "@perl-uri",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-gUYto82edFkB8p/wBsTIBMydsBfM9FFUs82VWFQLwZE=",
     "strip_prefix": "Software-License-0.104007",
     "overlay": {
-        "BUILD.bazel": "sha256-MLKzIEl3xEoEKisf/atk5yXSwBiIvwRZ7ZQ/ekbPcuM="
+        "BUILD.bazel": "sha256-Q+WPVljLMsMKT0dMM3pnaed+jAlmy45Iy/DEQ3VjlaI="
     }
 }

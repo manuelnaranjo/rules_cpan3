@@ -16,14 +16,21 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "picohttpparser/picohttpparser.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/HTTP/Parser/XS/XS",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "picohttpparser/picohttpparser.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

@@ -3,6 +3,6 @@
     "integrity": "sha256-VqWytstx7QazzaNenqhcKtacFgW4jOyDUW2vu9RqKxo=",
     "strip_prefix": "Path-Router-0.15",
     "overlay": {
-        "BUILD.bazel": "sha256-vNQLy/Yi8XqDTNRyisf9bHdhsmy9fV7Tvnfmu69zzGw="
+        "BUILD.bazel": "sha256-R6BmrnOgIQ0RRJici8d4giEJKxOX0B/M0qC4pTE65oY="
     }
 }

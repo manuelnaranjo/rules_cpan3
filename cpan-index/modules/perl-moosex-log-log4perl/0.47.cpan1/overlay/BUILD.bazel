@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-log-log4perl",
+        "@perl-moo",
+    ],
 )
 
 alias(

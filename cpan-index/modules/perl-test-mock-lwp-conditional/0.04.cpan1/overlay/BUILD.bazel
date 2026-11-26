@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-method-modifiers",
+        "@perl-libwww-perl",
+        "@perl-math-random-secure",
+        "@perl-sub-install",
+    ],
 )
 
 alias(

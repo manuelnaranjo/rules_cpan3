@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-crypt-pbkdf2",
+        "@perl-crypt-urandom",
+        "@perl-cryptx",
+    ],
 )
 
 alias(

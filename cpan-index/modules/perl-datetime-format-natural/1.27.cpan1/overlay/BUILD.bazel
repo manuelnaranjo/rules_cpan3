@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-boolean",
+        "@perl-clone",
+        "@perl-datetime",
+        "@perl-datetime-hires",
+        "@perl-datetime-timezone",
+        "@perl-params-validate",
+    ],
 )
 
 alias(

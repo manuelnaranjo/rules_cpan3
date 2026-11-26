@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-namespace-autoclean",
+        "@perl-perl-critic",
+        "@perl-readonly",
+    ],
 )
 
 alias(

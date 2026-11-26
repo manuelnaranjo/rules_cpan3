@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-html-parser",
+        "@perl-term-vt102-boundless",
+    ],
 )
 
 alias(

@@ -80,7 +80,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-dbi",
+    ],
 )
 
 alias(

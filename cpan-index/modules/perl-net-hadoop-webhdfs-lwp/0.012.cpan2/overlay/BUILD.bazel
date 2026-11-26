@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-html-parser",
+        "@perl-http-request-streamingupload",
+        "@perl-libwww-perl",
+        "@perl-lwp-authen-negotiate",
+        "@perl-net-hadoop-webhdfs",
+        "@perl-ref-util",
+    ],
 )
 
 alias(

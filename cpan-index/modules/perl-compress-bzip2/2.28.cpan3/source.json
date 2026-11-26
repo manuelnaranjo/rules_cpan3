@@ -6,6 +6,6 @@
         "const-xs.inc": "sha256-D4SXEbjZDfe1WefvMbCciwyGo6MJUSnNc5cBg6ZVF6A=",
         "const-c.inc": "sha256-HulVP8sAFqvNq7/tW3xVeMwp5tpQv/J2p5RFNzCIzlM=",
         "lib/auto/Compress/Bzip2/autosplit.ix": "sha256-ooqVYqwI0KQ/wf9eR9zKBqzkTVUIz6g4HinnjRQKXlk=",
-        "BUILD.bazel": "sha256-SOwNxi06Y2h+2K9tmtu1+ZS3OOlDz4+xAMblYsQzQQc="
+        "BUILD.bazel": "sha256-ievJyEAVCKytPO3d/wyXbRvBPuVP5+zVONLQufh8Sbo="
     }
 }

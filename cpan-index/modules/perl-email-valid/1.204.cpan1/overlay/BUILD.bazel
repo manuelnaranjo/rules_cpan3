@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-capture-tiny",
+        "@perl-mailtools",
+        "@perl-net-dns",
+        "@perl-net-domain-tld",
+    ],
 )
 
 alias(

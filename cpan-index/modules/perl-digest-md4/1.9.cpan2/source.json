@@ -3,6 +3,6 @@
     "integrity": "sha256-ZlEQu6MkcPOY8xHNZGL9iXXXyDZ1/2dLwvbHtysMqqY=",
     "strip_prefix": "Digest-MD4-1.9",
     "overlay": {
-        "BUILD.bazel": "sha256-2gR16M4WMVyiXrpyoJvpFqK0Et43G7T21DIFTl20vHY="
+        "BUILD.bazel": "sha256-X8uaf5YaVGZrmn5Yn6ehELKJtJGnBHMJ6yjyuHnmt1Y="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-R06bh6a9nTJ6/+R6Bkj5RjjIdrsapBlpG+PYHEek29c=",
     "strip_prefix": "App-Daemon-0.22",
     "overlay": {
-        "BUILD.bazel": "sha256-RdHWSmbBAARpPHzbKYrt9VfPxAj8Z6nDpoCCjm8YQWU="
+        "BUILD.bazel": "sha256-9k+PTDwZ8AyG6dCPR+49Gn0pLeDd37Qjr3c5wkWQruc="
     }
 }
