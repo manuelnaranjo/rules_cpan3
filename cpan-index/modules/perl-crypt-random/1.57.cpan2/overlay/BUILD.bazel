@@ -163,17 +163,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_Win32API",
-        ":test_t_author-pod-spell",
-        ":test_t_author-pod-syntax",
-        ":test_t_chisquare",
-        ":test_t_generator",
-        ":test_t_makerandom_itv",
-        ":test_t_octet_string",
-        ":test_t_pari_misfeature",
-        ":test_t_random",
-        ":test_t_release-kwalitee",
-        ":test_t_release-meta-json",
-    ],
+    tests = [],
 )

@@ -129,13 +129,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_author-pod-syntax",
-        ":test_t_author-uniform",
-        ":test_t_compile",
-        ":test_t_memory",
-        ":test_t_range",
-        ":test_t_release-changes_has_content",
-        ":test_t_seed",
-    ],
+    tests = [],
 )

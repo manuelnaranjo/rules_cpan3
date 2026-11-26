@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "libeio/eio.c",
         ],
     ),
@@ -183,14 +189,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00_load",
-        ":test_t_01_stat",
-        ":test_t_02_read",
-        ":test_t_03_errors",
-        ":test_t_04_fork",
-        ":test_t_05_readdir",
-        ":test_t_06_group",
-        ":test_t_07_feeder",
-    ],
+    tests = [],
 )

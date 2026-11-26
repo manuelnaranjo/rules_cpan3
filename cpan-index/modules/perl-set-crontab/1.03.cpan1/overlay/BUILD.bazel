@@ -33,3 +33,9 @@ alias(
     name = "perl-set-crontab",
     actual = ":Set-Crontab",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

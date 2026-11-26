@@ -3,6 +3,6 @@
     "integrity": "sha256-T2+OsMTvvJOYoPHvDJf7dwTu5MzZCvGjHdoyhUqoEWQ=",
     "strip_prefix": "Config-IniFiles-3.003000",
     "overlay": {
-        "BUILD.bazel": "sha256-iN9kgsH1aLLonK8u369Aak6Qlvq7d40QEEbZqskN45w="
+        "BUILD.bazel": "sha256-qJGP0m6vEzczsCi/ZUrglP8Tp0tchsTm4eBsyRFRHuw="
     }
 }

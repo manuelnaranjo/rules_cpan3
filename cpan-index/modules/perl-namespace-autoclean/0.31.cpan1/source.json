@@ -3,6 +3,6 @@
     "integrity": "sha256-07MsguHSyqnVi4yAdZZSQObKtmq5NQvW9r6kygfpONY=",
     "strip_prefix": "namespace-autoclean-0.31",
     "overlay": {
-        "BUILD.bazel": "sha256-QORK5GXp8ntBnycayA6p6gUJ+tjRGsXT5MYTIBLpX/k="
+        "BUILD.bazel": "sha256-hNkdzAdkhN9qODxikC8idtgPmlxicK1IaUrW5IAxAmE="
     }
 }

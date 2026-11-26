@@ -3,6 +3,6 @@
     "integrity": "sha256-r59KeAilF4YMvB5aGefhIfbVf8uIWj6CC366SaSe/NI=",
     "strip_prefix": "Log-Log4perl-Appender-Elasticsearch-0.09",
     "overlay": {
-        "BUILD.bazel": "sha256-64MDEUQ7vf9aj1Lwp3je2y7bjSkk9mtZkyvjR+Io1qM="
+        "BUILD.bazel": "sha256-F/AeDkm7sfSIYYZudiwZ11rs4WlpM7FrGbGDAZgU5Wg="
     }
 }

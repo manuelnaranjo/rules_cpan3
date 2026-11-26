@@ -3,6 +3,6 @@
     "integrity": "sha256-/2Pprnot4llDU4LbbulQnWgTalVK9F32BXNmsGU0kr4=",
     "strip_prefix": "Plack-Debugger-0.03",
     "overlay": {
-        "BUILD.bazel": "sha256-3jmGc87m752Mkz9AnjDBTQhNcPtNmQFbTXwY5psxPMc="
+        "BUILD.bazel": "sha256-qHVkyPfMYvkBl/c3+wqYQiWN8i5H24HwkJfgTNu3ngQ="
     }
 }

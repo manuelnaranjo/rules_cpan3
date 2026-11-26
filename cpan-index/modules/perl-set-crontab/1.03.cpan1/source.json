@@ -3,6 +3,6 @@
     "integrity": "sha256-R+KU6I0tE54tBt+lRLkaPMVlajpt0VWU3HZHWfuqhto=",
     "strip_prefix": "Set-Crontab-1.03",
     "overlay": {
-        "BUILD.bazel": "sha256-C0W+em9VsW7UbgDbc0Veh8HjPIsRHUQ28kA9K3gdfvo="
+        "BUILD.bazel": "sha256-1ckolxzVDpsnqonxzjHQ8w79dPi5sQP8b/TFp2/utHM="
     }
 }

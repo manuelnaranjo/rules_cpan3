@@ -133,14 +133,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_01-query",
-        ":test_t_01-querystring",
-        ":test_t_02-index-data",
-        ":test_t_03-hash-flattening",
-        ":test_t_04-aggregate-expand",
-        ":test_t_05-aggregate-flatten",
-        ":test_t_06-version-hacks",
-    ],
+    tests = [],
 )

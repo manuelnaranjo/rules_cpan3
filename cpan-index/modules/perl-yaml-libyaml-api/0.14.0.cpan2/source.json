@@ -3,6 +3,6 @@
     "integrity": "sha256-MaD+3XfYJNqziYO+mjtCaGP4qrEwE765XE7PgJWXM+E=",
     "strip_prefix": "YAML-LibYAML-API-v0.14.0",
     "overlay": {
-        "BUILD.bazel": "sha256-YoCXaQF/ogVO0QZ3n7pbaB/ZysB4lWRyF32LDeVBkPo="
+        "BUILD.bazel": "sha256-awBdUB3GxPgjl447QqswloM/Oxo1d0147Ua8dHMlQz8="
     }
 }

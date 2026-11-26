@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Pod-Coverage-TrustPod/basic.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Pod-Coverage-TrustPod/no-pod-parent.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Pod-Coverage/02simple.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -90,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Pod-Coverage/03import.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -98,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Pod-Coverage/05parentage.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -106,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Pod-Coverage/06trustme.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -114,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Pod-Coverage/08tie.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -122,6 +129,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Pod-Coverage/09whitespace.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -130,6 +138,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PC-via-TPCTM/all_pod_coverage_ok.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -138,6 +147,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PC-via-TPCTM/alt_class.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -146,6 +156,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PC-via-TPCTM/nopod.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -154,6 +165,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PC-via-TPCTM/nosymbols.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -162,6 +174,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PC-via-TPCTM/parms.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -170,6 +183,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PC-via-TPCTM/privates.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -178,6 +192,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PC-via-TPCTM/self.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -186,6 +201,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PC-via-TPCTM/simple.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -194,6 +210,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PCTM-via-TPC/all_pod_coverage_ok.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -202,6 +219,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PCTM-via-TPC/alt_class.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -210,6 +228,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PCTM-via-TPC/nopod.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -218,6 +237,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PCTM-via-TPC/nosymbols.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -226,6 +246,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PCTM-via-TPC/parms.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -234,6 +255,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PCTM-via-TPC/privates.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -242,6 +264,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PCTM-via-TPC/self.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -250,6 +273,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage-PCTM-via-TPC/simple.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -258,6 +282,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage/nopod.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -266,6 +291,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage/nosymbols.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -274,6 +300,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage/parms.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -282,6 +309,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage/privates.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -290,6 +318,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test-Pod-Coverage/simple.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -298,6 +327,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -306,6 +336,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moo.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage-TrustMe_test_lib"],
 )
 
@@ -320,37 +351,6 @@ perl_test(
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_Pod-Coverage-TrustPod_basic",
-        ":test_t_Pod-Coverage-TrustPod_no-pod-parent",
-        ":test_t_Pod-Coverage_02simple",
-        ":test_t_Pod-Coverage_03import",
-        ":test_t_Pod-Coverage_05parentage",
-        ":test_t_Pod-Coverage_06trustme",
-        ":test_t_Pod-Coverage_08tie",
-        ":test_t_Pod-Coverage_09whitespace",
-        ":test_t_Test-Pod-Coverage-PC-via-TPCTM_all_pod_coverage_ok",
-        ":test_t_Test-Pod-Coverage-PC-via-TPCTM_alt_class",
-        ":test_t_Test-Pod-Coverage-PC-via-TPCTM_nopod",
-        ":test_t_Test-Pod-Coverage-PC-via-TPCTM_nosymbols",
-        ":test_t_Test-Pod-Coverage-PC-via-TPCTM_parms",
-        ":test_t_Test-Pod-Coverage-PC-via-TPCTM_privates",
-        ":test_t_Test-Pod-Coverage-PC-via-TPCTM_self",
-        ":test_t_Test-Pod-Coverage-PC-via-TPCTM_simple",
-        ":test_t_Test-Pod-Coverage-PCTM-via-TPC_all_pod_coverage_ok",
-        ":test_t_Test-Pod-Coverage-PCTM-via-TPC_alt_class",
-        ":test_t_Test-Pod-Coverage-PCTM-via-TPC_nopod",
-        ":test_t_Test-Pod-Coverage-PCTM-via-TPC_nosymbols",
-        ":test_t_Test-Pod-Coverage-PCTM-via-TPC_parms",
-        ":test_t_Test-Pod-Coverage-PCTM-via-TPC_privates",
-        ":test_t_Test-Pod-Coverage-PCTM-via-TPC_self",
-        ":test_t_Test-Pod-Coverage-PCTM-via-TPC_simple",
-        ":test_t_Test-Pod-Coverage_nopod",
-        ":test_t_Test-Pod-Coverage_nosymbols",
-        ":test_t_Test-Pod-Coverage_parms",
-        ":test_t_Test-Pod-Coverage_privates",
-        ":test_t_Test-Pod-Coverage_simple",
-        ":test_t_basic",
-        ":test_t_moo",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

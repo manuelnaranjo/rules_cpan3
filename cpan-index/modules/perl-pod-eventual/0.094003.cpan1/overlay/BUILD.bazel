@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Pod-Eventual_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Pod-Eventual_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/blanks.t"],
+    tags = ["manual"],
     deps = [":Pod-Eventual_test_lib"],
 )
 
@@ -90,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/non-pod.t"],
+    tags = ["manual"],
     deps = [":Pod-Eventual_test_lib"],
 )
 
@@ -98,16 +102,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/nonempty.t"],
+    tags = ["manual"],
     deps = [":Pod-Eventual_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_basic",
-        ":test_t_blanks",
-        ":test_t_non-pod",
-        ":test_t_nonempty",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

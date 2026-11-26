@@ -160,17 +160,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00_compile",
-        ":test_t_author-pod-syntax",
-        ":test_t_content_type",
-        ":test_t_deflater",
-        ":test_t_delayed",
-        ":test_t_furl",
-        ":test_t_no-clobber",
-        ":test_t_streaming",
-        ":test_t_vary",
-        ":test_t_xno-compress",
-        ":test_t_xskip-deflater",
-    ],
+    tests = [],
 )

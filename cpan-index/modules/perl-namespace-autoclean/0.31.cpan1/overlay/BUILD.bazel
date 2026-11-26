@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/also.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -90,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/broken_meta.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -98,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cleanee.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -106,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/constant.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -114,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/except.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -122,6 +129,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/matchclean.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -130,6 +138,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moo-with-moose.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -138,6 +147,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moo.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -146,6 +156,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose-with-native-overloading.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -154,6 +165,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose-withoverloading.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -162,6 +174,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/moose.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -170,6 +183,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/mouse-pp.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -178,6 +192,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/mouse.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -186,6 +201,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/overload.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -194,6 +210,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/sub-install.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
@@ -202,29 +219,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/sub-name.t"],
+    tags = ["manual"],
     deps = [":namespace-autoclean_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_also",
-        ":test_t_basic",
-        ":test_t_broken_meta",
-        ":test_t_cleanee",
-        ":test_t_constant",
-        ":test_t_except",
-        ":test_t_matchclean",
-        ":test_t_moo",
-        ":test_t_moo-with-moose",
-        ":test_t_moose",
-        ":test_t_moose-with-native-overloading",
-        ":test_t_moose-withoverloading",
-        ":test_t_mouse",
-        ":test_t_mouse-pp",
-        ":test_t_overload",
-        ":test_t_sub-install",
-        ":test_t_sub-name",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

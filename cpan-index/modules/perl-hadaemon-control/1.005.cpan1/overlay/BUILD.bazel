@@ -33,3 +33,9 @@ alias(
     name = "perl-hadaemon-control",
     actual = ":HADaemon-Control",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

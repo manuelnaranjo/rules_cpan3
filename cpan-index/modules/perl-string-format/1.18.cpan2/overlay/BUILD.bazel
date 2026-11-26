@@ -115,12 +115,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_01load",
-        ":test_t_02basic",
-        ":test_t_03multiple",
-        ":test_t_04subrefs",
-        ":test_t_05stringfactory",
-        ":test_t_06slash-n",
-    ],
+    tests = [],
 )

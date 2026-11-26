@@ -3,6 +3,6 @@
     "integrity": "sha256-lb2nJ2Jl9XvEj/3t3sXvKM1vdl46GDdX+l8J8M5rmKw=",
     "strip_prefix": "Data-UUID-1.227",
     "overlay": {
-        "BUILD.bazel": "sha256-YjXL56/hHr5f3n03AeHEuqiVpmp1BnPNnCiFtQXuPWI="
+        "BUILD.bazel": "sha256-yLN/gyKGG2TRbSWLlwEuacSYhXmJJpAByDdLokcASis="
     }
 }

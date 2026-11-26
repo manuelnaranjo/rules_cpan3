@@ -3,6 +3,6 @@
     "integrity": "sha256-mKoRSSFxwBb7CCdYGrH6XtAbHpnGNXSJ3fOoJzFYZvE=",
     "strip_prefix": "Carp-Always-0.16",
     "overlay": {
-        "BUILD.bazel": "sha256-aRaFDWywRhhUCzJLpBPOMVs4WxXScrdO0doBtM3Y+8E="
+        "BUILD.bazel": "sha256-Jn/ZkaRYL0oeAfCWiVUv4JxSIQM0lxNQkQJ4rHTwnIg="
     }
 }

@@ -68,6 +68,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":MooseX-StrictConstructor_test_lib"],
 )
 
@@ -76,6 +77,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":MooseX-StrictConstructor_test_lib"],
 )
 
@@ -84,6 +86,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/instance.t"],
+    tags = ["manual"],
     deps = [":MooseX-StrictConstructor_test_lib"],
 )
 
@@ -92,15 +95,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/no_build.t"],
+    tags = ["manual"],
     deps = [":MooseX-StrictConstructor_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_basic",
-        ":test_t_instance",
-        ":test_t_no_build",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

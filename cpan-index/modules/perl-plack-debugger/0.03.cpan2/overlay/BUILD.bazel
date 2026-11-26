@@ -151,16 +151,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_001.basic",
-        ":test_t_020-storage",
-        ":test_t_030-injector",
-        ":test_t_031-injector-status-codes",
-        ":test_t_040-collector",
-        ":test_t_041-collector-error-handling",
-        ":test_t_042-collector-no-cleanup-phase",
-        ":test_t_050-app-debugger",
-        ":test_t_051-app-debugger-errors",
-        ":test_t_100-lpw-2014-examples",
-    ],
+    tests = [],
 )

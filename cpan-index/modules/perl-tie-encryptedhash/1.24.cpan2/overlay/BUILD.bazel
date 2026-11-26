@@ -124,13 +124,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_assignopaque",
-        ":test_t_construction",
-        ":test_t_emptysubclass",
-        ":test_t_hide",
-        ":test_t_opertations",
-        ":test_t_ref",
-        ":test_t_reforgy",
-    ],
+    tests = [],
 )

@@ -32,6 +32,6 @@
         "XML/Parser/Style/Debug.pm": "sha256-FSHtmcJAXehz9BOik6thlm2qYgu/PAhcm8lvLj72oJQ=",
         "XML/Parser/Style/Tree.pm": "sha256-2G53Cskgw/GlPSPohkeT4fT4bHhNkF8iwf+nCHfAOfE=",
         "XML/Parser/Style/Stream.pm": "sha256-Da2Z9xLlk5koFwwJSTe85b1EOIS4kIz5tDu5Jdt0muM=",
-        "BUILD.bazel": "sha256-1E0kjshva7yTAFrBW0HaZlignEadUn5yLNz1IbQdRC4="
+        "BUILD.bazel": "sha256-lLUFjCsRN6vjvXilsqsKRJX7U/xEozoamWzDhyM5CCE="
     }
 }

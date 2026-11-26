@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/col-init.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/collection.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/expand-group.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/faux-export.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/gen-callable.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/group-generator.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/inherited.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/into-level.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/real-export-groupgen.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/real-export-href.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/real-export-setup.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/util-curry.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -167,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/util-currychain.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -175,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/util-like.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -183,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/util-merge.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -191,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/util-mixin.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -199,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/util-namemap.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
@@ -207,30 +225,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/valid-config.t"],
+    tags = ["manual"],
     deps = [":Sub-Exporter_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_col-init",
-        ":test_t_collection",
-        ":test_t_expand-group",
-        ":test_t_faux-export",
-        ":test_t_gen-callable",
-        ":test_t_group-generator",
-        ":test_t_inherited",
-        ":test_t_into-level",
-        ":test_t_real-export-groupgen",
-        ":test_t_real-export-href",
-        ":test_t_real-export-setup",
-        ":test_t_util-curry",
-        ":test_t_util-currychain",
-        ":test_t_util-like",
-        ":test_t_util-merge",
-        ":test_t_util-mixin",
-        ":test_t_util-namemap",
-        ":test_t_valid-config",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

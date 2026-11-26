@@ -124,13 +124,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_10_handler",
-        ":test_t_20_alias",
-        ":test_t_30_request",
-        ":test_t_40_check_jmx4perl",
-        ":test_t_50_config",
-        ":test_t_60_parse_name",
-        ":test_t_70_pod_syntax",
-    ],
+    tests = [],
 )

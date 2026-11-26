@@ -33,3 +33,9 @@ alias(
     name = "perl-digest-perl-md4",
     actual = ":Digest-Perl-MD4",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

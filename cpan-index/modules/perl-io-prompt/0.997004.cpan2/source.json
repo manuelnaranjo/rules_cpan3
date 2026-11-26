@@ -3,6 +3,6 @@
     "integrity": "sha256-8XuzBe5qyLWyA+bYJuuUDE8/bW9L/nGcOzoiX0b1hhU=",
     "strip_prefix": "IO-Prompt-0.997004",
     "overlay": {
-        "BUILD.bazel": "sha256-fXI5sfW0gcexlAmwQjI5EaoO8sBoWaRGIEVY6WgL0ZQ="
+        "BUILD.bazel": "sha256-IojW+/DHQGtxVJ5l5Fl1vlZ0vwljGTK5lRA88jzZ52c="
     }
 }

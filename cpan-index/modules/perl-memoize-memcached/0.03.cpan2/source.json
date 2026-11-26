@@ -3,6 +3,6 @@
     "integrity": "sha256-Ko4gSI+g/1ZrCMbIYaxJnMqwCY99k6NLstfxZZGrXxg=",
     "strip_prefix": "Memoize-Memcached-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-IaNjFSqLx7SYeJRZwuyznUoSCCqxDlcFRK+ODwHiQu8="
+        "BUILD.bazel": "sha256-3BZ/syFhq0kr2n9CNQvqrIRdYGE/cVGd6qafADHYX+8="
     }
 }

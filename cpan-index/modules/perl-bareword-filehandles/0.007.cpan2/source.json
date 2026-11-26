@@ -3,6 +3,6 @@
     "integrity": "sha256-QTRTNxbYevj/9W4lDEiK0G3wp7/0jnz33mP/a8jZwX8=",
     "strip_prefix": "bareword-filehandles-0.007",
     "overlay": {
-        "BUILD.bazel": "sha256-JVhl7FEOI06pb76lqwryIpenZeLiQvbh10QSBx9dsHA="
+        "BUILD.bazel": "sha256-kr6j5cqF/PidKMRePMwRG3XA1wjozhVOvegzaV9TmeI="
     }
 }

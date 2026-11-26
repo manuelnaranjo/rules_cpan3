@@ -3,6 +3,6 @@
     "integrity": "sha256-mOYX/7mgXTHImTeW3tZPEMNSuQb5QXV5hc9Izc0M7xc=",
     "strip_prefix": "DateTime-Event-Cron-0.09",
     "overlay": {
-        "BUILD.bazel": "sha256-g5RJYbzIdrpId0EGExIkfh0xEG0VFWIij7kZ/5sV68c="
+        "BUILD.bazel": "sha256-ChBlK8Eagx5yejBV8C0vGXwLCkMLKmrB8m9uKDiGeCk="
     }
 }

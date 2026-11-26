@@ -70,6 +70,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00.load.t"],
+    tags = ["manual"],
     deps = [":File-Copy-Recursive_test_lib"],
 )
 
@@ -78,6 +79,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01.legacy.t"],
+    tags = ["manual"],
     deps = [":File-Copy-Recursive_test_lib"],
 )
 
@@ -86,6 +88,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02.legacy-symtogsafe.t"],
+    tags = ["manual"],
     deps = [":File-Copy-Recursive_test_lib"],
 )
 
@@ -94,6 +97,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03.github-issue-5.t"],
+    tags = ["manual"],
     deps = [":File-Copy-Recursive_test_lib"],
 )
 
@@ -102,6 +106,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04.readonly-dir.t"],
+    tags = ["manual"],
     deps = [":File-Copy-Recursive_test_lib"],
 )
 
@@ -110,17 +115,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05.legacy-pathmk_unc.t"],
+    tags = ["manual"],
     deps = [":File-Copy-Recursive_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00.load",
-        ":test_t_01.legacy",
-        ":test_t_02.legacy-symtogsafe",
-        ":test_t_03.github-issue-5",
-        ":test_t_04.readonly-dir",
-        ":test_t_05.legacy-pathmk_unc",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

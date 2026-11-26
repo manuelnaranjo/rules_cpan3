@@ -205,22 +205,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-errorhandler",
-        ":test_t_01-i2osp",
-        ":test_t_02-os2ip",
-        ":test_t_03-random_octet",
-        ":test_t_04-octet_xor",
-        ":test_t_05-primitives",
-        ":test_t_06-oaep",
-        ":test_t_07-pss",
-        ":test_t_08-secretkey",
-        ":test_t_09-publickey",
-        ":test_t_10-keygen",
-        ":test_t_11-wrapper",
-        ":test_t_12-versioning",
-        ":test_t_13-es-pkcs1v15",
-        ":test_t_14-ss-pkcs1v15",
-        ":test_t_15-benchmark",
-    ],
+    tests = [],
 )

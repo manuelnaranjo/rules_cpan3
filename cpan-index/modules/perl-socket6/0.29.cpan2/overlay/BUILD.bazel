@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "getaddrinfo.c",
             "getnameinfo.c",
             "inet_ntop.c",
@@ -120,7 +126,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_use",
-    ],
+    tests = [],
 )

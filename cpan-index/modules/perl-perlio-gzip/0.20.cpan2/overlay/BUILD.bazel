@@ -16,12 +16,17 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [
-        "LAYERGZIP_DEFAULT_OS_TYPE",
         "DEBUG_LAYERGZIP",
         "OS",
     ],
@@ -131,8 +136,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_read",
-        ":test_t_write",
-    ],
+    tests = [],
 )

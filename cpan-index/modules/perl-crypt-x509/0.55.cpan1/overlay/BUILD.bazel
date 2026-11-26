@@ -33,3 +33,9 @@ alias(
     name = "perl-crypt-x509",
     actual = ":Crypt-X509",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

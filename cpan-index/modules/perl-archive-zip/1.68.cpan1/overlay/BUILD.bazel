@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_init.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02_main.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03_ex.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04_readmember.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05_tree.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06_update.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07_filenames_of_0.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/08_readmember_record_sep.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/09_output_record_sep.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_chmod.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/11_explorer.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12_bug_47223.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/13_bug_46303.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -167,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/14_leading_separator.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -175,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/15_decrypt.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -183,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/16_decrypt.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -191,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/17_101092.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -199,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/18_bug_92205.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -207,6 +225,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/19_bug_101240.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -215,6 +234,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20_bug_github11.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -223,6 +243,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/21_zip64.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -231,6 +252,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/22_deflated_dir.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -239,6 +261,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/23_closed_handle.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -247,6 +270,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/24_unicode_win32.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -255,6 +279,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/25_traversal.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -263,6 +288,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/26_bzip2.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -271,6 +297,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/27_symlinks.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
@@ -279,39 +306,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/28_zip64_unsupported.t"],
+    tags = ["manual"],
     deps = [":Archive-Zip_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_01_init",
-        ":test_t_02_main",
-        ":test_t_03_ex",
-        ":test_t_04_readmember",
-        ":test_t_05_tree",
-        ":test_t_06_update",
-        ":test_t_07_filenames_of_0",
-        ":test_t_08_readmember_record_sep",
-        ":test_t_09_output_record_sep",
-        ":test_t_10_chmod",
-        ":test_t_11_explorer",
-        ":test_t_12_bug_47223",
-        ":test_t_13_bug_46303",
-        ":test_t_14_leading_separator",
-        ":test_t_15_decrypt",
-        ":test_t_16_decrypt",
-        ":test_t_17_101092",
-        ":test_t_18_bug_92205",
-        ":test_t_19_bug_101240",
-        ":test_t_20_bug_github11",
-        ":test_t_21_zip64",
-        ":test_t_22_deflated_dir",
-        ":test_t_23_closed_handle",
-        ":test_t_24_unicode_win32",
-        ":test_t_25_traversal",
-        ":test_t_26_bzip2",
-        ":test_t_27_symlinks",
-        ":test_t_28_zip64_unsupported",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

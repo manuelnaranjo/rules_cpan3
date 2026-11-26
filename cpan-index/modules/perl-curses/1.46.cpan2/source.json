@@ -11,6 +11,6 @@
         "CursesWide.inc": "sha256-YsKOj7wRkswmY3J/lVrAnOOJXupVQF7vQ3/BYXQVkA4=",
         "CursesFun.inc": "sha256-+ZfkhLgiuHnT0GyhtgFFilrH4+06QMGvV7w7Yc5Ve1g=",
         "CursesVar.inc": "sha256-CUuwcd3PdGkve4zgEx6y/yG0UxB+u0zdhxD1bj6w/LE=",
-        "BUILD.bazel": "sha256-6SuPlqrT62sGApxrXofdKBZWgBcgfp1P/140s6Mx/8k="
+        "BUILD.bazel": "sha256-tD8K5WVvUj+0JwRJs/AXh072isx5gPU4SQznCU4Zn8o="
     }
 }

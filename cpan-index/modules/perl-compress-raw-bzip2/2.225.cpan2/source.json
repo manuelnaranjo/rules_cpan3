@@ -14,6 +14,6 @@
         "bzlib.c": "sha256-Y87+v9CxilXVEuLR4bjZODoepYI4vNVu4AAeNVOZjDo=",
         "blocksort.c": "sha256-Jp+BzoIqnDMhVrSCwVnwKKTTZpIWvMh8xt630+tzrpM=",
         "randtable.c": "sha256-o3NSAWqg286jAdz6eE4C9CVdlgBtzS/Ca5FHgiZ/ba0=",
-        "BUILD.bazel": "sha256-pdzlY8bMTnEDijha7tMEZS2EFhPS4aE3Oos60sbeVTA="
+        "BUILD.bazel": "sha256-1kXt/olBbUrJrDs6d/42jn8fVwxnIcdbHtGjqHRcd6Y="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-KArIc3D1U+X6XdYOO1QzEItHEGSn7g33hLkJpfK4Ysc=",
     "strip_prefix": "Net-Ping-2.77",
     "overlay": {
-        "BUILD.bazel": "sha256-xTOim0uWc46PU65bAXq/JpPdAsJPCQ+JftXRg0jUkvE="
+        "BUILD.bazel": "sha256-9MOGmD77qQ2YYMYvMotNUJEFO/LBWWHE9G6H0zI7bfQ="
     }
 }

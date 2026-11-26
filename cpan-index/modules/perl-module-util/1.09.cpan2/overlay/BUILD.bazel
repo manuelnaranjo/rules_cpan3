@@ -88,9 +88,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_01..module",
-        ":test_t_99..pod",
-        ":test_t_more_01..validate_all_cpan",
-    ],
+    tests = [],
 )

@@ -3,6 +3,6 @@
     "integrity": "sha256-ZuR4Hx9kzg1oBOAg+7SON6j3osTPDLPzNsNt1vZTGIo=",
     "strip_prefix": "JSON-SL-1.0.7",
     "overlay": {
-        "BUILD.bazel": "sha256-SUxXtsvIeRL0Dc6s4dsG4BNkwaNk6U/g/1pB1J0hpN0="
+        "BUILD.bazel": "sha256-D5oZLddBRyDL/gVB5qtEUPAiV5o40tZxQPdGkfnaUMY="
     }
 }

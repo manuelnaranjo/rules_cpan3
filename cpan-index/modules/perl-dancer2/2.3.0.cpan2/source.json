@@ -3,6 +3,6 @@
     "integrity": "sha256-R2RWMnfWZ6dXBwSD7GmqIkFVXUBeYwglLj/+/hFkXns=",
     "strip_prefix": "Dancer2-2.3.0",
     "overlay": {
-        "BUILD.bazel": "sha256-vPT+LTCGYf8ZY9V/6bh+fWY6bjXFx65Srg0eV5bdz/0="
+        "BUILD.bazel": "sha256-fVfmzhu7HKntz90vqau8p5a+APkJLGiKDGCtz0XMdw4="
     }
 }

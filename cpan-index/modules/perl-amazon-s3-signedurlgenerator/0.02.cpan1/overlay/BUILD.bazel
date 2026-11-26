@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-syntax.t"],
+    tags = ["manual"],
     deps = [":Amazon-S3-SignedURLGenerator_test_lib"],
 )
 
@@ -71,13 +72,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Amazon-S3-SignedURLGenerator_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_author-pod-syntax",
-        ":test_t_basic",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

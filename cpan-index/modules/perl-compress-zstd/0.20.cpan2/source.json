@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JI/JIRO/Compress-Zstd-0.20.tar.gz",
+    "integrity": "sha256-FJ8evs/gVGKh37vLcVS6LkBHCLbtiGsDpgHnX9ET6vc=",
+    "strip_prefix": "Compress-Zstd-0.20",
+    "overlay": {
+        "BUILD.bazel": "sha256-czCzlkcr18wfxulAgNTGIu1TvixPob+4QGFD3tI7S1g="
+    }
+}

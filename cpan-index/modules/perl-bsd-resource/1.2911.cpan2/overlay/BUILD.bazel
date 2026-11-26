@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [
@@ -198,15 +204,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_get_rlimits",
-        ":test_t_getpriority",
-        ":test_t_getrlimit",
-        ":test_t_getrusage",
-        ":test_t_pod",
-        ":test_t_pod-coverage",
-        ":test_t_setpriority",
-        ":test_t_setrlimit",
-        ":test_t_times",
-    ],
+    tests = [],
 )

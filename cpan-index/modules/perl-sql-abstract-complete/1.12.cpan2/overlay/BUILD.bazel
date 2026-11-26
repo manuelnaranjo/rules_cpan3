@@ -142,15 +142,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_author-eol",
-        ":test_t_author-no-tabs",
-        ":test_t_author-pod-coverage",
-        ":test_t_author-pod-syntax",
-        ":test_t_author-portability",
-        ":test_t_author-synopsis",
-        ":test_t_module",
-        ":test_t_release-kwalitee",
-    ],
+    tests = [],
 )

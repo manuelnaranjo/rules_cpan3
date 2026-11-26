@@ -3,6 +3,6 @@
     "integrity": "sha256-CedVr5QKxoozsdpFvw6MkGrC7mCN7Ssx6hQAmdi928Q=",
     "strip_prefix": "ShardedKV-Continuum-CHash-0.01",
     "overlay": {
-        "BUILD.bazel": "sha256-b/wimxfdzjhSpnoIntJo4G3vNQXq9yQhJYLzo4FToPU="
+        "BUILD.bazel": "sha256-s4axNKXACMoLcE9sWNd6ZBj5ZCgN7bDGCfnliaK+aeQ="
     }
 }

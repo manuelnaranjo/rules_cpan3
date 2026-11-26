@@ -142,15 +142,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-load",
-        ":test_t_10_begin",
-        ":test_t_20_level",
-        ":test_t_30_lexical",
-        ":test_t_40_coward",
-        ":test_t_50_brave",
-        ":test_t_60_strict",
-        ":test_t_release-pod-coverage",
-        ":test_t_release-pod-syntax",
-    ],
+    tests = [],
 )

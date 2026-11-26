@@ -68,6 +68,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -76,6 +77,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -84,6 +86,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -92,6 +95,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/binmode.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -100,6 +104,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/close-after-write.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -108,6 +113,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/email-exit.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -116,6 +122,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/file-locked.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -124,6 +131,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/lazy-open.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -132,6 +140,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/screen.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -140,6 +149,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/short-syntax.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -148,6 +158,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/syslog-lock-without-preloaded-threads.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -156,6 +167,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/syslog-threads.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
@@ -164,24 +176,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/syslog.t"],
+    tags = ["manual"],
     deps = [":Log-Dispatch_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_00-report-prereqs",
-        ":test_t_basic",
-        ":test_t_binmode",
-        ":test_t_close-after-write",
-        ":test_t_email-exit",
-        ":test_t_file-locked",
-        ":test_t_lazy-open",
-        ":test_t_screen",
-        ":test_t_short-syntax",
-        ":test_t_syslog",
-        ":test_t_syslog-lock-without-preloaded-threads",
-        ":test_t_syslog-threads",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

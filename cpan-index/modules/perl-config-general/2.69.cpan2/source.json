@@ -5,6 +5,6 @@
     "overlay": {
         "lib/Config/General/Interpolated.pm": "sha256-hnDXQm/PhmHKTt09/87CWi5QgkHKSjHqU3wiXmNXJvk=",
         "lib/Config/General/Extended.pm": "sha256-Y7bQuP9M0Qul6dB5NpoXRfVlIGmL//Ne7GliVsNv1X4=",
-        "BUILD.bazel": "sha256-xz36E3i79PYl9PRWBzZytxnDts8ymO/TqIwawhRcS24="
+        "BUILD.bazel": "sha256-NG1CUFiXAJuvY5zV2ygyCk5XKIy0jAh52Vt4x/36cSA="
     }
 }

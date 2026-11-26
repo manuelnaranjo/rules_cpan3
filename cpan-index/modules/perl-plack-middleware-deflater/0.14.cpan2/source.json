@@ -3,6 +3,6 @@
     "integrity": "sha256-O+YLOD6eAtxfMkCbqIs3zXWEwnXQKDLardZOcxFnhYY=",
     "strip_prefix": "Plack-Middleware-Deflater-0.14",
     "overlay": {
-        "BUILD.bazel": "sha256-+JkuZaqMRShfD4SX2oR7UbIYEoE32wVFYFAN2PVM+HU="
+        "BUILD.bazel": "sha256-Cihe9dR+zp1t258/4yat9jRA/eOOZKwtVgaZi/kMNxg="
     }
 }

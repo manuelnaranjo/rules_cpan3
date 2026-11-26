@@ -3,6 +3,6 @@
     "integrity": "sha256-IbgeywOwhYqvTm3aJ/WzoulHfuHeDD0FVYWgMZLHBlo=",
     "strip_prefix": "Redis-ScriptCache-0.05",
     "overlay": {
-        "BUILD.bazel": "sha256-pFDHg53vhXxJpPTCkdbbYSeEAl6Om2WVOB38EnKA2zk="
+        "BUILD.bazel": "sha256-jw4exIlRbZhK99uqXSbOpfzaPdRKbOOJ4F7G2uX9FGE="
     }
 }

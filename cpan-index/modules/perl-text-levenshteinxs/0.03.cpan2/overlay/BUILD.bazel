@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -78,4 +84,10 @@ perl_library(
 alias(
     name = "perl-text-levenshteinxs",
     actual = ":Text-LevenshteinXS",
+)
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
 )

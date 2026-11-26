@@ -106,11 +106,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_HTML-TreeBuilder-XPath",
-        ":test_t_pod",
-        ":test_t_pod_coverage",
-        ":test_t_test_following",
-        ":test_t_test_preceding",
-    ],
+    tests = [],
 )

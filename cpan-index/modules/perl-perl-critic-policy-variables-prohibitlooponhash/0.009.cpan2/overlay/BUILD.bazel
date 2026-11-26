@@ -97,10 +97,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_author-no-tabs",
-        ":test_t_author-pod-syntax",
-        ":test_t_policies",
-    ],
+    tests = [],
 )

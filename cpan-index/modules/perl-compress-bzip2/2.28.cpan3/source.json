@@ -1,0 +1,11 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Compress-Bzip2-2.28.tar.gz",
+    "integrity": "sha256-hZ+DXD9cmYgQ2LKm+eKC/5nWy2bM+lXK5+Ztr7A1EW4=",
+    "strip_prefix": "Compress-Bzip2-2.28",
+    "overlay": {
+        "const-xs.inc": "sha256-D4SXEbjZDfe1WefvMbCciwyGo6MJUSnNc5cBg6ZVF6A=",
+        "const-c.inc": "sha256-HulVP8sAFqvNq7/tW3xVeMwp5tpQv/J2p5RFNzCIzlM=",
+        "lib/auto/Compress/Bzip2/autosplit.ix": "sha256-ooqVYqwI0KQ/wf9eR9zKBqzkTVUIz6g4HinnjRQKXlk=",
+        "BUILD.bazel": "sha256-SOwNxi06Y2h+2K9tmtu1+ZS3OOlDz4+xAMblYsQzQQc="
+    }
+}

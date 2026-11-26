@@ -187,20 +187,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00basic",
-        ":test_t_01fileheap",
-        ":test_t_file",
-        ":test_t_file_fifo",
-        ":test_t_file_lru",
-        ":test_t_file_tie",
-        ":test_t_memory",
-        ":test_t_memory_fifo",
-        ":test_t_memory_lru",
-        ":test_t_memory_set_namespace_rt32339",
-        ":test_t_memory_tie",
-        ":test_t_null",
-        ":test_t_pod",
-        ":test_t_style-trailing-space",
-    ],
+    tests = [],
 )

@@ -33,3 +33,9 @@ alias(
     name = "perl-pipeworks",
     actual = ":Pipeworks",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

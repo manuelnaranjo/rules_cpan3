@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_use.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_isa.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02_trap.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03_derived.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04_dgraph.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05_ugraph.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06_new.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07_gen.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/08_stringify.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/09_eq.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_has_vertices.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/11_vertices.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -167,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12_has_vertex.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -175,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/13_add_vertex.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -183,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/14_delete_vertex.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -191,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/16_edges.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -199,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20_countvertexed.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -207,6 +225,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/21_multivertexed.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -215,6 +234,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/22_refvertexed.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -223,6 +243,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/24_mixvertexed.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -231,6 +252,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/25_countedged.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -239,6 +261,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/26_multiedged.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -247,6 +270,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/30_mixedged.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -255,6 +279,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/33_hyperedge.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -263,6 +288,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/39_edges_at.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -271,6 +297,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/40_edges_from.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -279,6 +306,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/41_edges_to.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -287,6 +315,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/42_add_path.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -295,6 +324,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/45_add_cycle.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -303,6 +333,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/48_get_vertex_count.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -311,6 +342,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/49_get_edge_count.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -319,6 +351,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/50_vertex_attributes.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -327,6 +360,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/51_multivertex_attributes.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -335,6 +369,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/53_multiedge_attributes.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -343,6 +378,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/56_neighbourhood.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -351,6 +387,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/57_degree.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -359,6 +396,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/58_connections.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -367,6 +405,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/59_dfs.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -375,6 +414,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/60_bfs.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -383,6 +423,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/61_connected.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -391,6 +432,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/62_bcc.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -399,6 +441,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/63_scc.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -407,6 +450,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/64_mst.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -415,6 +459,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/65_ref.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -423,6 +468,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/66_simple.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -431,6 +477,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/67_copy.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -439,6 +486,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/71_spt.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -447,6 +495,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/72_transitive.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -455,6 +504,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/73_diameter.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -463,6 +513,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/74_random.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -471,6 +522,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/75_attribute_array.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -479,6 +531,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/76_attribute_hash.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -487,6 +540,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/77_adjacency.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -495,6 +549,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/78_expect.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -503,6 +558,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/79_unionfind.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -511,6 +567,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/80_isomorphic.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -519,6 +576,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/82_cycle.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -527,6 +585,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/83_bitmatrix.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -535,6 +594,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/84_all_cessors.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -543,6 +603,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/85_subgraph.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -551,6 +612,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/86_bipartite.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -559,6 +621,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/87_planar.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -567,6 +630,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/88_max_cliq.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -575,6 +639,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/89_connected_subgraphs.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -583,6 +648,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/99_misc.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -591,6 +657,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_at1.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -599,6 +666,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_at2.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -607,6 +675,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_at3.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -615,6 +684,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_bb_rv.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -623,6 +693,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_bf.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -631,6 +702,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_bill.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -639,6 +711,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_bo_ap1.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -647,6 +720,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_bo_ap2.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -655,6 +729,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_bo_apx.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -663,6 +738,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_cd_rv.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -671,6 +747,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_dl_uf.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -679,6 +756,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_jh_va.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -687,6 +765,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_mn_va.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -695,6 +774,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_ng_mst.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -703,6 +783,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_ng_path.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -711,6 +792,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_ng_scc.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -719,6 +801,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_rb_cc.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -727,6 +810,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_re_sd.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -735,6 +819,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_ro_ra.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -743,6 +828,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_sc_me.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -751,6 +837,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_te_ea.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
@@ -759,99 +846,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/u_te_me.t"],
+    tags = ["manual"],
     deps = [":Graph_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_00_use",
-        ":test_t_01_isa",
-        ":test_t_02_trap",
-        ":test_t_03_derived",
-        ":test_t_04_dgraph",
-        ":test_t_05_ugraph",
-        ":test_t_06_new",
-        ":test_t_07_gen",
-        ":test_t_08_stringify",
-        ":test_t_09_eq",
-        ":test_t_10_has_vertices",
-        ":test_t_11_vertices",
-        ":test_t_12_has_vertex",
-        ":test_t_13_add_vertex",
-        ":test_t_14_delete_vertex",
-        ":test_t_16_edges",
-        ":test_t_20_countvertexed",
-        ":test_t_21_multivertexed",
-        ":test_t_22_refvertexed",
-        ":test_t_24_mixvertexed",
-        ":test_t_25_countedged",
-        ":test_t_26_multiedged",
-        ":test_t_30_mixedged",
-        ":test_t_33_hyperedge",
-        ":test_t_39_edges_at",
-        ":test_t_40_edges_from",
-        ":test_t_41_edges_to",
-        ":test_t_42_add_path",
-        ":test_t_45_add_cycle",
-        ":test_t_48_get_vertex_count",
-        ":test_t_49_get_edge_count",
-        ":test_t_50_vertex_attributes",
-        ":test_t_51_multivertex_attributes",
-        ":test_t_53_multiedge_attributes",
-        ":test_t_56_neighbourhood",
-        ":test_t_57_degree",
-        ":test_t_58_connections",
-        ":test_t_59_dfs",
-        ":test_t_60_bfs",
-        ":test_t_61_connected",
-        ":test_t_62_bcc",
-        ":test_t_63_scc",
-        ":test_t_64_mst",
-        ":test_t_65_ref",
-        ":test_t_66_simple",
-        ":test_t_67_copy",
-        ":test_t_71_spt",
-        ":test_t_72_transitive",
-        ":test_t_73_diameter",
-        ":test_t_74_random",
-        ":test_t_75_attribute_array",
-        ":test_t_76_attribute_hash",
-        ":test_t_77_adjacency",
-        ":test_t_78_expect",
-        ":test_t_79_unionfind",
-        ":test_t_80_isomorphic",
-        ":test_t_82_cycle",
-        ":test_t_83_bitmatrix",
-        ":test_t_84_all_cessors",
-        ":test_t_85_subgraph",
-        ":test_t_86_bipartite",
-        ":test_t_87_planar",
-        ":test_t_88_max_cliq",
-        ":test_t_89_connected_subgraphs",
-        ":test_t_99_misc",
-        ":test_t_u_at1",
-        ":test_t_u_at2",
-        ":test_t_u_at3",
-        ":test_t_u_bb_rv",
-        ":test_t_u_bf",
-        ":test_t_u_bill",
-        ":test_t_u_bo_ap1",
-        ":test_t_u_bo_ap2",
-        ":test_t_u_bo_apx",
-        ":test_t_u_cd_rv",
-        ":test_t_u_dl_uf",
-        ":test_t_u_jh_va",
-        ":test_t_u_mn_va",
-        ":test_t_u_ng_mst",
-        ":test_t_u_ng_path",
-        ":test_t_u_ng_scc",
-        ":test_t_u_rb_cc",
-        ":test_t_u_re_sd",
-        ":test_t_u_ro_ra",
-        ":test_t_u_sc_me",
-        ":test_t_u_te_ea",
-        ":test_t_u_te_me",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

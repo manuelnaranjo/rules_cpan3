@@ -3,6 +3,6 @@
     "integrity": "sha256-2U9SCATiVBsc0g5zNmcgqXPK9d0tJiODj8jWOYr9fts=",
     "strip_prefix": "Net-Patricia-1.24",
     "overlay": {
-        "BUILD.bazel": "sha256-fOx9PR+6Lunn99Zm323RJa2dJXaNVD73qyges8aNfUU="
+        "BUILD.bazel": "sha256-vOFGJyOq8b1VXl4/s+kOq97jF2GbpL5OIBhrgNEiseg="
     }
 }

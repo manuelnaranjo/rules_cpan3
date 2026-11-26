@@ -3,6 +3,6 @@
     "integrity": "sha256-fOE3sueXt8CQHzrfGgWhk0M1bNHwRnaqHFap9iT4Wa0=",
     "strip_prefix": "Date-Calc-6.4",
     "overlay": {
-        "BUILD.bazel": "sha256-k3I045d2gEaHWndajssyJPnpFTcEewcr7xuS9Rewhk0="
+        "BUILD.bazel": "sha256-gIBz2WfmX41tWIYqIjUYettowlYYINqdxo5IE/YlNIE="
     }
 }

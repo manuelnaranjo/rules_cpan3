@@ -3,6 +3,6 @@
     "integrity": "sha256-UMQgOSWX4L9LARxdPsQ/Ft9BT0vT+SleaAERh0xPMZI=",
     "strip_prefix": "Locale-CLDR-v0.46.0",
     "overlay": {
-        "BUILD.bazel": "sha256-mE7yeJ3Swq5XHlIesD4vhOvTpJ0+wYqAFGWJkR/8788="
+        "BUILD.bazel": "sha256-YZGvP7PPdNVSIHJVHqz2aLAeQzNW0Z9BvEQXVKju73g="
     }
 }

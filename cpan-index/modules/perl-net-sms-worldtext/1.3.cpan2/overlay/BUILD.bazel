@@ -33,3 +33,9 @@ alias(
     name = "perl-net-sms-worldtext",
     actual = ":Net-SMS-WorldText",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

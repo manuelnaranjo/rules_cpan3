@@ -1,0 +1,10 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-LibXML-2.0213.tar.gz",
+    "integrity": "sha256-KvIcXWGsNOompfq/FbpaWEHmSPcYnbPjO28otUiYAqs=",
+    "strip_prefix": "XML-LibXML-2.0213",
+    "overlay": {
+        "lib/XML/LibXML.pod": "sha256-M1Bl0TQMiPu9yEaLAH/u2dgLYI8CqUOl5JUrsG4splU=",
+        "lib/XML/LibXML.pm": "sha256-nQmji4g2BIGYJcCvyrBi4+EbK+rigxoObjdGXEEU6S4=",
+        "BUILD.bazel": "sha256-w5a6rnh/8FYMujtEx8ObfneZXRicXGQj7tAToXeN0t8="
+    }
+}

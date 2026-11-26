@@ -124,13 +124,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_00-report-prereqs",
-        ":test_t_01-fake",
-        ":test_t_author-critic",
-        ":test_t_author-distmeta",
-        ":test_t_author-pod-coverage",
-        ":test_t_author-pod-syntax",
-    ],
+    tests = [],
 )

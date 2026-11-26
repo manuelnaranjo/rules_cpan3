@@ -7,6 +7,6 @@
         "src/compute_crc32.c": "sha256-zfB+Ub5WhsxtSuSIEnKhbikhBll4B47J2MpJM7dLdm4=",
         "src/parse_keyword.h": "sha256-sqxfUvErNA707PaNALc3QdAt0cHcUmaYbTD4+poTVsA=",
         "src/parse_keyword.c": "sha256-HUkmf3We9h9yoIKD71DD2henh5dx7U2lOOJnJ5X+p1Q=",
-        "BUILD.bazel": "sha256-EelwnFYpbxngbvH13Q4dQUHgp0Y9lNC5rT154Ht9DMk="
+        "BUILD.bazel": "sha256-v3yLtmz60qeToGUvoi5pcx2RyAKVfiwPHRvkyF+qPn0="
     }
 }

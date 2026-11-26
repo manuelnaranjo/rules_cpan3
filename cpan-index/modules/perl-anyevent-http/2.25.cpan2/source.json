@@ -3,6 +3,6 @@
     "integrity": "sha256-XPpTQWEkF29vTNMrAOqMp5otXfUSWGg5ic0E/obiUBM=",
     "strip_prefix": "AnyEvent-HTTP-2.25",
     "overlay": {
-        "BUILD.bazel": "sha256-Cv8rc48038qn+keny/oveWZ1FgDbV5vxsd4lCrQ5siE="
+        "BUILD.bazel": "sha256-PQ9FMWZBY36enX+tnrULt0+BMRwVZTcFN1Eb5fIID18="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-6QZaEfJWBQ2e9nHJUEaRVqTYJWNHqD2J56xdF3Xf0WM=",
     "strip_prefix": "AWS-S3-2.00",
     "overlay": {
-        "BUILD.bazel": "sha256-JBh41Sr0c+ci8G1W4f4pa9vl/N1A6VHJL0Kj2b55tls="
+        "BUILD.bazel": "sha256-j5jZagDWeJNzVIjD2jhm0Lzkac8EOQH8+YApDZL4vyc="
     }
 }

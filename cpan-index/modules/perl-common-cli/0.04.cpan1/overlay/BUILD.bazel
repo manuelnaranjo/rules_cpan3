@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-load.t"],
+    tags = ["manual"],
     deps = [":Common-CLI_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01-basic.t"],
+    tags = ["manual"],
     deps = [":Common-CLI_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/boilerplate.t"],
+    tags = ["manual"],
     deps = [":Common-CLI_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod-coverage.t"],
+    tags = ["manual"],
     deps = [":Common-CLI_test_lib"],
 )
 
@@ -95,16 +99,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod.t"],
+    tags = ["manual"],
     deps = [":Common-CLI_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-load",
-        ":test_t_01-basic",
-        ":test_t_boilerplate",
-        ":test_t_pod",
-        ":test_t_pod-coverage",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

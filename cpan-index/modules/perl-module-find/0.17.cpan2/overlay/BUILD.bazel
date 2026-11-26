@@ -196,21 +196,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_01-use",
-        ":test_t_02-find",
-        ":test_t_03-usesub",
-        ":test_t_04-useall",
-        ":test_t_05-setmoduledirs",
-        ":test_t_06-duplicate-modules",
-        ":test_t_07-symlinks",
-        ":test_t_08-taint",
-        ":test_t_09-inc-hook",
-        ":test_t_10-wrong-module-sub",
-        ":test_t_11-wrong-module-all",
-        ":test_t_12-loadfail",
-        ":test_t_50-meta",
-        ":test_t_51-pod",
-        ":test_t_52-pod-coverage",
-    ],
+    tests = [],
 )

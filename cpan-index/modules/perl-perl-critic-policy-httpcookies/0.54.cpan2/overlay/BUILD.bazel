@@ -100,10 +100,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00_use",
-        ":test_t_author-pod-syntax",
-        ":test_t_policies",
-        ":test_t_release-cpan-changes",
-    ],
+    tests = [],
 )

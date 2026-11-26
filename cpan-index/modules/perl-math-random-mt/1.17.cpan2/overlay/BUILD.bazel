@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -188,15 +194,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_1",
-        ":test_t_2",
-        ":test_t_3",
-        ":test_t_4",
-        ":test_t_5",
-        ":test_t_6",
-        ":test_t_7",
-        ":test_t_8",
-        ":test_t_9",
-    ],
+    tests = [],
 )

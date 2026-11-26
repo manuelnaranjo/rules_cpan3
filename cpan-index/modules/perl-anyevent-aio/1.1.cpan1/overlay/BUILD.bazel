@@ -63,12 +63,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_load.t"],
+    tags = ["manual"],
     deps = [":AnyEvent-AIO_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00_load",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

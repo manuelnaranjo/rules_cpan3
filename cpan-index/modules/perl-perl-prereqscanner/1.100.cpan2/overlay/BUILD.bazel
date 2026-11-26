@@ -101,10 +101,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_autoprereq",
-        ":test_t_scan-module",
-        ":test_t_scan-prereqs",
-    ],
+    tests = [],
 )

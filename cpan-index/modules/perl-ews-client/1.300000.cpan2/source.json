@@ -3,6 +3,6 @@
     "integrity": "sha256-Y/BIB3RlYOu+wkvW/rZcHcpBUd0Qb19PFj9O2WPFx7A=",
     "strip_prefix": "EWS-Client-1.300000",
     "overlay": {
-        "BUILD.bazel": "sha256-BBdiPRGiqMNXDo5gRgKQh5DkOiwLFUR3JpeWu7o8ADE="
+        "BUILD.bazel": "sha256-ObWUf4RbJfv0QpKMlUOX/VFnah8Z8ysb/DYiEVBIwXI="
     }
 }

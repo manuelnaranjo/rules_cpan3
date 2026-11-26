@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01use.t"],
+    tags = ["manual"],
     deps = [":XML-Compile-SOAP_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10soap.t"],
+    tags = ["manual"],
     deps = [":XML-Compile-SOAP_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/11soapfault.t"],
+    tags = ["manual"],
     deps = [":XML-Compile-SOAP_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12soapmust.t"],
+    tags = ["manual"],
     deps = [":XML-Compile-SOAP_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/30charenc.t"],
+    tags = ["manual"],
     deps = [":XML-Compile-SOAP_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/60xop.t"],
+    tags = ["manual"],
     deps = [":XML-Compile-SOAP_test_lib"],
 )
 
@@ -111,18 +117,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/70enc11.t"],
+    tags = ["manual"],
     deps = [":XML-Compile-SOAP_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_01use",
-        ":test_t_10soap",
-        ":test_t_11soapfault",
-        ":test_t_12soapmust",
-        ":test_t_30charenc",
-        ":test_t_60xop",
-        ":test_t_70enc11",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

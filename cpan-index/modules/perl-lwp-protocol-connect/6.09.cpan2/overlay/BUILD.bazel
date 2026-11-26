@@ -118,12 +118,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_author-critic",
-        ":test_t_author-google",
-        ":test_t_author-http",
-        ":test_t_author-proxy-auth",
-        ":test_t_release-pod-syntax",
-        ":test_t_use",
-    ],
+    tests = [],
 )

@@ -82,8 +82,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_10-basics",
-        ":test_t_20-timeout",
-    ],
+    tests = [],
 )

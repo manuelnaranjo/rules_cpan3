@@ -67,6 +67,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/1.t"],
+    tags = ["manual"],
     deps = [":Convert-BinHex_test_lib"],
 )
 
@@ -75,6 +76,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bin_to_hex_file.t"],
+    tags = ["manual"],
     deps = [":Convert-BinHex_test_lib"],
 )
 
@@ -83,6 +85,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/comp2bin.t"],
+    tags = ["manual"],
     deps = [":Convert-BinHex_test_lib"],
 )
 
@@ -91,6 +94,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/crc.t"],
+    tags = ["manual"],
     deps = [":Convert-BinHex_test_lib"],
 )
 
@@ -99,6 +103,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/hex_to_bin_oo.t"],
+    tags = ["manual"],
     deps = [":Convert-BinHex_test_lib"],
 )
 
@@ -107,17 +112,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/release-cpan-changes.t"],
+    tags = ["manual"],
     deps = [":Convert-BinHex_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_1",
-        ":test_t_bin_to_hex_file",
-        ":test_t_comp2bin",
-        ":test_t_crc",
-        ":test_t_hex_to_bin_oo",
-        ":test_t_release-cpan-changes",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

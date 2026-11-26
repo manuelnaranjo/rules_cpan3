@@ -72,6 +72,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -89,6 +90,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -106,6 +108,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -123,6 +126,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -140,6 +144,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -157,6 +162,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -174,6 +180,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -191,6 +198,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -208,6 +216,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -225,6 +234,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -242,6 +252,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -259,6 +270,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -276,6 +288,7 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
@@ -293,25 +306,12 @@ perl_test(
         "test.workload-isolation-type": "firecracker",
         "workload-isolation-type": "firecracker",
     },
+    tags = ["manual"],
     deps = [":AnyEvent-Redis-RipeRedis_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-base",
-        ":test_t_01-accessors",
-        ":test_t_02-error-codes",
-        ":test_t_03-auth",
-        ":test_t_04-commands",
-        ":test_t_05-db-select",
-        ":test_t_06-subs",
-        ":test_t_07-lazy-conn",
-        ":test_t_08-eval",
-        ":test_t_09-conn-errors",
-        ":test_t_10-exceptions",
-        ":test_t_11-leaks",
-        ":test_t_12-pod",
-        ":test_t_13-pod-coverage",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

@@ -119,12 +119,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00use",
-        ":test_t_10client-read",
-        ":test_t_11client-write",
-        ":test_t_12client-flags",
-        ":test_t_20server-fetch",
-        ":test_t_21server-list",
-    ],
+    tests = [],
 )

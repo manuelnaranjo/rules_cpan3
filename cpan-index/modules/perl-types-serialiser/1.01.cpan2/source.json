@@ -3,6 +3,6 @@
     "integrity": "sha256-+McXOwkU0OPZVyggd7Nm8MjHAlZxXq7zKY/zK5I4ioA=",
     "strip_prefix": "Types-Serialiser-1.01",
     "overlay": {
-        "BUILD.bazel": "sha256-MT5Gs9f2Yc44fl20cpbWZu17gzOJ47NUEHb6HZbGElo="
+        "BUILD.bazel": "sha256-YJQV4SjjxE4jIZF0hYyKObTPvLxVq6AqnTgvitxjY44="
     }
 }

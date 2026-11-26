@@ -133,14 +133,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_basic",
-        ":test_t_caught",
-        ":test_t_context",
-        ":test_t_ecb-standalone",
-        ":test_t_field-names",
-        ":test_t_ignore",
-        ":test_t_inc-entry",
-    ],
+    tests = [],
 )

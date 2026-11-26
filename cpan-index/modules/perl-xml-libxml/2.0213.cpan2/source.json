@@ -5,6 +5,6 @@
     "overlay": {
         "lib/XML/LibXML.pod": "sha256-M1Bl0TQMiPu9yEaLAH/u2dgLYI8CqUOl5JUrsG4splU=",
         "lib/XML/LibXML.pm": "sha256-nQmji4g2BIGYJcCvyrBi4+EbK+rigxoObjdGXEEU6S4=",
-        "BUILD.bazel": "sha256-ZNZpcxRqMqgw52Uf57/rnRyyaFVUkMrP1n6/YLS9Jzw="
+        "BUILD.bazel": "sha256-w5a6rnh/8FYMujtEx8ObfneZXRicXGQj7tAToXeN0t8="
     }
 }

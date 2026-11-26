@@ -3,6 +3,6 @@
     "integrity": "sha256-X+YdEl7P3l6zXoFB+j6GBvHqIEGNeAb3nKlS3g5aDx0=",
     "strip_prefix": "Search-Elasticsearch-Client-6_0-7.717",
     "overlay": {
-        "BUILD.bazel": "sha256-l8BHRljz9ggf3VTVBsCtu2miOZluApCYaZFCmT2hMks="
+        "BUILD.bazel": "sha256-WYpSgY/gdHCsqZCwYaI6rojNW8Ki7A3+uOFp4mCpg5Y="
     }
 }

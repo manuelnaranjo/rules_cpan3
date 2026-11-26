@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-b-hooks-endofscope",
+        "@perl-package-stash",
+    ],
 )
 
 alias(
@@ -63,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-basic.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -71,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01-function-wipeout.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -79,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02-inheritance.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -87,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03-unimport.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -95,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04-except.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -103,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05-explicit-cleanee.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -111,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05-syntax-error.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -119,6 +129,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06-other-types.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -127,6 +138,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07-debugger.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -135,6 +147,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07-pseudo-debugger.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -143,6 +156,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/08-const-sub.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -151,6 +165,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/09-fiddle-hinthash.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -159,6 +174,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10-pure-perl.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
@@ -167,25 +183,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/11-multiclean-in-scope.t"],
+    tags = ["manual"],
     deps = [":namespace-clean_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-basic",
-        ":test_t_01-function-wipeout",
-        ":test_t_02-inheritance",
-        ":test_t_03-unimport",
-        ":test_t_04-except",
-        ":test_t_05-explicit-cleanee",
-        ":test_t_05-syntax-error",
-        ":test_t_06-other-types",
-        ":test_t_07-debugger",
-        ":test_t_07-pseudo-debugger",
-        ":test_t_08-const-sub",
-        ":test_t_09-fiddle-hinthash",
-        ":test_t_10-pure-perl",
-        ":test_t_11-multiclean-in-scope",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

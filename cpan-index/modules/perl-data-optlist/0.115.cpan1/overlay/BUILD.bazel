@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Data-OptList_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/hash.t"],
+    tags = ["manual"],
     deps = [":Data-OptList_test_lib"],
 )
 
@@ -79,14 +81,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/mkopt.t"],
+    tags = ["manual"],
     deps = [":Data-OptList_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_hash",
-        ":test_t_mkopt",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

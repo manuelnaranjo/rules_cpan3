@@ -3,6 +3,6 @@
     "integrity": "sha256-aBXikhYbqBkrQ0OY2yleIps+YVdOamGZTpDzWaLHGyE=",
     "strip_prefix": "Mozilla-PublicSuffix-v1.0.7",
     "overlay": {
-        "BUILD.bazel": "sha256-wBmm4i2dbL7I771aWnia6RtHI9J2tNQirH2fwtf5zXw="
+        "BUILD.bazel": "sha256-k+Xd6DFL0aVM5lVAIC8ivOrgbJBGJPBQX096jSs08Fs="
     }
 }

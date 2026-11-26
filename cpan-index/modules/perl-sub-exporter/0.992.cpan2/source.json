@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Sub-Exporter-0.992.tar.gz",
+    "integrity": "sha256-MdG3AWOQUo8+0s2jefQCak5/utKqQMjJoYCJYb9kLGc=",
+    "strip_prefix": "Sub-Exporter-0.992",
+    "overlay": {
+        "BUILD.bazel": "sha256-YS+swNMVR8TVstpXeupBpODuRJolPEGQKHhrlmuGXFY="
+    }
+}

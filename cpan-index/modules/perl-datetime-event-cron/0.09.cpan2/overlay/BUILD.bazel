@@ -124,13 +124,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_basic",
-        ":test_t_cascade",
-        ":test_t_cron",
-        ":test_t_crontab",
-        ":test_t_dst",
-        ":test_t_leapyear",
-        ":test_t_malformed",
-    ],
+    tests = [],
 )

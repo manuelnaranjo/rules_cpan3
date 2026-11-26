@@ -3,6 +3,6 @@
     "integrity": "sha256-NEWNCiwxIdO7CgQGVkTprTD4tIV8VgJXQ66hmBuQq4E=",
     "strip_prefix": "Algorithm-Heapify-XS-0.08",
     "overlay": {
-        "BUILD.bazel": "sha256-nS9Njd0NhOzXdTreNnHYf5OHCYUETpo2S/DlYKdHKZc="
+        "BUILD.bazel": "sha256-cnomkOfWLasI5nZoeHiCwdYSHACXPr9xvhB0dHf5utY="
     }
 }

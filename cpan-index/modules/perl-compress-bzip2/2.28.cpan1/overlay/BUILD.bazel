@@ -16,8 +16,16 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
+            "show_bzversion.c",
+            "bzlib-src/**",
         ],
     ),
     defines = [],
@@ -46,6 +54,7 @@ cpan_xs(
     ),
     deps = [
         "@bzip2",
+        "@bzip2//:bz2",
     ],
 )
 

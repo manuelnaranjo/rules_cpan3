@@ -151,16 +151,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_Class",
-        ":test_t_Method",
-        ":test_t_Mock-Quick",
-        ":test_t_Object",
-        ":test_t_Object-Quick",
-        ":test_t_Util",
-        ":test_t_clear_warn",
-        ":test_t_intercept",
-        ":test_t_metrics",
-        ":test_t_object_control",
-    ],
+    tests = [],
 )

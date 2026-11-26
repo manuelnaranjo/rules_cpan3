@@ -3,6 +3,6 @@
     "integrity": "sha256-3CqEHoLBFy+FjnpjJM8eHpb4j7rmfOVmkfuTw9G/9EU=",
     "strip_prefix": "Google-Ads-AdWords-Client-5.8.2",
     "overlay": {
-        "BUILD.bazel": "sha256-/gKft8MNAnn56nAWfM+157cjmoMGuofv/QNUpcsJKiA="
+        "BUILD.bazel": "sha256-nIjbPEJHMesY1MUeeZJXAjFEZB1+ziglJyvfn5Z4OhA="
     }
 }

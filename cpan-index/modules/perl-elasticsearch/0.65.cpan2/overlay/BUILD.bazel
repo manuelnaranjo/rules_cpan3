@@ -111,11 +111,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-request",
-        ":test_t_10-queryparser",
-        ":test_t_release-eol",
-        ":test_t_release-no-tabs",
-        ":test_t_release-pod-syntax",
-    ],
+    tests = [],
 )

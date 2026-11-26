@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01compile.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02simple.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03import.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04cvgv.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05parentage.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06trustme.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07pod.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/08tie.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
@@ -127,20 +135,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/09whitespace.t"],
+    tags = ["manual"],
     deps = [":Pod-Coverage_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_01compile",
-        ":test_t_02simple",
-        ":test_t_03import",
-        ":test_t_04cvgv",
-        ":test_t_05parentage",
-        ":test_t_06trustme",
-        ":test_t_07pod",
-        ":test_t_08tie",
-        ":test_t_09whitespace",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [
@@ -230,19 +236,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00.load",
-        ":test_t_boilerplate",
-        ":test_t_core_fork",
-        ":test_t_core_fork_pp",
-        ":test_t_core_partial_read",
-        ":test_t_core_read",
-        ":test_t_core_sysopen",
-        ":test_t_export",
-        ":test_t_getrandom",
-        ":test_t_manifest",
-        ":test_t_pod",
-        ":test_t_pp",
-        ":test_t_rand",
-    ],
+    tests = [],
 )

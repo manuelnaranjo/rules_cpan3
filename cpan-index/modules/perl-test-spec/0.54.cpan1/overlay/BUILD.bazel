@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/around.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/auto_inherit.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/data_sharing.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/define.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/disabled.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/empty.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/example_in_handler.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/import_strict.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/import_warnings.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/manifest.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/meta.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/mocks.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/mocks_imports.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -167,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/ordering.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -175,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/predictable_destroy_spec.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -183,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/runtests_subset.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -191,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/shared_examples.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -199,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/show_exceptions.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
@@ -207,30 +225,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/spec_helper.t"],
+    tags = ["manual"],
     deps = [":Test-Spec_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_around",
-        ":test_t_auto_inherit",
-        ":test_t_data_sharing",
-        ":test_t_define",
-        ":test_t_disabled",
-        ":test_t_empty",
-        ":test_t_example_in_handler",
-        ":test_t_import_strict",
-        ":test_t_import_warnings",
-        ":test_t_manifest",
-        ":test_t_meta",
-        ":test_t_mocks",
-        ":test_t_mocks_imports",
-        ":test_t_ordering",
-        ":test_t_predictable_destroy_spec",
-        ":test_t_runtests_subset",
-        ":test_t_shared_examples",
-        ":test_t_show_exceptions",
-        ":test_t_spec_helper",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

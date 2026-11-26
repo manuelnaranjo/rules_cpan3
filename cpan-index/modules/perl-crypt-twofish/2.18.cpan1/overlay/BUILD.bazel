@@ -79,3 +79,9 @@ alias(
     name = "perl-crypt-twofish",
     actual = ":Crypt-Twofish",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

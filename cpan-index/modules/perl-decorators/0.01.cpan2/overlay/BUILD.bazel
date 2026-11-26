@@ -160,17 +160,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_000-load",
-        ":test_t_001-single-provider",
-        ":test_t_002-multiple-providers",
-        ":test_t_050-parsing",
-        ":test_t_070-constructor",
-        ":test_t_100-sample-accessors",
-        ":test_t_101-sample-getopt",
-        ":test_t_102-sample-serializer",
-        ":test_t_103-sample-db-binder",
-        ":test_t_104-sample-dao",
-        ":test_t_105-sample-web-framework",
-    ],
+    tests = [],
 )

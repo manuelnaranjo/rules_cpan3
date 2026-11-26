@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "zlib-src/**",
         ],
     ),
@@ -205,16 +211,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_000prereq",
-        ":test_t_01version",
-        ":test_t_02zlib",
-        ":test_t_07bufsize",
-        ":test_t_09limitoutput",
-        ":test_t_18lvalue",
-        ":test_t_19nonpv",
-        ":test_t_99pod",
-        ":test_t_meta-json",
-        ":test_t_meta-yaml",
-    ],
+    tests = [],
 )

@@ -174,18 +174,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_author-pod-coverage",
-        ":test_t_author-pod-syntax",
-        ":test_t_author-signature",
-        ":test_t_basic",
-        ":test_t_complex-fields",
-        ":test_t_context",
-        ":test_t_empty-last-field",
-        ":test_t_format-prefix",
-        ":test_t_max-length",
-        ":test_t_truncate_specific_fields",
-        ":test_t_warp",
-    ],
+    tests = [],
 )

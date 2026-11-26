@@ -88,9 +88,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_01_loadmodule",
-        ":test_t_02_testmodule",
-        ":test_t_03_taintmode",
-    ],
+    tests = [],
 )

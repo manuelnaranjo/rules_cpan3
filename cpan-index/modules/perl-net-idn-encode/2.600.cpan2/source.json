@@ -3,6 +3,6 @@
     "integrity": "sha256-EE9WwCXKfJFHQb2GDQ+u6YgkK5+lBDiF/fAk6HDfe/M=",
     "strip_prefix": "Net-IDN-Encode-2.600",
     "overlay": {
-        "BUILD.bazel": "sha256-U0YkM/8fXSOCkta6skY14xUX84E13FxZXr2ZY44pB/M="
+        "BUILD.bazel": "sha256-c1A6qBG8iW6fjhD0hPUCS+ib4CfURoSlzS6lTUldLY0="
     }
 }

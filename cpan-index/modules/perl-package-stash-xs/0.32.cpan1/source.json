@@ -3,6 +3,6 @@
     "integrity": "sha256-n5YeeYwBNw84NO2l8BDJ1gxoqW0VxIWY2KWiXKMvXxE=",
     "strip_prefix": "Package-Stash-XS-0.32",
     "overlay": {
-        "BUILD.bazel": "sha256-BtmiG4ieC1n/gW6kfkebOas8GF4wyQMoZClUCj3mGKg="
+        "BUILD.bazel": "sha256-iyPDhVxbFwvnmbPdsgcTgwHkeCi6w+GslzC3ojfUlFU="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-JwEXhhuoMHcx3EZcCRTciUjhJ8A7Jug4x4dhEDQYK0E=",
     "strip_prefix": "Geo-GoogleMaps-OffsetCenter-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-IQI0Ga8HrhdT16ZdgbCS0K/15Yoio3liPBpfB65FV/A="
+        "BUILD.bazel": "sha256-15liJ+gp1G8lsBFC3ae0DApiSz1JwDlN9s0pklYoCmk="
     }
 }

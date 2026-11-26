@@ -3,6 +3,6 @@
     "integrity": "sha256-Cg+A1f30E9oY4yIB+R5h8lgo2A2XlwPBDqvbcaKBIJ8=",
     "strip_prefix": "Feersum-1.509",
     "overlay": {
-        "BUILD.bazel": "sha256-HlCHqfo3epLLOXoitskqlws3vWVBtjrce5RRrkroyT8="
+        "BUILD.bazel": "sha256-J9OfcuD3v/eAVD82Yr/Nr6H8UVh4SJ9KemxNXrvhZ5E="
     }
 }

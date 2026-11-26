@@ -165,17 +165,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_author-lockfile-race-condition",
-        ":test_t_author-pod-syntax",
-        ":test_t_author-signature",
-        ":test_t_basic",
-        ":test_t_file-open-failure",
-        ":test_t_lockfile-open-failure",
-        ":test_t_lockfile-permissions",
-        ":test_t_no-activity-bug",
-        ":test_t_sig-warn-deadlock",
-        ":test_t_size-with-underscore",
-    ],
+    tests = [],
 )

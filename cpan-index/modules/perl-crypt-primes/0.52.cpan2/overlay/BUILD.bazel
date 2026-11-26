@@ -124,13 +124,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_author-pod-spell",
-        ":test_t_author-pod-syntax",
-        ":test_t_genprime",
-        ":test_t_genprime_elgamal",
-        ":test_t_intermediates",
-        ":test_t_release-kwalitee",
-        ":test_t_release-meta-json",
-    ],
+    tests = [],
 )

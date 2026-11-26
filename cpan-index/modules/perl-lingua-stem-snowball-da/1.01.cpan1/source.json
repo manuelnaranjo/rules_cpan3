@@ -3,6 +3,6 @@
     "integrity": "sha256-Ljm+TuAVx+xHwrBnhYAYp0BuONUSHWVcikaHSt+poFY=",
     "strip_prefix": "Lingua-Stem-Snowball-Da-1.01",
     "overlay": {
-        "BUILD.bazel": "sha256-kK2N3erjdWwwvbrTUsQRV6rk2wTa/68mUffL43sk6ac="
+        "BUILD.bazel": "sha256-aWmn0uRPlZGgcvkRo083Bvpzjmq/v0aJf2T68fUcgec="
     }
 }

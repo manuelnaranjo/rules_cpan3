@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/as_data.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eg.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/line-numbers.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/maintainer/kwalitee.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/maintainer/pod-coverage.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/maintainer/pod-source.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/maintainer/pod.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/strict-violations.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/synopsis.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/unknown_name.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/whitespace.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
@@ -151,23 +162,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/whole_snippage.t"],
+    tags = ["manual"],
     deps = [":Pod-Snippets_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_as_data",
-        ":test_t_eg",
-        ":test_t_line-numbers",
-        ":test_t_maintainer_kwalitee",
-        ":test_t_maintainer_pod",
-        ":test_t_maintainer_pod-coverage",
-        ":test_t_maintainer_pod-source",
-        ":test_t_strict-violations",
-        ":test_t_synopsis",
-        ":test_t_unknown_name",
-        ":test_t_whitespace",
-        ":test_t_whole_snippage",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

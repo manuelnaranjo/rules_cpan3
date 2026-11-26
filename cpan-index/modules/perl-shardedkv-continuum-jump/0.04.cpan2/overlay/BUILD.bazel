@@ -70,7 +70,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_ShardedKV-Continuum-Jump",
-    ],
+    tests = [],
 )

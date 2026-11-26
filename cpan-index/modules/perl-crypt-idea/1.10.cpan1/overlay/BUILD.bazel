@@ -79,3 +79,9 @@ alias(
     name = "perl-crypt-idea",
     actual = ":Crypt-IDEA",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_use.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02_methods.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03_file.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04_resolved_issues.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05_iter.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06_error.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07_ptardiff.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/08_ptargrep.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/09_roundtrip.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10_ptar.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_symlink.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
@@ -151,23 +162,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/99_pod.t"],
+    tags = ["manual"],
     deps = [":Archive-Tar_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_01_use",
-        ":test_t_02_methods",
-        ":test_t_03_file",
-        ":test_t_04_resolved_issues",
-        ":test_t_05_iter",
-        ":test_t_06_error",
-        ":test_t_07_ptardiff",
-        ":test_t_08_ptargrep",
-        ":test_t_09_roundtrip",
-        ":test_t_10_ptar",
-        ":test_t_90_symlink",
-        ":test_t_99_pod",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

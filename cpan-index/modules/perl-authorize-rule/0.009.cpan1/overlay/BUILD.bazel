@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/all-entities.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/basic.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -90,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/callback-action.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -98,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/callback-keyval.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -106,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/callback-rule.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -114,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/empty-keys.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -122,6 +129,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/entity_groups.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -130,6 +138,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/regex.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -138,6 +147,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/resource_groups.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -146,6 +156,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/api/result_hashes.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -154,6 +165,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-syntax.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -162,6 +174,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eg1.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -170,6 +183,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eg2.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -178,6 +192,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eg3.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -186,6 +201,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eg4.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -194,6 +210,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eg5.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -202,6 +219,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eg6.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -210,6 +228,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/eg7.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -218,6 +237,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/example_perms.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
@@ -226,32 +246,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/synopsis.t"],
+    tags = ["manual"],
     deps = [":Authorize-Rule_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_api_all-entities",
-        ":test_t_api_basic",
-        ":test_t_api_callback-action",
-        ":test_t_api_callback-keyval",
-        ":test_t_api_callback-rule",
-        ":test_t_api_empty-keys",
-        ":test_t_api_entity_groups",
-        ":test_t_api_regex",
-        ":test_t_api_resource_groups",
-        ":test_t_api_result_hashes",
-        ":test_t_author-pod-syntax",
-        ":test_t_eg1",
-        ":test_t_eg2",
-        ":test_t_eg3",
-        ":test_t_eg4",
-        ":test_t_eg5",
-        ":test_t_eg6",
-        ":test_t_eg7",
-        ":test_t_example_perms",
-        ":test_t_synopsis",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

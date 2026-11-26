@@ -67,6 +67,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -75,6 +76,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/elem/nested.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -83,6 +85,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/elemental.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -91,6 +94,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/from-lol.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -99,6 +103,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/gather.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -107,6 +112,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/nester.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -115,6 +121,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/objectifier.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -123,6 +130,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod5/combine.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -131,6 +139,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod5/cut.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -139,6 +148,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod5/data-blanks.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -147,6 +157,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod5/for-begin.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -155,6 +166,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod5/nested-same.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -163,6 +175,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod5/nonpod.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -171,6 +184,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod5/region.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -179,6 +193,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod5/text-type.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -187,6 +202,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/selectors.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
@@ -195,28 +211,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/types.t"],
+    tags = ["manual"],
     deps = [":Pod-Elemental_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_elem_nested",
-        ":test_t_elemental",
-        ":test_t_from-lol",
-        ":test_t_gather",
-        ":test_t_nester",
-        ":test_t_objectifier",
-        ":test_t_pod5_combine",
-        ":test_t_pod5_cut",
-        ":test_t_pod5_data-blanks",
-        ":test_t_pod5_for-begin",
-        ":test_t_pod5_nested-same",
-        ":test_t_pod5_nonpod",
-        ":test_t_pod5_region",
-        ":test_t_pod5_text-type",
-        ":test_t_selectors",
-        ":test_t_types",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

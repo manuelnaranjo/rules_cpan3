@@ -3,6 +3,6 @@
     "integrity": "sha256-NMC4W3lItDHLq8l87lgINeUVzPQ7rb2DOesQlHQIm2k=",
     "strip_prefix": "Proc-Daemon-0.23",
     "overlay": {
-        "BUILD.bazel": "sha256-UIPqi9L5LSfjNDP76tNSBrY93xQoOTe2zuGVNn4TcdI="
+        "BUILD.bazel": "sha256-jgrqkgwxzjnopMjTT/NUXko1gJxMXpgjL8g+qPx+3bU="
     }
 }

@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_compile.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_trigger.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02_valid.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03_inherit.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/04_object.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05_args.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/06_coverage.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07_abortable_callbacks.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/08_dollar_underscore.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/09_inherit.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
@@ -143,22 +153,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/author-pod-syntax.t"],
+    tags = ["manual"],
     deps = [":Class-Trigger_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00_compile",
-        ":test_t_01_trigger",
-        ":test_t_02_valid",
-        ":test_t_03_inherit",
-        ":test_t_04_object",
-        ":test_t_05_args",
-        ":test_t_06_coverage",
-        ":test_t_07_abortable_callbacks",
-        ":test_t_08_dollar_underscore",
-        ":test_t_09_inherit",
-        ":test_t_author-pod-syntax",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

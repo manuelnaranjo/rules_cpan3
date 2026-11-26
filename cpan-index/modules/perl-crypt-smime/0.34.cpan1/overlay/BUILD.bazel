@@ -50,7 +50,10 @@ cpan_xs(
         ],
         allow_empty = True,
     ),
-    deps = [],
+    deps = [
+        "@openssl//:crypto",
+        "@openssl//:ssl",
+    ],
 )
 
 perl_library(

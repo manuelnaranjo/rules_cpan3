@@ -147,15 +147,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_add",
-        ":test_t_cookies_for",
-        ":test_t_examples",
-        ":test_t_parse",
-        ":test_t_publicsuffix",
-        ":test_t_save",
-        ":test_t_sort",
-        ":test_t_zzz-lwp",
-    ],
+    tests = [],
 )

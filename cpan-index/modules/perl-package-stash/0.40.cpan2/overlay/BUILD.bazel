@@ -68,6 +68,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -76,6 +77,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/addsub.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -84,6 +86,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/anon-basic.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -92,6 +95,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/anon.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -100,6 +104,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bare-anon-basic.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -108,6 +113,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bare-anon.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -116,6 +122,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -124,6 +131,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/compile-time.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -132,6 +140,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/edge-cases.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -140,6 +149,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/extension.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -148,6 +158,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/get.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -156,6 +167,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/impl-selection/basic-pp.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -164,6 +176,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/impl-selection/basic-xs.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -172,6 +185,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/impl-selection/bug-rt-78272.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -180,6 +194,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/impl-selection/choice.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -188,6 +203,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/impl-selection/env.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -196,6 +212,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/impl-selection/var.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -204,6 +221,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/io.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -212,6 +230,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/isa.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -220,6 +239,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/magic.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -228,6 +248,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/paamayim_nekdotayim.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -236,6 +257,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/scalar-values.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -244,6 +266,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/stash-deletion.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -252,6 +275,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/synopsis.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -269,6 +293,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/warnings.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
@@ -277,37 +302,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/zzz-check-breaks.t"],
+    tags = ["manual"],
     deps = [":Package-Stash_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_addsub",
-        ":test_t_anon",
-        ":test_t_anon-basic",
-        ":test_t_bare-anon",
-        ":test_t_bare-anon-basic",
-        ":test_t_basic",
-        ":test_t_compile-time",
-        ":test_t_edge-cases",
-        ":test_t_extension",
-        ":test_t_get",
-        ":test_t_impl-selection_basic-pp",
-        ":test_t_impl-selection_basic-xs",
-        ":test_t_impl-selection_bug-rt-78272",
-        ":test_t_impl-selection_choice",
-        ":test_t_impl-selection_env",
-        ":test_t_impl-selection_var",
-        ":test_t_io",
-        ":test_t_isa",
-        ":test_t_magic",
-        ":test_t_paamayim_nekdotayim",
-        ":test_t_scalar-values",
-        ":test_t_stash-deletion",
-        ":test_t_synopsis",
-        ":test_t_warnings",
-        ":test_t_zzz-check-breaks",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

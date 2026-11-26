@@ -6,7 +6,10 @@ package(default_visibility = ["//visibility:public"])
 
 cpan_xs(
     name = "Sys-CpuAffinity_xs",
-    srcs = ["*.xs"],
+    srcs = glob(
+        ["*.xs"],
+        allow_empty = True,
+    ),
     cc_srcs = glob(
         [
             "*.c",
@@ -16,8 +19,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "contrib/linux-sched_setaffinity.xs",
             "contrib/cpusetGetCPUCount.xs",
             "contrib/solaris_processor_bind.xs",
@@ -165,11 +174,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-load",
-        ":test_t_02-available",
-        ":test_t_10-exercise",
-        ":test_t_11-exercise-all",
-        ":test_t_12-32cpus",
-    ],
+    tests = [],
 )

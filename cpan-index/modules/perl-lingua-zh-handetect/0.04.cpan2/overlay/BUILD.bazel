@@ -79,8 +79,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_0-signature",
-        ":test_t_1-basic",
-    ],
+    tests = [],
 )

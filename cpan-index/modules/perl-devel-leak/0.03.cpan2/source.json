@@ -3,6 +3,6 @@
     "integrity": "sha256-b0LDTxHitOPqLg5rlBaoimha3UR5EMr02R3SwXgXclI=",
     "strip_prefix": "Devel-Leak-0.03",
     "overlay": {
-        "BUILD.bazel": "sha256-+1ozitN/d4SPkqcvrdeOSpVoPHRNUx77dDPtEoOsMQk="
+        "BUILD.bazel": "sha256-mOXTaPSDUHsKT8Nh9TpvK0DgIXIwgaUtQrzQN8SBRQw="
     }
 }

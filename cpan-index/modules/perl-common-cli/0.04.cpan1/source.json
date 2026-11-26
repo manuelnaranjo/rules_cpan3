@@ -3,6 +3,6 @@
     "integrity": "sha256-RSyC/RdG18+OgkR84XWpeSt3qkeIff9Ju9n0l29n7l8=",
     "strip_prefix": "Common-CLI-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-D5NBwualpDNKlhC8xzuKWC9nQSkpa5A11BVleVxIgBs="
+        "BUILD.bazel": "sha256-QOK8nYp6tH/oC9BlSFlIpCy+PZesraTm9jUl0Pt0nvs="
     }
 }

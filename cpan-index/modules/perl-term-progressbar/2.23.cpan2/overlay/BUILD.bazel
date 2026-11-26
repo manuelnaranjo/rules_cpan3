@@ -169,18 +169,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_02_term_progressbar_io",
-        ":test_t_bug_123466",
-        ":test_t_compat",
-        ":test_t_eta-linear",
-        ":test_t_lessthanzero",
-        ":test_t_name",
-        ":test_t_silent",
-        ":test_t_v1-message",
-        ":test_t_v2-message",
-        ":test_t_v2-mobile",
-        ":test_t_v2-simple",
-        ":test_t_zero",
-    ],
+    tests = [],
 )

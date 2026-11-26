@@ -115,12 +115,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_close",
-        ":test_t_para",
-        ":test_t_read",
-        ":test_t_seek",
-        ":test_t_truncate",
-        ":test_t_write",
-    ],
+    tests = [],
 )

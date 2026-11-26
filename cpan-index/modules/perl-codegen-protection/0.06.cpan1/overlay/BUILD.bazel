@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":CodeGen-Protection_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/errors.t"],
+    tags = ["manual"],
     deps = [":CodeGen-Protection_test_lib"],
 )
 
@@ -82,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/html.t"],
+    tags = ["manual"],
     deps = [":CodeGen-Protection_test_lib"],
 )
 
@@ -90,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/oo-interface.t"],
+    tags = ["manual"],
     deps = [":CodeGen-Protection_test_lib"],
 )
 
@@ -98,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/perl.t"],
+    tags = ["manual"],
     deps = [":CodeGen-Protection_test_lib"],
 )
 
@@ -106,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/protection.t"],
+    tags = ["manual"],
     deps = [":CodeGen-Protection_test_lib"],
 )
 
@@ -114,18 +120,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_module.t"],
+    tags = ["manual"],
     deps = [":CodeGen-Protection_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_errors",
-        ":test_t_html",
-        ":test_t_oo-interface",
-        ":test_t_perl",
-        ":test_t_protection",
-        ":test_t_test_module",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

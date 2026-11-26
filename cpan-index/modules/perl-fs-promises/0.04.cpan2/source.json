@@ -3,6 +3,6 @@
     "integrity": "sha256-s4zqlDH7DShNLiD5qRWya+BE+jhpvjh16acRXmem0zU=",
     "strip_prefix": "fs-Promises-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-+IByn7mCJDMYXhWFuYGgY2Nz98cA1lHzcCXxduVVEMQ="
+        "BUILD.bazel": "sha256-R/6rB1MQJR9GppV/D/vaI0TECx3AAKkwRsKnpvoO6SM="
     }
 }

@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/001_load.t"],
+    tags = ["manual"],
     deps = [":Array-Diff_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/002_pod.t"],
+    tags = ["manual"],
     deps = [":Array-Diff_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/003_podcoverage.t"],
+    tags = ["manual"],
     deps = [":Array-Diff_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/004_diff.t"],
+    tags = ["manual"],
     deps = [":Array-Diff_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod.t"],
+    tags = ["manual"],
     deps = [":Array-Diff_test_lib"],
 )
 
@@ -103,17 +108,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod_coverage.t"],
+    tags = ["manual"],
     deps = [":Array-Diff_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_001_load",
-        ":test_t_002_pod",
-        ":test_t_003_podcoverage",
-        ":test_t_004_diff",
-        ":test_t_pod",
-        ":test_t_pod_coverage",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

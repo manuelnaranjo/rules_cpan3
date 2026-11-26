@@ -3,6 +3,6 @@
     "integrity": "sha256-x8imUtKXfIMZ6obNXhxb5RvUpr/Del7FzA30NF/0UKI=",
     "strip_prefix": "Business-CreditCard-0.39",
     "overlay": {
-        "BUILD.bazel": "sha256-HmrCi52nmVSm5A3jpzgTZcyduE3qV/3KZbpdM0q/EkE="
+        "BUILD.bazel": "sha256-nHqVOxUMiqliyW8H3jl+Jv82mMGM25KWCQpGAXWq6rU="
     }
 }

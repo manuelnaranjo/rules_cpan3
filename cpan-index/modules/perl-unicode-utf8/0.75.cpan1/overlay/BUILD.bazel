@@ -16,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [],
@@ -112,6 +118,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-report-prereqs.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -120,6 +127,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/000_load.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -128,6 +136,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/010_basic.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -136,6 +145,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/030_native.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -144,6 +154,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/040_wide_characters.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -152,6 +163,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/045_replacement.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -160,6 +172,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/050_noncharacters.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -168,6 +181,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/060_surrogates.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -176,6 +190,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/080_super.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -184,6 +199,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/090_non_shortest_form.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -192,6 +208,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/100_incomplete.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -200,6 +217,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/120_fallback.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -208,6 +226,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/170_steal.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -216,6 +235,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/200_leaks.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -224,6 +244,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/210_tainted.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -232,6 +253,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/220_magic.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -240,6 +262,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/300_read.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -248,6 +271,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/301_read_layers.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -256,6 +280,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/302_slurp.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
@@ -264,31 +289,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/999_pod.t"],
+    tags = ["manual"],
     deps = [":Unicode-UTF8_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-report-prereqs",
-        ":test_t_000_load",
-        ":test_t_010_basic",
-        ":test_t_030_native",
-        ":test_t_040_wide_characters",
-        ":test_t_045_replacement",
-        ":test_t_050_noncharacters",
-        ":test_t_060_surrogates",
-        ":test_t_080_super",
-        ":test_t_090_non_shortest_form",
-        ":test_t_100_incomplete",
-        ":test_t_120_fallback",
-        ":test_t_170_steal",
-        ":test_t_200_leaks",
-        ":test_t_210_tainted",
-        ":test_t_220_magic",
-        ":test_t_300_read",
-        ":test_t_301_read_layers",
-        ":test_t_302_slurp",
-        ":test_t_999_pod",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

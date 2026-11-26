@@ -3,6 +3,6 @@
     "integrity": "sha256-b0nMTlkBVIDbnJtrGK/YxQvjCIZoe2lBFRPQbziXERM=",
     "strip_prefix": "GDGraph-1.56",
     "overlay": {
-        "BUILD.bazel": "sha256-zU769x/qF+FI/jdz9geKRMYRqTnZ91A4CGciZTH0EbY="
+        "BUILD.bazel": "sha256-O8Lv+sYiQfpUrWIkzIMxRvLvlQT9nFBfnFBycRNosWs="
     }
 }

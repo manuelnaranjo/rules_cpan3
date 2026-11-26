@@ -3,6 +3,6 @@
     "integrity": "sha256-W4o/LoMQtWLi3EYnjVdvcUub59ss5oTIQ+fqC++kY7M=",
     "strip_prefix": "Business-OnlinePayment-3.05",
     "overlay": {
-        "BUILD.bazel": "sha256-yOEs1ejszqtjUpWWEo0hBeyD9p3ecn5p/7dunOt+lqk="
+        "BUILD.bazel": "sha256-YxYn6cAM16NRrYJsHO9oM1G+dpIPJVAPu0iPcRowtkM="
     }
 }

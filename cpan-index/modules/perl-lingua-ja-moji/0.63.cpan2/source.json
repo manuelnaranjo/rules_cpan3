@@ -3,6 +3,6 @@
     "integrity": "sha256-UsHgJe8WK89pUZMwt3zgKu/aHkngw/kQR4RKX58rD1E=",
     "strip_prefix": "Lingua-JA-Moji-0.63",
     "overlay": {
-        "BUILD.bazel": "sha256-1Z1OMji7o1IwZJxQUHltY3HgFH9tg10IJPcjfliP+RM="
+        "BUILD.bazel": "sha256-4vbPH9AJw+VwMT/sigY6/rqfAzTiU74yrDYJgEMk9Ls="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-kcF38w+CMC6vMXM1bu8FwhvIIWPfdSrLRpF3vRSnLbk=",
     "strip_prefix": "Net-ZooKeeper-0.41",
     "overlay": {
-        "BUILD.bazel": "sha256-izM51W5Awlgh23uIYkAXaO0vkymmKDjUGVLCtXx/BQg="
+        "BUILD.bazel": "sha256-etqZROhElC+9e1qov+vx7nOMn/UDu4k02zdfRr8FFKM="
     }
 }

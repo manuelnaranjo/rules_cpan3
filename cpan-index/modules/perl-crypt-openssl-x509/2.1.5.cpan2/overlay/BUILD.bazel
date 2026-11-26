@@ -16,13 +16,17 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [
-        "OPENSSL_API_COMPAT",
-    ],
+    defines = [],
     output_loc = "auto/Crypt/OpenSSL/X509/X509",
     textual_hdrs = glob(
         [

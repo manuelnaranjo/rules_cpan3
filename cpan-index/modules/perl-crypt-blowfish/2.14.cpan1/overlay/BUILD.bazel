@@ -79,3 +79,9 @@ alias(
     name = "perl-crypt-blowfish",
     actual = ":Crypt-Blowfish",
 )
+
+test_suite(
+    name = "test",
+    tags = ["manual"],
+    tests = [],
+)

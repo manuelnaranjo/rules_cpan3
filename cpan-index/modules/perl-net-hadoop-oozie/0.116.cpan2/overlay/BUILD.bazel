@@ -181,19 +181,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_00-report-prereqs",
-        ":test_t_01-api",
-        ":test_t_02-schedule-test-coordinator",
-        ":test_t_03-job-information",
-        ":test_t_04-suspend",
-        ":test_t_05-standalone-wf",
-        ":test_t_06-rerun",
-        ":test_t_07-kill",
-        ":test_t_08-sla",
-        ":test_t_09-judge",
-        ":test_t_author-pod-syntax",
-        ":test_t_release-distmeta",
-    ],
+    tests = [],
 )

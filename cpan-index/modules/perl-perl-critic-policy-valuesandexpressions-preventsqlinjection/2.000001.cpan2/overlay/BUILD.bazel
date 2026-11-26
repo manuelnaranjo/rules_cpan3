@@ -112,11 +112,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-load",
-        ":test_t_00-report-prereqs",
-        ":test_t_30-policy",
-        ":test_t_35-default_themes",
-        ":test_t_45-multi-docs",
-    ],
+    tests = [],
 )

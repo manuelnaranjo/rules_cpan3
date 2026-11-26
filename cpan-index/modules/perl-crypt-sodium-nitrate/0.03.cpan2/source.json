@@ -3,6 +3,6 @@
     "integrity": "sha256-fQmAjp+GnPuNeJEmxdmE8jnWfHoFfNVgggpBGgJb/3k=",
     "strip_prefix": "Crypt-Sodium-Nitrate-0.03",
     "overlay": {
-        "BUILD.bazel": "sha256-dM5W7KXs1aSvMQon+bA/OQUowcK4TUDaoc/Z+mPqHrw="
+        "BUILD.bazel": "sha256-cBRfMsbWI25JUpQlkD5/797AzTtfEJ2In5xkOf2QlU8="
     }
 }

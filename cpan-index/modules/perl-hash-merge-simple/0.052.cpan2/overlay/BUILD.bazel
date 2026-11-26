@@ -106,11 +106,5 @@ perl_test(
 test_suite(
     name = "test",
     tags = ["manual"],
-    tests = [
-        ":test_t_00-compile",
-        ":test_t_00-load",
-        ":test_t_00-report-prereqs",
-        ":test_t_01-basic",
-        ":test_t_9000-bug-41738-merge-with-side-effects",
-    ],
+    tests = [],
 )

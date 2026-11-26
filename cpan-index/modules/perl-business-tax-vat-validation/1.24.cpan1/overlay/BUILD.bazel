@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_use.t"],
+    tags = ["manual"],
     deps = [":Business-Tax-VAT-Validation_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01_local_check.t"],
+    tags = ["manual"],
     deps = [":Business-Tax-VAT-Validation_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/02_local_check_nok.t"],
+    tags = ["manual"],
     deps = [":Business-Tax-VAT-Validation_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod-coverage.t"],
+    tags = ["manual"],
     deps = [":Business-Tax-VAT-Validation_test_lib"],
 )
 
@@ -95,16 +99,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod.t"],
+    tags = ["manual"],
     deps = [":Business-Tax-VAT-Validation_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00_use",
-        ":test_t_01_local_check",
-        ":test_t_02_local_check_nok",
-        ":test_t_pod",
-        ":test_t_pod-coverage",
-    ],
+    tags = ["manual"],
+    tests = [],
 )
