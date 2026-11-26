@@ -466,6 +466,27 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
         source_json = json.loads((dest_dir / "source.json").read_text(encoding="utf-8"))
         self.assertEqual(source_json["strip_prefix"], "Grpc-XS-0.38")
 
+    def test_generate_build_bazel_includes_cpan_runtime_deps(self) -> None:
+        """Verifies that generate_build_bazel adds CPAN lockfile runtime dependencies to perl_library."""
+        inspection = DistributionInspection(
+            dist_name="My-Module",
+            is_xs=False,
+            output_loc="auto/My/Module/Module",
+            t_files=[],
+        )
+        engine = HeuristicsEngine()
+        build_bazel = engine.generate_build_bazel(
+            inspection=inspection,
+            module_name="perl-my-module",
+            runtime_deps=["Class-Load", "File-ShareDir", ":local_lib", "@custom//:dep"],
+        )
+        self.assertIn('name = "My-Module"', build_bazel)
+        self.assertIn('":local_lib"', build_bazel)
+        self.assertIn('"@custom//:dep"', build_bazel)
+        self.assertIn('"@perl-class-load"', build_bazel)
+        self.assertIn('"@perl-file-sharedir"', build_bazel)
+        self.assertNotIn('"@perl-my-module"', build_bazel)
+
     def test_generate_build_bazel_includes_cpan_test_deps(self) -> None:
         """Verifies that generate_build_bazel adds CPAN lockfile test dependencies to test_lib."""
         inspection = DistributionInspection(
@@ -554,6 +575,92 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
         self.assertIn('"@perl-test-exception"', build_text_regen)
         mb_text_regen = (dest_dir / "MODULE.bazel").read_text(encoding="utf-8")
         self.assertIn('bazel_dep(name = "perl-test-exception", version = "0.43.cpan1")', mb_text_regen)
+
+    def test_create_and_regenerate_port_with_lockfile_runtime_deps(self) -> None:
+        """Verifies that create_new_port and regenerate_port wire runtime dependencies from lockfile."""
+        import io
+        import tarfile
+
+        tar_buf = io.BytesIO()
+        with tarfile.open(fileobj=tar_buf, mode="w:gz") as tar:
+            ti = tarfile.TarInfo("Sample-Runtime-1.00/lib/Sample/Runtime.pm")
+            content = b"package Sample::Runtime;\nour $VERSION = '1.00';\n1;\n"
+            ti.size = len(content)
+            tar.addfile(ti, io.BytesIO(content))
+
+        tar_bytes = tar_buf.getvalue()
+        tar_path = self.root_path / "sample-runtime-1.00.tar.gz"
+        tar_path.write_bytes(tar_bytes)
+
+        # Create metadata for dependencies
+        dep_dir1 = self.index_dir / "modules" / "perl-class-load"
+        dep_dir1.mkdir(parents=True, exist_ok=True)
+        (dep_dir1 / "metadata.json").write_text(json.dumps({"versions": ["0.25.cpan1"]}), encoding="utf-8")
+
+        lockfile = self.root_path / "cpan.lock.json"
+        lockfile.write_text(
+            json.dumps({
+                "distributions": {
+                    "Sample-Runtime": {
+                        "dependencies": {
+                            "runtime": ["Class-Load"],
+                            "test": [],
+                        },
+                        "version": "1.00",
+                        "url": tar_path.as_uri(),
+                    }
+                }
+            }),
+            encoding="utf-8",
+        )
+
+        manager = IndexManager(index_dir=self.index_dir)
+        manager.load_lockfile(lockfile)
+        dest_dir = manager.create_new_port(
+            dist_name="Sample-Runtime",
+            upstream_version="1.00",
+            archive_url=tar_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar_path,
+            target_version="1.00.cpan1",
+        )
+
+        build_text = (dest_dir / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn('"@perl-class-load"', build_text)
+        mb_text = (dest_dir / "MODULE.bazel").read_text(encoding="utf-8")
+        self.assertIn('bazel_dep(name = "perl-class-load", version = "0.25.cpan1")', mb_text)
+
+        # Test regenerate_port in place
+        (dest_dir.parent / "metadata.json").write_text(json.dumps({"versions": ["1.00.cpan1"]}), encoding="utf-8")
+        regen_ver = manager.regenerate_port("perl-sample-runtime", bump_build_id=False)
+        self.assertEqual(regen_ver, "1.00.cpan1")
+        build_text_regen = (dest_dir / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn('"@perl-class-load"', build_text_regen)
+        mb_text_regen = (dest_dir / "MODULE.bazel").read_text(encoding="utf-8")
+        self.assertIn('bazel_dep(name = "perl-class-load", version = "0.25.cpan1")', mb_text_regen)
+
+
+    def test_generate_build_bazel_includes_custom_directories(self) -> None:
+        """Verifies that generate_build_bazel globs custom includes in srcs and data."""
+        inspection = DistributionInspection(
+            dist_name="YAML-LibYAML",
+            is_xs=True,
+            output_loc="auto/YAML/XS/LibYAML/LibYAML",
+            t_files=[],
+        )
+        metadata = GeneratorMetadata(
+            includes=["LibYAML/lib"],
+        )
+        engine = HeuristicsEngine()
+        build_bazel = engine.generate_build_bazel(
+            inspection=inspection,
+            module_name="perl-yaml-libyaml",
+            generator_metadata=metadata,
+        )
+        self.assertIn('"LibYAML/lib/**/*.pm"', build_bazel)
+        self.assertIn('"LibYAML/lib/**/*.pod"', build_bazel)
+        self.assertIn('"LibYAML/lib/**/*"', build_bazel)
+        self.assertIn('"LibYAML/lib"', build_bazel)
 
 
 if __name__ == "__main__":
