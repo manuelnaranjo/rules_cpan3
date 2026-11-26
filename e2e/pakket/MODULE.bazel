@@ -17,58 +17,288 @@ cpan = use_extension("@rules_cpan//cpan:extensions.bzl", "cpan")
 cpan.install(
     name = "cpan",
     lock = "//:cpan.lock.json",
-    manual_tests = [
-        "App-Cmd:t/basic.t",
-        "App-Cmd:t/simple-version.t",
-        "App-Cmd:t/tester-exit.t",
-        "Archive-Any:t/00compile.t",
-        "Archive-Any:t/Any.t",
-        "Archive-Any:t/fail.t",
-        "Archive-Any:t/type.t",
-        "Cpanel-JSON-XS",
-        "Data-Printer:t/000.2-warn.t",
-        "Data-Printer:t/026-caller_message.t",
-        "File-ShareDir:t/00_prereqs.t",
-        "File-ShareDir:t/02_main.t",
-        "File-ShareDir:t/05_class.t",
-        "File-Which:t/file_which.t",
-        "IO-Tty",
-        "Module-Build",
-        "Moose:t/attributes/attribute_delegation.t",
-        "Moose:t/basics/override_and_foreign_classes.t",
-        "Package-Stash:t/warnings-taint.t",
-        "Test-Simple:t/Test2/behavior/Taint.t",
-        "Type-Tiny:t/20-modules/*",
-        "Type-Tiny:t/21-types/*",
-        "Type-Tiny:t/30-external/*",
-        "Type-Tiny:t/40-bugs/*",
-        "Types-Serialiser",
-        "YAML-LibYAML",
-        "common-sense",
-    ],
 )
-cpan.annotation(
-    distribution = "Test-File",
-    hub = "cpan",
-    patch_cmds = ["rm -f File.xs"],
-)
+
+# CPAN injections connecting registry entries to hub
 cpan.inject(
     distribution = "Compress-Raw-Zlib",
-    hub = "cpan",
     target = "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
 )
 cpan.inject(
     distribution = "IO-Tty",
-    hub = "cpan",
     target = "@perl-io-tty//:IO-Tty",
 )
-cpan.annotation(
-    defines = ["HAVE_CONFIG_H"],
+cpan.inject(
+    distribution = "Algorithm-Diff",
+    target = "@perl-algorithm-diff//:Algorithm-Diff",
+)
+cpan.inject(
+    distribution = "Algorithm-Diff-Callback",
+    target = "@perl-algorithm-diff-callback//:Algorithm-Diff-Callback",
+)
+cpan.inject(
+    distribution = "App-Cmd",
+    target = "@perl-app-cmd//:App-Cmd",
+)
+cpan.inject(
+    distribution = "Archive-Any",
+    target = "@perl-archive-any//:Archive-Any",
+)
+cpan.inject(
+    distribution = "Archive-Tar",
+    target = "@perl-archive-tar//:Archive-Tar",
+)
+cpan.inject(
+    distribution = "Capture-Tiny",
+    target = "@perl-capture-tiny//:Capture-Tiny",
+)
+cpan.inject(
+    distribution = "Class-Load",
+    target = "@perl-class-load//:Class-Load",
+)
+cpan.inject(
+    distribution = "Class-Load-XS",
+    target = "@perl-class-load-xs//:Class-Load-XS",
+)
+cpan.inject(
+    distribution = "common-sense",
+    target = "@perl-common-sense//:common-sense",
+)
+cpan.inject(
+    distribution = "Config-Any",
+    target = "@perl-config-any//:Config-Any",
+)
+cpan.inject(
+    distribution = "Cpanel-JSON-XS",
+    target = "@perl-cpanel-json-xs//:Cpanel-JSON-XS",
+)
+cpan.inject(
+    distribution = "Data-OptList",
+    target = "@perl-data-optlist//:Data-OptList",
+)
+cpan.inject(
+    distribution = "Data-Printer",
+    target = "@perl-data-printer//:Data-Printer",
+)
+cpan.inject(
+    distribution = "Devel-GlobalDestruction",
+    target = "@perl-devel-globaldestruction//:Devel-GlobalDestruction",
+)
+cpan.inject(
+    distribution = "Devel-OverloadInfo",
+    target = "@perl-devel-overloadinfo//:Devel-OverloadInfo",
+)
+cpan.inject(
+    distribution = "Devel-StackTrace",
+    target = "@perl-devel-stacktrace//:Devel-StackTrace",
+)
+cpan.inject(
+    distribution = "Dist-CheckConflicts",
+    target = "@perl-dist-checkconflicts//:Dist-CheckConflicts",
+)
+cpan.inject(
+    distribution = "Eval-Closure",
+    target = "@perl-eval-closure//:Eval-Closure",
+)
+cpan.inject(
+    distribution = "File-chdir",
+    target = "@perl-file-chdir//:File-chdir",
+)
+cpan.inject(
+    distribution = "File-Copy-Recursive",
+    target = "@perl-file-copy-recursive//:File-Copy-Recursive",
+)
+cpan.inject(
+    distribution = "File-HomeDir",
+    target = "@perl-file-homedir//:File-HomeDir",
+)
+cpan.inject(
+    distribution = "File-Lockfile",
+    target = "@perl-file-lockfile//:File-Lockfile",
+)
+cpan.inject(
+    distribution = "File-ShareDir",
+    target = "@perl-file-sharedir//:File-ShareDir",
+)
+cpan.inject(
+    distribution = "File-ShareDir-Install",
+    target = "@perl-file-sharedir-install//:File-ShareDir-Install",
+)
+cpan.inject(
+    distribution = "File-Which",
+    target = "@perl-file-which//:File-Which",
+)
+cpan.inject(
+    distribution = "Git-Wrapper",
+    target = "@perl-git-wrapper//:Git-Wrapper",
+)
+cpan.inject(
+    distribution = "IO-Interactive",
+    target = "@perl-io-interactive//:IO-Interactive",
+)
+cpan.inject(
+    distribution = "IO-Prompt-Tiny",
+    target = "@perl-io-prompt-tiny//:IO-Prompt-Tiny",
+)
+cpan.inject(
+    distribution = "JSON-MaybeXS",
+    target = "@perl-json-maybexs//:JSON-MaybeXS",
+)
+cpan.inject(
+    distribution = "Log-Any",
+    target = "@perl-log-any//:Log-Any",
+)
+cpan.inject(
+    distribution = "Log-Any-Adapter-Dispatch",
+    target = "@perl-log-any-adapter-dispatch//:Log-Any-Adapter-Dispatch",
+)
+cpan.inject(
+    distribution = "Log-Dispatch",
+    target = "@perl-log-dispatch//:Log-Dispatch",
+)
+cpan.inject(
+    distribution = "Module-Build",
+    target = "@perl-module-build//:Module-Build",
+)
+cpan.inject(
+    distribution = "Module-CPANfile",
+    target = "@perl-module-cpanfile//:Module-CPANfile",
+)
+cpan.inject(
+    distribution = "Module-Implementation",
+    target = "@perl-module-implementation//:Module-Implementation",
+)
+cpan.inject(
+    distribution = "Module-Runtime",
+    target = "@perl-module-runtime//:Module-Runtime",
+)
+cpan.inject(
+    distribution = "Moose",
+    target = "@perl-moose//:Moose",
+)
+cpan.inject(
+    distribution = "MooseX-Clone",
+    target = "@perl-moosex-clone//:MooseX-Clone",
+)
+cpan.inject(
+    distribution = "MooseX-StrictConstructor",
+    target = "@perl-moosex-strictconstructor//:MooseX-StrictConstructor",
+)
+cpan.inject(
+    distribution = "MooseX-Test-Role",
+    target = "@perl-moosex-test-role//:MooseX-Test-Role",
+)
+cpan.inject(
+    distribution = "MRO-Compat",
+    target = "@perl-mro-compat//:MRO-Compat",
+)
+cpan.inject(
+    distribution = "namespace-autoclean",
+    target = "@perl-namespace-autoclean//:namespace-autoclean",
+)
+cpan.inject(
+    distribution = "namespace-clean",
+    target = "@perl-namespace-clean//:namespace-clean",
+)
+cpan.inject(
+    distribution = "Package-Stash",
+    target = "@perl-package-stash//:Package-Stash",
+)
+cpan.inject(
+    distribution = "Package-Stash-XS",
+    target = "@perl-package-stash-xs//:Package-Stash-XS",
+)
+cpan.inject(
+    distribution = "Params-Util",
+    target = "@perl-params-util//:Params-Util",
+)
+cpan.inject(
+    distribution = "Path-Tiny",
+    target = "@perl-path-tiny//:Path-Tiny",
+)
+cpan.inject(
+    distribution = "Ref-Util",
+    target = "@perl-ref-util//:Ref-Util",
+)
+cpan.inject(
+    distribution = "Ref-Util-XS",
+    target = "@perl-ref-util-xs//:Ref-Util-XS",
+)
+cpan.inject(
+    distribution = "Role-Tiny",
+    target = "@perl-role-tiny//:Role-Tiny",
+)
+cpan.inject(
+    distribution = "Safe-Isa",
+    target = "@perl-safe-isa//:Safe-Isa",
+)
+cpan.inject(
+    distribution = "Sub-Exporter",
+    target = "@perl-sub-exporter//:Sub-Exporter",
+)
+cpan.inject(
+    distribution = "Sub-Exporter-Progressive",
+    target = "@perl-sub-exporter-progressive//:Sub-Exporter-Progressive",
+)
+cpan.inject(
+    distribution = "Sub-Identify",
+    target = "@perl-sub-identify//:Sub-Identify",
+)
+cpan.inject(
+    distribution = "Sub-Install",
+    target = "@perl-sub-install//:Sub-Install",
+)
+cpan.inject(
+    distribution = "Sub-Name",
+    target = "@perl-sub-name//:Sub-Name",
+)
+cpan.inject(
+    distribution = "Sub-Quote",
+    target = "@perl-sub-quote//:Sub-Quote",
+)
+cpan.inject(
+    distribution = "System-Command",
+    target = "@perl-system-command//:System-Command",
+)
+cpan.inject(
+    distribution = "Test-Fatal",
+    target = "@perl-test-fatal//:Test-Fatal",
+)
+cpan.inject(
+    distribution = "Test-Needs",
+    target = "@perl-test-needs//:Test-Needs",
+)
+cpan.inject(
+    distribution = "Test-Simple",
+    target = "@perl-test-simple//:Test-Simple",
+)
+cpan.inject(
+    distribution = "Try-Tiny",
+    target = "@perl-try-tiny//:Try-Tiny",
+)
+cpan.inject(
+    distribution = "Type-Tiny",
+    target = "@perl-type-tiny//:Type-Tiny",
+)
+cpan.inject(
+    distribution = "Types-Path-Tiny",
+    target = "@perl-types-path-tiny//:Types-Path-Tiny",
+)
+cpan.inject(
+    distribution = "Types-Serialiser",
+    target = "@perl-types-serialiser//:Types-Serialiser",
+)
+cpan.inject(
+    distribution = "Unicode-UTF8",
+    target = "@perl-unicode-utf8//:Unicode-UTF8",
+)
+cpan.inject(
+    distribution = "Variable-Magic",
+    target = "@perl-variable-magic//:Variable-Magic",
+)
+cpan.inject(
     distribution = "YAML-LibYAML",
-    hub = "cpan",
-    includes = ["LibYAML/lib"],
-    output_loc = "auto/YAML/XS/LibYAML/LibYAML",
-    test_module = "YAML::XS",
+    target = "@perl-yaml-libyaml//:YAML-LibYAML",
 )
 use_repo(cpan, "cpan")
 

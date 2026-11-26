@@ -77,69 +77,30 @@ use_repo(cpan, "cpan_linux", "cpan_macos")
 
 Distribution repositories are isolated by prefixing with the hub name (`<hub_name>__<dist_name>`), avoiding any target or repo collisions.
 
-### Extra Annotations: Platform Constraints & Execution Requirements
+### Injected BCR Modules: Connecting Registry Entries to the Hub
 
-Generated distribution targets can be customized with extra annotations such as platform constraints (`target_compatible_with`, `exec_compatible_with`) and action `execution_requirements` (e.g. `no-remote`, `requires-network`, `local`):
-
-#### Using `cpan.annotation` tag
+CPAN distributions ported to the Bzlmod registry (`cpan-index`) are declared via `bazel_dep` and connected into the hub repository using `cpan.inject`:
 
 ```starlark
-cpan.annotation(
-    hub = "cpan",                          # Target hub repository name (default: "cpan")
-    distribution = "Compress-Raw-Zlib",    # Target CPAN distribution
-    target_compatible_with = [             # Platform constraints
-        "@platforms//os:linux",
-        "@platforms//os:macos",
-    ],
-    execution_requirements = {             # Execution requirements passed to actions
-        "no-remote": "1",
-    },
-    tags = ["no-remote"],
-)
-```
+bazel_dep(name = "perl-compress-raw-zlib", version = "2.226.cpan2")
 
-#### Using attributes directly in `cpan.install`
-
-```starlark
+cpan = use_extension("@rules_cpan//cpan:extensions.bzl", "cpan")
 cpan.install(
     name = "cpan",
     lock = "//:cpan.lock.json",
-    target_compatible_with = {
-        "Compress-Raw-Zlib": ["@platforms//os:linux"],
-    },
-    exec_compatible_with = {
-        "Compress-Raw-Zlib": ["@platforms//os:linux"],
-    },
-    tags = {
-        "Compress-Raw-Zlib": ["no-remote"],
-    },
 )
+
+cpan.inject(
+    distribution = "Compress-Raw-Zlib",
+    target = "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
+)
+use_repo(cpan, "cpan")
 ```
+
+The hub repository exposes standard distribution aliases (e.g. `@cpan//:Compress-Raw-Zlib`) and a unified test suite (`@cpan//:all_tests`) that points directly to the test suites of all injected dependencies.
 
 ### Overlays and Customization
-For distributions requiring custom build logic, patches, or native BCR dependencies (e.g. `@zlib`):
-
-```starlark
-cpan.install(
-    name = "cpan",
-    lock = "//:cpan.lock.json",
-    build_file_overlays = {
-        "Compress-Raw-Zlib": "//tests:BUILD.Compress-Raw-Zlib.bazel",
-    },
-    patch_cmds = {
-        "Compress-Raw-Zlib": [
-            "cp fallback/constants.h constants.h",
-            "cp fallback/constants.xs constants.xs",
-        ],
-    },
-    patch_cmds_win = {
-        "Compress-Raw-Zlib": [
-            "copy fallback\\constants.h constants.h",
-            "copy fallback\\constants.xs constants.xs",
-        ],
-    },
-)
-```
+Distribution overlays, compilation defines, platform compatibility, and manual tests are configured via `generator-metadata.yaml` directly within each BCR module in `cpan-index/modules/`.
 
 ### Cyclic Dependency Pruning
 CPAN distributions frequently declare circular runtime requirements (e.g. `Test::Simple` <-> `Time::HiRes` <-> `XSLoader`). The `cpan` module extension runs bounded cycle detection to prune back-edges from runtime dependencies, ensuring that Bazel's build graph remains a strict Directed Acyclic Graph (DAG) while preserving full runtime module availability in runfiles.

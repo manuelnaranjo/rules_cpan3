@@ -55,22 +55,12 @@ bazel_dep(name = "perl-compress-raw-zlib", version = "2.226.cpan2")
 cpan = use_extension("//cpan:extensions.bzl", "cpan")
 cpan.install(
     name = "cpan",
-    build_file_overlays = {
-        "Compress-Raw-Zlib": "//tests:BUILD.Compress-Raw-Zlib.bazel",
-    },
     lock = "//tests:cpan.lock.json",
-    patch_cmds = {
-        "Compress-Raw-Zlib": [
-            "cp fallback/constants.h constants.h",
-            "cp fallback/constants.xs constants.xs",
-        ],
-    },
-    patch_cmds_win = {
-        "Compress-Raw-Zlib": [
-            "copy fallback\\constants.h constants.h",
-            "copy fallback\\constants.xs constants.xs",
-        ],
-    },
+)
+cpan.inject(
+    distribution = "Algorithm-Diff",
+    hub = "cpan",
+    target = "@perl-algorithm-diff//:Algorithm-Diff",
 )
 cpan.inject(
     distribution = "Compress-Raw-Zlib",
@@ -80,19 +70,6 @@ cpan.inject(
 cpan.install(
     name = "cpan_alt",
     lock = "//tests:cpan.lock.json",
-    manual_tests = [
-        "Compress-Raw-Zlib",
-    ],
-)
-cpan.annotation(
-    distribution = "Algorithm-Diff",
-    execution_requirements = {
-        "no-remote": "1",
-    },
-    hub = "cpan",
-    target_compatible_with = [
-        "@platforms//os:linux",
-    ],
 )
 
 single_version_override(

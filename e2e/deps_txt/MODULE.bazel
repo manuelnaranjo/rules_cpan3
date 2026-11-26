@@ -52,1091 +52,3426 @@ cpan = use_extension("@rules_cpan//cpan:extensions.bzl", "cpan")
 cpan.install(
     name = "cpan",
     lock = "//:cpan.lock.json",
-    manual_tests = [
-        "AWS-S3:t/001_compiles_pod.t",
-        "Algorithm-Heapify-XS",
-        "Amazon-S3",
-        "AnyEvent",
-        "AnyEvent-HTTP",
-        "AnyEvent-Handle-UDP",
-        "AnyEvent-Promise",
-        "AnyEvent-Promises",
-        "AnyEvent-Redis-RipeRedis",
-        "AnyEvent-Subprocess",
-        "AnyEvent-XMPP",
-        "AnyEvent-XSPromises",
-        "AnyEvent-YACurl",
-        "Apache-Session",
-        "Apache-Session-Memcached",
-        "App-Cmd:t/basic.t",
-        "App-Cmd:t/simple-version.t",
-        "App-Cmd:t/tester-exit.t",
-        "App-Daemon",
-        "App-ElasticSearch-Utilities",
-        "App-FatPacker",
-        "App-Oozie",
-        "Archive-Any:t/00compile.t",
-        "Archive-Any:t/Any.t",
-        "Archive-Any:t/fail.t",
-        "Archive-Any:t/type.t",
-        "Authen-SASL-XS",
-        "AutoLoader",
-        "BSD-Resource",
-        "Business-CreditCard",
-        "Business-OnlinePayment:t/fd_precharge.t",
-        "CHI",
-        "CLI-Helpers",
-        "Cache",
-        "Cache-Cache",
-        "Cache-Memcached",
-        "Cache-Memcached-Fast",
-        "Carp-Always",
-        "Carp-Assert-More",
-        "Cassandra-Client",
-        "Class-MethodMaker",
-        "Class-Std-Fast",
-        "Cpanel-JSON-XS",
-        "Crypt-JWT",
-        "Crypt-OpenPGP",
-        "Crypt-PKCS10:t/04_complex_rdn.t",
-        "Crypt-Primes",
-        "Crypt-RSA",
-        "Crypt-Random",
-        "Crypt-Rijndael",
-        "Crypt-ScryptKDF",
-        "Crypt-URandom",
-        "CryptX",
-        "DBD-Cassandra",
-        "DBD-Mock",
-        "DBD-ODBC",
-        "DBD-SQLite",
-        "DBD-mysql",
-        "DBI",
-        "DBIx-Class",
-        "DBIx-Class-Helpers",
-        "DBIx-ContextualFetch",
-        "DBIx-Placeholder-Named",
-        "Daemon-Control:t/02_sleep_system.t",
-        "Daemon-Control:t/06_stderr_stdout.t",
-        "Dancer:t/00_base/008_export.t",
-        "Dancer:t/03_route_handler/08_errors.t",
-        "Dancer:t/22_hooks/11_error_in_hook.t",
-        "Dancer:t/25_exceptions/01_exceptions.t",
-        "Dancer2",
-        "Dancer2-Plugin-REST:t/02_prepare_serializer_for_format.t",
-        "Dancer2-Template-MojoTemplate",
-        "Data-Consumer:t/01-mysql.t",
-        "Data-Consumer:t/02-mysql.t",
-        "Data-Consumer:t/03-mysql.t",
-        "Data-Consumer:t/04-mysql.t",
-        "Data-Consumer:t/05-mysql.t",
-        "Data-Consumer:t/50-dir.t",
-        "Data-Dump-Streamer:t/readonly.t",
-        "Data-FlexSerializer:t/10basic.t",
-        "Data-GUID",
-        "Data-ICal",
-        "Data-MessagePack",
-        "Data-MessagePack-Stream",
-        "Data-Perl",
-        "Data-Printer:t/000.2-warn.t",
-        "Data-Printer:t/026-caller_message.t",
-        "Data-Structure-Util",
-        "Data-UUID",
-        "Data-Undump",
-        "Date-Calc",
-        "Date-Calc-XS",
-        "DateTime",
-        "DateTime-Event-Cron",
-        "DateTime-Format-Flexible",
-        "DateTime-Format-RFC3339",
-        "DateTime-Format-Strptime",
-        "Devel-Cover",
-        "Devel-Cover-Report-Cobertura",
-        "Devel-Cover-Report-SonarGeneric",
-        "Devel-Leak",
-        "Devel-NYTProf",
-        "Devel-PPPort",
-        "Devel-QuickCover",
-        "Devel-REPL-InProcess",
-        "Devel-Refcount",
-        "Devel-Size",
-        "Digest-CRC",
-        "Digest-FarmHash",
-        "Digest-MD2",
-        "Digest-MD4",
-        "Digest-Perl-MD4",
-        "Digest-SHA",
-        "Digest-SHA1",
-        "Digest-SHA3",
-        "Digest-SipHash",
-        "Digest-Trivial",
-        "Directory-Scanner",
-        "EV",
-        "EWS-Client",
-        "ElasticSearch",
-        "Elasticsearch-Model",
-        "Email-MIME-Encodings",
-        "Email-Sender:t/sendmail.t",
-        "Email-Simple:t/above-0xFF.t",
-        "Emoji-NationalFlag",
-        "Encode",
-        "Encode-Detect",
-        "Encode-HanExtra",
-        "Error",
-        "Exception-Class",
-        "Expect",
-        "ExtUtils-MakeMaker",
-        "Feersum",
-        "File-BaseDir",
-        "File-CounterFile",
-        "File-Hotfolder",
-        "File-ShareDir:t/00_prereqs.t",
-        "File-ShareDir:t/02_main.t",
-        "File-ShareDir:t/05_class.t",
-        "File-Tail",
-        "File-Which:t/file_which.t",
-        "Filter",
-        "Frontier-RPC",
-        "GD",
-        "GD-Barcode",
-        "GD-Persian",
-        "GDGraph",
-        "GDTextUtil",
-        "Geo-GoogleMaps-OffsetCenter",
-        "Geo-IP",
-        "GeoIP2",
-        "Getopt-ArgParse",
-        "Git-Repository",
-        "Git-Repository-Plugin-Log",
-        "Google-Ads-AdWords-Client",
-        "Google-ProtocolBuffers:t/10-codegen-b.t",
-        "Google-ProtocolBuffers-Dynamic",
-        "GraphViz",
-        "Graphite-Enumerator",
-        "HBase-JSONRest",
-        "HTML-FillInForm",
-        "HTML-FromANSI",
-        "HTML-Parser",
-        "HTML-Scrubber",
-        "HTML-Strip",
-        "HTML-TagFilter",
-        "HTML-Tagset",
-        "HTML-Template",
-        "HTML-Tidy",
-        "HTML-Tree",
-        "HTML-TreeBuilder-XPath",
-        "HTML-TreeStructured",
-        "HTTP-CookieJar",
-        "HTTP-MultiPartParser",
-        "HTTP-Server-Simple",
-        "Hadoop-Inline-ClassLoader",
-        "Hash-Merge-Simple",
-        "Hijk",
-        "I18N-Charset",
-        "IO-AIO",
-        "IO-All",
-        "IO-Compress-Brotli",
-        "IO-Compress",
-        "IO-Prompt",
-        "IO-Socket-PortState",
-        "IO-Socket-SSL",
-        "IO-String",
-        "IO-Tty",
-        "IPC-ConcurrencyLimit",
-        "IPC-Run",
-        "Image-Scale",
-        "Imager",
-        "Imager-QRCode",
-        "JIRA-REST",
-        "JS-SourceMap",
-        "JSON",
-        "JSON-Parse",
-        "JSON-Path",
-        "JSON-SL",
-        "JSON-Schema-Draft201909",
-        "JSON-Schema-Modern",
-        "JSON-Types",
-        "JSON-XS",
-        "Jcode",
-        "Kafka",
-        "LWP-Authen-Negotiate",
-        "LWP-Protocol-connect",
-        "LWP-UserAgent-Determined",
-        "Lingua-EN-Inflexion",
-        "Lingua-Han-PinYin",
-        "Lingua-Han-Utils",
-        "Lingua-Identify-CLD",
-        "Lingua-Identify-CLD2",
-        "Lingua-JA-Moji",
-        "Lingua-Stem",
-        "Lingua-ZH-HanDetect",
-        "Linux-Inotify2",
-        "Linux-Prctl",
-        "Linux-Smaps-Tiny",
-        "List-MoreUtils",
-        "Locale-CLDR",
-        "Locale-gettext",
-        "Log-Dispatch-FileRotate",
-        "Log-Log4perl",
-        "Log-Log4perl-Appender-Elasticsearch",
-        "Log-Log4perl-Layout-JSON",
-        "Log-Report",
-        "MIME-tools",
-        "Mail-Box",
-        "Mail-Box-IMAP4",
-        "MariaDB-NonBlocking",
-        "Markdent",
-        "Math-GSL",
-        "Math-Pari",
-        "Math-Random",
-        "Math-Random-MT",
-        "Math-Random-Secure",
-        "Math-Round",
-        "Math-SimpleHisto-XS",
-        "Math-SimpleHisto-XS-CLI",
-        "MaxMind-DB-Reader",
-        "MaxMind-DB-Reader-XS",
-        "MaxMind-DB-Writer",
-        "Memoize-Memcached",
-        "Mock-Quick",
-        "Module-Build",
-        "Module-Build-WithXSpp",
-        "Module-Find",
-        "Module-Pluggable",
-        "Module-Reader",
-        "Module-Util",
-        "Mojolicious:t/mojo/exception.t",
-        "Moo:t/accessor-weaken-pre-5_8_3.t",
-        "Moose:t/attributes/attribute_delegation.t",
-        "Moose:t/basics/override_and_foreign_classes.t",
-        "MooseX-Getopt-Usage",
-        "MooseX-MungeHas:t/01basic.t",
-        "MooseX-Storage:t/040_basic_utils.t",
-        "MooseX-Types-DateTime:t/01_basic.t",
-        "Mozilla-PublicSuffix",
-        "Net-AMQP-RabbitMQ",
-        "Net-Amazon-S3",
-        "Net-Curl",
-        "Net-Facebook-Oauth2",
-        "Net-HTTPS-NB",
-        "Net-Hadoop-Oozie",
-        "Net-Hadoop-WebHDFS",
-        "Net-Hadoop-WebHDFS-LWP",
-        "Net-Hadoop-YARN",
-        "Net-IDN-Encode",
-        "Net-IP",
-        "Net-Kafka",
-        "Net-LibIDN",
-        "Net-Patricia",
-        "Net-Pcap",
-        "Net-Ping",
-        "Net-SAML2",
-        "Net-Server:t/Options.t",
-        "Net-SMS-WorldText",
-        "Net-SSH-Perl",
-        "Net-SSH2",
-        "Net-Subnet",
-        "Net-ZooKeeper",
-        "Net-ZooKeeper-Lock",
-        "NetAddr-IP",
-        "Number-Format",
-        "Number-Phone",
-        "OIDC-Lite",
-        "Object-Event",
-        "OptArgs",
-        "PDF-API2",
-        "POE-XS-Queue-Array",
-        "POSIX-AtFork",
-        "Package-Alias",
-        "Package-Stash:t/warnings-taint.t",
-        "Parallel-ForkManager",
-        "Parse-CSV",
-        "Parser-GraphQL-XS",
-        "PathTools",
-        "Paws",
-        "Perl-Critic",
-        "Perl-Critic-Community",
-        "Perl-Critic-Lax",
-        "Perl-Critic-More",
-        "Perl-Critic-Policy-BuiltinFunctions-ProhibitDeleteOnArrays",
-        "Perl-Critic-Policy-BuiltinFunctions-ProhibitReturnOr",
-        "Perl-Critic-Policy-HTTPCookies",
-        "Perl-Critic-Policy-Perlsecret",
-        "Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection",
-        "Perl-Critic-Policy-ValuesAndExpressions-ProhibitSingleArgArraySlice",
-        "Perl-Critic-Policy-Variables-ProhibitLoopOnHash",
-        "Perl-Critic-Policy-Variables-ProhibitUnusedVarsStricter",
-        "Perl-Critic-Pulp",
-        "Perl-Critic-StricterSubs",
-        "Perl-Destruct-Level",
-        "Perl-LanguageServer",
-        "Perl-MinimumVersion",
-        "Perl-PrereqScanner",
-        "Perl-Version-Bumper",
-        "PerlIO-gzip",
-        "PerlX-Maybe-XS",
-        "Plack-Debugger",
-        "Plack-Middleware-Camelcadedb",
-        "Plack-Middleware-ChromeLogger",
-        "Plack-Middleware-Deflater",
-        "Plack-Test-Agent",
-        "Pod-Coverage-TrustMe:t/pod-coverage.t",
-        "Pod-POM",
-        "Pod-Usage",
-        "Proc-Daemon",
-        "Promises",
-        "Protocol-HTTP2",
-        "Queue-Q",
-        "REST-Neo4p",
-        "RPC-XML:t/40_server.t",
-        "RPC-XML:t/50_client.t",
-        "Redis",
-        "Redis-ScriptCache",
-        "Regexp-Util",
-        "Role-Kerberos",
-        "SOAP-Lite:t/SOAP/Transport/HTTP.t",
-        "SOAP-Lite:t/SOAP/Transport/HTTP/CGI.t",
-        "SOAP-WSDL",
-        "SQL-Abstract",
-        "SQL-Abstract-Complete",
-        "SQL-Abstract-Limit",
-        "Scope-Upper",
-        "Search-Brick-RAM-Query",
-        "Search-Elasticsearch",
-        "Search-Elasticsearch-Client-6_0",
-        "Search-Elasticsearch-Client-7_0",
-        "Selenium-Remote-Driver",
-        "Sereal",
-        "Sereal-Decoder",
-        "Sereal-Encoder",
-        "ShardedKV",
-        "ShardedKV-Continuum-CHash",
-        "ShardedKV-Continuum-Jump",
-        "ShardedKV-Storage-Rest",
-        "Socket",
-        "Socket6",
-        "Spreadsheet-ParseExcel",
-        "Spreadsheet-ParseXLSX",
-        "Spreadsheet-WriteExcel",
-        "Spreadsheet-WriteExcel-Simple",
-        "Spreadsheet-XLSX",
-        "Starman",
-        "Statistics-Basic",
-        "Statistics-CaseResampling",
-        "Statistics-Descriptive",
-        "Statistics-Distributions",
-        "Statistics-EfficiencyCI",
-        "Statistics-R",
-        "Statistics-Regression",
-        "Statistics-Test-WilcoxonRankSum",
-        "Storable",
-        "String-Approx",
-        "String-CRC32",
-        "String-Escape",
-        "String-Format",
-        "String-ShellQuote",
-        "String-Similarity",
-        "Sys-CpuAffinity",
-        "TAP-Formatter-HTML",
-        "Template-Toolkit:t/compile1.t",
-        "Template-Toolkit:t/compile2.t",
-        "Template-Toolkit:t/compile3.t",
-        "Template-Toolkit:t/compile4.t",
-        "Template-Toolkit:t/compile5.t",
-        "Term-ProgressBar",
-        "Test-Compile:t/100-internal-basic.t",
-        "Test-DBIx-Class:t/03-merge-configs.t",
-        "Test-DBIx-Class:t/04-load-fixtures.t",
-        "Test-DBIx-Class:t/05-example-schema.t",
-        "Test-DBIx-Class:t/11-fixtures_ok_populate.t",
-        "Test-DBIx-Class:t/20-fixtures_ok_populate_hash.t",
-        "Test-MockFile:t/chmod-filetemp.t",
-        "Test-MockFile:t/chown-chmod-nostrict.t",
-        "Test-MockFile:t/file_access_hooks.t",
-        "Test-MockFile:t/plugin-filetemp.t",
-        "Test-MockFile:t/readline.t",
-        "Test-MockFile:t/sysopen_strict.t",
-        "Test-MockModule",
-        "Test-Pod-Coverage:t/all_modules.t",
-        "Test-Simple:t/Test2/behavior/Taint.t",
-        "Text-CSV_XS",
-        "Text-Levenshtein-Damerau-XS",
-        "Text-LevenshteinXS",
-        "Text-Ngrams:t/06.t",
-        "Text-Ngrams:t/10.t",
-        "Text-Ngrams:t/11.t",
-        "Text-Ngrams:t/12.t",
-        "Text-Ngrams:t/13.t",
-        "Text-Ngrams:t/14.t",
-        "Text-ParagraphDiff",
-        "Thrift-API-HiveClient2",
-        "Thrift-SASL-Transport",
-        "Time-ParseDate:t/order1.t",
-        "Time-ParseDate:t/order2.t",
-        "Tie-EncryptedHash",
-        "Type-Tiny",
-        "Types-Serialiser",
-        "UNIVERSAL-can:t/class.t",
-        "UV",
-        "Unicode-Collate",
-        "Unicode-Map8",
-        "Unicode-MapUTF8",
-        "Unix-Sysexits",
-        "WWW-Mechanize",
-        "YAML-LibYAML",
-        "YAML-PP:t/32.cyclic-refs.t",
-        "YAML-Syck",
-        "ack",
-        "decorators",
-        "fs-Promises",
-        "jmx4perl",
-        "libwww-perl",
-    ],
 )
-cpan.annotation(
-    distribution = "Dancer2-Template-MojoTemplate",
-    hub = "cpan",
-    strip_prefix = "Dancer2-Template-MojoTemplate",
-)
-cpan.annotation(
-    distribution = "Digest-CRC",
-    hub = "cpan",
-    strip_prefix = "Digest-CRC-0.22",
-)
-cpan.annotation(
-    distribution = "Digest-Perl-MD4",
-    hub = "cpan",
-    strip_prefix = "MD4",
-)
-cpan.annotation(
-    distribution = "Text-ParagraphDiff",
-    hub = "cpan",
-    strip_prefix = "Text-ParagraphDiff",
-)
-cpan.annotation(
-    distribution = "XML-Entities",
-    hub = "cpan",
-    strip_prefix = "XML-Entities",
-)
-cpan.annotation(
-    defines = [
-        "GRPC_VERSION_1_1",
-        "GRPC_VERSION_1_2",
-        "GRPC_VERSION_1_4",
-        "GRPC_VERSION_1_7",
-        "GRPC_RECV_STATUS_ON_CLIENT_HAS_ERROR_STRING",
-        "GRPC_SSL_CREDENTIALS_HAS_4_ARGS",
-        "GRPC_METADATA_CREDENTIALS_CRATE_FROM_PLUGIN_HAS_3_ARGS",
-        "GRPC_NO_INSECURE_BUILD",
-        "GRPC_HAS_SHUTDOWN_BLOCKING",
-    ],
-    distribution = "grpc-xs",
-    hub = "cpan",
-    manual_tests = [
-        "t/15-xs_end_to_end.t",
-        "t/16-xs_secure_end_to_end.t",
-    ],
-    native_deps = ["@grpc//:grpc"],
-    output_loc = "auto/Grpc/XS/XS",
-    patch_cmds = [
-        "sed -i 's/#include <grpc\\/grpc_security\\.h>/#include <grpc\\/grpc_security.h>\\n#include <grpc\\/credentials.h>/g' util.h ext/*.h",
-        "sed -i '/#include <grpc\\/slice\\.h>/a typedef grpc_slice gpr_slice;\\n#define gpr_slice_from_copied_buffer grpc_slice_from_copied_buffer\\n#define gpr_slice_unref grpc_slice_unref\\n#define GPR_SLICE_START_PTR GRPC_SLICE_START_PTR\\n#define GPR_SLICE_LENGTH GRPC_SLICE_LENGTH\\n#define gpr_log grpc_absl_log' util.h",
-        "sed -i '/grpc_google_default_credentials_create/,/);/c\\    ctx->wrapped = grpc_google_default_credentials_create(NULL, NULL);' ext/channel_credentials.xs",
-    ],
-    strip_prefix = "Grpc-XS-0.38",
-)
-cpan.annotation(
-    distribution = "Template-Toolkit",
-    hub = "cpan",
-    output_loc = "auto/Template/Stash/XS/XS",
-)
-cpan.annotation(
-    distribution = "common-sense",
-    hub = "cpan",
-    patch_cmds = ["perl sense.pm.PL sense.pm"],
-)
-cpan.annotation(
-    defines = [
-        "HAVE_SIZE_T",
-        "HAVE_SSIZE_T",
-    ],
-    distribution = "List-MoreUtils-XS",
-    hub = "cpan",
-    patch_cmds = ["touch LMUconfig.h"],
-    patch_cmds_win = ["powershell -Command \"New-Item -ItemType File -Name LMUconfig.h\""],
-)
-cpan.annotation(
-    distribution = "AnyEvent",
-    hub = "cpan",
-    patch_cmds = ["perl constants.pl.PL"],
-    patch_cmds_win = ["powershell -Command \"perl constants.pl.PL\""],
-)
-cpan.annotation(
-    distribution = "URI-Find",
-    hub = "cpan",
-    patch_cmds = [
-        "mkdir -p blib/script && cp bin/urifind blib/script/urifind",
-    ],
-    patch_cmds_win = [
-        "mkdir blib\\script && copy bin\\urifind blib\\script\\urifind",
-    ],
-)
-cpan.annotation(
-    distribution = "Test-File",
-    hub = "cpan",
-    patch_cmds = ["rm -f File.xs"],
-)
-cpan.annotation(
-    distribution = "Config-General",
-    hub = "cpan",
-    patch_cmds = [
-        "mkdir -p lib/Config/General && cp General/*.pm lib/Config/General/",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"New-Item -ItemType Directory -Force lib/Config/General; Copy-Item General/*.pm lib/Config/General/\"",
-    ],
-)
-cpan.annotation(
-    distribution = "TermReadKey",
-    hub = "cpan",
-    output_loc = "auto/Term/ReadKey/ReadKey",
-    patch_cmds = [
-        "perl genchars.pl",
-        "perl ReadKey.pm.PL",
-        "mkdir -p lib/Term && cp ReadKey.pm lib/Term/ReadKey.pm",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"perl genchars.pl; perl ReadKey.pm.PL; New-Item -ItemType Directory -Force lib/Term; Copy-Item ReadKey.pm lib/Term/ReadKey.pm\"",
-    ],
-)
-cpan.annotation(
-    distribution = "Term-Size-Perl",
-    hub = "cpan",
-    patch_cmds = [
-        "perl inc/Probe.pm",
-        "mkdir -p lib/Term/Size/Perl && cp Params.pm lib/Term/Size/Perl/Params.pm",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"perl inc/Probe.pm; New-Item -ItemType Directory -Force lib/Term/Size/Perl; Copy-Item Params.pm lib/Term/Size/Perl/Params.pm\"",
-    ],
-)
-cpan.annotation(
-    distribution = "Proc-ProcessTable",
-    hub = "cpan",
-    output_loc = "auto/Proc/ProcessTable/ProcessTable",
-    patch_cmds = [
-        "sh -c 'if [ \"$$(uname)\" = \"Darwin\" ]; then cp os/darwin.c OS.c; else cp os/Linux.c OS.c; fi && rm -f os/*.c'",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Copy-Item os/MSWin32.c OS.c; Remove-Item os/*.c\"",
-    ],
-)
-cpan.annotation(
-    distribution = "Sys-CpuAffinity",
-    hub = "cpan",
-    patch_cmds = [
-        "rm -rf contrib lib/xs",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Remove-Item -Recurse -Force contrib,lib/xs\"",
-    ],
-)
-cpan.annotation(
-    defines = ["I_SYSLOG"],
-    distribution = "Sys-Syslog",
-    hub = "cpan",
-    output_loc = "auto/Sys/Syslog/Syslog",
-    patch_cmds = [
-        "cp fallback/const-c.inc . && cp fallback/const-xs.inc . && rm -rf fallback",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Copy-Item fallback/const-c.inc .; Copy-Item fallback/const-xs.inc .; Remove-Item -Recurse -Force fallback\"",
-    ],
-)
-cpan.annotation(
-    distribution = "Time-HiRes",
-    hub = "cpan",
-    output_loc = "auto/Time/HiRes/HiRes",
-    patch_cmds = [
-        "cp fallback/const-c.inc . && cp fallback/const-xs.inc .",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Copy-Item fallback/const-c.inc .; Copy-Item fallback/const-xs.inc .\"",
-    ],
-)
-cpan.annotation(
-    distribution = "warnings-unused",
-    hub = "cpan",
-    output_loc = "auto/warnings/unused/unused",
-    patch_cmds = [
-        "perl -MDevel::PPPort -e 'Devel::PPPort::WriteFile()'",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"perl -MDevel::PPPort -e 'Devel::PPPort::WriteFile()'\"",
-    ],
-)
-cpan.annotation(
-    defines = [
-        'XS_VERSION=\\"1.656\\"',
-        'VERSION=\\"1.656\\"',
-    ],
-    distribution = "DBI",
-    hub = "cpan",
-    output_loc = "auto/DBI/DBI",
-    patch_cmds = [
-        "perl -p -e 's/~DRIVER~/Perl/g' Driver.xst > Perl.xsi",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"(Get-Content Driver.xst) -replace '~DRIVER~', 'Perl' | Set-Content Perl.xsi\"",
-    ],
-)
-cpan.annotation(
-    defines = ["ZSTD_DISABLE_ASM"],
-    distribution = "Sereal-Decoder",
-    hub = "cpan",
-    output_loc = "auto/Sereal/Decoder/Decoder",
-    patch_cmds = [
-        "rm -rf author_tools",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Remove-Item -Recurse -Force author_tools\"",
-    ],
-)
-cpan.annotation(
-    defines = ["ZSTD_DISABLE_ASM"],
-    distribution = "Sereal-Encoder",
-    hub = "cpan",
-    output_loc = "auto/Sereal/Encoder/Encoder",
-    patch_cmds = [
-        "rm -rf author_tools",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Remove-Item -Recurse -Force author_tools\"",
-    ],
-)
-cpan.annotation(
-    defines = ["HAVE_CONFIG_H"],
-    distribution = "YAML-LibYAML-API",
-    hub = "cpan",
-    includes = ["LibYAML/lib"],
-    output_loc = "auto/YAML/LibYAML/API/XS/XS",
-)
+
+# CPAN injections connecting registry entries to hub
 cpan.inject(
     distribution = "Compress-Raw-Zlib",
-    hub = "cpan",
     target = "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
 )
 cpan.inject(
     distribution = "IO-Tty",
-    hub = "cpan",
     target = "@perl-io-tty//:IO-Tty",
 )
-cpan.annotation(
-    defines = ["HAVE_CONFIG_H"],
-    distribution = "YAML-LibYAML",
-    hub = "cpan",
-    includes = ["LibYAML/lib"],
-    output_loc = "auto/YAML/XS/LibYAML/LibYAML",
-    test_module = "YAML::XS",
+cpan.inject(
+    distribution = "ack",
+    target = "@perl-ack//:ack",
 )
-cpan.annotation(
-    defines = ["BZ_NO_STDIO"],
-    distribution = "Compress-Raw-Bzip2",
-    hub = "cpan",
-    native_deps = ["@bzip2//:bz2"],
-    patch_cmds = [
-        "cp fallback/constants.h constants.h",
-        "cp fallback/constants.xs constants.xs",
-    ],
-    patch_cmds_win = [
-        "copy fallback\\constants.h constants.h",
-        "copy fallback\\constants.xs constants.xs",
-    ],
+cpan.inject(
+    distribution = "Action-Retry",
+    target = "@perl-action-retry//:Action-Retry",
 )
-cpan.annotation(
-    distribution = "Compress-Bzip2",
-    hub = "cpan",
-    native_deps = ["@bzip2//:bz2"],
-    patch_cmds = [
-        "cp fallback/const-c.inc const-c.inc",
-        "cp fallback/const-xs.inc const-xs.inc",
-        "perl -MAutoSplit -e 'autosplit(\"lib/Compress/Bzip2.pm\", \"lib/auto\", 0, 1, 1)'",
-    ],
-    patch_cmds_win = [
-        "copy fallback\\const-c.inc const-c.inc",
-        "copy fallback\\const-xs.inc const-xs.inc",
-        "perl -MAutoSplit -e \"autosplit('lib/Compress/Bzip2.pm', 'lib/auto', 0, 1, 1)\"",
-    ],
+cpan.inject(
+    distribution = "Algorithm-C3",
+    target = "@perl-algorithm-c3//:Algorithm-C3",
 )
-cpan.annotation(
-    distribution = "XML-Parser",
-    hub = "cpan",
-    includes = ["."],
-    native_deps = ["@libexpat//:libexpat"],
-    output_loc = "auto/XML/Parser/Expat/Expat",
-    patch_cmds = [
-        "mkdir -p XML/Parser/Encodings",
-        "cp Parser.pm XML/Parser.pm",
-        "cp Expat/Expat.pm XML/Parser/Expat.pm",
-        "cp -r Parser/Style XML/Parser/",
-        "cp share/*.enc XML/Parser/Encodings/",
-    ],
-    patch_cmds_win = [
-        "mkdir XML\\Parser\\Encodings",
-        "copy Parser.pm XML\\Parser.pm",
-        "copy Expat\\Expat.pm XML\\Parser\\Expat.pm",
-        "xcopy /E /I Parser\\Style XML\\Parser\\Style",
-        "copy share\\*.enc XML\\Parser\\Encodings\\",
-    ],
+cpan.inject(
+    distribution = "Algorithm-ConsistentHash-CHash",
+    target = "@perl-algorithm-consistenthash-chash//:Algorithm-ConsistentHash-CHash",
 )
-cpan.annotation(
-    distribution = "Syntax-Keyword-Try",
-    hub = "cpan",
-    native_deps = ["@cpan__XS-Parse-Keyword//:XS-Parse-Keyword_xs"],
+cpan.inject(
+    distribution = "Algorithm-ConsistentHash-JumpHash",
+    target = "@perl-algorithm-consistenthash-jumphash//:Algorithm-ConsistentHash-JumpHash",
 )
-cpan.annotation(
-    defines = [
-        "INT64_BACKEND_IV",
-        "USE_INT64_T",
-        "HAS_STDINT_H",
-    ],
-    distribution = "Math-Int64",
-    hub = "cpan",
+cpan.inject(
+    distribution = "Algorithm-Diff",
+    target = "@perl-algorithm-diff//:Algorithm-Diff",
 )
-cpan.annotation(
+cpan.inject(
+    distribution = "Algorithm-Diff-XS",
+    target = "@perl-algorithm-diff-xs//:Algorithm-Diff-XS",
+)
+cpan.inject(
+    distribution = "Algorithm-Heapify-XS",
+    target = "@perl-algorithm-heapify-xs//:Algorithm-Heapify-XS",
+)
+cpan.inject(
+    distribution = "Algorithm-LUHN",
+    target = "@perl-algorithm-luhn//:Algorithm-LUHN",
+)
+cpan.inject(
+    distribution = "Algorithm-NaiveBayes",
+    target = "@perl-algorithm-naivebayes//:Algorithm-NaiveBayes",
+)
+cpan.inject(
+    distribution = "aliased",
+    target = "@perl-aliased//:aliased",
+)
+cpan.inject(
+    distribution = "Amazon-S3",
+    target = "@perl-amazon-s3//:Amazon-S3",
+)
+cpan.inject(
+    distribution = "Amazon-S3-SignedURLGenerator",
+    target = "@perl-amazon-s3-signedurlgenerator//:Amazon-S3-SignedURLGenerator",
+)
+cpan.inject(
+    distribution = "AnyEvent",
+    target = "@perl-anyevent//:AnyEvent",
+)
+cpan.inject(
+    distribution = "AnyEvent-AIO",
+    target = "@perl-anyevent-aio//:AnyEvent-AIO",
+)
+cpan.inject(
+    distribution = "AnyEvent-Handle-UDP",
+    target = "@perl-anyevent-handle-udp//:AnyEvent-Handle-UDP",
+)
+cpan.inject(
+    distribution = "AnyEvent-HTTP",
+    target = "@perl-anyevent-http//:AnyEvent-HTTP",
+)
+cpan.inject(
+    distribution = "AnyEvent-Promise",
+    target = "@perl-anyevent-promise//:AnyEvent-Promise",
+)
+cpan.inject(
+    distribution = "AnyEvent-Promises",
+    target = "@perl-anyevent-promises//:AnyEvent-Promises",
+)
+cpan.inject(
+    distribution = "AnyEvent-Redis-RipeRedis",
+    target = "@perl-anyevent-redis-riperedis//:AnyEvent-Redis-RipeRedis",
+)
+cpan.inject(
+    distribution = "AnyEvent-Subprocess",
+    target = "@perl-anyevent-subprocess//:AnyEvent-Subprocess",
+)
+cpan.inject(
+    distribution = "AnyEvent-XMPP",
+    target = "@perl-anyevent-xmpp//:AnyEvent-XMPP",
+)
+cpan.inject(
+    distribution = "AnyEvent-XSPromises",
+    target = "@perl-anyevent-xspromises//:AnyEvent-XSPromises",
+)
+cpan.inject(
+    distribution = "AnyEvent-YACurl",
+    target = "@perl-anyevent-yacurl//:AnyEvent-YACurl",
+)
+cpan.inject(
+    distribution = "Apache-Session",
+    target = "@perl-apache-session//:Apache-Session",
+)
+cpan.inject(
+    distribution = "Apache-Session-Memcached",
+    target = "@perl-apache-session-memcached//:Apache-Session-Memcached",
+)
+cpan.inject(
+    distribution = "App-Daemon",
+    target = "@perl-app-daemon//:App-Daemon",
+)
+cpan.inject(
+    distribution = "App-ElasticSearch-Utilities",
+    target = "@perl-app-elasticsearch-utilities//:App-ElasticSearch-Utilities",
+)
+cpan.inject(
+    distribution = "App-FatPacker",
+    target = "@perl-app-fatpacker//:App-FatPacker",
+)
+cpan.inject(
+    distribution = "App-Inotify-Hookable",
+    target = "@perl-app-inotify-hookable//:App-Inotify-Hookable",
+)
+cpan.inject(
+    distribution = "App-Oozie",
+    target = "@perl-app-oozie//:App-Oozie",
+)
+cpan.inject(
+    distribution = "App-Rad",
+    target = "@perl-app-rad//:App-Rad",
+)
+cpan.inject(
+    distribution = "AppConfig",
+    target = "@perl-appconfig//:AppConfig",
+)
+cpan.inject(
+    distribution = "Archive-Any",
+    target = "@perl-archive-any//:Archive-Any",
+)
+cpan.inject(
+    distribution = "Archive-Extract",
+    target = "@perl-archive-extract//:Archive-Extract",
+)
+cpan.inject(
+    distribution = "Archive-Tar",
+    target = "@perl-archive-tar//:Archive-Tar",
+)
+cpan.inject(
+    distribution = "Archive-Zip",
+    target = "@perl-archive-zip//:Archive-Zip",
+)
+cpan.inject(
+    distribution = "Array-Diff",
+    target = "@perl-array-diff//:Array-Diff",
+)
+cpan.inject(
+    distribution = "Array-RefElem",
+    target = "@perl-array-refelem//:Array-RefElem",
+)
+cpan.inject(
+    distribution = "Authen-Krb5",
+    target = "@perl-authen-krb5//:Authen-Krb5",
+)
+cpan.inject(
+    distribution = "Authen-Krb5-Admin",
+    target = "@perl-authen-krb5-admin//:Authen-Krb5-Admin",
+)
+cpan.inject(
+    distribution = "Authen-PAM",
+    target = "@perl-authen-pam//:Authen-PAM",
+)
+cpan.inject(
+    distribution = "Authen-SASL",
+    target = "@perl-authen-sasl//:Authen-SASL",
+)
+cpan.inject(
+    distribution = "Authen-SASL-XS",
+    target = "@perl-authen-sasl-xs//:Authen-SASL-XS",
+)
+cpan.inject(
+    distribution = "Authen-Simple-PAM",
+    target = "@perl-authen-simple-pam//:Authen-Simple-PAM",
+)
+cpan.inject(
+    distribution = "Authorize-Rule",
+    target = "@perl-authorize-rule//:Authorize-Rule",
+)
+cpan.inject(
+    distribution = "autodie",
+    target = "@perl-autodie//:autodie",
+)
+cpan.inject(
+    distribution = "AutoLoader",
+    target = "@perl-autoloader//:AutoLoader",
+)
+cpan.inject(
+    distribution = "autovivification",
+    target = "@perl-autovivification//:autovivification",
+)
+cpan.inject(
+    distribution = "AWS-S3",
+    target = "@perl-aws-s3//:AWS-S3",
+)
+cpan.inject(
+    distribution = "AWS-Signature4",
+    target = "@perl-aws-signature4//:AWS-Signature4",
+)
+cpan.inject(
+    distribution = "B-Hooks-EndOfScope",
+    target = "@perl-b-hooks-endofscope//:B-Hooks-EndOfScope",
+)
+cpan.inject(
+    distribution = "B-Utils",
+    target = "@perl-b-utils//:B-Utils",
+)
+cpan.inject(
+    distribution = "Barcode-Code128",
+    target = "@perl-barcode-code128//:Barcode-Code128",
+)
+cpan.inject(
     distribution = "bareword-filehandles",
-    hub = "cpan",
-    native_deps = ["@cpan__B-Hooks-OP-Check//:B-Hooks-OP-Check_xs"],
+    target = "@perl-bareword-filehandles//:bareword-filehandles",
 )
-cpan.annotation(
-    distribution = "multidimensional",
-    hub = "cpan",
-    native_deps = ["@cpan__B-Hooks-OP-Check//:B-Hooks-OP-Check_xs"],
+cpan.inject(
+    distribution = "Benchmark-Timer",
+    target = "@perl-benchmark-timer//:Benchmark-Timer",
 )
-cpan.annotation(
-    distribution = "Params-Classify",
-    hub = "cpan",
-    patch_cmds = ["rm -f lib/Params/Classify.xs"],
+cpan.inject(
+    distribution = "bignum",
+    target = "@perl-bignum//:bignum",
 )
-cpan.annotation(
-    distribution = "CryptX",
-    hub = "cpan",
-    patch_cmds = ["rm -f src/patched_s_mp_rand_platform.c"],
+cpan.inject(
+    distribution = "Bit-Vector",
+    target = "@perl-bit-vector//:Bit-Vector",
 )
-cpan.annotation(
-    distribution = "Syntax-Operator-Equ",
-    hub = "cpan",
-    native_deps = ["@cpan__XS-Parse-Keyword//:XS-Parse-Keyword_xs"],
+cpan.inject(
+    distribution = "boolean",
+    target = "@perl-boolean//:boolean",
 )
-cpan.annotation(
-    distribution = "Compress-Zstd",
-    hub = "cpan",
-    native_deps = ["@zstd//:zstd"],
-    patch_cmds = [
-        "sed -i -e '/compress\\/zstdmt_compress\\.h/d' -e 's/ZSTDMT_CCtx\\* cctx;/ZSTD_CCtx* cctx;/' -e 's/cctx = ZSTDMT_createCCtx(nbThreads);/cctx = ZSTD_createCCtx(); ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, (int)nbThreads); ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, level);/' -e 's/ret = ZSTDMT_compressCCtx(cctx, dst, bound + 1, src, src_len, level);/ret = ZSTD_compress2(cctx, dst, bound + 1, src, src_len);/' -e 's/ZSTDMT_freeCCtx(cctx);/ZSTD_freeCCtx(cctx);/' lib/Compress/Zstd.xs",
-        "sed -i -e 's/10403/ZSTD_VERSION_NUMBER()/' -e \"s/'1.4.3'/ZSTD_VERSION_STRING()/\" t/01_basic.t",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"(Get-Content lib\\Compress\\Zstd.xs) -replace '#include .compress/zstdmt_compress.h.', '' -replace 'ZSTDMT_CCtx\\* cctx;', 'ZSTD_CCtx* cctx;' -replace 'cctx = ZSTDMT_createCCtx\\(nbThreads\\);', 'cctx = ZSTD_createCCtx(); ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, (int)nbThreads); ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, level);' -replace 'ret = ZSTDMT_compressCCtx\\(cctx, dst, bound \\+ 1, src, src_len, level\\);', 'ret = ZSTD_compress2(cctx, dst, bound + 1, src, src_len);' -replace 'ZSTDMT_freeCCtx\\(cctx\\);', 'ZSTD_freeCCtx(cctx);' | Set-Content lib\\Compress\\Zstd.xs\"",
-        "powershell -Command \"(Get-Content t\\01_basic.t) -replace '10403', 'ZSTD_VERSION_NUMBER()' -replace '''1.4.3''', 'ZSTD_VERSION_STRING()' | Set-Content t\\01_basic.t\"",
-    ],
+cpan.inject(
+    distribution = "BSD-Resource",
+    target = "@perl-bsd-resource//:BSD-Resource",
 )
-cpan.annotation(
-    distribution = "NetAddr-IP",
-    hub = "cpan",
-    patch_cmds = [
-        "touch Lite/Util/localperl.h Lite/Util/config.h",
-    ],
-    patch_cmds_win = [
-        "type nul > Lite\\Util\\localperl.h",
-        "type nul > Lite\\Util\\config.h",
-    ],
+cpan.inject(
+    distribution = "Business-CreditCard",
+    target = "@perl-business-creditcard//:Business-CreditCard",
 )
-cpan.annotation(
-    distribution = "Unicode-LineBreak",
-    hub = "cpan",
-    includes = [
-        ".",
-        "sombok/include",
-    ],
-    patch_cmds = [
-        "cp sombok/include/sombok.h.in sombok/include/sombok.h",
-        "sed -i -e 's/#ifdef HAVE_CONFIG_H/#if 1/' -e 's/\"config.h\"/\"EXTERN.h\"\\n#include \"perl.h\"\\n#include \"XSUB.h\"\\n#undef USE_LIBTHAI/' -e 's/@SOMBOK_UNICHAR_T@/U32/' -e 's/@PACKAGE_VERSION@/2.4.0/' -e 's/@SOMBOK_UNICHAR_T_IS_[A-Z_]*@//' sombok/include/sombok.h",
-        "rm -f sombok/lib/[5-7].*.c",
-    ],
-    patch_cmds_win = [
-        "copy sombok\\include\\sombok.h.in sombok\\include\\sombok.h",
-        "powershell -Command \"(Get-Content sombok\\include\\sombok.h) -replace '#ifdef HAVE_CONFIG_H', '#if 1' -replace '\"\"config.h\"\"', '\"\"EXTERN.h\"\"`n#include \"\"perl.h\"\"`n#include \"\"XSUB.h\"\"`n#undef USE_LIBTHAI' -replace '@SOMBOK_UNICHAR_T@', 'U32' -replace '@PACKAGE_VERSION@', '2.4.0' -replace '@SOMBOK_UNICHAR_T_IS_[A-Z_]*@', '' | Set-Content sombok\\include\\sombok.h\"",
-        "powershell -Command \"Remove-Item sombok\\lib\\[5-7].*.c\"",
-    ],
+cpan.inject(
+    distribution = "Business-OnlinePayment",
+    target = "@perl-business-onlinepayment//:Business-OnlinePayment",
 )
-cpan.annotation(
-    distribution = "HTML-Parser",
-    hub = "cpan",
-    patch_cmds = [
-        "mv util.c util.inc && mv hparser.c hparser.inc && sed -i -e 's/\"util.c\"/\"util.inc\"/' -e 's/\"hparser.c\"/\"hparser.inc\"/' Parser.xs",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Move-Item util.c util.inc; Move-Item hparser.c hparser.inc; (Get-Content Parser.xs) -replace '\"\"util.c\"\"', '\"\"util.inc\"\"' -replace '\"\"hparser.c\"\"', '\"\"hparser.inc\"\"' | Set-Content Parser.xs\"",
-    ],
+cpan.inject(
+    distribution = "Business-Tax-VAT-Validation",
+    target = "@perl-business-tax-vat-validation//:Business-Tax-VAT-Validation",
 )
-cpan.annotation(
+cpan.inject(
+    distribution = "Cache",
+    target = "@perl-cache//:Cache",
+)
+cpan.inject(
+    distribution = "Cache-Cache",
+    target = "@perl-cache-cache//:Cache-Cache",
+)
+cpan.inject(
+    distribution = "Cache-Memcached",
+    target = "@perl-cache-memcached//:Cache-Memcached",
+)
+cpan.inject(
+    distribution = "Cache-Memcached-Fast",
+    target = "@perl-cache-memcached-fast//:Cache-Memcached-Fast",
+)
+cpan.inject(
+    distribution = "Callback-Frame",
+    target = "@perl-callback-frame//:Callback-Frame",
+)
+cpan.inject(
+    distribution = "Capture-Tiny",
+    target = "@perl-capture-tiny//:Capture-Tiny",
+)
+cpan.inject(
+    distribution = "Carp",
+    target = "@perl-carp//:Carp",
+)
+cpan.inject(
+    distribution = "Carp-Always",
+    target = "@perl-carp-always//:Carp-Always",
+)
+cpan.inject(
+    distribution = "Carp-Assert",
+    target = "@perl-carp-assert//:Carp-Assert",
+)
+cpan.inject(
+    distribution = "Carp-Assert-More",
+    target = "@perl-carp-assert-more//:Carp-Assert-More",
+)
+cpan.inject(
+    distribution = "Carp-Clan",
+    target = "@perl-carp-clan//:Carp-Clan",
+)
+cpan.inject(
+    distribution = "Cassandra-Client",
+    target = "@perl-cassandra-client//:Cassandra-Client",
+)
+cpan.inject(
+    distribution = "CHI",
+    target = "@perl-chi//:CHI",
+)
+cpan.inject(
+    distribution = "Class-Accessor",
+    target = "@perl-class-accessor//:Class-Accessor",
+)
+cpan.inject(
+    distribution = "Class-Accessor-Grouped",
+    target = "@perl-class-accessor-grouped//:Class-Accessor-Grouped",
+)
+cpan.inject(
+    distribution = "Class-C3",
+    target = "@perl-class-c3//:Class-C3",
+)
+cpan.inject(
+    distribution = "Class-Container",
+    target = "@perl-class-container//:Class-Container",
+)
+cpan.inject(
+    distribution = "Class-Data-Inheritable",
+    target = "@perl-class-data-inheritable//:Class-Data-Inheritable",
+)
+cpan.inject(
+    distribution = "Class-Factory-Util",
+    target = "@perl-class-factory-util//:Class-Factory-Util",
+)
+cpan.inject(
+    distribution = "Class-ISA",
+    target = "@perl-class-isa//:Class-ISA",
+)
+cpan.inject(
+    distribution = "Class-Load",
+    target = "@perl-class-load//:Class-Load",
+)
+cpan.inject(
+    distribution = "Class-Loader",
+    target = "@perl-class-loader//:Class-Loader",
+)
+cpan.inject(
+    distribution = "Class-MethodMaker",
+    target = "@perl-class-methodmaker//:Class-MethodMaker",
+)
+cpan.inject(
+    distribution = "Class-Refresh",
+    target = "@perl-class-refresh//:Class-Refresh",
+)
+cpan.inject(
+    distribution = "Class-Singleton",
+    target = "@perl-class-singleton//:Class-Singleton",
+)
+cpan.inject(
+    distribution = "Class-Std",
+    target = "@perl-class-std//:Class-Std",
+)
+cpan.inject(
+    distribution = "Class-Std-Fast",
+    target = "@perl-class-std-fast//:Class-Std-Fast",
+)
+cpan.inject(
+    distribution = "Class-Trigger",
+    target = "@perl-class-trigger//:Class-Trigger",
+)
+cpan.inject(
+    distribution = "Class-XSAccessor",
+    target = "@perl-class-xsaccessor//:Class-XSAccessor",
+)
+cpan.inject(
+    distribution = "CLI-Helpers",
+    target = "@perl-cli-helpers//:CLI-Helpers",
+)
+cpan.inject(
+    distribution = "Clone",
+    target = "@perl-clone//:Clone",
+)
+cpan.inject(
+    distribution = "Clone-PP",
+    target = "@perl-clone-pp//:Clone-PP",
+)
+cpan.inject(
+    distribution = "CodeGen-Protection",
+    target = "@perl-codegen-protection//:CodeGen-Protection",
+)
+cpan.inject(
+    distribution = "Common-CLI",
+    target = "@perl-common-cli//:Common-CLI",
+)
+cpan.inject(
+    distribution = "common-sense",
+    target = "@perl-common-sense//:common-sense",
+)
+cpan.inject(
+    distribution = "CommonMark",
+    target = "@perl-commonmark//:CommonMark",
+)
+cpan.inject(
+    distribution = "Compress-Bzip2",
+    target = "@perl-compress-bzip2//:Compress-Bzip2",
+)
+cpan.inject(
     distribution = "Compress-LZ4",
-    hub = "cpan",
-    native_deps = ["@lz4//:lz4_hc"],
-    patch_cmds = [
-        "rm -rf src",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Remove-Item -Recurse -Force src\"",
-    ],
+    target = "@perl-compress-lz4//:Compress-LZ4",
 )
-cpan.annotation(
+cpan.inject(
+    distribution = "Compress-Raw-Bzip2",
+    target = "@perl-compress-raw-bzip2//:Compress-Raw-Bzip2",
+)
+cpan.inject(
     distribution = "Compress-Snappy",
-    hub = "cpan",
-    native_deps = ["@snappy//:snappy-c"],
-    patch_args = ["-p1"],
-    patch_cmds = [
-        "rm -rf src",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Remove-Item -Recurse -Force src\"",
-    ],
-    patches = ["@rules_cpan//bazel/patches:Compress-Snappy-bcr.patch"],
+    target = "@perl-compress-snappy//:Compress-Snappy",
+)
+cpan.inject(
+    distribution = "Compress-Zstd",
+    target = "@perl-compress-zstd//:Compress-Zstd",
+)
+cpan.inject(
+    distribution = "Config-Any",
+    target = "@perl-config-any//:Config-Any",
+)
+cpan.inject(
+    distribution = "Config-General",
+    target = "@perl-config-general//:Config-General",
+)
+cpan.inject(
+    distribution = "Config-IniFiles",
+    target = "@perl-config-inifiles//:Config-IniFiles",
+)
+cpan.inject(
+    distribution = "Config-Properties",
+    target = "@perl-config-properties//:Config-Properties",
+)
+cpan.inject(
+    distribution = "Config-Tiny",
+    target = "@perl-config-tiny//:Config-Tiny",
+)
+cpan.inject(
+    distribution = "Config-Validate",
+    target = "@perl-config-validate//:Config-Validate",
+)
+cpan.inject(
+    distribution = "Constant-Export-Lazy",
+    target = "@perl-constant-export-lazy//:Constant-Export-Lazy",
+)
+cpan.inject(
+    distribution = "Constant-FromGlobal",
+    target = "@perl-constant-fromglobal//:Constant-FromGlobal",
+)
+cpan.inject(
+    distribution = "Convert-ASCII-Armour",
+    target = "@perl-convert-ascii-armour//:Convert-ASCII-Armour",
+)
+cpan.inject(
+    distribution = "Convert-ASN1",
+    target = "@perl-convert-asn1//:Convert-ASN1",
+)
+cpan.inject(
+    distribution = "Convert-BinHex",
+    target = "@perl-convert-binhex//:Convert-BinHex",
+)
+cpan.inject(
+    distribution = "Convert-Moji",
+    target = "@perl-convert-moji//:Convert-Moji",
+)
+cpan.inject(
+    distribution = "Cookie-Baker",
+    target = "@perl-cookie-baker//:Cookie-Baker",
+)
+cpan.inject(
+    distribution = "Cookie-Baker-XS",
+    target = "@perl-cookie-baker-xs//:Cookie-Baker-XS",
+)
+cpan.inject(
+    distribution = "Cpanel-JSON-XS",
+    target = "@perl-cpanel-json-xs//:Cpanel-JSON-XS",
+)
+cpan.inject(
+    distribution = "Crypt-Blowfish",
+    target = "@perl-crypt-blowfish//:Crypt-Blowfish",
+)
+cpan.inject(
+    distribution = "Crypt-CBC",
+    target = "@perl-crypt-cbc//:Crypt-CBC",
+)
+cpan.inject(
+    distribution = "Crypt-DES",
+    target = "@perl-crypt-des//:Crypt-DES",
+)
+cpan.inject(
+    distribution = "Crypt-Eksblowfish",
+    target = "@perl-crypt-eksblowfish//:Crypt-Eksblowfish",
+)
+cpan.inject(
+    distribution = "Crypt-JWT",
+    target = "@perl-crypt-jwt//:Crypt-JWT",
+)
+cpan.inject(
+    distribution = "Crypt-NaCl-Sodium",
+    target = "@perl-crypt-nacl-sodium//:Crypt-NaCl-Sodium",
+)
+cpan.inject(
+    distribution = "Crypt-OpenPGP",
+    target = "@perl-crypt-openpgp//:Crypt-OpenPGP",
+)
+cpan.inject(
+    distribution = "Crypt-OpenSSL-AES",
+    target = "@perl-crypt-openssl-aes//:Crypt-OpenSSL-AES",
+)
+cpan.inject(
+    distribution = "Crypt-OpenSSL-Bignum",
+    target = "@perl-crypt-openssl-bignum//:Crypt-OpenSSL-Bignum",
+)
+cpan.inject(
+    distribution = "Crypt-OpenSSL-Random",
+    target = "@perl-crypt-openssl-random//:Crypt-OpenSSL-Random",
+)
+cpan.inject(
+    distribution = "Crypt-OpenSSL-RSA",
+    target = "@perl-crypt-openssl-rsa//:Crypt-OpenSSL-RSA",
+)
+cpan.inject(
+    distribution = "Crypt-OpenSSL-X509",
+    target = "@perl-crypt-openssl-x509//:Crypt-OpenSSL-X509",
+)
+cpan.inject(
+    distribution = "Crypt-PKCS10",
+    target = "@perl-crypt-pkcs10//:Crypt-PKCS10",
+)
+cpan.inject(
+    distribution = "Crypt-Primes",
+    target = "@perl-crypt-primes//:Crypt-Primes",
+)
+cpan.inject(
+    distribution = "Crypt-Random",
+    target = "@perl-crypt-random//:Crypt-Random",
+)
+cpan.inject(
+    distribution = "Crypt-Rijndael",
+    target = "@perl-crypt-rijndael//:Crypt-Rijndael",
+)
+cpan.inject(
+    distribution = "Crypt-RSA",
+    target = "@perl-crypt-rsa//:Crypt-RSA",
+)
+cpan.inject(
+    distribution = "Crypt-ScryptKDF",
+    target = "@perl-crypt-scryptkdf//:Crypt-ScryptKDF",
+)
+cpan.inject(
+    distribution = "Crypt-Skip32-XS",
+    target = "@perl-crypt-skip32-xs//:Crypt-Skip32-XS",
+)
+cpan.inject(
+    distribution = "Crypt-SMIME",
+    target = "@perl-crypt-smime//:Crypt-SMIME",
+)
+cpan.inject(
+    distribution = "Crypt-Sodium-Nitrate",
+    target = "@perl-crypt-sodium-nitrate//:Crypt-Sodium-Nitrate",
+)
+cpan.inject(
+    distribution = "Crypt-URandom",
+    target = "@perl-crypt-urandom//:Crypt-URandom",
+)
+cpan.inject(
+    distribution = "Crypt-X509",
+    target = "@perl-crypt-x509//:Crypt-X509",
+)
+cpan.inject(
+    distribution = "CryptX",
+    target = "@perl-cryptx//:CryptX",
+)
+cpan.inject(
+    distribution = "CSS-Compressor",
+    target = "@perl-css-compressor//:CSS-Compressor",
+)
+cpan.inject(
+    distribution = "CSS-Minifier-XS",
+    target = "@perl-css-minifier-xs//:CSS-Minifier-XS",
+)
+cpan.inject(
+    distribution = "CSS-Packer",
+    target = "@perl-css-packer//:CSS-Packer",
+)
+cpan.inject(
+    distribution = "CSS-Sass",
+    target = "@perl-css-sass//:CSS-Sass",
+)
+cpan.inject(
+    distribution = "Curses",
+    target = "@perl-curses//:Curses",
+)
+cpan.inject(
+    distribution = "Daemon-Control",
+    target = "@perl-daemon-control//:Daemon-Control",
+)
+cpan.inject(
+    distribution = "Dancer",
+    target = "@perl-dancer//:Dancer",
+)
+cpan.inject(
+    distribution = "Dancer2",
+    target = "@perl-dancer2//:Dancer2",
+)
+cpan.inject(
+    distribution = "Dancer2-Plugin-Ajax",
+    target = "@perl-dancer2-plugin-ajax//:Dancer2-Plugin-Ajax",
+)
+cpan.inject(
+    distribution = "Dancer2-Plugin-GraphQL",
+    target = "@perl-dancer2-plugin-graphql//:Dancer2-Plugin-GraphQL",
+)
+cpan.inject(
+    distribution = "Dancer2-Plugin-REST",
+    target = "@perl-dancer2-plugin-rest//:Dancer2-Plugin-REST",
+)
+cpan.inject(
+    distribution = "Dancer2-Template-MojoTemplate",
+    target = "@perl-dancer2-template-mojotemplate//:Dancer2-Template-MojoTemplate",
+)
+cpan.inject(
+    distribution = "Data-Buffer",
+    target = "@perl-data-buffer//:Data-Buffer",
+)
+cpan.inject(
+    distribution = "Data-Compare",
+    target = "@perl-data-compare//:Data-Compare",
+)
+cpan.inject(
+    distribution = "Data-Consumer",
+    target = "@perl-data-consumer//:Data-Consumer",
+)
+cpan.inject(
+    distribution = "Data-DPath",
+    target = "@perl-data-dpath//:Data-DPath",
+)
+cpan.inject(
+    distribution = "Data-Dump",
+    target = "@perl-data-dump//:Data-Dump",
+)
+cpan.inject(
+    distribution = "Data-Dump-Streamer",
+    target = "@perl-data-dump-streamer//:Data-Dump-Streamer",
+)
+cpan.inject(
+    distribution = "Data-Dumper",
+    target = "@perl-data-dumper//:Data-Dumper",
+)
+cpan.inject(
+    distribution = "Data-FlexSerializer",
+    target = "@perl-data-flexserializer//:Data-FlexSerializer",
+)
+cpan.inject(
+    distribution = "Data-FormValidator",
+    target = "@perl-data-formvalidator//:Data-FormValidator",
+)
+cpan.inject(
+    distribution = "Data-GUID",
+    target = "@perl-data-guid//:Data-GUID",
+)
+cpan.inject(
+    distribution = "Data-HanConvert",
+    target = "@perl-data-hanconvert//:Data-HanConvert",
+)
+cpan.inject(
+    distribution = "Data-ICal",
+    target = "@perl-data-ical//:Data-ICal",
+)
+cpan.inject(
+    distribution = "Data-MessagePack",
+    target = "@perl-data-messagepack//:Data-MessagePack",
+)
+cpan.inject(
+    distribution = "Data-MessagePack-Stream",
+    target = "@perl-data-messagepack-stream//:Data-MessagePack-Stream",
+)
+cpan.inject(
+    distribution = "Data-OptList",
+    target = "@perl-data-optlist//:Data-OptList",
+)
+cpan.inject(
+    distribution = "Data-Pageset",
+    target = "@perl-data-pageset//:Data-Pageset",
+)
+cpan.inject(
+    distribution = "Data-Perl",
+    target = "@perl-data-perl//:Data-Perl",
+)
+cpan.inject(
+    distribution = "Data-Printer",
+    target = "@perl-data-printer//:Data-Printer",
+)
+cpan.inject(
+    distribution = "Data-Report",
+    target = "@perl-data-report//:Data-Report",
+)
+cpan.inject(
+    distribution = "Data-Structure-Util",
+    target = "@perl-data-structure-util//:Data-Structure-Util",
+)
+cpan.inject(
+    distribution = "Data-Undump",
+    target = "@perl-data-undump//:Data-Undump",
+)
+cpan.inject(
+    distribution = "Data-UUID",
+    target = "@perl-data-uuid//:Data-UUID",
+)
+cpan.inject(
+    distribution = "Data-UUID-MT",
+    target = "@perl-data-uuid-mt//:Data-UUID-MT",
+)
+cpan.inject(
+    distribution = "Data-Visitor",
+    target = "@perl-data-visitor//:Data-Visitor",
+)
+cpan.inject(
+    distribution = "Data-Walk",
+    target = "@perl-data-walk//:Data-Walk",
+)
+cpan.inject(
+    distribution = "Date-Calc",
+    target = "@perl-date-calc//:Date-Calc",
+)
+cpan.inject(
+    distribution = "Date-Calc-XS",
+    target = "@perl-date-calc-xs//:Date-Calc-XS",
+)
+cpan.inject(
+    distribution = "Date-Manip",
+    target = "@perl-date-manip//:Date-Manip",
+)
+cpan.inject(
+    distribution = "Date-Simple",
+    target = "@perl-date-simple//:Date-Simple",
+)
+cpan.inject(
+    distribution = "DateTime",
+    target = "@perl-datetime//:DateTime",
+)
+cpan.inject(
+    distribution = "DateTime-Event-Cron",
+    target = "@perl-datetime-event-cron//:DateTime-Event-Cron",
+)
+cpan.inject(
+    distribution = "DateTime-Format-Builder",
+    target = "@perl-datetime-format-builder//:DateTime-Format-Builder",
+)
+cpan.inject(
+    distribution = "DateTime-Format-DateParse",
+    target = "@perl-datetime-format-dateparse//:DateTime-Format-DateParse",
+)
+cpan.inject(
+    distribution = "DateTime-Format-Duration",
+    target = "@perl-datetime-format-duration//:DateTime-Format-Duration",
+)
+cpan.inject(
+    distribution = "DateTime-Format-Duration-ISO8601",
+    target = "@perl-datetime-format-duration-iso8601//:DateTime-Format-Duration-ISO8601",
+)
+cpan.inject(
+    distribution = "DateTime-Format-Flexible",
+    target = "@perl-datetime-format-flexible//:DateTime-Format-Flexible",
+)
+cpan.inject(
+    distribution = "DateTime-Format-HTTP",
+    target = "@perl-datetime-format-http//:DateTime-Format-HTTP",
+)
+cpan.inject(
+    distribution = "DateTime-Format-ISO8601",
+    target = "@perl-datetime-format-iso8601//:DateTime-Format-ISO8601",
+)
+cpan.inject(
+    distribution = "DateTime-Format-Mail",
+    target = "@perl-datetime-format-mail//:DateTime-Format-Mail",
+)
+cpan.inject(
+    distribution = "DateTime-Format-MySQL",
+    target = "@perl-datetime-format-mysql//:DateTime-Format-MySQL",
+)
+cpan.inject(
+    distribution = "DateTime-Format-RFC3339",
+    target = "@perl-datetime-format-rfc3339//:DateTime-Format-RFC3339",
+)
+cpan.inject(
+    distribution = "DateTime-Format-Strptime",
+    target = "@perl-datetime-format-strptime//:DateTime-Format-Strptime",
+)
+cpan.inject(
+    distribution = "DateTime-Locale",
+    target = "@perl-datetime-locale//:DateTime-Locale",
+)
+cpan.inject(
+    distribution = "DateTime-TimeZone",
+    target = "@perl-datetime-timezone//:DateTime-TimeZone",
+)
+cpan.inject(
+    distribution = "DateTimeX-ISO8601-Interval",
+    target = "@perl-datetimex-iso8601-interval//:DateTimeX-ISO8601-Interval",
+)
+cpan.inject(
+    distribution = "DBD-Cassandra",
+    target = "@perl-dbd-cassandra//:DBD-Cassandra",
+)
+cpan.inject(
+    distribution = "DBD-Mock",
+    target = "@perl-dbd-mock//:DBD-Mock",
+)
+cpan.inject(
+    distribution = "DBD-mysql",
+    target = "@perl-dbd-mysql//:DBD-mysql",
+)
+cpan.inject(
+    distribution = "DBD-ODBC",
+    target = "@perl-dbd-odbc//:DBD-ODBC",
+)
+cpan.inject(
+    distribution = "DBD-SQLite",
+    target = "@perl-dbd-sqlite//:DBD-SQLite",
+)
+cpan.inject(
+    distribution = "DBI",
+    target = "@perl-dbi//:DBI",
+)
+cpan.inject(
+    distribution = "DBIx-Class",
+    target = "@perl-dbix-class//:DBIx-Class",
+)
+cpan.inject(
+    distribution = "DBIx-Class-Helpers",
+    target = "@perl-dbix-class-helpers//:DBIx-Class-Helpers",
+)
+cpan.inject(
+    distribution = "DBIx-ContextualFetch",
+    target = "@perl-dbix-contextualfetch//:DBIx-ContextualFetch",
+)
+cpan.inject(
+    distribution = "DBIx-Placeholder-Named",
+    target = "@perl-dbix-placeholder-named//:DBIx-Placeholder-Named",
+)
+cpan.inject(
+    distribution = "decorators",
+    target = "@perl-decorators//:decorators",
+)
+cpan.inject(
+    distribution = "Devel-Confess",
+    target = "@perl-devel-confess//:Devel-Confess",
+)
+cpan.inject(
+    distribution = "Devel-Cover",
+    target = "@perl-devel-cover//:Devel-Cover",
+)
+cpan.inject(
+    distribution = "Devel-Cover-Report-Cobertura",
+    target = "@perl-devel-cover-report-cobertura//:Devel-Cover-Report-Cobertura",
+)
+cpan.inject(
+    distribution = "Devel-Cover-Report-SonarGeneric",
+    target = "@perl-devel-cover-report-sonargeneric//:Devel-Cover-Report-SonarGeneric",
+)
+cpan.inject(
+    distribution = "Devel-GlobalDestruction",
+    target = "@perl-devel-globaldestruction//:Devel-GlobalDestruction",
+)
+cpan.inject(
+    distribution = "Devel-Leak",
+    target = "@perl-devel-leak//:Devel-Leak",
+)
+cpan.inject(
+    distribution = "Devel-NYTProf",
+    target = "@perl-devel-nytprof//:Devel-NYTProf",
+)
+cpan.inject(
+    distribution = "Devel-Optic",
+    target = "@perl-devel-optic//:Devel-Optic",
+)
+cpan.inject(
+    distribution = "Devel-OverloadInfo",
+    target = "@perl-devel-overloadinfo//:Devel-OverloadInfo",
+)
+cpan.inject(
+    distribution = "Devel-PartialDump",
+    target = "@perl-devel-partialdump//:Devel-PartialDump",
+)
+cpan.inject(
+    distribution = "Devel-PPPort",
+    target = "@perl-devel-ppport//:Devel-PPPort",
+)
+cpan.inject(
+    distribution = "Devel-QuickCover",
+    target = "@perl-devel-quickcover//:Devel-QuickCover",
+)
+cpan.inject(
+    distribution = "Devel-Refcount",
+    target = "@perl-devel-refcount//:Devel-Refcount",
+)
+cpan.inject(
+    distribution = "Devel-REPL",
+    target = "@perl-devel-repl//:Devel-REPL",
+)
+cpan.inject(
+    distribution = "Devel-REPL-InProcess",
+    target = "@perl-devel-repl-inprocess//:Devel-REPL-InProcess",
+)
+cpan.inject(
+    distribution = "Devel-Size",
+    target = "@perl-devel-size//:Devel-Size",
+)
+cpan.inject(
+    distribution = "Devel-StackTrace",
+    target = "@perl-devel-stacktrace//:Devel-StackTrace",
+)
+cpan.inject(
+    distribution = "Devel-Symdump",
+    target = "@perl-devel-symdump//:Devel-Symdump",
+)
+cpan.inject(
+    distribution = "Digest-CRC",
+    target = "@perl-digest-crc//:Digest-CRC",
+)
+cpan.inject(
+    distribution = "Digest-FarmHash",
+    target = "@perl-digest-farmhash//:Digest-FarmHash",
+)
+cpan.inject(
+    distribution = "Digest-HMAC",
+    target = "@perl-digest-hmac//:Digest-HMAC",
+)
+cpan.inject(
+    distribution = "Digest-MD2",
+    target = "@perl-digest-md2//:Digest-MD2",
+)
+cpan.inject(
+    distribution = "Digest-MD4",
+    target = "@perl-digest-md4//:Digest-MD4",
+)
+cpan.inject(
+    distribution = "Digest-MD5",
+    target = "@perl-digest-md5//:Digest-MD5",
+)
+cpan.inject(
+    distribution = "Digest-Perl-MD4",
+    target = "@perl-digest-perl-md4//:Digest-Perl-MD4",
+)
+cpan.inject(
+    distribution = "Digest-SHA",
+    target = "@perl-digest-sha//:Digest-SHA",
+)
+cpan.inject(
+    distribution = "Digest-SHA1",
+    target = "@perl-digest-sha1//:Digest-SHA1",
+)
+cpan.inject(
+    distribution = "Digest-SHA3",
+    target = "@perl-digest-sha3//:Digest-SHA3",
+)
+cpan.inject(
+    distribution = "Digest-SipHash",
+    target = "@perl-digest-siphash//:Digest-SipHash",
+)
+cpan.inject(
+    distribution = "Digest-Trivial",
+    target = "@perl-digest-trivial//:Digest-Trivial",
+)
+cpan.inject(
+    distribution = "Directory-Scanner",
+    target = "@perl-directory-scanner//:Directory-Scanner",
+)
+cpan.inject(
+    distribution = "Dotenv",
+    target = "@perl-dotenv//:Dotenv",
+)
+cpan.inject(
+    distribution = "ElasticSearch",
+    target = "@perl-elasticsearch//:ElasticSearch",
+)
+cpan.inject(
+    distribution = "Elasticsearch-Model",
+    target = "@perl-elasticsearch-model//:Elasticsearch-Model",
+)
+cpan.inject(
+    distribution = "Elastijk",
+    target = "@perl-elastijk//:Elastijk",
+)
+cpan.inject(
+    distribution = "Email-Abstract",
+    target = "@perl-email-abstract//:Email-Abstract",
+)
+cpan.inject(
+    distribution = "Email-Address",
+    target = "@perl-email-address//:Email-Address",
+)
+cpan.inject(
+    distribution = "Email-Date-Format",
+    target = "@perl-email-date-format//:Email-Date-Format",
+)
+cpan.inject(
+    distribution = "Email-MessageID",
+    target = "@perl-email-messageid//:Email-MessageID",
+)
+cpan.inject(
+    distribution = "Email-MIME",
+    target = "@perl-email-mime//:Email-MIME",
+)
+cpan.inject(
+    distribution = "Email-MIME-ContentType",
+    target = "@perl-email-mime-contenttype//:Email-MIME-ContentType",
+)
+cpan.inject(
+    distribution = "Email-MIME-Encodings",
+    target = "@perl-email-mime-encodings//:Email-MIME-Encodings",
+)
+cpan.inject(
+    distribution = "Email-MIME-RFC2047",
+    target = "@perl-email-mime-rfc2047//:Email-MIME-RFC2047",
+)
+cpan.inject(
+    distribution = "Email-Sender",
+    target = "@perl-email-sender//:Email-Sender",
+)
+cpan.inject(
+    distribution = "Email-Simple",
+    target = "@perl-email-simple//:Email-Simple",
+)
+cpan.inject(
+    distribution = "Email-Stuffer",
+    target = "@perl-email-stuffer//:Email-Stuffer",
+)
+cpan.inject(
+    distribution = "Email-Valid",
+    target = "@perl-email-valid//:Email-Valid",
+)
+cpan.inject(
+    distribution = "Emoji-NationalFlag",
+    target = "@perl-emoji-nationalflag//:Emoji-NationalFlag",
+)
+cpan.inject(
+    distribution = "Encode",
+    target = "@perl-encode//:Encode",
+)
+cpan.inject(
+    distribution = "Encode-Detect",
+    target = "@perl-encode-detect//:Encode-Detect",
+)
+cpan.inject(
+    distribution = "Encode-Detect-CJK",
+    target = "@perl-encode-detect-cjk//:Encode-Detect-CJK",
+)
+cpan.inject(
+    distribution = "Encode-HanExtra",
+    target = "@perl-encode-hanextra//:Encode-HanExtra",
+)
+cpan.inject(
+    distribution = "Encoding-FixLatin",
+    target = "@perl-encoding-fixlatin//:Encoding-FixLatin",
+)
+cpan.inject(
+    distribution = "enum",
+    target = "@perl-enum//:enum",
+)
+cpan.inject(
+    distribution = "Error",
+    target = "@perl-error//:Error",
+)
+cpan.inject(
+    distribution = "EV",
+    target = "@perl-ev//:EV",
+)
+cpan.inject(
+    distribution = "EWS-Client",
+    target = "@perl-ews-client//:EWS-Client",
+)
+cpan.inject(
+    distribution = "Excel-Writer-XLSX",
+    target = "@perl-excel-writer-xlsx//:Excel-Writer-XLSX",
+)
+cpan.inject(
+    distribution = "Exception-Class",
+    target = "@perl-exception-class//:Exception-Class",
+)
+cpan.inject(
+    distribution = "Expect",
+    target = "@perl-expect//:Expect",
+)
+cpan.inject(
+    distribution = "Exporter-Easy",
+    target = "@perl-exporter-easy//:Exporter-Easy",
+)
+cpan.inject(
+    distribution = "ExtUtils-MakeMaker",
+    target = "@perl-extutils-makemaker//:ExtUtils-MakeMaker",
+)
+cpan.inject(
+    distribution = "Feersum",
+    target = "@perl-feersum//:Feersum",
+)
+cpan.inject(
+    distribution = "File-BaseDir",
+    target = "@perl-file-basedir//:File-BaseDir",
+)
+cpan.inject(
+    distribution = "File-Copy-Recursive",
+    target = "@perl-file-copy-recursive//:File-Copy-Recursive",
+)
+cpan.inject(
+    distribution = "File-CounterFile",
+    target = "@perl-file-counterfile//:File-CounterFile",
+)
+cpan.inject(
+    distribution = "File-Find-Rule",
+    target = "@perl-file-find-rule//:File-Find-Rule",
+)
+cpan.inject(
+    distribution = "File-HomeDir",
+    target = "@perl-file-homedir//:File-HomeDir",
+)
+cpan.inject(
+    distribution = "File-Hotfolder",
+    target = "@perl-file-hotfolder//:File-Hotfolder",
+)
+cpan.inject(
+    distribution = "File-Listing",
+    target = "@perl-file-listing//:File-Listing",
+)
+cpan.inject(
+    distribution = "File-MimeInfo",
+    target = "@perl-file-mimeinfo//:File-MimeInfo",
+)
+cpan.inject(
+    distribution = "File-Remove",
+    target = "@perl-file-remove//:File-Remove",
+)
+cpan.inject(
+    distribution = "File-Slurp",
+    target = "@perl-file-slurp//:File-Slurp",
+)
+cpan.inject(
+    distribution = "File-Tail",
+    target = "@perl-file-tail//:File-Tail",
+)
+cpan.inject(
+    distribution = "File-Temp",
+    target = "@perl-file-temp//:File-Temp",
+)
+cpan.inject(
+    distribution = "File-Type",
+    target = "@perl-file-type//:File-Type",
+)
+cpan.inject(
+    distribution = "Filter",
+    target = "@perl-filter//:Filter",
+)
+cpan.inject(
+    distribution = "Frontier-RPC",
+    target = "@perl-frontier-rpc//:Frontier-RPC",
+)
+cpan.inject(
+    distribution = "fs-Promises",
+    target = "@perl-fs-promises//:fs-Promises",
+)
+cpan.inject(
+    distribution = "Furl",
+    target = "@perl-furl//:Furl",
+)
+cpan.inject(
+    distribution = "Future",
+    target = "@perl-future//:Future",
+)
+cpan.inject(
+    distribution = "Future-Mojo",
+    target = "@perl-future-mojo//:Future-Mojo",
+)
+cpan.inject(
+    distribution = "GD",
+    target = "@perl-gd//:GD",
+)
+cpan.inject(
+    distribution = "GD-Barcode",
+    target = "@perl-gd-barcode//:GD-Barcode",
+)
+cpan.inject(
+    distribution = "GD-Persian",
+    target = "@perl-gd-persian//:GD-Persian",
+)
+cpan.inject(
+    distribution = "GDGraph",
+    target = "@perl-gdgraph//:GDGraph",
+)
+cpan.inject(
+    distribution = "GDTextUtil",
+    target = "@perl-gdtextutil//:GDTextUtil",
+)
+cpan.inject(
+    distribution = "Geo-Distance",
+    target = "@perl-geo-distance//:Geo-Distance",
+)
+cpan.inject(
+    distribution = "Geo-Google-PolylineEncoder",
+    target = "@perl-geo-google-polylineencoder//:Geo-Google-PolylineEncoder",
+)
+cpan.inject(
+    distribution = "Geo-GoogleMaps-OffsetCenter",
+    target = "@perl-geo-googlemaps-offsetcenter//:Geo-GoogleMaps-OffsetCenter",
+)
+cpan.inject(
+    distribution = "Geo-Hash-XS",
+    target = "@perl-geo-hash-xs//:Geo-Hash-XS",
+)
+cpan.inject(
+    distribution = "Geo-IP",
+    target = "@perl-geo-ip//:Geo-IP",
+)
+cpan.inject(
+    distribution = "GeoIP2",
+    target = "@perl-geoip2//:GeoIP2",
+)
+cpan.inject(
+    distribution = "Getopt-ArgParse",
+    target = "@perl-getopt-argparse//:Getopt-ArgParse",
+)
+cpan.inject(
+    distribution = "Getopt-Long",
+    target = "@perl-getopt-long//:Getopt-Long",
+)
+cpan.inject(
+    distribution = "Getopt-Long-Descriptive",
+    target = "@perl-getopt-long-descriptive//:Getopt-Long-Descriptive",
+)
+cpan.inject(
+    distribution = "Git-Repository",
+    target = "@perl-git-repository//:Git-Repository",
+)
+cpan.inject(
+    distribution = "Git-Repository-Plugin-Log",
+    target = "@perl-git-repository-plugin-log//:Git-Repository-Plugin-Log",
+)
+cpan.inject(
+    distribution = "GitLab-API-v4",
+    target = "@perl-gitlab-api-v4//:GitLab-API-v4",
+)
+cpan.inject(
+    distribution = "GnuPG",
+    target = "@perl-gnupg//:GnuPG",
+)
+cpan.inject(
+    distribution = "Google-Ads-AdWords-Client",
+    target = "@perl-google-ads-adwords-client//:Google-Ads-AdWords-Client",
+)
+cpan.inject(
+    distribution = "Google-ProtocolBuffers",
+    target = "@perl-google-protocolbuffers//:Google-ProtocolBuffers",
+)
+cpan.inject(
+    distribution = "Google-ProtocolBuffers-Dynamic",
+    target = "@perl-google-protocolbuffers-dynamic//:Google-ProtocolBuffers-Dynamic",
+)
+cpan.inject(
+    distribution = "Graph",
+    target = "@perl-graph//:Graph",
+)
+cpan.inject(
+    distribution = "Graph-Easy",
+    target = "@perl-graph-easy//:Graph-Easy",
+)
+cpan.inject(
+    distribution = "Graphite-Enumerator",
+    target = "@perl-graphite-enumerator//:Graphite-Enumerator",
+)
+cpan.inject(
+    distribution = "GraphQL",
+    target = "@perl-graphql//:GraphQL",
+)
+cpan.inject(
+    distribution = "GraphViz",
+    target = "@perl-graphviz//:GraphViz",
+)
+cpan.inject(
+    distribution = "grpc-xs",
+    target = "@perl-grpc-xs//:grpc-xs",
+)
+cpan.inject(
+    distribution = "Guard",
+    target = "@perl-guard//:Guard",
+)
+cpan.inject(
+    distribution = "HADaemon-Control",
+    target = "@perl-hadaemon-control//:HADaemon-Control",
+)
+cpan.inject(
+    distribution = "Hadoop-HDFS-Command",
+    target = "@perl-hadoop-hdfs-command//:Hadoop-HDFS-Command",
+)
+cpan.inject(
+    distribution = "Hadoop-Inline-ClassLoader",
+    target = "@perl-hadoop-inline-classloader//:Hadoop-Inline-ClassLoader",
+)
+cpan.inject(
+    distribution = "Hadoop-IO",
+    target = "@perl-hadoop-io//:Hadoop-IO",
+)
+cpan.inject(
+    distribution = "Hadoop-Oozie-DelegationTokenContainer",
+    target = "@perl-hadoop-oozie-delegationtokencontainer//:Hadoop-Oozie-DelegationTokenContainer",
+)
+cpan.inject(
+    distribution = "Hash-Diff",
+    target = "@perl-hash-diff//:Hash-Diff",
+)
+cpan.inject(
+    distribution = "Hash-Flatten",
+    target = "@perl-hash-flatten//:Hash-Flatten",
+)
+cpan.inject(
+    distribution = "Hash-Merge",
+    target = "@perl-hash-merge//:Hash-Merge",
+)
+cpan.inject(
+    distribution = "Hash-Merge-Simple",
+    target = "@perl-hash-merge-simple//:Hash-Merge-Simple",
+)
+cpan.inject(
+    distribution = "Hash-Path",
+    target = "@perl-hash-path//:Hash-Path",
+)
+cpan.inject(
+    distribution = "Hashids",
+    target = "@perl-hashids//:Hashids",
+)
+cpan.inject(
+    distribution = "HBase-JSONRest",
+    target = "@perl-hbase-jsonrest//:HBase-JSONRest",
+)
+cpan.inject(
+    distribution = "Heap",
+    target = "@perl-heap//:Heap",
+)
+cpan.inject(
+    distribution = "Hijk",
+    target = "@perl-hijk//:Hijk",
+)
+cpan.inject(
+    distribution = "HTML-FillInForm",
+    target = "@perl-html-fillinform//:HTML-FillInForm",
+)
+cpan.inject(
+    distribution = "HTML-FromANSI",
+    target = "@perl-html-fromansi//:HTML-FromANSI",
+)
+cpan.inject(
+    distribution = "HTML-Packer",
+    target = "@perl-html-packer//:HTML-Packer",
+)
+cpan.inject(
+    distribution = "HTML-Parser",
+    target = "@perl-html-parser//:HTML-Parser",
+)
+cpan.inject(
+    distribution = "HTML-Scrubber",
+    target = "@perl-html-scrubber//:HTML-Scrubber",
+)
+cpan.inject(
+    distribution = "HTML-Strip",
+    target = "@perl-html-strip//:HTML-Strip",
+)
+cpan.inject(
+    distribution = "HTML-TagFilter",
+    target = "@perl-html-tagfilter//:HTML-TagFilter",
+)
+cpan.inject(
+    distribution = "HTML-Tagset",
+    target = "@perl-html-tagset//:HTML-Tagset",
+)
+cpan.inject(
+    distribution = "HTML-Template",
+    target = "@perl-html-template//:HTML-Template",
+)
+cpan.inject(
+    distribution = "HTML-Tidy",
+    target = "@perl-html-tidy//:HTML-Tidy",
+)
+cpan.inject(
+    distribution = "HTML-Tree",
+    target = "@perl-html-tree//:HTML-Tree",
+)
+cpan.inject(
+    distribution = "HTML-TreeBuilder-XPath",
+    target = "@perl-html-treebuilder-xpath//:HTML-TreeBuilder-XPath",
+)
+cpan.inject(
+    distribution = "HTML-TreeStructured",
+    target = "@perl-html-treestructured//:HTML-TreeStructured",
+)
+cpan.inject(
+    distribution = "HTTP-CookieJar",
+    target = "@perl-http-cookiejar//:HTTP-CookieJar",
+)
+cpan.inject(
+    distribution = "HTTP-Entity-Parser",
+    target = "@perl-http-entity-parser//:HTTP-Entity-Parser",
+)
+cpan.inject(
+    distribution = "HTTP-Headers-ActionPack",
+    target = "@perl-http-headers-actionpack//:HTTP-Headers-ActionPack",
+)
+cpan.inject(
+    distribution = "HTTP-Headers-Fast",
+    target = "@perl-http-headers-fast//:HTTP-Headers-Fast",
+)
+cpan.inject(
+    distribution = "HTTP-Message",
+    target = "@perl-http-message//:HTTP-Message",
+)
+cpan.inject(
+    distribution = "HTTP-MultiPartParser",
+    target = "@perl-http-multipartparser//:HTTP-MultiPartParser",
+)
+cpan.inject(
+    distribution = "HTTP-Negotiate",
+    target = "@perl-http-negotiate//:HTTP-Negotiate",
+)
+cpan.inject(
+    distribution = "HTTP-Server-Simple",
+    target = "@perl-http-server-simple//:HTTP-Server-Simple",
+)
+cpan.inject(
+    distribution = "HTTP-Tiny",
+    target = "@perl-http-tiny//:HTTP-Tiny",
+)
+cpan.inject(
+    distribution = "I18N-Charset",
+    target = "@perl-i18n-charset//:I18N-Charset",
+)
+cpan.inject(
+    distribution = "Image-ExifTool",
+    target = "@perl-image-exiftool//:Image-ExifTool",
+)
+cpan.inject(
+    distribution = "Image-Info",
+    target = "@perl-image-info//:Image-Info",
+)
+cpan.inject(
+    distribution = "Image-Scale",
+    target = "@perl-image-scale//:Image-Scale",
+)
+cpan.inject(
+    distribution = "Image-Size",
+    target = "@perl-image-size//:Image-Size",
+)
+cpan.inject(
+    distribution = "Image-ValidJpeg",
+    target = "@perl-image-validjpeg//:Image-ValidJpeg",
+)
+cpan.inject(
+    distribution = "Imager",
+    target = "@perl-imager//:Imager",
+)
+cpan.inject(
+    distribution = "Imager-QRCode",
+    target = "@perl-imager-qrcode//:Imager-QRCode",
+)
+cpan.inject(
+    distribution = "indirect",
+    target = "@perl-indirect//:indirect",
+)
+cpan.inject(
+    distribution = "IO-AIO",
+    target = "@perl-io-aio//:IO-AIO",
+)
+cpan.inject(
+    distribution = "IO-All",
+    target = "@perl-io-all//:IO-All",
+)
+cpan.inject(
+    distribution = "IO-Compress",
+    target = "@perl-io-compress//:IO-Compress",
+)
+cpan.inject(
+    distribution = "IO-Compress-Brotli",
+    target = "@perl-io-compress-brotli//:IO-Compress-Brotli",
+)
+cpan.inject(
+    distribution = "IO-Interactive",
+    target = "@perl-io-interactive//:IO-Interactive",
+)
+cpan.inject(
+    distribution = "IO-Prompt",
+    target = "@perl-io-prompt//:IO-Prompt",
+)
+cpan.inject(
+    distribution = "IO-Socket-IP",
+    target = "@perl-io-socket-ip//:IO-Socket-IP",
+)
+cpan.inject(
+    distribution = "IO-Socket-PortState",
+    target = "@perl-io-socket-portstate//:IO-Socket-PortState",
+)
+cpan.inject(
+    distribution = "IO-Socket-SSL",
+    target = "@perl-io-socket-ssl//:IO-Socket-SSL",
+)
+cpan.inject(
+    distribution = "IO-String",
+    target = "@perl-io-string//:IO-String",
+)
+cpan.inject(
+    distribution = "IO-Stringy",
+    target = "@perl-io-stringy//:IO-Stringy",
+)
+cpan.inject(
+    distribution = "IO-Zlib",
+    target = "@perl-io-zlib//:IO-Zlib",
+)
+cpan.inject(
+    distribution = "IPC-Cmd",
+    target = "@perl-ipc-cmd//:IPC-Cmd",
+)
+cpan.inject(
+    distribution = "IPC-ConcurrencyLimit",
+    target = "@perl-ipc-concurrencylimit//:IPC-ConcurrencyLimit",
+)
+cpan.inject(
+    distribution = "IPC-Run",
+    target = "@perl-ipc-run//:IPC-Run",
+)
+cpan.inject(
+    distribution = "IPC-Run3",
+    target = "@perl-ipc-run3//:IPC-Run3",
+)
+cpan.inject(
+    distribution = "IPC-ShareLite",
+    target = "@perl-ipc-sharelite//:IPC-ShareLite",
+)
+cpan.inject(
+    distribution = "IPC-System-Simple",
+    target = "@perl-ipc-system-simple//:IPC-System-Simple",
+)
+cpan.inject(
+    distribution = "JavaScript-Packer",
+    target = "@perl-javascript-packer//:JavaScript-Packer",
+)
+cpan.inject(
+    distribution = "Jcode",
+    target = "@perl-jcode//:Jcode",
+)
+cpan.inject(
+    distribution = "JIRA-REST",
+    target = "@perl-jira-rest//:JIRA-REST",
+)
+cpan.inject(
+    distribution = "jmx4perl",
+    target = "@perl-jmx4perl//:jmx4perl",
+)
+cpan.inject(
+    distribution = "JS-SourceMap",
+    target = "@perl-js-sourcemap//:JS-SourceMap",
+)
+cpan.inject(
+    distribution = "JSON",
+    target = "@perl-json//:JSON",
+)
+cpan.inject(
+    distribution = "JSON-MaybeXS",
+    target = "@perl-json-maybexs//:JSON-MaybeXS",
+)
+cpan.inject(
+    distribution = "JSON-Parse",
+    target = "@perl-json-parse//:JSON-Parse",
+)
+cpan.inject(
+    distribution = "JSON-Path",
+    target = "@perl-json-path//:JSON-Path",
+)
+cpan.inject(
+    distribution = "JSON-PP",
+    target = "@perl-json-pp//:JSON-PP",
+)
+cpan.inject(
+    distribution = "JSON-Schema-Draft201909",
+    target = "@perl-json-schema-draft201909//:JSON-Schema-Draft201909",
+)
+cpan.inject(
+    distribution = "JSON-Schema-Modern",
+    target = "@perl-json-schema-modern//:JSON-Schema-Modern",
+)
+cpan.inject(
+    distribution = "JSON-SL",
+    target = "@perl-json-sl//:JSON-SL",
+)
+cpan.inject(
+    distribution = "JSON-Types",
+    target = "@perl-json-types//:JSON-Types",
+)
+cpan.inject(
+    distribution = "JSON-Validator",
+    target = "@perl-json-validator//:JSON-Validator",
+)
+cpan.inject(
+    distribution = "JSON-WebToken",
+    target = "@perl-json-webtoken//:JSON-WebToken",
+)
+cpan.inject(
+    distribution = "JSON-XS",
+    target = "@perl-json-xs//:JSON-XS",
+)
+cpan.inject(
+    distribution = "Kafka",
+    target = "@perl-kafka//:Kafka",
+)
+cpan.inject(
+    distribution = "libwww-perl",
+    target = "@perl-libwww-perl//:libwww-perl",
+)
+cpan.inject(
+    distribution = "Lingua-EN-Fathom",
+    target = "@perl-lingua-en-fathom//:Lingua-EN-Fathom",
+)
+cpan.inject(
+    distribution = "Lingua-EN-Inflect",
+    target = "@perl-lingua-en-inflect//:Lingua-EN-Inflect",
+)
+cpan.inject(
+    distribution = "Lingua-EN-Inflexion",
+    target = "@perl-lingua-en-inflexion//:Lingua-EN-Inflexion",
+)
+cpan.inject(
+    distribution = "Lingua-EN-Numbers",
+    target = "@perl-lingua-en-numbers//:Lingua-EN-Numbers",
+)
+cpan.inject(
+    distribution = "Lingua-EN-Sentence",
+    target = "@perl-lingua-en-sentence//:Lingua-EN-Sentence",
+)
+cpan.inject(
+    distribution = "Lingua-EN-Syllable",
+    target = "@perl-lingua-en-syllable//:Lingua-EN-Syllable",
+)
+cpan.inject(
+    distribution = "Lingua-Han-PinYin",
+    target = "@perl-lingua-han-pinyin//:Lingua-Han-PinYin",
+)
+cpan.inject(
+    distribution = "Lingua-Han-Utils",
+    target = "@perl-lingua-han-utils//:Lingua-Han-Utils",
+)
+cpan.inject(
+    distribution = "Lingua-Identify-CLD",
+    target = "@perl-lingua-identify-cld//:Lingua-Identify-CLD",
+)
+cpan.inject(
+    distribution = "Lingua-Identify-CLD2",
+    target = "@perl-lingua-identify-cld2//:Lingua-Identify-CLD2",
+)
+cpan.inject(
+    distribution = "Lingua-JA-Moji",
+    target = "@perl-lingua-ja-moji//:Lingua-JA-Moji",
+)
+cpan.inject(
+    distribution = "Lingua-Stem",
+    target = "@perl-lingua-stem//:Lingua-Stem",
+)
+cpan.inject(
+    distribution = "Lingua-StopWords",
+    target = "@perl-lingua-stopwords//:Lingua-StopWords",
+)
+cpan.inject(
+    distribution = "Lingua-ZH-HanDetect",
+    target = "@perl-lingua-zh-handetect//:Lingua-ZH-HanDetect",
+)
+cpan.inject(
+    distribution = "Linux-Inotify2",
+    target = "@perl-linux-inotify2//:Linux-Inotify2",
+)
+cpan.inject(
+    distribution = "Linux-Prctl",
+    target = "@perl-linux-prctl//:Linux-Prctl",
+)
+cpan.inject(
+    distribution = "Linux-Smaps-Tiny",
+    target = "@perl-linux-smaps-tiny//:Linux-Smaps-Tiny",
+)
+cpan.inject(
+    distribution = "List-AllUtils",
+    target = "@perl-list-allutils//:List-AllUtils",
+)
+cpan.inject(
+    distribution = "List-BinarySearch",
+    target = "@perl-list-binarysearch//:List-BinarySearch",
+)
+cpan.inject(
+    distribution = "List-Compare",
+    target = "@perl-list-compare//:List-Compare",
+)
+cpan.inject(
+    distribution = "List-MoreUtils",
+    target = "@perl-list-moreutils//:List-MoreUtils",
+)
+cpan.inject(
+    distribution = "List-SomeUtils",
+    target = "@perl-list-someutils//:List-SomeUtils",
+)
+cpan.inject(
+    distribution = "Locale-CLDR",
+    target = "@perl-locale-cldr//:Locale-CLDR",
+)
+cpan.inject(
+    distribution = "Locale-Codes",
+    target = "@perl-locale-codes//:Locale-Codes",
+)
+cpan.inject(
+    distribution = "Locale-gettext",
+    target = "@perl-locale-gettext//:Locale-gettext",
+)
+cpan.inject(
+    distribution = "Locale-Maketext-Lexicon",
+    target = "@perl-locale-maketext-lexicon//:Locale-Maketext-Lexicon",
+)
+cpan.inject(
+    distribution = "Log-Any",
+    target = "@perl-log-any//:Log-Any",
+)
+cpan.inject(
+    distribution = "Log-Any-Adapter-Log4perl",
+    target = "@perl-log-any-adapter-log4perl//:Log-Any-Adapter-Log4perl",
+)
+cpan.inject(
+    distribution = "Log-Contextual",
+    target = "@perl-log-contextual//:Log-Contextual",
+)
+cpan.inject(
+    distribution = "Log-Dispatch",
+    target = "@perl-log-dispatch//:Log-Dispatch",
+)
+cpan.inject(
+    distribution = "Log-Dispatch-FileRotate",
+    target = "@perl-log-dispatch-filerotate//:Log-Dispatch-FileRotate",
+)
+cpan.inject(
+    distribution = "Log-Log4perl",
+    target = "@perl-log-log4perl//:Log-Log4perl",
+)
+cpan.inject(
+    distribution = "Log-Log4perl-Appender-Elasticsearch",
+    target = "@perl-log-log4perl-appender-elasticsearch//:Log-Log4perl-Appender-Elasticsearch",
+)
+cpan.inject(
+    distribution = "Log-Log4perl-Layout-JSON",
+    target = "@perl-log-log4perl-layout-json//:Log-Log4perl-Layout-JSON",
+)
+cpan.inject(
+    distribution = "Log-Report",
+    target = "@perl-log-report//:Log-Report",
+)
+cpan.inject(
+    distribution = "Log-Trace",
+    target = "@perl-log-trace//:Log-Trace",
+)
+cpan.inject(
+    distribution = "LWP-Authen-Negotiate",
+    target = "@perl-lwp-authen-negotiate//:LWP-Authen-Negotiate",
+)
+cpan.inject(
+    distribution = "LWP-Protocol-connect",
+    target = "@perl-lwp-protocol-connect//:LWP-Protocol-connect",
+)
+cpan.inject(
+    distribution = "LWP-Protocol-https",
+    target = "@perl-lwp-protocol-https//:LWP-Protocol-https",
+)
+cpan.inject(
+    distribution = "LWP-UserAgent-Determined",
+    target = "@perl-lwp-useragent-determined//:LWP-UserAgent-Determined",
+)
+cpan.inject(
+    distribution = "Mac-PropertyList",
+    target = "@perl-mac-propertylist//:Mac-PropertyList",
+)
+cpan.inject(
+    distribution = "Mail-Box",
+    target = "@perl-mail-box//:Mail-Box",
+)
+cpan.inject(
+    distribution = "Mail-Box-IMAP4",
+    target = "@perl-mail-box-imap4//:Mail-Box-IMAP4",
+)
+cpan.inject(
+    distribution = "Mail-IMAPClient",
+    target = "@perl-mail-imapclient//:Mail-IMAPClient",
+)
+cpan.inject(
+    distribution = "Mail-Sender",
+    target = "@perl-mail-sender//:Mail-Sender",
+)
+cpan.inject(
+    distribution = "MailTools",
+    target = "@perl-mailtools//:MailTools",
+)
+cpan.inject(
+    distribution = "MariaDB-NonBlocking",
+    target = "@perl-mariadb-nonblocking//:MariaDB-NonBlocking",
+)
+cpan.inject(
+    distribution = "Markdent",
+    target = "@perl-markdent//:Markdent",
+)
+cpan.inject(
+    distribution = "match-simple",
+    target = "@perl-match-simple//:match-simple",
+)
+cpan.inject(
+    distribution = "Math-BigInt",
+    target = "@perl-math-bigint//:Math-BigInt",
+)
+cpan.inject(
+    distribution = "Math-ConvexHull",
+    target = "@perl-math-convexhull//:Math-ConvexHull",
+)
+cpan.inject(
+    distribution = "Math-ConvexHull-MonotoneChain",
+    target = "@perl-math-convexhull-monotonechain//:Math-ConvexHull-MonotoneChain",
+)
+cpan.inject(
+    distribution = "Math-FFT",
+    target = "@perl-math-fft//:Math-FFT",
+)
+cpan.inject(
+    distribution = "Math-GSL",
+    target = "@perl-math-gsl//:Math-GSL",
+)
+cpan.inject(
+    distribution = "Math-Pari",
+    target = "@perl-math-pari//:Math-Pari",
+)
+cpan.inject(
+    distribution = "Math-Prime-Util-GMP",
+    target = "@perl-math-prime-util-gmp//:Math-Prime-Util-GMP",
+)
+cpan.inject(
+    distribution = "Math-Random",
+    target = "@perl-math-random//:Math-Random",
+)
+cpan.inject(
+    distribution = "Math-Random-MT",
+    target = "@perl-math-random-mt//:Math-Random-MT",
+)
+cpan.inject(
+    distribution = "Math-Random-MT-Auto",
+    target = "@perl-math-random-mt-auto//:Math-Random-MT-Auto",
+)
+cpan.inject(
+    distribution = "Math-Random-Secure",
+    target = "@perl-math-random-secure//:Math-Random-Secure",
+)
+cpan.inject(
+    distribution = "Math-Round",
+    target = "@perl-math-round//:Math-Round",
+)
+cpan.inject(
+    distribution = "Math-SimpleHisto-XS",
+    target = "@perl-math-simplehisto-xs//:Math-SimpleHisto-XS",
+)
+cpan.inject(
+    distribution = "Math-SimpleHisto-XS-CLI",
+    target = "@perl-math-simplehisto-xs-cli//:Math-SimpleHisto-XS-CLI",
+)
+cpan.inject(
+    distribution = "MaxMind-DB-Reader",
+    target = "@perl-maxmind-db-reader//:MaxMind-DB-Reader",
+)
+cpan.inject(
+    distribution = "MaxMind-DB-Reader-XS",
+    target = "@perl-maxmind-db-reader-xs//:MaxMind-DB-Reader-XS",
+)
+cpan.inject(
+    distribution = "MaxMind-DB-Writer",
+    target = "@perl-maxmind-db-writer//:MaxMind-DB-Writer",
+)
+cpan.inject(
+    distribution = "Memoize-Memcached",
+    target = "@perl-memoize-memcached//:Memoize-Memcached",
+)
+cpan.inject(
+    distribution = "MIME-Base64",
+    target = "@perl-mime-base64//:MIME-Base64",
+)
+cpan.inject(
+    distribution = "MIME-Base64-URLSafe",
+    target = "@perl-mime-base64-urlsafe//:MIME-Base64-URLSafe",
+)
+cpan.inject(
+    distribution = "MIME-Lite",
+    target = "@perl-mime-lite//:MIME-Lite",
+)
+cpan.inject(
+    distribution = "MIME-tools",
+    target = "@perl-mime-tools//:MIME-tools",
+)
+cpan.inject(
+    distribution = "MIME-Types",
+    target = "@perl-mime-types//:MIME-Types",
+)
+cpan.inject(
+    distribution = "Mo",
+    target = "@perl-mo//:Mo",
+)
+cpan.inject(
+    distribution = "Mock-Quick",
+    target = "@perl-mock-quick//:Mock-Quick",
+)
+cpan.inject(
+    distribution = "Module-Build",
+    target = "@perl-module-build//:Module-Build",
+)
+cpan.inject(
+    distribution = "Module-Build-WithXSpp",
+    target = "@perl-module-build-withxspp//:Module-Build-WithXSpp",
+)
+cpan.inject(
+    distribution = "Module-CoreList",
+    target = "@perl-module-corelist//:Module-CoreList",
+)
+cpan.inject(
+    distribution = "Module-Find",
+    target = "@perl-module-find//:Module-Find",
+)
+cpan.inject(
+    distribution = "Module-Install",
+    target = "@perl-module-install//:Module-Install",
+)
+cpan.inject(
+    distribution = "Module-Pluggable",
+    target = "@perl-module-pluggable//:Module-Pluggable",
+)
+cpan.inject(
+    distribution = "Module-Reader",
+    target = "@perl-module-reader//:Module-Reader",
+)
+cpan.inject(
+    distribution = "Module-Util",
+    target = "@perl-module-util//:Module-Util",
+)
+cpan.inject(
+    distribution = "Mojolicious",
+    target = "@perl-mojolicious//:Mojolicious",
+)
+cpan.inject(
+    distribution = "Moo",
+    target = "@perl-moo//:Moo",
+)
+cpan.inject(
+    distribution = "Moose",
+    target = "@perl-moose//:Moose",
+)
+cpan.inject(
+    distribution = "MooseX-Aliases",
+    target = "@perl-moosex-aliases//:MooseX-Aliases",
+)
+cpan.inject(
+    distribution = "MooseX-Attribute-TypeConstraint-CustomizeFatal",
+    target = "@perl-moosex-attribute-typeconstraint-customizefatal//:MooseX-Attribute-TypeConstraint-CustomizeFatal",
+)
+cpan.inject(
+    distribution = "MooseX-Getopt",
+    target = "@perl-moosex-getopt//:MooseX-Getopt",
+)
+cpan.inject(
+    distribution = "MooseX-Getopt-Usage",
+    target = "@perl-moosex-getopt-usage//:MooseX-Getopt-Usage",
+)
+cpan.inject(
+    distribution = "MooseX-Log-Log4perl",
+    target = "@perl-moosex-log-log4perl//:MooseX-Log-Log4perl",
+)
+cpan.inject(
+    distribution = "MooseX-MungeHas",
+    target = "@perl-moosex-mungehas//:MooseX-MungeHas",
+)
+cpan.inject(
+    distribution = "MooseX-NonMoose",
+    target = "@perl-moosex-nonmoose//:MooseX-NonMoose",
+)
+cpan.inject(
+    distribution = "MooseX-Params-Validate",
+    target = "@perl-moosex-params-validate//:MooseX-Params-Validate",
+)
+cpan.inject(
+    distribution = "MooseX-Role-Parameterized",
+    target = "@perl-moosex-role-parameterized//:MooseX-Role-Parameterized",
+)
+cpan.inject(
+    distribution = "MooseX-Singleton",
+    target = "@perl-moosex-singleton//:MooseX-Singleton",
+)
+cpan.inject(
+    distribution = "MooseX-Storage",
+    target = "@perl-moosex-storage//:MooseX-Storage",
+)
+cpan.inject(
+    distribution = "MooseX-StrictConstructor",
+    target = "@perl-moosex-strictconstructor//:MooseX-StrictConstructor",
+)
+cpan.inject(
+    distribution = "MooseX-Types",
+    target = "@perl-moosex-types//:MooseX-Types",
+)
+cpan.inject(
+    distribution = "MooseX-Types-Common",
+    target = "@perl-moosex-types-common//:MooseX-Types-Common",
+)
+cpan.inject(
+    distribution = "MooseX-Types-DateTime",
+    target = "@perl-moosex-types-datetime//:MooseX-Types-DateTime",
+)
+cpan.inject(
+    distribution = "MooseX-Types-Path-Class",
+    target = "@perl-moosex-types-path-class//:MooseX-Types-Path-Class",
+)
+cpan.inject(
+    distribution = "MooseX-Types-Structured",
+    target = "@perl-moosex-types-structured//:MooseX-Types-Structured",
+)
+cpan.inject(
+    distribution = "MooX-Cmd",
+    target = "@perl-moox-cmd//:MooX-Cmd",
+)
+cpan.inject(
+    distribution = "MooX-HandlesVia",
+    target = "@perl-moox-handlesvia//:MooX-HandlesVia",
+)
+cpan.inject(
+    distribution = "MooX-Options",
+    target = "@perl-moox-options//:MooX-Options",
+)
+cpan.inject(
+    distribution = "MooX-StrictConstructor",
+    target = "@perl-moox-strictconstructor//:MooX-StrictConstructor",
+)
+cpan.inject(
+    distribution = "MooX-Types-MooseLike",
+    target = "@perl-moox-types-mooselike//:MooX-Types-MooseLike",
+)
+cpan.inject(
+    distribution = "MooX-Types-MooseLike-Numeric",
+    target = "@perl-moox-types-mooselike-numeric//:MooX-Types-MooseLike-Numeric",
+)
+cpan.inject(
+    distribution = "MooX-TypeTiny",
+    target = "@perl-moox-typetiny//:MooX-TypeTiny",
+)
+cpan.inject(
+    distribution = "Mozilla-CA",
+    target = "@perl-mozilla-ca//:Mozilla-CA",
+)
+cpan.inject(
+    distribution = "Mozilla-PublicSuffix",
+    target = "@perl-mozilla-publicsuffix//:Mozilla-PublicSuffix",
+)
+cpan.inject(
+    distribution = "MRO-Compat",
+    target = "@perl-mro-compat//:MRO-Compat",
+)
+cpan.inject(
+    distribution = "multidimensional",
+    target = "@perl-multidimensional//:multidimensional",
+)
+cpan.inject(
+    distribution = "namespace-autoclean",
+    target = "@perl-namespace-autoclean//:namespace-autoclean",
+)
+cpan.inject(
+    distribution = "namespace-clean",
+    target = "@perl-namespace-clean//:namespace-clean",
+)
+cpan.inject(
+    distribution = "Net-Amazon-S3",
+    target = "@perl-net-amazon-s3//:Net-Amazon-S3",
+)
+cpan.inject(
+    distribution = "Net-AMQP-RabbitMQ",
+    target = "@perl-net-amqp-rabbitmq//:Net-AMQP-RabbitMQ",
+)
+cpan.inject(
+    distribution = "Net-Curl",
+    target = "@perl-net-curl//:Net-Curl",
+)
+cpan.inject(
+    distribution = "Net-DNS",
+    target = "@perl-net-dns//:Net-DNS",
+)
+cpan.inject(
+    distribution = "Net-Facebook-Oauth2",
+    target = "@perl-net-facebook-oauth2//:Net-Facebook-Oauth2",
+)
+cpan.inject(
+    distribution = "Net-Graphite",
+    target = "@perl-net-graphite//:Net-Graphite",
+)
+cpan.inject(
+    distribution = "Net-Hadoop-Oozie",
+    target = "@perl-net-hadoop-oozie//:Net-Hadoop-Oozie",
+)
+cpan.inject(
+    distribution = "Net-Hadoop-WebHDFS",
+    target = "@perl-net-hadoop-webhdfs//:Net-Hadoop-WebHDFS",
+)
+cpan.inject(
+    distribution = "Net-Hadoop-WebHDFS-LWP",
+    target = "@perl-net-hadoop-webhdfs-lwp//:Net-Hadoop-WebHDFS-LWP",
+)
+cpan.inject(
+    distribution = "Net-Hadoop-YARN",
+    target = "@perl-net-hadoop-yarn//:Net-Hadoop-YARN",
+)
+cpan.inject(
+    distribution = "Net-HTTP",
+    target = "@perl-net-http//:Net-HTTP",
+)
+cpan.inject(
+    distribution = "Net-HTTPS-NB",
+    target = "@perl-net-https-nb//:Net-HTTPS-NB",
+)
+cpan.inject(
+    distribution = "Net-IDN-Encode",
+    target = "@perl-net-idn-encode//:Net-IDN-Encode",
+)
+cpan.inject(
+    distribution = "Net-IMAP-Simple",
+    target = "@perl-net-imap-simple//:Net-IMAP-Simple",
+)
+cpan.inject(
+    distribution = "Net-IP",
+    target = "@perl-net-ip//:Net-IP",
+)
+cpan.inject(
+    distribution = "Net-Kafka",
+    target = "@perl-net-kafka//:Net-Kafka",
+)
+cpan.inject(
+    distribution = "Net-LibIDN",
+    target = "@perl-net-libidn//:Net-LibIDN",
+)
+cpan.inject(
+    distribution = "Net-OpenSSH",
+    target = "@perl-net-openssh//:Net-OpenSSH",
+)
+cpan.inject(
+    distribution = "Net-Patricia",
+    target = "@perl-net-patricia//:Net-Patricia",
+)
+cpan.inject(
+    distribution = "Net-Pcap",
+    target = "@perl-net-pcap//:Net-Pcap",
+)
+cpan.inject(
+    distribution = "Net-Ping",
+    target = "@perl-net-ping//:Net-Ping",
+)
+cpan.inject(
+    distribution = "Net-SAML2",
+    target = "@perl-net-saml2//:Net-SAML2",
+)
+cpan.inject(
+    distribution = "Net-Server",
+    target = "@perl-net-server//:Net-Server",
+)
+cpan.inject(
+    distribution = "Net-SFTP-Foreign",
+    target = "@perl-net-sftp-foreign//:Net-SFTP-Foreign",
+)
+cpan.inject(
+    distribution = "Net-SMS-WorldText",
+    target = "@perl-net-sms-worldtext//:Net-SMS-WorldText",
+)
+cpan.inject(
+    distribution = "Net-SNMP",
+    target = "@perl-net-snmp//:Net-SNMP",
+)
+cpan.inject(
+    distribution = "Net-SSH-Perl",
+    target = "@perl-net-ssh-perl//:Net-SSH-Perl",
+)
+cpan.inject(
+    distribution = "Net-SSH2",
+    target = "@perl-net-ssh2//:Net-SSH2",
+)
+cpan.inject(
+    distribution = "Net-SSLeay",
+    target = "@perl-net-ssleay//:Net-SSLeay",
+)
+cpan.inject(
+    distribution = "Net-Subnet",
+    target = "@perl-net-subnet//:Net-Subnet",
+)
+cpan.inject(
+    distribution = "Net-ZooKeeper",
+    target = "@perl-net-zookeeper//:Net-ZooKeeper",
+)
+cpan.inject(
+    distribution = "Net-ZooKeeper-Lock",
+    target = "@perl-net-zookeeper-lock//:Net-ZooKeeper-Lock",
+)
+cpan.inject(
+    distribution = "NetAddr-IP",
+    target = "@perl-netaddr-ip//:NetAddr-IP",
+)
+cpan.inject(
+    distribution = "NetPacket",
+    target = "@perl-netpacket//:NetPacket",
+)
+cpan.inject(
+    distribution = "Number-Compare",
+    target = "@perl-number-compare//:Number-Compare",
+)
+cpan.inject(
+    distribution = "Number-Format",
+    target = "@perl-number-format//:Number-Format",
+)
+cpan.inject(
+    distribution = "Number-Phone",
+    target = "@perl-number-phone//:Number-Phone",
+)
+cpan.inject(
+    distribution = "Object-Event",
+    target = "@perl-object-event//:Object-Event",
+)
+cpan.inject(
+    distribution = "Object-Realize-Later",
+    target = "@perl-object-realize-later//:Object-Realize-Later",
+)
+cpan.inject(
+    distribution = "OIDC-Lite",
+    target = "@perl-oidc-lite//:OIDC-Lite",
+)
+cpan.inject(
+    distribution = "OptArgs",
+    target = "@perl-optargs//:OptArgs",
+)
+cpan.inject(
+    distribution = "Package-Alias",
+    target = "@perl-package-alias//:Package-Alias",
+)
+cpan.inject(
+    distribution = "Package-Constants",
+    target = "@perl-package-constants//:Package-Constants",
+)
+cpan.inject(
+    distribution = "Parallel-ForkManager",
+    target = "@perl-parallel-forkmanager//:Parallel-ForkManager",
+)
+cpan.inject(
+    distribution = "Parallel-Iterator",
+    target = "@perl-parallel-iterator//:Parallel-Iterator",
+)
+cpan.inject(
+    distribution = "Params-Util",
+    target = "@perl-params-util//:Params-Util",
+)
+cpan.inject(
+    distribution = "Params-Validate",
+    target = "@perl-params-validate//:Params-Validate",
+)
+cpan.inject(
+    distribution = "parent",
+    target = "@perl-parent//:parent",
+)
+cpan.inject(
+    distribution = "Parse-CSV",
+    target = "@perl-parse-csv//:Parse-CSV",
+)
+cpan.inject(
+    distribution = "Parse-MIME",
+    target = "@perl-parse-mime//:Parse-MIME",
+)
+cpan.inject(
+    distribution = "Parse-RecDescent",
+    target = "@perl-parse-recdescent//:Parse-RecDescent",
+)
+cpan.inject(
+    distribution = "ParseCron",
+    target = "@perl-parsecron//:ParseCron",
+)
+cpan.inject(
+    distribution = "Parser-GraphQL-XS",
+    target = "@perl-parser-graphql-xs//:Parser-GraphQL-XS",
+)
+cpan.inject(
+    distribution = "Parser-MGC",
+    target = "@perl-parser-mgc//:Parser-MGC",
+)
+cpan.inject(
+    distribution = "Path-Class",
+    target = "@perl-path-class//:Path-Class",
+)
+cpan.inject(
+    distribution = "Path-Router",
+    target = "@perl-path-router//:Path-Router",
+)
+cpan.inject(
+    distribution = "Path-Tiny",
+    target = "@perl-path-tiny//:Path-Tiny",
+)
+cpan.inject(
+    distribution = "PathTools",
+    target = "@perl-pathtools//:PathTools",
+)
+cpan.inject(
+    distribution = "Paws",
+    target = "@perl-paws//:Paws",
+)
+cpan.inject(
+    distribution = "PBKDF2-Tiny",
+    target = "@perl-pbkdf2-tiny//:PBKDF2-Tiny",
+)
+cpan.inject(
+    distribution = "PDF-API2",
+    target = "@perl-pdf-api2//:PDF-API2",
+)
+cpan.inject(
+    distribution = "Perl-Critic",
+    target = "@perl-perl-critic//:Perl-Critic",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Community",
+    target = "@perl-perl-critic-community//:Perl-Critic-Community",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Lax",
+    target = "@perl-perl-critic-lax//:Perl-Critic-Lax",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Moose",
+    target = "@perl-perl-critic-moose//:Perl-Critic-Moose",
+)
+cpan.inject(
+    distribution = "Perl-Critic-More",
+    target = "@perl-perl-critic-more//:Perl-Critic-More",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-BuiltinFunctions-ProhibitDeleteOnArrays",
+    target = "@perl-perl-critic-policy-builtinfunctions-prohibitdeleteonarrays//:Perl-Critic-Policy-BuiltinFunctions-ProhibitDeleteOnArrays",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-BuiltinFunctions-ProhibitReturnOr",
+    target = "@perl-perl-critic-policy-builtinfunctions-prohibitreturnor//:Perl-Critic-Policy-BuiltinFunctions-ProhibitReturnOr",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-HTTPCookies",
+    target = "@perl-perl-critic-policy-httpcookies//:Perl-Critic-Policy-HTTPCookies",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-Moo-ProhibitMakeImmutable",
+    target = "@perl-perl-critic-policy-moo-prohibitmakeimmutable//:Perl-Critic-Policy-Moo-ProhibitMakeImmutable",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-Perlsecret",
+    target = "@perl-perl-critic-policy-perlsecret//:Perl-Critic-Policy-Perlsecret",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection",
+    target = "@perl-perl-critic-policy-valuesandexpressions-preventsqlinjection//:Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-ValuesAndExpressions-ProhibitSingleArgArraySlice",
+    target = "@perl-perl-critic-policy-valuesandexpressions-prohibitsingleargarrayslice//:Perl-Critic-Policy-ValuesAndExpressions-ProhibitSingleArgArraySlice",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-Variables-ProhibitLoopOnHash",
+    target = "@perl-perl-critic-policy-variables-prohibitlooponhash//:Perl-Critic-Policy-Variables-ProhibitLoopOnHash",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Policy-Variables-ProhibitUnusedVarsStricter",
+    target = "@perl-perl-critic-policy-variables-prohibitunusedvarsstricter//:Perl-Critic-Policy-Variables-ProhibitUnusedVarsStricter",
+)
+cpan.inject(
+    distribution = "Perl-Critic-Pulp",
+    target = "@perl-perl-critic-pulp//:Perl-Critic-Pulp",
+)
+cpan.inject(
+    distribution = "Perl-Critic-StricterSubs",
+    target = "@perl-perl-critic-strictersubs//:Perl-Critic-StricterSubs",
+)
+cpan.inject(
+    distribution = "Perl-Destruct-Level",
+    target = "@perl-perl-destruct-level//:Perl-Destruct-Level",
+)
+cpan.inject(
+    distribution = "Perl-LanguageServer",
+    target = "@perl-perl-languageserver//:Perl-LanguageServer",
+)
+cpan.inject(
+    distribution = "perl-ldap",
+    target = "@perl-perl-ldap//:perl-ldap",
+)
+cpan.inject(
+    distribution = "Perl-MinimumVersion",
+    target = "@perl-perl-minimumversion//:Perl-MinimumVersion",
+)
+cpan.inject(
+    distribution = "Perl-PrereqScanner",
+    target = "@perl-perl-prereqscanner//:Perl-PrereqScanner",
+)
+cpan.inject(
+    distribution = "Perl-Tidy",
+    target = "@perl-perl-tidy//:Perl-Tidy",
+)
+cpan.inject(
+    distribution = "Perl-Version-Bumper",
+    target = "@perl-perl-version-bumper//:Perl-Version-Bumper",
+)
+cpan.inject(
+    distribution = "Perl6-Junction",
+    target = "@perl-perl6-junction//:Perl6-Junction",
+)
+cpan.inject(
+    distribution = "PerlIO-gzip",
+    target = "@perl-perlio-gzip//:PerlIO-gzip",
+)
+cpan.inject(
+    distribution = "PerlX-Maybe-XS",
+    target = "@perl-perlx-maybe-xs//:PerlX-Maybe-XS",
+)
+cpan.inject(
+    distribution = "Pipeworks",
+    target = "@perl-pipeworks//:Pipeworks",
+)
+cpan.inject(
+    distribution = "Plack",
+    target = "@perl-plack//:Plack",
+)
+cpan.inject(
+    distribution = "Plack-Debugger",
+    target = "@perl-plack-debugger//:Plack-Debugger",
+)
+cpan.inject(
+    distribution = "Plack-Middleware-Camelcadedb",
+    target = "@perl-plack-middleware-camelcadedb//:Plack-Middleware-Camelcadedb",
+)
+cpan.inject(
+    distribution = "Plack-Middleware-ChromeLogger",
+    target = "@perl-plack-middleware-chromelogger//:Plack-Middleware-ChromeLogger",
+)
+cpan.inject(
+    distribution = "Plack-Middleware-CrossOrigin",
+    target = "@perl-plack-middleware-crossorigin//:Plack-Middleware-CrossOrigin",
+)
+cpan.inject(
+    distribution = "Plack-Middleware-Debug",
+    target = "@perl-plack-middleware-debug//:Plack-Middleware-Debug",
+)
+cpan.inject(
+    distribution = "Plack-Middleware-Deflater",
+    target = "@perl-plack-middleware-deflater//:Plack-Middleware-Deflater",
+)
+cpan.inject(
+    distribution = "Plack-Middleware-Rewrite",
+    target = "@perl-plack-middleware-rewrite//:Plack-Middleware-Rewrite",
+)
+cpan.inject(
+    distribution = "Plack-Test-Agent",
+    target = "@perl-plack-test-agent//:Plack-Test-Agent",
+)
+cpan.inject(
+    distribution = "Pod-Coverage",
+    target = "@perl-pod-coverage//:Pod-Coverage",
+)
+cpan.inject(
+    distribution = "Pod-Coverage-TrustMe",
+    target = "@perl-pod-coverage-trustme//:Pod-Coverage-TrustMe",
+)
+cpan.inject(
+    distribution = "Pod-Coverage-TrustPod",
+    target = "@perl-pod-coverage-trustpod//:Pod-Coverage-TrustPod",
+)
+cpan.inject(
+    distribution = "Pod-Elemental",
+    target = "@perl-pod-elemental//:Pod-Elemental",
+)
+cpan.inject(
+    distribution = "Pod-Escapes",
+    target = "@perl-pod-escapes//:Pod-Escapes",
+)
+cpan.inject(
+    distribution = "Pod-Eventual",
+    target = "@perl-pod-eventual//:Pod-Eventual",
+)
+cpan.inject(
+    distribution = "Pod-Markdown",
+    target = "@perl-pod-markdown//:Pod-Markdown",
+)
+cpan.inject(
+    distribution = "Pod-POM",
+    target = "@perl-pod-pom//:Pod-POM",
+)
+cpan.inject(
+    distribution = "Pod-Simple",
+    target = "@perl-pod-simple//:Pod-Simple",
+)
+cpan.inject(
+    distribution = "Pod-Snippets",
+    target = "@perl-pod-snippets//:Pod-Snippets",
+)
+cpan.inject(
+    distribution = "Pod-Strip",
+    target = "@perl-pod-strip//:Pod-Strip",
+)
+cpan.inject(
+    distribution = "Pod-Usage",
+    target = "@perl-pod-usage//:Pod-Usage",
+)
+cpan.inject(
+    distribution = "POE",
+    target = "@perl-poe//:POE",
+)
+cpan.inject(
+    distribution = "POE-Component-Client-eris",
+    target = "@perl-poe-component-client-eris//:POE-Component-Client-eris",
+)
+cpan.inject(
+    distribution = "POE-XS-Queue-Array",
+    target = "@perl-poe-xs-queue-array//:POE-XS-Queue-Array",
+)
+cpan.inject(
+    distribution = "POSIX-AtFork",
+    target = "@perl-posix-atfork//:POSIX-AtFork",
+)
+cpan.inject(
+    distribution = "POSIX-strftime-Compiler",
+    target = "@perl-posix-strftime-compiler//:POSIX-strftime-Compiler",
+)
+cpan.inject(
+    distribution = "PPI",
+    target = "@perl-ppi//:PPI",
+)
+cpan.inject(
+    distribution = "PPIx-Regexp",
+    target = "@perl-ppix-regexp//:PPIx-Regexp",
+)
+cpan.inject(
+    distribution = "Proc-Daemon",
+    target = "@perl-proc-daemon//:Proc-Daemon",
+)
+cpan.inject(
+    distribution = "Proc-ProcessTable",
+    target = "@perl-proc-processtable//:Proc-ProcessTable",
+)
+cpan.inject(
+    distribution = "Promises",
+    target = "@perl-promises//:Promises",
+)
+cpan.inject(
+    distribution = "Protocol-HTTP2",
+    target = "@perl-protocol-http2//:Protocol-HTTP2",
+)
+cpan.inject(
+    distribution = "PSGI",
+    target = "@perl-psgi//:PSGI",
+)
+cpan.inject(
+    distribution = "Queue-Q",
+    target = "@perl-queue-q//:Queue-Q",
+)
+cpan.inject(
+    distribution = "Readonly",
+    target = "@perl-readonly//:Readonly",
+)
+cpan.inject(
+    distribution = "Redis",
+    target = "@perl-redis//:Redis",
+)
+cpan.inject(
+    distribution = "Redis-DistLock",
+    target = "@perl-redis-distlock//:Redis-DistLock",
+)
+cpan.inject(
+    distribution = "Redis-ScriptCache",
+    target = "@perl-redis-scriptcache//:Redis-ScriptCache",
+)
+cpan.inject(
+    distribution = "Ref-Util",
+    target = "@perl-ref-util//:Ref-Util",
+)
+cpan.inject(
+    distribution = "Ref-Util-XS",
+    target = "@perl-ref-util-xs//:Ref-Util-XS",
+)
+cpan.inject(
+    distribution = "Regexp-Assemble",
+    target = "@perl-regexp-assemble//:Regexp-Assemble",
+)
+cpan.inject(
+    distribution = "Regexp-Common",
+    target = "@perl-regexp-common//:Regexp-Common",
+)
+cpan.inject(
+    distribution = "Regexp-Trie",
+    target = "@perl-regexp-trie//:Regexp-Trie",
+)
+cpan.inject(
+    distribution = "Regexp-Util",
+    target = "@perl-regexp-util//:Regexp-Util",
+)
+cpan.inject(
+    distribution = "Reply",
+    target = "@perl-reply//:Reply",
+)
+cpan.inject(
+    distribution = "REST-Client",
+    target = "@perl-rest-client//:REST-Client",
+)
+cpan.inject(
+    distribution = "REST-Neo4p",
+    target = "@perl-rest-neo4p//:REST-Neo4p",
+)
+cpan.inject(
+    distribution = "Role-Kerberos",
+    target = "@perl-role-kerberos//:Role-Kerberos",
+)
+cpan.inject(
+    distribution = "Role-Tiny",
+    target = "@perl-role-tiny//:Role-Tiny",
+)
+cpan.inject(
+    distribution = "roles",
+    target = "@perl-roles//:roles",
+)
+cpan.inject(
+    distribution = "RPC-XML",
+    target = "@perl-rpc-xml//:RPC-XML",
+)
+cpan.inject(
+    distribution = "Schedule-AdaptiveThrottler",
+    target = "@perl-schedule-adaptivethrottler//:Schedule-AdaptiveThrottler",
+)
+cpan.inject(
+    distribution = "Scope-Guard",
+    target = "@perl-scope-guard//:Scope-Guard",
+)
+cpan.inject(
+    distribution = "Scope-Upper",
+    target = "@perl-scope-upper//:Scope-Upper",
+)
+cpan.inject(
+    distribution = "Search-Brick-RAM-Query",
+    target = "@perl-search-brick-ram-query//:Search-Brick-RAM-Query",
+)
+cpan.inject(
+    distribution = "Search-Elasticsearch",
+    target = "@perl-search-elasticsearch//:Search-Elasticsearch",
+)
+cpan.inject(
+    distribution = "Search-Elasticsearch-Client-6_0",
+    target = "@perl-search-elasticsearch-client-6-0//:Search-Elasticsearch-Client-6_0",
+)
+cpan.inject(
+    distribution = "Search-Elasticsearch-Client-7_0",
+    target = "@perl-search-elasticsearch-client-7-0//:Search-Elasticsearch-Client-7_0",
+)
+cpan.inject(
+    distribution = "Selenium-Remote-Driver",
+    target = "@perl-selenium-remote-driver//:Selenium-Remote-Driver",
+)
+cpan.inject(
+    distribution = "Sereal",
+    target = "@perl-sereal//:Sereal",
+)
+cpan.inject(
+    distribution = "Sereal-Decoder",
+    target = "@perl-sereal-decoder//:Sereal-Decoder",
+)
+cpan.inject(
+    distribution = "Sereal-Encoder",
+    target = "@perl-sereal-encoder//:Sereal-Encoder",
+)
+cpan.inject(
+    distribution = "Set-CartesianProduct-Lazy",
+    target = "@perl-set-cartesianproduct-lazy//:Set-CartesianProduct-Lazy",
+)
+cpan.inject(
+    distribution = "Set-Object",
+    target = "@perl-set-object//:Set-Object",
+)
+cpan.inject(
+    distribution = "ShardedKV",
+    target = "@perl-shardedkv//:ShardedKV",
+)
+cpan.inject(
+    distribution = "ShardedKV-Continuum-CHash",
+    target = "@perl-shardedkv-continuum-chash//:ShardedKV-Continuum-CHash",
+)
+cpan.inject(
+    distribution = "ShardedKV-Continuum-Jump",
+    target = "@perl-shardedkv-continuum-jump//:ShardedKV-Continuum-Jump",
+)
+cpan.inject(
+    distribution = "ShardedKV-Storage-Rest",
+    target = "@perl-shardedkv-storage-rest//:ShardedKV-Storage-Rest",
+)
+cpan.inject(
+    distribution = "slots",
+    target = "@perl-slots//:slots",
+)
+cpan.inject(
+    distribution = "Smaz",
+    target = "@perl-smaz//:Smaz",
+)
+cpan.inject(
+    distribution = "SOAP-Lite",
+    target = "@perl-soap-lite//:SOAP-Lite",
+)
+cpan.inject(
+    distribution = "SOAP-WSDL",
+    target = "@perl-soap-wsdl//:SOAP-WSDL",
+)
+cpan.inject(
+    distribution = "Socket",
+    target = "@perl-socket//:Socket",
+)
+cpan.inject(
+    distribution = "Socket6",
+    target = "@perl-socket6//:Socket6",
+)
+cpan.inject(
+    distribution = "Sort-Versions",
+    target = "@perl-sort-versions//:Sort-Versions",
+)
+cpan.inject(
+    distribution = "Specio",
+    target = "@perl-specio//:Specio",
+)
+cpan.inject(
+    distribution = "Spiffy",
+    target = "@perl-spiffy//:Spiffy",
+)
+cpan.inject(
+    distribution = "Spreadsheet-ParseExcel",
+    target = "@perl-spreadsheet-parseexcel//:Spreadsheet-ParseExcel",
+)
+cpan.inject(
+    distribution = "Spreadsheet-ParseXLSX",
+    target = "@perl-spreadsheet-parsexlsx//:Spreadsheet-ParseXLSX",
+)
+cpan.inject(
+    distribution = "Spreadsheet-WriteExcel",
+    target = "@perl-spreadsheet-writeexcel//:Spreadsheet-WriteExcel",
+)
+cpan.inject(
+    distribution = "Spreadsheet-WriteExcel-Simple",
+    target = "@perl-spreadsheet-writeexcel-simple//:Spreadsheet-WriteExcel-Simple",
+)
+cpan.inject(
+    distribution = "Spreadsheet-XLSX",
+    target = "@perl-spreadsheet-xlsx//:Spreadsheet-XLSX",
+)
+cpan.inject(
+    distribution = "SQL-Abstract",
+    target = "@perl-sql-abstract//:SQL-Abstract",
+)
+cpan.inject(
+    distribution = "SQL-Abstract-Complete",
+    target = "@perl-sql-abstract-complete//:SQL-Abstract-Complete",
+)
+cpan.inject(
+    distribution = "SQL-Abstract-Limit",
+    target = "@perl-sql-abstract-limit//:SQL-Abstract-Limit",
+)
+cpan.inject(
+    distribution = "SQL-Statement",
+    target = "@perl-sql-statement//:SQL-Statement",
+)
+cpan.inject(
+    distribution = "Starman",
+    target = "@perl-starman//:Starman",
+)
+cpan.inject(
+    distribution = "Statistics-Basic",
+    target = "@perl-statistics-basic//:Statistics-Basic",
+)
+cpan.inject(
+    distribution = "Statistics-CaseResampling",
+    target = "@perl-statistics-caseresampling//:Statistics-CaseResampling",
+)
+cpan.inject(
+    distribution = "Statistics-Descriptive",
+    target = "@perl-statistics-descriptive//:Statistics-Descriptive",
+)
+cpan.inject(
+    distribution = "Statistics-Distributions",
+    target = "@perl-statistics-distributions//:Statistics-Distributions",
+)
+cpan.inject(
+    distribution = "Statistics-EfficiencyCI",
+    target = "@perl-statistics-efficiencyci//:Statistics-EfficiencyCI",
+)
+cpan.inject(
+    distribution = "Statistics-R",
+    target = "@perl-statistics-r//:Statistics-R",
+)
+cpan.inject(
+    distribution = "Statistics-Regression",
+    target = "@perl-statistics-regression//:Statistics-Regression",
+)
+cpan.inject(
+    distribution = "Statistics-Test-WilcoxonRankSum",
+    target = "@perl-statistics-test-wilcoxonranksum//:Statistics-Test-WilcoxonRankSum",
+)
+cpan.inject(
+    distribution = "Storable",
+    target = "@perl-storable//:Storable",
+)
+cpan.inject(
+    distribution = "String-Approx",
+    target = "@perl-string-approx//:String-Approx",
+)
+cpan.inject(
+    distribution = "String-CRC32",
+    target = "@perl-string-crc32//:String-CRC32",
+)
+cpan.inject(
+    distribution = "String-Escape",
+    target = "@perl-string-escape//:String-Escape",
+)
+cpan.inject(
+    distribution = "String-Format",
+    target = "@perl-string-format//:String-Format",
+)
+cpan.inject(
+    distribution = "String-Random",
+    target = "@perl-string-random//:String-Random",
+)
+cpan.inject(
+    distribution = "String-ShellQuote",
+    target = "@perl-string-shellquote//:String-ShellQuote",
+)
+cpan.inject(
+    distribution = "String-Similarity",
+    target = "@perl-string-similarity//:String-Similarity",
+)
+cpan.inject(
+    distribution = "String-Truncate",
+    target = "@perl-string-truncate//:String-Truncate",
+)
+cpan.inject(
+    distribution = "Struct-Diff",
+    target = "@perl-struct-diff//:Struct-Diff",
+)
+cpan.inject(
+    distribution = "Sub-Current",
+    target = "@perl-sub-current//:Sub-Current",
+)
+cpan.inject(
+    distribution = "Sub-Name",
+    target = "@perl-sub-name//:Sub-Name",
+)
+cpan.inject(
+    distribution = "Sub-Override",
+    target = "@perl-sub-override//:Sub-Override",
+)
+cpan.inject(
+    distribution = "Sub-StrictDecl",
+    target = "@perl-sub-strictdecl//:Sub-StrictDecl",
+)
+cpan.inject(
+    distribution = "Sub-Uplevel",
+    target = "@perl-sub-uplevel//:Sub-Uplevel",
+)
+cpan.inject(
+    distribution = "SVG",
+    target = "@perl-svg//:SVG",
+)
+cpan.inject(
+    distribution = "Syntax-Keyword-Try",
+    target = "@perl-syntax-keyword-try//:Syntax-Keyword-Try",
+)
+cpan.inject(
+    distribution = "Sys-CpuAffinity",
+    target = "@perl-sys-cpuaffinity//:Sys-CpuAffinity",
+)
+cpan.inject(
+    distribution = "Sys-Hostname-Long",
+    target = "@perl-sys-hostname-long//:Sys-Hostname-Long",
+)
+cpan.inject(
+    distribution = "Sys-RunAlone",
+    target = "@perl-sys-runalone//:Sys-RunAlone",
+)
+cpan.inject(
+    distribution = "Sys-Sendfile",
+    target = "@perl-sys-sendfile//:Sys-Sendfile",
+)
+cpan.inject(
+    distribution = "Sys-Syslog",
+    target = "@perl-sys-syslog//:Sys-Syslog",
+)
+cpan.inject(
+    distribution = "TAP-Formatter-HTML",
+    target = "@perl-tap-formatter-html//:TAP-Formatter-HTML",
+)
+cpan.inject(
+    distribution = "TAP-Formatter-JUnit",
+    target = "@perl-tap-formatter-junit//:TAP-Formatter-JUnit",
+)
+cpan.inject(
+    distribution = "TAP-Harness-JUnit",
+    target = "@perl-tap-harness-junit//:TAP-Harness-JUnit",
+)
+cpan.inject(
+    distribution = "Task-Weaken",
+    target = "@perl-task-weaken//:Task-Weaken",
+)
+cpan.inject(
+    distribution = "Template-Tiny",
+    target = "@perl-template-tiny//:Template-Tiny",
+)
+cpan.inject(
+    distribution = "Template-Toolkit",
+    target = "@perl-template-toolkit//:Template-Toolkit",
+)
+cpan.inject(
+    distribution = "Term-ANSIScreen",
+    target = "@perl-term-ansiscreen//:Term-ANSIScreen",
+)
+cpan.inject(
+    distribution = "Term-ProgressBar",
+    target = "@perl-term-progressbar//:Term-ProgressBar",
+)
+cpan.inject(
+    distribution = "Term-Size",
+    target = "@perl-term-size//:Term-Size",
+)
+cpan.inject(
+    distribution = "Term-Size-Perl",
+    target = "@perl-term-size-perl//:Term-Size-Perl",
+)
+cpan.inject(
+    distribution = "TermReadKey",
+    target = "@perl-termreadkey//:TermReadKey",
+)
+cpan.inject(
+    distribution = "Test-Base",
+    target = "@perl-test-base//:Test-Base",
+)
+cpan.inject(
+    distribution = "Test-Class",
+    target = "@perl-test-class//:Test-Class",
+)
+cpan.inject(
+    distribution = "Test-Class-Moose",
+    target = "@perl-test-class-moose//:Test-Class-Moose",
+)
+cpan.inject(
+    distribution = "Test-Compile",
+    target = "@perl-test-compile//:Test-Compile",
+)
+cpan.inject(
+    distribution = "Test-DBIx-Class",
+    target = "@perl-test-dbix-class//:Test-DBIx-Class",
+)
+cpan.inject(
+    distribution = "Test-Deep",
+    target = "@perl-test-deep//:Test-Deep",
+)
+cpan.inject(
+    distribution = "Test-Deep-ArrayEachNotEmpty",
+    target = "@perl-test-deep-arrayeachnotempty//:Test-Deep-ArrayEachNotEmpty",
+)
+cpan.inject(
+    distribution = "Test-Exception",
+    target = "@perl-test-exception//:Test-Exception",
+)
+cpan.inject(
+    distribution = "Test-Fatal",
+    target = "@perl-test-fatal//:Test-Fatal",
+)
+cpan.inject(
+    distribution = "Test-HTTP-AnyEvent-Server",
+    target = "@perl-test-http-anyevent-server//:Test-HTTP-AnyEvent-Server",
+)
+cpan.inject(
+    distribution = "Test-Inter",
+    target = "@perl-test-inter//:Test-Inter",
+)
+cpan.inject(
+    distribution = "Test-LWP-UserAgent",
+    target = "@perl-test-lwp-useragent//:Test-LWP-UserAgent",
+)
+cpan.inject(
+    distribution = "Test-Manifest",
+    target = "@perl-test-manifest//:Test-Manifest",
+)
+cpan.inject(
+    distribution = "Test-MockFile",
+    target = "@perl-test-mockfile//:Test-MockFile",
+)
+cpan.inject(
+    distribution = "Test-MockModule",
+    target = "@perl-test-mockmodule//:Test-MockModule",
+)
+cpan.inject(
+    distribution = "Test-MockObject",
+    target = "@perl-test-mockobject//:Test-MockObject",
+)
+cpan.inject(
+    distribution = "Test-MockTime",
+    target = "@perl-test-mocktime//:Test-MockTime",
+)
+cpan.inject(
+    distribution = "Test-Most",
+    target = "@perl-test-most//:Test-Most",
+)
+cpan.inject(
+    distribution = "Test-NoWarnings",
+    target = "@perl-test-nowarnings//:Test-NoWarnings",
+)
+cpan.inject(
+    distribution = "Test-Perl-Critic",
+    target = "@perl-test-perl-critic//:Test-Perl-Critic",
+)
+cpan.inject(
+    distribution = "Test-Pod",
+    target = "@perl-test-pod//:Test-Pod",
+)
+cpan.inject(
+    distribution = "Test-Pod-Coverage",
+    target = "@perl-test-pod-coverage//:Test-Pod-Coverage",
+)
+cpan.inject(
+    distribution = "Test-Simple",
+    target = "@perl-test-simple//:Test-Simple",
+)
+cpan.inject(
+    distribution = "Test-Spec",
+    target = "@perl-test-spec//:Test-Spec",
+)
+cpan.inject(
+    distribution = "Test-Tdd",
+    target = "@perl-test-tdd//:Test-Tdd",
+)
+cpan.inject(
+    distribution = "Test-Warnings",
+    target = "@perl-test-warnings//:Test-Warnings",
+)
+cpan.inject(
+    distribution = "Text-Aligner",
+    target = "@perl-text-aligner//:Text-Aligner",
+)
+cpan.inject(
+    distribution = "Text-ASCIITable",
+    target = "@perl-text-asciitable//:Text-ASCIITable",
+)
+cpan.inject(
+    distribution = "Text-Autoformat",
+    target = "@perl-text-autoformat//:Text-Autoformat",
+)
+cpan.inject(
+    distribution = "Text-Balanced",
+    target = "@perl-text-balanced//:Text-Balanced",
+)
+cpan.inject(
+    distribution = "Text-Brew",
+    target = "@perl-text-brew//:Text-Brew",
+)
+cpan.inject(
+    distribution = "Text-CSV",
+    target = "@perl-text-csv//:Text-CSV",
+)
+cpan.inject(
+    distribution = "Text-CSV-Flatten",
+    target = "@perl-text-csv-flatten//:Text-CSV-Flatten",
+)
+cpan.inject(
+    distribution = "Text-CSV-Slurp",
+    target = "@perl-text-csv-slurp//:Text-CSV-Slurp",
+)
+cpan.inject(
+    distribution = "Text-CSV_XS",
+    target = "@perl-text-csv-xs//:Text-CSV_XS",
+)
+cpan.inject(
+    distribution = "Text-Diff",
+    target = "@perl-text-diff//:Text-Diff",
+)
+cpan.inject(
+    distribution = "Text-Glob",
+    target = "@perl-text-glob//:Text-Glob",
+)
+cpan.inject(
+    distribution = "Text-Iconv",
+    target = "@perl-text-iconv//:Text-Iconv",
+)
+cpan.inject(
+    distribution = "Text-Levenshtein",
+    target = "@perl-text-levenshtein//:Text-Levenshtein",
+)
+cpan.inject(
+    distribution = "Text-Levenshtein-Damerau",
+    target = "@perl-text-levenshtein-damerau//:Text-Levenshtein-Damerau",
+)
+cpan.inject(
+    distribution = "Text-Levenshtein-Damerau-XS",
+    target = "@perl-text-levenshtein-damerau-xs//:Text-Levenshtein-Damerau-XS",
+)
+cpan.inject(
+    distribution = "Text-LevenshteinXS",
+    target = "@perl-text-levenshteinxs//:Text-LevenshteinXS",
+)
+cpan.inject(
+    distribution = "Text-Markdown",
+    target = "@perl-text-markdown//:Text-Markdown",
+)
+cpan.inject(
+    distribution = "Text-Markdown-Discount",
+    target = "@perl-text-markdown-discount//:Text-Markdown-Discount",
+)
+cpan.inject(
+    distribution = "Text-Ngrams",
+    target = "@perl-text-ngrams//:Text-Ngrams",
+)
+cpan.inject(
+    distribution = "Text-ParagraphDiff",
+    target = "@perl-text-paragraphdiff//:Text-ParagraphDiff",
+)
+cpan.inject(
+    distribution = "Text-Reform",
+    target = "@perl-text-reform//:Text-Reform",
+)
+cpan.inject(
+    distribution = "Text-SimpleTable-AutoWidth",
+    target = "@perl-text-simpletable-autowidth//:Text-SimpleTable-AutoWidth",
+)
+cpan.inject(
+    distribution = "Text-Table",
+    target = "@perl-text-table//:Text-Table",
+)
+cpan.inject(
+    distribution = "Text-TabularDisplay",
+    target = "@perl-text-tabulardisplay//:Text-TabularDisplay",
+)
+cpan.inject(
+    distribution = "Text-Trim",
+    target = "@perl-text-trim//:Text-Trim",
+)
+cpan.inject(
+    distribution = "Text-Unaccent-PurePerl",
+    target = "@perl-text-unaccent-pureperl//:Text-Unaccent-PurePerl",
+)
+cpan.inject(
+    distribution = "Text-Unidecode",
+    target = "@perl-text-unidecode//:Text-Unidecode",
+)
+cpan.inject(
+    distribution = "Text-WordDiff",
+    target = "@perl-text-worddiff//:Text-WordDiff",
+)
+cpan.inject(
+    distribution = "Thrift",
+    target = "@perl-thrift//:Thrift",
+)
+cpan.inject(
+    distribution = "Thrift-API-HiveClient2",
+    target = "@perl-thrift-api-hiveclient2//:Thrift-API-HiveClient2",
+)
+cpan.inject(
+    distribution = "Thrift-SASL-Transport",
+    target = "@perl-thrift-sasl-transport//:Thrift-SASL-Transport",
+)
+cpan.inject(
+    distribution = "Throwable",
+    target = "@perl-throwable//:Throwable",
+)
+cpan.inject(
+    distribution = "Tie-EncryptedHash",
+    target = "@perl-tie-encryptedhash//:Tie-EncryptedHash",
+)
+cpan.inject(
+    distribution = "Tie-IxHash",
+    target = "@perl-tie-ixhash//:Tie-IxHash",
+)
+cpan.inject(
+    distribution = "Tie-ToObject",
+    target = "@perl-tie-toobject//:Tie-ToObject",
+)
+cpan.inject(
+    distribution = "Time-Crontab",
+    target = "@perl-time-crontab//:Time-Crontab",
+)
+cpan.inject(
+    distribution = "Time-Duration",
+    target = "@perl-time-duration//:Time-Duration",
+)
+cpan.inject(
+    distribution = "Time-HiRes",
+    target = "@perl-time-hires//:Time-HiRes",
+)
+cpan.inject(
+    distribution = "Time-Moment",
+    target = "@perl-time-moment//:Time-Moment",
+)
+cpan.inject(
+    distribution = "Time-Out",
+    target = "@perl-time-out//:Time-Out",
+)
+cpan.inject(
+    distribution = "Time-ParseDate",
+    target = "@perl-time-parsedate//:Time-ParseDate",
+)
+cpan.inject(
+    distribution = "TimeDate",
+    target = "@perl-timedate//:TimeDate",
+)
+cpan.inject(
+    distribution = "Try-Tiny",
+    target = "@perl-try-tiny//:Try-Tiny",
+)
+cpan.inject(
+    distribution = "Type-Tiny",
+    target = "@perl-type-tiny//:Type-Tiny",
+)
+cpan.inject(
+    distribution = "Type-Tiny-XS",
+    target = "@perl-type-tiny-xs//:Type-Tiny-XS",
+)
+cpan.inject(
+    distribution = "Types-Path-Tiny",
+    target = "@perl-types-path-tiny//:Types-Path-Tiny",
+)
+cpan.inject(
+    distribution = "Unicode-Collate",
+    target = "@perl-unicode-collate//:Unicode-Collate",
+)
+cpan.inject(
+    distribution = "Unicode-Map8",
+    target = "@perl-unicode-map8//:Unicode-Map8",
+)
+cpan.inject(
+    distribution = "Unicode-MapUTF8",
+    target = "@perl-unicode-maputf8//:Unicode-MapUTF8",
+)
+cpan.inject(
+    distribution = "UNIVERSAL-can",
+    target = "@perl-universal-can//:UNIVERSAL-can",
+)
+cpan.inject(
+    distribution = "UNIVERSAL-dump",
+    target = "@perl-universal-dump//:UNIVERSAL-dump",
+)
+cpan.inject(
+    distribution = "UNIVERSAL-isa",
+    target = "@perl-universal-isa//:UNIVERSAL-isa",
+)
+cpan.inject(
+    distribution = "UNIVERSAL-moniker",
+    target = "@perl-universal-moniker//:UNIVERSAL-moniker",
+)
+cpan.inject(
+    distribution = "UNIVERSAL-Object",
+    target = "@perl-universal-object//:UNIVERSAL-Object",
+)
+cpan.inject(
+    distribution = "UNIVERSAL-require",
+    target = "@perl-universal-require//:UNIVERSAL-require",
+)
+cpan.inject(
+    distribution = "Unix-Sysexits",
+    target = "@perl-unix-sysexits//:Unix-Sysexits",
+)
+cpan.inject(
+    distribution = "URI",
+    target = "@perl-uri//:URI",
+)
+cpan.inject(
+    distribution = "URI-Encode",
+    target = "@perl-uri-encode//:URI-Encode",
+)
+cpan.inject(
+    distribution = "URI-Escape-XS",
+    target = "@perl-uri-escape-xs//:URI-Escape-XS",
+)
+cpan.inject(
+    distribution = "URI-Find",
+    target = "@perl-uri-find//:URI-Find",
+)
+cpan.inject(
+    distribution = "URI-Query",
+    target = "@perl-uri-query//:URI-Query",
+)
+cpan.inject(
+    distribution = "User",
+    target = "@perl-user//:User",
+)
+cpan.inject(
+    distribution = "User-Identity",
+    target = "@perl-user-identity//:User-Identity",
+)
+cpan.inject(
+    distribution = "UUID-Tiny",
+    target = "@perl-uuid-tiny//:UUID-Tiny",
+)
+cpan.inject(
+    distribution = "UV",
+    target = "@perl-uv//:UV",
+)
+cpan.inject(
+    distribution = "Variable-Magic",
+    target = "@perl-variable-magic//:Variable-Magic",
+)
+cpan.inject(
+    distribution = "warnings-unused",
+    target = "@perl-warnings-unused//:warnings-unused",
+)
+cpan.inject(
+    distribution = "Web-Scraper",
+    target = "@perl-web-scraper//:Web-Scraper",
+)
+cpan.inject(
+    distribution = "WWW-Form-UrlEncoded",
+    target = "@perl-www-form-urlencoded//:WWW-Form-UrlEncoded",
+)
+cpan.inject(
+    distribution = "WWW-Form-UrlEncoded-XS",
+    target = "@perl-www-form-urlencoded-xs//:WWW-Form-UrlEncoded-XS",
+)
+cpan.inject(
+    distribution = "WWW-Mechanize",
+    target = "@perl-www-mechanize//:WWW-Mechanize",
+)
+cpan.inject(
+    distribution = "XML-Compile",
+    target = "@perl-xml-compile//:XML-Compile",
+)
+cpan.inject(
+    distribution = "XML-Compile-SOAP",
+    target = "@perl-xml-compile-soap//:XML-Compile-SOAP",
+)
+cpan.inject(
+    distribution = "XML-Generator",
+    target = "@perl-xml-generator//:XML-Generator",
+)
+cpan.inject(
+    distribution = "XML-Hash-XS",
+    target = "@perl-xml-hash-xs//:XML-Hash-XS",
+)
+cpan.inject(
+    distribution = "XML-LibXML",
+    target = "@perl-xml-libxml//:XML-LibXML",
+)
+cpan.inject(
+    distribution = "XML-LibXML-Simple",
+    target = "@perl-xml-libxml-simple//:XML-LibXML-Simple",
+)
+cpan.inject(
+    distribution = "XML-NamespaceSupport",
+    target = "@perl-xml-namespacesupport//:XML-NamespaceSupport",
+)
+cpan.inject(
+    distribution = "XML-Parser",
+    target = "@perl-xml-parser//:XML-Parser",
+)
+cpan.inject(
+    distribution = "XML-SAX",
+    target = "@perl-xml-sax//:XML-SAX",
+)
+cpan.inject(
+    distribution = "XML-SAX-Base",
+    target = "@perl-xml-sax-base//:XML-SAX-Base",
+)
+cpan.inject(
+    distribution = "XML-Simple",
+    target = "@perl-xml-simple//:XML-Simple",
+)
+cpan.inject(
+    distribution = "XML-TreeBuilder",
+    target = "@perl-xml-treebuilder//:XML-TreeBuilder",
+)
+cpan.inject(
+    distribution = "XML-Twig",
+    target = "@perl-xml-twig//:XML-Twig",
+)
+cpan.inject(
+    distribution = "XML-Writer",
+    target = "@perl-xml-writer//:XML-Writer",
+)
+cpan.inject(
+    distribution = "XML-XPath",
+    target = "@perl-xml-xpath//:XML-XPath",
+)
+cpan.inject(
+    distribution = "YAML",
+    target = "@perl-yaml//:YAML",
+)
+cpan.inject(
+    distribution = "YAML-LibYAML",
+    target = "@perl-yaml-libyaml//:YAML-LibYAML",
+)
+cpan.inject(
+    distribution = "YAML-PP",
+    target = "@perl-yaml-pp//:YAML-PP",
+)
+cpan.inject(
+    distribution = "YAML-PP-LibYAML",
+    target = "@perl-yaml-pp-libyaml//:YAML-PP-LibYAML",
+)
+cpan.inject(
+    distribution = "YAML-Syck",
+    target = "@perl-yaml-syck//:YAML-Syck",
+)
+cpan.inject(
+    distribution = "YAML-Tiny",
+    target = "@perl-yaml-tiny//:YAML-Tiny",
 )
 use_repo(cpan, "cpan")
-
-cpan.annotation(
-    distribution = "Math-Prime-Util-GMP",
-    hub = "cpan",
-    native_deps = ["@gmp//:gmp"],
-)
-cpan.annotation(
-    distribution = "Crypt-NaCl-Sodium",
-    hub = "cpan",
-    native_deps = ["@libsodium//:libsodium"],
-)
-cpan.annotation(
-    distribution = "Crypt-Sodium-Nitrate",
-    hub = "cpan",
-    native_deps = ["@libsodium//:libsodium"],
-)
-cpan.annotation(
-    distribution = "Curses",
-    hub = "cpan",
-    native_deps = ["@ncurses//:ncurses"],
-    patch_args = ["-p1"],
-    patch_cmds = [
-        "rm -f cdemo.c testint.c testsym.c testtyp.c",
-        "for f in CursesWide CursesFun CursesFunWide CursesVar CursesCon CursesBoot; do if [ -f $f.c ]; then mv $f.c $f.inc; sed -i \"s/$f.c/$f.inc/\" Curses.c; fi; done",
-    ],
-    patches = ["@rules_cpan//bazel/patches:Curses-bcr.patch"],
-)
-cpan.annotation(
-    distribution = "Authen-PAM",
-    hub = "cpan",
-    native_deps = ["@linux-pam//:linux-pam"],
-    patch_args = ["-p1"],
-    patch_cmds = [
-        "rm -rf d",
-        "mkdir -p lib/Authen",
-        "sed -e 's/@PACKAGE_VERSION@/0.16/g' -e 's/@DL_LOAD_FLAGS@/sub dl_load_flags { 0x01 }/' PAM.pm.in > lib/Authen/PAM.pm",
-    ],
-    patches = ["@rules_cpan//bazel/patches:Authen-PAM-bcr.patch"],
-    target_compatible_with = ["@platforms//os:linux"],
-)
-cpan.annotation(
-    distribution = "Authen-Simple-PAM",
-    hub = "cpan",
-    target_compatible_with = ["@platforms//os:linux"],
-)
-cpan.annotation(
-    defines = ["HAVE_UTF8"],
-    distribution = "XML-LibXML",
-    hub = "cpan",
-    native_deps = ["@libxml2//:xml2"],
-    patch_cmds = [
-        "mkdir -p lib/XML && cp LibXML.pm lib/XML/LibXML.pm && cp LibXML.pod lib/XML/LibXML.pod",
-    ],
-)
-cpan.annotation(
-    distribution = "Crypt-OpenSSL-AES",
-    hub = "cpan",
-    native_deps = [
-        "@openssl//:crypto",
-        "@openssl//:ssl",
-    ],
-)
-cpan.annotation(
-    distribution = "Crypt-OpenSSL-Bignum",
-    hub = "cpan",
-    native_deps = [
-        "@openssl//:crypto",
-        "@openssl//:ssl",
-    ],
-    patch_cmds = [
-        "mkdir -p lib/Crypt/OpenSSL && cp Bignum.pm lib/Crypt/OpenSSL/Bignum.pm",
-    ],
-)
-cpan.annotation(
-    distribution = "Crypt-OpenSSL-RSA",
-    hub = "cpan",
-    native_deps = [
-        "@openssl//:crypto",
-        "@openssl//:ssl",
-    ],
-    patch_cmds = [
-        "mkdir -p lib/Crypt/OpenSSL && cp RSA.pm lib/Crypt/OpenSSL/RSA.pm",
-    ],
-)
-cpan.annotation(
-    distribution = "Crypt-OpenSSL-Random",
-    hub = "cpan",
-    native_deps = [
-        "@openssl//:crypto",
-        "@openssl//:ssl",
-    ],
-    patch_cmds = [
-        "mkdir -p lib/Crypt/OpenSSL && cp Random.pm lib/Crypt/OpenSSL/Random.pm",
-    ],
-)
-cpan.annotation(
-    distribution = "Crypt-OpenSSL-X509",
-    hub = "cpan",
-    native_deps = [
-        "@openssl//:crypto",
-        "@openssl//:ssl",
-    ],
-    patch_cmds = [
-        "mkdir -p lib/Crypt/OpenSSL && cp X509.pm lib/Crypt/OpenSSL/X509.pm",
-    ],
-)
-cpan.annotation(
-    defines = [
-        "HAVE_GETTIMEOFDAY",
-        "HAVE_SYS_TIME_H",
-        "HAVE_TIME",
-        "HAVE_TIME_H",
-        "OPENSSL_LOAD_CONF",
-    ],
-    distribution = "Crypt-SMIME",
-    hub = "cpan",
-    manual_tests = [
-        "t/manifest.t",
-    ],
-    native_deps = [
-        "@openssl//:crypto",
-        "@openssl//:ssl",
-    ],
-    patch_cmds = [
-        "perl -MExtUtils::Constant=WriteConstants -e 'WriteConstants(NAME => \"Crypt::SMIME\", NAMES => [{name => \"NO_CHECK_CERTIFICATE\", macro => \"CMS_NO_SIGNER_CERT_VERIFY\", value => \"CMS_NO_SIGNER_CERT_VERIFY\"}, {name => \"FORMAT_ASN1\", macro => 1, value => \"CRYPT_SMIME_FORMAT_ASN1\"}, {name => \"FORMAT_PEM\", macro => 1, value => \"CRYPT_SMIME_FORMAT_PEM\"}, {name => \"FORMAT_SMIME\", macro => 1, value => \"CRYPT_SMIME_FORMAT_SMIME\"}, {name => \"CRL_CHECK\", macro => \"X509_V_FLAG_CRL_CHECK\", value => \"X509_V_FLAG_CRL_CHECK\"}, {name => \"CRL_CHECK_ALL\", macro => \"X509_V_FLAG_CRL_CHECK_ALL\", value => \"X509_V_FLAG_CRL_CHECK | X509_V_FLAG_CRL_CHECK_ALL\"}], PROXYSUBS => {autoload => 1});'",
-        "mkdir -p lib/Crypt && cat SMIME.pl > lib/Crypt/SMIME.pm",
-    ],
-)
-cpan.annotation(
-    distribution = "Net-SSLeay",
-    hub = "cpan",
-    native_deps = [
-        "@openssl//:crypto",
-        "@openssl//:ssl",
-    ],
-    patch_cmds = [
-        "mv constants.c constants.inc",
-        "sed -i 's/\"constants.c\"/\"constants.inc\"/' SSLeay.xs",
-        "perl -MAutoSplit -e 'autosplit(\"lib/Net/SSLeay.pm\", \"lib/auto\", 0, 1, 1)'",
-    ],
-)
-cpan.annotation(
-    distribution = "CommonMark",
-    hub = "cpan",
-    native_deps = ["@cmark//:cmark"],
-)
-cpan.annotation(
-    distribution = "CSS-Sass",
-    hub = "cpan",
-    manual_tests = [
-        "t/10_sass_value_op.t",
-        "t/99_sass_specs.t",
-    ],
-    native_deps = ["@libsass//:sass"],
-    patch_cmds = [
-        "rm -rf libsass plugins",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Remove-Item -Recurse -Force libsass,plugins\"",
-    ],
-)
-cpan.annotation(
-    distribution = "Text-Iconv",
-    hub = "cpan",
-    native_deps = ["@libiconv//:iconv"],
-    patch_cmds = [
-        "mkdir -p lib/Text && cp Iconv.pm lib/Text/Iconv.pm",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"New-Item -ItemType Directory -Force lib/Text; Copy-Item Iconv.pm lib/Text/Iconv.pm\"",
-    ],
-)
-cpan.annotation(
-    distribution = "Text-Markdown-Discount",
-    hub = "cpan",
-    native_deps = ["@discount//:markdown"],
-    patch_cmds = [
-        "rm -rf discount-*",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Remove-Item -Recurse -Force discount-*\"",
-    ],
-)
-cpan.annotation(
-    distribution = "Authen-Krb5",
-    hub = "cpan",
-    native_deps = [
-        "@krb5//:krb5",
-        "@krb5//:k5crypto",
-        "@krb5//:com_err",
-    ],
-    patch_cmds = [
-        "mv lib/Authen/krb5_constants.c lib/Authen/krb5_constants.inc",
-        "sed -i 's/\"krb5_constants.c\"/\"krb5_constants.inc\"/' lib/Authen/Krb5.xs",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"Move-Item lib/Authen/krb5_constants.c lib/Authen/krb5_constants.inc; (Get-Content lib/Authen/Krb5.xs) -replace 'krb5_constants.c', 'krb5_constants.inc' | Set-Content lib/Authen/Krb5.xs\"",
-    ],
-)
-cpan.annotation(
-    defines = ["HAVE_KDB_H"],
-    distribution = "Authen-Krb5-Admin",
-    hub = "cpan",
-    manual_tests = [
-        "t/03-principal.t",
-        "t/04-key.t",
-        "t/10-getprivs.t",
-        "t/20-addpol.t",
-        "t/21-getpol.t",
-        "t/22-getpols.t",
-        "t/23-modpol.t",
-        "t/31-getprinc.t",
-        "t/32-getprincs.t",
-        "t/34-cpw.t",
-        "t/35-randkey.t",
-        "t/36-rename.t",
-        "t/91-delprinc.t",
-        "t/92-delpol.t",
-    ],
-    native_deps = [
-        "@krb5//:kadm5clnt",
-        "@krb5//:krb5",
-        "@krb5//:com_err",
-        "@krb5//:k5crypto",
-    ],
-    patch_cmds = [
-        "mkdir -p lib/Authen/Krb5 && cp Admin.pm lib/Authen/Krb5/Admin.pm",
-    ],
-    patch_cmds_win = [
-        "powershell -Command \"New-Item -ItemType Directory -Force lib/Authen/Krb5; Copy-Item Admin.pm lib/Authen/Krb5/Admin.pm\"",
-    ],
-)
 
 # CPAN dependencies indexed by rules_cpan indexer
 bazel_dep(name = "perl-ack", version = "2.28.cpan2")
@@ -1178,11 +3513,12 @@ bazel_dep(name = "perl-archive-tar", version = "3.14.cpan1")
 bazel_dep(name = "perl-archive-zip", version = "1.68.cpan1")
 bazel_dep(name = "perl-array-diff", version = "0.09.cpan1")
 bazel_dep(name = "perl-array-refelem", version = "1.00.cpan1")
-bazel_dep(name = "perl-authen-krb5-admin", version = "0.17.cpan2")
-bazel_dep(name = "perl-authen-pam", version = "0.16.cpan2")
+bazel_dep(name = "perl-authen-krb5", version = "1.906.cpan2")
+bazel_dep(name = "perl-authen-krb5-admin", version = "0.17.cpan3")
+bazel_dep(name = "perl-authen-pam", version = "0.16.cpan3")
 bazel_dep(name = "perl-authen-sasl", version = "2.2100.cpan1")
 bazel_dep(name = "perl-authen-sasl-xs", version = "1.02.cpan2")
-bazel_dep(name = "perl-authen-simple-pam", version = "0.2.cpan2")
+bazel_dep(name = "perl-authen-simple-pam", version = "0.2.cpan4")
 bazel_dep(name = "perl-authorize-rule", version = "0.009.cpan1")
 bazel_dep(name = "perl-autodie", version = "2.37.cpan1")
 bazel_dep(name = "perl-autoloader", version = "5.74.cpan2")
@@ -1237,11 +3573,11 @@ bazel_dep(name = "perl-codegen-protection", version = "0.06.cpan1")
 bazel_dep(name = "perl-common-cli", version = "0.04.cpan1")
 bazel_dep(name = "perl-common-sense", version = "3.75.cpan2")
 bazel_dep(name = "perl-commonmark", version = "0.310100.cpan2")
-bazel_dep(name = "perl-compress-bzip2", version = "2.28.cpan1")
+bazel_dep(name = "perl-compress-bzip2", version = "2.28.cpan3")
 bazel_dep(name = "perl-compress-lz4", version = "0.25.cpan2")
-bazel_dep(name = "perl-compress-raw-bzip2", version = "2.225.cpan2")
-bazel_dep(name = "perl-compress-snappy", version = "0.25.cpan2")
-bazel_dep(name = "perl-compress-zstd", version = "0.20.cpan1")
+bazel_dep(name = "perl-compress-raw-bzip2", version = "2.225.cpan3")
+bazel_dep(name = "perl-compress-snappy", version = "0.25.cpan3")
+bazel_dep(name = "perl-compress-zstd", version = "0.20.cpan4")
 bazel_dep(name = "perl-config-any", version = "0.33.cpan1")
 bazel_dep(name = "perl-config-general", version = "2.69.cpan2")
 bazel_dep(name = "perl-config-inifiles", version = "3.003000.cpan1")
@@ -1262,13 +3598,13 @@ bazel_dep(name = "perl-crypt-cbc", version = "3.07.cpan1")
 bazel_dep(name = "perl-crypt-des", version = "2.09.cpan1")
 bazel_dep(name = "perl-crypt-eksblowfish", version = "0.009.cpan1")
 bazel_dep(name = "perl-crypt-jwt", version = "0.038.cpan2")
-bazel_dep(name = "perl-crypt-nacl-sodium", version = "2.004.cpan2")
+bazel_dep(name = "perl-crypt-nacl-sodium", version = "2.004.cpan5")
 bazel_dep(name = "perl-crypt-openpgp", version = "1.21.cpan2")
 bazel_dep(name = "perl-crypt-openssl-aes", version = "0.23.cpan2")
 bazel_dep(name = "perl-crypt-openssl-bignum", version = "0.09.cpan2")
 bazel_dep(name = "perl-crypt-openssl-random", version = "0.17.cpan2")
-bazel_dep(name = "perl-crypt-openssl-rsa", version = "0.41.cpan2")
-bazel_dep(name = "perl-crypt-openssl-x509", version = "2.1.5.cpan2")
+bazel_dep(name = "perl-crypt-openssl-rsa", version = "0.41.cpan3")
+bazel_dep(name = "perl-crypt-openssl-x509", version = "2.1.5.cpan3")
 bazel_dep(name = "perl-crypt-pkcs10", version = "2.005.cpan2")
 bazel_dep(name = "perl-crypt-primes", version = "0.52.cpan2")
 bazel_dep(name = "perl-crypt-random", version = "1.57.cpan2")
@@ -1276,7 +3612,7 @@ bazel_dep(name = "perl-crypt-rijndael", version = "1.16.cpan2")
 bazel_dep(name = "perl-crypt-rsa", version = "1.97.cpan2")
 bazel_dep(name = "perl-crypt-scryptkdf", version = "0.011.cpan2")
 bazel_dep(name = "perl-crypt-skip32-xs", version = "0.06.cpan1")
-bazel_dep(name = "perl-crypt-smime", version = "0.34.cpan1")
+bazel_dep(name = "perl-crypt-smime", version = "0.34.cpan2")
 bazel_dep(name = "perl-crypt-sodium-nitrate", version = "0.03.cpan2")
 bazel_dep(name = "perl-crypt-urandom", version = "0.55.cpan2")
 bazel_dep(name = "perl-crypt-x509", version = "0.55.cpan1")
@@ -1285,7 +3621,7 @@ bazel_dep(name = "perl-css-compressor", version = "0.05.cpan1")
 bazel_dep(name = "perl-css-minifier-xs", version = "0.15.cpan1")
 bazel_dep(name = "perl-css-packer", version = "2.09.cpan1")
 bazel_dep(name = "perl-css-sass", version = "3.6.4.cpan2")
-bazel_dep(name = "perl-curses", version = "1.46.cpan2")
+bazel_dep(name = "perl-curses", version = "1.46.cpan4")
 bazel_dep(name = "perl-daemon-control", version = "0.001010.cpan2")
 bazel_dep(name = "perl-dancer", version = "1.3522.cpan2")
 bazel_dep(name = "perl-dancer2", version = "2.3.0.cpan2")
@@ -1307,7 +3643,7 @@ bazel_dep(name = "perl-data-hanconvert", version = "1.5.cpan1")
 bazel_dep(name = "perl-data-ical", version = "0.24.cpan2")
 bazel_dep(name = "perl-data-messagepack", version = "1.02.cpan2")
 bazel_dep(name = "perl-data-messagepack-stream", version = "1.06.cpan2")
-bazel_dep(name = "perl-data-optlist", version = "0.115.cpan1")
+bazel_dep(name = "perl-data-optlist", version = "0.115.cpan3")
 bazel_dep(name = "perl-data-pageset", version = "1.06.cpan1")
 bazel_dep(name = "perl-data-perl", version = "0.002011.cpan2")
 bazel_dep(name = "perl-data-printer", version = "1.002001.cpan2")
@@ -1596,7 +3932,7 @@ bazel_dep(name = "perl-math-convexhull-monotonechain", version = "0.01.cpan1")
 bazel_dep(name = "perl-math-fft", version = "1.36.cpan1")
 bazel_dep(name = "perl-math-gsl", version = "0.49.cpan2")
 bazel_dep(name = "perl-math-pari", version = "2.030528.cpan2")
-bazel_dep(name = "perl-math-prime-util-gmp", version = "0.54.cpan2")
+bazel_dep(name = "perl-math-prime-util-gmp", version = "0.54.cpan3")
 bazel_dep(name = "perl-math-random", version = "0.75.cpan2")
 bazel_dep(name = "perl-math-random-mt", version = "1.17.cpan2")
 bazel_dep(name = "perl-math-random-mt-auto", version = "6.23.cpan1")
@@ -1619,9 +3955,11 @@ bazel_dep(name = "perl-module-build", version = "0.4234.cpan2")
 bazel_dep(name = "perl-module-build-withxspp", version = "0.14.cpan2")
 bazel_dep(name = "perl-module-corelist", version = "5.20261119.cpan1")
 bazel_dep(name = "perl-module-find", version = "0.17.cpan2")
+bazel_dep(name = "perl-module-implementation", version = "0.09.cpan2")
 bazel_dep(name = "perl-module-install", version = "1.21.cpan1")
 bazel_dep(name = "perl-module-pluggable", version = "6.4.cpan2")
 bazel_dep(name = "perl-module-reader", version = "0.003003.cpan2")
+bazel_dep(name = "perl-module-runtime", version = "0.018.cpan1")
 bazel_dep(name = "perl-module-util", version = "1.09.cpan2")
 bazel_dep(name = "perl-mojolicious", version = "9.54.cpan2")
 bazel_dep(name = "perl-moo", version = "2.005005.cpan2")
@@ -1684,7 +4022,7 @@ bazel_dep(name = "perl-net-sms-worldtext", version = "1.3.cpan2")
 bazel_dep(name = "perl-net-snmp", version = "5.2.0.cpan1")
 bazel_dep(name = "perl-net-ssh-perl", version = "2.144.cpan2")
 bazel_dep(name = "perl-net-ssh2", version = "0.74.cpan2")
-bazel_dep(name = "perl-net-ssleay", version = "1.96.cpan1")
+bazel_dep(name = "perl-net-ssleay", version = "1.96.cpan3")
 bazel_dep(name = "perl-net-subnet", version = "1.03.cpan2")
 bazel_dep(name = "perl-net-zookeeper", version = "0.41.cpan2")
 bazel_dep(name = "perl-net-zookeeper-lock", version = "0.03.cpan2")
@@ -1702,7 +4040,7 @@ bazel_dep(name = "perl-package-constants", version = "0.06.cpan1")
 bazel_dep(name = "perl-parallel-forkmanager", version = "2.04.cpan2")
 bazel_dep(name = "perl-parallel-iterator", version = "1.002.cpan1")
 bazel_dep(name = "perl-params-util", version = "1.102.cpan1")
-bazel_dep(name = "perl-params-validate", version = "1.31.cpan1")
+bazel_dep(name = "perl-params-validate", version = "1.31.cpan2")
 bazel_dep(name = "perl-parent", version = "0.244.cpan1")
 bazel_dep(name = "perl-parse-csv", version = "2.07.cpan2")
 bazel_dep(name = "perl-parse-mime", version = "1.006.cpan1")
@@ -1973,11 +4311,11 @@ bazel_dep(name = "perl-xml-compile", version = "1.64.cpan1")
 bazel_dep(name = "perl-xml-compile-soap", version = "3.28.cpan1")
 bazel_dep(name = "perl-xml-generator", version = "1.13.cpan1")
 bazel_dep(name = "perl-xml-hash-xs", version = "0.66.cpan1")
-bazel_dep(name = "perl-xml-libxml", version = "2.0213.cpan2")
-bazel_dep(name = "perl-xml-libxml-simple", version = "1.01.cpan1")
+bazel_dep(name = "perl-xml-libxml", version = "2.0213.cpan3")
+bazel_dep(name = "perl-xml-libxml-simple", version = "1.01.cpan2")
 bazel_dep(name = "perl-xml-namespacesupport", version = "1.12.cpan1")
-bazel_dep(name = "perl-xml-parser", version = "2.59.cpan2")
-bazel_dep(name = "perl-xml-sax", version = "1.02.cpan1")
+bazel_dep(name = "perl-xml-parser", version = "2.59.cpan5")
+bazel_dep(name = "perl-xml-sax", version = "1.02.cpan2")
 bazel_dep(name = "perl-xml-sax-base", version = "1.09.cpan1")
 bazel_dep(name = "perl-xml-simple", version = "2.25.cpan1")
 bazel_dep(name = "perl-xml-treebuilder", version = "5.4.cpan1")
@@ -1985,8 +4323,15 @@ bazel_dep(name = "perl-xml-twig", version = "3.55.cpan1")
 bazel_dep(name = "perl-xml-writer", version = "0.900.cpan1")
 bazel_dep(name = "perl-xml-xpath", version = "1.49.cpan1")
 bazel_dep(name = "perl-yaml", version = "1.321.cpan1")
-bazel_dep(name = "perl-yaml-libyaml", version = "0.910.0.cpan2")
+bazel_dep(name = "perl-yaml-libyaml", version = "0.910.0.cpan3")
 bazel_dep(name = "perl-yaml-pp", version = "0.43.0.cpan2")
 bazel_dep(name = "perl-yaml-pp-libyaml", version = "0.005.cpan1")
 bazel_dep(name = "perl-yaml-syck", version = "1.47.cpan2")
 bazel_dep(name = "perl-yaml-tiny", version = "1.76.cpan1")
+bazel_dep(name = "perl-file-sharedir", version = "1.118.cpan3")
+bazel_dep(name = "perl-class-inspector", version = "1.36.cpan1")
+bazel_dep(name = "perl-sub-exporter", version = "0.992.cpan3")
+bazel_dep(name = "perl-sub-install", version = "0.929.cpan1")
+bazel_dep(name = "perl-params-someutil", version = "1.12.cpan1")
+bazel_dep(name = "perl-authen-simple", version = "0.5.cpan3")
+bazel_dep(name = "perl-crypt-passwdmd5", version = "1.46.cpan2")

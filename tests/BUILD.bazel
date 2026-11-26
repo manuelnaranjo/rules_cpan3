@@ -161,3 +161,11 @@ py_test(
         "cpan.lock.json",
     ],
 )
+
+test_suite(
+    name = "cpan_hub_all_tests",
+    tags = ["-manual"],
+    tests = [
+        "@cpan//:all_tests",
+    ],
+)

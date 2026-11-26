@@ -20,6 +20,17 @@ def sanitize_repo_name(name: str) -> str:
     return res
 
 
+def dist_to_bcr_module(dist_name: str) -> str:
+    res = ""
+    for c in dist_name.lower():
+        if ("a" <= c <= "z") or ("0" <= c <= "9") or c in [".", "-"]:
+            res += c
+        else:
+            res += "-"
+    res = res.strip("-")
+    return f"perl-{res}"
+
+
 def get_strip_prefix(url: str) -> str:
     filename = url.split("/")[-1]
     for ext in [
@@ -134,6 +145,16 @@ class BzlmodExtensionTests(unittest.TestCase):
         )
         self.assertEqual(sanitize_repo_name("Foo::Bar@1"), "Foo__Bar_1")
 
+    def test_dist_to_bcr_module(self):
+        self.assertEqual(dist_to_bcr_module("Algorithm-Diff"), "perl-algorithm-diff")
+        self.assertEqual(
+            dist_to_bcr_module("Compress-Raw-Zlib"), "perl-compress-raw-zlib"
+        )
+        self.assertEqual(dist_to_bcr_module("IO-Tty"), "perl-io-tty")
+        self.assertEqual(dist_to_bcr_module("Text-Tabs+Wrap"), "perl-text-tabs-wrap")
+        self.assertEqual(dist_to_bcr_module("YAML-LibYAML"), "perl-yaml-libyaml")
+        self.assertEqual(dist_to_bcr_module("Cpanel-JSON-XS"), "perl-cpanel-json-xs")
+
     def test_get_strip_prefix(self):
         self.assertEqual(
             get_strip_prefix(
@@ -226,20 +247,24 @@ class BzlmodExtensionTests(unittest.TestCase):
         injected = {
             "Compress-Raw-Zlib": "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
         }
-        all_dists = {"Algorithm-Diff": "cpan__Algorithm-Diff"}
+        all_dists = {"Algorithm-Diff": dist_to_bcr_module("Algorithm-Diff")}
         # Combined keys
         combined = dict(all_dists)
         for dist in injected:
             if dist not in combined:
-                combined[dist] = ""
+                combined[dist] = dist_to_bcr_module(dist)
         self.assertIn("Compress-Raw-Zlib", combined)
         self.assertIn("Algorithm-Diff", combined)
 
-        # Resolution for alias
-        actual_injected = injected.get("Compress-Raw-Zlib", "@cpan__Compress-Raw-Zlib//:Compress-Raw-Zlib")
-        actual_normal = injected.get("Algorithm-Diff", "@cpan__Algorithm-Diff//:Algorithm-Diff")
+        # Resolution for alias directly pointing to BCR module target
+        bcr_mod = all_dists["Algorithm-Diff"]
+        actual_injected = injected.get(
+            "Compress-Raw-Zlib",
+            f"@{dist_to_bcr_module('Compress-Raw-Zlib')}//:{dist_to_bcr_module('Compress-Raw-Zlib')}",
+        )
+        actual_normal = injected.get("Algorithm-Diff", f"@{bcr_mod}//:{bcr_mod}")
         self.assertEqual(actual_injected, "@perl-compress-raw-zlib//:Compress-Raw-Zlib")
-        self.assertEqual(actual_normal, "@cpan__Algorithm-Diff//:Algorithm-Diff")
+        self.assertEqual(actual_normal, "@perl-algorithm-diff//:perl-algorithm-diff")
 
     def test_get_primary_module(self):
         self.assertEqual(
@@ -260,23 +285,26 @@ class BzlmodExtensionTests(unittest.TestCase):
         )
 
     def test_hub_repo_test_suite_generation(self):
-        direct_deps = ["Algorithm-Diff", "Compress-Raw-Zlib"]
-        manual_tests = ["Compress-Raw-Zlib"]
-        test_tags = {"Algorithm-Diff": ["fast"]}
+        injected = {
+            "Algorithm-Diff": "@perl-algorithm-diff//:Algorithm-Diff",
+            "Compress-Raw-Zlib": "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
+        }
 
         declared_tests = []
-        tags_by_test = {}
-        for dist in direct_deps:
-            target = f":{dist}_test"
-            cur_tags = list(test_tags.get(dist, []))
-            if dist in manual_tests and "manual" not in cur_tags:
-                cur_tags.append("manual")
-            declared_tests.append(target)
-            tags_by_test[dist] = cur_tags
+        upstream_tests = {}
+        for dist, actual in sorted(injected.items()):
+            target_name = f":{dist}_test"
+            if "//" in actual:
+                repo = actual.split("//")[0]
+                upstream = f"{repo}//:test"
+            else:
+                upstream = f"{actual}_test"
+            declared_tests.append(target_name)
+            upstream_tests[target_name] = upstream
 
         self.assertEqual(declared_tests, [":Algorithm-Diff_test", ":Compress-Raw-Zlib_test"])
-        self.assertEqual(tags_by_test["Algorithm-Diff"], ["fast"])
-        self.assertEqual(tags_by_test["Compress-Raw-Zlib"], ["manual"])
+        self.assertEqual(upstream_tests[":Algorithm-Diff_test"], "@perl-algorithm-diff//:test")
+        self.assertEqual(upstream_tests[":Compress-Raw-Zlib_test"], "@perl-compress-raw-zlib//:test")
 
 
 if __name__ == "__main__":

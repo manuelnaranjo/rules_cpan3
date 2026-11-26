@@ -4,6 +4,7 @@ package(default_visibility = ["//visibility:public"])
 
 test_suite(
     name = "pakket_tests",
+    tags = ["-manual"],
     tests = [
         ":e2e_pakket_integration_test",
         "@cpan//:test-rules-cpan-modules",
