@@ -26,7 +26,22 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-any-uri-escape",
+        "@perl-devel-globaldestruction",
+        "@perl-http-message",
+        "@perl-json-maybexs",
+        "@perl-libwww-perl",
+        "@perl-log-any",
+        "@perl-module-runtime",
+        "@perl-moo",
+        "@perl-namespace-clean",
+        "@perl-net-ip",
+        "@perl-package-stash",
+        "@perl-sub-exporter",
+        "@perl-try-tiny",
+        "@perl-uri",
+    ],
 )
 
 alias(

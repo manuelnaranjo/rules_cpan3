@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-hash-multivalue",
+        "@perl-http-multipartparser",
+        "@perl-json-maybexs",
+        "@perl-stream-buffered",
+        "@perl-www-form-urlencoded",
+    ],
 )
 
 alias(

@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-jcode",
+        "@perl-unicode-map",
+        "@perl-unicode-map8",
+        "@perl-unicode-string",
+    ],
 )
 
 alias(

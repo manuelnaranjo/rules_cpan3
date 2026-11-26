@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-xml-namespacesupport",
+        "@perl-xml-parser",
+        "@perl-xml-sax",
+        "@perl-xml-sax-base",
+    ],
 )
 
 alias(

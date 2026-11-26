@@ -16,11 +16,16 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/PerlIO/utf8_strict/utf8_strict",
     textual_hdrs = glob(
         [

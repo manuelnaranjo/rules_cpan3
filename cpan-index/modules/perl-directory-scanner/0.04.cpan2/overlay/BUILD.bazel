@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-path-tiny",
+        "@perl-roles",
+        "@perl-slots",
+        "@perl-universal-object",
+    ],
 )
 
 alias(

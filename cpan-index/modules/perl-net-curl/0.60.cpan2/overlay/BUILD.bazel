@@ -32,7 +32,9 @@ cpan_xs(
         "_FILE_OFFSET_BITS=64",
     ],
     output_loc = "auto/Net/Curl/Curl",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "Curl_Easy_setopt.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

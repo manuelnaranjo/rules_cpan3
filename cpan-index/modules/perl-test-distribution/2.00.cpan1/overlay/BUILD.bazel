@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-find-rule",
+        "@perl-pod-coverage",
+        "@perl-test-pod",
+        "@perl-test-pod-coverage",
+    ],
 )
 
 alias(

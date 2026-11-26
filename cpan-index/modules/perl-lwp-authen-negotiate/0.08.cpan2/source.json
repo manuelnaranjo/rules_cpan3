@@ -3,6 +3,6 @@
     "integrity": "sha256-UJSOGcUyt4ZOiqr8aHRBXKB1s+oUvHPbWCNcR12sSrs=",
     "strip_prefix": "LWP-Authen-Negotiate-0.08",
     "overlay": {
-        "BUILD.bazel": "sha256-XfACng/ZkVM33zq44U0T3mcnNEoJOcpQ6TpHHFDiH/s="
+        "BUILD.bazel": "sha256-BMPXbog9ANNVuteEHhwDLX94abo7TTRJPXXllMy6p+o="
     }
 }

@@ -26,7 +26,23 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-b-keywords",
+        "@perl-config-tiny",
+        "@perl-exception-class",
+        "@perl-file-which",
+        "@perl-list-someutils",
+        "@perl-module-pluggable",
+        "@perl-perl-tidy",
+        "@perl-pod-parser",
+        "@perl-pod-spell",
+        "@perl-ppi",
+        "@perl-ppix-quotelike",
+        "@perl-ppix-regexp",
+        "@perl-ppix-utils",
+        "@perl-readonly",
+        "@perl-string-format",
+    ],
 )
 
 alias(

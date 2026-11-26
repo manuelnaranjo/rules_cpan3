@@ -26,7 +26,23 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-clone",
+        "@perl-constant-fromglobal",
+        "@perl-hash-path",
+        "@perl-html-parser",
+        "@perl-http-message",
+        "@perl-json-xs",
+        "@perl-libwww-perl",
+        "@perl-lwp-authen-negotiate",
+        "@perl-moo",
+        "@perl-ref-util",
+        "@perl-regexp-common",
+        "@perl-text-trim",
+        "@perl-time-duration",
+        "@perl-uri",
+        "@perl-xml-libxml-simple",
+    ],
 )
 
 alias(

@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-mce",
+        "@perl-perl-critic",
+    ],
 )
 
 alias(

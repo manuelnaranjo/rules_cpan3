@@ -3,6 +3,6 @@
     "integrity": "sha256-pbzSOP6V7BWP63+YeWhGCsIw0vhi9n3zRyMoMC0hSQU=",
     "strip_prefix": "Mail-Message-4.05",
     "overlay": {
-        "BUILD.bazel": "sha256-O0RrcigybZJCPKsenAtm/P4XknjiPKjx7ecxONTCqM0="
+        "BUILD.bazel": "sha256-tP/r4pJtZ8kZCafZ7QCP0GwxGoBAL4fl6+dTjFTe+C8="
     }
 }

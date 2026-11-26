@@ -3,6 +3,6 @@
     "integrity": "sha256-CQVCqO7pvTwS5ZxLZWJMidAf/ZQgTx8Hah20CybAmDQ=",
     "strip_prefix": "GeoIP2-2.006002",
     "overlay": {
-        "BUILD.bazel": "sha256-u3Dh8O0LwOL2hCEj84Lt0F7s2mTiEZwS2q2PutTfriQ="
+        "BUILD.bazel": "sha256-rUabSxKKic8IG3MixeLLBhneITXIAgSaEF+qFRHlPkg="
     }
 }

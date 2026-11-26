@@ -3,6 +3,6 @@
     "integrity": "sha256-n3c0s5S82HebCsvj4pmUi/ht3neVVf+wp5SiYM21MK0=",
     "strip_prefix": "Devel-Camelcadedb-v2026.2",
     "overlay": {
-        "BUILD.bazel": "sha256-J4XxdUGyFjj8iE4yxeJK9f3Xc5LFS13cIza9raq5gHQ="
+        "BUILD.bazel": "sha256-40slpusbpMn8S2tIkCXJD/7m0IwuqyoBUThLZUpnrC0="
     }
 }

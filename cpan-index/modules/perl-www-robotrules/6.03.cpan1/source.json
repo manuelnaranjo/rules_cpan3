@@ -3,6 +3,6 @@
     "integrity": "sha256-hSK1MpNaEb+miMLhE7rGZynfSFG+UMLCbUsG9F+t5HI=",
     "strip_prefix": "WWW-RobotRules-6.03",
     "overlay": {
-        "BUILD.bazel": "sha256-R2k/kxK2LAKSHaLjkv93xhC9izwmpF0ZMZ++s22AS0E="
+        "BUILD.bazel": "sha256-cR1sCsGDUH3CIvoG/1mB3aEVeN2BKRC97FRuaXvenYE="
     }
 }

@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-xsaccessor",
+        "@perl-digest-sha1",
+        "@perl-file-slurp",
+        "@perl-json-xs",
+        "@perl-redis",
+        "@perl-redis-scriptcache",
+        "@perl-sereal-decoder",
+        "@perl-sereal-encoder",
+    ],
 )
 
 alias(

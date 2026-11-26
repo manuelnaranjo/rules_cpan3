@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-dbix-class",
+        "@perl-lingua-en-inflect",
+        "@perl-mro-compat",
+        "@perl-namespace-clean",
+        "@perl-sub-exporter",
+    ],
 )
 
 alias(

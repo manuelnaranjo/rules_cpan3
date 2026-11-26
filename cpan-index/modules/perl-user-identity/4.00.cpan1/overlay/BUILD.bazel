@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-hash-ordered",
+        "@perl-log-report",
+    ],
 )
 
 alias(

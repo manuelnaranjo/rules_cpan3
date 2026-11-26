@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-remove",
+        "@perl-module-build",
+        "@perl-module-scandeps",
+        "@perl-yaml-tiny",
+    ],
 )
 
 alias(

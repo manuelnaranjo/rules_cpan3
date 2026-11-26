@@ -3,6 +3,6 @@
     "integrity": "sha256-wyvcOOBvjWyQdlu74xaMNYJH2n2uhbgLqEotoXY3V90=",
     "strip_prefix": "Lexical-SealRequireHints-0.012",
     "overlay": {
-        "BUILD.bazel": "sha256-4PyxUfegGcJQH1Kyn0I0SwHuLyrYClEaOqrmv++EA+g="
+        "BUILD.bazel": "sha256-xNNeVTb4bR979HfqaGCPyYofhhkp/yEMw0+IOdB/2hg="
     }
 }

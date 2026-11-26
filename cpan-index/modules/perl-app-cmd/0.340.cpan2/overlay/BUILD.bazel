@@ -26,7 +26,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-capture-tiny",
+        "@perl-class-load",
+        "@perl-data-optlist",
+        "@perl-getopt-long-descriptive",
+        "@perl-io-tiecombine",
+        "@perl-module-pluggable",
+        "@perl-string-rewriteprefix",
+        "@perl-sub-exporter",
+        "@perl-sub-install",
+    ],
 )
 
 alias(

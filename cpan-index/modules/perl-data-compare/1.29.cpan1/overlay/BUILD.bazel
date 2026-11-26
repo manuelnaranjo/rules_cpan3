@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-clone",
+        "@perl-file-find-rule",
+    ],
 )
 
 alias(

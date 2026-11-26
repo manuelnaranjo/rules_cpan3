@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-datetime",
+        "@perl-datetimex-easy",
+        "@perl-moose",
+        "@perl-moosex-types",
+        "@perl-moosex-types-datetime",
+        "@perl-namespace-clean",
+        "@perl-time-duration-parse",
+    ],
 )
 
 alias(

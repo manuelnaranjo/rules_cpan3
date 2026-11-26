@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-accessor",
+        "@perl-class-returnvalue",
+        "@perl-text-vfile-asdata",
+    ],
 )
 
 alias(

@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-load",
+        "@perl-class-unload",
+        "@perl-devel-overrideglobalrequire",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

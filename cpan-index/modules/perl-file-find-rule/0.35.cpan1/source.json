@@ -3,6 +3,6 @@
     "integrity": "sha256-K9VWKJptRK0u50gDJYuwsAUNJG8egcqrCyY8MDrPDII=",
     "strip_prefix": "File-Find-Rule-0.35",
     "overlay": {
-        "BUILD.bazel": "sha256-IY/LDBo4QusUrZLZAGBfLEKelLcUi6YIdgV/lN8Szlo="
+        "BUILD.bazel": "sha256-Z6m5uewkyebX3gdqc8xtsP5xW0V1hQ6RvdDBHU6wmd4="
     }
 }

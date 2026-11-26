@@ -3,6 +3,6 @@
     "integrity": "sha256-rvD/PqWalpGWfCiFEY/2ZxVghJVwicQ4j0nbZG/T2Qc=",
     "strip_prefix": "Devel-PartialDump-0.20",
     "overlay": {
-        "BUILD.bazel": "sha256-cVdBrVczH7H2VC7GdeSyNM7F+5faORd2XMBkvFnlE7E="
+        "BUILD.bazel": "sha256-Nw+tY5VdmP4VK/vqJ4tzOxkiXXa7UvOXZe3BYZJVxo4="
     }
 }

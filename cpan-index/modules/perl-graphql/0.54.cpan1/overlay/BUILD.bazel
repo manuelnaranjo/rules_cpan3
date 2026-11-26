@@ -26,7 +26,21 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-curry",
+        "@perl-datetime",
+        "@perl-datetime-format-iso8601",
+        "@perl-devel-strictmode",
+        "@perl-function-parameters",
+        "@perl-import-into",
+        "@perl-json-maybexs",
+        "@perl-module-runtime",
+        "@perl-moo",
+        "@perl-moox-thunking",
+        "@perl-pegex",
+        "@perl-return-type",
+        "@perl-type-tiny",
+    ],
 )
 
 alias(

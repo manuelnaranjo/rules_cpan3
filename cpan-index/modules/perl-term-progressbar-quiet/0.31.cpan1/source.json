@@ -3,6 +3,6 @@
     "integrity": "sha256-JWdSkvWIvCnTLnEM82Z9qaKhdR4TmAF3Cp/bGM0hhKY=",
     "strip_prefix": "Term-ProgressBar-Quiet-0.31",
     "overlay": {
-        "BUILD.bazel": "sha256-RYMk1kVsCuF7BV2ZyRHX63kMUyUAtZupVwR/sjinuak="
+        "BUILD.bazel": "sha256-CwWeJOavgK+444aZ29zCN0454NAHPcvJlCdwov0azEo="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-jfjjXER3OI/1x86LPotq5O0wIJx6UFHUFze9FNdV/LA=",
     "strip_prefix": "DateTime-Format-Mail-0.403",
     "overlay": {
-        "BUILD.bazel": "sha256-Zrs5a6pacUOwTkJSoZI5fEXWTEblSGbJgYQ3tUkCzGs="
+        "BUILD.bazel": "sha256-AA3ifVQg611p3R1JxahVntcNbsVCBQVG1u5QVLZLQOg="
     }
 }

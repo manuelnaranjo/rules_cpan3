@@ -3,6 +3,6 @@
     "integrity": "sha256-NMTd+R/JPRCQ2G2hTfcG0XWxYQxnNywB4SzpVV1N0dw=",
     "strip_prefix": "Guard-1.023",
     "overlay": {
-        "BUILD.bazel": "sha256-S3yKHf4LldpnnsoMxxWDkoVAuWa3q0CRreN7X0wU6pQ="
+        "BUILD.bazel": "sha256-ipV3dEIFmxtGEwSBKeidUXkmsnn+Xe7EanwwdYMrFIg="
     }
 }

@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-anyevent-aio",
+        "@perl-anyevent-xspromises",
+        "@perl-posix-atfork",
+        "@perl-ref-util",
+    ],
 )
 
 alias(

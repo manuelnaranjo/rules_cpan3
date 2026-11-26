@@ -3,6 +3,6 @@
     "integrity": "sha256-CpivNEWfdkRxVI4pIE6qpi+7nb8Rt20NgSwftOq4KL0=",
     "strip_prefix": "Spreadsheet-XLSX-0.21",
     "overlay": {
-        "BUILD.bazel": "sha256-0zzn1cnX/B1yb8pcaLvYHsNrvoGCneM9ANOxK68Mkw8="
+        "BUILD.bazel": "sha256-0IyAr8XSc9CXlfScvoM7/1D3CosWLBqxsTf3NosveRA="
     }
 }

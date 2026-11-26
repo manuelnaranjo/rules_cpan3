@@ -6,10 +6,7 @@ package(default_visibility = ["//visibility:public"])
 
 cpan_xs(
     name = "Feersum_xs",
-    srcs = [
-        "Feersum.xs",
-        "feersum_conn.xs",
-    ],
+    srcs = ["Feersum.xs"],
     cc_srcs = glob(
         [
             "*.c",
@@ -37,7 +34,10 @@ cpan_xs(
         "FEERSUM_STEAL",
     ],
     output_loc = "auto/Feersum/Feersum",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "picohttpparser-git/picohttpparser.c",
+        "rinq.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -89,7 +89,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-ev",
+        "@perl-guard",
+        "@perl-plack",
+    ],
 )
 
 alias(

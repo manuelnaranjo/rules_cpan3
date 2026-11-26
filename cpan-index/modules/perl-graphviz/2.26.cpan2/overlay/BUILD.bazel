@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-which",
+        "@perl-ipc-run",
+        "@perl-libwww-perl",
+        "@perl-parse-recdescent",
+        "@perl-xml-twig",
+        "@perl-xml-xpath",
+    ],
 )
 
 alias(

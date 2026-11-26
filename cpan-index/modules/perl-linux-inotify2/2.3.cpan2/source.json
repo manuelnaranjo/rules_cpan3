@@ -3,6 +3,6 @@
     "integrity": "sha256-y5kVD5/6UdvDvl7pjY6RyYzf6uIuuI5xjyzzZ78nDRc=",
     "strip_prefix": "Linux-Inotify2-2.3",
     "overlay": {
-        "BUILD.bazel": "sha256-lFHbfql7kQnT2hCda+Uh1c7n0leOGvHZqDYQj6Xpp20="
+        "BUILD.bazel": "sha256-FkhvcdfYsoh5CQIchnjkEdW6ika9xR6pXk+n8nL0yus="
     }
 }

@@ -4,6 +4,6 @@
     "strip_prefix": "Socket6-0.29",
     "overlay": {
         "config.h": "sha256-0YytIOFfRBBj9vBF3bZ821yZipv9YbKz+ijjuCuQU1Q=",
-        "BUILD.bazel": "sha256-8r6Jq0cR+Hu7eziAQ3HkkinES4+ZMdcRBI+LLB4Rjkk="
+        "BUILD.bazel": "sha256-/llj3XyKtgKe0oJI8JSa4w2jP3enCN9n4L8HryDsQwM="
     }
 }

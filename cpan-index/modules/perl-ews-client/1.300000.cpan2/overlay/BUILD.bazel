@@ -26,7 +26,21 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-datetime",
+        "@perl-datetime-format-iso8601",
+        "@perl-file-sharedir",
+        "@perl-html-strip",
+        "@perl-libwww-perl",
+        "@perl-log-report",
+        "@perl-lwp-protocol-https",
+        "@perl-moose",
+        "@perl-moosex-iterator",
+        "@perl-ntlm",
+        "@perl-uri",
+        "@perl-xml-compile-soap",
+        "@perl-xml-compile-wsdl11",
+    ],
 )
 
 alias(

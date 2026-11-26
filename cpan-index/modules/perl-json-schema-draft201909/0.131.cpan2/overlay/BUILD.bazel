@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-import-into",
+        "@perl-json-schema-modern",
+        "@perl-moo",
+        "@perl-namespace-clean",
+        "@perl-strictures",
+    ],
 )
 
 alias(

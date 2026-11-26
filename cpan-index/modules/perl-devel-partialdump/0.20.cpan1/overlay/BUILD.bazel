@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-tiny",
+        "@perl-namespace-clean",
+        "@perl-sub-exporter",
+    ],
 )
 
 alias(

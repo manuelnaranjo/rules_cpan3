@@ -32,7 +32,10 @@ cpan_xs(
         "HAVE_BUILTIN_CTZ",
     ],
     output_loc = "auto/Compress/Snappy/Snappy",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "src/csnappy_compress.c",
+        "src/csnappy_decompress.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

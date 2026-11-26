@@ -26,7 +26,18 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-exception-class",
+        "@perl-hop-stream",
+        "@perl-json",
+        "@perl-json-ize",
+        "@perl-json-xs",
+        "@perl-libwww-perl",
+        "@perl-lwp-protocol-https",
+        "@perl-neo4j-driver",
+        "@perl-tie-ixhash",
+        "@perl-uri",
+    ],
 )
 
 alias(

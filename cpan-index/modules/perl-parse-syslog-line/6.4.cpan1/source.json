@@ -3,6 +3,6 @@
     "integrity": "sha256-jO1mbEphzoGFjptO1WtBPWQqtjbiAWrDYkFEwHGDdzc=",
     "strip_prefix": "Parse-Syslog-Line-6.4",
     "overlay": {
-        "BUILD.bazel": "sha256-flQkDHWzLLu4mih01ybug78aMSjyLPUV6bTBOmSWYEY="
+        "BUILD.bazel": "sha256-QTJuS1CSxafuguS7xFZU3dfBnkvvf1JCm7oED82olIk="
     }
 }

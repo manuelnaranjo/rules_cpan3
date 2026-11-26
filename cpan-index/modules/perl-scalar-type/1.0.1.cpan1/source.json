@@ -3,6 +3,6 @@
     "integrity": "sha256-l62UulpGAF2bPliay4sFGxOZ3/30Yav3/Hx9718BnsU=",
     "strip_prefix": "Scalar-Type-1.0.1",
     "overlay": {
-        "BUILD.bazel": "sha256-KX2KyBUhw6Z0DqC8qudA+e4r3FMuA1o2tU7YI39hW6o="
+        "BUILD.bazel": "sha256-x6hesCZc4hWGCukKVeAAJxMnz3BWny/W4hcwZPLne3E="
     }
 }

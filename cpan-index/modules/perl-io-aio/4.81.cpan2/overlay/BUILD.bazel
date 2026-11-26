@@ -28,11 +28,12 @@ cpan_xs(
         ],
     ),
     defines = [
-        "usemymalloc=y),",
         "usemymalloc=n.",
     ],
     output_loc = "auto/IO/AIO/AIO",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "libeio/eio.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -82,7 +83,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-common-sense",
+    ],
 )
 
 alias(

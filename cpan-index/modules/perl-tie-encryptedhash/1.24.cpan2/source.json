@@ -3,6 +3,6 @@
     "integrity": "sha256-qpoIOiMeQEYXCliUZE48WWecfb0KotEhfchRUN8sHiE=",
     "strip_prefix": "Tie-EncryptedHash-1.24",
     "overlay": {
-        "BUILD.bazel": "sha256-sLTJdOtKuYwmz47MBGGNw9oVDzU5v4h6UE7RJ1zyEnI="
+        "BUILD.bazel": "sha256-SJfGBR0PMKLjck0eedVvLb3SR6oTWyybHP/OAhAK9lY="
     }
 }

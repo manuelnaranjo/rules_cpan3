@@ -26,7 +26,19 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-clone",
+        "@perl-clone-pp",
+        "@perl-devel-stacktrace",
+        "@perl-eval-closure",
+        "@perl-module-implementation",
+        "@perl-module-runtime",
+        "@perl-mro-compat",
+        "@perl-role-tiny",
+        "@perl-sub-quote",
+        "@perl-test-fatal",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

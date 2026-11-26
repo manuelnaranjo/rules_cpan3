@@ -3,6 +3,6 @@
     "integrity": "sha256-tGeZ92Vk6bQ7pFExa0UYtRHRQoq1vD8mtXPA7e16S6Q=",
     "strip_prefix": "JavaScript-Packer-2.12",
     "overlay": {
-        "BUILD.bazel": "sha256-+zLCMsL2J6LowOwsWAMfOU+mPP8FGiz4mS0xPRy/Few="
+        "BUILD.bazel": "sha256-sGiMGLmuQATAcrfLh4Yh2BtzJoMX6/mw+AxG1LZ9j78="
     }
 }

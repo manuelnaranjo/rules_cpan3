@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-carp-clan",
+        "@perl-dbi",
+        "@perl-file-sharedir",
+        "@perl-moo",
+        "@perl-package-variant",
+        "@perl-parse-recdescent",
+        "@perl-sub-quote",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

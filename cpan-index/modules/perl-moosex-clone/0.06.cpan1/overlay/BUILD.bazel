@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-visitor",
+        "@perl-hash-util-fieldhash-compat",
+        "@perl-moose",
+        "@perl-namespace-autoclean",
+    ],
 )
 
 alias(

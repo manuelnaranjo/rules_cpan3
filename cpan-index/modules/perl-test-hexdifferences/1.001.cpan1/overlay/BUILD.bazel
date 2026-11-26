@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-sub-exporter",
+        "@perl-test-differences",
+        "@perl-test-nowarnings",
+        "@perl-text-diff",
+    ],
 )
 
 alias(

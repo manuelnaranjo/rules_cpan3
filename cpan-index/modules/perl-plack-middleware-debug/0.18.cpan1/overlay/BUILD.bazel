@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-method-modifiers",
+        "@perl-data-dump",
+        "@perl-data-dumper-concise",
+        "@perl-file-sharedir",
+        "@perl-plack",
+        "@perl-text-microtemplate",
+    ],
 )
 
 alias(

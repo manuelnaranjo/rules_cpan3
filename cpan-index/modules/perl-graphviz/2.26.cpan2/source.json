@@ -3,6 +3,6 @@
     "integrity": "sha256-ml0lILMmK/MEdSct12SkRfjn+TG++Ivg49O/9EXacyg=",
     "strip_prefix": "GraphViz-2.26",
     "overlay": {
-        "BUILD.bazel": "sha256-e/vw5sK+0P3QFIziJsAj01zALRqaMLJQsMpnnZXWsx4="
+        "BUILD.bazel": "sha256-Fmu2Eno6lq/y46fIOMF/l+l0dcNT4terdowLhftGCDY="
     }
 }

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-readonly",
+        "@perl-sub-exporter",
+        "@perl-tree-trie",
+    ],
 )
 
 alias(

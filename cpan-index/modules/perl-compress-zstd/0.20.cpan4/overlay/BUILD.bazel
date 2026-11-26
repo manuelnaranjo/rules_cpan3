@@ -16,22 +16,16 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
-            "ext/zstd/contrib/**",
-            "ext/zstd/doc/**",
-            "ext/zstd/examples/**",
-            "ext/zstd/programs/**",
-            "ext/zstd/tests/**",
-            "ext/zstd/zlibWrapper/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [
-        "ZSTD_LEGACY_MULTITHREADED_API",
-        "ZSTD_MULTITHREAD",
-    ],
-    includes = ["ext/zstd/lib"],
-    linkopts = ["-pthread"],
     output_loc = "auto/Compress/Zstd/Zstd",
     textual_hdrs = glob(
         [
@@ -45,14 +39,6 @@ cpan_xs(
             "**/*.inc",
         ],
         allow_empty = True,
-        exclude = [
-            "ext/zstd/contrib/**",
-            "ext/zstd/doc/**",
-            "ext/zstd/examples/**",
-            "ext/zstd/programs/**",
-            "ext/zstd/tests/**",
-            "ext/zstd/zlibWrapper/**",
-        ],
     ),
     typemaps = glob(
         [

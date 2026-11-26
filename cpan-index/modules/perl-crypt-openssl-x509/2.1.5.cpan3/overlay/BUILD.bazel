@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Crypt/OpenSSL/X509/X509",
     textual_hdrs = glob(
         [
@@ -81,7 +80,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-convert-asn1",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-NLmkAMWTs6xy/J+ONnsVVgAdjykWJgcO8aEGAVwWm2k=",
     "strip_prefix": "Test2-Harness-1.000182",
     "overlay": {
-        "BUILD.bazel": "sha256-FO14H9NdcBUDYW5mvSmmJxwJ54b9VrGcFeNrndos56c="
+        "BUILD.bazel": "sha256-Z+62WvEk7ZXHM+p0gjSS6ZHzp55DetwaWDxrePBbRQw="
     }
 }

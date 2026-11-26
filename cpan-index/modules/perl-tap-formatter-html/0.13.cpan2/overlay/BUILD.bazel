@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-accessors",
+        "@perl-template-toolkit",
+        "@perl-uri",
+    ],
 )
 
 alias(

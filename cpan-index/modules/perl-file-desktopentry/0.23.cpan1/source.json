@@ -3,6 +3,6 @@
     "integrity": "sha256-Y/lXmNgLgeqM6khI80LyZZPGDxUtvQTYmByEb5eeaDU=",
     "strip_prefix": "File-DesktopEntry-0.23",
     "overlay": {
-        "BUILD.bazel": "sha256-6dNCrT6KMsbk1c4P2sPYelnYCbFtOuLryOLJbJXyKRU="
+        "BUILD.bazel": "sha256-llG+8N+xnPJcnvW3SyVCuYI+Y4TEiLKuprWZgdTTp5I="
     }
 }

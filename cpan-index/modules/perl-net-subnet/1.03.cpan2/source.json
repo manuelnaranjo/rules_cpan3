@@ -3,6 +3,6 @@
     "integrity": "sha256-El5ttkyYAmQ5+bWFEV+U9CMVox2PFspj0Mk5q2YBmvo=",
     "strip_prefix": "Net-Subnet-1.03",
     "overlay": {
-        "BUILD.bazel": "sha256-FVk2dqXmo2q3yJKUWjG/LWPkGZRpKSsCVR6+QfStBsk="
+        "BUILD.bazel": "sha256-iT9LF/cu5cyyPUPBEQ/Zpmgb+u4UeMh6pQgmail86MU="
     }
 }

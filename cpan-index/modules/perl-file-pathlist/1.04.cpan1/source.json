@@ -3,6 +3,6 @@
     "integrity": "sha256-4+J5nzvO6uSZL+MeqJLDTpFB+SN1mM+tvImCTt56Ziw=",
     "strip_prefix": "File-PathList-1.04",
     "overlay": {
-        "BUILD.bazel": "sha256-rxmgceeoP0q/PuXq6LrEyivEX3VSHn4QYCT7neNzmbc="
+        "BUILD.bazel": "sha256-JH4ivRTQYir3DF81ghxtKuhbP4dACr4kquzOxEDQLB0="
     }
 }

@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-json-maybexs",
+        "@perl-perlio-gzip",
+        "@perl-try-tiny",
+        "@perl-yaml",
+    ],
 )
 
 alias(

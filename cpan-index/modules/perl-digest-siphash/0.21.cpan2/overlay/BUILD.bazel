@@ -27,9 +27,10 @@ cpan_xs(
             "csiphash.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Digest/SipHash/SipHash",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "csiphash.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/POE/XS/Queue/Array/Array",
     textual_hdrs = glob(
         [
@@ -78,7 +77,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-poe",
+    ],
 )
 
 alias(

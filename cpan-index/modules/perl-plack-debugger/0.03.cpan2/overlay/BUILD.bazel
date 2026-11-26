@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-sharedir",
+        "@perl-http-message",
+        "@perl-json-xs",
+        "@perl-module-versions",
+        "@perl-plack",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

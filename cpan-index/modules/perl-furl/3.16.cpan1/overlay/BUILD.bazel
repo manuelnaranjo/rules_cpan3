@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-accessor-lite",
+        "@perl-http-parser-xs",
+        "@perl-mozilla-ca",
+    ],
 )
 
 alias(

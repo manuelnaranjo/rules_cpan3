@@ -3,6 +3,6 @@
     "integrity": "sha256-RJGL7JalSvjKN8qJfkNnCewoSgeyhRbvPM5GZoaWRtU=",
     "strip_prefix": "String-RewritePrefix-0.009",
     "overlay": {
-        "BUILD.bazel": "sha256-un47/9YyXN1VLUbYm/Vc0E3Bxdbte3JgD8VqcsrB9wg="
+        "BUILD.bazel": "sha256-rWaYpOaGKIeH1al93Rim+L/y59aKfhokaPIqAdCtgoI="
     }
 }

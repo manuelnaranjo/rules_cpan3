@@ -26,7 +26,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-any-uri-escape",
+        "@perl-elasticsearch-searchbuilder",
+        "@perl-http-lite",
+        "@perl-http-message",
+        "@perl-json",
+        "@perl-libwww-perl",
+        "@perl-task-weaken",
+        "@perl-uri",
+        "@perl-yaml",
+    ],
 )
 
 alias(

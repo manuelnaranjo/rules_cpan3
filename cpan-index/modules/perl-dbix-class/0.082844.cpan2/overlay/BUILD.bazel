@@ -26,7 +26,26 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-accessor-grouped",
+        "@perl-class-c3-componentised",
+        "@perl-class-inspector",
+        "@perl-config-any",
+        "@perl-context-preserve",
+        "@perl-data-dumper-concise",
+        "@perl-dbi",
+        "@perl-devel-globaldestruction",
+        "@perl-hash-merge",
+        "@perl-module-find",
+        "@perl-moo",
+        "@perl-mro-compat",
+        "@perl-namespace-clean",
+        "@perl-path-class",
+        "@perl-scope-guard",
+        "@perl-sql-abstract-classic",
+        "@perl-sub-name",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-Nhx8Hu6M9mgSlY+XXybvLiJyoMYiHSBDR3y5wiuNHCM=",
     "strip_prefix": "LWP-Protocol-https-6.17",
     "overlay": {
-        "BUILD.bazel": "sha256-hvNYS7h+V3Kir5tX2HPmpsWwHHlLX+O5ZssWjjlhRT0="
+        "BUILD.bazel": "sha256-krnwER/uKu8n80R/AputjCjh0cB4ZchEIcnlLOPugKE="
     }
 }

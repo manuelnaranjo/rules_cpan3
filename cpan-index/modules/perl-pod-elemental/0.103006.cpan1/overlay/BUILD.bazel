@@ -26,7 +26,18 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-load",
+        "@perl-mixin-linewise",
+        "@perl-moose",
+        "@perl-moosex-types",
+        "@perl-namespace-autoclean",
+        "@perl-pod-eventual",
+        "@perl-string-rewriteprefix",
+        "@perl-string-truncate",
+        "@perl-sub-exporter",
+        "@perl-sub-exporter-formethods",
+    ],
 )
 
 alias(

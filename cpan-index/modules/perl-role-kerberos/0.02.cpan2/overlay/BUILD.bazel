@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-authen-krb5",
+        "@perl-moo",
+    ],
 )
 
 alias(

@@ -26,7 +26,23 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-apache-logformat-compiler",
+        "@perl-cookie-baker",
+        "@perl-devel-stacktrace",
+        "@perl-devel-stacktrace-ashtml",
+        "@perl-file-sharedir",
+        "@perl-filesys-notify-simple",
+        "@perl-hash-multivalue",
+        "@perl-http-entity-parser",
+        "@perl-http-headers-fast",
+        "@perl-http-message",
+        "@perl-stream-buffered",
+        "@perl-test-tcp",
+        "@perl-try-tiny",
+        "@perl-uri",
+        "@perl-www-form-urlencoded",
+    ],
 )
 
 alias(

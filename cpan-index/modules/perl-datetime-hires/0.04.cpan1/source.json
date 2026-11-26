@@ -3,6 +3,6 @@
     "integrity": "sha256-HCMVkzLDD566VLdeZpK+TeqAUiQ+r/MCbJyQuLZLw5U=",
     "strip_prefix": "DateTime-HiRes-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-8dOzndtZi4VgQnjF9gLug6aWyBuJAOSt2EsRNRZ8/Js="
+        "BUILD.bazel": "sha256-o/yKRdWaghzSiLpHkreaYqAHHskiAOjLWqmzmeYYv/8="
     }
 }

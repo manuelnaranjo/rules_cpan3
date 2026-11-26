@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-digest-sha1",
+        "@perl-error",
+        "@perl-ipc-sharelite",
+    ],
 )
 
 alias(

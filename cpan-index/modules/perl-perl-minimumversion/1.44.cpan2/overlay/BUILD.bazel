@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-find-rule",
+        "@perl-file-find-rule-perl",
+        "@perl-params-util",
+        "@perl-ppi",
+        "@perl-ppix-regexp",
+        "@perl-ppix-utils",
+    ],
 )
 
 alias(

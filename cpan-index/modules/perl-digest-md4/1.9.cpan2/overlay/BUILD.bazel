@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Digest/MD4/MD4",
     textual_hdrs = glob(
         [

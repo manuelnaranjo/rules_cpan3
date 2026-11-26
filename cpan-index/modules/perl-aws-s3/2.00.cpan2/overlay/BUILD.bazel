@@ -26,7 +26,23 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-load",
+        "@perl-digest-hmac",
+        "@perl-http-date",
+        "@perl-http-message",
+        "@perl-json-xs",
+        "@perl-libwww-perl",
+        "@perl-log-any",
+        "@perl-lwp-useragent-determined",
+        "@perl-moose",
+        "@perl-moosex-types",
+        "@perl-moosex-types-uri",
+        "@perl-test-deep",
+        "@perl-timedate",
+        "@perl-uri",
+        "@perl-xml-libxml",
+    ],
 )
 
 alias(

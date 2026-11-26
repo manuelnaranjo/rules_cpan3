@@ -5,6 +5,6 @@
     "overlay": {
         "const-xs.inc": "sha256-CdRkcwCzstC+M2scl+VieY8Ol7Tof89/67ZT2PBjL/M=",
         "const-c.inc": "sha256-4uPBHaq2diKoh36YBMtUrj2FwmyU4WzauKLLEguelYM=",
-        "BUILD.bazel": "sha256-IzkHFiok7rELhQFC+AE/rsmFoFuug90ErJcdWnjeIZs="
+        "BUILD.bazel": "sha256-xhWs+8/L7a/i+0s/dOtmkrG7T6rxrpK+mYfBgZA+Wgc="
     }
 }

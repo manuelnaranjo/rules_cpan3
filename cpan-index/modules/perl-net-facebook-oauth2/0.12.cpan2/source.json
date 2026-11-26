@@ -3,6 +3,6 @@
     "integrity": "sha256-+XqXoct+sfuOXRFadMBYtGJkaht+pDIn7SzYAR9YAiU=",
     "strip_prefix": "Net-Facebook-Oauth2-0.12",
     "overlay": {
-        "BUILD.bazel": "sha256-AHA3M+oRkgoIL87/tSkLM1iBQZb8UwtUvSWPV/fcsbY="
+        "BUILD.bazel": "sha256-KJ+1zHFHdNxIk5wuP1mQEzS3xGoFxPz6Wec5M+QypNI="
     }
 }

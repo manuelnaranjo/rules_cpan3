@@ -3,6 +3,6 @@
     "integrity": "sha256-+LprfifSuwpPmjKVWiRC1OQo0cSLgMixIUL/YRvnI28=",
     "strip_prefix": "Monitoring-Plugin-0.40",
     "overlay": {
-        "BUILD.bazel": "sha256-jXPquvuKmZY/3f+fg15u6J99YePF7oUxvOvNpJ8djYc="
+        "BUILD.bazel": "sha256-dYvtUXmiBaLdGz0FNZNgVV2XaN+oJGogoUxNFDBvAJ0="
     }
 }

@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-method-modifiers",
+        "@perl-list-moreutils",
+        "@perl-module-runtime",
+        "@perl-role-tiny",
+        "@perl-strictures",
+    ],
 )
 
 alias(

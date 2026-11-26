@@ -28,7 +28,6 @@ cpan_xs(
             "src/lz4.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Compress/LZ4/LZ4",
     textual_hdrs = glob(
         [

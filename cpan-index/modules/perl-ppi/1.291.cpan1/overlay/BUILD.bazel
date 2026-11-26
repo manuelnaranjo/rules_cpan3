@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-clone",
+        "@perl-params-util",
+        "@perl-safe-isa",
+        "@perl-task-weaken",
+        "@perl-yaml-pp",
+    ],
 )
 
 alias(

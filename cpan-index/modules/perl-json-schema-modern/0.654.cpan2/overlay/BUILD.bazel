@@ -26,7 +26,21 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-autovivification",
+        "@perl-builtin-compat",
+        "@perl-clone",
+        "@perl-feature-compat-try",
+        "@perl-file-sharedir",
+        "@perl-mojolicious",
+        "@perl-moo",
+        "@perl-moox-typetiny",
+        "@perl-namespace-clean",
+        "@perl-strictures",
+        "@perl-syntax-operator-equ",
+        "@perl-type-tiny",
+        "@perl-yaml-pp",
+    ],
 )
 
 alias(

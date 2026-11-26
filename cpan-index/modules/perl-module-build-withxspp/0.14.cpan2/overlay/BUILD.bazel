@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-extutils-cppguess",
+        "@perl-extutils-xspp",
+        "@perl-module-build",
+    ],
 )
 
 alias(

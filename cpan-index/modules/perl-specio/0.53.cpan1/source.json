@@ -3,6 +3,6 @@
     "integrity": "sha256-DQ7s+56JvQ9fcQ+sQuEgCogtUTqGL5hJfq71knrGwYM=",
     "strip_prefix": "Specio-0.53",
     "overlay": {
-        "BUILD.bazel": "sha256-sLPi6+NZrl5nWED0S/MhnZ+4OcndGKjEDyZqMSn3skI="
+        "BUILD.bazel": "sha256-P3mtQHsRzuhNYt+7iTF1PWbpd1vUhG5fWKkun++zh7I="
     }
 }

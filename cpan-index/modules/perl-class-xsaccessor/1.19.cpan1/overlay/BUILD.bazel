@@ -6,12 +6,7 @@ package(default_visibility = ["//visibility:public"])
 
 cpan_xs(
     name = "Class-XSAccessor_xs",
-    srcs = [
-        "XS/Array.xs",
-        "XS/Hash.xs",
-        "XS/HashCACompat.xs",
-        "XSAccessor.xs",
-    ],
+    srcs = ["XSAccessor.xs"],
     cc_srcs = glob(
         [
             "*.c",
@@ -21,8 +16,14 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
     defines = [

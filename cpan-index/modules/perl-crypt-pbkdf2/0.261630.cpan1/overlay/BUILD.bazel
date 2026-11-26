@@ -26,7 +26,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-crypt-urandom",
+        "@perl-digest-hmac",
+        "@perl-digest-sha3",
+        "@perl-module-runtime",
+        "@perl-moo",
+        "@perl-namespace-autoclean",
+        "@perl-strictures",
+        "@perl-try-tiny",
+        "@perl-type-tiny",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-EZ8ZOrWffGBIq+zWN6VE5xz33ygqZ4mGvI7TjIjFOWA=",
     "strip_prefix": "HTTP-Request-StreamingUpload-0.01",
     "overlay": {
-        "BUILD.bazel": "sha256-KWGsWk+P0F/SnkV1Lpn5v9M0Yl2aQ6s5vRooUZoiCkc="
+        "BUILD.bazel": "sha256-RELdfRM7H8FHtWe8bFB5trPxZWvOkB55exRCZd7E00g="
     }
 }

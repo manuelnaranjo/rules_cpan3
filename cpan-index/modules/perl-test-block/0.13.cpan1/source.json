@@ -3,6 +3,6 @@
     "integrity": "sha256-PdgbWq+6hbCXmF+qBxiG7FV0lzL7ScVWadiw/A0dORs=",
     "strip_prefix": "Test-Block-0.13",
     "overlay": {
-        "BUILD.bazel": "sha256-WrP32B5BL7qwwKcqCRUVHoqB8m2bS1y339HLonCsGZQ="
+        "BUILD.bazel": "sha256-ipzE2af1jJPRK9kIqbbISwhqRKG2GShiBgp186EuryM="
     }
 }

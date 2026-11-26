@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-datetime",
+        "@perl-datetime-format-iso8601",
+        "@perl-params-validate",
+    ],
 )
 
 alias(

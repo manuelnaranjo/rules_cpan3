@@ -26,7 +26,23 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-anyevent",
+        "@perl-ev",
+        "@perl-event-join",
+        "@perl-io-tty",
+        "@perl-json",
+        "@perl-moose",
+        "@perl-moosex-clone",
+        "@perl-moosex-role-parameterized",
+        "@perl-moosex-strictconstructor",
+        "@perl-moosex-types",
+        "@perl-moosex-types-signal",
+        "@perl-namespace-autoclean",
+        "@perl-namespace-clean",
+        "@perl-sub-exporter",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

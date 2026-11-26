@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-messagepack",
+        "@perl-data-messagepack-stream",
+        "@perl-test-exception",
+    ],
 )
 
 alias(

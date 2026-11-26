@@ -3,6 +3,6 @@
     "integrity": "sha256-FMuJl5chJhW06T+Rbcva+0jQHF6qsgOP5ssXm/lcb+s=",
     "strip_prefix": "Redis-2.000",
     "overlay": {
-        "BUILD.bazel": "sha256-ZhObLo3GGnFvoXhjjk5OQLNt8XNJYEF/QvXp59qLrKk="
+        "BUILD.bazel": "sha256-B2NCftGY6bWDXSpOLJAhHs+aZE2/NVto4+I/Z3Ok6Gc="
     }
 }

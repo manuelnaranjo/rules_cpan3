@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/MariaDB/NonBlocking/NonBlocking",
     textual_hdrs = glob(
         [
@@ -80,7 +79,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-alien-libmariadbclient",
+        "@perl-anyevent",
+        "@perl-anyevent-xspromises",
+        "@perl-ref-util",
+        "@perl-sub-strictdecl",
+    ],
 )
 
 alias(

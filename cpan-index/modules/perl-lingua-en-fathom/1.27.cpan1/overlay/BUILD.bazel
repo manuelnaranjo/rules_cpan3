@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-lingua-en-sentence",
+        "@perl-lingua-en-syllable",
+    ],
 )
 
 alias(

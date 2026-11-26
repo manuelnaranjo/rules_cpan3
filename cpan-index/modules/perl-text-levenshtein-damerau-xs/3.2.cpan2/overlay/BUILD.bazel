@@ -31,7 +31,9 @@ cpan_xs(
         "amerau",
     ],
     output_loc = "auto/Text/Levenshtein/Damerau/XS/XS",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "damerau-int.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

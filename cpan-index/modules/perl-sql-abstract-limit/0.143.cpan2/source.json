@@ -3,6 +3,6 @@
     "integrity": "sha256-0Yr9eIk72DC6JGXArmozQlRgFZADhk3tO1rc9RGJyuk=",
     "strip_prefix": "SQL-Abstract-Limit-0.143",
     "overlay": {
-        "BUILD.bazel": "sha256-QnVLGZ1Ov16h4gZUM8SICxrcpsb+rj3Fyvaw5GdOxiQ="
+        "BUILD.bazel": "sha256-qwwD4OWOEfXJncJPZG0E5S1nUcNqUedtC+28RFQRvEM="
     }
 }

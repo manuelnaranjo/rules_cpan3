@@ -26,7 +26,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-devel-globaldestruction",
+        "@perl-file-remove",
+        "@perl-io-stringy",
+        "@perl-log-report",
+        "@perl-mail-message",
+        "@perl-mail-transport",
+        "@perl-object-realize-later",
+        "@perl-string-print",
+        "@perl-timedate",
+    ],
 )
 
 alias(

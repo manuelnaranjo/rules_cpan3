@@ -3,6 +3,6 @@
     "integrity": "sha256-cOivSqIdGbq17dn0Oms9Ynd0imUUXUb/DqKuTFlJXHI=",
     "strip_prefix": "IO-Socket-Multicast-1.12",
     "overlay": {
-        "BUILD.bazel": "sha256-9VQ0dN20hJ9X2VU3vpwX/vtKmSKlD6lajuK3ulZsBQA="
+        "BUILD.bazel": "sha256-KC+Zhnyl+HsOwUUYbi638PlhlI+fl1lnGrqoOB71QnA="
     }
 }

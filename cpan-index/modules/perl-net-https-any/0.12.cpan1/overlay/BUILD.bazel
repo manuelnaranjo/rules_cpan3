@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-net-ssleay",
+        "@perl-tie-ixhash",
+        "@perl-uri",
+    ],
 )
 
 alias(

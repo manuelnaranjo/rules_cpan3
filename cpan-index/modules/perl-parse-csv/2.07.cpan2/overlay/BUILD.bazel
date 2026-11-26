@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-params-util",
+        "@perl-text-csv-xs",
+    ],
 )
 
 alias(

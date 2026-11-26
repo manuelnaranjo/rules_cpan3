@@ -3,6 +3,6 @@
     "integrity": "sha256-FNQGuR2pbWUh0NGoLSKjBidHZSJrhrClbn/93Plq578=",
     "strip_prefix": "IPC-ShareLite-0.17",
     "overlay": {
-        "BUILD.bazel": "sha256-gyN6dfIDt9nFyvhV0LE8vxeBartuCyTQcJNO4XbpJXc="
+        "BUILD.bazel": "sha256-rilmJ5i8QX5Qy+ol4dn1dE9uWba2hQ4NFlO0encn9Sg="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-BTJ1MNNGuAphpulD+9dJmGvcqJIRpOswHAjC0XkxThE=",
     "strip_prefix": "Test-LWP-UserAgent-0.036",
     "overlay": {
-        "BUILD.bazel": "sha256-4LlZBZRZoHuDQRrVo1aM8LDoi+MHPuruB7vx6XoG+qI="
+        "BUILD.bazel": "sha256-iwYh6Kp3XdN6WXCueEFvOsGyIPKuxPXCeKaRA8WySaI="
     }
 }

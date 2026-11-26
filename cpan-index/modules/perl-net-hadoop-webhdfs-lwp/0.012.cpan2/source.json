@@ -3,6 +3,6 @@
     "integrity": "sha256-jO+RmvXVN3XqLNsHXee3cbG1K5TzjXH6Zy4iVNZvGRg=",
     "strip_prefix": "Net-Hadoop-WebHDFS-LWP-0.012",
     "overlay": {
-        "BUILD.bazel": "sha256-JpjoXTn/Q4DWziEZav3W+R00djWv/xTBoW95/i2v9Mc="
+        "BUILD.bazel": "sha256-PWRbVW+2UtAMFN8usiQ9LXzM0bnf+33Je5GjkzYvWO4="
     }
 }

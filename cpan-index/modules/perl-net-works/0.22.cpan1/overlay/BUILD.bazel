@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-list-allutils",
+        "@perl-math-int128",
+        "@perl-moo",
+        "@perl-namespace-autoclean",
+        "@perl-sub-quote",
+    ],
 )
 
 alias(

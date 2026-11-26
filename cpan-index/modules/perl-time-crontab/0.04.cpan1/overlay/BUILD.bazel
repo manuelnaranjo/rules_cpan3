@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-list-moreutils",
+        "@perl-set-crontab",
+    ],
 )
 
 alias(

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-authen-sasl-xs",
+        "@perl-devel-checklib",
+        "@perl-thrift",
+    ],
 )
 
 alias(

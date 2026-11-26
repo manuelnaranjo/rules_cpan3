@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-lingua-pt-stemmer",
+        "@perl-lingua-stem-fr",
+        "@perl-lingua-stem-it",
+        "@perl-lingua-stem-ru",
+        "@perl-lingua-stem-snowball-da",
+        "@perl-snowball-norwegian",
+        "@perl-snowball-swedish",
+        "@perl-text-german",
+    ],
 )
 
 alias(

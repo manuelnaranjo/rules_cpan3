@@ -3,6 +3,6 @@
     "integrity": "sha256-fY8se2F2L7TsctLsKBKQ8vh/nH0pgnPaRSVDKmXncNY=",
     "strip_prefix": "GSSAPI-0.28",
     "overlay": {
-        "BUILD.bazel": "sha256-afnkXtXs8edB4pDw4mQIGMXZLteFhh/sGN+5o2MDLr4="
+        "BUILD.bazel": "sha256-Fdl8fwQBfo/ioaKYm8cJDjoodr/y/XE5E1nq6ie0ZEU="
     }
 }

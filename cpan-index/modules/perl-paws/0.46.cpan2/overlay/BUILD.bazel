@@ -26,7 +26,30 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-argv-struct",
+        "@perl-config-aws",
+        "@perl-data-compare",
+        "@perl-datastruct-flat",
+        "@perl-datetime",
+        "@perl-datetime-format-iso8601",
+        "@perl-file-homedir",
+        "@perl-io-socket-ssl",
+        "@perl-json-maybexs",
+        "@perl-module-find",
+        "@perl-moose",
+        "@perl-moosex-classattribute",
+        "@perl-moosex-getopt",
+        "@perl-net-amazon-signature-v4",
+        "@perl-path-tiny",
+        "@perl-string-crc32",
+        "@perl-throwable",
+        "@perl-uri",
+        "@perl-uri-template",
+        "@perl-url-encode",
+        "@perl-url-encode-xs",
+        "@perl-xml-simple",
+    ],
 )
 
 alias(

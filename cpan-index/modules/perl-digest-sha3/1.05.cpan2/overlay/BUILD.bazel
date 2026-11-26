@@ -28,9 +28,11 @@ cpan_xs(
             "src/sha3.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Digest/SHA3/SHA3",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "src/sdf.c",
+        "src/sha3.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

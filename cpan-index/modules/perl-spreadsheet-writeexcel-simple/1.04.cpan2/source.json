@@ -3,6 +3,6 @@
     "integrity": "sha256-93dapDdAf5UaE9lHwOCsz0rA+Qk5fYQRxfu6QnhYt8M=",
     "strip_prefix": "Spreadsheet-WriteExcel-Simple-1.04",
     "overlay": {
-        "BUILD.bazel": "sha256-AAi+DmyfuJiMexkqkveov/R1IT8VwGFdEG2zmJnrwR0="
+        "BUILD.bazel": "sha256-6HAZF45L981JxzEc9JpGR8InLqMpPwx0Utqfcm7ABlo="
     }
 }

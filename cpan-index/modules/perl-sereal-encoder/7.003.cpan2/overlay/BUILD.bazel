@@ -83,7 +83,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-sereal-decoder",
+    ],
 )
 
 alias(

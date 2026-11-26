@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-const-fast",
+        "@perl-data-printer",
+        "@perl-getopt-long-descriptive",
+        "@perl-hash-merge-simple",
+        "@perl-json-maybexs",
+        "@perl-ref-util",
+        "@perl-time-moment",
+        "@perl-yaml-libyaml",
+    ],
 )
 
 alias(

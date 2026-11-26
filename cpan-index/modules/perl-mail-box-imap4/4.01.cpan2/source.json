@@ -3,6 +3,6 @@
     "integrity": "sha256-2vJtPJbkgsH/F4WgR4tUPFVe70VuTgi0wlPP6qWE6Dc=",
     "strip_prefix": "Mail-Box-IMAP4-4.01",
     "overlay": {
-        "BUILD.bazel": "sha256-jQWdrpcx/CbNOB6ZpdCoASymMlEIfhlvL4ArCrR4vGQ="
+        "BUILD.bazel": "sha256-xUWdEbzCrbxERaZIGhhhxS4a3DrNEyVH7idDZUNcIN4="
     }
 }

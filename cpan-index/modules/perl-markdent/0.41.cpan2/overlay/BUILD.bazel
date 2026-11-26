@@ -26,7 +26,23 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-file-slurper",
+        "@perl-getopt-long-descriptive",
+        "@perl-html-parser",
+        "@perl-list-allutils",
+        "@perl-module-runtime",
+        "@perl-moose",
+        "@perl-moosex-getopt",
+        "@perl-moosex-role-parameterized",
+        "@perl-moosex-semiaffordanceaccessor",
+        "@perl-moosex-strictconstructor",
+        "@perl-namespace-autoclean",
+        "@perl-params-validationcompiler",
+        "@perl-specio",
+        "@perl-tree-simple",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

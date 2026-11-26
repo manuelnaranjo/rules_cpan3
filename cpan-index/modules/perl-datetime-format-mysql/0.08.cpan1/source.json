@@ -3,6 +3,6 @@
     "integrity": "sha256-Gctw6YWEZV41TS1qjnHMXKkC3dw6xEQWcS+RY9Eiueg=",
     "strip_prefix": "DateTime-Format-MySQL-0.08",
     "overlay": {
-        "BUILD.bazel": "sha256-RfO8fpr88ugiRKLMekAWKn0E28WbTC/10UU93DykdNI="
+        "BUILD.bazel": "sha256-QNY8VIMrWjn4oB75j8RY0rlLlh2pGtXSgTlDLcKByvw="
     }
 }

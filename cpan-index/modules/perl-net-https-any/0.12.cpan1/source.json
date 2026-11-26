@@ -3,6 +3,6 @@
     "integrity": "sha256-G7+ZD/TPi+mdnQlmfnDpO3nCtPaAQAnZeIXxvhlepuM=",
     "strip_prefix": "Net-HTTPS-Any-0.12",
     "overlay": {
-        "BUILD.bazel": "sha256-t6JZ/6CheRVCnA8hcbVxFA7xtpTlpVG/d5YqxjOahZc="
+        "BUILD.bazel": "sha256-47eNv3AXFSYnURFRmFBC38GT/LywfT1je4jVYm+JqHU="
     }
 }

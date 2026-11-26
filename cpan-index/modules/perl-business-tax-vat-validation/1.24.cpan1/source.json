@@ -3,6 +3,6 @@
     "integrity": "sha256-1AYPTafIjN/nwbLwzDwBKwm+fbd9MtrGjdVqIEJTouE=",
     "strip_prefix": "Business-Tax-VAT-Validation-1.24",
     "overlay": {
-        "BUILD.bazel": "sha256-Rn0VqYcZuhmXD8zHW1vAQdZJVk2+Ldw8ZKI8b9eh2a4="
+        "BUILD.bazel": "sha256-035tEIQi/CWj3fpKUf1SeXKegUKHz+loRdhjFbjSJTE="
     }
 }

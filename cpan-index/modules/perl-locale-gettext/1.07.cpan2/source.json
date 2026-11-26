@@ -4,6 +4,6 @@
     "strip_prefix": "Locale-gettext-1.07",
     "overlay": {
         "config.h": "sha256-iNW2UNtl4qg+UySvuqIxqt0yWOEu3P1MyJOpTXoQWS8=",
-        "BUILD.bazel": "sha256-3eqdXnNImDXQolTUN3FzFAAuLqi3KzD4ITTDSwabHXU="
+        "BUILD.bazel": "sha256-F/qHpo0XAufrFBF/YOXUy439hYvxUm8iIi8TN7NLT9E="
     }
 }

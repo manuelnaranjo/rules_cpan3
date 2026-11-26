@@ -26,7 +26,18 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-html-parser",
+        "@perl-html-selector-xpath",
+        "@perl-html-tagset",
+        "@perl-html-tree",
+        "@perl-html-treebuilder-xpath",
+        "@perl-libwww-perl",
+        "@perl-universal-require",
+        "@perl-uri",
+        "@perl-xml-xpathengine",
+        "@perl-yaml",
+    ],
 )
 
 alias(

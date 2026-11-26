@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/MaxMind/DB/Reader/XS/XS",
     textual_hdrs = glob(
         [
@@ -78,7 +77,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-math-int128",
+        "@perl-math-int64",
+        "@perl-maxmind-db-common",
+        "@perl-maxmind-db-reader",
+        "@perl-moo",
+        "@perl-namespace-autoclean",
+    ],
 )
 
 alias(

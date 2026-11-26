@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-treedumper",
+        "@perl-list-moreutils",
+        "@perl-readonly",
+        "@perl-sub-exporter",
+        "@perl-term-bash-completion-generator",
+        "@perl-text-colorizer",
+        "@perl-text-pluralize",
+    ],
 )
 
 alias(

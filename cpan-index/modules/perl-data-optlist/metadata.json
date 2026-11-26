@@ -7,8 +7,6 @@
         }
     ],
     "versions": [
-        "0.115.cpan1",
-        "0.115.cpan2",
         "0.115.cpan3"
     ],
     "yanked_versions": {}

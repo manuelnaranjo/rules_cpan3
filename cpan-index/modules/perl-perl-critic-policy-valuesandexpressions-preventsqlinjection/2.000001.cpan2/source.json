@@ -3,6 +3,6 @@
     "integrity": "sha256-nGGMe33wvPFddUjrDy0aGDKTajFroyRw8ZpMA5cu+AM=",
     "strip_prefix": "Perl-Critic-Policy-ValuesAndExpressions-PreventSQLInjection-2.000001",
     "overlay": {
-        "BUILD.bazel": "sha256-tJEsekptmAaEo9fz07ZAoj8rGBcZ1fZJ3KCgqHdfVxM="
+        "BUILD.bazel": "sha256-TEBiLrYKlJRCw1/3c/fzm/5chFGk1ysj0nDweewlsaA="
     }
 }

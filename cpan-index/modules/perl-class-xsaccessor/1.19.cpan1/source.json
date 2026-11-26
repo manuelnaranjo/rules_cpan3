@@ -3,6 +3,6 @@
     "integrity": "sha256-mcVrOV8SOa8ZkB8v7rEl2ey041Gg2A2qlSkhGkcApvI=",
     "strip_prefix": "Class-XSAccessor-1.19",
     "overlay": {
-        "BUILD.bazel": "sha256-DKfwbgMSOPa9iZNqL9BsZstrrMLFYNaG2MFjwuoQ6cI="
+        "BUILD.bazel": "sha256-e/mOcxpWcB4v6EVh+BiO+ZIF8rOJrzlhhS7/eWWOIRE="
     }
 }

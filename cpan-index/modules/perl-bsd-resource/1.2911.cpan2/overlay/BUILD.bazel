@@ -34,7 +34,6 @@ cpan_xs(
         "_BSD_TYPES",
         "Rlim_t=rlim_t",
         "_LARGEFILE_SOURCE",
-        "_FILE_OFFSET_BITS=64",
         "SOLARIS_NO_PROCFS",
     ],
     output_loc = "auto/BSD/Resource/Resource",

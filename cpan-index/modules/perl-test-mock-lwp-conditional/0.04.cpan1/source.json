@@ -3,6 +3,6 @@
     "integrity": "sha256-iBcSlIjx6uSJaq5ZuOCelPcg/daXpzrvEyQegSOUBmc=",
     "strip_prefix": "Test-Mock-LWP-Conditional-0.04",
     "overlay": {
-        "BUILD.bazel": "sha256-Bqzez5THMsyiQyN1u/obaKCdC81BVgQuiIBLfvoDHZM="
+        "BUILD.bazel": "sha256-Ot8cfjQCD14CEHP5OvzbRA4SPL0RZ8NyvZQ9Qo2QVa8="
     }
 }

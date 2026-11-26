@@ -16,11 +16,16 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Params/Validate/Validate",
     textual_hdrs = glob(
         [
@@ -72,7 +77,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = ["@perl-module-implementation"],
+    deps = [
+        "@perl-module-implementation",
+    ],
 )
 
 alias(
@@ -101,7 +108,11 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Params-Validate"],
+    deps = [
+        ":Params-Validate",
+        "@perl-test-fatal",
+        "@perl-test-requires",
+    ],
 )
 
 perl_test(

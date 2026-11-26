@@ -26,7 +26,16 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-inspector",
+        "@perl-data-bitmask",
+        "@perl-linux-inotify2",
+        "@perl-list-moreutils",
+        "@perl-moose",
+        "@perl-moosex-getopt",
+        "@perl-moosex-types",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

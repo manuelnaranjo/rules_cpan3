@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-alien-build",
+        "@perl-class-method-modifiers",
+        "@perl-ffi-checklib",
+        "@perl-path-tiny",
+        "@perl-role-tiny",
+    ],
 )
 
 alias(

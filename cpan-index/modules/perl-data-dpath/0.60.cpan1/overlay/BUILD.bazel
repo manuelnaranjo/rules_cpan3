@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-aliased",
+        "@perl-class-xsaccessor",
+        "@perl-iterator-util",
+        "@perl-sub-exporter",
+    ],
 )
 
 alias(

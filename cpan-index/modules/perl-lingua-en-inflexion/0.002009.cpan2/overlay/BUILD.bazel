@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-lingua-en-nums2words",
+        "@perl-lingua-en-words2nums",
+        "@perl-match-simple",
+    ],
 )
 
 alias(

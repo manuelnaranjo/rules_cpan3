@@ -22,7 +22,7 @@ bazel_dep(name = "libiconv", version = "1.18.cpan-external.1")
 bazel_dep(name = "krb5", version = "1.22.3.cpan-external.1")
 bazel_dep(name = "grpc", version = "1.85.4")
 bazel_dep(name = "perl-compress-raw-zlib", version = "2.226.cpan2")
-bazel_dep(name = "perl-io-tty", version = "1.31.cpan2")
+bazel_dep(name = "perl-io-tty", version = "1.31.cpan3")
 
 single_version_override(
     module_name = "audit-userspace",

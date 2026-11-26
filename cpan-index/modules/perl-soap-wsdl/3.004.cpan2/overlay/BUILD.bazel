@@ -26,7 +26,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-load",
+        "@perl-class-std-fast",
+        "@perl-libwww-perl",
+        "@perl-module-build",
+        "@perl-template-toolkit",
+        "@perl-termreadkey",
+        "@perl-timedate",
+        "@perl-uri",
+        "@perl-xml-parser",
+    ],
 )
 
 alias(

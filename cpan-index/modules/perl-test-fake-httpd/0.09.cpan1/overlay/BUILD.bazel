@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-http-daemon",
+        "@perl-plack",
+        "@perl-test-sharedfork",
+        "@perl-test-tcp",
+        "@perl-uri",
+    ],
 )
 
 alias(

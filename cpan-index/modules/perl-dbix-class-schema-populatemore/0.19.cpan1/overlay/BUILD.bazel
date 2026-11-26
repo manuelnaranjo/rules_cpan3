@@ -26,7 +26,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-datetimex-easy",
+        "@perl-list-moreutils",
+        "@perl-module-pluggable",
+        "@perl-moo",
+        "@perl-moox-handlesvia",
+        "@perl-type-tiny",
+    ],
 )
 
 alias(

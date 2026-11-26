@@ -3,6 +3,6 @@
     "integrity": "sha256-Xo3D3N92lDAN9ddlV2hKCuvqgl9YR6qpzmUOsanKZB8=",
     "strip_prefix": "Role-Kerberos-0.02",
     "overlay": {
-        "BUILD.bazel": "sha256-3XQlxtUk535EL7/HIonL3nxQNayF55Fv7GS3WYjLUxk="
+        "BUILD.bazel": "sha256-Co6dlOdvRawFimrnvj5FlDQDTP9SEUjOkfF/F2nPHZc="
     }
 }

@@ -3,6 +3,6 @@
     "integrity": "sha256-u+6M1rMe6cKm6aEPSUFsQ400MQL1XBsOUNIOG/X0qC4=",
     "strip_prefix": "App-Cmd-0.340",
     "overlay": {
-        "BUILD.bazel": "sha256-bdLMVceoJDAynOyj8fIwlEVGbd3biioKbyxh9k74I4o="
+        "BUILD.bazel": "sha256-58Z1wB1ELtweSbxWBMoqVIlx/u+jqMIslr+I6Mui+oo="
     }
 }

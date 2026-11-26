@@ -3,6 +3,6 @@
     "integrity": "sha256-/nJwrHNa3ehk5GjiHGQqRxuoi6Ja0w2pRXiDITLyufQ=",
     "strip_prefix": "Alien-Base-ModuleBuild-1.17",
     "overlay": {
-        "BUILD.bazel": "sha256-fbyiwY0yXWqXhZIj2dEokuDRlB/SGGhK/OOC+9JOKJg="
+        "BUILD.bazel": "sha256-DoJcj340+QPwcCF+UCBiE1yLJNKx1tujnodiIplQg5s="
     }
 }

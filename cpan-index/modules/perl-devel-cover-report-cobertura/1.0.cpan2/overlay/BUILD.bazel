@@ -26,7 +26,13 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-accessor",
+        "@perl-devel-cover",
+        "@perl-devel-cover-report-clover",
+        "@perl-html-parser",
+        "@perl-template-toolkit",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-/AIdFp5kK3Nq8fKT83W6ffINQwdbB0ulS38MxgocLr8=",
     "strip_prefix": "CLI-Helpers-2.3",
     "overlay": {
-        "BUILD.bazel": "sha256-bwe4hujESd5hZKEWeZh7AqvIIl4gz7DSI9BbP0oivMk="
+        "BUILD.bazel": "sha256-8bFeyaPgRNKsXiapSeSkK787bUICZF+MX6ZI8QbYxH0="
     }
 }

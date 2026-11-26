@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHANSEN/Authen-Simple-PAM-0.2.tar.gz",
-    "integrity": "sha256-NUssuXvzxiUU9dG0LF82N7Re8tdOS0JY5xQfCqrcYKs=",
-    "strip_prefix": "Authen-Simple-PAM-0.2",
-    "overlay": {
-        "BUILD.bazel": "sha256-dvGn6tJWIiu9acQ3DQmO/Dla2TJAsbf/TaiNFxYnYO4="
-    }
-}

@@ -6,11 +6,7 @@ package(default_visibility = ["//visibility:public"])
 
 cpan_xs(
     name = "Net-SSH-Perl_xs",
-    srcs = [
-        "Perl.xs",
-        "lib/Net/SSH/Perl/Cipher/ChachaPoly.xs",
-        "lib/Net/SSH/Perl/Key/Ed25519.xs",
-    ],
+    srcs = ["Perl.xs"],
     cc_srcs = glob(
         [
             "*.c",
@@ -40,9 +36,19 @@ cpan_xs(
             "src/chacha/poly1305.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Net/SSH/Perl/Perl",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "src/blowfish/blowfish.c",
+        "src/ed25519/keypair.c",
+        "src/ed25519/sign.c",
+        "src/ed25519/verify.c",
+        "src/ed25519/sha512.c",
+        "src/ed25519/ge.c",
+        "src/ed25519/fe.c",
+        "src/ed25519/sc.c",
+        "src/chacha/chacha.c",
+        "src/chacha/poly1305.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -92,7 +98,14 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-crypt-curve25519",
+        "@perl-crypt-idea",
+        "@perl-cryptx",
+        "@perl-file-homedir",
+        "@perl-math-gmp",
+        "@perl-string-crc32",
+    ],
 )
 
 alias(

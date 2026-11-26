@@ -26,7 +26,6 @@ cpan_xs(
             "demo/**",
         ],
     ),
-    defines = [],
     output_loc = "auto/Cassandra/Client/Client",
     textual_hdrs = glob(
         [
@@ -78,7 +77,17 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-anyevent",
+        "@perl-anyevent-xspromises",
+        "@perl-clone",
+        "@perl-devel-globaldestruction",
+        "@perl-ev",
+        "@perl-io-socket-inet6",
+        "@perl-net-ssleay",
+        "@perl-ref-util",
+        "@perl-sub-current",
+    ],
 )
 
 alias(

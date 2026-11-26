@@ -16,17 +16,23 @@ cpan_xs(
         exclude = [
             "_xs/**",
             "t/**",
+            "xt/**",
             "fallback/**",
             "conf/**",
+            "examples/**",
+            "example/**",
+            "eg/**",
+            "samples/**",
+            "demo/**",
             "curve25519-donna-c64.c",
             "curve25519-donna.c",
         ],
     ),
-    defines = [
-        "USE_X64",
-    ],
     output_loc = "auto/Crypt/Curve25519/Curve25519",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "curve25519-donna-c64.c",
+        "curve25519-donna.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

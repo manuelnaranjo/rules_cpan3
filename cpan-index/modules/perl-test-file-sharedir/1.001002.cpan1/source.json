@@ -3,6 +3,6 @@
     "integrity": "sha256-szZHy7Sy8vz73k+LtDg9CslcL4nExXcOtpHxZDozeq0=",
     "strip_prefix": "Test-File-ShareDir-1.001002",
     "overlay": {
-        "BUILD.bazel": "sha256-hmHpxPWAn5JDnSWtAe0yrQ/2sviXzGgaqCdRpBkqZ2I="
+        "BUILD.bazel": "sha256-w0Q3ZFVUz4RTsMKSO1V5F1thGHrRF+K2o75qBut9voo="
     }
 }

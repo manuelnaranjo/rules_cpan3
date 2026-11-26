@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-overload-filecheck",
+        "@perl-text-glob",
+    ],
 )
 
 alias(

@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-http-date",
+        "@perl-http-message",
+        "@perl-libwww-perl",
+        "@perl-namespace-clean",
+        "@perl-safe-isa",
+        "@perl-try-tiny",
+        "@perl-uri",
+    ],
 )
 
 alias(

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-future",
+        "@perl-mojolicious",
+        "@perl-role-tiny",
+    ],
 )
 
 alias(

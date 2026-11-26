@@ -26,7 +26,15 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-class-load",
+        "@perl-list-allutils",
+        "@perl-module-find",
+        "@perl-moose",
+        "@perl-moosex-types",
+        "@perl-search-elasticsearch",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

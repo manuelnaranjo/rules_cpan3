@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-email-simple",
+        "@perl-module-pluggable",
+        "@perl-mro-compat",
+    ],
 )
 
 alias(

@@ -42,7 +42,6 @@ cpan_xs(
             "contrib/irix_sysmp.xs",
         ],
     ),
-    defines = [],
     output_loc = "auto/Sys/CpuAffinity/CpuAffinity",
     textual_hdrs = glob(
         [

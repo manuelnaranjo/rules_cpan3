@@ -26,7 +26,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-datetime-format-iso8601",
+    ],
 )
 
 alias(

@@ -3,6 +3,6 @@
     "integrity": "sha256-23+x7E+cmXy2T6aa15V3s6e+qReI+f09FiTc1DwPnSU=",
     "strip_prefix": "Cookie-Baker-0.14",
     "overlay": {
-        "BUILD.bazel": "sha256-b3wD426f2PlGZEBHp4NWqkGEqnOUObu2fQTfJfPK7YM="
+        "BUILD.bazel": "sha256-5hmWIGQEhWpoJHE1KDu3u2umhuaRxUFdU/54rNgj1pM="
     }
 }

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-io-socket-ssl",
+        "@perl-libwww-perl",
+        "@perl-net-http",
+    ],
 )
 
 alias(

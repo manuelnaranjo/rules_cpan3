@@ -30,9 +30,13 @@ cpan_xs(
             "inet_pton.c",
         ],
     ),
-    defines = [],
     output_loc = "auto/Socket6/Socket6",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "getaddrinfo.c",
+        "getnameinfo.c",
+        "inet_ntop.c",
+        "inet_pton.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

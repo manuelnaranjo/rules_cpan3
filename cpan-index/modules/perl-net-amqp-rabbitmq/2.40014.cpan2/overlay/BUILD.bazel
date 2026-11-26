@@ -87,7 +87,9 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-math-int64",
+    ],
 )
 
 alias(

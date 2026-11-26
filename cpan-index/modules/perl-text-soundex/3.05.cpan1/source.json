@@ -3,6 +3,6 @@
     "integrity": "sha256-9t1VtCgLJd6peCIYOYZDglYAdOHWkzOV+u4lEMLbYO0=",
     "strip_prefix": "Text-Soundex-3.05",
     "overlay": {
-        "BUILD.bazel": "sha256-FOV9Ujh+Y9QjbfS4HYtQGVaxxXBw8r2UqJNfrL/oWDM="
+        "BUILD.bazel": "sha256-aieI//QZHYeQ7zg9CRYDQabFmCPZC9FAq6RRS2K/Yvk="
     }
 }

@@ -26,7 +26,11 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-extutils-config",
+        "@perl-extutils-helpers",
+        "@perl-extutils-installpaths",
+    ],
 )
 
 alias(

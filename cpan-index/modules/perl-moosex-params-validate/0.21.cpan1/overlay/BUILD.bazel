@@ -26,7 +26,12 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-devel-caller",
+        "@perl-moose",
+        "@perl-params-validate",
+        "@perl-sub-exporter",
+    ],
 )
 
 alias(

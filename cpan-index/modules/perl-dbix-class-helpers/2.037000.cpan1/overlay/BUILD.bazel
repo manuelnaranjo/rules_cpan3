@@ -26,7 +26,20 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-carp-clan",
+        "@perl-dbix-class",
+        "@perl-dbix-class-candy",
+        "@perl-dbix-introspector",
+        "@perl-lingua-en-inflect",
+        "@perl-module-runtime",
+        "@perl-moo",
+        "@perl-namespace-clean",
+        "@perl-safe-isa",
+        "@perl-sub-exporter-progressive",
+        "@perl-text-brew",
+        "@perl-try-tiny",
+    ],
 )
 
 alias(

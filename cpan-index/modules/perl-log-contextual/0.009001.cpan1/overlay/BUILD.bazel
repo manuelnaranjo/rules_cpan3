@@ -26,7 +26,10 @@ perl_library(
     includes = [
         "lib",
     ],
-    deps = [],
+    deps = [
+        "@perl-data-dumper-concise",
+        "@perl-moo",
+    ],
 )
 
 alias(

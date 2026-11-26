@@ -3,6 +3,6 @@
     "integrity": "sha256-gtnnu6d17rW/5p6HIPrvO9YBXPm1TqseGaYFMSqyYq4=",
     "strip_prefix": "Geo-Google-PolylineEncoder-0.06",
     "overlay": {
-        "BUILD.bazel": "sha256-0aRw8twDJQW+WjYN+RzI4xll8byJdpMrE3RltLJFRSM="
+        "BUILD.bazel": "sha256-KYOpFJPMdgr9b/3EtBVAqh43T09TKWTOPe5Nr2qURuo="
     }
 }
