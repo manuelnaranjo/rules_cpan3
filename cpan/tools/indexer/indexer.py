@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import concurrent.futures
 import json
 import logging
 import os
@@ -20,6 +21,7 @@ import subprocess
 import sys
 import tarfile
 import tempfile
+import threading
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass, field
@@ -149,6 +151,7 @@ class IndexManager:
         self.heuristics = HeuristicsEngine()
         self.lock_distributions: Dict[str, Dict[str, Any]] = {}
         self.lock_distributions_by_mod: Dict[str, Dict[str, Any]] = {}
+        self._lock = threading.Lock()
 
     def load_lockfile(self, lockfile_path: Path) -> None:
         """Loads distribution dependency information from a cpan.lock.json file."""
@@ -157,9 +160,10 @@ class IndexManager:
         try:
             data = json.loads(lockfile_path.read_text(encoding="utf-8"))
             dists = data.get("distributions", {})
-            for d_name, d_info in dists.items():
-                self.lock_distributions[d_name] = d_info
-                self.lock_distributions_by_mod[sanitize_module_name(d_name)] = d_info
+            with self._lock:
+                for d_name, d_info in dists.items():
+                    self.lock_distributions[d_name] = d_info
+                    self.lock_distributions_by_mod[sanitize_module_name(d_name)] = d_info
         except Exception as e:
             logger.warning("Failed loading lockfile %s: %s", lockfile_path, e)
 
@@ -515,16 +519,19 @@ class IndexManager:
         if test_deps is None or runtime_deps is None or provides is None:
             lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
             if not lock_info:
-                ws_root = self.index_dir.parent
-                for candidate in [
-                    ws_root / "e2e" / "deps_txt" / "cpan.lock.json",
-                    ws_root / "e2e" / "pakket" / "cpan.lock.json",
-                    ws_root / "tests" / "cpan.lock.json",
-                    ws_root / "cpan.lock.json",
-                ]:
-                    if candidate.exists():
-                        self.load_lockfile(candidate)
-                lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
+                with self._lock:
+                    lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
+                    if not lock_info:
+                        ws_root = self.index_dir.parent
+                        for candidate in [
+                            ws_root / "e2e" / "deps_txt" / "cpan.lock.json",
+                            ws_root / "e2e" / "pakket" / "cpan.lock.json",
+                            ws_root / "tests" / "cpan.lock.json",
+                            ws_root / "cpan.lock.json",
+                        ]:
+                            if candidate.exists():
+                                self.load_lockfile(candidate)
+                        lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
 
             if lock_info:
                 deps = lock_info.get("dependencies", {})
@@ -1040,6 +1047,84 @@ class CPANIndexer:
 
         return resolved_versions
 
+    def regenerate_modules(
+        self,
+        modules: List[str],
+        bump_build_id: bool = False,
+        jobs: Optional[int] = None,
+    ) -> int:
+        """Regenerates specified modules in parallel across worker threads."""
+        return regenerate_modules(
+            indexer=self,
+            modules=modules,
+            bump_build_id=bump_build_id,
+            jobs=jobs,
+        )
+
+
+def regenerate_modules(
+    indexer: CPANIndexer,
+    modules: List[str],
+    bump_build_id: bool = False,
+    jobs: Optional[int] = None,
+) -> int:
+    """Regenerates specified modules in parallel across worker threads.
+
+    Args:
+        indexer: Configured CPANIndexer instance.
+        modules: List of module directory names to regenerate.
+        bump_build_id: Whether to increment the build-id.
+        jobs: Number of worker threads. Defaults to all CPU cores.
+
+    Returns:
+        Number of successfully regenerated modules.
+    """
+    if not modules:
+        return 0
+
+    worker_count = max(1, jobs if jobs and jobs > 0 else (os.cpu_count() or 1))
+
+    if worker_count == 1 or len(modules) == 1:
+        count = 0
+        for mod_name in modules:
+            try:
+                new_ver = indexer.index_mgr.regenerate_port(
+                    module_name=mod_name,
+                    bump_build_id=bump_build_id,
+                )
+                print(f"[cpan_indexer] Regenerated {mod_name} -> {new_ver}")
+                count += 1
+            except Exception as e:
+                logger.warning("Failed regenerating %s: %s", mod_name, e)
+        return count
+
+    count = 0
+
+    def _worker(m_name: str) -> Tuple[str, Optional[str], Optional[Exception]]:
+        try:
+            new_ver = indexer.index_mgr.regenerate_port(
+                module_name=m_name,
+                bump_build_id=bump_build_id,
+            )
+            return m_name, new_ver, None
+        except Exception as e:
+            return m_name, None, e
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=worker_count) as executor:
+        future_to_mod = {
+            executor.submit(_worker, m_name): m_name
+            for m_name in modules
+        }
+        for future in concurrent.futures.as_completed(future_to_mod):
+            m_name, new_ver, err = future.result()
+            if err is not None:
+                logger.warning("Failed regenerating %s: %s", m_name, err)
+                continue
+            print(f"[cpan_indexer] Regenerated {m_name} -> {new_ver}")
+            count += 1
+
+    return count
+
 
 def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -1101,6 +1186,13 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
         help="Apply regeneration across all modules in cpan-index, not just those with generator-metadata.yaml.",
     )
     parser.add_argument(
+        "-j",
+        "--jobs",
+        type=int,
+        default=os.cpu_count() or 1,
+        help="Number of parallel worker threads (default: all CPU cores).",
+    )
+    parser.add_argument(
         "--verbose",
         action="store_true",
         help="Enable debug logging output.",
@@ -1137,7 +1229,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         lockfile_path=lock_path,
     )
 
-    if args.regenerate:
+    if args.regenerate or args.all:
         if args.distribution:
             mod_name = sanitize_module_name(args.distribution)
             new_ver = indexer.index_mgr.regenerate_port(
@@ -1147,25 +1239,24 @@ def main(argv: Optional[List[str]] = None) -> int:
             )
             print(f"[cpan_indexer] Successfully regenerated {mod_name} -> {new_ver}")
             return 0
-        else:
-            # Regenerate modules
-            count = 0
-            for mod_entry in sorted((index_dir / "modules").iterdir()):
-                if not mod_entry.is_dir():
-                    continue
-                has_metadata = (mod_entry / "generator-metadata.yaml").exists()
-                if args.all or has_metadata:
-                    try:
-                        new_ver = indexer.index_mgr.regenerate_port(
-                            module_name=mod_entry.name,
-                            bump_build_id=args.bump_build_id,
-                        )
-                        print(f"[cpan_indexer] Regenerated {mod_entry.name} -> {new_ver}")
-                        count += 1
-                    except Exception as e:
-                        logger.warning("Failed regenerating %s: %s", mod_entry.name, e)
-            print(f"[cpan_indexer] Successfully regenerated {count} modules")
-            return 0
+
+        # Regenerate modules
+        modules_to_regenerate: List[str] = []
+        for mod_entry in sorted((index_dir / "modules").iterdir()):
+            if not mod_entry.is_dir():
+                continue
+            has_metadata = (mod_entry / "generator-metadata.yaml").exists()
+            if args.all or has_metadata:
+                modules_to_regenerate.append(mod_entry.name)
+
+        count = regenerate_modules(
+            indexer=indexer,
+            modules=modules_to_regenerate,
+            bump_build_id=args.bump_build_id,
+            jobs=args.jobs,
+        )
+        print(f"[cpan_indexer] Successfully regenerated {count} modules")
+        return 0
 
     if args.lockfile:
         lock_path = Path(args.lockfile)
