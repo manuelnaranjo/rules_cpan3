@@ -5,3 +5,4 @@ patch_cmds:
 - mv constants.c constants.inc
 - sed -i 's/"constants.c"/"constants.inc"/' SSLeay.xs
 - perl -MAutoSplit -e 'autosplit("lib/Net/SSLeay.pm", "lib/auto", 0, 1, 1)'
+- sed -i 's/[ \t]*$//' lib/auto/Net/SSLeay/autosplit.ix
