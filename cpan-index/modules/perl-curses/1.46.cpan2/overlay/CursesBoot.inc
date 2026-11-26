@@ -424,7 +424,7 @@ XS(boot_Curses)
     C_NEWXS("Curses::COLORS",                 XS_Curses_COLORS);
     C_NEWXS("Curses::COLOR_PAIRS",            XS_Curses_COLOR_PAIRS);
 
-    /* Variables masquerading as variables */ 
+    /* Variables masquerading as variables */
 
     C_NEWXS("Curses::Vars::DESTROY",          XS_Curses_Vars_DESTROY);
     C_NEWXS("Curses::Vars::FETCH",            XS_Curses_Vars_FETCH);

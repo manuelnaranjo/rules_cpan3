@@ -913,12 +913,45 @@ alias(
 )
 {test_content}"""
 
+    def _resolve_dep_version(
+        self,
+        dep_name: str,
+        cpan_deps: Optional[List[Tuple[str, str]]] = None,
+        modules_dir: Optional[Path] = None,
+    ) -> str:
+        """Resolves the version for a dependency, checking cpan_deps, metadata.json, or fallback."""
+        if cpan_deps:
+            for mod, ver in cpan_deps:
+                if mod == dep_name:
+                    return ver
+
+        search_dirs: List[Path] = []
+        if modules_dir and modules_dir.exists():
+            search_dirs.append(modules_dir)
+        default_modules = Path("cpan-index/modules")
+        if default_modules.exists() and default_modules not in search_dirs:
+            search_dirs.append(default_modules)
+
+        for m_dir in search_dirs:
+            meta_path = m_dir / dep_name / "metadata.json"
+            if meta_path.exists():
+                try:
+                    data = json.loads(meta_path.read_text(encoding="utf-8"))
+                    versions = data.get("versions", [])
+                    if versions:
+                        return versions[-1]
+                except Exception:
+                    pass
+
+        return "0.0.0"
+
     def generate_module_bazel(
         self,
         module_name: str,
         version: str,
         native_deps: Optional[List[str]] = None,
         cpan_deps: Optional[List[Tuple[str, str]]] = None,
+        modules_dir: Optional[Path] = None,
     ) -> str:
         """Generates MODULE.bazel for the BCR module."""
         lines = [
@@ -933,6 +966,8 @@ alias(
             'bazel_dep(name = "platforms", version = "1.1.0")',
         ]
 
+        seen_deps = {"rules_cpan", "rules_perl", "rules_cc", "platforms", module_name}
+
         if native_deps:
             for nat_target in native_deps:
                 dep_label = nat_target.lstrip("@").split("//")[0].split(":")[0]
@@ -940,14 +975,24 @@ alias(
                     dep_label = sanitize_module_name(dep_label.removeprefix("cpan__"))
                 dep_info = NATIVE_DEP_MAP.get(dep_label)
                 if dep_info:
-                    lines.append(f'bazel_dep(name = "{dep_info["bazel_dep"]}", version = "{dep_info["version"]}")')
+                    dep_name = dep_info["bazel_dep"]
+                    if dep_name not in seen_deps:
+                        seen_deps.add(dep_name)
+                        lines.append(f'bazel_dep(name = "{dep_name}", version = "{dep_info["version"]}")')
                 elif dep_label.startswith("perl-"):
-                    lines.append(f'bazel_dep(name = "{dep_label}", version = "0.0.0")')
+                    if dep_label not in seen_deps:
+                        seen_deps.add(dep_label)
+                        dep_ver = self._resolve_dep_version(dep_label, cpan_deps, modules_dir)
+                        lines.append(f'bazel_dep(name = "{dep_label}", version = "{dep_ver}")')
                 else:
-                    lines.append(f'bazel_dep(name = "{dep_label}", version = "0.0.0")')
+                    if dep_label not in seen_deps:
+                        seen_deps.add(dep_label)
+                        lines.append(f'bazel_dep(name = "{dep_label}", version = "0.0.0")')
 
         if cpan_deps:
             for cpan_mod, cpan_ver in cpan_deps:
-                lines.append(f'bazel_dep(name = "{cpan_mod}", version = "{cpan_ver}")')
+                if cpan_mod not in seen_deps:
+                    seen_deps.add(cpan_mod)
+                    lines.append(f'bazel_dep(name = "{cpan_mod}", version = "{cpan_ver}")')
 
         return "\n".join(lines) + "\n"

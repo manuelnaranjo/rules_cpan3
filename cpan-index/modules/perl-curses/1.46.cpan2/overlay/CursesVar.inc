@@ -248,7 +248,7 @@ XS(XS_Curses_Vars_STORE)
        doesn't even make sense to set the variables, and we assume few programs
        ever exploited this ability, so simply removed it by default for
        everyone starting with the January 2010 release.
-    
+
        If you have an old Ncurses library that allows setting of variables
        and really want this function in Curses.pm, #define ALLOW_VARS_STORE
        in your c-config.h.

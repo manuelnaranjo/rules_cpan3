@@ -435,4 +435,3 @@ XS(XS_Curses_ACS_VLINE)
     XSRETURN(0);
 #endif
 }
-

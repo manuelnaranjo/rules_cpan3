@@ -21,71 +21,91 @@ cpan_xs(
             "xssubs.c",
         ],
     ),
-    defines = [
-        "HAVE_CYGWIN",
-        "HAVE_DEV_PTMX",
-        "HAVE_DEV_PTYM_CLONE",
-        "HAVE_DEV_PTC",
-        "HAVE_DEV_PTMX_BSD",
-        "HAVE_DEV_PTYM",
-        "HAVE_",
-        "HAVE_PTSNAME",
-        "HAVE_PTSNAME_R",
-        "HAVE__GETPTY",
-        "HAVE_OPENPTY",
-        "HAVE_GETPT",
-        "HAVE_POSIX_OPENPT",
-    ],
+    defines = select({
+        "@platforms//os:osx": [
+            "HAVE_DEV_PTMX",
+            "HAVE_GRANTPT",
+            "HAVE_OPENPTY",
+            "HAVE_POSIX_OPENPT",
+            "HAVE_PTSNAME",
+            "HAVE_PTSNAME_R",
+            "HAVE_SIGACTION",
+            "HAVE_TERMIOS_H",
+            "HAVE_TTYNAME",
+            "HAVE_UNLOCKPT",
+            "HAVE_UTIL_H",
+            "OSX_COMPAT",
+        ],
+        "//conditions:default": [
+            "HAVE_DEV_PTMX",
+            "HAVE_GETPT",
+            "HAVE_GRANTPT",
+            "HAVE_OPENPTY",
+            "HAVE_POSIX_OPENPT",
+            "HAVE_PTSNAME",
+            "HAVE_PTSNAME_R",
+            "HAVE_PTY_H",
+            "HAVE_SIGACTION",
+            "HAVE_TERMIOS_H",
+            "HAVE_TTYNAME",
+            "HAVE_UNLOCKPT",
+        ],
+    }),
+    linkopts = select({
+        "@platforms//os:linux": ["-lutil"],
+        "//conditions:default": [],
+    }),
     output_loc = "auto/IO/Tty/Tty",
-    textual_hdrs = glob(
+    textual_hdrs = ["xssubs.c"] + glob(
         [
             "*.h",
             "**/*.h",
             "*.xs",
             "**/*.xs",
-            "*.xsi",
-            "**/*.xsi",
             "*.inc",
             "**/*.inc",
         ],
         allow_empty = True,
     ),
-    typemaps = glob(
-        [
-            "*typemap*",
-            "**/*typemap*",
-            "*TYPEMAP*",
-            "**/*TYPEMAP*",
-        ],
-        allow_empty = True,
-    ),
+    typemaps = [],
     deps = [],
+)
+
+genrule(
+    name = "io_tty_modules",
+    srcs = [
+        "Tty.pm",
+        "Pty.pm",
+    ],
+    outs = [
+        "IO/Tty.pm",
+        "IO/Pty.pm",
+        "IO/Tty/Constant.pm",
+    ],
+    cmd = """
+mkdir -p $$(dirname $(execpath IO/Tty.pm))
+cp $(execpath Tty.pm) $(execpath IO/Tty.pm)
+cp $(execpath Pty.pm) $(execpath IO/Pty.pm)
+mkdir -p $$(dirname $(execpath IO/Tty/Constant.pm))
+cat << 'EOF' > $(execpath IO/Tty/Constant.pm)
+package IO::Tty::Constant;
+our $$VERSION = '1.31';
+require Exporter;
+our @ISA = qw(Exporter);
+our @EXPORT_OK = qw();
+1;
+EOF
+""",
 )
 
 perl_library(
     name = "IO-Tty",
-    srcs = glob(
-        [
-            "lib/**/*.pm",
-            "lib/**/*.pod",
-            "*.pm",
-        ],
-        allow_empty = True,
-    ),
+    srcs = [":io_tty_modules"],
     data = [
         ":IO-Tty_xs",
-    ] + glob(
-        [
-            "lib/**/*",
-        ],
-        allow_empty = True,
-        exclude = [
-            "lib/**/*.pm",
-            "lib/**/*.pod",
-        ],
-    ),
+    ],
     includes = [
-        "lib",
+        ".",
     ],
     deps = [],
 )

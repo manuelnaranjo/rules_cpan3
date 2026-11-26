@@ -67,6 +67,45 @@ except ImportError:
 logger = logging.getLogger("cpan_indexer")
 
 
+def normalize_overlay_text(rel_name: str, data: bytes) -> bytes:
+    """Normalizes line endings to LF and strips trailing whitespace for text overlay files."""
+    text_extensions = (
+        ".c", ".h", ".inc", ".pm", ".pod", ".pl", ".xs", ".xsi",
+        ".txt", ".yaml", ".yml", ".json", ".bazel", ".t", ".sh",
+    )
+    if not rel_name.endswith(text_extensions):
+        return data
+    try:
+        text = data.decode("utf-8")
+    except UnicodeDecodeError:
+        try:
+            text = data.decode("latin-1")
+        except Exception:
+            return data
+    lines = [line.rstrip() for line in text.splitlines()]
+    normalized = "\n".join(lines).strip()
+    if normalized:
+        normalized += "\n"
+    return normalized.encode("utf-8")
+
+
+def deduplicate_module_bazel_deps(content: str) -> str:
+    """Removes duplicate bazel_dep declarations by dependency name."""
+    lines = content.splitlines()
+    seen = set()
+    new_lines = []
+    dep_pattern = re.compile(r'^\s*bazel_dep\(\s*name\s*=\s*"(?P<name>[^"]+)"')
+    for line in lines:
+        m = dep_pattern.match(line)
+        if m:
+            dep_name = m.group("name")
+            if dep_name in seen:
+                continue
+            seen.add(dep_name)
+        new_lines.append(line)
+    return "\n".join(new_lines).strip() + "\n"
+
+
 @dataclass
 class IndexResolution:
     """Result of checking a distribution in the cpan-index."""
@@ -217,7 +256,11 @@ class IndexManager:
             (dest_dir / "MODULE.bazel").write_text(updated_content, encoding="utf-8")
         else:
             # Generate minimal MODULE.bazel
-            content = self.heuristics.generate_module_bazel(module_name, target_version)
+            content = self.heuristics.generate_module_bazel(
+                module_name,
+                target_version,
+                modules_dir=self.modules_dir,
+            )
             (dest_dir / "MODULE.bazel").write_text(content, encoding="utf-8")
 
         # 2. Clone overlay/ directory
@@ -358,6 +401,11 @@ class IndexManager:
             except Exception:
                 pass
 
+        existing_mb_text = None
+        src_mb = src_ver_dir / "MODULE.bazel"
+        if src_mb.exists():
+            existing_mb_text = src_mb.read_text(encoding="utf-8")
+
         existing_overlay = src_ver_dir / "overlay"
         dest_dir = self.create_new_port(
             dist_name=dist_name,
@@ -369,17 +417,17 @@ class IndexManager:
         )
 
         # Preserve and update MODULE.bazel from source version if available
-        src_mb = src_ver_dir / "MODULE.bazel"
         dest_mb = dest_dir / "MODULE.bazel"
-        if src_mb.exists() and dest_mb.exists():
-            src_text = src_mb.read_text(encoding="utf-8")
+        if existing_mb_text:
             updated_mb = re.sub(
                 r'version\s*=\s*"[^"]+"',
                 f'version = "{target_version}"',
-                src_text,
+                existing_mb_text,
                 count=1,
             )
-            dest_mb.write_text(updated_mb, encoding="utf-8")
+            dest_mb.write_text(deduplicate_module_bazel_deps(updated_mb), encoding="utf-8")
+        elif dest_mb.exists():
+            dest_mb.write_text(deduplicate_module_bazel_deps(dest_mb.read_text(encoding="utf-8")), encoding="utf-8")
 
         return target_version
 
@@ -511,13 +559,14 @@ class IndexManager:
             for rel_name, data in inspection.overlay_files.items():
                 target_f = dest_overlay / rel_name
                 target_f.parent.mkdir(parents=True, exist_ok=True)
-                target_f.write_bytes(data)
-                if data.startswith(b"#!"):
+                clean_data = normalize_overlay_text(rel_name, data)
+                target_f.write_bytes(clean_data)
+                if clean_data.startswith(b"#!"):
                     try:
                         target_f.chmod(0o755)
                     except Exception:
                         pass
-                overlay_sris[rel_name] = compute_sri_hash(data)
+                overlay_sris[rel_name] = compute_sri_hash(clean_data)
 
             # Write overlay/BUILD.bazel
             build_bazel_content = self.heuristics.generate_build_bazel(
@@ -536,6 +585,7 @@ class IndexManager:
                 module_name=module_name,
                 version=target_version,
                 native_deps=inspection.native_deps,
+                modules_dir=self.modules_dir,
             )
             (dest_dir / "MODULE.bazel").write_text(module_bazel_content, encoding="utf-8")
 
