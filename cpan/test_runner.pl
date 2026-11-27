@@ -65,6 +65,11 @@ die "Test file '$test_file' could not be found\n" unless defined $target_test &&
 
 my $test_dir = dirname($target_test);
 my $dist_dir = $test_dir;
+while ($dist_dir ne "/" && $dist_dir ne "." && basename($dist_dir) ne "t") {
+    my $parent = dirname($dist_dir);
+    last if $parent eq $dist_dir;
+    $dist_dir = $parent;
+}
 if (basename($dist_dir) eq "t") {
     $dist_dir = dirname($dist_dir);
 }

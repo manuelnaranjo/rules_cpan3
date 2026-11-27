@@ -8,6 +8,7 @@ dependency mapping.
 from __future__ import annotations
 
 import base64
+import fnmatch
 import hashlib
 import json
 import logging
@@ -23,8 +24,31 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 
+def split_yaml_key_val(line: str) -> Tuple[str, str]:
+    """Splits a YAML line into key and value, respecting quotes around keys with colons."""
+    line = line.strip()
+    if line.startswith('"'):
+        end_q = line.find('"', 1)
+        if end_q != -1:
+            k = line[1:end_q]
+            rest = line[end_q + 1:].lstrip()
+            if rest.startswith(":"):
+                return k, rest[1:].strip()
+    elif line.startswith("'"):
+        end_q = line.find("'", 1)
+        if end_q != -1:
+            k = line[1:end_q]
+            rest = line[end_q + 1:].lstrip()
+            if rest.startswith(":"):
+                return k, rest[1:].strip()
+    if ":" in line:
+        parts = line.split(":", 1)
+        return parts[0].strip(), parts[1].strip()
+    return line, ""
+
+
 def parse_yaml_subset(text: str) -> Dict[str, Any]:
-    """Parses a YAML document with support for mappings, lists, and scalars."""
+    """Parses a YAML document with support for mappings, lists, nested select dicts, and scalars."""
     try:
         import yaml
         return yaml.safe_load(text) or {}
@@ -32,7 +56,8 @@ def parse_yaml_subset(text: str) -> Dict[str, Any]:
         pass
 
     result: Dict[str, Any] = {}
-    current_key: Optional[str] = None
+    current_top_key: Optional[str] = None
+    current_sub_key: Optional[str] = None
 
     for raw_line in text.splitlines():
         line = raw_line.rstrip()
@@ -43,36 +68,56 @@ def parse_yaml_subset(text: str) -> Dict[str, Any]:
         stripped = line.strip()
 
         if indent == 0 and ":" in stripped:
-            parts = stripped.split(":", 1)
-            k = parts[0].strip()
-            v = parts[1].strip()
+            k, v = split_yaml_key_val(stripped)
+            current_top_key = k
+            current_sub_key = None
             if not v:
-                result[k] = []
-                current_key = k
+                result[k] = None
             else:
                 if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
                     v = v[1:-1]
                 result[k] = v
-                current_key = None
+                current_top_key = None
             continue
 
-        if current_key is not None:
-            if stripped.startswith("- "):
-                val = stripped[2:].strip()
-                if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
-                    val = val[1:-1]
-                if not isinstance(result[current_key], list):
-                    result[current_key] = []
-                result[current_key].append(val)
-            elif ":" in stripped:
-                parts = stripped.split(":", 1)
-                sub_k = parts[0].strip()
-                sub_v = parts[1].strip()
-                if (sub_v.startswith('"') and sub_v.endswith('"')) or (sub_v.startswith("'") and sub_v.endswith("'")):
-                    sub_v = sub_v[1:-1]
-                if not isinstance(result[current_key], dict):
-                    result[current_key] = {}
-                result[current_key][sub_k] = sub_v
+        if current_top_key is not None:
+            if indent == 2:
+                if stripped.startswith("- "):
+                    val = stripped[2:].strip()
+                    if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
+                        val = val[1:-1]
+                    if result[current_top_key] is None or not isinstance(result[current_top_key], list):
+                        result[current_top_key] = []
+                    result[current_top_key].append(val)
+                elif ":" in stripped:
+                    sub_k, sub_v = split_yaml_key_val(stripped)
+                    if (sub_k.startswith('"') and sub_k.endswith('"')) or (sub_k.startswith("'") and sub_k.endswith("'")):
+                        sub_k = sub_k[1:-1]
+                    if result[current_top_key] is None or not isinstance(result[current_top_key], dict):
+                        result[current_top_key] = {}
+                    if not sub_v:
+                        result[current_top_key][sub_k] = []
+                        current_sub_key = sub_k
+                    elif sub_v == "[]":
+                        result[current_top_key][sub_k] = []
+                        current_sub_key = None
+                    else:
+                        if (sub_v.startswith('"') and sub_v.endswith('"')) or (sub_v.startswith("'") and sub_v.endswith("'")):
+                            sub_v = sub_v[1:-1]
+                        result[current_top_key][sub_k] = sub_v
+                        current_sub_key = None
+            elif indent >= 4 and current_sub_key is not None:
+                if stripped.startswith("- "):
+                    val = stripped[2:].strip()
+                    if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
+                        val = val[1:-1]
+                    if not isinstance(result[current_top_key][current_sub_key], list):
+                        result[current_top_key][current_sub_key] = []
+                    result[current_top_key][current_sub_key].append(val)
+
+    for k, v in result.items():
+        if v is None:
+            result[k] = []
 
     return result
 
@@ -104,14 +149,14 @@ logger = logging.getLogger("cpan_indexer.heuristics")
 # Mapping of native library names to BCR modules and versions
 NATIVE_DEP_MAP: Dict[str, Dict[str, str]] = {
     "zlib": {"bazel_dep": "zlib", "version": "1.3.1.bcr.5", "target": "@zlib"},
-    "bzip2": {"bazel_dep": "bzip2", "version": "1.0.8.bcr.4", "target": "@bzip2"},
+    "bzip2": {"bazel_dep": "bzip2", "version": "1.0.8.bcr.4", "target": "@bzip2//:bz2"},
     "libexpat": {"bazel_dep": "libexpat", "version": "2.7.1.bcr.1", "target": "@libexpat"},
     "zstd": {"bazel_dep": "zstd", "version": "1.5.7.bcr.1", "target": "@zstd"},
-    "openssl": {"bazel_dep": "openssl", "version": "3.3.1.bcr.13", "target": "@openssl"},
+    "openssl": {"bazel_dep": "openssl", "version": "3.3.1.bcr.13", "target": "@openssl//:ssl"},
     "libxml2": {"bazel_dep": "libxml2", "version": "2.15.4", "target": "@libxml2"},
     "lz4": {"bazel_dep": "lz4", "version": "1.10.0.bcr.2", "target": "@lz4"},
     "snappy": {"bazel_dep": "snappy", "version": "1.2.2.bcr.3", "target": "@snappy"},
-    "ncurses": {"bazel_dep": "ncurses", "version": "6.4.20221231.bcr.15", "target": "@ncurses"},
+    "ncurses": {"bazel_dep": "ncurses", "version": "6.4.20221231.bcr.15", "target": "@ncurses//:ncurses"},
     "linux-pam": {"bazel_dep": "linux-pam", "version": "1.7.3", "target": "@linux-pam"},
     "libsodium": {"bazel_dep": "libsodium", "version": "1.0.19", "target": "@libsodium"},
     "gmp": {"bazel_dep": "gmp", "version": "6.3.0.bcr.5", "target": "@gmp"},
@@ -131,7 +176,7 @@ NATIVE_DEP_CONFIGS: List[Dict[str, Any]] = [
     },
     {
         "patterns": [r"-lbz2\b", r"-lbzip2\b", r"['\"]bzip2['\"]", r"['\"]bz2['\"]"],
-        "target": "@bzip2",
+        "target": "@bzip2//:bz2",
     },
     {
         "patterns": [r"-lexpat\b", r"['\"]expat['\"]", r"['\"]libexpat['\"]"],
@@ -142,8 +187,16 @@ NATIVE_DEP_CONFIGS: List[Dict[str, Any]] = [
         "target": "@zstd",
     },
     {
-        "patterns": [r"-lssl\b", r"-lcrypto\b", r"['\"]ssl['\"]", r"['\"]crypto['\"]", r"['\"]openssl['\"]"],
-        "target": "@openssl",
+        "patterns": [
+            r"-lssl\b",
+            r"-lcrypto\b",
+            r"['\"]ssl['\"]",
+            r"['\"]crypto['\"]",
+            r"['\"]openssl['\"]",
+            r"\blibcrypto\b",
+            r"\blibssl\b",
+        ],
+        "target": "@openssl//:ssl",
     },
     {
         "patterns": [r"-lxml2\b", r"['\"]xml2['\"]", r"['\"]libxml2['\"]"],
@@ -159,7 +212,7 @@ NATIVE_DEP_CONFIGS: List[Dict[str, Any]] = [
     },
     {
         "patterns": [r"-lncurses\b", r"['\"]ncurses['\"]"],
-        "target": "@ncurses",
+        "target": "@ncurses//:ncurses",
     },
     {
         "patterns": [r"-lpam\b", r"['\"]pam['\"]"],
@@ -390,8 +443,17 @@ class DistributionInspection:
     target_compatible_with: List[str] = field(default_factory=list)
     exec_compatible_with: List[str] = field(default_factory=list)
     overlay_files: Dict[str, bytes] = field(default_factory=dict)
+    file_copies: List[Tuple[str, str]] = field(default_factory=list)
     output_loc: str = ""
     t_files: List[str] = field(default_factory=list)
+
+    def add_file_copy(self, src: str, dest: str) -> None:
+        if src == dest:
+            return
+        for s, d in self.file_copies:
+            if d == dest:
+                return
+        self.file_copies.append((src, dest))
 
 
 class HeuristicsEngine:
@@ -432,7 +494,7 @@ class HeuristicsEngine:
 
             # Skip auxiliary test and scratch directories
             parts = Path(rel_dir).parts
-            if any(p in ["t", "xt", "_xs", "blib", ".git"] for p in parts):
+            if any(p in ["t", "xt", "_xs", "blib", ".git", "examples", "example", "eg", "demo", "samples"] for p in parts):
                 continue
 
             for f in files:
@@ -472,7 +534,7 @@ class HeuristicsEngine:
             else:
                 fragment_xs.append(xs)
 
-            # Look for INCLUDE: <file> and #include "<file>.c"
+            # Look for INCLUDE: <file>
             for line in content.splitlines():
                 sline = line.strip()
                 if sline.startswith("INCLUDE:"):
@@ -483,11 +545,30 @@ class HeuristicsEngine:
                         for candidate in (inc_target, resolved):
                             if candidate not in fragment_xs:
                                 fragment_xs.append(candidate)
-                elif sline.startswith("#") and "include" in sline:
+
+        # Inspect XS and C files for included .c files
+        for src in xs_files + c_files:
+            src_path = extract_dir / src
+            content = self._safe_read_text(src_path)
+            for line in content.splitlines():
+                sline = line.strip()
+                if sline.startswith("#") and "include" in sline:
                     c_includes = self._extract_c_includes(sline)
+                    rel_dir = Path(src).parent
                     for c_inc in c_includes:
-                        if c_inc not in included_c_files:
-                            included_c_files.append(c_inc)
+                        resolved = (rel_dir / c_inc).as_posix() if rel_dir != Path(".") else c_inc
+                        chosen = None
+                        if (extract_dir / resolved).exists():
+                            chosen = resolved
+                        elif (extract_dir / c_inc).exists():
+                            chosen = c_inc
+                        elif resolved in inspection.overlay_files:
+                            chosen = resolved
+                        elif c_inc in inspection.overlay_files:
+                            chosen = c_inc
+
+                        if chosen and chosen not in included_c_files:
+                            included_c_files.append(chosen)
 
         # Included XS fragments must not be compiled as top-level XS units
         top_level_xs = [x for x in top_level_xs if x not in fragment_xs]
@@ -495,13 +576,12 @@ class HeuristicsEngine:
         inspection.fragment_xs = fragment_xs
         inspection.included_c_files = included_c_files
 
-        # 3. Dynamic constants: check fallback/constants.h and fallback/constants.xs
-        fallback_h = extract_dir / "fallback" / "constants.h"
-        fallback_xs = extract_dir / "fallback" / "constants.xs"
-        if fallback_h.exists():
-            inspection.overlay_files["constants.h"] = fallback_h.read_bytes()
-        if fallback_xs.exists():
-            inspection.overlay_files["constants.xs"] = fallback_xs.read_bytes()
+        # 3. Dynamic constants: check fallback/ directory for headers/xs/inc/c files
+        fallback_dir = extract_dir / "fallback"
+        if fallback_dir.is_dir():
+            for f in sorted(fallback_dir.glob("*")):
+                if f.is_file() and f.suffix in (".h", ".xs", ".inc", ".c", ".xsi"):
+                    inspection.add_file_copy(f"fallback/{f.name}", f.name)
 
         # 4. Synthesize Driver.xsi and DBI headers for DBD drivers
         if dist_name.startswith("DBD-") and dist_name != "DBD-Mock":
@@ -513,7 +593,28 @@ class HeuristicsEngine:
                 for h_f in driver_xst.parent.glob("*.h"):
                     inspection.overlay_files[h_f.name] = h_f.read_bytes()
 
-        # 5. Discover test files in t/
+        # 5. Synthesize ppport.h if referenced and missing
+        if not (extract_dir / "ppport.h").exists():
+            needs_ppport = False
+            for f in xs_files + c_files:
+                p = extract_dir / f
+                if p.is_file():
+                    content = p.read_text(encoding="utf-8", errors="ignore")
+                    if 'include "ppport.h"' in content or "include <ppport.h>" in content:
+                        needs_ppport = True
+                        break
+            if not needs_ppport:
+                for script in ["Makefile.PL", "Build.PL"]:
+                    sp = extract_dir / script
+                    if sp.is_file():
+                        sc = sp.read_text(encoding="utf-8", errors="ignore")
+                        if "use_ppport" in sc or "Devel::PPPort" in sc:
+                            needs_ppport = True
+                            break
+            if needs_ppport:
+                inspection.add_file_copy("@rules_cpan//cpan/resources/ppport:ppport.h", "ppport.h")
+
+        # 6. Discover test files in t/
         t_dir = extract_dir / "t"
         t_files: List[str] = []
         if t_dir.is_dir():
@@ -527,7 +628,7 @@ class HeuristicsEngine:
         inspection.t_files = t_files
 
         # 6. Inspect Makefile.PL and Build.PL for native libs, defines, and run build simulation
-        self._inspect_build_scripts(extract_dir, inspection)
+        self._inspect_build_scripts(extract_dir, inspection, generator_metadata=generator_metadata)
 
         # 7. Incorporate GeneratorMetadata customizations
         if generator_metadata:
@@ -555,6 +656,35 @@ class HeuristicsEngine:
 
         return inspection
 
+    def _find_ppport_resource(self) -> Optional[Path]:
+        """Locates generated or runfile ppport.h header."""
+        # 1. Check relative to this source file
+        p = Path(__file__).resolve().parent.parent.parent / "resources" / "ppport" / "ppport.h"
+        if p.exists():
+            return p
+        # 2. Check Bazel runfiles environment variables
+        for env_var in ("RUNFILES_DIR", "TEST_SRCDIR"):
+            rf = os.environ.get(env_var)
+            if rf:
+                for cand in (
+                    Path(rf) / "rules_cpan" / "cpan" / "resources" / "ppport" / "ppport.h",
+                    Path(rf) / "_main" / "cpan" / "resources" / "ppport" / "ppport.h",
+                    Path(rf) / "cpan" / "resources" / "ppport" / "ppport.h",
+                ):
+                    if cand.exists():
+                        return cand
+        # 3. Check bazel-bin in workspace directory
+        workspace_dir = os.environ.get("BUILD_WORKSPACE_DIRECTORY")
+        if workspace_dir:
+            cand = Path(workspace_dir) / "bazel-bin" / "cpan" / "resources" / "ppport" / "ppport.h"
+            if cand.exists():
+                return cand
+        for root in (Path.cwd(), Path(__file__).resolve().parents[3]):
+            cand = root / "bazel-bin" / "cpan" / "resources" / "ppport" / "ppport.h"
+            if cand.exists():
+                return cand
+        return None
+
     def _safe_read_text(self, file_path: Path) -> str:
         """Safely reads file as UTF-8 or latin1 text."""
         try:
@@ -576,6 +706,7 @@ class HeuristicsEngine:
         self,
         extract_dir: Path,
         inspection: DistributionInspection,
+        generator_metadata: Optional[GeneratorMetadata] = None,
     ) -> None:
         """Scans Makefile.PL / Build.PL and simulates execution to capture generated code."""
         makefile_pl = extract_dir / "Makefile.PL"
@@ -596,53 +727,133 @@ class HeuristicsEngine:
                         inspection.native_deps.append(target)
                     break
 
-        # Search for preprocessor defines: -D...
-        for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", script_text):
-            name = m.group(1)
-            val = m.group(2)
-            if val is not None:
-                if "$" in val or not re.match(r'^[A-Za-z0-9_."\'-]+$', val):
-                    continue
-                clean_val = re.sub(r'[\'\"\\/]+$', '', val).strip()
-                clean_def = f"{name}={clean_val}"
-            else:
-                clean_def = name
-            if clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
-                inspection.defines.append(clean_def)
-
         # Attempt build system dry-run if Makefile.PL exists
-        if not makefile_pl.exists():
-            return
+        if makefile_pl.exists():
+            existing_files = {p for p in extract_dir.rglob("*") if p.is_file()}
+            try:
+                env = dict(os.environ)
+                env["PERL_MM_USE_DEFAULT"] = "1"
+                env["AUTOMATED_TESTING"] = "1"
+                env["NONINTERACTIVE_TESTING"] = "1"
+                subprocess.run(
+                    ["perl", "Makefile.PL"],
+                    cwd=str(extract_dir),
+                    capture_output=True,
+                    stdin=subprocess.DEVNULL,
+                    timeout=5,
+                    env=env,
+                )
+            except Exception:
+                pass
 
-        existing_files = {p for p in extract_dir.rglob("*") if p.is_file()}
-        try:
-            env = dict(os.environ)
-            env["PERL_MM_USE_DEFAULT"] = "1"
-            env["AUTOMATED_TESTING"] = "1"
-            env["NONINTERACTIVE_TESTING"] = "1"
-            subprocess.run(
-                ["perl", "Makefile.PL"],
-                cwd=str(extract_dir),
-                capture_output=True,
-                stdin=subprocess.DEVNULL,
-                timeout=5,
-                env=env,
+            existing_file_content_to_rel: Dict[bytes, str] = {}
+            for p in existing_files:
+                try:
+                    c = p.read_bytes()
+                    if c not in existing_file_content_to_rel:
+                        existing_file_content_to_rel[c] = p.relative_to(extract_dir).as_posix()
+                except Exception:
+                    pass
+
+            new_files = {p for p in extract_dir.rglob("*") if p.is_file()} - existing_files
+            all_cc_excludes = list(generator_metadata.cc_srcs_exclude) if generator_metadata and generator_metadata.cc_srcs_exclude else []
+            all_cc_excludes.extend(["bzip2-src/**", "bzlib-src/**", "zlib-src/**"])
+
+            for new_file in new_files:
+                rel = new_file.relative_to(extract_dir).as_posix()
+                if rel.startswith(("blib", ".", "conf")):
+                    continue
+
+                file_bytes = new_file.read_bytes()
+                if file_bytes in existing_file_content_to_rel:
+                    orig_rel = existing_file_content_to_rel[file_bytes]
+                    if any(fnmatch.fnmatch(orig_rel, pat) or fnmatch.fnmatch(rel, pat) for pat in all_cc_excludes):
+                        continue
+                    inspection.add_file_copy(orig_rel, rel)
+                    if rel.endswith(".c") and rel not in inspection.included_c_files:
+                        inspection.included_c_files.append(rel)
+                    continue
+
+                # Check for generated xssubs.c or constants
+                if rel.endswith((".c", ".h", ".xs", ".inc")):
+                    if any(fnmatch.fnmatch(rel, pat) for pat in all_cc_excludes):
+                        continue
+                    file_content = self._safe_read_text(new_file)
+                    if "xssubs.c" in rel:
+                        file_content = self.wrap_constants_in_ifdef(file_content)
+                    if rel.endswith(".c"):
+                        if rel not in inspection.included_c_files:
+                            inspection.included_c_files.append(rel)
+                    inspection.overlay_files[rel] = file_content.encode("utf-8")
+
+        # Extract preprocessor defines and PM mappings
+        makefile_file = extract_dir / "Makefile"
+        if makefile_file.exists():
+            mf_text = self._safe_read_text(makefile_file)
+            # 1. Parse defines from Makefile DEFINE line
+            define_match = re.search(r"^DEFINE\s*=\s*(.*)$", mf_text, re.MULTILINE)
+            if define_match:
+                for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", define_match.group(1)):
+                    name = m.group(1)
+                    val = m.group(2)
+                    if val is not None:
+                        clean_val = re.sub(r'[\'\"\\/]+$', '', val).strip()
+                        clean_def = f"{name}={clean_val}"
+                    else:
+                        clean_def = name
+                    if clean_def and clean_def not in inspection.defines:
+                        inspection.defines.append(clean_def)
+
+            # 2. Parse pm_to_blib mappings for root or non-standard .pm files
+            inst_libdir_match = re.search(r"^INST_LIBDIR\s*=\s*(.*)$", mf_text, re.MULTILINE)
+            inst_libdir_prefix = ""
+            if inst_libdir_match:
+                raw_libdir = inst_libdir_match.group(1).strip()
+                raw_libdir = raw_libdir.replace("$(INST_LIB)", "").strip("/\\ ")
+                inst_libdir_prefix = raw_libdir
+
+            pm_mappings = re.findall(
+                r"'([^'\s]+)'\s+'\$\((INST_LIB|INST_LIBDIR|INST_ARCHLIB)\)/([^'\s]+)'",
+                mf_text,
             )
-        except Exception:
-            return
+            for src_rel, var_type, dest_sub in pm_mappings:
+                if var_type == "INST_LIBDIR" and inst_libdir_prefix:
+                    dest_rel = f"{inst_libdir_prefix}/{dest_sub}".strip("/")
+                else:
+                    dest_rel = dest_sub
+                if src_rel.endswith(".pm") and dest_rel.endswith(".pm"):
+                    src_path = extract_dir / src_rel
+                    dest_path = extract_dir / "lib" / dest_rel
+                    if src_path.exists() and not dest_path.exists():
+                        target_overlay_rel = f"lib/{dest_rel}"
+                        inspection.add_file_copy(src_rel, target_overlay_rel)
+        else:
+            # Fallback search for preprocessor defines from script_text when Makefile wasn't generated
+            for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", script_text):
+                name = m.group(1)
+                val = m.group(2)
+                if val is not None:
+                    if "$" in val or not re.match(r'^[A-Za-z0-9_."\'-]+$', val):
+                        continue
+                    clean_val = re.sub(r'[\'\"\\/]+$', '', val).strip()
+                    clean_def = f"{name}={clean_val}"
+                else:
+                    clean_def = name
+                if clean_def in ("XSH_MULTIPLICITY=0", "XSH_FORKSAFE=0", "SQLITE_MAX_LENGTH"):
+                    continue
+                if clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
+                    inspection.defines.append(clean_def)
 
-        new_files = {p for p in extract_dir.rglob("*") if p.is_file()} - existing_files
-        for new_file in new_files:
-            rel = new_file.relative_to(extract_dir).as_posix()
-            if rel.startswith("blib") or rel.startswith("."):
-                continue
-
-            # Check for generated xssubs.c or constants
-            if rel.endswith((".c", ".h", ".xs", ".inc")):
-                file_content = self._safe_read_text(new_file)
-                if "xssubs.c" in rel:
-                    file_content = self.wrap_constants_in_ifdef(file_content)
-                inspection.overlay_files[rel] = file_content.encode("utf-8")
+            # Fallback check for root .pm matching Foo-Bar -> lib/Foo/Bar.pm
+            dist_name = inspection.dist_name
+            parts = dist_name.split("-")
+            leaf_pm = f"{parts[-1]}.pm"
+            leaf_path = extract_dir / leaf_pm
+            dest_rel = "/".join(parts) + ".pm"
+            dest_path = extract_dir / "lib" / dest_rel
+            if leaf_path.exists() and not dest_path.exists():
+                target_overlay_rel = f"lib/{dest_rel}"
+                inspection.add_file_copy(leaf_pm, target_overlay_rel)
 
     def wrap_constants_in_ifdef(self, content: str) -> str:
         """Wraps newCONSTSUB calls in #ifdef guards for platform portability."""
@@ -858,15 +1069,48 @@ test_suite(
 )
 """
 
+        copy_file_rules: List[str] = []
+        extra_perl_srcs: List[str] = []
+        extra_cc_srcs: List[str] = []
+        extra_textual_copies: List[str] = []
+
+        if inspection.file_copies:
+            for src_path, dest_path in inspection.file_copies:
+                rule_name = "copy_" + re.sub(r'[^a-zA-Z0-9_]', '_', dest_path)
+                src_val = f'"{src_path}"'
+                copy_file_rules.append(f"""copy_file(
+    name = "{rule_name}",
+    src = {src_val},
+    out = "{dest_path}",
+)""")
+                if dest_path.endswith((".pm", ".pod")):
+                    extra_perl_srcs.append(f'":{rule_name}"')
+                elif dest_path.endswith(".c"):
+                    if dest_path in inspection.included_c_files:
+                        extra_textual_copies.append(f'":{rule_name}"')
+                    else:
+                        extra_cc_srcs.append(f'":{rule_name}"')
+                elif dest_path.endswith((".h", ".inc", ".xsi", ".xs")):
+                    extra_textual_copies.append(f'":{rule_name}"')
+
+        load_copy_file = 'load("@bazel_lib//lib:copy_file.bzl", "copy_file")\n' if copy_file_rules else ""
+        copy_file_block = "\n".join(copy_file_rules) + "\n\n" if copy_file_rules else ""
+
+        srcs_pattern_parts = [f'glob([{srcs_patterns_str}], allow_empty = True)']
+        if extra_perl_srcs:
+            srcs_expr = "[\n        " + ",\n        ".join(extra_perl_srcs) + ",\n    ] + " + srcs_pattern_parts[0]
+        else:
+            srcs_expr = srcs_pattern_parts[0]
+
         if not inspection.is_xs:
             return f"""# Auto-generated by rules_cpan for {dist}
-load("@rules_perl//perl:defs.bzl", "perl_library"{load_perl_test})
+{load_copy_file}load("@rules_perl//perl:defs.bzl", "perl_library"{load_perl_test})
 
 package(default_visibility = ["//visibility:public"])
 
-perl_library(
+{copy_file_block}perl_library(
     name = "{dist}",
-    srcs = glob([{srcs_patterns_str}], allow_empty = True),
+    srcs = {srcs_expr},
     data = glob([{data_patterns_str}], exclude = [{data_excludes_str}], allow_empty = True),
     includes = [{perl_lib_includes_str}],{target_compat_str}{exec_compat_str}
     deps = [{cpan_deps_str}],
@@ -920,6 +1164,14 @@ alias(
             '"eg/**"',
             '"samples/**"',
             '"demo/**"',
+            '"**/examples/**"',
+            '"**/example/**"',
+            '"**/eg/**"',
+            '"**/samples/**"',
+            '"**/demo/**"',
+            '"**/contrib/**"',
+            '"**/programs/**"',
+            '"**/tests/**"',
         ]
         if generator_metadata and generator_metadata.cc_srcs_exclude:
             for exc in generator_metadata.cc_srcs_exclude:
@@ -989,6 +1241,7 @@ alias(
             for inc_c in inspection.included_c_files
             if inc_c.endswith(".c")
         ]
+        extra_textual.extend(extra_textual_copies)
         # Deduplicate
         seen_extra: set[str] = set()
         dedup_extra: List[str] = []
@@ -1000,7 +1253,7 @@ alias(
             prefix = "[\n        " + ",\n        ".join(dedup_extra) + ",\n    ] + "
         else:
             prefix = ""
-        textual_hdrs_str = prefix + """glob([
+        textual_hdrs_str = prefix + f"""glob([
         "*.h",
         "**/*.h",
         "*.xs",
@@ -1009,21 +1262,27 @@ alias(
         "**/*.xsi",
         "*.inc",
         "**/*.inc",
-    ], allow_empty = True)"""
+    ], exclude = [{cc_excludes_str}], allow_empty = True)"""
+
+        cc_srcs_pattern = f"""glob([
+        "*.c",
+        "**/*.c",
+    ], exclude = [{cc_excludes_str}], allow_empty = True)"""
+        if extra_cc_srcs:
+            cc_srcs_expr = "[\n        " + ",\n        ".join(extra_cc_srcs) + ",\n    ] + " + cc_srcs_pattern
+        else:
+            cc_srcs_expr = cc_srcs_pattern
 
         return f"""# Auto-generated by rules_cpan for {dist} (XS extension)
 load("@rules_cpan//cpan:defs.bzl", "cpan_xs")
-load("@rules_perl//perl:defs.bzl", "perl_library"{load_perl_test})
+{load_copy_file}load("@rules_perl//perl:defs.bzl", "perl_library"{load_perl_test})
 
 package(default_visibility = ["//visibility:public"])
 
-cpan_xs(
+{copy_file_block}cpan_xs(
     name = "{dist}_xs",
     srcs = {xs_srcs_str},
-    cc_srcs = glob([
-        "*.c",
-        "**/*.c",
-    ], exclude = [{cc_excludes_str}], allow_empty = True),{defines_block}{linkopts_block}{xs_includes_str}{xs_exec_reqs_str}{target_compat_str}{exec_compat_str}
+    cc_srcs = {cc_srcs_expr},{defines_block}{linkopts_block}{xs_includes_str}{xs_exec_reqs_str}{target_compat_str}{exec_compat_str}
     output_loc = "{output_loc}",
     textual_hdrs = {textual_hdrs_str},
     typemaps = glob([
@@ -1037,7 +1296,7 @@ cpan_xs(
 
 perl_library(
     name = "{dist}",
-    srcs = glob([{srcs_patterns_str}], allow_empty = True),
+    srcs = {srcs_expr},
     data = [
         ":{dist}_xs",
     ] + glob([{data_patterns_str}], exclude = [{data_excludes_str}], allow_empty = True),
@@ -1091,6 +1350,7 @@ alias(
         cpan_deps: Optional[List[Tuple[str, str]]] = None,
         test_deps: Optional[List[str]] = None,
         modules_dir: Optional[Path] = None,
+        needs_bazel_lib: bool = False,
     ) -> str:
         """Generates MODULE.bazel for the BCR module."""
         lines = [
@@ -1106,6 +1366,9 @@ alias(
         ]
 
         seen_deps = {"rules_cpan", "rules_perl", "rules_cc", "platforms", module_name}
+        if needs_bazel_lib and "bazel_lib" not in seen_deps:
+            seen_deps.add("bazel_lib")
+            lines.append('bazel_dep(name = "bazel_lib", version = "3.8.0")')
 
         if native_deps:
             for nat_target in native_deps:

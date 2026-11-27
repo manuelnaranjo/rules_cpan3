@@ -1,0 +1,20 @@
+load("@bazel_lib//lib:run_binary.bzl", "run_binary")
+load("@rules_perl//perl:defs.bzl", "perl_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+perl_binary(
+    name = "generate_ppport",
+    srcs = ["generate_ppport.pl"],
+    main = "generate_ppport.pl",
+    deps = [
+        "@perl-devel-ppport//:Devel-PPPort",
+    ],
+)
+
+run_binary(
+    name = "ppport_h",
+    outs = ["ppport.h"],
+    args = ["$(execpath :ppport.h)"],
+    tool = ":generate_ppport",
+)

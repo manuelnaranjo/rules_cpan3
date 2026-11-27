@@ -170,9 +170,11 @@ WriteMakefile(
         self.assertIn("@libyaml", inspection.native_deps)
         self.assertIn("SAMPLE_OPT", inspection.defines)
 
-        # Dynamic fallback constants should be copied to overlay
-        self.assertIn("constants.h", inspection.overlay_files)
-        self.assertIn("constants.xs", inspection.overlay_files)
+        # Dynamic fallback constants should be tracked as file copies
+        self.assertIn(("fallback/constants.h", "constants.h"), inspection.file_copies)
+        self.assertIn(("fallback/constants.xs", "constants.xs"), inspection.file_copies)
+        self.assertNotIn("constants.h", inspection.overlay_files)
+        self.assertNotIn("constants.xs", inspection.overlay_files)
 
         build_bazel = self.heuristics.generate_build_bazel(
             inspection=inspection,
@@ -347,9 +349,10 @@ perl_library(name = "Algorithm-Diff")
         new_ver = self.manager.bump_build_id("perl-compress-raw-zlib", "2.226")
         self.assertEqual(new_ver, "2.226.cpan2")
         self.assertTrue((mod_dir / "2.226.cpan2" / "MODULE.bazel").exists())
+        self.assertFalse((mod_dir / "2.226.cpan1").exists())
 
         meta = json.loads((mod_dir / "metadata.json").read_text(encoding="utf-8"))
-        self.assertIn("2.226.cpan2", meta["versions"])
+        self.assertEqual(meta["versions"], ["2.226.cpan2"])
 
 
 class WorkspaceSyncTest(unittest.TestCase):
@@ -737,6 +740,138 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
         self.assertEqual(count, 2)
         self.assertTrue((d1 / "overlay" / "BUILD.bazel").exists())
         self.assertTrue((d2 / "overlay" / "BUILD.bazel").exists())
+
+    def _create_sample_tar(self, prefix: str, files: dict[str, str]) -> Path:
+        import io
+        import tarfile
+        tar_buf = io.BytesIO()
+        with tarfile.open(fileobj=tar_buf, mode="w:gz") as tar:
+            for rel_path, content in files.items():
+                encoded = content.encode("utf-8")
+                ti = tarfile.TarInfo(f"{prefix}/{rel_path}")
+                ti.size = len(encoded)
+                tar.addfile(ti, io.BytesIO(encoded))
+        tar_path = self.root_path / f"{prefix.lower()}.tar.gz"
+        tar_path.write_bytes(tar_buf.getvalue())
+        return tar_path
+
+    def test_xs_included_c_files_relative_resolution(self) -> None:
+        """Verifies that #include of C files in subdirectory XS files are resolved to their relative path."""
+        tar_path = self._create_sample_tar(
+            "Authen-Sample-1.00",
+            {
+                "lib/Authen/Sample.xs": 'MODULE = Authen::Sample\n#include "sample_constants.c"\n',
+                "lib/Authen/sample_constants.c": '/* constants */\n',
+                "lib/Authen/Sample.pm": 'package Authen::Sample;\n1;\n',
+            },
+        )
+        manager = IndexManager(index_dir=self.index_dir)
+        d = manager.create_new_port(
+            dist_name="Authen-Sample",
+            upstream_version="1.00",
+            archive_url=tar_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar_path,
+            target_version="1.00.cpan1",
+        )
+        build_bazel = (d / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn('"lib/Authen/sample_constants.c"', build_bazel)
+        self.assertNotIn('"sample_constants.c"', build_bazel)
+
+    def test_root_pm_mapping_to_overlay(self) -> None:
+        """Verifies that root .pm files are mapped into lib/ via copy_file without checking in file."""
+        tar_path = self._create_sample_tar(
+            "Text-SampleDisplay-1.00",
+            {
+                "SampleDisplay.pm": 'package Text::SampleDisplay;\n1;\n',
+                "Makefile.PL": (
+                    'use ExtUtils::MakeMaker;\n'
+                    'WriteMakefile(NAME => "Text::SampleDisplay", VERSION_FROM => "SampleDisplay.pm");\n'
+                ),
+            },
+        )
+        manager = IndexManager(index_dir=self.index_dir)
+        d = manager.create_new_port(
+            dist_name="Text-SampleDisplay",
+            upstream_version="1.00",
+            archive_url=tar_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar_path,
+            target_version="1.00.cpan1",
+        )
+        build_bazel = (d / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn("copy_file(", build_bazel)
+        self.assertIn("SampleDisplay.pm", build_bazel)
+        self.assertIn("lib/Text/SampleDisplay.pm", build_bazel)
+        source_json = json.loads((d / "source.json").read_text(encoding="utf-8"))
+        self.assertNotIn("lib/Text/SampleDisplay.pm", source_json.get("overlay", {}))
+        self.assertFalse((d / "overlay" / "lib" / "Text" / "SampleDisplay.pm").exists())
+        module_bazel = (d / "MODULE.bazel").read_text(encoding="utf-8")
+        self.assertIn('bazel_dep(name = "bazel_lib"', module_bazel)
+
+    def test_build_requires_included_in_test_deps(self) -> None:
+        """Verifies that build dependencies from lockfile are included in test_deps."""
+        tar_path = self._create_sample_tar(
+            "Sample-BuildReq-1.00",
+            {
+                "lib/Sample/BuildReq.pm": 'package Sample::BuildReq;\n1;\n',
+                "t/01-test.t": 'print "1..1\\nok 1\\n";\n',
+            },
+        )
+        lockfile = self.root_path / "cpan.lock.json"
+        lock_data = {
+            "version": "1.0",
+            "distributions": {
+                "Sample-BuildReq": {
+                    "version": "1.00",
+                    "dependencies": {
+                        "runtime": [],
+                        "build": ["Test-Helper"],
+                        "test": [],
+                    },
+                    "provides": ["Sample::BuildReq"],
+                }
+            },
+        }
+        lockfile.write_text(json.dumps(lock_data), encoding="utf-8")
+
+        manager = IndexManager(index_dir=self.index_dir)
+        manager.load_lockfile(lockfile)
+        d = manager.create_new_port(
+            dist_name="Sample-BuildReq",
+            upstream_version="1.00",
+            archive_url=tar_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar_path,
+            target_version="1.00.cpan1",
+        )
+        build_bazel = (d / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn("@perl-test-helper", build_bazel)
+
+    def test_ppport_h_synthesis_when_missing(self) -> None:
+        """Verifies that ppport.h is emitted via copy_file from rules_cpan without checking in file."""
+        tar_path = self._create_sample_tar(
+            "Sample-Ppport-1.00",
+            {
+                "Sample.xs": '#include "EXTERN.h"\n#include "perl.h"\n#include "XSUB.h"\n#include "ppport.h"\nMODULE = Sample::Ppport\n',
+                "lib/Sample/Ppport.pm": 'package Sample::Ppport;\n1;\n',
+            },
+        )
+        manager = IndexManager(index_dir=self.index_dir)
+        d = manager.create_new_port(
+            dist_name="Sample-Ppport",
+            upstream_version="1.00",
+            archive_url=tar_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar_path,
+            target_version="1.00.cpan1",
+        )
+        build_bazel = (d / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn("copy_file(", build_bazel)
+        self.assertIn("@rules_cpan//cpan/resources/ppport:ppport.h", build_bazel)
+        source_json = json.loads((d / "source.json").read_text(encoding="utf-8"))
+        self.assertNotIn("ppport.h", source_json.get("overlay", {}))
+        self.assertFalse((d / "overlay" / "ppport.h").exists())
 
 
 if __name__ == "__main__":
