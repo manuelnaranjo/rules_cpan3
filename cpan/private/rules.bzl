@@ -258,8 +258,9 @@ def _cpan_xs_implementation(ctx):
         out = ctx.actions.declare_file(paths.join("_xs", c_execpath))
 
         args = ctx.actions.args()
-        args.add(xsubpp.main)
+        args.add(ctx.file._xsubpp_runner)
         args.add_all(ctx.files.typemaps, before_each = "--typemap")
+        args.add_all(ctx.files.textual_hdrs, before_each = "--include")
         args.add("--output", out)
         args.add(src)
 
@@ -267,7 +268,7 @@ def _cpan_xs_implementation(ctx):
         ctx.actions.run(
             mnemonic = "PerlTranslitterate",
             outputs = [out],
-            inputs = [src] + ctx.files.typemaps + ctx.files.textual_hdrs,
+            inputs = [src, ctx.file._xsubpp_runner] + ctx.files.typemaps + ctx.files.textual_hdrs,
             arguments = [args],
             progress_message = "Translitterating %s to %s" % (src.short_path, out.short_path),
             executable = xsubpp.interpreter,
@@ -378,6 +379,10 @@ cpan_xs = rule(
             cfg = "exec",
             providers = [PerlToolInfo],
             default = Label("@rules_perl//perl/private:xsubpp"),
+        ),
+        "_xsubpp_runner": attr.label(
+            default = Label("//cpan/private:xsubpp_runner.pl"),
+            allow_single_file = True,
         ),
     },
     implementation = _cpan_xs_implementation,

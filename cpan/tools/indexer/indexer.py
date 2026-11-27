@@ -382,7 +382,8 @@ class IndexManager:
             except Exception as e:
                 logger.warning("Could not fully regenerate port from tarball for %s: %s", module_name, e)
 
-        shutil.copytree(src_dir, dest_dir)
+        # Move instead of copy
+        shutil.move(str(src_dir), str(dest_dir))
 
         # Update MODULE.bazel
         dest_module = dest_dir / "MODULE.bazel"
@@ -396,7 +397,7 @@ class IndexManager:
             )
             dest_module.write_text(updated, encoding="utf-8")
 
-        self._add_version_to_metadata(module_dir, module_name, new_version)
+        self._add_version_to_metadata(module_dir, module_name, new_version, replace_version=latest_item[2])
         logger.info("Bumped build-id for %s: %s -> %s", module_name, latest_item[2], new_version)
         return new_version
 
@@ -464,7 +465,11 @@ class IndexManager:
             archive_sha256=archive_sha256,
             target_version=target_version,
             existing_overlay_dir=existing_overlay if existing_overlay.exists() else None,
+            replace_version=current_full_ver if (bump_build_id and src_ver_dir != (module_dir / target_version)) else None,
         )
+
+        if bump_build_id and src_ver_dir != dest_dir and src_ver_dir.exists():
+            shutil.rmtree(src_ver_dir)
 
         # Preserve and update MODULE.bazel from source version if available
         dest_mb = dest_dir / "MODULE.bazel"
@@ -505,6 +510,7 @@ class IndexManager:
         test_deps: Optional[List[str]] = None,
         target_version: Optional[str] = None,
         existing_overlay_dir: Optional[Path] = None,
+        replace_version: Optional[str] = None,
     ) -> Path:
         """Creates a brand new BCR module port using heuristics engine."""
         module_name = sanitize_module_name(dist_name)
@@ -536,7 +542,10 @@ class IndexManager:
             if lock_info:
                 deps = lock_info.get("dependencies", {})
                 if test_deps is None:
-                    test_deps = deps.get("test", [])
+                    test_deps = list(deps.get("test", []))
+                    for bd in deps.get("build", []):
+                        if bd not in test_deps:
+                            test_deps.append(bd)
                 if runtime_deps is None:
                     runtime_deps = deps.get("runtime", [])
                 if provides is None:
@@ -600,12 +609,16 @@ class IndexManager:
             top_dir = entries[0] if len(entries) == 1 and entries[0].is_dir() else extract_dir
 
             # Seed synthesized overlay with existing overlay files if available
+            upstream_files = {p.relative_to(top_dir).as_posix(): p.read_bytes() for p in top_dir.rglob("*") if p.is_file()}
             synthesized_overlay: Dict[str, bytes] = {}
             if existing_overlay_dir and existing_overlay_dir.is_dir():
                 for fpath in existing_overlay_dir.rglob("*"):
                     if fpath.is_file() and fpath.name != "BUILD.bazel":
                         rel_str = fpath.relative_to(existing_overlay_dir).as_posix()
-                        synthesized_overlay[rel_str] = fpath.read_bytes()
+                        content = fpath.read_bytes()
+                        if (rel_str in upstream_files and upstream_files[rel_str] == content) or rel_str == "ppport.h":
+                            continue
+                        synthesized_overlay[rel_str] = content
 
             # Apply patch_cmds if present
             deleted_c_files: List[str] = []
@@ -637,14 +650,32 @@ class IndexManager:
                 is_xs_hint=is_xs_hint,
                 generator_metadata=generator_metadata,
             )
-            if existing_overlay_dir and existing_overlay_dir.exists():
-                inspection.overlay_files = dict(synthesized_overlay)
-            else:
-                for s_rel, s_data in synthesized_overlay.items():
-                    inspection.overlay_files[s_rel] = s_data
+            merged_overlay = dict(synthesized_overlay)
+            merged_overlay.update(inspection.overlay_files)
+            # Remove any overlay files that are already satisfied by file_copies or duplicate top_dir files
+            copy_dests = {dest for _, dest in inspection.file_copies}
+            merged_overlay = {
+                k: v for k, v in merged_overlay.items()
+                if k not in copy_dests and k != "ppport.h" and (k not in upstream_files or upstream_files[k] != v)
+            }
+            inspection.overlay_files = merged_overlay
             for d_c in deleted_c_files:
                 if d_c not in inspection.deleted_files:
                     inspection.deleted_files.append(d_c)
+
+            # Prune stale overlay files not present in inspection
+            if dest_overlay.exists():
+                for f in list(dest_overlay.rglob("*")):
+                    if f.is_file():
+                        rel_f = f.relative_to(dest_overlay).as_posix()
+                        if rel_f != "BUILD.bazel" and rel_f not in inspection.overlay_files:
+                            f.unlink()
+                for d in sorted(list(dest_overlay.rglob("*")), key=lambda p: len(p.parts), reverse=True):
+                    if d.is_dir() and not any(d.iterdir()):
+                        try:
+                            d.rmdir()
+                        except Exception:
+                            pass
 
             # Write overlay files from inspection (constants.h, xssubs.c, etc.)
             overlay_sris: Dict[str, str] = {}
@@ -700,6 +731,7 @@ class IndexManager:
                 cpan_deps=resolved_cpan_deps,
                 test_deps=test_deps if inspection.t_files else None,
                 modules_dir=self.modules_dir,
+                needs_bazel_lib=len(inspection.file_copies) > 0,
             )
             mb_file = dest_dir / "MODULE.bazel"
             mb_file.write_text(module_bazel_content, encoding="utf-8")
@@ -728,7 +760,12 @@ class IndexManager:
             )
 
             # Write/update metadata.json
-            self._add_version_to_metadata(module_dir, dist_name, target_version)
+            self._add_version_to_metadata(
+                module_dir,
+                dist_name,
+                target_version,
+                replace_version=replace_version,
+            )
 
         logger.info("Created new port %s %s in %s", module_name, target_version, dest_dir)
         return dest_dir
@@ -776,7 +813,13 @@ class IndexManager:
                 return filename[: -len(ext)]
         return f"{dist_name}-{version}"
 
-    def _add_version_to_metadata(self, module_dir: Path, dist_name: str, new_version: str) -> None:
+    def _add_version_to_metadata(
+        self,
+        module_dir: Path,
+        dist_name: str,
+        new_version: str,
+        replace_version: Optional[str] = None,
+    ) -> None:
         meta_file = module_dir / "metadata.json"
         if meta_file.exists():
             try:
@@ -797,7 +840,10 @@ class IndexManager:
             }
 
         versions: List[str] = meta.get("versions", [])
-        if new_version not in versions:
+        if replace_version and replace_version in versions:
+            versions = [new_version if v == replace_version else v for v in versions]
+            meta["versions"] = versions
+        elif new_version not in versions:
             versions.append(new_version)
             meta["versions"] = versions
 
@@ -958,7 +1004,11 @@ class CPANIndexer:
         """Indexes a single distribution and returns the resolved BCR version."""
         res = self.index_mgr.resolve(dist_name, version)
         runtime_cpan_deps = dependencies.get("runtime", []) if dependencies else []
-        test_cpan_deps = dependencies.get("test", []) if dependencies else []
+        test_cpan_deps = list(dependencies.get("test", [])) if dependencies else []
+        if dependencies:
+            for bd in dependencies.get("build", []):
+                if bd not in test_cpan_deps:
+                    test_cpan_deps.append(bd)
 
         if res.status == "EXACT_MATCH":
             if self.bump_build_id:

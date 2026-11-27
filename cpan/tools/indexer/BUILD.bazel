@@ -8,6 +8,17 @@ py_library(
         "heuristics.py",
         "indexer.py",
     ],
+    data = [
+        "//cpan/resources/dbi:DBIXS.h",
+        "//cpan/resources/dbi:Driver.xst",
+        "//cpan/resources/dbi:Driver_xst.h",
+        "//cpan/resources/dbi:dbd_xsh.h",
+        "//cpan/resources/dbi:dbi_sql.h",
+        "//cpan/resources/dbi:dbipport.h",
+        "//cpan/resources/dbi:dbivport.h",
+        "//cpan/resources/dbi:dbixs_rev.h",
+        "//cpan/resources/ppport:ppport.h",
+    ],
     visibility = ["//visibility:public"],
 )
 
