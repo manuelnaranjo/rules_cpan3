@@ -151,7 +151,7 @@ class IndexManager:
         self.heuristics = HeuristicsEngine()
         self.lock_distributions: Dict[str, Dict[str, Any]] = {}
         self.lock_distributions_by_mod: Dict[str, Dict[str, Any]] = {}
-        self._lock = threading.Lock()
+        self._lock = threading.RLock()
 
     def load_lockfile(self, lockfile_path: Path) -> None:
         """Loads distribution dependency information from a cpan.lock.json file."""

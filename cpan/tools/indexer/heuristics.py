@@ -315,6 +315,7 @@ class GeneratorMetadata:
     extra_deps: List[str] = field(default_factory=list)
     patch_cmds: List[str] = field(default_factory=list)
     patch_cmds_win: List[str] = field(default_factory=list)
+    file_copies: Dict[str, str] = field(default_factory=dict)
 
     @classmethod
     def from_yaml_file(cls, path: Path) -> GeneratorMetadata:
@@ -352,12 +353,15 @@ class GeneratorMetadata:
             extra_deps=list(data.get("extra_deps") or data.get("runtime_deps") or []),
             patch_cmds=list(data.get("patch_cmds") or []),
             patch_cmds_win=list(data.get("patch_cmds_win") or []),
+            file_copies=dict(data.get("file_copies") or {}),
         )
 
     def to_dict(self) -> Dict[str, Any]:
         res: Dict[str, Any] = {}
         if self.is_xs is not None:
             res["is_xs"] = self.is_xs
+        if self.file_copies:
+            res["file_copies"] = self.file_copies
         if self.manual_tests:
             res["manual_tests"] = self.manual_tests
         if self.test_services:
@@ -650,6 +654,9 @@ class HeuristicsEngine:
                 inspection.target_compatible_with = list(generator_metadata.target_compatible_with)
             if generator_metadata.exec_compatible_with:
                 inspection.exec_compatible_with = list(generator_metadata.exec_compatible_with)
+            if generator_metadata.file_copies:
+                for src_c, dest_c in generator_metadata.file_copies.items():
+                    inspection.add_file_copy(src_c, dest_c)
             if generator_metadata.defines or generator_metadata.output_loc or generator_metadata.includes:
                 if len(xs_files) > 0 or len(c_files) > 0 or generator_metadata.output_loc:
                     inspection.is_xs = True
@@ -844,16 +851,16 @@ class HeuristicsEngine:
                 if clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
                     inspection.defines.append(clean_def)
 
-            # Fallback check for root .pm matching Foo-Bar -> lib/Foo/Bar.pm
-            dist_name = inspection.dist_name
-            parts = dist_name.split("-")
-            leaf_pm = f"{parts[-1]}.pm"
-            leaf_path = extract_dir / leaf_pm
-            dest_rel = "/".join(parts) + ".pm"
-            dest_path = extract_dir / "lib" / dest_rel
-            if leaf_path.exists() and not dest_path.exists():
-                target_overlay_rel = f"lib/{dest_rel}"
-                inspection.add_file_copy(leaf_pm, target_overlay_rel)
+        # Fallback check for root .pm matching Foo-Bar -> lib/Foo/Bar.pm
+        dist_name = inspection.dist_name
+        parts = dist_name.split("-")
+        leaf_pm = f"{parts[-1]}.pm"
+        leaf_path = extract_dir / leaf_pm
+        dest_rel = "/".join(parts) + ".pm"
+        dest_path = extract_dir / "lib" / dest_rel
+        if leaf_path.exists() and not dest_path.exists():
+            target_overlay_rel = f"lib/{dest_rel}"
+            inspection.add_file_copy(leaf_pm, target_overlay_rel)
 
     def wrap_constants_in_ifdef(self, content: str) -> str:
         """Wraps newCONSTSUB calls in #ifdef guards for platform portability."""

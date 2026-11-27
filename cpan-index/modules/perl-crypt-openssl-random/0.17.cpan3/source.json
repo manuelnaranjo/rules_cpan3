@@ -3,6 +3,6 @@
     "integrity": "sha256-pXGyQYG6qnbJZwTpKs/8aTT/WT44Da3idNtOQ8FArVE=",
     "strip_prefix": "Crypt-OpenSSL-Random-0.17",
     "overlay": {
-        "BUILD.bazel": "sha256-zK/MkRM/y794xTvjjXuf4l/+cxD0g9aHG0sAkYQdEGw="
+        "BUILD.bazel": "sha256-YusNWItWZeWcf56Wi2qMxxOZBbmZ+WsIn5Jp7TTkwVk="
     }
 }

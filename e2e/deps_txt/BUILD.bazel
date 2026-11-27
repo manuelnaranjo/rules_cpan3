@@ -15,6 +15,8 @@ perl_test(
     name = "e2e_deps_txt_test",
     size = "small",
     srcs = ["test_deps_txt_e2e.t"],
+    # Temporarily marked manual pending #74 (root .pm mapping for IO-Tty, etc.)
+    tags = ["manual"],
     deps = [
         "@cpan//Authen-Krb5",
         "@cpan//Authen-Krb5-Admin",

@@ -3,6 +3,6 @@
     "integrity": "sha256-XdScrNmD79YajD8aVlcbtzeF6xVZCLXXvsl+7XjfDFQ=",
     "strip_prefix": "Authen-Krb5-Admin-0.17",
     "overlay": {
-        "BUILD.bazel": "sha256-7EZRciW8QKPMOeYQPoWAH86lKRs2QVR3pIGoOOdDR7M="
+        "BUILD.bazel": "sha256-sdrvxb/IksFegTpQWbqyNwUptyM+gN09c+AzBwuGLeA="
     }
 }

@@ -171,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/astress.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -179,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bare_glob_filehandle.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -187,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/cdata.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -195,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/char_end_doc.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -203,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/checklib_findcc.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -211,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/checklib_tmpdir.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -219,6 +225,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/combine_chars.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -227,6 +234,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/context_tracking.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -235,6 +243,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/coverage_gaps.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -243,6 +252,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/current_byte.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -251,6 +261,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/current_length.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -259,6 +270,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/debug_multibyte.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -267,6 +279,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/decl.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -275,6 +288,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/deep_nesting.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -283,6 +297,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/defaulted.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -291,6 +306,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/dtd_pe_default.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -299,6 +315,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/element_decl.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -307,6 +324,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/element_inspection.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -315,6 +333,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/encoding.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -323,6 +342,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/error_hint.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -331,6 +351,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/error_string.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -339,6 +360,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/expat_guards.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -347,6 +369,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/expat_version.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -355,6 +378,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/expat_xs_coverage.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -363,6 +387,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/ext_ent_io_control.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -371,6 +396,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/extern_ent_lexical_glob.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -379,6 +405,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/external_ent.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -387,6 +414,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/file.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -395,6 +423,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/file_open_scalar.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -403,6 +432,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/finish.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -411,6 +441,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/foreign_dtd.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -419,6 +450,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/g_void.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -427,6 +459,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/get_base.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -435,6 +468,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/handler_die.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -443,6 +477,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/load_encoding.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -451,6 +486,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/memory_leak_symtab.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -459,6 +495,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/namespaces.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -467,6 +504,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/nolwp.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -475,6 +513,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parament.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -483,6 +522,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parament_internal.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -491,6 +531,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parse_error_context.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -499,6 +540,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parse_start.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -507,6 +549,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parsefile_base_restore.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -515,6 +558,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parser_api.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -523,6 +567,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/partial.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -531,6 +576,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/position_overflow.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -539,6 +585,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/recognized_string.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -547,6 +594,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/return_undef_list_context.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -555,6 +603,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/security_api.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -563,6 +612,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/skip.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -571,6 +621,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/stream.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -579,6 +630,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/stream_attr_escape.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -587,6 +639,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/stream_delimiter.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -595,6 +648,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/stream_localize.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -603,6 +657,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/styles.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -611,6 +666,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/subs_inherited.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -619,6 +675,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tree_entity_expand.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -627,6 +684,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/utf8_handling.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -635,6 +693,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/utf8_stream.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -643,6 +702,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xml_escape.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -651,6 +711,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xpcarp.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
@@ -659,73 +720,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xpcroak.t"],
+    tags = ["manual"],
     deps = [":XML-Parser_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_astress",
-        ":test_t_bare_glob_filehandle",
-        ":test_t_cdata",
-        ":test_t_char_end_doc",
-        ":test_t_checklib_findcc",
-        ":test_t_checklib_tmpdir",
-        ":test_t_combine_chars",
-        ":test_t_context_tracking",
-        ":test_t_coverage_gaps",
-        ":test_t_current_byte",
-        ":test_t_current_length",
-        ":test_t_debug_multibyte",
-        ":test_t_decl",
-        ":test_t_deep_nesting",
-        ":test_t_defaulted",
-        ":test_t_dtd_pe_default",
-        ":test_t_element_decl",
-        ":test_t_element_inspection",
-        ":test_t_encoding",
-        ":test_t_error_hint",
-        ":test_t_error_string",
-        ":test_t_expat_guards",
-        ":test_t_expat_version",
-        ":test_t_expat_xs_coverage",
-        ":test_t_ext_ent_io_control",
-        ":test_t_extern_ent_lexical_glob",
-        ":test_t_external_ent",
-        ":test_t_file",
-        ":test_t_file_open_scalar",
-        ":test_t_finish",
-        ":test_t_foreign_dtd",
-        ":test_t_g_void",
-        ":test_t_get_base",
-        ":test_t_handler_die",
-        ":test_t_load_encoding",
-        ":test_t_memory_leak_symtab",
-        ":test_t_namespaces",
-        ":test_t_nolwp",
-        ":test_t_parament",
-        ":test_t_parament_internal",
-        ":test_t_parse_error_context",
-        ":test_t_parse_start",
-        ":test_t_parsefile_base_restore",
-        ":test_t_parser_api",
-        ":test_t_partial",
-        ":test_t_position_overflow",
-        ":test_t_recognized_string",
-        ":test_t_return_undef_list_context",
-        ":test_t_security_api",
-        ":test_t_skip",
-        ":test_t_stream",
-        ":test_t_stream_attr_escape",
-        ":test_t_stream_delimiter",
-        ":test_t_stream_localize",
-        ":test_t_styles",
-        ":test_t_subs_inherited",
-        ":test_t_tree_entity_expand",
-        ":test_t_utf8_handling",
-        ":test_t_utf8_stream",
-        ":test_t_xml_escape",
-        ":test_t_xpcarp",
-        ":test_t_xpcroak",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

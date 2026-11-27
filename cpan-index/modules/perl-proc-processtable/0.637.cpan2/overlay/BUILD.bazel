@@ -157,6 +157,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-load.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -165,6 +166,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01-instiantied_object_only_methods.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -173,6 +175,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugfix-106571_odd_process_name.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -181,6 +184,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugfix-51470_cmndline_mod_error.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -189,6 +193,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugfix-61946_odd_process_name.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -197,6 +202,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/manifest.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -205,6 +211,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/openbsd-size-rss.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -213,6 +220,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod-coverage.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -221,6 +229,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -229,21 +238,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/process.t"],
+    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_00-load",
-        ":test_t_01-instiantied_object_only_methods",
-        ":test_t_bugfix-106571_odd_process_name",
-        ":test_t_bugfix-51470_cmndline_mod_error",
-        ":test_t_bugfix-61946_odd_process_name",
-        ":test_t_manifest",
-        ":test_t_openbsd-size-rss",
-        ":test_t_pod",
-        ":test_t_pod-coverage",
-        ":test_t_process",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

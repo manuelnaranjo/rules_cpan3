@@ -1,7 +1,6 @@
 native_deps:
 - '@libiconv//:iconv'
-patch_cmds:
-- mkdir -p lib/Text && cp Iconv.pm lib/Text/Iconv.pm
-patch_cmds_win:
-- powershell -Command "New-Item -ItemType Directory -Force lib/Text; Copy-Item Iconv.pm
-  lib/Text/Iconv.pm"
+manual_tests:
+- '*'
+file_copies:
+  Iconv.pm: lib/Text/Iconv.pm

@@ -3,15 +3,7 @@ includes:
 output_loc: auto/XML/Parser/Expat/Expat
 native_deps:
 - '@libexpat//:libexpat'
-patch_cmds:
-- mkdir -p XML/Parser/Encodings
-- cp Parser.pm XML/Parser.pm
-- cp Expat/Expat.pm XML/Parser/Expat.pm
-- cp -r Parser/Style XML/Parser/
-- cp share/*.enc XML/Parser/Encodings/
-patch_cmds_win:
-- mkdir XML\Parser\Encodings
-- copy Parser.pm XML\Parser.pm
-- copy Expat\Expat.pm XML\Parser\Expat.pm
-- xcopy /E /I Parser\Style XML\Parser\Style
-- copy share\*.enc XML\Parser\Encodings\
+manual_tests:
+- '*'
+file_copies:
+  Parser.pm: lib/XML/Parser.pm

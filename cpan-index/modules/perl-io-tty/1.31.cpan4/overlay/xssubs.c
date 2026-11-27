@@ -529,3 +529,103 @@ newCONSTSUB(stash, "ONOCR", newSViv(ONOCR));
 #else
 newCONSTSUB(stash, "ONOCR", newSV(0));
 #endif
+#ifdef OPOST
+newCONSTSUB(stash, "OPOST", newSViv(OPOST));
+#else
+newCONSTSUB(stash, "OPOST", newSV(0));
+#endif
+newCONSTSUB(stash, "PAGEOUT", newSV(0));
+#ifdef PARENB
+newCONSTSUB(stash, "PARENB", newSViv(PARENB));
+#else
+newCONSTSUB(stash, "PARENB", newSV(0));
+#endif
+newCONSTSUB(stash, "PAREXT", newSV(0));
+#ifdef PARMRK
+newCONSTSUB(stash, "PARMRK", newSViv(PARMRK));
+#else
+newCONSTSUB(stash, "PARMRK", newSV(0));
+#endif
+#ifdef PARODD
+newCONSTSUB(stash, "PARODD", newSViv(PARODD));
+#else
+newCONSTSUB(stash, "PARODD", newSV(0));
+#endif
+#ifdef PENDIN
+newCONSTSUB(stash, "PENDIN", newSViv(PENDIN));
+#else
+newCONSTSUB(stash, "PENDIN", newSV(0));
+#endif
+newCONSTSUB(stash, "RCV1EN", newSV(0));
+newCONSTSUB(stash, "RTS_TOG", newSV(0));
+#ifdef TAB0
+newCONSTSUB(stash, "TAB0", newSViv(TAB0));
+#else
+newCONSTSUB(stash, "TAB0", newSV(0));
+#endif
+#ifdef TAB1
+newCONSTSUB(stash, "TAB1", newSViv(TAB1));
+#else
+newCONSTSUB(stash, "TAB1", newSV(0));
+#endif
+#ifdef TAB2
+newCONSTSUB(stash, "TAB2", newSViv(TAB2));
+#else
+newCONSTSUB(stash, "TAB2", newSV(0));
+#endif
+#ifdef TAB3
+newCONSTSUB(stash, "TAB3", newSViv(TAB3));
+#else
+newCONSTSUB(stash, "TAB3", newSV(0));
+#endif
+#ifdef TABDLY
+newCONSTSUB(stash, "TABDLY", newSViv(TABDLY));
+#else
+newCONSTSUB(stash, "TABDLY", newSV(0));
+#endif
+newCONSTSUB(stash, "TCDSET", newSV(0));
+#ifdef TCFLSH
+newCONSTSUB(stash, "TCFLSH", newSViv(TCFLSH));
+#else
+newCONSTSUB(stash, "TCFLSH", newSV(0));
+#endif
+#ifdef TCGETA
+newCONSTSUB(stash, "TCGETA", newSViv(TCGETA));
+#else
+newCONSTSUB(stash, "TCGETA", newSV(0));
+#endif
+#ifdef TCGETS
+newCONSTSUB(stash, "TCGETS", newSViv(TCGETS));
+#else
+newCONSTSUB(stash, "TCGETS", newSV(0));
+#endif
+#ifdef TCIFLUSH
+newCONSTSUB(stash, "TCIFLUSH", newSViv(TCIFLUSH));
+#else
+newCONSTSUB(stash, "TCIFLUSH", newSV(0));
+#endif
+#ifdef TCIOFF
+newCONSTSUB(stash, "TCIOFF", newSViv(TCIOFF));
+#else
+newCONSTSUB(stash, "TCIOFF", newSV(0));
+#endif
+#ifdef TCIOFLUSH
+newCONSTSUB(stash, "TCIOFLUSH", newSViv(TCIOFLUSH));
+#else
+newCONSTSUB(stash, "TCIOFLUSH", newSV(0));
+#endif
+#ifdef TCION
+newCONSTSUB(stash, "TCION", newSViv(TCION));
+#else
+newCONSTSUB(stash, "TCION", newSV(0));
+#endif
+#ifdef TCOFLUSH
+newCONSTSUB(stash, "TCOFLUSH", newSViv(TCOFLUSH));
+#else
+newCONSTSUB(stash, "TCOFLUSH", newSV(0));
+#endif
+#ifdef TCOOFF
+newCONSTSUB(stash, "TCOOFF", newSViv(TCOOFF));
+#else
+newCONSTSUB(stash, "TCOOFF", newSV(0));
+#endif
