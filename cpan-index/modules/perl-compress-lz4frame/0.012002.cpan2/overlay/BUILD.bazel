@@ -33,13 +33,11 @@ cpan_xs(
             "**/programs/**",
             "**/tests/**",
             "lz4.c",
-            "xxhash.c",
         ],
     ),
     output_loc = "auto/Compress/LZ4Frame/LZ4Frame",
     textual_hdrs = [
         "lz4.c",
-        "xxhash.c",
     ] + glob(
         [
             "*.h",
@@ -72,7 +70,6 @@ cpan_xs(
             "**/programs/**",
             "**/tests/**",
             "lz4.c",
-            "xxhash.c",
         ],
     ),
     typemaps = glob(

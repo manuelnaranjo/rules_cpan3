@@ -3,8 +3,8 @@
     "integrity": "sha256-olr4hCtWEtkb5zMU9a6UgCfV79zuNclkzbtxnrAqN3Q=",
     "strip_prefix": "Linux-Prctl-1.6.0",
     "overlay": {
-        "const-xs.inc": "sha256-+40Z8tNRBlTwi7pWzqZ2/62AP2GyBzHDcna3Saatfx0=",
-        "const-c.inc": "sha256-TJeJFfsLlSUxorAZw87KaVv1VCcsSRR5J5mKJTyAe7I=",
-        "BUILD.bazel": "sha256-0qk8ct1YlRi6hVqAy+JuRxn4Dbz3kgvZeZGsoFOIvHw="
+        "BUILD.bazel": "sha256-0qk8ct1YlRi6hVqAy+JuRxn4Dbz3kgvZeZGsoFOIvHw=",
+        "const-c.inc": "sha256-/BTPX2YsQfRutHnbuEoblBzasrtMH2TgkcT/ISep2Qg=",
+        "const-xs.inc": "sha256-+40Z8tNRBlTwi7pWzqZ2/62AP2GyBzHDcna3Saatfx0="
     }
 }

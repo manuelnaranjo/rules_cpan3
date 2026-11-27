@@ -34,10 +34,6 @@ cpan_xs(
             "**/tests/**",
         ],
     ),
-    defines = [
-        "HAVE_SYS_ENDIAN_H",
-        "HAVE_DECL_BE64ENC",
-    ],
     output_loc = "auto/Crypt/ScryptKDF/ScryptKDF",
     textual_hdrs = glob(
         [

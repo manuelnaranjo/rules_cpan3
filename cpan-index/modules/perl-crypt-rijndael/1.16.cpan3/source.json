@@ -3,6 +3,6 @@
     "integrity": "sha256-ZUAIXjgEuCpvB1LBEiz3jK3SIZkBNt1v1MCX0FbITUA=",
     "strip_prefix": "Crypt-Rijndael-1.16",
     "overlay": {
-        "BUILD.bazel": "sha256-udDiKKtCKX6OVZz0SokSuG3aPEVzZ6waTrsfiXZ6eNI="
+        "BUILD.bazel": "sha256-1CQdCZPcrtDr9OS2i3nucHZkatZB2cZQfSf67aIrM2U="
     }
 }

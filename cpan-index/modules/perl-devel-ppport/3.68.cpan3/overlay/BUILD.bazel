@@ -5,15 +5,15 @@ load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
-    name = "copy_ppport_h",
-    src = "@rules_cpan//cpan/resources/ppport:ppport.h",
-    out = "ppport.h",
-)
-
-copy_file(
     name = "copy_lib_Devel_PPPort_pm",
     src = "PPPort.pm",
     out = "lib/Devel/PPPort.pm",
+)
+
+copy_file(
+    name = "copy_ppport_h",
+    src = "@rules_cpan//cpan/resources/ppport:ppport.h",
+    out = "ppport.h",
 )
 
 perl_library(

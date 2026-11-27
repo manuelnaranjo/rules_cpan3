@@ -32,8 +32,8 @@ cpan_xs(
             "**/contrib/**",
             "**/programs/**",
             "**/tests/**",
-            "util.c",
             "hparser.c",
+            "util.c",
         ],
     ),
     defines = [
@@ -41,8 +41,8 @@ cpan_xs(
     ],
     output_loc = "auto/HTML/Parser/Parser",
     textual_hdrs = [
-        "util.c",
         "hparser.c",
+        "util.c",
     ] + glob(
         [
             "*.h",
@@ -74,8 +74,8 @@ cpan_xs(
             "**/contrib/**",
             "**/programs/**",
             "**/tests/**",
-            "util.c",
             "hparser.c",
+            "util.c",
         ],
     ),
     typemaps = glob(

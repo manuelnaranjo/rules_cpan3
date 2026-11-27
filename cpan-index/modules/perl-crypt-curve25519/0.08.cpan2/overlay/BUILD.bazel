@@ -37,7 +37,7 @@ cpan_xs(
         ],
     ),
     defines = [
-        "USE_X64=1",
+        "USE_X64=0",
     ],
     output_loc = "auto/Crypt/Curve25519/Curve25519",
     textual_hdrs = [

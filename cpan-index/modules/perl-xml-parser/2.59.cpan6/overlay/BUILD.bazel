@@ -7,15 +7,15 @@ load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
-    name = "copy_ppport_h",
-    src = "@rules_cpan//cpan/resources/ppport:ppport.h",
-    out = "ppport.h",
-)
-
-copy_file(
     name = "copy_lib_XML_Parser_pm",
     src = "Parser.pm",
     out = "lib/XML/Parser.pm",
+)
+
+copy_file(
+    name = "copy_ppport_h",
+    src = "@rules_cpan//cpan/resources/ppport:ppport.h",
+    out = "ppport.h",
 )
 
 cpan_xs(

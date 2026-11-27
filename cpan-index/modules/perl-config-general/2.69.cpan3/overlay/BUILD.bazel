@@ -5,6 +5,18 @@ load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
+    name = "copy_General_Extended_pm",
+    src = "lib/Config/General/Extended.pm",
+    out = "General/Extended.pm",
+)
+
+copy_file(
+    name = "copy_General_Interpolated_pm",
+    src = "lib/Config/General/Interpolated.pm",
+    out = "General/Interpolated.pm",
+)
+
+copy_file(
     name = "copy_lib_Config_General_pm",
     src = "General.pm",
     out = "lib/Config/General.pm",
@@ -20,18 +32,6 @@ copy_file(
     name = "copy_lib_Config_General_Interpolated_pm",
     src = "General/Interpolated.pm",
     out = "lib/Config/General/Interpolated.pm",
-)
-
-copy_file(
-    name = "copy_General_Extended_pm",
-    src = "lib/Config/General/Extended.pm",
-    out = "General/Extended.pm",
-)
-
-copy_file(
-    name = "copy_General_Interpolated_pm",
-    src = "lib/Config/General/Interpolated.pm",
-    out = "General/Interpolated.pm",
 )
 
 perl_library(

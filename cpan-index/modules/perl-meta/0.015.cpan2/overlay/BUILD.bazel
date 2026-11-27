@@ -34,9 +34,6 @@ cpan_xs(
             "**/tests/**",
         ],
     ),
-    defines = [
-        "DEBUGGING=-g",
-    ],
     output_loc = "auto/meta/meta",
     textual_hdrs = glob(
         [

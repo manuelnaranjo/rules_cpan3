@@ -33,9 +33,9 @@ cpan_xs(
             "**/programs/**",
             "**/tests/**",
             "snappy/csnappy_decompress.c",
-            "author_tools/stringify_test.c",
-            "author_tools/siphash_vectors.c",
             "author_tools/numeric_str_length.c",
+            "author_tools/siphash_vectors.c",
+            "author_tools/stringify_test.c",
         ],
     ),
     defines = [
@@ -76,9 +76,9 @@ cpan_xs(
             "**/programs/**",
             "**/tests/**",
             "snappy/csnappy_decompress.c",
-            "author_tools/stringify_test.c",
-            "author_tools/siphash_vectors.c",
             "author_tools/numeric_str_length.c",
+            "author_tools/siphash_vectors.c",
+            "author_tools/stringify_test.c",
         ],
     ),
     typemaps = glob(

@@ -3,6 +3,6 @@
     "integrity": "sha256-hWjN2Zoqfv1WiSDFBPAKLlqG8GO3/RyJVSUztTCXc70=",
     "strip_prefix": "Mojolicious-9.54",
     "overlay": {
-        "BUILD.bazel": "sha256-rz95DauPqClA1fLZzunIuSlE97fBeP7Dq799R5qWEuk="
+        "BUILD.bazel": "sha256-MzG9V3cQgjuQFxUiqGSEdMVWSKkpswf03HZ6atnPCVc="
     }
 }

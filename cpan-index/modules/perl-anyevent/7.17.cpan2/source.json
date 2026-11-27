@@ -3,7 +3,7 @@
     "integrity": "sha256-UL7qaJwJj+Sq64OAbEC5/n+UbVdprPmfhJ8JkJGkuYU=",
     "strip_prefix": "AnyEvent-7.17",
     "overlay": {
-        "lib/AnyEvent/constants.pl": "sha256-WWRmDdlfch74TQvQNwqp9Hbct4vcph9Rs91WDv2BAXs=",
-        "BUILD.bazel": "sha256-nbCRsk3LnrFQGu/Nb9qO1ZSuylghVd2q3JvVHEEHwtI="
+        "BUILD.bazel": "sha256-nbCRsk3LnrFQGu/Nb9qO1ZSuylghVd2q3JvVHEEHwtI=",
+        "lib/AnyEvent/constants.pl": "sha256-WWRmDdlfch74TQvQNwqp9Hbct4vcph9Rs91WDv2BAXs="
     }
 }

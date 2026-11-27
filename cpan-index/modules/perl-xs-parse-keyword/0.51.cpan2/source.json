@@ -3,6 +3,6 @@
     "integrity": "sha256-nc/fTKNXyqZVfAS/biFcHvR4TVcRqyRsVAC0mGOj9hs=",
     "strip_prefix": "XS-Parse-Keyword-0.51",
     "overlay": {
-        "BUILD.bazel": "sha256-G4hNeuMF4sz4+XPUeVztQ/u8EQDTWVykv2cuWVRUyfA="
+        "BUILD.bazel": "sha256-gw+6l+pfV2d4fpYaAaa+7N1r+R2+0ND2b9fT6wLugy4="
     }
 }

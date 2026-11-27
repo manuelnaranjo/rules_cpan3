@@ -3,10 +3,10 @@
     "integrity": "sha256-fEJMJTtl/2LPFXe7QYgCGSoYgF6jH6/Ap65YnkRsidI=",
     "strip_prefix": "Cache-Memcached-Fast-0.28",
     "overlay": {
-        "src/compute_crc32.h": "sha256-8LOeylv70a1YknUfieo9OKDWmydaSAI8weXvke3ayns=",
+        "BUILD.bazel": "sha256-5KUpapXjQahhQSEzBGyqW2NoCRN21x51kboHMJs0tlE=",
         "src/compute_crc32.c": "sha256-zfB+Ub5WhsxtSuSIEnKhbikhBll4B47J2MpJM7dLdm4=",
-        "src/parse_keyword.h": "sha256-sqxfUvErNA707PaNALc3QdAt0cHcUmaYbTD4+poTVsA=",
+        "src/compute_crc32.h": "sha256-8LOeylv70a1YknUfieo9OKDWmydaSAI8weXvke3ayns=",
         "src/parse_keyword.c": "sha256-HUkmf3We9h9yoIKD71DD2henh5dx7U2lOOJnJ5X+p1Q=",
-        "BUILD.bazel": "sha256-tTEJn6w3y9wYseqHJz0SjpgvOJORmlzp0sovxZEYpMA="
+        "src/parse_keyword.h": "sha256-sqxfUvErNA707PaNALc3QdAt0cHcUmaYbTD4+poTVsA="
     }
 }
