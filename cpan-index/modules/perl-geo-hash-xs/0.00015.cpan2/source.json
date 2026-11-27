@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DM/DMAKI/Geo-Hash-XS-0.00015.tar.gz",
+    "integrity": "sha256-vZiuwJO6hyfzM1thfL+WcmO7Lu6415sySX0Yq/KUhCs=",
+    "strip_prefix": "Geo-Hash-XS-0.00015",
+    "overlay": {
+        "BUILD.bazel": "sha256-1svfIMyZoYGjI7ZAtKvAb+41Gm2EAF2Voctzco9Nofs="
+    }
+}

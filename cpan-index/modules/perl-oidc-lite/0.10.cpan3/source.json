@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/R/RI/RITOU/OIDC-Lite-0.10.tar.gz",
+    "integrity": "sha256-UpCWJyoWDYzZR77HngG0hjnbk3JkMrTZMDmnUHQhJFo=",
+    "strip_prefix": "OIDC-Lite-0.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-bMdfVN7zVULUT+B0FbK5Qe+jErdrHHV5QmbHynC4V0o="
+    }
+}

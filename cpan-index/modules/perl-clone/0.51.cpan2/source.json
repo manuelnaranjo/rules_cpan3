@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Clone-0.51.tar.gz",
+    "integrity": "sha256-8X9m/sl9rMpnrJWFcB0tB5z8gFOf5ugWDCAcTlX2dQc=",
+    "strip_prefix": "Clone-0.51",
+    "overlay": {
+        "BUILD.bazel": "sha256-YJr8YR5a6ZsLEJEsm6NFq7qJ6ivCFltkFccQ+fS7xbY="
+    }
+}

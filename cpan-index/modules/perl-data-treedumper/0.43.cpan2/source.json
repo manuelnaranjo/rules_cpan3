@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NK/NKH/Data-TreeDumper-0.43.tar.gz",
+    "integrity": "sha256-hnLwIPIJGhrpR2KEyTK0rYuO57HsEVae/D3Es+dTV48=",
+    "strip_prefix": "Data-TreeDumper-0.43",
+    "overlay": {
+        "BUILD.bazel": "sha256-fzDbEEi9M3yTErPtvqEQJexqodZ/fyafVQ6vDoSqPPg="
+    }
+}

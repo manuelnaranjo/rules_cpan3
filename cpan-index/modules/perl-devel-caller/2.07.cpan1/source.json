@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-Caller-2.07.tar.gz",
-    "integrity": "sha256-tnmisYA0sLcg3oLDcIckw2SxCmyhZMvGfNw68oPzUD8=",
-    "strip_prefix": "Devel-Caller-2.07",
-    "overlay": {
-        "BUILD.bazel": "sha256-E87eYGOsS4uyT+B1HcEZDCT74JY0iNr3ZydasriNLR0="
-    }
-}

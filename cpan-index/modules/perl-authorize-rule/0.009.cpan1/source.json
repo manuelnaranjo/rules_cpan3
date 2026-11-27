@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Authorize-Rule-0.009.tar.gz",
-    "integrity": "sha256-Pf2yxR0FOeqBL4XC0Eq/s9rrgVtRGZyiaW7oEg6/tmc=",
-    "strip_prefix": "Authorize-Rule-0.009",
-    "overlay": {
-        "BUILD.bazel": "sha256-l+8vAYzX5ECrPNxviK+a2Gr9bgcHX4vNsHKwaC46e4I="
-    }
-}

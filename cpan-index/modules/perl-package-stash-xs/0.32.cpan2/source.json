@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Package-Stash-XS-0.32.tar.gz",
+    "integrity": "sha256-n5YeeYwBNw84NO2l8BDJ1gxoqW0VxIWY2KWiXKMvXxE=",
+    "strip_prefix": "Package-Stash-XS-0.32",
+    "overlay": {
+        "BUILD.bazel": "sha256-KgfiF6fqttLbKxewuS50cFXIeZkxSJy2RDfmLHV0sSM="
+    }
+}

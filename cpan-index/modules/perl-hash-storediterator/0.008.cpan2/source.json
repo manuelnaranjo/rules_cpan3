@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSCHWERN/Hash-StoredIterator-0.008.tar.gz",
+    "integrity": "sha256-ucvE3NgjPo0dfxSB3beaSl+dtxgMs+8CtLy+4F5l6gw=",
+    "strip_prefix": "Hash-StoredIterator-0.008",
+    "overlay": {
+        "BUILD.bazel": "sha256-wV5CkLppA9imKFKu5rEDPIafL9qVbF9/BusUGTFWxZE="
+    }
+}

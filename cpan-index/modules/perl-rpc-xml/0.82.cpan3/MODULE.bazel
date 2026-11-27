@@ -1,0 +1,13 @@
+module(
+    name = "perl-rpc-xml",
+    version = "0.82.cpan3",
+)
+
+bazel_dep(name = "rules_cpan", version = "0.0.0")
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "rules_cc", version = "0.2.28")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "perl-http-daemon", version = "6.17.cpan1")
+bazel_dep(name = "perl-http-message", version = "7.04.cpan1")
+bazel_dep(name = "perl-xml-parser", version = "2.59.cpan6")
+bazel_dep(name = "perl-libwww-perl", version = "6.83.cpan2")

@@ -1,0 +1,11 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.59.tar.gz",
+    "integrity": "sha256-o1j9fEn14ncXpkSpECvSHcf8JaQVmDJ5xZsVgOK2Klg=",
+    "strip_prefix": "XML-Parser-2.59",
+    "overlay": {
+        "lib/XML/Parser/Expat.pm": "sha256-ZaxLnxHxxNva0bLNaCtSz4N6Pi5TpqrMFez+8wm7ysA=",
+        "lib/XML/Parser/Style/Subs.pm": "sha256-xIANaPKwCMySFu1QFh16hO03S0nxM+bz26Jh/Ce3CFQ=",
+        "lib/XML/Parser/Style/Stream.pm": "sha256-Da2Z9xLlk5koFwwJSTe85b1EOIS4kIz5tDu5Jdt0muM=",
+        "BUILD.bazel": "sha256-Fy8J7hGc3sNrlvD0M8ap9n8wqF6u2ND8iqWdwmvYS1w="
+    }
+}

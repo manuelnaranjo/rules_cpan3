@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AN/ANDYA/Data-Structure-Util-0.16.tar.gz",
+    "integrity": "sha256-nNQqE+ZcsV86diluuaE02iIBaOx0fFaNMxpQrnot28Y=",
+    "strip_prefix": "Data-Structure-Util-0.16",
+    "overlay": {
+        "BUILD.bazel": "sha256-ovKq3hcmKHJmofunpEhTqq+/+VNwbmEERwBwqEfTqJI="
+    }
+}

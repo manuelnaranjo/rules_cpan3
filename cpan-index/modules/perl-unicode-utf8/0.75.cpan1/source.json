@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHANSEN/Unicode-UTF8-0.75.tar.gz",
-    "integrity": "sha256-VamQ0/k53KVuONcHDFO0E7UT9wG/823tDdMvmEDMrVM=",
-    "strip_prefix": "Unicode-UTF8-0.75",
-    "overlay": {
-        "BUILD.bazel": "sha256-zqfr8s3pXTWVhLNc/y4xuJlYroYm69fJCFrREQeTFRU="
-    }
-}

@@ -1,0 +1,16 @@
+module(
+    name = "perl-json-validator",
+    version = "5.19.cpan2",
+)
+
+bazel_dep(name = "rules_cpan", version = "0.0.0")
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "rules_cc", version = "0.2.28")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "bazel_lib", version = "3.8.0")
+bazel_dep(name = "perl-data-validate-domain", version = "0.15.cpan1")
+bazel_dep(name = "perl-data-validate-ip", version = "0.31.cpan1")
+bazel_dep(name = "perl-mojolicious", version = "9.54.cpan3")
+bazel_dep(name = "perl-net-idn-encode", version = "2.600.cpan3")
+bazel_dep(name = "perl-yaml-libyaml", version = "0.910.0.cpan4")
+bazel_dep(name = "perl-test-deep", version = "1.205.cpan1")

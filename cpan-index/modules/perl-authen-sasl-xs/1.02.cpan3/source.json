@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Authen-SASL-XS-1.02.tar.gz",
+    "integrity": "sha256-+k+1Yq6iouLzpd5nfEGI7nIbfhjOdxvRpLkrItJGH0c=",
+    "strip_prefix": "Authen-SASL-XS-1.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-sL5G9j/5vbqilobz56tHhEO16T7egguJ10sIT06qURQ="
+    }
+}

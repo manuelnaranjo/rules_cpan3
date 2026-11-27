@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IV/IVAN/Business-OnlinePayment-3.05.tar.gz",
+    "integrity": "sha256-W4o/LoMQtWLi3EYnjVdvcUub59ss5oTIQ+fqC++kY7M=",
+    "strip_prefix": "Business-OnlinePayment-3.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-baDAgkUzWbFcYink1cW7dL8GTm58Owa4LZDGhlHWlEY="
+    }
+}

@@ -1,0 +1,10 @@
+module(
+    name = "perl-file-slurp",
+    version = "9999.32.cpan2",
+)
+
+bazel_dep(name = "rules_cpan", version = "0.0.0")
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "rules_cc", version = "0.2.28")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "bazel_lib", version = "3.8.0")

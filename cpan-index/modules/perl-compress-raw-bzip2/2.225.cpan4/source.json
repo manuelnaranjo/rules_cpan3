@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Bzip2-2.225.tar.gz",
+    "integrity": "sha256-VUfdQQFBFjDjP6BOn0Pf2gb1XW88NCDWIH76rHvENjM=",
+    "strip_prefix": "Compress-Raw-Bzip2-2.225",
+    "overlay": {
+        "BUILD.bazel": "sha256-kKmYd/+W6AgqB6AF4mVgSIJVG+FHn82Ohd7AK/3peyk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JO/JOSEPHW/XML-Writer-0.900.tar.gz",
+    "integrity": "sha256-c8j1vT7PKzUPStrm1mdtUuCOzC199KnwifpoNg1ADR8=",
+    "strip_prefix": "XML-Writer-0.900",
+    "overlay": {
+        "BUILD.bazel": "sha256-f1rhZS2ZXCvT/sd6QRhZy2aMsOqerUsN952Q1VKoij4="
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SA/SANBEG/Image-ValidJpeg-1.002001.tar.gz",
-    "integrity": "sha256-DX6LeLkh2mfkQgggXgoP+M/eOHypDtNSuEhz6e3dwNc=",
-    "strip_prefix": "Image-ValidJpeg-1.002001",
-    "overlay": {
-        "BUILD.bazel": "sha256-Jbut3kvvR696oNRdLpM/osNggXJR9lsVWFeggwRlzqw="
-    }
-}

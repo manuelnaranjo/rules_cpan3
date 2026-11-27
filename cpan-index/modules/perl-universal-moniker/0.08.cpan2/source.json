@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KA/KASEI/UNIVERSAL-moniker-0.08.tar.gz",
+    "integrity": "sha256-lM4npUbNV8tS4ICo8lM6fMI1ACg4hYJIW9EDmjeHH5w=",
+    "strip_prefix": "UNIVERSAL-moniker-0.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-iH2MfvGPnq3KZX+F0P4375qrMn7lNRP/dNZ5pU010BI="
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SO/SONGMU/Text-Markdown-Discount-0.19.tar.gz",
-    "integrity": "sha256-9gCYdoMjea9YDL06XwwEs8fz/vNS2JwtbUcZL35V+is=",
-    "strip_prefix": "Text-Markdown-Discount-0.19",
-    "overlay": {
-        "BUILD.bazel": "sha256-Gtsdv44tvH1KlkjoNHEfcZ7PosUqTPG7kksrWCgiJsY="
-    }
-}

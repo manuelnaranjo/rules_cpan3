@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Data-Dump-Streamer-3.002.tar.gz",
-    "integrity": "sha256-KL0dbQB6Ln7ywPQNrT4vkhwziWwWKd9/+DRSFaNq5Y0=",
-    "strip_prefix": "Data-Dump-Streamer-3.002",
-    "overlay": {
-        "BUILD.bazel": "sha256-5M3wEUpMULCuKsKri8/NJwvyWyJUYIWjSmfJtlUxp/o="
-    }
-}

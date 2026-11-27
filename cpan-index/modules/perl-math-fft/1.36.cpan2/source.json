@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Math-FFT-1.36.tar.gz",
+    "integrity": "sha256-C/MBmBGmLwv0edzrVEno4rhU1Zq+2ePcp6PKi5HicSI=",
+    "strip_prefix": "Math-FFT-1.36",
+    "overlay": {
+        "BUILD.bazel": "sha256-kkJyf34gpbz/8bJJ6G3cfZo9t4IEkvKswCubmn6QRPY="
+    }
+}

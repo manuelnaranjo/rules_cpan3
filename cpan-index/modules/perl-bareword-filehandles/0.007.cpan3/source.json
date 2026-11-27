@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IL/ILMARI/bareword-filehandles-0.007.tar.gz",
+    "integrity": "sha256-QTRTNxbYevj/9W4lDEiK0G3wp7/0jnz33mP/a8jZwX8=",
+    "strip_prefix": "bareword-filehandles-0.007",
+    "overlay": {
+        "BUILD.bazel": "sha256-SLeTk7mL5H4aIkwC/aIianBEaJFaZ+M5XFjUJsXPXRI="
+    }
+}

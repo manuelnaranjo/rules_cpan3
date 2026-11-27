@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EV/EVO/String-Escape-2010.002.tar.gz",
-    "integrity": "sha256-/WRfizNiJNIKha5/saOEV26sMp963DkjwyQego47moo=",
-    "strip_prefix": "String-Escape-2010.002",
-    "overlay": {
-        "BUILD.bazel": "sha256-u9VBplIQuPkwpeKDdrGX9Ou9nSeSS5xlWXlJbHldA+M="
-    }
-}

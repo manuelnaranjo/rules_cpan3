@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SS/SSCAFFIDI/Set-CartesianProduct-Lazy-0.004.tar.gz",
+    "integrity": "sha256-3Qq4jCo8fiPliD/+keceirFVUt2Zol5UGdo9yLZpNPo=",
+    "strip_prefix": "Set-CartesianProduct-Lazy-0.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-0NELjGFTBcmDnWGThjliC+ujNHSvltH7yqfhAZQA440="
+    }
+}

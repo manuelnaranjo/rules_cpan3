@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Archive-Any-Lite-0.11.tar.gz",
+    "integrity": "sha256-FcGIJTmTpLZuVZnweJsTJvCmbAkr2/rJMTcG1BwoUXA=",
+    "strip_prefix": "Archive-Any-Lite-0.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-yZ2KcG6k9VnucS6Oc46XeK281jDQ7+iw2Iu5AI919tk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Pod-1.52.tar.gz",
+    "integrity": "sha256-YKjbzGAWi/HapcwjUCNt+TQ+mHj0q5gwlwpd3m/o5fw=",
+    "strip_prefix": "Test-Pod-1.52",
+    "overlay": {
+        "BUILD.bazel": "sha256-KCWYLuVAJMK7axYdkd6XThK9iEe7VYT9FLFRMqGYKT4="
+    }
+}

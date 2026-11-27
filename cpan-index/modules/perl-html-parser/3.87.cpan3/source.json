@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.87.tar.gz",
+    "integrity": "sha256-BDQrMLOxZ1BBsoz+y2k6PToMBRWHzEC3Rqf5pyp+O4o=",
+    "strip_prefix": "HTML-Parser-3.87",
+    "overlay": {
+        "BUILD.bazel": "sha256-4BAbv2qYxMzh/Tcf/TfZbQnrRTZNN7ygLbLMaViHAmo="
+    }
+}

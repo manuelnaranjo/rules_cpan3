@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/File-TreeCreate-0.0.1.tar.gz",
+    "integrity": "sha256-V2hvEIQ76Br/rRha5BMXkLoMSvNtIQTW+2kSZSgFUmc=",
+    "strip_prefix": "File-TreeCreate-0.0.1",
+    "overlay": {
+        "BUILD.bazel": "sha256-dqfX7mZwtMCym9erfBfl7EZ8qjQMYRQwK0gXD4Iya/M="
+    }
+}

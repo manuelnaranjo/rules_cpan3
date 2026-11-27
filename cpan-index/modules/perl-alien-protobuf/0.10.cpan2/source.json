@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Alien-ProtoBuf-0.10.tar.gz",
+    "integrity": "sha256-9GRI1o4w9kmhaB1dhBlxtMx3s/U6mRouC5ge7lMFvlM=",
+    "strip_prefix": "Alien-ProtoBuf-0.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-8CgYqK+WVaQp290j8skML2+6RRrqIHo55PzwMR1fs7w="
+    }
+}

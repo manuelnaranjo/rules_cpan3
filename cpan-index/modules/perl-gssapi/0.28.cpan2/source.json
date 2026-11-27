@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AG/AGROLMS/GSSAPI-0.28.tar.gz",
+    "integrity": "sha256-fY8se2F2L7TsctLsKBKQ8vh/nH0pgnPaRSVDKmXncNY=",
+    "strip_prefix": "GSSAPI-0.28",
+    "overlay": {
+        "BUILD.bazel": "sha256-gl9SDR8Y271lmOjRkxr27N+7LG3h99irVdXSozcj27c="
+    }
+}

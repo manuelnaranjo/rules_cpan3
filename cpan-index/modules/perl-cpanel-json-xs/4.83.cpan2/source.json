@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Cpanel-JSON-XS-4.83.tar.gz",
-    "integrity": "sha256-2qv2rQN27kYT5nHFIfXQVlDEIgXkA8rAd+edhZTaOt4=",
-    "strip_prefix": "Cpanel-JSON-XS-4.83",
-    "overlay": {
-        "BUILD.bazel": "sha256-OFien0Mrg+EVJXH4Z1CWGbwPmcycIykSHl1rjfodApU="
-    }
-}

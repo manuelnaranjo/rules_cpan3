@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAF/Net-ZooKeeper-0.41.tar.gz",
+    "integrity": "sha256-kcF38w+CMC6vMXM1bu8FwhvIIWPfdSrLRpF3vRSnLbk=",
+    "strip_prefix": "Net-ZooKeeper-0.41",
+    "overlay": {
+        "BUILD.bazel": "sha256-zhs8fpS1+oI+qit0LdaaduSwl4PYIZdE3xdY80eXrvg="
+    }
+}

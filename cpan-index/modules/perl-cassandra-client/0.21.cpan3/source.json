@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TV/TVDW/Cassandra-Client-0.21.tar.gz",
+    "integrity": "sha256-csKllW4ezxCLZkb9XdSgM4CaBElkEzBXMz6qZ1+7vgQ=",
+    "strip_prefix": "Cassandra-Client-0.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-OyZJ5Fr9EikXEyEDkMeya8xaYBgfOnykN9jlFmuVwoA="
+    }
+}

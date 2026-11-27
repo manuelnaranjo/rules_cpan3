@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AC/ACALPINI/Lingua-Stem-It-0.02.tar.gz",
+    "integrity": "sha256-OOZz+3T+ARWILlrbJnTesIH6tyHXKO4qgRQWPVDIB4g=",
+    "strip_prefix": "Lingua-Stem-It-0.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-6R7oEmVUgBhiVJvkpVYcCmo3mwcexBW0Tw30S6yUyQs="
+    }
+}

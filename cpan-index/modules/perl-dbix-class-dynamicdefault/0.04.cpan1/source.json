@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz",
-    "integrity": "sha256-Io9RqyJGQlhLTcY9tt4mZ8W/riqJSpN2shChBIBqWvs=",
-    "strip_prefix": "DBIx-Class-DynamicDefault-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-706bFudPjeElkNiwDT/LSuJ9EuopqavD45QcLZAO3rE="
-    }
-}

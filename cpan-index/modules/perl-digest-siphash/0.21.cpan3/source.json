@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/Digest-SipHash-0.21.tar.gz",
+    "integrity": "sha256-PWdA0m2DsdmTR6ijKoIjCjceqFj0Y6+BHD7WhKxutes=",
+    "strip_prefix": "Digest-SipHash-0.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-CttwQW0/om6JEqBQF5EAkvVZYU642zZ1DWD8gLvZRSA="
+    }
+}

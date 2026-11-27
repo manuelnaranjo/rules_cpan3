@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Sub-Name-0.28.tar.gz",
+    "integrity": "sha256-OcU/azsCy8cxdlZEE7UdPA83X5dgmD/VecJ/VYsWnPw=",
+    "strip_prefix": "Sub-Name-0.28",
+    "overlay": {
+        "BUILD.bazel": "sha256-TTi62kEcQOb3azXKUrF9uWqkA/5hilYVuOT5JIH9BU8="
+    }
+}

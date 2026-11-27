@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LA/LAMMEL/MooseX-Log-Log4perl-0.47.tar.gz",
-    "integrity": "sha256-2gvjGXYgZu8FRvVOz0Kw2m0kY6kypV4G5hYWeOIQeNM=",
-    "strip_prefix": "MooseX-Log-Log4perl-0.47",
-    "overlay": {
-        "BUILD.bazel": "sha256-wm98BGIdHhjpkA3yp9igDLlJQAiBKjVNxix66sQB6wg="
-    }
-}

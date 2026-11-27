@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TA/TADAM/Net-ZooKeeper-Lock-0.03.tar.gz",
+    "integrity": "sha256-JEGl3d98q9/2u2YrfgfdexWHzY9HoFgdWLxJGe8FZpQ=",
+    "strip_prefix": "Net-ZooKeeper-Lock-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-8n3BGqOL9j9xRcP3T4XhvUWED3MSVTZUfqR5i6gesxk="
+    }
+}

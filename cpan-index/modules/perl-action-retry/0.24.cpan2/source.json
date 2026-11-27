@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAMS/Action-Retry-0.24.tar.gz",
+    "integrity": "sha256-o3WXQsW+8tGXWrc9NUmdgRMySRmySTYTAlXP8H0ClPc=",
+    "strip_prefix": "Action-Retry-0.24",
+    "overlay": {
+        "BUILD.bazel": "sha256-IgrirDaBD1gD8+4/46UsB2Wsi1CX6EizFLpj7UqZVHc="
+    }
+}

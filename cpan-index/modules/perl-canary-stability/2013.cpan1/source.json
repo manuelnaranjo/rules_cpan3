@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Canary-Stability-2013.tar.gz",
-    "integrity": "sha256-pckcYs+V/Lho9g6rXIMpCPaQUiEBP+orzj/1cEbXtuo=",
-    "strip_prefix": "Canary-Stability-2013",
-    "overlay": {
-        "BUILD.bazel": "sha256-eFVjBRHBn34IwyU6eyAKmF0WGphGXEgECl+eoRCzcbA="
-    }
-}

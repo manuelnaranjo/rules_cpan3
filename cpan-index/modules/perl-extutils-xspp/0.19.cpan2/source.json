@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/ExtUtils-XSpp-0.19.tar.gz",
+    "integrity": "sha256-AKc3JpX8EPnzov4zQ6t1jziHyjWGVSDCoutns2DAPTQ=",
+    "strip_prefix": "ExtUtils-XSpp-0.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-mUjfZD3NMMReXCnhzVjb4A9xeIAczKI0ZZHtc2ffsAE="
+    }
+}

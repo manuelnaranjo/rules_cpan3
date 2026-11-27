@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CI/CINE/Lingua-Stem-Snowball-Da-1.01.tar.gz",
-    "integrity": "sha256-Ljm+TuAVx+xHwrBnhYAYp0BuONUSHWVcikaHSt+poFY=",
-    "strip_prefix": "Lingua-Stem-Snowball-Da-1.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-aWmn0uRPlZGgcvkRo083Bvpzjmq/v0aJf2T68fUcgec="
-    }
-}

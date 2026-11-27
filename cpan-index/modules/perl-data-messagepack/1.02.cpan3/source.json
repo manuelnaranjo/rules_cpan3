@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SY/SYOHEX/Data-MessagePack-1.02.tar.gz",
+    "integrity": "sha256-wz20R5CqjSVBR4guI3jf/pcK1gMxNQveBi0XlTSCsbc=",
+    "strip_prefix": "Data-MessagePack-1.02",
+    "overlay": {
+        "BUILD.bazel": "sha256-B2NK9EBFQOY4ZvqaThFoCaJ5QKV/2PhsaW+MSBKQxoo="
+    }
+}

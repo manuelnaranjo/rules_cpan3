@@ -1,0 +1,9 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IP/IPH/AnyEvent-Redis-RipeRedis-1.62.tar.gz",
+    "integrity": "sha256-HxhdBjSBdYGtQVymf8Az1SfNtMbUbSG2D7fvpmqdORw=",
+    "strip_prefix": "AnyEvent-Redis-RipeRedis-1.62",
+    "overlay": {
+        "t/tlib/Test/RedisRunner.pm": "sha256-90OD05THos1VJoumu/OBIznh4SLk/NNS9hc+WWpECqw=",
+        "BUILD.bazel": "sha256-SJLsaQKtLN2l1X6DSH4sMfHY7lILHyye3mn2Sq7gTgs="
+    }
+}

@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AM/AMS/Crypt-Twofish-2.18.tar.gz",
-    "integrity": "sha256-WIFVXWGHlyojgqoNTbLXTJcLBndMYhtspSNzkjbS1QE=",
-    "strip_prefix": "Crypt-Twofish-2.18",
-    "overlay": {
-        "platform.h": "sha256-lVyQkhUwMf80I2Ui6pDAivJPHv792MF4qQr8m+zzkKw=",
-        "BUILD.bazel": "sha256-mguVBnpvlKQStCsSfWZ0QZZN9ABl/X4gpF9KFk+tDtk="
-    }
-}

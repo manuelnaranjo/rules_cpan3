@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Cwd-Guard-0.05.tar.gz",
+    "integrity": "sha256-evx8orlQLkQCQZOK2Xo+fr1VAYDr1hQuHbOUGGsmjnc=",
+    "strip_prefix": "Cwd-Guard-0.05",
+    "overlay": {
+        "BUILD.bazel": "sha256-FqodCkAXx2uP2/0Ilb3Ilzpc9sOW4D+jknUZ2FtTzvU="
+    }
+}

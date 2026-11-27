@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/Crypt-RIPEMD160-0.14.tar.gz",
+    "integrity": "sha256-Z2rjDqsUYefP0qdcf3ZUxgQBg/55PghS8WHk07HEooc=",
+    "strip_prefix": "Crypt-RIPEMD160-0.14",
+    "overlay": {
+        "BUILD.bazel": "sha256-OqoVR7wJO2QLDf73JDQhdWWNtK9OD3BgEJRmK4haTmI="
+    }
+}

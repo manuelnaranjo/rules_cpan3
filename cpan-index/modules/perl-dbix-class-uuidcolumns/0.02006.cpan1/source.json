@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AB/ABRAXXA/DBIx-Class-UUIDColumns-0.02006.tar.gz",
-    "integrity": "sha256-YtTuArGZ1ODtYssPM3KOTcFuFZtX564UB36/4w5Syfs=",
-    "strip_prefix": "DBIx-Class-UUIDColumns-0.02006",
-    "overlay": {
-        "BUILD.bazel": "sha256-bEnssIGRY/gX7nBNLGGcFiwNIy0Rckz8ab6xHUQ8m10="
-    }
-}

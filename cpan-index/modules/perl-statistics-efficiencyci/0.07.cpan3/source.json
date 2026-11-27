@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Statistics-EfficiencyCI-0.07.tar.gz",
+    "integrity": "sha256-eezI9SQ8ku2DkT547aFDpOQGVMsZO2DKEYvROWcJRQ4=",
+    "strip_prefix": "Statistics-EfficiencyCI-0.07",
+    "overlay": {
+        "BUILD.bazel": "sha256-LThUFgEUn5FP64vbCAfE1dX+Qd4gVcDPDDEUSsBXKXo="
+    }
+}

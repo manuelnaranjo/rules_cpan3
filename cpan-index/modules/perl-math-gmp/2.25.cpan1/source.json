@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Math-GMP-2.25.tar.gz",
-    "integrity": "sha256-OCtx5Udi9jnppCqbBpNBUZh7pX0Ru3DTXjvsiNUEUM4=",
-    "strip_prefix": "Math-GMP-2.25",
-    "overlay": {
-        "BUILD.bazel": "sha256-AdBpNxNSapUFPnd8fuddOA2fdoiKi5Iw0lZN3+Q7EvQ="
-    }
-}

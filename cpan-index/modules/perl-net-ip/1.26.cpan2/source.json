@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MANU/Net-IP-1.26.tar.gz",
-    "integrity": "sha256-BA8W8wZmR9dhtySjtwdU0oy9Hm/l6gHGPtHNhXEX1jk=",
-    "strip_prefix": "Net-IP-1.26",
-    "overlay": {
-        "BUILD.bazel": "sha256-19676NtxXxoKvdQx7uUGiXlDPUstBOWNlMowM+s9xIQ="
-    }
-}

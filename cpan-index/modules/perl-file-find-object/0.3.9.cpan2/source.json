@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/File-Find-Object-0.3.9.tar.gz",
+    "integrity": "sha256-fpmv5KnZkvzvHf6kLh+VR1cGrtlPGFBoqJ9ym1EnNfg=",
+    "strip_prefix": "File-Find-Object-0.3.9",
+    "overlay": {
+        "BUILD.bazel": "sha256-BzACta7htalHgv/fnLPlSytz61gvM5l2tvqYSI0Roh8="
+    }
+}

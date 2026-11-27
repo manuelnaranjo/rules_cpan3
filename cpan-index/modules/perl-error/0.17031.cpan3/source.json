@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17031.tar.gz",
+    "integrity": "sha256-CoU3TPnL3lpQdfFuYiRuXTar3mPsCMXFaU8Sj0VGhS8=",
+    "strip_prefix": "Error-0.17031",
+    "overlay": {
+        "BUILD.bazel": "sha256-uPHw7PwaxXL0SpNYlyuseBcwK0Ux3tVgELgxDCKM45c="
+    }
+}

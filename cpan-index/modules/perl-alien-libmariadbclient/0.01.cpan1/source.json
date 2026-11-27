@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HU/HUGMEIR/Alien-libmariadbclient-0.01.tar.gz",
-    "integrity": "sha256-xi+FQvSNPNCBrTza4OWVPFYffocMyqJAZUa1tC2CCsE=",
-    "strip_prefix": "Alien-libmariadbclient-0.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-nO7hN0IHG9zqRYOtMsJHEnj4UWioIXSKEdO51ok/KIE="
-    }
-}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/B-Utils-0.29.tar.gz",
+    "integrity": "sha256-iw1LNjWnRhWfOz/F4K60y1TI/6A2ny6lwZ6fjQahRIc=",
+    "strip_prefix": "B-Utils-0.29",
+    "overlay": {
+        "BUILD.bazel": "sha256-JQviBnUCOOSLd0QdkQmWmE+3oELW2bMdHmfIraU04HY="
+    }
+}

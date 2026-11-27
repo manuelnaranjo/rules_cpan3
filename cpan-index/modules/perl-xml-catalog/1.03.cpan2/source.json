@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JF/JFEARN/XML-Catalog-1.03.tar.gz",
+    "integrity": "sha256-Vc2PaP/AiZzF0mW09Fc8iMQ1omIP2FmT0l9fgb+hadc=",
+    "strip_prefix": "XML-Catalog-1.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-fwmGC2fSVntUGkjLZiDyNVSS0MyZZd+vMCzRJB8gHso="
+    }
+}

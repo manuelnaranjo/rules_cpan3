@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JO/JONASBN/Test-Timer-2.12.tar.gz",
+    "integrity": "sha256-6xtcGZeTzBxZGj0f5dFcFv2lOXVbptXdITjVY4gh8vw=",
+    "strip_prefix": "Test-Timer-2.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-EapTCd93KcapzvHd/+wRbww0G/ztmFauh1z2LNGgUEM="
+    }
+}

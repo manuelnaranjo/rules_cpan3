@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Crypt-OpenSSL-Random-0.17.tar.gz",
-    "integrity": "sha256-pXGyQYG6qnbJZwTpKs/8aTT/WT44Da3idNtOQ8FArVE=",
-    "strip_prefix": "Crypt-OpenSSL-Random-0.17",
-    "overlay": {
-        "lib/Crypt/OpenSSL/Random.pm": "sha256-f3v24NMuLI71T/3FdspN3CRdWktEj581Ns9WxwfT/vs=",
-        "BUILD.bazel": "sha256-OFT7UtUAMtbH/ZKqXpDkNcox7uhBnzj2ne3dH3YKvY8="
-    }
-}

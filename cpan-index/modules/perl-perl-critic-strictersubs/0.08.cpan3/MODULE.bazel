@@ -1,0 +1,15 @@
+module(
+    name = "perl-perl-critic-strictersubs",
+    version = "0.08.cpan3",
+)
+
+bazel_dep(name = "rules_cpan", version = "0.0.0")
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "rules_cc", version = "0.2.28")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "perl-file-pathlist", version = "1.04.cpan1")
+bazel_dep(name = "perl-list-moreutils", version = "0.430.cpan2")
+bazel_dep(name = "perl-ppi", version = "1.291.cpan1")
+bazel_dep(name = "perl-perl-critic", version = "1.156.cpan2")
+bazel_dep(name = "perl-module-build", version = "0.4234.cpan2")
+bazel_dep(name = "perl-test-warnings", version = "0.038.cpan1")

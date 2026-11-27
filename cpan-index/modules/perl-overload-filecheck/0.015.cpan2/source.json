@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Overload-FileCheck-0.015.tar.gz",
+    "integrity": "sha256-xYmPD2EraZquTKnucE3uPqfeWBXSpUQjGxBKBCrDCew=",
+    "strip_prefix": "Overload-FileCheck-0.015",
+    "overlay": {
+        "BUILD.bazel": "sha256-YeN1dyxgkouUiCRWWzKgNeGeBc1lNwYvOKbciUD/Q5Y="
+    }
+}

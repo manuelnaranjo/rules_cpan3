@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/String-Random-0.32.tar.gz",
-    "integrity": "sha256-nZPGeaNP+ibTtPoIN8rtHNLmfXZXKBi5HpfepzRwUkY=",
-    "strip_prefix": "String-Random-0.32",
-    "overlay": {
-        "BUILD.bazel": "sha256-a/TC5KH3HiD5LLtdgExKv9IZ+ECPuF3GVdKNA5K4JCI="
-    }
-}

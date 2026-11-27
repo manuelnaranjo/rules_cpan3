@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CR/CRENZ/Module-Find-0.17.tar.gz",
+    "integrity": "sha256-df8cjJjowFN2kmRc1i0qTEirCXsdSl6kKiUwUJjX/Tk=",
+    "strip_prefix": "Module-Find-0.17",
+    "overlay": {
+        "BUILD.bazel": "sha256-qw47idp3CtoqX1z4+qkW91oVTRaSUEbU4wdGlQgMN0I="
+    }
+}

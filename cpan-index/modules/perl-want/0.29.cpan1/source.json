@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RO/ROBIN/Want-0.29.tar.gz",
-    "integrity": "sha256-tOR0C41Mt4NZEnPGNr1oMEiS4o2J6Iq/knOx3hf1Uvc=",
-    "strip_prefix": "Want-0.29",
-    "overlay": {
-        "BUILD.bazel": "sha256-s7FCw9Ml/FjkhudxP9A8pSeWMpcM7JblRNjaEAgzCI4="
-    }
-}

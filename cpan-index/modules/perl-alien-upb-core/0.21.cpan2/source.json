@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Alien-uPB-Core-0.21.tar.gz",
+    "integrity": "sha256-CNdCgXgJ38nMo7P4bSswG/O1bMUYfRhpx3Qw5TIdGbM=",
+    "strip_prefix": "Alien-uPB-Core-0.21",
+    "overlay": {
+        "BUILD.bazel": "sha256-uA7eSOzYf6emB0w6m3WOqLKFVzUmE2FcjR8geAM79MQ="
+    }
+}

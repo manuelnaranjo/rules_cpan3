@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MV/MVERB/GDTextUtil-0.86.tar.gz",
-    "integrity": "sha256-iG7L+Fz+lPQTXuVonEhHqa54PsuZ5nWeEsc08t1hFrw=",
-    "strip_prefix": "GDTextUtil-0.86",
-    "overlay": {
-        "BUILD.bazel": "sha256-Qq/jnu8P9iALaRQMVSxJszyPseXyy2q4PhKfrhP4E+k="
-    }
-}

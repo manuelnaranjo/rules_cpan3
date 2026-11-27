@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BO/BOOK/Dotenv-0.002.tar.gz",
+    "integrity": "sha256-BMenzEURYX16cMTKQQ0QcH3EliSM2tICQK4kIiMhJFQ=",
+    "strip_prefix": "Dotenv-0.002",
+    "overlay": {
+        "BUILD.bazel": "sha256-45GES2Wmxdf5kMwYuJQl9Mi1JRH4zRe0xSiCZBqJ8kk="
+    }
+}

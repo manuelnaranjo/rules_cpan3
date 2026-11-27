@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RI/RIBASUSHI/DBIx-Class-TimeStamp-0.14.tar.gz",
-    "integrity": "sha256-qKTV6YZycgaxFQ9iHG84EHihb/3nqhoF1BhG50omGf4=",
-    "strip_prefix": "DBIx-Class-TimeStamp-0.14",
-    "overlay": {
-        "BUILD.bazel": "sha256-FPEvaa/Jd/jCtlM9iIEuEJUC1f7tgJ8vRobVwM9hrvU="
-    }
-}

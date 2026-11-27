@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETJ/Dancer2-Plugin-GraphQL-0.09.tar.gz",
-    "integrity": "sha256-P7WgP0Kn5orjpkv64QnFUVIIx7pK65e2rPEPD+DdoLY=",
-    "strip_prefix": "Dancer2-Plugin-GraphQL-0.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-wjBZEsDiYNSb7Yq+fRKU4TEYc97n3f3JDR3csuoTwRM="
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NI/NIKOLAS/POSIX-AtFork-0.04.tar.gz",
-    "integrity": "sha256-wuIpOobUhxRLyPe6COfEt2sRsOTf3EGAmEXTDvoH5g4=",
-    "strip_prefix": "POSIX-AtFork-0.04",
-    "overlay": {
-        "ppport.h": "sha256-AyX+3Cl8jndgVPW0unhD2OH1owcYxAouHhKb1AvfyGo=",
-        "BUILD.bazel": "sha256-67Pj7dAgnRP+SsnP4+g6k7FqlHHP2EGJDQBDJxPTflg="
-    }
-}

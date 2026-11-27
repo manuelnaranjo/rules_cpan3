@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DO/DOMM/Pod-Strip-1.100.tar.gz",
-    "integrity": "sha256-Z1BqZh+pyuzv57pPQvC8FbCm8JZ8eWB3QPbLaXSu1M0=",
-    "strip_prefix": "Pod-Strip-1.100",
-    "overlay": {
-        "BUILD.bazel": "sha256-9MpGZ/OLuitIN3sIVqXqFGEUntlZDAOurOo9a1yfiE8="
-    }
-}

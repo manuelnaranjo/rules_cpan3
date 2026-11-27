@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIK/CryptX-0.091.tar.gz",
+    "integrity": "sha256-OoLVz3hpheXeUznRI2zksnMG215rHtX6FQON7W1EhZo=",
+    "strip_prefix": "CryptX-0.091",
+    "overlay": {
+        "BUILD.bazel": "sha256-7N/1eJrZmuARgfRKkW1xRfNxCL32kIyxNDxIvjwtS1A="
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Y/YA/YANICK/GnuPG-0.19.tar.gz",
-    "integrity": "sha256-r1Py0/Yyl+BGZ26uFKdilq/dKRDglyO2sRNwhiK3mJs=",
-    "strip_prefix": "GnuPG-0.19",
-    "overlay": {
-        "BUILD.bazel": "sha256-DuNPgW3BH0XRLOHhA3EhvjDFs2g5t0LsdOFAdoF1+yY="
-    }
-}

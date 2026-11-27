@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/File-Slurp-9999.32.tar.gz",
+    "integrity": "sha256-TDwhmSqdQr46ed10o8g9J9OAVyadZVCaL1VeoPsrxbA=",
+    "strip_prefix": "File-Slurp-9999.32",
+    "overlay": {
+        "BUILD.bazel": "sha256-Rv0jT/q9LHJGhYv0za3HJX6/1o3E9nI49VxPtWqiQxI="
+    }
+}

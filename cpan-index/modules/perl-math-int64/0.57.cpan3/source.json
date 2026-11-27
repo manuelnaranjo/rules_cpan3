@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SA/SALVA/Math-Int64-0.57.tar.gz",
+    "integrity": "sha256-EsYBEcHPzrJXrCzMWy4XIYee+gmhsKc+iDavyhB6fXU=",
+    "strip_prefix": "Math-Int64-0.57",
+    "overlay": {
+        "BUILD.bazel": "sha256-9J4OO+9Y1tvDZ4xy04Y1OPXNAANkuwSWsR9sTCf+Utg="
+    }
+}

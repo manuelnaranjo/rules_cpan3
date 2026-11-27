@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz",
-    "integrity": "sha256-LZmXVoUkKYDQqZBPY5FEwFnW7OFYme/eSst0LTJT8QU=",
-    "strip_prefix": "autovivification-0.18",
-    "overlay": {
-        "BUILD.bazel": "sha256-IdTrGCa8sTJxtncCVZIRuCJZOCKHX/cFQ4Ypbc66E9Q="
-    }
-}

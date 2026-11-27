@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIXAS/Struct-Diff-0.98.tar.gz",
-    "integrity": "sha256-x15jvtPcmBmDo/k2cUzpfHZoKu4Cw6V4+VGC71apZ4A=",
-    "strip_prefix": "Struct-Diff-0.98",
-    "overlay": {
-        "BUILD.bazel": "sha256-hO5qKG2Fcq0HRugho+epwFfhvHcu3KJJ5WjRbJnXGjQ="
-    }
-}

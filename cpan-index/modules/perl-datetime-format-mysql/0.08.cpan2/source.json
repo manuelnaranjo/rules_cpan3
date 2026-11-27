@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/X/XM/XMIKEW/DateTime-Format-MySQL-0.08.tar.gz",
+    "integrity": "sha256-Gctw6YWEZV41TS1qjnHMXKkC3dw6xEQWcS+RY9Eiueg=",
+    "strip_prefix": "DateTime-Format-MySQL-0.08",
+    "overlay": {
+        "BUILD.bazel": "sha256-Sbpx0kwC7e/EY9MosZMJ5/vYfZqfdsI7oZUeS+HW46A="
+    }
+}

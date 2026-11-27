@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCOPPIT/Benchmark-Timer-0.7112.tar.gz",
+    "integrity": "sha256-AnhEfZrZ13PVmk69bbiv6t3oHI+l1qhzj159V44qQC4=",
+    "strip_prefix": "Benchmark-Timer-0.7112",
+    "overlay": {
+        "BUILD.bazel": "sha256-FjxOATdRBve18RYe4xZCukx6HN5WzJq0qu5XSvYB2nw="
+    }
+}

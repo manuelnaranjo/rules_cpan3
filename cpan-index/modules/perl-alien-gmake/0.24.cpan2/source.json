@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-gmake-0.24.tar.gz",
+    "integrity": "sha256-rCccXOj1BiMqzfPFqnFxG7zBxFlAXlRxQGpImzPpa1Y=",
+    "strip_prefix": "Alien-gmake-0.24",
+    "overlay": {
+        "BUILD.bazel": "sha256-tZwAmV376spzcttdYOmw8VluiD9cj+JyPPCBqKW6kZc="
+    }
+}

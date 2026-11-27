@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Test-Needs-0.002010.tar.gz",
-    "integrity": "sha256-kj/9x4/LqWYJdT5LriawugGGiT3kpjzVI24BLHyQ4gg=",
-    "strip_prefix": "Test-Needs-0.002010",
-    "overlay": {
-        "BUILD.bazel": "sha256-thnY9o0AZMsHlZDoqdoIyKJAfKmaW2AVWuR3E5pSthI="
-    }
-}

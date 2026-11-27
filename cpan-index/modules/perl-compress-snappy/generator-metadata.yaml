@@ -1,6 +1,0 @@
-native_deps:
-- '@snappy//:snappy-c'
-patch_cmds:
-- rm -rf src
-patch_cmds_win:
-- powershell -Command "Remove-Item -Recurse -Force src"

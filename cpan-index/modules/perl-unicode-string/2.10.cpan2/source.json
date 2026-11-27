@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/GAAS/Unicode-String-2.10.tar.gz",
+    "integrity": "sha256-iUoRDs5HlUaviv7Aly7scyDIbE3qTms1Tf88dSa6m2g=",
+    "strip_prefix": "Unicode-String-2.10",
+    "overlay": {
+        "BUILD.bazel": "sha256-ojILgb9t28YQ3rz1P7iV2XCxWqVUQNlakJZR7gGU5eg="
+    }
+}

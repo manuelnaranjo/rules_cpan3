@@ -1,0 +1,10 @@
+module(
+    name = "perl-math-bigint-gmp",
+    version = "1.7003.cpan2",
+)
+
+bazel_dep(name = "rules_cpan", version = "0.0.0")
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "rules_cc", version = "0.2.28")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "gmp", version = "6.3.0.bcr.5")

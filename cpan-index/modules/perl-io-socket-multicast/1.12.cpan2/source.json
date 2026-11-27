@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BR/BRAMBLE/IO-Socket-Multicast-1.12.tar.gz",
+    "integrity": "sha256-cOivSqIdGbq17dn0Oms9Ynd0imUUXUb/DqKuTFlJXHI=",
+    "strip_prefix": "IO-Socket-Multicast-1.12",
+    "overlay": {
+        "BUILD.bazel": "sha256-Mo1Z2wzNd3Aq//C1hL7uY+5f4NDeROoqOY723J+VvWg="
+    }
+}

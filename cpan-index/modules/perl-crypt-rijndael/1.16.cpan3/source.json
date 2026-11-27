@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Crypt-Rijndael-1.16.tar.gz",
+    "integrity": "sha256-ZUAIXjgEuCpvB1LBEiz3jK3SIZkBNt1v1MCX0FbITUA=",
+    "strip_prefix": "Crypt-Rijndael-1.16",
+    "overlay": {
+        "BUILD.bazel": "sha256-udDiKKtCKX6OVZz0SokSuG3aPEVzZ6waTrsfiXZ6eNI="
+    }
+}

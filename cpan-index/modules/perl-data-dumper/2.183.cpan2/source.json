@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/Data-Dumper-2.183.tar.gz",
+    "integrity": "sha256-5Cc2iQt9rhs3gY2cXvofH9xS3sBPRGozpIGb8dSrWtM=",
+    "strip_prefix": "Data-Dumper-2.183",
+    "overlay": {
+        "BUILD.bazel": "sha256-jZJr4prgNOqacak4/iVO4a/VGewdf+0xGnMvxkbTClQ="
+    }
+}

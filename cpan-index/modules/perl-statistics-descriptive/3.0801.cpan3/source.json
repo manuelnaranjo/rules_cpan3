@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Statistics-Descriptive-3.0801.tar.gz",
+    "integrity": "sha256-BHtwpj/cqpFhaOD/LVjhVeDrvGjtTMvXOnIT3KMCj2U=",
+    "strip_prefix": "Statistics-Descriptive-3.0801",
+    "overlay": {
+        "BUILD.bazel": "sha256-Nls62ixm5ZEVrn1I/tezYc5p4xw79TU+NRIPNwoWSl8="
+    }
+}

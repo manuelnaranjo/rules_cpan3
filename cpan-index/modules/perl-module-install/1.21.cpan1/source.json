@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Install-1.21.tar.gz",
-    "integrity": "sha256-+/kQB/MFZfOSDhBgVf0NQoeYHV59rYs1MjzktzPxWns=",
-    "strip_prefix": "Module-Install-1.21",
-    "overlay": {
-        "BUILD.bazel": "sha256-EZD4AjF9I+b/FOZyWHbeQ0NnscdK7OT/42enApJS9Vc="
-    }
-}

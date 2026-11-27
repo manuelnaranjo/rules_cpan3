@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JA/JAWNSY/Math-Random-ISAAC-1.004.tar.gz",
+    "integrity": "sha256-J3PwL78gfpdF52oDffCL9ajMmH7SPFcEDOf3sVYfK3w=",
+    "strip_prefix": "Math-Random-ISAAC-1.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-a1T35MVGDZqaqcHYdfkVkZN4UZNUYzEWVWINAdiuCAg="
+    }
+}

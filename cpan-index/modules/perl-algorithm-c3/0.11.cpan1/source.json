@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Algorithm-C3-0.11.tar.gz",
-    "integrity": "sha256-qvSEZ3Zd7qbkgFS8fUPkbk1Ay82hZVLGKdN74Jgokwk=",
-    "strip_prefix": "Algorithm-C3-0.11",
-    "overlay": {
-        "BUILD.bazel": "sha256-Q11+IfJGARpO/gTMCX9rguEmc3YeMI+qZB6eXLQ9kSI="
-    }
-}

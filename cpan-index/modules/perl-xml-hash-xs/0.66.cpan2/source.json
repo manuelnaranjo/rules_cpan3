@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Y/YO/YOREEK/XML-Hash-XS-0.66.tar.gz",
+    "integrity": "sha256-m2XCUuvUWaAoBFN5RW5k/o9KYJ86n0jRWj4CF4U4zHk=",
+    "strip_prefix": "XML-Hash-XS-0.66",
+    "overlay": {
+        "BUILD.bazel": "sha256-67xsmnIWmX25u6te8QgtfddiDKCr80H9tA8AmMY2wNg="
+    }
+}

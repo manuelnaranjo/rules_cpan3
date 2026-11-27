@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NW/NWELLNHOF/CommonMark-0.310100.tar.gz",
-    "integrity": "sha256-BPNh7jBCVsQVR9IiufO1kPoi8M27ND9hYyJhp5eBYXE=",
-    "strip_prefix": "CommonMark-0.310100",
-    "overlay": {
-        "BUILD.bazel": "sha256-/6AqVnXbvYridO7zIjaawGFbetA+fu8Z8SU3TPU1HDI="
-    }
-}
