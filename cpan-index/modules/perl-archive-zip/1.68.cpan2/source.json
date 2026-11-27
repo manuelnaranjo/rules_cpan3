@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.68.tar.gz",
+    "integrity": "sha256-mE4YXXhbr2EpxudfjrREEXRawAv2Ei+xyOgio4YexlA=",
+    "strip_prefix": "Archive-Zip-1.68",
+    "overlay": {
+        "BUILD.bazel": "sha256-kGJam71So5550YmQUCPetm0b2HK0cz/+Y0TboOElqvI="
+    }
+}

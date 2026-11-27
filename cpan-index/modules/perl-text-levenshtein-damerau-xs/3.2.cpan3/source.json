@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/U/UG/UGEXE/Text-Levenshtein-Damerau-XS-3.2.tar.gz",
+    "integrity": "sha256-FU43apCcs1jK/oVx0Cgy8lg4vX3RHfP4e2Gf2B7rWf4=",
+    "strip_prefix": "Text-Levenshtein-Damerau-XS-3.2",
+    "overlay": {
+        "BUILD.bazel": "sha256-Fh9yJycRvZHBUidUA4aToPhYaEc9eXdt1bnN9TZBNkE="
+    }
+}

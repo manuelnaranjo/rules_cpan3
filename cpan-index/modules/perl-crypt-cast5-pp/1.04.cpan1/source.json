@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BO/BOBMATH/Crypt-CAST5_PP-1.04.tar.gz",
-    "integrity": "sha256-y6mKgEA/uJihTJKPI39EgWtISGQYQM4lFzY8LAcbUyc=",
-    "strip_prefix": "Crypt-CAST5_PP-1.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-3u5twHTojfoylMGh3sduyCpiyrclY/u60tHcJvtvB8o="
-    }
-}

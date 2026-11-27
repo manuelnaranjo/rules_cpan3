@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAXMIND/Geo-IP-1.51.tar.gz",
-    "integrity": "sha256-FjAgMV1cVEGDaseeCKd7Qo8nf9CQvqT6gNpwd7JDaro=",
-    "strip_prefix": "Geo-IP-1.51",
-    "overlay": {
-        "BUILD.bazel": "sha256-OawIk6ULSrwrJU+bj1Haix24EIFV0fqecVmmSHRZ6ug="
-    }
-}

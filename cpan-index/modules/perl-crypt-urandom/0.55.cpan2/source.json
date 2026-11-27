@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.55.tar.gz",
-    "integrity": "sha256-759EFBBzwTVz6FsUj/mpCJxFglt9ZgjYMuQmOJnTotQ=",
-    "strip_prefix": "Crypt-URandom-0.55",
-    "overlay": {
-        "BUILD.bazel": "sha256-5MKwlyxmCy2lXw1twW5JhtxoENEdM+cl0OAmUmN5Dts="
-    }
-}

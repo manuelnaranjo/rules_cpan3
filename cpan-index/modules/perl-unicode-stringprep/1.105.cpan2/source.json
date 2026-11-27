@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/Unicode-Stringprep-1.105.tar.gz",
+    "integrity": "sha256-5r67xYQIIx/RMX25ECRJs+faT6Q3559jc4LTYxPv0BE=",
+    "strip_prefix": "Unicode-Stringprep-1.105",
+    "overlay": {
+        "BUILD.bazel": "sha256-phgy1mxxJ6eLARg3/j8a2DZdFH1UZbrPJPoJGHWNCbk="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HI/HIDEAKIO/Module-Build-XSUtil-0.19.tar.gz",
+    "integrity": "sha256-kGOzw0bt60IoB//kn/sjA4xPkA1Kd7hFzktT2XvylAA=",
+    "strip_prefix": "Module-Build-XSUtil-0.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-rYI73dF6wU3vBL1JhnjbsczEIf/nOMrT1/hg/Yf8fgQ="
+    }
+}

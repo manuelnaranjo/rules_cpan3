@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Data-Undump-0.15.tar.gz",
-    "integrity": "sha256-fa7bNMmclCAWBcLaZrfiZ8lalCAGN+cbs4ZkMbL0f1k=",
-    "strip_prefix": "Data-Undump-0.15",
-    "overlay": {
-        "BUILD.bazel": "sha256-ZfTV0qvanPeZK4+Z0N50RJxW6LH9uBMc4Ic2MFLFMBo="
-    }
-}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Class-XSAccessor-1.19.tar.gz",
+    "integrity": "sha256-mcVrOV8SOa8ZkB8v7rEl2ey041Gg2A2qlSkhGkcApvI=",
+    "strip_prefix": "Class-XSAccessor-1.19",
+    "overlay": {
+        "BUILD.bazel": "sha256-uYzFk7plPCOdOEJ4YB/RXWsu8/Cv11e8ye7d9pKDmo4="
+    }
+}

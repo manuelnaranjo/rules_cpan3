@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AJ/AJWOOD/Term-VT102-0.91.tar.gz",
+    "integrity": "sha256-+VTgMQlB1FwPw+tKQPXToA1oEZ4nfTA6HmrxHe1vvZQ=",
+    "strip_prefix": "Term-VT102-0.91",
+    "overlay": {
+        "BUILD.bazel": "sha256-iv/YbWZyvFUzDOUlgU+KMGkKuOEHvRCAqaGN6F73ewU="
+    }
+}

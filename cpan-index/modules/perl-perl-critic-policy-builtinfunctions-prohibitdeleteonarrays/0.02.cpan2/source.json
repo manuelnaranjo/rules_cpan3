@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LI/LIOSHA/Perl-Critic-Policy-BuiltinFunctions-ProhibitDeleteOnArrays-0.02.tar.gz",
-    "integrity": "sha256-qkRzn0bs6XDnt3gIA6/EgyXIbVptggD9H4wmgl0gj0A=",
-    "strip_prefix": "Perl-Critic-Policy-BuiltinFunctions-ProhibitDeleteOnArrays-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-ecQXWcXbpKeJbX83n2GsqFmpp7EF67rYTxBWmI0ZcVY="
-    }
-}

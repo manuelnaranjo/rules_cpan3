@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETJ/GraphQL-0.54.tar.gz",
+    "integrity": "sha256-iHKVjhs5yzFCG4kkPpFiiWjGLs4fchUf0mlpjxadaOU=",
+    "strip_prefix": "GraphQL-0.54",
+    "overlay": {
+        "BUILD.bazel": "sha256-k3p8Cp2ypkQC9F2yFMd+fsDhjAtKWOyhwBEUid/1UTI="
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Socket-2.043.tar.gz",
+    "integrity": "sha256-I2qrgmLpKNBb4LsKaPrp6CmRP50/pLtq67qeMO2xia0=",
+    "strip_prefix": "Socket-2.043",
+    "overlay": {
+        "const-xs.inc": "sha256-TqrTkEnGX8CRQ/otmJs06bithAWZ/iqP9AbWkDFjbIY=",
+        "const-c.inc": "sha256-RtkG0ONlEBuK04eFfP5PHXUqZoMA9Io08G93KiHzCrQ=",
+        "BUILD.bazel": "sha256-JMqKS4bF2IphGSucXSkWy/jB5quZBFumvBv3alYqLWw="
+    }
+}

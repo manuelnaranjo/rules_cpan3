@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PH/PHRED/XML-Parser-Lite-0.722.tar.gz",
-    "integrity": "sha256-b5CgJ+FTGg5UBs8d4Txwm1IWlm349z0Lq5q5GSCXY+4=",
-    "strip_prefix": "XML-Parser-Lite-0.722",
-    "overlay": {
-        "BUILD.bazel": "sha256-2ZRGh8+kypmD5fl+FltZ1xFUxCJ3xoC/Gp7spv6pMK4="
-    }
-}

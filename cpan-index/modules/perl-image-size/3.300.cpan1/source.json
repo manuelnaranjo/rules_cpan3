@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJRAY/Image-Size-3.300.tar.gz",
-    "integrity": "sha256-U8mx+GUxzeBg7mNwnR/ac8q8DPLVgdKbIrAUeBufAms=",
-    "strip_prefix": "Image-Size-3.300",
-    "overlay": {
-        "BUILD.bazel": "sha256-/WjUuQXECvUyHSGg9k9CBMJjaGUcXw8S21J7DEzD8xQ="
-    }
-}

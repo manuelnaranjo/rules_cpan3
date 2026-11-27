@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-NaCl-Sodium-2.004.tar.gz",
+    "integrity": "sha256-DJt8kbAe25Z7PKRXCnF5XqCPikutBBseYsSmAwXkdDc=",
+    "strip_prefix": "Crypt-NaCl-Sodium-2.004",
+    "overlay": {
+        "BUILD.bazel": "sha256-DgeVnAeD5HddhXjbSwesZKt81eHxzgNW0LErRPZq7b0="
+    }
+}

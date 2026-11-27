@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.003000.tar.gz",
-    "integrity": "sha256-T2+OsMTvvJOYoPHvDJf7dwTu5MzZCvGjHdoyhUqoEWQ=",
-    "strip_prefix": "Config-IniFiles-3.003000",
-    "overlay": {
-        "BUILD.bazel": "sha256-4YK1VTcicFojZFTfLG9YSsJw52XWhKfeg3L64B7FXyo="
-    }
-}

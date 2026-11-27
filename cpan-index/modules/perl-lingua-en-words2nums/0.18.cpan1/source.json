@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JO/JOEY/Lingua-EN-Words2Nums-0.18.tar.gz",
-    "integrity": "sha256-aGVWeXzSpOqgZvGbvwOrJcBieCksnq0vGH39kDHqHYU=",
-    "strip_prefix": "Lingua-EN-Words2Nums-0.18",
-    "overlay": {
-        "BUILD.bazel": "sha256-w2aNJGjOGpXxfDlVh8vIA+Zam77c3xKUTVj7WYjv8qA="
-    }
-}

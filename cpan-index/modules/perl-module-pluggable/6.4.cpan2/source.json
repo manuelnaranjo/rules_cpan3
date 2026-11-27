@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SI/SIMONW/Module-Pluggable-6.4.tar.gz",
-    "integrity": "sha256-lw/ROszT1TjmN9sIDrvZiYAgyLVZGDfISTo57dc3ki0=",
-    "strip_prefix": "Module-Pluggable-6.4",
-    "overlay": {
-        "BUILD.bazel": "sha256-rSDALlzDNc/+bf8PY03RpXkNsZI6wnm+0qQEqGflaO8="
-    }
-}

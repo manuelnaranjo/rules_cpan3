@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MT/MTHURN/I18N-Charset-1.419.tar.gz",
+    "integrity": "sha256-jq89/UcSsxiie71nY7up1VIbvy393RNI8A1fpknRJZg=",
+    "strip_prefix": "I18N-Charset-1.419",
+    "overlay": {
+        "BUILD.bazel": "sha256-xxDJcZ5lzUAEqFMNEedFOVgkIB2xc7jw5uMd33tmXFw="
+    }
+}

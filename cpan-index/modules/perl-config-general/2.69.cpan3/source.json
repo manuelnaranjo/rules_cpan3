@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TL/TLINDEN/Config-General-2.69.tar.gz",
+    "integrity": "sha256-ZTikfmlQvKCwtqxMaael6RX8Us8GA0bZNfFlcP7IbUM=",
+    "strip_prefix": "Config-General-2.69",
+    "overlay": {
+        "BUILD.bazel": "sha256-M0GxZHdJdYmgjRQjhhAwcHRvASA9FjEK8YQ6EvACweM="
+    }
+}

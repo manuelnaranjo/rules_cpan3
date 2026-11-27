@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/B/BK/BKB/Gzip-Faster-0.23.tar.gz",
+    "integrity": "sha256-IpCUPxwG8COM11HKuyGOtqHtIqG+6AcsgSPb2Y1LaGs=",
+    "strip_prefix": "Gzip-Faster-0.23",
+    "overlay": {
+        "BUILD.bazel": "sha256-wF+c+5vFPbdPSCvmKiv5TseM21hYfJN4BUJurec/BoM="
+    }
+}

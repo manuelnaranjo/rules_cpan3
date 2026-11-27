@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSCHWERN/URI-Find-20160806.tar.gz",
+    "integrity": "sha256-4hOkJaUbX1UyQhHzeQnXh0nQus3qJZulGphV0NGWY9Y=",
+    "strip_prefix": "URI-Find-20160806",
+    "overlay": {
+        "BUILD.bazel": "sha256-78Zgzy+BaWj0m9d0YsrhYk7UPubRZnRwbK1ezKnpt54="
+    }
+}

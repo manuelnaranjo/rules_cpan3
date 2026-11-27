@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/IO-Compress-Brotli-0.023.tar.gz",
+    "integrity": "sha256-+zA4YRVYnb3HH/OrCvG2fDPCAt9LvbTgAJPxxQos8vg=",
+    "strip_prefix": "IO-Compress-Brotli-0.023",
+    "overlay": {
+        "BUILD.bazel": "sha256-KnwPwQJzMEMJOdxvcDcK7gXKlDxrxLVM7naVxzN8tKo="
+    }
+}

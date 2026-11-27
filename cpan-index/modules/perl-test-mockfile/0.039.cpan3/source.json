@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/Test-MockFile-0.039.tar.gz",
+    "integrity": "sha256-4dw+TwFEtWga5iTt68+yh5irLo16KIH69/FqaUvUw24=",
+    "strip_prefix": "Test-MockFile-0.039",
+    "overlay": {
+        "BUILD.bazel": "sha256-p6nXKTuXCX6muXt2t65jMu+rv46rZ8FY4JZ2b5lA6DU="
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/DBD-SQLite-1.78.tar.gz",
+    "integrity": "sha256-77rXeUuvqk50dsB0RaM7v+EEDjgLqjOVoCY17r44WdU=",
+    "strip_prefix": "DBD-SQLite-1.78",
+    "overlay": {
+        "SQLite.xsi": "sha256-ujLShCoSQ4BR0npUIVB/alhBkUXLwJSG2cNnYIj3Qjs=",
+        "Driver_xst.h": "sha256-1QmBawuetSKm17iThmkyu8FVGK1107g8GjmiBXjlmio=",
+        "dbixs_rev.h": "sha256-bpE+1Ay5Yhn4Dx+fNK3OJtVavSPjhZSlj3dLF3sLd9w=",
+        "DBIXS.h": "sha256-zuMBeOQTNHgwyxMXPXV36NcuaJ9EB8I/AIcnjgCliaM=",
+        "dbivport.h": "sha256-nlP39Bqq8bVA4nhHVu9vFvYbY98NmVZIOt7TxJtuD0g=",
+        "dbipport.h": "sha256-9v9CmP7WFxlj/voMFjra1a3W65OSL+T9hAZW06pz96E=",
+        "dbd_xsh.h": "sha256-5nyUc5m9UyxfMb2RH8fzV9RVLt0hXrpWDseg6Q0FrUs=",
+        "dbi_sql.h": "sha256-KpzCQbukAz1bVxEcUm6NCnqLuUqfuDwonW+oJpBUP3c=",
+        "BUILD.bazel": "sha256-2KjOfaEiIBadCP/C0pt0Uztu4vwe3se3T2np9owxFVo="
+    }
+}

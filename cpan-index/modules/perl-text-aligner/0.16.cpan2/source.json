@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Text-Aligner-0.16.tar.gz",
+    "integrity": "sha256-XIV9vOWG9X+j18Tr0yACOrOyljsgSUKK4BvTvE8hVyU=",
+    "strip_prefix": "Text-Aligner-0.16",
+    "overlay": {
+        "BUILD.bazel": "sha256-L1yDBrYaTjpm/wb0OemACfbfuxCy8NaC+xzo1RvSLos="
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/Digest-MD5-2.59.tar.gz",
-    "integrity": "sha256-tey6B5vVkH1SZjplnNl3tiR1Jqvmrtm4GNCD3Zmvd9I=",
-    "strip_prefix": "Digest-MD5-2.59",
-    "overlay": {
-        "BUILD.bazel": "sha256-hSJymVV0RQtCWg2cQu4mPGu9IumNVVO9R6cDRy3BUag="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Statistics-CaseResampling-0.18.tar.gz",
-    "integrity": "sha256-Tdk0Sg0rNQBeAkVRMMYc07UGD3GX7dkFN1hcsMAJ1O8=",
-    "strip_prefix": "Statistics-CaseResampling-0.18",
-    "overlay": {
-        "BUILD.bazel": "sha256-418cxAfc0bvFle/nF0v2rt73ONUhrRwVxoXazaaB4j0="
-    }
-}

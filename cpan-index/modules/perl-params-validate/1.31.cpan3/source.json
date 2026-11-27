@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-Validate-1.31.tar.gz",
+    "integrity": "sha256-G/JRjvLEhp+RWQ4hn1RcjvEu1TzzE+DrVwSt9/Gylh4=",
+    "strip_prefix": "Params-Validate-1.31",
+    "overlay": {
+        "BUILD.bazel": "sha256-noKABmzP1NqZmoJpP6XAAjT3uTwvMkqwuTlKYVXXCiA="
+    }
+}

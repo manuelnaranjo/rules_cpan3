@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JH/JHI/String-Approx-3.28.tar.gz",
-    "integrity": "sha256-QyAedi2GmcsKwsB2SlRUvcIwbAdxAU1sj7qCFIBjE0I=",
-    "strip_prefix": "String-Approx-3.28",
-    "overlay": {
-        "BUILD.bazel": "sha256-IzcH6j5cIAfy+25khzwaZIgNuT+EXi3ujDFgW8X8C1M="
-    }
-}

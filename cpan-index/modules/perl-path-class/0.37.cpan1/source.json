@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KW/KWILLIAMS/Path-Class-0.37.tar.gz",
-    "integrity": "sha256-ZUeBlIYCOG8ssuRHOnOfF9xpU9kqq8JJikyiVhvCSM4=",
-    "strip_prefix": "Path-Class-0.37",
-    "overlay": {
-        "BUILD.bazel": "sha256-t01i70E9y0o7vbmDjtfwVzoBBce7Sp65DbrkHFmFPuo="
-    }
-}

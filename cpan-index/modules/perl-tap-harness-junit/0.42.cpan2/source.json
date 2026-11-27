@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JL/JLAVALLEE/TAP-Harness-JUnit-0.42.tar.gz",
+    "integrity": "sha256-Q7mhvKApid1jEDMlaM/pWkfDIdrngtmQXbTlhbLyetg=",
+    "strip_prefix": "TAP-Harness-JUnit-0.42",
+    "overlay": {
+        "BUILD.bazel": "sha256-9qZp0wAYxhdc8LNKO0OtESPnskw1jeH3oHaUdTrhd6g="
+    }
+}

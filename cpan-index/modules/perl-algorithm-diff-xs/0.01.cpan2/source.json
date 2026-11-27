@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AU/AUDREYT/Algorithm-Diff-XS-0.04.tar.gz",
+    "integrity": "sha256-zqibR+H3D6ePVfPEBUkc420+/9mYD1xUke3/oxqncVM=",
+    "strip_prefix": "Algorithm-Diff-XS-0.04",
+    "overlay": {
+        "BUILD.bazel": "sha256-aPtMiQj8F0zTeiT7noTZBFYrqhTHhRWoHFWuWzEH2Q8="
+    }
+}

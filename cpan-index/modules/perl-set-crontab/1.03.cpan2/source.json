@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AM/AMS/Set-Crontab-1.03.tar.gz",
+    "integrity": "sha256-R+KU6I0tE54tBt+lRLkaPMVlajpt0VWU3HZHWfuqhto=",
+    "strip_prefix": "Set-Crontab-1.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-4P0i80mvzx5W7yk7I7G3OJX6ahz6h6hpwMIGcZefd/M="
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/Jcode-2.07.tar.gz",
-    "integrity": "sha256-7Rzkc+yGkInlIBbPyDVRZevDe+lpS6ToKcfrS6HEX40=",
-    "strip_prefix": "Jcode-2.07",
-    "overlay": {
-        "BUILD.bazel": "sha256-apir52twdDaABpWzeB4jCPNdPOjQ6JCKvrsnc0ciIjk="
-    }
-}

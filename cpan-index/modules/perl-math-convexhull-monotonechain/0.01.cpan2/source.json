@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Math-ConvexHull-MonotoneChain-0.01.tar.gz",
+    "integrity": "sha256-KIvEWQgmMkVUj5FIKrEkiGjdne5Ef5yibK15YT47lPU=",
+    "strip_prefix": "Math-ConvexHull-MonotoneChain-0.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-tp2ficmyR+wS8itAWsUhnUZohrJUurfqW1bSGrb+3rw="
+    }
+}

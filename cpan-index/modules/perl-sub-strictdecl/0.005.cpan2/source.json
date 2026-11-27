@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Sub-StrictDecl-0.005.tar.gz",
+    "integrity": "sha256-oSfa52RcGpVwzZopcMbcST1SL/BzGKNKOeQJCY9pESU=",
+    "strip_prefix": "Sub-StrictDecl-0.005",
+    "overlay": {
+        "BUILD.bazel": "sha256-yfGydPSE6zv27ukBb3aOzRTtZKsO17TDvNikx7PYDWk="
+    }
+}

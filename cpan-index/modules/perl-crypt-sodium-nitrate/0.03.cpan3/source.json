@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/H/HU/HUGMEIR/Crypt-Sodium-Nitrate-0.03.tar.gz",
+    "integrity": "sha256-fQmAjp+GnPuNeJEmxdmE8jnWfHoFfNVgggpBGgJb/3k=",
+    "strip_prefix": "Crypt-Sodium-Nitrate-0.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-Yx9vnNgGJZ9NjOr/pjZ3LKsCtvgo0yfb4d/v6EMhq7M="
+    }
+}

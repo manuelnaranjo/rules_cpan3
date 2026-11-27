@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Guard-1.023.tar.gz",
-    "integrity": "sha256-NMTd+R/JPRCQ2G2hTfcG0XWxYQxnNywB4SzpVV1N0dw=",
-    "strip_prefix": "Guard-1.023",
-    "overlay": {
-        "BUILD.bazel": "sha256-ipV3dEIFmxtGEwSBKeidUXkmsnn+Xe7EanwwdYMrFIg="
-    }
-}

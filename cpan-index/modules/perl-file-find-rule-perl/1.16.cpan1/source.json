@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-Find-Rule-Perl-1.16.tar.gz",
-    "integrity": "sha256-rhiGBQ2cohIjwHPihwq9yA3DDj9VKJoRw32jggqDIf8=",
-    "strip_prefix": "File-Find-Rule-Perl-1.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-xTMaBNCqGBtNpSyrppV7HIrvJqILhrmf8kLSUeEII+s="
-    }
-}

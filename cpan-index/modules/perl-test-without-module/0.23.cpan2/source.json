@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CO/CORION/Test-Without-Module-0.23.tar.gz",
+    "integrity": "sha256-gonhzX9XAXqBarQSfins16dUrnzVwDfEGzs7+EnCHSE=",
+    "strip_prefix": "Test-Without-Module-0.23",
+    "overlay": {
+        "BUILD.bazel": "sha256-qkxFtVpDJyKDC4ezglB0k7//20pkifpVQPaFOlgOhLk="
+    }
+}

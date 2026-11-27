@@ -1,0 +1,17 @@
+module(
+    name = "perl-term-bash-completion-generator",
+    version = "0.02.8.cpan2",
+)
+
+bazel_dep(name = "rules_cpan", version = "0.0.0")
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "rules_cc", version = "0.2.28")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "perl-readonly", version = "2.05.cpan1")
+bazel_dep(name = "perl-sub-exporter", version = "0.992.cpan3")
+bazel_dep(name = "perl-tree-trie", version = "1.9.cpan2")
+bazel_dep(name = "perl-test-block", version = "0.13.cpan1")
+bazel_dep(name = "perl-test-exception", version = "0.43.cpan1")
+bazel_dep(name = "perl-test-nowarnings", version = "1.06.cpan1")
+bazel_dep(name = "perl-test-warn", version = "0.37.cpan2")
+bazel_dep(name = "perl-text-diff", version = "1.46.cpan1")

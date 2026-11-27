@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-1.68.tar.gz",
-    "integrity": "sha256-3dr0oN7xjc5rMBB5iBoXtKjJEYSuP6PcWHI6MAXqudM=",
-    "strip_prefix": "DateTime-1.68",
-    "overlay": {
-        "BUILD.bazel": "sha256-dZgqk5t3xanZMuqeKBYjr0AscRRWcS+uTeICBMJw6IM="
-    }
-}

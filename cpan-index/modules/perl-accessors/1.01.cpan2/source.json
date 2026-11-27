@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/S/SP/SPURKIS/accessors-1.01.tar.gz",
+    "integrity": "sha256-Oo2wDzgUjzr62+UzDcVJDZkz+crhN+hC7CJaTTrbLZ8=",
+    "strip_prefix": "accessors-1.01",
+    "overlay": {
+        "BUILD.bazel": "sha256-xEoHxkOZ2ov7aWZQ66m0c8PF/1FqLtxUCp6rCJz1538="
+    }
+}

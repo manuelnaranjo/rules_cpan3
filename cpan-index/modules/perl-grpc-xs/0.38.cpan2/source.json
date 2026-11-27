@@ -1,0 +1,13 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JO/JOYREX/grpc-xs-0.38.tar.gz",
+    "integrity": "sha256-V5ALaEuwC1S4z3LMFzglhWO2IW1O/5cuDZM5PkpSB4E=",
+    "strip_prefix": "Grpc-XS-0.38",
+    "overlay": {
+        "util.h": "sha256-JJbr8DC0snWWP8mKKHYiyNh5KRvXQOZv6C3UCF2Tm14=",
+        "ext/call_credentials.h": "sha256-5KJRjpDFcukX9oKtPHyiOfjzXxyCmzIdwdhetR3ViK8=",
+        "ext/server_credentials.h": "sha256-0sWRnDvayUOwmwOLAHSTwplYO/TjY/4MA382/bPIbyg=",
+        "ext/channel_credentials.h": "sha256-DvkD2y8P3Pg+lKjb9000zTD21XYWuJIBskuE3zP7pEM=",
+        "ext/channel_credentials.xs": "sha256-BNbOrA9jZeS7PdO6hdS85BnfBsZ3cyjDFiXJV6yeqTE=",
+        "BUILD.bazel": "sha256-4RJNR5LBvyU9JMFfkFrYmDCMG9jD6YVrAMC2wBgoQSs="
+    }
+}

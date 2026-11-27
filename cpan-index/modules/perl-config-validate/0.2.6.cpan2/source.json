@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/C/CM/CMO/Config-Validate-0.2.6.tar.gz",
+    "integrity": "sha256-xVZBcBKLKmgfyJFmS2Grr0w532MN3K197PPFcywwNaI=",
+    "strip_prefix": "Config-Validate-0.2.6",
+    "overlay": {
+        "BUILD.bazel": "sha256-ehuOqBLVcpcg7WvtI5s2gvqCr8nKII/rvnICswUxitM="
+    }
+}

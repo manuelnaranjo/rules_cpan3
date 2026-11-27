@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MATTBM/Crypt-Blowfish_PP-1.12.tar.gz",
-    "integrity": "sha256-cU8aPpT2WAKdEIyhXtIPCELnNVmuX8H67obU8hlfz4w=",
-    "strip_prefix": "Crypt-Blowfish_PP-1.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-i2W95mVteFkErvHf3vEx6dntiNSDscwltZJWCnXg16A="
-    }
-}

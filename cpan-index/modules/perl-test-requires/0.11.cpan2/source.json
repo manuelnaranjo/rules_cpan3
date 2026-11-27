@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Test-Requires-0.11.tar.gz",
+    "integrity": "sha256-S4jeVJWX7s3ffDw4pNAgShb1mtgEV3tnGJasBOJOBA8=",
+    "strip_prefix": "Test-Requires-0.11",
+    "overlay": {
+        "BUILD.bazel": "sha256-Z3FlB5zR5J6Kgsws+/a/tyNOBNDn+PlxAfpLBDRalGc="
+    }
+}

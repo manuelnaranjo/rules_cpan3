@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JL/JLCOOPER/DBD-Mock-1.60.tar.gz",
+    "integrity": "sha256-UHugj17Fyn2FQ6AUJTmZhETvpq5Whmc/70BQKoCrroI=",
+    "strip_prefix": "DBD-Mock-1.60",
+    "overlay": {
+        "BUILD.bazel": "sha256-bEoQQIBzlDXzbL0VNeg8/aXAvH+0nxwd5J7NK45sBpA="
+    }
+}

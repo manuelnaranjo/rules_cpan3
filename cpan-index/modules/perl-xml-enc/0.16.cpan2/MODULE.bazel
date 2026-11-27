@@ -1,0 +1,18 @@
+module(
+    name = "perl-xml-enc",
+    version = "0.16.cpan2",
+)
+
+bazel_dep(name = "rules_cpan", version = "0.0.0")
+bazel_dep(name = "rules_perl", version = "2.1.0")
+bazel_dep(name = "rules_cc", version = "0.2.28")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "perl-crypt-openssl-x509", version = "2.1.5.cpan4")
+bazel_dep(name = "perl-cryptx", version = "0.091.cpan3")
+bazel_dep(name = "perl-xml-libxml", version = "2.0213.cpan4")
+bazel_dep(name = "perl-crypt-openssl-guess", version = "0.15.cpan2")
+bazel_dep(name = "perl-file-slurper", version = "0.014.cpan1")
+bazel_dep(name = "perl-file-which", version = "1.27.cpan2")
+bazel_dep(name = "perl-import-into", version = "1.002005.cpan1")
+bazel_dep(name = "perl-test-lib", version = "0.003.cpan1")
+bazel_dep(name = "perl-namespace-autoclean", version = "0.31.cpan1")

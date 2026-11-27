@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DM/DMAKI/Algorithm-ConsistentHash-Ketama-0.00012.tar.gz",
-    "integrity": "sha256-xJI/ndrtGD2gOUobfY89O96pTXwPk5GwUl5fdTICxM0=",
-    "strip_prefix": "Algorithm-ConsistentHash-Ketama-0.00012",
-    "overlay": {
-        "BUILD.bazel": "sha256-ZJmOBnQqXXsE1YjKdQjSNyOLR1Qk5RxHw5UM0ZjsM+Q="
-    }
-}

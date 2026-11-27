@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/V/VL/VLADO/Text-Ngrams-2.007.tar.gz",
+    "integrity": "sha256-DWS9i3KzG/6vBiEqiHioAAQyoJH4wr8tncnn7L1faZU=",
+    "strip_prefix": "Text-Ngrams-2.007",
+    "overlay": {
+        "BUILD.bazel": "sha256-jFBy4Ps7j/EcjWTH0FC8ztLmfZT1pftCFpX95etZCtY="
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Test-Memory-Cycle-1.06.tar.gz",
+    "integrity": "sha256-nVPd/clkzYRUyw2kxpW2o65HtFg5KRw0y52NHPqrMgI=",
+    "strip_prefix": "Test-Memory-Cycle-1.06",
+    "overlay": {
+        "BUILD.bazel": "sha256-7tgv4P+cCqvGSpRFTyUaoEjED5pOcp/awdwhtCxOFHE="
+    }
+}

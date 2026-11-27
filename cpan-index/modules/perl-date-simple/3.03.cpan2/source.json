@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/I/IZ/IZUT/Date-Simple-3.03.tar.gz",
+    "integrity": "sha256-KaGSYxTOFoGjEtYVXClZDHcd2s+Rt0hYc85EnvIJ3QQ=",
+    "strip_prefix": "Date-Simple-3.03",
+    "overlay": {
+        "BUILD.bazel": "sha256-liWE1BlBtA6EvqYJLLlzAaVEkI6CjW8HwQDBnzKGzVY="
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Devel-Refcount-0.10.tar.gz",
-    "integrity": "sha256-tlTUaWPRqIFCa6FZlPKPUuuDmw0TW/I5tNG/OLHKyko=",
-    "strip_prefix": "Devel-Refcount-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-FHXooQfRECJG2CwAj+rC5cnSL0IQB/jF5wRpwg2pgiA="
-    }
-}

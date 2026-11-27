@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/Devel-NYTProf-6.16.tar.gz",
+    "integrity": "sha256-xVU3OfvN8Gmd9HVU/F4yxOaMp4dlEe73rO/7bbJ7rdo=",
+    "strip_prefix": "Devel-NYTProf-6.16",
+    "overlay": {
+        "BUILD.bazel": "sha256-YO+kp+IeWFBrP+IhTpIE7vq4duqXsEisa/thv6hau0k="
+    }
+}

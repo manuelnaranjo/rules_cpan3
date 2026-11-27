@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETJ/Inline-Java-0.67.tar.gz",
+    "integrity": "sha256-9YVLMcvOFjwz4mJN0jFODA2X4JRDcbcYjlkBuj9vpMk=",
+    "strip_prefix": "Inline-Java-0.67",
+    "overlay": {
+        "BUILD.bazel": "sha256-SqX684+ZKoKG1rqfNrdeNEkd2t/tMrnGj6khrvkiW1U="
+    }
+}

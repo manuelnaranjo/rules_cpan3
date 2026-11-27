@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/CSS-Packer-2.09.tar.gz",
-    "integrity": "sha256-b2OE80x4q4Gax1+BZ7+yWc1RzWNIuojWKp8nqMqWwL4=",
-    "strip_prefix": "CSS-Packer-2.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-gVHDGy5tiaM1STFkjp+4eygKEFwQAvgzucNu83jitK0="
-    }
-}

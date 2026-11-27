@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Devel-Hook-0.011.tar.gz",
+    "integrity": "sha256-MAXUXp2muMKo537+wcWI0cacXg10RiRao88V5+K/q6A=",
+    "strip_prefix": "Devel-Hook-0.011",
+    "overlay": {
+        "BUILD.bazel": "sha256-CKR4BLDUgClfCe6OT4lpGRmeI+WwmVB20qpasA1eAi0="
+    }
+}

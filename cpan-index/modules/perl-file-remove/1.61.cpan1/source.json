@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/File-Remove-1.61.tar.gz",
-    "integrity": "sha256-/YV/WFkI/FA0YbnkizyFlOZTV2a8FL6xfJC6WNXcSXU=",
-    "strip_prefix": "File-Remove-1.61",
-    "overlay": {
-        "BUILD.bazel": "sha256-hd6+6yN19GbbsS1EsQUqYor3n7VS08pH7ClXR8RsOp0="
-    }
-}

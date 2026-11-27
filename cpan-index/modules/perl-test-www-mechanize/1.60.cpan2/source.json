@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Test-WWW-Mechanize-1.60.tar.gz",
+    "integrity": "sha256-I/1y5+0b553h0CotFfDfCTQV4Oq2/GFf9rtoh0Emhnc=",
+    "strip_prefix": "Test-WWW-Mechanize-1.60",
+    "overlay": {
+        "BUILD.bazel": "sha256-ypNZ/MtonIQ/f1jJDH9bDAoVjwArFJ7sTnWi6ZW2aFA="
+    }
+}

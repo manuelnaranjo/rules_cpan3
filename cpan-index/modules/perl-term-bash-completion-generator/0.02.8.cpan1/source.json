@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NK/NKH/Term-Bash-Completion-Generator-0.02.8.tar.gz",
-    "integrity": "sha256-g46leGgVepBk4CXVkA/K8CP0v5rMDohT5ggjFQC3Sgo=",
-    "strip_prefix": "Term-Bash-Completion-Generator-0.02.8",
-    "overlay": {
-        "BUILD.bazel": "sha256-juZ/O8yMCygDJklmwihta3ssYmXXGfFd9kW6ov4ZlJ0="
-    }
-}

@@ -1,0 +1,8 @@
+{
+    "url": "https://cpan.metacpan.org/authors/id/A/AU/AUTINITY/Compress-LZ4Frame-0.012002.tar.gz",
+    "integrity": "sha256-Am1V+DoYC1Ug+pKmTtqMp8zGypUf2r4RIMuY2OMKR50=",
+    "strip_prefix": "Compress-LZ4Frame-0.012002",
+    "overlay": {
+        "BUILD.bazel": "sha256-v61Nstof9mEh7xpmueijWb6o7riG56fp9Y7fQabgiGY="
+    }
+}
