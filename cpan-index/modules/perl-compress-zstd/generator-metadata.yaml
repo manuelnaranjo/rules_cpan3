@@ -1,0 +1,9 @@
+patch_cmds:
+- rm -rf ext/zstd/contrib ext/zstd/doc ext/zstd/examples ext/zstd/programs ext/zstd/tests ext/zstd/zlibWrapper
+patch_cmds_win:
+- powershell -Command "Remove-Item -Recurse -Force ext/zstd/contrib, ext/zstd/doc, ext/zstd/examples, ext/zstd/programs, ext/zstd/tests, ext/zstd/zlibWrapper"
+defines:
+- ZSTD_LEGACY_MULTITHREADED_API
+- ZSTD_MULTITHREAD
+includes:
+- ext/zstd/lib

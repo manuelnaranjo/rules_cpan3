@@ -1,3 +1,4 @@
 manual_tests:
+- t/02_sleep_perl.t
 - t/02_sleep_system.t
 - t/06_stderr_stdout.t
