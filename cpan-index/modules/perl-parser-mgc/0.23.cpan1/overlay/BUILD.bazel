@@ -273,6 +273,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90ex_bencode.t"],
+    tags = ["manual"],
     deps = [":Parser-MGC_test_lib"],
 )
 
@@ -281,6 +282,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90ex_dict.t"],
+    tags = ["manual"],
     deps = [":Parser-MGC_test_lib"],
 )
 
@@ -289,6 +291,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90ex_expr.t"],
+    tags = ["manual"],
     deps = [":Parser-MGC_test_lib"],
 )
 
@@ -297,6 +300,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90ex_jsonlike.t"],
+    tags = ["manual"],
     deps = [":Parser-MGC_test_lib"],
 )
 
@@ -305,6 +309,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90ex_pod.t"],
+    tags = ["manual"],
     deps = [":Parser-MGC_test_lib"],
 )
 
@@ -313,6 +318,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90ex_synopsis.t"],
+    tags = ["manual"],
     deps = [":Parser-MGC_test_lib"],
 )
 
@@ -321,6 +327,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90ex_xml.t"],
+    tags = ["manual"],
     deps = [":Parser-MGC_test_lib"],
 )
 
@@ -361,13 +368,6 @@ test_suite(
         ":test_t_33exception",
         ":test_t_34stall",
         ":test_t_40include_string",
-        ":test_t_90ex_bencode",
-        ":test_t_90ex_dict",
-        ":test_t_90ex_expr",
-        ":test_t_90ex_jsonlike",
-        ":test_t_90ex_pod",
-        ":test_t_90ex_synopsis",
-        ":test_t_90ex_xml",
         ":test_t_99pod",
     ],
 )

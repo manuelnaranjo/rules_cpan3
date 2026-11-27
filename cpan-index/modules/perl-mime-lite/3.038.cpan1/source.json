@@ -3,6 +3,6 @@
     "integrity": "sha256-ButH23TVlNIlbPR5Tywlnp8/VLn2G5AFRObh2HniRPU=",
     "strip_prefix": "MIME-Lite-3.038",
     "overlay": {
-        "BUILD.bazel": "sha256-tP82fTsvxL4Ouz8lZmnG8TfumP39FSEPZu9FVllvGi8="
+        "BUILD.bazel": "sha256-I/okmyZbJQta+7i4JJYEMPFnm0hgVTe2+ybki3C+8u8="
     }
 }

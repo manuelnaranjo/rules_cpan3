@@ -6,7 +6,6 @@
         "const-xs.inc": "sha256-lvv+8vV0I5SozLR8m9TAaZrXN2+Epnrwb8aPSTMRczs=",
         "const-autoload.inc": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
         "const-c.inc": "sha256-p2+KtyK6zg+Pcn6ttmtxRLUFJUws0Uul8W6cjAafEAc=",
-        "lib/Crypt/SMIME.pm": "sha256-Us2jm/cZkRxwU0XLRzxE8sm+1qIbRxiW+GUlyiU0PZw=",
-        "BUILD.bazel": "sha256-AADDzFOEe+koh5YlyVsBSXHs8Y69ndDS2O6fIC+s4KY="
+        "BUILD.bazel": "sha256-I/T3hNh3JJ5nErkpO9oi6rbw9070Q73sEBE6AZh12zQ="
     }
 }

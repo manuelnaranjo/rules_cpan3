@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_basics.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/avif.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bad_exif.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bmp.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -95,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/exif.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -103,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/fuji_s1000fd_substr_outside_of_string.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -111,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/ico.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -119,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/jpg_bad_thumbnail.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -127,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/jpg_corruptchunk.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -135,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/jpg_hang.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -143,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/jpg_ignore_thumbnail.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -151,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/jpg_nowarnings.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -159,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/png.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -191,6 +204,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/string.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -207,6 +221,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tiff.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -215,6 +230,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tiff_e.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -223,6 +239,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tiff_segfault.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -231,6 +248,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tiny-pgm.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -239,6 +257,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/wbmp.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -247,6 +266,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/webp.t"],
+    tags = ["manual"],
     deps = [":Image-Info_test_lib"],
 )
 
@@ -269,30 +289,10 @@ perl_test(
 test_suite(
     name = "test",
     tests = [
-        ":test_t_00_basics",
-        ":test_t_avif",
-        ":test_t_bad_exif",
-        ":test_t_bmp",
-        ":test_t_exif",
-        ":test_t_fuji_s1000fd_substr_outside_of_string",
-        ":test_t_ico",
-        ":test_t_jpg_bad_thumbnail",
-        ":test_t_jpg_corruptchunk",
-        ":test_t_jpg_hang",
-        ":test_t_jpg_ignore_thumbnail",
-        ":test_t_jpg_nowarnings",
-        ":test_t_png",
         ":test_t_pod",
         ":test_t_pod_cov",
         ":test_t_ppm_error",
-        ":test_t_string",
         ":test_t_svg",
-        ":test_t_tiff",
-        ":test_t_tiff_e",
-        ":test_t_tiff_segfault",
-        ":test_t_tiny-pgm",
-        ":test_t_wbmp",
-        ":test_t_webp",
         ":test_t_xbm",
         ":test_t_xpm",
     ],

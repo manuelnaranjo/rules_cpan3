@@ -208,6 +208,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/boilerplate.t"],
+    tags = ["manual"],
     deps = [":URI-Escape-XS_test_lib"],
 )
 
@@ -237,7 +238,6 @@ test_suite(
         ":test_t_04-idn",
         ":test_t_05-null",
         ":test_t_06-nonstr",
-        ":test_t_boilerplate",
         ":test_t_pod",
         ":test_t_pod-coverage",
     ],

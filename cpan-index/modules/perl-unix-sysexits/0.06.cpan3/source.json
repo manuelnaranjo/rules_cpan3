@@ -3,8 +3,6 @@
     "integrity": "sha256-GbuR1Nyrz4DUEs7t5Li+NZWAGR25zfUpDIzdvsZw+PQ=",
     "strip_prefix": "Unix-Sysexits-0.06",
     "overlay": {
-        "const-xs.inc": "sha256-m7xk3dL4OcpTgWuWJST7Uax+Ay/+iqnirZdrL5ocmKc=",
-        "const-c.inc": "sha256-HMp/KDg1qHP9+qnZVX7BHW/B9+QFUudgcho/1heqBk8=",
-        "BUILD.bazel": "sha256-IM934RJCGLRloQx3H9RR8YUHALmtBKwGRSGieQNv3zY="
+        "BUILD.bazel": "sha256-4MryrTpGdpkYOlYT7Qd+SQIwyhpYVy+PaeWZ333pGBY="
     }
 }

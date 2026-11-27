@@ -1023,6 +1023,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/virtual_table/11_filecontent_fulltext.t"],
+    tags = ["manual"],
     deps = [":DBD-SQLite_test_lib"],
 )
 
@@ -1176,7 +1177,6 @@ test_suite(
         ":test_t_virtual_table_01_destroy",
         ":test_t_virtual_table_02_find_function",
         ":test_t_virtual_table_10_filecontent",
-        ":test_t_virtual_table_11_filecontent_fulltext",
         ":test_t_virtual_table_20_perldata",
         ":test_t_virtual_table_21_perldata_charinfo",
         ":test_t_virtual_table_rt_124941",

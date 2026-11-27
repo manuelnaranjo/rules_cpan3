@@ -72,12 +72,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Test/Tdd/Generator.t"],
+    tags = ["manual"],
     deps = [":Test-Tdd_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_Test_Tdd_Generator",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

@@ -84,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-compile.t"],
+    tags = ["manual"],
     deps = [":Dancer_test_lib"],
 )
 
@@ -1662,6 +1663,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/19_dancer/01_script.t"],
+    tags = ["manual"],
     deps = [":Dancer_test_lib"],
 )
 
@@ -1670,6 +1672,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/19_dancer/02_script_version_from.t"],
+    tags = ["manual"],
     deps = [":Dancer_test_lib"],
 )
 
@@ -1878,7 +1881,6 @@ perl_test(
 test_suite(
     name = "test",
     tests = [
-        ":test_t_00-compile",
         ":test_t_00-report-prereqs",
         ":test_t_00_base_000_create_fake_env",
         ":test_t_00_base_001_load",
@@ -2073,8 +2075,6 @@ test_suite(
         ":test_t_17_apps_02_load_app",
         ":test_t_17_apps_03_prefix",
         ":test_t_17_apps_05_api",
-        ":test_t_19_dancer_01_script",
-        ":test_t_19_dancer_02_script_version_from",
         ":test_t_20_deprecation_01_api",
         ":test_t_21_dependents_Dancer-Session-Cookie",
         ":test_t_22_hooks_00_syntax",

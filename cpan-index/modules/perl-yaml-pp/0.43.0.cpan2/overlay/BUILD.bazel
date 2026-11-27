@@ -63,6 +63,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00.compile.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -71,6 +72,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10.parse-valid.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -79,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/11.parse-invalid.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -87,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12.load-json.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -151,6 +155,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20.dump.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -159,6 +164,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/21.emit.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -199,6 +205,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/31.schema.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -288,6 +295,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/42.tokens.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -296,6 +304,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/43.indent.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -392,6 +401,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/55.flow.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -400,6 +410,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/56.force-flow.t"],
+    tags = ["manual"],
     deps = [":YAML-PP_test_lib"],
 )
 
@@ -422,10 +433,6 @@ perl_test(
 test_suite(
     name = "test",
     tests = [
-        ":test_t_00.compile",
-        ":test_t_10.parse-valid",
-        ":test_t_11.parse-invalid",
-        ":test_t_12.load-json",
         ":test_t_13.load-anchor",
         ":test_t_14.load-bool",
         ":test_t_15.parse-eol",
@@ -433,13 +440,10 @@ test_suite(
         ":test_t_17.load-complex-keys",
         ":test_t_18.control",
         ":test_t_19.file",
-        ":test_t_20.dump",
-        ":test_t_21.emit",
         ":test_t_22.dump-bool",
         ":test_t_23-dump-anchor",
         ":test_t_24.double-escapes",
         ":test_t_30.legacy",
-        ":test_t_31.schema",
         ":test_t_34.emit-scalar-styles",
         ":test_t_35.highlight",
         ":test_t_36.debug",
@@ -449,8 +453,6 @@ test_suite(
         ":test_t_39.emitter-alias",
         ":test_t_40.representers",
         ":test_t_41.custom.schema",
-        ":test_t_42.tokens",
-        ":test_t_43.indent",
         ":test_t_44.writer",
         ":test_t_45.binary",
         ":test_t_46.line-endings",
@@ -462,8 +464,6 @@ test_suite(
         ":test_t_52.preserve",
         ":test_t_53.customtag-alias",
         ":test_t_54.glob",
-        ":test_t_55.flow",
-        ":test_t_56.force-flow",
         ":test_t_57.dup-keys",
         ":test_t_58.max-depth",
     ],

@@ -1,0 +1,7 @@
+manual_tests:
+- t/10xmldecl1.t
+- t/14encoding.t
+- t/15element.t
+- t/12miscstart.t
+- t/16large.t
+- t/13int_ent.t

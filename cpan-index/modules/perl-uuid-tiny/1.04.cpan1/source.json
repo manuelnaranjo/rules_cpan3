@@ -3,6 +3,6 @@
     "integrity": "sha256-bc2SYE1k6WzGwYgZSuFqnTpGVWIk93tvPR0TEraPmj0=",
     "strip_prefix": "UUID-Tiny-1.04",
     "overlay": {
-        "BUILD.bazel": "sha256-joeWMjqsXNzclRDgnW9mCGcRb+LTVnkStJMxKV+hpOA="
+        "BUILD.bazel": "sha256-wO0TTg1Jk69Smyr3qg9GXYnP0eGwpoLPGMhmvvcYZoo="
     }
 }

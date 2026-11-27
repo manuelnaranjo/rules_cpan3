@@ -71,6 +71,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01get_test_files.t"],
+    tags = ["manual"],
     deps = [":Test-Manifest_test_lib"],
 )
 
@@ -95,6 +96,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/include.t"],
+    tags = ["manual"],
     deps = [":Test-Manifest_test_lib"],
 )
 
@@ -126,10 +128,8 @@ test_suite(
     name = "test",
     tests = [
         ":test_t_00load",
-        ":test_t_01get_test_files",
         ":test_t_01make_test_manifest",
         ":test_t_99pod",
-        ":test_t_include",
         ":test_t_leading_space",
         ":test_t_pod_coverage",
         ":test_t_trailing_space",

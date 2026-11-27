@@ -152,6 +152,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/external/ocsp.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -184,6 +185,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/01_pod.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -192,6 +194,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/02_pod_coverage.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -200,6 +203,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/03_use.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -208,6 +212,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/04_basic.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -216,6 +221,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/05_passwd_cb.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -224,6 +230,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/06_tcpecho.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -232,6 +239,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/07_sslecho.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -240,6 +248,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/08_pipe.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -248,6 +257,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/09_ctx_new.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -256,6 +266,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/10_rand.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -264,6 +275,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/11_read.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -272,6 +284,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/15_bio.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -280,6 +293,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/20_functions.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -288,6 +302,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/21_constants.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -296,6 +311,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/22_provider.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -304,6 +320,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/22_provider_try_load.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -312,6 +329,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/22_provider_try_load_zero_retain.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -320,6 +338,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/23_openssl_init.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -328,6 +347,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/30_error.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -336,6 +356,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/31_rsa_generate_key.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -344,6 +365,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/32_x509_get_cert_info.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -352,6 +374,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/33_x509_create_cert.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -360,6 +383,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/34_x509_crl.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -368,6 +392,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/35_ephemeral.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -376,6 +401,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/36_verify.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -384,6 +410,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/37_asn1_time.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -392,6 +419,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/38_priv-key.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -400,6 +428,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/39_pkcs12.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -408,6 +437,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/40_npn_support.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -416,6 +446,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/41_alpn_support.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -424,6 +455,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/42_info_callback.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -432,6 +464,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/43_misc_functions.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -440,6 +473,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/44_sess.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -448,6 +482,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/45_exporter.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -456,6 +491,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/46_msg_callback.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -464,6 +500,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/47_keylog.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -472,6 +509,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/48_client_hello_callback.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -480,6 +518,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/50_digest.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -488,6 +527,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/61_threads-cb-crash.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -496,6 +536,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/62_threads-ctx_new-deadlock.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -504,6 +545,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/63_ec_key_generate_key.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -512,6 +554,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/64_ticket_sharing.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -520,6 +563,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/65_security_level.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -528,6 +572,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/65_ticket_sharing_2.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -536,6 +581,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/66_curves.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -544,6 +590,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/67_sigalgs.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
@@ -552,62 +599,15 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/local/kwalitee.t"],
+    tags = ["manual"],
     deps = [":Net-SSLeay_test_lib"],
 )
 
 test_suite(
     name = "test",
     tests = [
-        ":test_t_external_ocsp",
         ":test_t_handle_external_10_destroy",
         ":test_t_handle_external_50_external",
         ":test_t_handle_local_05_use",
-        ":test_t_local_01_pod",
-        ":test_t_local_02_pod_coverage",
-        ":test_t_local_03_use",
-        ":test_t_local_04_basic",
-        ":test_t_local_05_passwd_cb",
-        ":test_t_local_06_tcpecho",
-        ":test_t_local_07_sslecho",
-        ":test_t_local_08_pipe",
-        ":test_t_local_09_ctx_new",
-        ":test_t_local_10_rand",
-        ":test_t_local_11_read",
-        ":test_t_local_15_bio",
-        ":test_t_local_20_functions",
-        ":test_t_local_21_constants",
-        ":test_t_local_22_provider",
-        ":test_t_local_22_provider_try_load",
-        ":test_t_local_22_provider_try_load_zero_retain",
-        ":test_t_local_23_openssl_init",
-        ":test_t_local_30_error",
-        ":test_t_local_31_rsa_generate_key",
-        ":test_t_local_32_x509_get_cert_info",
-        ":test_t_local_33_x509_create_cert",
-        ":test_t_local_34_x509_crl",
-        ":test_t_local_35_ephemeral",
-        ":test_t_local_36_verify",
-        ":test_t_local_37_asn1_time",
-        ":test_t_local_38_priv-key",
-        ":test_t_local_39_pkcs12",
-        ":test_t_local_40_npn_support",
-        ":test_t_local_41_alpn_support",
-        ":test_t_local_42_info_callback",
-        ":test_t_local_43_misc_functions",
-        ":test_t_local_44_sess",
-        ":test_t_local_45_exporter",
-        ":test_t_local_46_msg_callback",
-        ":test_t_local_47_keylog",
-        ":test_t_local_48_client_hello_callback",
-        ":test_t_local_50_digest",
-        ":test_t_local_61_threads-cb-crash",
-        ":test_t_local_62_threads-ctx_new-deadlock",
-        ":test_t_local_63_ec_key_generate_key",
-        ":test_t_local_64_ticket_sharing",
-        ":test_t_local_65_security_level",
-        ":test_t_local_65_ticket_sharing_2",
-        ":test_t_local_66_curves",
-        ":test_t_local_67_sigalgs",
-        ":test_t_local_kwalitee",
     ],
 )

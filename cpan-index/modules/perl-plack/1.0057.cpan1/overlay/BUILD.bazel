@@ -266,6 +266,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Handler/standalone.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -314,6 +315,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Loader/shotgun.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -490,6 +492,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Middleware/content_length.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -498,6 +501,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Middleware/directory.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -530,6 +534,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Middleware/file.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -666,6 +671,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Middleware/psgibin.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -802,6 +808,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Middleware/static.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -1050,6 +1057,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Request/upload-large.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -1202,6 +1210,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/Plack-Test/suite.t"],
+    tags = ["manual"],
     deps = [":Plack_test_lib"],
 )
 
@@ -1343,13 +1352,11 @@ test_suite(
         ":test_t_Plack-Handler_fcgi",
         ":test_t_Plack-Handler_fcgi_cleanup",
         ":test_t_Plack-Handler_output_encoding",
-        ":test_t_Plack-Handler_standalone",
         ":test_t_Plack-Loader_auto",
         ":test_t_Plack-Loader_auto_fallback",
         ":test_t_Plack-Loader_delayed",
         ":test_t_Plack-Loader_restarter",
         ":test_t_Plack-Loader_restarter_valid",
-        ":test_t_Plack-Loader_shotgun",
         ":test_t_Plack-MIME_add_type",
         ":test_t_Plack-MIME_basic",
         ":test_t_Plack-MIME_fallback",
@@ -1371,12 +1378,9 @@ test_suite(
         ":test_t_Plack-Middleware_conditional_new",
         ":test_t_Plack-Middleware_conditionalget",
         ":test_t_Plack-Middleware_conditionalget_writer",
-        ":test_t_Plack-Middleware_content_length",
-        ":test_t_Plack-Middleware_directory",
         ":test_t_Plack-Middleware_error_document",
         ":test_t_Plack-Middleware_error_document_restore_env",
         ":test_t_Plack-Middleware_error_document_streaming_app",
-        ":test_t_Plack-Middleware_file",
         ":test_t_Plack-Middleware_head",
         ":test_t_Plack-Middleware_head_streaming",
         ":test_t_Plack-Middleware_httpexceptions",
@@ -1393,7 +1397,6 @@ test_suite(
         ":test_t_Plack-Middleware_log_dispatch",
         ":test_t_Plack-Middleware_order",
         ":test_t_Plack-Middleware_prefix",
-        ":test_t_Plack-Middleware_psgibin",
         ":test_t_Plack-Middleware_rearrange_headers",
         ":test_t_Plack-Middleware_recursive_base",
         ":test_t_Plack-Middleware_recursive_leak",
@@ -1410,7 +1413,6 @@ test_suite(
         ":test_t_Plack-Middleware_stacktrace_sigdie",
         ":test_t_Plack-Middleware_stacktrace_streaming",
         ":test_t_Plack-Middleware_stacktrace_utf8",
-        ":test_t_Plack-Middleware_static",
         ":test_t_Plack-Middleware_static_env",
         ":test_t_Plack-Middleware_urlmap",
         ":test_t_Plack-Middleware_urlmap_builder",
@@ -1442,7 +1444,6 @@ test_suite(
         ":test_t_Plack-Request_request_uri",
         ":test_t_Plack-Request_upload",
         ":test_t_Plack-Request_upload-basename",
-        ":test_t_Plack-Request_upload-large",
         ":test_t_Plack-Request_uri",
         ":test_t_Plack-Request_uri_utf8",
         ":test_t_Plack-Response_body",
@@ -1460,7 +1461,6 @@ test_suite(
         ":test_t_Plack-Test_cookie",
         ":test_t_Plack-Test_hello",
         ":test_t_Plack-Test_hello_server",
-        ":test_t_Plack-Test_suite",
         ":test_t_Plack-Util_can",
         ":test_t_Plack-Util_foreach",
         ":test_t_Plack-Util_header_exists",

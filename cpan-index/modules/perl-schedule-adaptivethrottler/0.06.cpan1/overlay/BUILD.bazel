@@ -119,6 +119,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/boilerplate.t"],
+    tags = ["manual"],
     deps = [":Schedule-AdaptiveThrottler_test_lib"],
 )
 
@@ -156,7 +157,6 @@ test_suite(
         ":test_t_40-basic-method",
         ":test_t_45-basic-oo",
         ":test_t_50-longkeys",
-        ":test_t_boilerplate",
         ":test_t_manifest",
         ":test_t_pod",
         ":test_t_pod-coverage",

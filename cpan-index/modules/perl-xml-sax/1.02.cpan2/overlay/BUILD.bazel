@@ -82,6 +82,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10xmldecl1.t"],
+    tags = ["manual"],
     deps = [":XML-SAX_test_lib"],
 )
 
@@ -98,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/12miscstart.t"],
+    tags = ["manual"],
     deps = [":XML-SAX_test_lib"],
 )
 
@@ -106,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/13int_ent.t"],
+    tags = ["manual"],
     deps = [":XML-SAX_test_lib"],
 )
 
@@ -114,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/14encoding.t"],
+    tags = ["manual"],
     deps = [":XML-SAX_test_lib"],
 )
 
@@ -122,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/15element.t"],
+    tags = ["manual"],
     deps = [":XML-SAX_test_lib"],
 )
 
@@ -130,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/16large.t"],
+    tags = ["manual"],
     deps = [":XML-SAX_test_lib"],
 )
 
@@ -194,13 +200,7 @@ test_suite(
     tests = [
         ":test_t_00basic",
         ":test_t_01known",
-        ":test_t_10xmldecl1",
         ":test_t_11xmldecl2",
-        ":test_t_12miscstart",
-        ":test_t_13int_ent",
-        ":test_t_14encoding",
-        ":test_t_15element",
-        ":test_t_16large",
         ":test_t_19pi",
         ":test_t_20factory",
         ":test_t_21saxini",

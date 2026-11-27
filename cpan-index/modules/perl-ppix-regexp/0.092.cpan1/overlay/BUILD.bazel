@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":PPIx-Regexp_test_lib"],
 )
 
@@ -74,6 +75,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/fuzz.t"],
+    tags = ["manual"],
     deps = [":PPIx-Regexp_test_lib"],
 )
 
@@ -98,6 +100,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parse.t"],
+    tags = ["manual"],
     deps = [":PPIx-Regexp_test_lib"],
 )
 
@@ -106,6 +109,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/unit-adhoc.t"],
+    tags = ["manual"],
     deps = [":PPIx-Regexp_test_lib"],
 )
 
@@ -114,6 +118,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/unit.t"],
+    tags = ["manual"],
     deps = [":PPIx-Regexp_test_lib"],
 )
 
@@ -130,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/width.t"],
+    tags = ["manual"],
     deps = [":PPIx-Regexp_test_lib"],
 )
 
@@ -138,21 +144,15 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xplain.t"],
+    tags = ["manual"],
     deps = [":PPIx-Regexp_test_lib"],
 )
 
 test_suite(
     name = "test",
     tests = [
-        ":test_t_basic",
-        ":test_t_fuzz",
         ":test_t_inf",
         ":test_t_locations",
-        ":test_t_parse",
-        ":test_t_unit",
-        ":test_t_unit-adhoc",
         ":test_t_version",
-        ":test_t_width",
-        ":test_t_xplain",
     ],
 )

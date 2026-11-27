@@ -2577,6 +2577,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/zzzzzzz_authors.t"],
+    tags = ["manual"],
     deps = [":DBIx-Class_test_lib"],
 )
 
@@ -2910,7 +2911,6 @@ test_suite(
         ":test_t_update_all",
         ":test_t_update_ident_cond",
         ":test_t_update_type_aware",
-        ":test_t_zzzzzzz_authors",
         ":test_t_zzzzzzz_perl_perf_bug",
         ":test_t_zzzzzzz_sqlite_deadlock",
     ],

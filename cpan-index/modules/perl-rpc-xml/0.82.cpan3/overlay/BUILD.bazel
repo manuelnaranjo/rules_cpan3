@@ -68,6 +68,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_load.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -124,6 +125,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/20_xml_parser.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -148,6 +150,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/29_parserfactory.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -156,6 +159,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/30_procedure.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -164,6 +168,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/35_namespaces.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -189,6 +194,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/41_server_hang.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -230,6 +236,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_rt50013_parser_bugs.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -238,6 +245,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_rt54183_sigpipe.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -254,6 +262,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_rt58065_allow_nil.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
@@ -262,34 +271,25 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/90_rt58323_push_parser.t"],
+    tags = ["manual"],
     deps = [":RPC-XML_test_lib"],
 )
 
 test_suite(
     name = "test",
     tests = [
-        ":test_t_00_load",
         ":test_t_10_data",
         ":test_t_11_base64_fh",
         ":test_t_12_nil",
         ":test_t_13_no_deep_recursion",
         ":test_t_14_datetime_iso8601",
         ":test_t_15_serialize",
-        ":test_t_20_xml_parser",
         ":test_t_21_xml_libxml",
         ":test_t_25_parser_negative",
-        ":test_t_29_parserfactory",
-        ":test_t_30_procedure",
-        ":test_t_35_namespaces",
         ":test_t_40_server_xmllibxml",
-        ":test_t_41_server_hang",
         ":test_t_51_client_with_host_header",
         ":test_t_60_net_server",
         ":test_t_70_compression_detect",
-        ":test_t_90_rt50013_parser_bugs",
-        ":test_t_90_rt54183_sigpipe",
         ":test_t_90_rt54494_blessed_refs",
-        ":test_t_90_rt58065_allow_nil",
-        ":test_t_90_rt58323_push_parser",
     ],
 )

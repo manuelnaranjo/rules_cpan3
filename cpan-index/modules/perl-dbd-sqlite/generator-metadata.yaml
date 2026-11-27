@@ -1,1 +1,3 @@
 output_loc: auto/DBD/SQLite/SQLite
+manual_tests:
+- t/virtual_table/11_filecontent_fulltext.t

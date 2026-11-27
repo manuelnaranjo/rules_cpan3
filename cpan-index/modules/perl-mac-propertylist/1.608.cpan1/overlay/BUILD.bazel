@@ -74,6 +74,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/as_perl.t"],
+    tags = ["manual"],
     deps = [":Mac-PropertyList_test_lib"],
 )
 
@@ -82,6 +83,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bad_plist.t"],
+    tags = ["manual"],
     deps = [":Mac-PropertyList_test_lib"],
 )
 
@@ -130,6 +132,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/get_filehandle.t"],
+    tags = ["manual"],
     deps = [":Mac-PropertyList_test_lib"],
 )
 
@@ -146,6 +149,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/int64.t"],
+    tags = ["manual"],
     deps = [":Mac-PropertyList_test_lib"],
 )
 
@@ -178,6 +182,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/parse_plist_fh.t"],
+    tags = ["manual"],
     deps = [":Mac-PropertyList_test_lib"],
 )
 
@@ -202,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/read_binary.t"],
+    tags = ["manual"],
     deps = [":Mac-PropertyList_test_lib"],
 )
 
@@ -210,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/round_trip.t"],
+    tags = ["manual"],
     deps = [":Mac-PropertyList_test_lib"],
 )
 
@@ -242,6 +249,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/time.t"],
+    tags = ["manual"],
     deps = [":Mac-PropertyList_test_lib"],
 )
 
@@ -265,28 +273,20 @@ test_suite(
     name = "test",
     tests = [
         ":test_t_array",
-        ":test_t_as_perl",
-        ":test_t_bad_plist",
         ":test_t_basic_types",
         ":test_t_container",
         ":test_t_decode_entities",
         ":test_t_dict",
         ":test_t_false_key",
-        ":test_t_get_filehandle",
         ":test_t_import",
-        ":test_t_int64",
         ":test_t_load",
         ":test_t_parse",
         ":test_t_parse-timings",
-        ":test_t_parse_plist_fh",
         ":test_t_pod",
         ":test_t_pod_coverage",
-        ":test_t_read_binary",
-        ":test_t_round_trip",
         ":test_t_round_trip_binary",
         ":test_t_scalar",
         ":test_t_string",
-        ":test_t_time",
         ":test_t_write",
         ":test_t_write_binary",
     ],

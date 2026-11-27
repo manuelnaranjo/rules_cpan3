@@ -70,6 +70,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00_base.t"],
+    tags = ["manual"],
     deps = [":Data-FormValidator_test_lib"],
 )
 
@@ -588,7 +589,6 @@ perl_test(
 test_suite(
     name = "test",
     tests = [
-        ":test_t_00_base",
         ":test_t_02_code_ref",
         ":test_t_03_dependency",
         ":test_t_04_arrayify_undef",

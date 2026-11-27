@@ -3,8 +3,6 @@
     "integrity": "sha256-oIhx/KIFTEZOxs1mP72y/OmcwDRiVqzwpJNmge2KDgA=",
     "strip_prefix": "Regexp-Util-0.005",
     "overlay": {
-        "const-xs.inc": "sha256-aGd0s+XY/fJ0W1Ci4txBxNuUnJxCh2KkUGDK4qoB1ZU=",
-        "const-c.inc": "sha256-7FufO6gk7oPa6m0mMy/P3cMICrJGOiBPPHxZZkkYQVY=",
-        "BUILD.bazel": "sha256-+9uAu8WL86Z53leBA/G4AvOdFimAhxnhVgT+ZsXQ30E="
+        "BUILD.bazel": "sha256-RRh4B0+MZXCp7l7Bsz86sySt2zNhNL+QFHpTniH3Pwc="
     }
 }

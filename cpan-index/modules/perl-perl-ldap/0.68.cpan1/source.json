@@ -3,6 +3,6 @@
     "integrity": "sha256-4vOJ/j56nkthSIaSkZrXI7mPO0ebUoj2ENqownmVs1E=",
     "strip_prefix": "perl-ldap-0.68",
     "overlay": {
-        "BUILD.bazel": "sha256-oM51mBU6NMDwFfNLwR2QxMgSrmRd0ucBrD42LsJ6ZLc="
+        "BUILD.bazel": "sha256-J3dV7nDM5U2rhgTF23hEKo+ZjOvcKXFOrquIL+0dVv4="
     }
 }

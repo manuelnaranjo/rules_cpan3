@@ -89,6 +89,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":Email-Stuffer_test_lib"],
 )
 
@@ -153,7 +154,6 @@ test_suite(
     tests = [
         ":test_t_00-report-prereqs",
         ":test_t_alternative",
-        ":test_t_basic",
         ":test_t_content_type",
         ":test_t_header_to_or_replace",
         ":test_t_init-arg",

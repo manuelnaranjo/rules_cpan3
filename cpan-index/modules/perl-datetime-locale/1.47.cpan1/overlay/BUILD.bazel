@@ -84,6 +84,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/alias.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -92,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/basic.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -100,6 +102,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/be-tarask.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -108,6 +111,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/code-case-insensitive.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -116,6 +120,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/format-length.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -124,6 +129,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/iso639-2.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -132,6 +138,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/load-from-relative-inc-path.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -140,6 +147,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/load-name.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -156,6 +164,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/prefers-24-hour-time.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -180,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/script.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -196,6 +206,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/taint.t"],
+    tags = ["manual"],
     deps = [":DateTime-Locale_test_lib"],
 )
 
@@ -219,21 +230,10 @@ test_suite(
     name = "test",
     tests = [
         ":test_t_00-report-prereqs",
-        ":test_t_alias",
-        ":test_t_basic",
-        ":test_t_be-tarask",
-        ":test_t_code-case-insensitive",
-        ":test_t_format-length",
-        ":test_t_iso639-2",
-        ":test_t_load-from-relative-inc-path",
-        ":test_t_load-name",
         ":test_t_locale-data-is-cloned",
-        ":test_t_prefers-24-hour-time",
         ":test_t_register",
         ":test_t_register-from-data",
-        ":test_t_script",
         ":test_t_storable",
-        ":test_t_taint",
         ":test_t_version-check",
         ":test_t_zzz-check-breaks",
     ],

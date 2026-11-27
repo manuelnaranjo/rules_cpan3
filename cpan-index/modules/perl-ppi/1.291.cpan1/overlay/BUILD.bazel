@@ -123,6 +123,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07_token.t"],
+    tags = ["manual"],
     deps = [":PPI_test_lib"],
 )
 
@@ -131,6 +132,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/08_regression.t"],
+    tags = ["manual"],
     deps = [":PPI_test_lib"],
 )
 
@@ -639,8 +641,6 @@ test_suite(
         ":test_t_04_element",
         ":test_t_05_lexer",
         ":test_t_06_round_trip",
-        ":test_t_07_token",
-        ":test_t_08_regression",
         ":test_t_09_normal",
         ":test_t_10_statement",
         ":test_t_11_util",

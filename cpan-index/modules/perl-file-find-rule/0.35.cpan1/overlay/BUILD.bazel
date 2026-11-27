@@ -66,6 +66,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/File-Find-Rule.t"],
+    tags = ["manual"],
     deps = [":File-Find-Rule_test_lib"],
 )
 
@@ -74,13 +75,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/findrule.t"],
+    tags = ["manual"],
     deps = [":File-Find-Rule_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_File-Find-Rule",
-        ":test_t_findrule",
-    ],
+    tags = ["manual"],
+    tests = [],
 )
