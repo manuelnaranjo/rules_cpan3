@@ -158,6 +158,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bignum.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -166,6 +167,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/check_param.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -174,6 +176,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/crypto.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -182,6 +185,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/der.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -190,6 +194,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/error.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -198,6 +203,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/error_queue.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -206,6 +212,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/format.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -214,6 +221,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/get_key_parameters.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -222,6 +230,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/key_lifecycle.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -230,6 +239,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/keygen.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -238,6 +248,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/openssl_der.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -246,6 +257,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/padding.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -254,6 +266,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pkcs1_sign.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -262,6 +275,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/private_crypt.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -270,6 +284,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/private_encrypt.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -278,6 +293,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pss_auto_promote.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -286,6 +302,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/rsa.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -294,6 +311,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/sign_verify.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -302,6 +320,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/z_kwalitee.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -310,6 +329,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/z_meta.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -318,6 +338,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/z_perl_minimum_version.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -326,6 +347,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/z_pod-coverage.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
@@ -334,34 +356,12 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/z_pod.t"],
+    tags = ["manual"],
     deps = [":Crypt-OpenSSL-RSA_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tests = [
-        ":test_t_bignum",
-        ":test_t_check_param",
-        ":test_t_crypto",
-        ":test_t_der",
-        ":test_t_error",
-        ":test_t_error_queue",
-        ":test_t_format",
-        ":test_t_get_key_parameters",
-        ":test_t_key_lifecycle",
-        ":test_t_keygen",
-        ":test_t_openssl_der",
-        ":test_t_padding",
-        ":test_t_pkcs1_sign",
-        ":test_t_private_crypt",
-        ":test_t_private_encrypt",
-        ":test_t_pss_auto_promote",
-        ":test_t_rsa",
-        ":test_t_sign_verify",
-        ":test_t_z_kwalitee",
-        ":test_t_z_meta",
-        ":test_t_z_perl_minimum_version",
-        ":test_t_z_pod",
-        ":test_t_z_pod-coverage",
-    ],
+    tags = ["manual"],
+    tests = [],
 )

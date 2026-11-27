@@ -3,8 +3,8 @@
     "integrity": "sha256-1ZevIhYoVxy+zzW0RSAUjER5jfyKmGd3TmBFP3nSX/c=",
     "strip_prefix": "IO-Tty-1.31",
     "overlay": {
-        "xssubs.c": "sha256-rDLeHdXrQy1FsMzG56ZCFfDCErLW1eoSn5O0mUmZ08E=",
+        "xssubs.c": "sha256-k1IbDYrfOGvTYzTkOvCwOgZYDsJU5tF1iyF5PMFV21M=",
         "lib/IO/Tty/Constant.pm": "sha256-UV4I8GK2x8YeRPqCaevE0MGC72B9QByGwBz/u+iq7nU=",
-        "BUILD.bazel": "sha256-7HEsOJJBh33vZOPHZoxIER/aOSPw99qWaZdlYWy2hb4="
+        "BUILD.bazel": "sha256-FbutWV/p/9Xk6b2ZI+bakFfbJMl2K4VeBOzGERGkjYo="
     }
 }
