@@ -8,9 +8,6 @@ common --registry=https://bcr.bazel.build
 # Perl rules configuration (enable XS dynamic loading)
 common --@rules_perl//perl/settings:xs=true
 
-# Avoid building runfile symlinks to prevent inode exhaustion with large test suites
-build --nobuild_runfile_links
-
 # Load any settings specific to the current user.
 try-import %workspace%/.bazelrc.user
 try-import %workspace%/../../.bazelrc.user

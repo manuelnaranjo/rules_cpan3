@@ -1,6 +1,11 @@
 bazel_dep(name = "rules_cpan", version = "0.0.0", dev_dependency = True)
 bazel_dep(name = "bazel_skylib", version = "1.9.2", dev_dependency = True)
 
+bazel_dep(name = "protobuf", version = "33.6")
+bazel_dep(name = "llvm", version = "0.8.27")
+
+register_toolchains("@llvm//toolchain:all")
+
 local_path_override(
     module_name = "rules_cpan",
     path = "../..",
