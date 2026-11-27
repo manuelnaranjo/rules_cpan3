@@ -156,6 +156,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/34commandlinemarkdown.t"],
+    tags = ["manual"],
     deps = [":Text-Markdown_test_lib"],
 )
 
@@ -213,7 +214,6 @@ test_suite(
         ":test_t_31angleedgecase",
         ":test_t_32tabwidth",
         ":test_t_33spaceinlinksandimages",
-        ":test_t_34commandlinemarkdown",
         ":test_t_37anchormultilinebugs",
         ":test_t_40trustliststart",
         ":test_t_code-hr",

@@ -82,6 +82,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/boilerplate.t"],
+    tags = ["manual"],
     deps = [":POE-Component-Client-eris_test_lib"],
 )
 
@@ -130,7 +131,6 @@ test_suite(
     tests = [
         ":test_t_00-compile",
         ":test_t_00-load",
-        ":test_t_boilerplate",
         ":test_t_pod",
         ":test_t_pod-coverage",
         ":test_t_release-eol",

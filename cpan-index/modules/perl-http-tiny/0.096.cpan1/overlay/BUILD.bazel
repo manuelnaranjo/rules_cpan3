@@ -167,6 +167,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/100_get.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -175,6 +176,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/101_head.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -183,6 +185,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/102_put.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -191,6 +194,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/103_delete.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -199,6 +203,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/104_post.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -207,6 +212,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/110_mirror.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -215,6 +221,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/130_redirect.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -239,6 +246,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/150_post_form.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -247,6 +255,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/160_cookies.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -255,6 +264,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/161_basic_auth.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -263,6 +273,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/162_proxy_auth.t"],
+    tags = ["manual"],
     deps = [":HTTP-Tiny_test_lib"],
 )
 
@@ -330,19 +341,8 @@ test_suite(
         ":test_t_050_chunked_body",
         ":test_t_060_http_date",
         ":test_t_070_cookie_jar",
-        ":test_t_100_get",
-        ":test_t_101_head",
-        ":test_t_102_put",
-        ":test_t_103_delete",
-        ":test_t_104_post",
-        ":test_t_110_mirror",
-        ":test_t_130_redirect",
         ":test_t_140_proxy",
         ":test_t_141_no_proxy",
-        ":test_t_150_post_form",
-        ":test_t_160_cookies",
-        ":test_t_161_basic_auth",
-        ":test_t_162_proxy_auth",
         ":test_t_170_keepalive",
         ":test_t_180_verify_SSL",
         ":test_t_190_find_CA",

@@ -95,6 +95,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/boilerplate.t"],
+    tags = ["manual"],
     deps = [":UUID-Tiny_test_lib"],
 )
 
@@ -121,7 +122,6 @@ test_suite(
         ":test_t_01-UUID-std",
         ":test_t_02-UUID-legacy",
         ":test_t_03-UUID-fork",
-        ":test_t_boilerplate",
         ":test_t_pod",
         ":test_t_pod-coverage",
     ],

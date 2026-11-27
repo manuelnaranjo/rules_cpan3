@@ -3,6 +3,6 @@
     "integrity": "sha256-aTJuXtwFx1nMx4++BcpjdZoDX+elM3uN26bD3UL2T2w=",
     "strip_prefix": "XML-Twig-3.55",
     "overlay": {
-        "BUILD.bazel": "sha256-SfcD4YbgGWLmxFvCO3yE7DzV2LUyW+fwa5KMt1pFbZ8="
+        "BUILD.bazel": "sha256-k8d0LZifr7DIk6bgoITOKcR9Xfvae606K+7Ksve9124="
     }
 }

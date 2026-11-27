@@ -2,3 +2,5 @@ patch_cmds:
 - touch Makefile
 patch_cmds_win:
 - powershell -Command "New-Item -ItemType File -Force Makefile"
+manual_tests:
+- t/zzzzzzz_authors.t

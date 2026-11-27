@@ -3,6 +3,6 @@
     "integrity": "sha256-hWwP5Jv+r7qERvmopy5UOctlRIF9XsDa+ipl+zzXQJ4=",
     "strip_prefix": "TAP-Formatter-JUnit-0.17",
     "overlay": {
-        "BUILD.bazel": "sha256-4mCEgXdPiubvj+BMTEeAKhnWixkXBuB+1tTRVp5sFDQ="
+        "BUILD.bazel": "sha256-toXR4cyQGlpV6OeEdneyKHOy7wbuG1VVNJPLVwXxCpU="
     }
 }

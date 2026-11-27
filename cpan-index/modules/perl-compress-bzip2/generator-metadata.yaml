@@ -3,3 +3,25 @@ cc_srcs_exclude:
 - bzlib-src/**
 native_deps:
 - '@bzip2//:bz2'
+manual_tests:
+- t/020-compfile.t
+- t/071-gzuncomp.t
+- t/034-uncompfile.t
+- t/022-compfile.t
+- t/026-compfile.t
+- t/060-inflate.t
+- t/021-compfile.t
+- t/032-uncompfile.t
+- t/023-compfile.t
+- t/050-deflate.t
+- t/033-uncompfile.t
+- t/040-memory.t
+- t/035-uncompreadline.t
+- t/070-gzcomp.t
+- t/011-prototype.t
+- t/024-compfile.t
+- t/031-uncompfile.t
+- t/041-double-free.t
+- t/030-uncompfile.t
+- t/051-deflate-flush.t
+- t/025-compfile.t

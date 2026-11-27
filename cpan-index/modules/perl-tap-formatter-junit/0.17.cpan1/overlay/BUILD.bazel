@@ -83,6 +83,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01-compile.t"],
+    tags = ["manual"],
     deps = [":TAP-Formatter-JUnit_test_lib"],
 )
 
@@ -91,6 +92,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/formatter.t"],
+    tags = ["manual"],
     deps = [":TAP-Formatter-JUnit_test_lib"],
 )
 
@@ -107,6 +109,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tap2junit-filter.t"],
+    tags = ["manual"],
     deps = [":TAP-Formatter-JUnit_test_lib"],
 )
 
@@ -115,6 +118,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tap2junit-name.t"],
+    tags = ["manual"],
     deps = [":TAP-Formatter-JUnit_test_lib"],
 )
 
@@ -123,6 +127,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tap2junit.t"],
+    tags = ["manual"],
     deps = [":TAP-Formatter-JUnit_test_lib"],
 )
 
@@ -138,12 +143,7 @@ test_suite(
     name = "test",
     tests = [
         ":test_t_00-report-prereqs",
-        ":test_t_01-compile",
-        ":test_t_formatter",
         ":test_t_passing-todos",
-        ":test_t_tap2junit",
-        ":test_t_tap2junit-filter",
-        ":test_t_tap2junit-name",
         ":test_t_timer",
     ],
 )

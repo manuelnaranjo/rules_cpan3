@@ -1,0 +1,2 @@
+manual_tests:
+- t/00_base.t

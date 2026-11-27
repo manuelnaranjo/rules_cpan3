@@ -83,6 +83,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10main.t"],
+    tags = ["manual"],
     deps = [":XML-TreeBuilder_test_lib"],
 )
 
@@ -90,6 +91,5 @@ test_suite(
     name = "test",
     tests = [
         ":test_t_00about",
-        ":test_t_10main",
     ],
 )

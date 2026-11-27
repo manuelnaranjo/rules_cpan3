@@ -7,15 +7,21 @@ load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
+    name = "copy_t_e2e_eval_merge_t",
+    src = "tests/eval_merge.t",
+    out = "t/e2e/eval_merge.t",
+)
+
+copy_file(
     name = "copy_t_e2e_eval_use_t",
     src = "tests/eval_use.t",
     out = "t/e2e/eval_use.t",
 )
 
 copy_file(
-    name = "copy_t_e2e_md5_t",
-    src = "tests/md5.t",
-    out = "t/e2e/md5.t",
+    name = "copy_t_e2e_eval_merge_sep_t",
+    src = "tests/eval_merge_sep.t",
+    out = "t/e2e/eval_merge_sep.t",
 )
 
 copy_file(
@@ -31,15 +37,9 @@ copy_file(
 )
 
 copy_file(
-    name = "copy_t_e2e_eval_merge_sep_t",
-    src = "tests/eval_merge_sep.t",
-    out = "t/e2e/eval_merge_sep.t",
-)
-
-copy_file(
-    name = "copy_t_e2e_eval_merge_t",
-    src = "tests/eval_merge.t",
-    out = "t/e2e/eval_merge.t",
+    name = "copy_t_e2e_md5_t",
+    src = "tests/md5.t",
+    out = "t/e2e/md5.t",
 )
 
 cpan_xs(

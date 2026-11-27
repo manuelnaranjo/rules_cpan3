@@ -32,13 +32,10 @@ cpan_xs(
             "**/contrib/**",
             "**/programs/**",
             "**/tests/**",
-            "jsonsl/jsonsl.c",
         ],
     ),
     output_loc = "auto/JSON/SL/SL",
-    textual_hdrs = [
-        "jsonsl/jsonsl.c",
-    ] + glob(
+    textual_hdrs = glob(
         [
             "*.h",
             "**/*.h",
@@ -69,7 +66,6 @@ cpan_xs(
             "**/contrib/**",
             "**/programs/**",
             "**/tests/**",
-            "jsonsl/jsonsl.c",
         ],
     ),
     typemaps = glob(

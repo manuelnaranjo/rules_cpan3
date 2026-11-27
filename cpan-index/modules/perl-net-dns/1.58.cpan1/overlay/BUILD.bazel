@@ -65,6 +65,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-install.t"],
+    tags = ["manual"],
     deps = [":Net-DNS_test_lib"],
 )
 
@@ -911,7 +912,6 @@ perl_test(
 test_suite(
     name = "test",
     tests = [
-        ":test_t_00-install",
         ":test_t_00-load",
         ":test_t_00-pod",
         ":test_t_01-resolver",

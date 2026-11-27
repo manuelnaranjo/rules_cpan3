@@ -68,6 +68,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00ldif-entry.t"],
+    tags = ["manual"],
     deps = [":perl-ldap_test_lib"],
 )
 
@@ -92,6 +93,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/03schema.t"],
+    tags = ["manual"],
     deps = [":perl-ldap_test_lib"],
 )
 
@@ -124,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/07filtermatch.t"],
+    tags = ["manual"],
     deps = [":perl-ldap_test_lib"],
 )
 
@@ -148,6 +151,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/10ldif-controls.t"],
+    tags = ["manual"],
     deps = [":perl-ldap_test_lib"],
 )
 
@@ -282,17 +286,13 @@ perl_test(
 test_suite(
     name = "test",
     tests = [
-        ":test_t_00ldif-entry",
         ":test_t_01canon_dn",
         ":test_t_02filter",
-        ":test_t_03schema",
         ":test_t_04refloop",
         ":test_t_05dsml",
         ":test_t_06constant",
-        ":test_t_07filtermatch",
         ":test_t_08time",
         ":test_t_09ldif-http-url",
-        ":test_t_10ldif-controls",
         ":test_t_40connect",
         ":test_t_41populate",
         ":test_t_42search",

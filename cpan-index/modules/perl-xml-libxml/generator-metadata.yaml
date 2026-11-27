@@ -2,5 +2,26 @@ defines:
 - HAVE_UTF8
 native_deps:
 - '@libxml2//:xml2'
-patch_cmds:
-- mkdir -p lib/XML && cp LibXML.pm lib/XML/LibXML.pm && cp LibXML.pod lib/XML/LibXML.pod
+manual_tests:
+- t/08findnodes.t
+- t/40reader.t
+- t/14sax.t
+- t/07dtd.t
+- t/13dtd.t
+- t/02parse.t
+- t/47load_xml_callbacks.t
+- t/25relaxng.t
+- t/28new_callbacks_multiple.t
+- t/41xinclude.t
+- t/03doc.t
+- t/26schema.t
+- t/12html.t
+- t/17callbacks.t
+- t/09xpath.t
+- t/20extras.t
+- t/19die_on_invalid_utf8_rt_58848.t
+- t/49_load_html.t
+- t/27new_callbacks_simple.t
+file_copies:
+  lib/XML/LibXML.pm: LibXML.pm
+  lib/XML/LibXML.pod: LibXML.pod

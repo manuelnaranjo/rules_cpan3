@@ -4,6 +4,7 @@
     "strip_prefix": "Net-SSLeay-1.96",
     "overlay": {
         "SSLeay.xs": "sha256-MKxSm7QqKM24zq/hRNkbCflKyIrZFxflFvJAnfM6RvA=",
+        "constants.inc": "sha256-EtsMxVIgNz9x6I/h4qK8j8MQT17n7tzzevqsOi40kbs=",
         "lib/auto/Net/SSLeay/put_https3.al": "sha256-h4QwPz9TSWPXVAp5s8p3w1VE8FLXS4EH+bO/EPoJVPU=",
         "lib/auto/Net/SSLeay/open_proxy_tcp_connection.al": "sha256-Ez8hbTJH1QRLRD58VXi8CBdfwvI5NbkH2U1g2xxyV4w=",
         "lib/auto/Net/SSLeay/make_form.al": "sha256-mGZG0+CuLiQJaLAapHGbQjATSrKR92dU+FKFUIaAJlQ=",
@@ -80,7 +81,6 @@
         "lib/auto/Net/SSLeay/post_https4.al": "sha256-AoaSCI1DYtcwg0B97YY0TGmJTM+0YjteE913bNZ2B5o=",
         "lib/auto/Net/SSLeay/get_http3.al": "sha256-CVUuI/lt3K4knVFvzpbpZW5Q6+6CVcMU9XkjVqE+1Po=",
         "lib/auto/Net/SSLeay/autosplit.ix": "sha256-1MwXUbGqIQjWQbIOrm+pzPpn7XxtiI63iHqgDdi3/VU=",
-        "constants.inc": "sha256-EtsMxVIgNz9x6I/h4qK8j8MQT17n7tzzevqsOi40kbs=",
-        "BUILD.bazel": "sha256-FNfrNk+6E8P6DwmX1ouZRgALtFKDQU6Tn+KVYMLDbnY="
+        "BUILD.bazel": "sha256-ipER041oC5OSHs3FRo5uRe+hnOuKw7vKU1QWYkrVUQA="
     }
 }

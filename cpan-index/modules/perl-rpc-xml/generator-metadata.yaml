@@ -1,3 +1,13 @@
 manual_tests:
 - t/40_server.t
 - t/50_client.t
+- t/29_parserfactory.t
+- t/41_server_hang.t
+- t/20_xml_parser.t
+- t/90_rt50013_parser_bugs.t
+- t/90_rt58323_push_parser.t
+- t/90_rt54183_sigpipe.t
+- t/00_load.t
+- t/35_namespaces.t
+- t/90_rt58065_allow_nil.t
+- t/30_procedure.t

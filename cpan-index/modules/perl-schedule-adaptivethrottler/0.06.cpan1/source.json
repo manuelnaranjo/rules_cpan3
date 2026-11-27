@@ -3,6 +3,6 @@
     "integrity": "sha256-/spLoYvNaJlqvIbOFRjOs806sqLVhso7de2mfMWthVY=",
     "strip_prefix": "Schedule-AdaptiveThrottler-0.06",
     "overlay": {
-        "BUILD.bazel": "sha256-ZdzPiMtOI6RjqQyvWh6hDkML2K+SItr/BWQ1CzbxOEk="
+        "BUILD.bazel": "sha256-UER7hXS6tCgvZ+t+a5wMEYPon2U0v1wyXaHYr/FCmnc="
     }
 }

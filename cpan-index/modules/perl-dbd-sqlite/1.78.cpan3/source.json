@@ -11,6 +11,6 @@
         "dbipport.h": "sha256-9v9CmP7WFxlj/voMFjra1a3W65OSL+T9hAZW06pz96E=",
         "dbd_xsh.h": "sha256-5nyUc5m9UyxfMb2RH8fzV9RVLt0hXrpWDseg6Q0FrUs=",
         "dbi_sql.h": "sha256-KpzCQbukAz1bVxEcUm6NCnqLuUqfuDwonW+oJpBUP3c=",
-        "BUILD.bazel": "sha256-2KjOfaEiIBadCP/C0pt0Uztu4vwe3se3T2np9owxFVo="
+        "BUILD.bazel": "sha256-a6w1imWBZjgbDaGVQDL2d9Iy6DunlgqAHfSukYLpDDc="
     }
 }

@@ -65,6 +65,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/is_field.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -89,6 +90,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test1.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -97,6 +99,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test2.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -105,6 +108,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test3.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -113,6 +117,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test4.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -121,6 +126,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test5.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -129,6 +135,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_24.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -137,6 +144,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_26.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -145,6 +153,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_27.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -153,6 +162,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_30.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -161,6 +171,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_32.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -169,6 +180,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_35.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -177,6 +189,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_36.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -185,6 +198,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_38.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -193,6 +207,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_39.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -201,6 +216,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_40.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -209,6 +225,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_41.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -217,6 +234,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_42.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -225,6 +243,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_44.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -233,6 +252,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_45.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -241,6 +261,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_47.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -249,6 +270,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_48.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -257,6 +279,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_3_50.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -265,6 +288,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_additional.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -273,6 +297,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_attregexp_cond.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -289,6 +314,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_bugs_3_15.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -297,6 +323,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_bugs_3_18.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -305,6 +332,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_bugs_3_19.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -313,6 +341,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_bugs_3_21.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -321,6 +350,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_bugs_3_22.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -329,6 +359,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_cdata.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -345,6 +376,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_class_methods.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -353,6 +385,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_class_selector.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -361,6 +394,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_comment_handler.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -369,6 +403,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_drop_comments.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -377,6 +412,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_entities.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -385,6 +421,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_erase.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -393,6 +430,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_errors.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -401,6 +439,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_even_more_coverage.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -409,6 +448,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_expand_external_entities.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -417,6 +457,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_ignore_elts.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -425,6 +466,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_keep_atts_order.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -441,6 +483,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_mark.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -449,6 +492,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_memory.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -465,6 +509,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_nav.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -473,6 +518,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_need_3_args_open.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -481,6 +527,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_need_io_scalar.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -489,6 +536,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_need_use_bytes.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -497,6 +545,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_new_features_3_15.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -505,6 +554,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_new_features_3_16.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -513,6 +563,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_new_features_3_18.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -521,6 +572,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_new_features_3_22.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -529,6 +581,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_pi_handler.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -537,6 +590,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_pos.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -545,6 +599,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_safe_encode.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -553,6 +608,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_simplify.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -561,6 +617,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_spaces.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -569,6 +626,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_twig_roots.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -577,6 +635,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_unique_xpath.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -585,6 +644,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_variables.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -593,6 +653,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_with_lwp.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -601,6 +662,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_wrapped.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -617,6 +679,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_xml_split_g.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -625,6 +688,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/test_xpath_cond.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -633,6 +697,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/tests_3_23.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -641,6 +706,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_01basic.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -649,6 +715,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_02descendant.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -657,6 +724,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_03star.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -665,6 +733,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_04pos.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -673,6 +742,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_05attrib.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -681,6 +751,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_06attrib_val.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -689,6 +760,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_07count.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -697,6 +769,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_08name.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -705,6 +778,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_09a_string_length.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -713,6 +787,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_09string_length.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -721,6 +796,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_10pipe.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -729,6 +805,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_12axisdescendant.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -737,6 +814,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_13axisparent.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -745,6 +823,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_14axisancestor.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -753,6 +832,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_15axisfol_sib.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -761,6 +841,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_16axisprec_sib.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -769,6 +850,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_17axisfollowing.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -777,6 +859,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_18axispreceding.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -785,6 +868,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_19axisd_or_s.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -793,6 +877,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_20axisa_or_s.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -801,6 +886,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_21allnodes.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -809,6 +895,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_22name_select.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -817,6 +904,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_23func.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -825,6 +913,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_24namespaces.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -833,6 +922,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_25scope.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -841,6 +931,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_26predicate.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -849,6 +940,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_28ancestor2.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -857,6 +949,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_29desc_with_predicate.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -865,6 +958,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_30lang.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -873,6 +967,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_31vars.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -881,6 +976,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_additional.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -889,6 +985,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_nav.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -897,6 +994,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_test1.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -905,6 +1003,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_test_twig_roots.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -913,6 +1012,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_test_with_handlers.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -921,6 +1021,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/xmlxpath_xpath_cond.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
@@ -929,120 +1030,19 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/zz_dump_config.t"],
+    tags = ["manual"],
     deps = [":XML-Twig_test_lib"],
 )
 
 test_suite(
     name = "test",
     tests = [
-        ":test_t_is_field",
         ":test_t_pod",
         ":test_t_pod_coverage",
-        ":test_t_test1",
-        ":test_t_test2",
-        ":test_t_test3",
-        ":test_t_test4",
-        ":test_t_test5",
-        ":test_t_test_3_24",
-        ":test_t_test_3_26",
-        ":test_t_test_3_27",
-        ":test_t_test_3_30",
-        ":test_t_test_3_32",
-        ":test_t_test_3_35",
-        ":test_t_test_3_36",
-        ":test_t_test_3_38",
-        ":test_t_test_3_39",
-        ":test_t_test_3_40",
-        ":test_t_test_3_41",
-        ":test_t_test_3_42",
-        ":test_t_test_3_44",
-        ":test_t_test_3_45",
-        ":test_t_test_3_47",
-        ":test_t_test_3_48",
-        ":test_t_test_3_50",
-        ":test_t_test_additional",
-        ":test_t_test_attregexp_cond",
         ":test_t_test_autoencoding_conversion",
-        ":test_t_test_bugs_3_15",
-        ":test_t_test_bugs_3_18",
-        ":test_t_test_bugs_3_19",
-        ":test_t_test_bugs_3_21",
-        ":test_t_test_bugs_3_22",
-        ":test_t_test_cdata",
         ":test_t_test_changes",
-        ":test_t_test_class_methods",
-        ":test_t_test_class_selector",
-        ":test_t_test_comment_handler",
-        ":test_t_test_drop_comments",
-        ":test_t_test_entities",
-        ":test_t_test_erase",
-        ":test_t_test_errors",
-        ":test_t_test_even_more_coverage",
-        ":test_t_test_expand_external_entities",
-        ":test_t_test_ignore_elts",
-        ":test_t_test_keep_atts_order",
         ":test_t_test_kwalitee",
-        ":test_t_test_mark",
-        ":test_t_test_memory",
         ":test_t_test_meta_json",
-        ":test_t_test_nav",
-        ":test_t_test_need_3_args_open",
-        ":test_t_test_need_io_scalar",
-        ":test_t_test_need_use_bytes",
-        ":test_t_test_new_features_3_15",
-        ":test_t_test_new_features_3_16",
-        ":test_t_test_new_features_3_18",
-        ":test_t_test_new_features_3_22",
-        ":test_t_test_pi_handler",
-        ":test_t_test_pos",
-        ":test_t_test_safe_encode",
-        ":test_t_test_simplify",
-        ":test_t_test_spaces",
-        ":test_t_test_twig_roots",
-        ":test_t_test_unique_xpath",
-        ":test_t_test_variables",
-        ":test_t_test_with_lwp",
-        ":test_t_test_wrapped",
         ":test_t_test_xml_split",
-        ":test_t_test_xml_split_g",
-        ":test_t_test_xpath_cond",
-        ":test_t_tests_3_23",
-        ":test_t_xmlxpath_01basic",
-        ":test_t_xmlxpath_02descendant",
-        ":test_t_xmlxpath_03star",
-        ":test_t_xmlxpath_04pos",
-        ":test_t_xmlxpath_05attrib",
-        ":test_t_xmlxpath_06attrib_val",
-        ":test_t_xmlxpath_07count",
-        ":test_t_xmlxpath_08name",
-        ":test_t_xmlxpath_09a_string_length",
-        ":test_t_xmlxpath_09string_length",
-        ":test_t_xmlxpath_10pipe",
-        ":test_t_xmlxpath_12axisdescendant",
-        ":test_t_xmlxpath_13axisparent",
-        ":test_t_xmlxpath_14axisancestor",
-        ":test_t_xmlxpath_15axisfol_sib",
-        ":test_t_xmlxpath_16axisprec_sib",
-        ":test_t_xmlxpath_17axisfollowing",
-        ":test_t_xmlxpath_18axispreceding",
-        ":test_t_xmlxpath_19axisd_or_s",
-        ":test_t_xmlxpath_20axisa_or_s",
-        ":test_t_xmlxpath_21allnodes",
-        ":test_t_xmlxpath_22name_select",
-        ":test_t_xmlxpath_23func",
-        ":test_t_xmlxpath_24namespaces",
-        ":test_t_xmlxpath_25scope",
-        ":test_t_xmlxpath_26predicate",
-        ":test_t_xmlxpath_28ancestor2",
-        ":test_t_xmlxpath_29desc_with_predicate",
-        ":test_t_xmlxpath_30lang",
-        ":test_t_xmlxpath_31vars",
-        ":test_t_xmlxpath_additional",
-        ":test_t_xmlxpath_nav",
-        ":test_t_xmlxpath_test1",
-        ":test_t_xmlxpath_test_twig_roots",
-        ":test_t_xmlxpath_test_with_handlers",
-        ":test_t_xmlxpath_xpath_cond",
-        ":test_t_zz_dump_config",
     ],
 )

@@ -6,13 +6,13 @@
         "CursesCon.inc": "sha256-soei73/cj/4zUaOW/+kH+/yyKB+KFTTt1L+VXGso6ys=",
         "CursesFunWide.inc": "sha256-4rbUMCEMivOHQ4L6rycpo5+DnU+cBm6XsxZcQZGTX74=",
         "CursesDef.h": "sha256-eonVGmN5gRotvwJbQU2fEsnc0/h31FhI1GVSXh0D0cE=",
+        "c-config.h": "sha256-IuNIqM83Poapq9UU4PRtPfd31EMAkAACSeYGx6yN1Fo=",
         "CursesBoot.inc": "sha256-YGsSsbhMOnGSMNnE/6/uLH3RAF/+4US5KOq4PkC7D1k=",
         "Curses.c": "sha256-mHXV7HIMOocDgSGK7dSxiaeLH/vwqOYXJEGDFEClFI0=",
         "CursesWide.inc": "sha256-YsKOj7wRkswmY3J/lVrAnOOJXupVQF7vQ3/BYXQVkA4=",
         "CursesFun.inc": "sha256-+ZfkhLgiuHnT0GyhtgFFilrH4+06QMGvV7w7Yc5Ve1g=",
         "CursesVar.inc": "sha256-CUuwcd3PdGkve4zgEx6y/yG0UxB+u0zdhxD1bj6w/LE=",
         "config.h": "sha256-hPiLR7fEoD6pGNLPT6ZxWXHjtnrz+/GRvmENmK2e0NQ=",
-        "c-config.h": "sha256-IuNIqM83Poapq9UU4PRtPfd31EMAkAACSeYGx6yN1Fo=",
         "BUILD.bazel": "sha256-Y4wA8f88FdNBppxWRJkRbFeHDzU6hmfanqdXHFMcDqU="
     }
 }

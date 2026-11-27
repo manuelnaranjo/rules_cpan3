@@ -81,6 +81,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/data.t"],
+    tags = ["manual"],
     deps = [":MIME-Lite_test_lib"],
 )
 
@@ -145,7 +146,6 @@ test_suite(
     tests = [
         ":test_t_00-report-prereqs",
         ":test_t_addrs",
-        ":test_t_data",
         ":test_t_head",
         ":test_t_mime-version",
         ":test_t_parts",

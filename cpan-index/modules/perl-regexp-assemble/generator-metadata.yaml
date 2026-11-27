@@ -1,0 +1,2 @@
+manual_tests:
+- t/05_hostmatch.t

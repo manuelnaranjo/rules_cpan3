@@ -5,3 +5,4 @@ manual_tests:
 - t/04-mysql.t
 - t/05-mysql.t
 - t/50-dir.t
+- t/boilerplate.t

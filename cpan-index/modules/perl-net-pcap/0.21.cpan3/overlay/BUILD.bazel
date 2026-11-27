@@ -7,6 +7,18 @@ load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
+    name = "copy_const_c_inc",
+    src = "fallback/const-c.inc",
+    out = "const-c.inc",
+)
+
+copy_file(
+    name = "copy_const_xs_inc",
+    src = "fallback/const-xs.inc",
+    out = "const-xs.inc",
+)
+
+copy_file(
     name = "copy_lib_Net_Pcap_pm",
     src = "Pcap.pm",
     out = "lib/Net/Pcap.pm",
@@ -53,7 +65,10 @@ cpan_xs(
         "HAVE_",
     ],
     output_loc = "auto/Net/Pcap/Pcap",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        ":copy_const_c_inc",
+        ":copy_const_xs_inc",
+    ] + glob(
         [
             "*.h",
             "**/*.h",

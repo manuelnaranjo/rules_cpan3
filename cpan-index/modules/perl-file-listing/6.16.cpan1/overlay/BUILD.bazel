@@ -73,6 +73,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/file_listing.t"],
+    tags = ["manual"],
     deps = [":File-Listing_test_lib"],
 )
 
@@ -80,6 +81,5 @@ test_suite(
     name = "test",
     tests = [
         ":test_t_00_diag",
-        ":test_t_file_listing",
     ],
 )

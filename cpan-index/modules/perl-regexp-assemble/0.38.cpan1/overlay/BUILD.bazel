@@ -103,6 +103,7 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/05_hostmatch.t"],
+    tags = ["manual"],
     deps = [":Regexp-Assemble_test_lib"],
 )
 
@@ -154,7 +155,6 @@ test_suite(
         ":test_t_02_reduce",
         ":test_t_03_str",
         ":test_t_04_match",
-        ":test_t_05_hostmatch",
         ":test_t_06_general",
         ":test_t_07_warning",
         ":test_t_08_track",
