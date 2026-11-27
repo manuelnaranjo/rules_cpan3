@@ -1,5 +1,2 @@
-native_deps:
-- '@openssl//:crypto'
-- '@openssl//:ssl'
-patch_cmds:
-- mkdir -p lib/Crypt/OpenSSL && cp RSA.pm lib/Crypt/OpenSSL/RSA.pm
+extra_test_deps:
+  - '@perl-crypt-openssl-guess'
