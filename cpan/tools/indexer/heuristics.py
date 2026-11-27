@@ -14,135 +14,97 @@ import json
 import logging
 import os
 import re
+import shutil
 import subprocess
+import sys
 import tarfile
 import tempfile
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple, Union
+
+import yaml
+from runfiles import Runfiles
 
 
-def split_yaml_key_val(line: str) -> Tuple[str, str]:
-    """Splits a YAML line into key and value, respecting quotes around keys with colons."""
-    line = line.strip()
-    if line.startswith('"'):
-        end_q = line.find('"', 1)
-        if end_q != -1:
-            k = line[1:end_q]
-            rest = line[end_q + 1:].lstrip()
-            if rest.startswith(":"):
-                return k, rest[1:].strip()
-    elif line.startswith("'"):
-        end_q = line.find("'", 1)
-        if end_q != -1:
-            k = line[1:end_q]
-            rest = line[end_q + 1:].lstrip()
-            if rest.startswith(":"):
-                return k, rest[1:].strip()
-    if ":" in line:
-        parts = line.split(":", 1)
-        return parts[0].strip(), parts[1].strip()
-    return line, ""
+def find_runfiles_binary(
+    candidates: List[str],
+    keyword: str,
+    suffix: Union[str, Tuple[str, ...]],
+) -> Optional[Path]:
+    """Finds a hermetic binary in Bazel runfiles across candidate paths or the runfiles manifest/tree."""
+    try:
+        r = Runfiles.Create()
+    except Exception:
+        r = None
+    if not r:
+        return None
+
+    for cand in candidates:
+        try:
+            resolved = r.Rlocation(cand)
+            if resolved and Path(resolved).is_file() and os.access(resolved, os.X_OK):
+                return Path(resolved)
+        except Exception:
+            pass
+
+    strategy = getattr(r, "_strategy", None)
+    if strategy:
+        runfiles_dict = getattr(strategy, "_runfiles", None)
+        if isinstance(runfiles_dict, dict):
+            for rpath, fpath in runfiles_dict.items():
+                if keyword in rpath and rpath.endswith(suffix):
+                    if Path(fpath).is_file() and os.access(fpath, os.X_OK):
+                        return Path(fpath)
+
+        get_dir = getattr(strategy, "_GetRunfilesDir", None)
+        if callable(get_dir):
+            rf_dir = Path(get_dir())
+            if rf_dir.exists():
+                binary_name = candidates[0].split("/")[-1]
+                for p in rf_dir.rglob(binary_name):
+                    if p.is_file() and os.access(p, os.X_OK):
+                        return Path(fpath if (fpath := p).is_file() else p)
+
+    return None
+
+
+def find_perl_binary() -> Optional[Path]:
+    """Finds hermetic perl binary from rules_perl toolchain runfiles using bazel-runfiles."""
+    return find_runfiles_binary(
+        candidates=[
+            "rules_perl/perl/bin/perl",
+            "rules_perl/bin/perl",
+        ],
+        keyword="rules_perl",
+        suffix="/bin/perl",
+    )
+
+
+def find_buildifier_binary() -> Optional[Path]:
+    """Finds hermetic buildifier binary from buildifier_prebuilt runfiles using bazel-runfiles."""
+    return find_runfiles_binary(
+        candidates=[
+            "buildifier_prebuilt/buildifier/buildifier.bash",
+            "buildifier_prebuilt/buildifier",
+            "buildifier_prebuilt/file/buildifier",
+        ],
+        keyword="buildifier",
+        suffix=("/buildifier", "/buildifier.bash"),
+    )
 
 
 def parse_yaml_subset(text: str) -> Dict[str, Any]:
-    """Parses a YAML document with support for mappings, lists, nested select dicts, and scalars."""
-    try:
-        import yaml
-        return yaml.safe_load(text) or {}
-    except Exception:
-        pass
-
-    result: Dict[str, Any] = {}
-    current_top_key: Optional[str] = None
-    current_sub_key: Optional[str] = None
-
-    for raw_line in text.splitlines():
-        line = raw_line.rstrip()
-        if not line or line.strip().startswith("#"):
-            continue
-
-        indent = len(line) - len(line.lstrip())
-        stripped = line.strip()
-
-        if indent == 0 and ":" in stripped:
-            k, v = split_yaml_key_val(stripped)
-            current_top_key = k
-            current_sub_key = None
-            if not v:
-                result[k] = None
-            else:
-                if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
-                    v = v[1:-1]
-                result[k] = v
-                current_top_key = None
-            continue
-
-        if current_top_key is not None:
-            if indent == 2:
-                if stripped.startswith("- "):
-                    val = stripped[2:].strip()
-                    if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
-                        val = val[1:-1]
-                    if result[current_top_key] is None or not isinstance(result[current_top_key], list):
-                        result[current_top_key] = []
-                    result[current_top_key].append(val)
-                elif ":" in stripped:
-                    sub_k, sub_v = split_yaml_key_val(stripped)
-                    if (sub_k.startswith('"') and sub_k.endswith('"')) or (sub_k.startswith("'") and sub_k.endswith("'")):
-                        sub_k = sub_k[1:-1]
-                    if result[current_top_key] is None or not isinstance(result[current_top_key], dict):
-                        result[current_top_key] = {}
-                    if not sub_v:
-                        result[current_top_key][sub_k] = []
-                        current_sub_key = sub_k
-                    elif sub_v == "[]":
-                        result[current_top_key][sub_k] = []
-                        current_sub_key = None
-                    else:
-                        if (sub_v.startswith('"') and sub_v.endswith('"')) or (sub_v.startswith("'") and sub_v.endswith("'")):
-                            sub_v = sub_v[1:-1]
-                        result[current_top_key][sub_k] = sub_v
-                        current_sub_key = None
-            elif indent >= 4 and current_sub_key is not None:
-                if stripped.startswith("- "):
-                    val = stripped[2:].strip()
-                    if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
-                        val = val[1:-1]
-                    if not isinstance(result[current_top_key][current_sub_key], list):
-                        result[current_top_key][current_sub_key] = []
-                    result[current_top_key][current_sub_key].append(val)
-
-    for k, v in result.items():
-        if v is None:
-            result[k] = []
-
-    return result
+    """Parses a YAML document with PyYAML (no fallback)."""
+    parsed = yaml.safe_load(text)
+    return parsed if isinstance(parsed, dict) else {}
 
 
 def dump_yaml_subset(data: Dict[str, Any]) -> str:
-    """Serializes a dictionary to YAML format."""
-    try:
-        import yaml
-        return yaml.dump(data, sort_keys=False, default_flow_style=False)
-    except Exception:
-        pass
-
-    lines = []
-    for k, v in data.items():
-        if isinstance(v, list):
-            lines.append(f"{k}:")
-            for item in v:
-                lines.append(f"  - {item}")
-        elif isinstance(v, dict):
-            lines.append(f"{k}:")
-            for sub_k, sub_v in v.items():
-                lines.append(f"  {sub_k}: \"{sub_v}\"")
-        elif isinstance(v, str):
-            lines.append(f"{k}: {v}")
-    return "\n".join(lines) + "\n"
+    """Serializes a dictionary to YAML format using PyYAML."""
+    return yaml.dump(data, sort_keys=True, default_flow_style=False)
 
 logger = logging.getLogger("cpan_indexer.heuristics")
 
@@ -312,7 +274,9 @@ class GeneratorMetadata:
     target_compatible_with: List[str] = field(default_factory=list)
     exec_compatible_with: List[str] = field(default_factory=list)
     cc_srcs_exclude: List[str] = field(default_factory=list)
+    test_data_exclude: List[str] = field(default_factory=list)
     extra_deps: List[str] = field(default_factory=list)
+    extra_test_deps: List[str] = field(default_factory=list)
     patch_cmds: List[str] = field(default_factory=list)
     patch_cmds_win: List[str] = field(default_factory=list)
     file_copies: Dict[str, str] = field(default_factory=dict)
@@ -321,39 +285,115 @@ class GeneratorMetadata:
     def from_yaml_file(cls, path: Path) -> GeneratorMetadata:
         if not path.exists():
             return cls()
-        try:
-            data = parse_yaml_subset(path.read_text(encoding="utf-8"))
-        except Exception as e:
-            logger.warning("Failed to load %s: %s", path, e)
-            return cls()
-        return cls.from_dict(data)
+        data = parse_yaml_subset(path.read_text(encoding="utf-8"))
+        return cls.from_dict(data, source_path=path)
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> GeneratorMetadata:
+    def from_dict(cls, data: Dict[str, Any], source_path: Optional[Path] = None) -> GeneratorMetadata:
+        if not isinstance(data, dict):
+            path_str = f" in {source_path}" if source_path else ""
+            raise TypeError(f"Generator metadata{path_str} must be a mapping/dict, got {type(data).__name__}")
+
+        valid_keys = {
+            "is_xs",
+            "manual_tests",
+            "test_services",
+            "test_exec_properties",
+            "execution_requirements",
+            "defines",
+            "defines_select",
+            "linkopts",
+            "linkopts_select",
+            "includes",
+            "output_loc",
+            "native_deps",
+            "strip_prefix",
+            "target_compatible_with",
+            "exec_compatible_with",
+            "cc_srcs_exclude",
+            "test_data_exclude",
+            "extra_deps",
+            "extra_test_deps",
+            "patch_cmds",
+            "patch_cmds_win",
+            "file_copies",
+        }
+        unknown_keys = sorted(set(data.keys()) - valid_keys)
+        if unknown_keys:
+            path_str = f" in {source_path}" if source_path else ""
+            raise ValueError(
+                f"Unknown key(s) in generator metadata{path_str}: {', '.join(unknown_keys)}. "
+                f"Allowed keys are: {', '.join(sorted(valid_keys))}"
+            )
+
         is_xs = data.get("is_xs")
-        if isinstance(is_xs, str):
-            is_xs = is_xs.lower() in ("true", "1", "yes")
+        if is_xs is not None and not isinstance(is_xs, bool):
+            path_str = f" in {source_path}" if source_path else ""
+            raise TypeError(
+                f"'is_xs'{path_str} must be a boolean (True or False), got {type(is_xs).__name__}: {is_xs!r}"
+            )
+
+        def _check_list_str(key: str) -> List[str]:
+            val = data.get(key)
+            if val is None:
+                return []
+            if not isinstance(val, list) or not all(isinstance(x, str) for x in val):
+                path_str = f" in {source_path}" if source_path else ""
+                raise TypeError(f"'{key}'{path_str} must be a list of strings, got {val!r}")
+            return list(val)
+
+        def _check_dict_str(key: str) -> Dict[str, str]:
+            val = data.get(key)
+            if val is None:
+                return {}
+            if not isinstance(val, dict) or not all(isinstance(k, str) and isinstance(v, str) for k, v in val.items()):
+                path_str = f" in {source_path}" if source_path else ""
+                raise TypeError(f"'{key}'{path_str} must be a dict of string -> string, got {val!r}")
+            return dict(val)
+
+        def _check_dict_list_str(key: str) -> Dict[str, List[str]]:
+            val = data.get(key)
+            if val is None:
+                return {}
+            if not isinstance(val, dict):
+                path_str = f" in {source_path}" if source_path else ""
+                raise TypeError(f"'{key}'{path_str} must be a dict of string -> list[str], got {val!r}")
+            for k, v in val.items():
+                if not isinstance(k, str) or not isinstance(v, list) or not all(isinstance(x, str) for x in v):
+                    path_str = f" in {source_path}" if source_path else ""
+                    raise TypeError(f"'{key}'{path_str} entries must be string -> list of strings, got {k!r}: {v!r}")
+            return dict(val)
+
+        def _check_opt_str(key: str) -> Optional[str]:
+            val = data.get(key)
+            if val is not None and not isinstance(val, str):
+                path_str = f" in {source_path}" if source_path else ""
+                raise TypeError(f"'{key}'{path_str} must be a string or null, got {val!r}")
+            return val
+
         return cls(
             is_xs=is_xs,
-            manual_tests=list(data.get("manual_tests") or []),
-            test_services=list(data.get("test_services") or []),
-            test_exec_properties=dict(data.get("test_exec_properties") or {}),
-            execution_requirements=dict(data.get("execution_requirements") or {}),
-            defines=list(data.get("defines") or []),
-            defines_select=dict(data.get("defines_select") or {}),
-            linkopts=list(data.get("linkopts") or []),
-            linkopts_select=dict(data.get("linkopts_select") or {}),
-            includes=list(data.get("includes") or []),
-            output_loc=data.get("output_loc"),
-            native_deps=list(data.get("native_deps") or []),
-            strip_prefix=data.get("strip_prefix"),
-            target_compatible_with=list(data.get("target_compatible_with") or []),
-            exec_compatible_with=list(data.get("exec_compatible_with") or []),
-            cc_srcs_exclude=list(data.get("cc_srcs_exclude") or data.get("cc_excludes") or []),
-            extra_deps=list(data.get("extra_deps") or data.get("runtime_deps") or []),
-            patch_cmds=list(data.get("patch_cmds") or []),
-            patch_cmds_win=list(data.get("patch_cmds_win") or []),
-            file_copies=dict(data.get("file_copies") or {}),
+            manual_tests=_check_list_str("manual_tests"),
+            test_services=_check_list_str("test_services"),
+            test_exec_properties=_check_dict_str("test_exec_properties"),
+            execution_requirements=_check_dict_str("execution_requirements"),
+            defines=_check_list_str("defines"),
+            defines_select=_check_dict_list_str("defines_select"),
+            linkopts=_check_list_str("linkopts"),
+            linkopts_select=_check_dict_list_str("linkopts_select"),
+            includes=_check_list_str("includes"),
+            output_loc=_check_opt_str("output_loc"),
+            native_deps=_check_list_str("native_deps"),
+            strip_prefix=_check_opt_str("strip_prefix"),
+            target_compatible_with=_check_list_str("target_compatible_with"),
+            exec_compatible_with=_check_list_str("exec_compatible_with"),
+            cc_srcs_exclude=_check_list_str("cc_srcs_exclude"),
+            test_data_exclude=_check_list_str("test_data_exclude"),
+            extra_deps=_check_list_str("extra_deps"),
+            extra_test_deps=_check_list_str("extra_test_deps"),
+            patch_cmds=_check_list_str("patch_cmds"),
+            patch_cmds_win=_check_list_str("patch_cmds_win"),
+            file_copies=_check_dict_str("file_copies"),
         )
 
     def to_dict(self) -> Dict[str, Any]:
@@ -392,6 +432,53 @@ class GeneratorMetadata:
             res["exec_compatible_with"] = self.exec_compatible_with
         if self.cc_srcs_exclude:
             res["cc_srcs_exclude"] = self.cc_srcs_exclude
+        if self.test_data_exclude:
+            res["test_data_exclude"] = self.test_data_exclude
+        if self.extra_deps:
+            res["extra_deps"] = self.extra_deps
+        if self.extra_test_deps:
+            res["extra_test_deps"] = self.extra_test_deps
+        if self.patch_cmds:
+            res["patch_cmds"] = self.patch_cmds
+        if self.patch_cmds_win:
+            res["patch_cmds_win"] = self.patch_cmds_win
+        return res
+        if self.is_xs is not None:
+            res["is_xs"] = self.is_xs
+        if self.file_copies:
+            res["file_copies"] = self.file_copies
+        if self.manual_tests:
+            res["manual_tests"] = self.manual_tests
+        if self.test_services:
+            res["test_services"] = self.test_services
+        if self.test_exec_properties:
+            res["test_exec_properties"] = self.test_exec_properties
+        if self.execution_requirements:
+            res["execution_requirements"] = self.execution_requirements
+        if self.defines:
+            res["defines"] = self.defines
+        if self.defines_select:
+            res["defines_select"] = self.defines_select
+        if self.linkopts:
+            res["linkopts"] = self.linkopts
+        if self.linkopts_select:
+            res["linkopts_select"] = self.linkopts_select
+        if self.includes:
+            res["includes"] = self.includes
+        if self.output_loc:
+            res["output_loc"] = self.output_loc
+        if self.native_deps:
+            res["native_deps"] = self.native_deps
+        if self.strip_prefix:
+            res["strip_prefix"] = self.strip_prefix
+        if self.target_compatible_with:
+            res["target_compatible_with"] = self.target_compatible_with
+        if self.exec_compatible_with:
+            res["exec_compatible_with"] = self.exec_compatible_with
+        if self.cc_srcs_exclude:
+            res["cc_srcs_exclude"] = self.cc_srcs_exclude
+        if self.test_data_exclude:
+            res["test_data_exclude"] = self.test_data_exclude
         if self.extra_deps:
             res["extra_deps"] = self.extra_deps
         if self.patch_cmds:
@@ -450,6 +537,7 @@ class DistributionInspection:
     file_copies: List[Tuple[str, str]] = field(default_factory=list)
     output_loc: str = ""
     t_files: List[str] = field(default_factory=list)
+    unreadable_files: List[str] = field(default_factory=list)
 
     def add_file_copy(self, src: str, dest: str) -> None:
         if src == dest:
@@ -661,6 +749,16 @@ class HeuristicsEngine:
                 if len(xs_files) > 0 or len(c_files) > 0 or generator_metadata.output_loc:
                     inspection.is_xs = True
 
+        unreadable_files: List[str] = []
+        for p in extract_dir.rglob("*"):
+            if p.is_file():
+                try:
+                    if (p.stat().st_mode & 0o444) == 0:
+                        unreadable_files.append(p.relative_to(extract_dir).as_posix())
+                except Exception:
+                    pass
+        inspection.unreadable_files = unreadable_files
+
         return inspection
 
     def _find_ppport_resource(self) -> Optional[Path]:
@@ -734,122 +832,132 @@ class HeuristicsEngine:
                         inspection.native_deps.append(target)
                     break
 
-        # Attempt build system dry-run if Makefile.PL exists
+        # Attempt build system dry-run if Makefile.PL exists using a scratch copy
         if makefile_pl.exists():
-            existing_files = {p for p in extract_dir.rglob("*") if p.is_file()}
-            try:
+            with tempfile.TemporaryDirectory() as scratch_tmp:
+                scratch_dir = Path(scratch_tmp) / "scratch"
+                shutil.copytree(extract_dir, scratch_dir, symlinks=True)
+                scratch_existing = {p.relative_to(scratch_dir).as_posix() for p in scratch_dir.rglob("*") if p.is_file()}
+
+                existing_file_content_to_rel: Dict[bytes, str] = {}
+                for p in scratch_dir.rglob("*"):
+                    if p.is_file():
+                        try:
+                            c = p.read_bytes()
+                            if c not in existing_file_content_to_rel:
+                                existing_file_content_to_rel[c] = p.relative_to(scratch_dir).as_posix()
+                        except Exception:
+                            pass
+
+                perl_bin = find_perl_binary()
+                if not perl_bin:
+                    raise RuntimeError("Hermetic perl binary not found in runfiles; host fallback is prohibited")
                 env = dict(os.environ)
                 env["PERL_MM_USE_DEFAULT"] = "1"
                 env["AUTOMATED_TESTING"] = "1"
                 env["NONINTERACTIVE_TESTING"] = "1"
-                subprocess.run(
-                    ["perl", "Makefile.PL"],
-                    cwd=str(extract_dir),
-                    capture_output=True,
-                    stdin=subprocess.DEVNULL,
-                    timeout=5,
-                    env=env,
-                )
-            except Exception:
-                pass
+                env["PATH"] = f"{perl_bin.parent}:{env.get('PATH', '')}"
 
-            existing_file_content_to_rel: Dict[bytes, str] = {}
-            for p in existing_files:
                 try:
-                    c = p.read_bytes()
-                    if c not in existing_file_content_to_rel:
-                        existing_file_content_to_rel[c] = p.relative_to(extract_dir).as_posix()
+                    subprocess.run(
+                        [str(perl_bin), "Makefile.PL"],
+                        cwd=str(scratch_dir),
+                        capture_output=True,
+                        stdin=subprocess.DEVNULL,
+                        timeout=10,
+                        env=env,
+                    )
                 except Exception:
                     pass
 
-            new_files = {p for p in extract_dir.rglob("*") if p.is_file()} - existing_files
-            all_cc_excludes = list(generator_metadata.cc_srcs_exclude) if generator_metadata and generator_metadata.cc_srcs_exclude else []
-            all_cc_excludes.extend(["bzip2-src/**", "bzlib-src/**", "zlib-src/**"])
+                new_files = {p for p in scratch_dir.rglob("*") if p.is_file() and p.relative_to(scratch_dir).as_posix() not in scratch_existing}
+                all_cc_excludes = list(generator_metadata.cc_srcs_exclude) if generator_metadata and generator_metadata.cc_srcs_exclude else []
+                all_cc_excludes.extend(["bzip2-src/**", "bzlib-src/**", "zlib-src/**"])
 
-            for new_file in new_files:
-                rel = new_file.relative_to(extract_dir).as_posix()
-                if rel.startswith(("blib", ".", "conf")):
-                    continue
-
-                file_bytes = new_file.read_bytes()
-                if file_bytes in existing_file_content_to_rel:
-                    orig_rel = existing_file_content_to_rel[file_bytes]
-                    if any(fnmatch.fnmatch(orig_rel, pat) or fnmatch.fnmatch(rel, pat) for pat in all_cc_excludes):
+                for new_file in new_files:
+                    rel = new_file.relative_to(scratch_dir).as_posix()
+                    if rel.startswith(("blib", ".", "conf", "Makefile")):
                         continue
-                    inspection.add_file_copy(orig_rel, rel)
-                    if rel.endswith(".c") and rel not in inspection.included_c_files:
-                        inspection.included_c_files.append(rel)
-                    continue
 
-                # Check for generated xssubs.c or constants
-                if rel.endswith((".c", ".h", ".xs", ".inc")):
-                    if any(fnmatch.fnmatch(rel, pat) for pat in all_cc_excludes):
-                        continue
-                    file_content = self._safe_read_text(new_file)
-                    if "xssubs.c" in rel:
-                        file_content = self.wrap_constants_in_ifdef(file_content)
-                    if rel.endswith(".c"):
-                        if rel not in inspection.included_c_files:
+                    file_bytes = new_file.read_bytes()
+                    if file_bytes in existing_file_content_to_rel:
+                        orig_rel = existing_file_content_to_rel[file_bytes]
+                        if any(fnmatch.fnmatch(orig_rel, pat) or fnmatch.fnmatch(rel, pat) for pat in all_cc_excludes):
+                            continue
+                        inspection.add_file_copy(orig_rel, rel)
+                        if rel.endswith(".c") and rel not in inspection.included_c_files:
                             inspection.included_c_files.append(rel)
-                    inspection.overlay_files[rel] = file_content.encode("utf-8")
-
-        # Extract preprocessor defines and PM mappings
-        makefile_file = extract_dir / "Makefile"
-        if makefile_file.exists():
-            mf_text = self._safe_read_text(makefile_file)
-            # 1. Parse defines from Makefile DEFINE line
-            define_match = re.search(r"^DEFINE\s*=\s*(.*)$", mf_text, re.MULTILINE)
-            if define_match:
-                for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", define_match.group(1)):
-                    name = m.group(1)
-                    val = m.group(2)
-                    if val is not None:
-                        clean_val = re.sub(r'[\'\"\\/]+$', '', val).strip()
-                        clean_def = f"{name}={clean_val}"
-                    else:
-                        clean_def = name
-                    if clean_def and clean_def not in inspection.defines:
-                        inspection.defines.append(clean_def)
-
-            # 2. Parse pm_to_blib mappings for root or non-standard .pm files
-            inst_libdir_match = re.search(r"^INST_LIBDIR\s*=\s*(.*)$", mf_text, re.MULTILINE)
-            inst_libdir_prefix = ""
-            if inst_libdir_match:
-                raw_libdir = inst_libdir_match.group(1).strip()
-                raw_libdir = raw_libdir.replace("$(INST_LIB)", "").strip("/\\ ")
-                inst_libdir_prefix = raw_libdir
-
-            pm_mappings = re.findall(
-                r"'([^'\s]+)'\s+'\$\((INST_LIB|INST_LIBDIR|INST_ARCHLIB)\)/([^'\s]+)'",
-                mf_text,
-            )
-            for src_rel, var_type, dest_sub in pm_mappings:
-                if var_type == "INST_LIBDIR" and inst_libdir_prefix:
-                    dest_rel = f"{inst_libdir_prefix}/{dest_sub}".strip("/")
-                else:
-                    dest_rel = dest_sub
-                if src_rel.endswith(".pm") and dest_rel.endswith(".pm"):
-                    src_path = extract_dir / src_rel
-                    dest_path = extract_dir / "lib" / dest_rel
-                    if src_path.exists() and not dest_path.exists():
-                        target_overlay_rel = f"lib/{dest_rel}"
-                        inspection.add_file_copy(src_rel, target_overlay_rel)
-        else:
-            # Fallback search for preprocessor defines from script_text when Makefile wasn't generated
-            for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", script_text):
-                name = m.group(1)
-                val = m.group(2)
-                if val is not None:
-                    if "$" in val or not re.match(r'^[A-Za-z0-9_."\'-]+$', val):
                         continue
-                    clean_val = re.sub(r'[\'\"\\/]+$', '', val).strip()
-                    clean_def = f"{name}={clean_val}"
+
+                    # Check for generated xssubs.c or constants
+                    if rel.endswith((".c", ".h", ".xs", ".inc")):
+                        if any(fnmatch.fnmatch(rel, pat) for pat in all_cc_excludes):
+                            continue
+                        file_content = self._safe_read_text(new_file)
+                        if "xssubs.c" in rel:
+                            file_content = self.wrap_constants_in_ifdef(file_content)
+                        if rel.endswith(".c"):
+                            if rel not in inspection.included_c_files:
+                                inspection.included_c_files.append(rel)
+                        inspection.overlay_files[rel] = file_content.encode("utf-8")
+
+                # Extract preprocessor defines and PM mappings from scratch Makefile
+                makefile_file = scratch_dir / "Makefile"
+                if makefile_file.exists():
+                    mf_text = self._safe_read_text(makefile_file)
+                    # 1. Parse defines from Makefile DEFINE line
+                    define_match = re.search(r"^DEFINE\s*=\s*(.*)$", mf_text, re.MULTILINE)
+                    if define_match:
+                        for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", define_match.group(1)):
+                            name = m.group(1)
+                            val = m.group(2)
+                            if val is not None:
+                                clean_val = re.sub(r'[\'\"\\/]+$', '', val).strip()
+                                clean_def = f"{name}={clean_val}"
+                            else:
+                                clean_def = name
+                            if clean_def and clean_def not in inspection.defines:
+                                inspection.defines.append(clean_def)
+
+                    # 2. Parse pm_to_blib mappings for root or non-standard .pm files
+                    inst_libdir_match = re.search(r"^INST_LIBDIR\s*=\s*(.*)$", mf_text, re.MULTILINE)
+                    inst_libdir_prefix = ""
+                    if inst_libdir_match:
+                        raw_libdir = inst_libdir_match.group(1).strip()
+                        raw_libdir = raw_libdir.replace("$(INST_LIB)", "").strip("/\\ ")
+                        inst_libdir_prefix = raw_libdir
+
+                    pm_mappings = re.findall(
+                        r"'([^'\s]+)'\s+'\$\((INST_LIB|INST_LIBDIR|INST_ARCHLIB)\)/([^'\s]+)'",
+                        mf_text,
+                    )
+                    for src_rel, var_type, dest_sub in pm_mappings:
+                        if var_type == "INST_LIBDIR" and inst_libdir_prefix:
+                            dest_rel = f"{inst_libdir_prefix}/{dest_sub}".strip("/")
+                        else:
+                            dest_rel = dest_sub
+                        if src_rel.endswith(".pm") and dest_rel.endswith(".pm"):
+                            src_path = extract_dir / src_rel
+                            dest_path = extract_dir / "lib" / dest_rel
+                            if src_path.exists() and not dest_path.exists():
+                                target_overlay_rel = f"lib/{dest_rel}"
+                                inspection.add_file_copy(src_rel, target_overlay_rel)
                 else:
-                    clean_def = name
-                if clean_def in ("XSH_MULTIPLICITY=0", "XSH_FORKSAFE=0", "SQLITE_MAX_LENGTH"):
-                    continue
-                if clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
-                    inspection.defines.append(clean_def)
+                    # Fallback search for preprocessor defines from script_text when Makefile wasn't generated
+                    for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", script_text):
+                        name = m.group(1)
+                        val = m.group(2)
+                        if val is not None:
+                            if "$" in val or not re.match(r'^[A-Za-z0-9_."\'-]+$', val):
+                                continue
+                            clean_val = re.sub(r'[\'\"\\/]+$', '', val).strip()
+                            clean_def = f"{name}={clean_val}"
+                        else:
+                            clean_def = name
+                        if clean_def in ("XSH_MULTIPLICITY=0", "XSH_FORKSAFE=0", "SQLITE_MAX_LENGTH"):
+                            continue
+                        if clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
+                            inspection.defines.append(clean_def)
 
         # Fallback check for root .pm matching Foo-Bar -> lib/Foo/Bar.pm
         dist_name = inspection.dist_name
@@ -903,8 +1011,12 @@ class HeuristicsEngine:
                 valid_runtime_deps.append(label)
         valid_runtime_deps.sort()
 
+        all_test_deps = list(test_deps or [])
+        if generator_metadata and generator_metadata.extra_test_deps:
+            all_test_deps.extend(generator_metadata.extra_test_deps)
+
         valid_test_deps: List[str] = []
-        for d in (test_deps or []):
+        for d in all_test_deps:
             if not d:
                 continue
             if d.startswith(("@", ":")):
@@ -1044,6 +1156,20 @@ class HeuristicsEngine:
             test_deps_items = [f'"{d}"' for d in valid_test_deps]
             test_deps_str = (",\n        " + ",\n        ".join(test_deps_items)) if test_deps_items else ""
 
+            test_data_excludes = [
+                '"t/**/*.pm"',
+                '"t/*.pm"',
+            ]
+            for uf in sorted(inspection.unreadable_files):
+                if uf.startswith("t/"):
+                    test_data_excludes.append(f'"{uf}"')
+            if generator_metadata and generator_metadata.test_data_exclude:
+                for exc in generator_metadata.test_data_exclude:
+                    q = f'"{exc}"'
+                    if q not in test_data_excludes:
+                        test_data_excludes.append(q)
+            test_data_excludes_str = ",\n            ".join(test_data_excludes)
+
             test_content = f"""
 perl_library(
     name = "{dist}_test_lib",
@@ -1051,8 +1177,7 @@ perl_library(
     data = glob(
         ["t/**/*"],
         exclude = [
-            "t/**/*.pm",
-            "t/*.pm",
+            {test_data_excludes_str},
         ],
         allow_empty = True,
     ),
@@ -1082,7 +1207,7 @@ test_suite(
         extra_textual_copies: List[str] = []
 
         if inspection.file_copies:
-            for src_path, dest_path in inspection.file_copies:
+            for src_path, dest_path in sorted(inspection.file_copies, key=lambda x: (x[1], x[0])):
                 rule_name = "copy_" + re.sub(r'[^a-zA-Z0-9_]', '_', dest_path)
                 src_val = f'"{src_path}"'
                 copy_file_rules.append(f"""copy_file(
@@ -1185,11 +1310,11 @@ alias(
                 quoted = f'"{exc}"'
                 if quoted not in cc_excludes:
                     cc_excludes.append(quoted)
-        for inc_c in inspection.included_c_files:
+        for inc_c in sorted(inspection.included_c_files):
             quoted = f'"{inc_c}"'
             if quoted not in cc_excludes:
                 cc_excludes.append(quoted)
-        for d_f in inspection.deleted_files:
+        for d_f in sorted(inspection.deleted_files):
             quoted = f'"{d_f}"'
             if quoted not in cc_excludes:
                 cc_excludes.append(quoted)
@@ -1245,10 +1370,10 @@ alias(
 
         extra_textual = [
             f'"{inc_c}"'
-            for inc_c in inspection.included_c_files
+            for inc_c in sorted(inspection.included_c_files)
             if inc_c.endswith(".c")
         ]
-        extra_textual.extend(extra_textual_copies)
+        extra_textual.extend(sorted(extra_textual_copies))
         # Deduplicate
         seen_extra: set[str] = set()
         dedup_extra: List[str] = []
@@ -1337,7 +1462,8 @@ alias(
             search_dirs.append(default_modules)
 
         for m_dir in search_dirs:
-            meta_path = m_dir / dep_name / "metadata.json"
+            dep_dir = m_dir / dep_name
+            meta_path = dep_dir / "metadata.json"
             if meta_path.exists():
                 try:
                     data = json.loads(meta_path.read_text(encoding="utf-8"))
@@ -1346,6 +1472,13 @@ alias(
                         return versions[-1]
                 except Exception:
                     pass
+            if dep_dir.exists():
+                cpan_vers = sorted(
+                    [p.name for p in dep_dir.iterdir() if p.is_dir() and ".cpan" in p.name],
+                    key=lambda v: [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", v)],
+                )
+                if cpan_vers:
+                    return cpan_vers[-1]
 
         return "0.0.0"
 

@@ -34,21 +34,38 @@ bazel_dep(name = "platforms", version = "1.1.0")
 bazel_dep(name = "rules_cc", version = "0.2.28")
 bazel_dep(name = "rules_perl", version = "2.1.0")
 bazel_dep(name = "aspect_rules_py", version = "1.13.0")
+bazel_dep(name = "buildifier_prebuilt", version = "10.1.0")
+
+bazel_dep(name = "aspect_gazelle_prebuilt", version = "0.0.29", dev_dependency = True)
+
 bazel_dep(name = "llvm", version = "0.8.27")
 
 register_toolchains("@llvm//toolchain:all")
-
-bazel_dep(name = "rules_go", version = "0.65.0", dev_dependency = True, repo_name = "io_bazel_rules_go")
-bazel_dep(name = "gazelle", version = "0.54.0", dev_dependency = True, repo_name = "bazel_gazelle")
-bazel_dep(name = "bazel_skylib_gazelle_plugin", version = "1.9.2", dev_dependency = True)
 
 bazel_dep(name = "bazel_lib", version = "3.8.0")
 
 bazel_dep(name = "stardoc", version = "0.8.1", dev_dependency = True)
 bazel_dep(name = "protobuf", version = "33.6", dev_dependency = True)
 
-go_sdk = use_extension("@io_bazel_rules_go//go:extensions.bzl", "go_sdk", dev_dependency = True)
-go_sdk.download(version = "1.27.4")
+interpreters = use_extension("@aspect_rules_py//py/unstable:extension.bzl", "python_interpreters")
+interpreters.toolchain(
+    is_default = True,
+    python_version = "3.11",
+)
+use_repo(interpreters, "python_interpreters")
+
+register_toolchains("@python_interpreters//:all")
+
+uv = use_extension("@aspect_rules_py//uv/unstable:extension.bzl", "uv")
+uv.declare_hub(hub_name = "uv")
+uv.project(
+    name = "rules-cpan-tools",
+    default_build_dependencies = [],
+    hub_name = "uv",
+    lock = "//:uv.lock",
+    pyproject = "//:pyproject.toml",
+)
+use_repo(uv, "uv")
 
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.10.0")
 bazel_dep(name = "perl-compress-raw-zlib", version = "2.226.cpan2")

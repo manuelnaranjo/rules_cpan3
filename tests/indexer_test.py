@@ -4,6 +4,7 @@
 import base64
 import hashlib
 import json
+import os
 import shutil
 import tempfile
 import unittest
@@ -16,14 +17,20 @@ from cpan.tools.indexer.heuristics import (
     HeuristicsEngine,
     compute_output_loc,
     compute_sri_hash,
+    dump_yaml_subset,
+    find_buildifier_binary,
+    find_perl_binary,
     hex_to_sri,
     is_manual_test,
+    parse_yaml_subset,
     sanitize_module_name,
 )
 from cpan.tools.indexer.indexer import (
     CPANIndexer,
     IndexManager,
     IndexResolution,
+    diff_directories,
+    main,
     parse_args,
     regenerate_modules,
     sync_workspace_module_bazel,
@@ -731,9 +738,18 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
             workspace_dir=self.root_path,
         )
 
-        # Regenerate in parallel with jobs=2 including an invalid module to verify resilience
+        # Regenerate in parallel with jobs=2 including an invalid module to verify failure is reported loudly
+        with self.assertRaises(RuntimeError) as cm:
+            indexer.regenerate_modules(
+                modules=["perl-sample-one", "non-existent-module", "perl-sample-two"],
+                bump_build_id=False,
+                jobs=2,
+            )
+        self.assertIn("non-existent-module", str(cm.exception))
+
+        # Regenerate valid modules succeeds
         count = indexer.regenerate_modules(
-            modules=["perl-sample-one", "non-existent-module", "perl-sample-two"],
+            modules=["perl-sample-one", "perl-sample-two"],
             bump_build_id=False,
             jobs=2,
         )
@@ -872,6 +888,224 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
         source_json = json.loads((d / "source.json").read_text(encoding="utf-8"))
         self.assertNotIn("ppport.h", source_json.get("overlay", {}))
         self.assertFalse((d / "overlay" / "ppport.h").exists())
+
+
+class HermeticGeneratorIssue84Test(unittest.TestCase):
+    """Verifies hermetic and reproducible generator enhancements from Issue #84."""
+
+    def setUp(self) -> None:
+        self.temp_dir = tempfile.TemporaryDirectory()
+        self.work_dir = Path(self.temp_dir.name)
+        self.index_dir = self.work_dir / "cpan-index"
+        (self.index_dir / "modules").mkdir(parents=True)
+
+    def tearDown(self) -> None:
+        self.temp_dir.cleanup()
+
+    def test_generator_metadata_schema_validation(self) -> None:
+        """Verifies strict schema validation of generator-metadata.yaml."""
+        # 1. Valid metadata with extra_test_deps
+        valid_dict = {
+            "extra_deps": ["@perl-encode"],
+            "extra_test_deps": ["@perl-test-nowarn"],
+            "is_xs": True,
+            "native_deps": ["@zlib"],
+        }
+        meta = GeneratorMetadata.from_dict(valid_dict)
+        self.assertEqual(meta.extra_deps, ["@perl-encode"])
+        self.assertEqual(meta.extra_test_deps, ["@perl-test-nowarn"])
+        self.assertTrue(meta.is_xs)
+
+        # 2. Unknown field rejection
+        with self.assertRaises(ValueError) as cm:
+            GeneratorMetadata.from_dict({"unknown_setting": True})
+        self.assertIn("unknown_setting", str(cm.exception))
+
+        # 3. Invalid boolean type
+        with self.assertRaises(TypeError):
+            GeneratorMetadata.from_dict({"is_xs": "yes"})
+
+        # 4. Invalid list type
+        with self.assertRaises(TypeError):
+            GeneratorMetadata.from_dict({"native_deps": "not-a-list"})
+
+        # 5. Invalid dict type
+        with self.assertRaises(TypeError):
+            GeneratorMetadata.from_dict({"defines_select": ["not-a-dict"]})
+
+    def test_yaml_subset_roundtrip(self) -> None:
+        """Verifies PyYAML roundtrip parsing and serialization."""
+        data = {
+            "is_xs": True,
+            "native_deps": ["@openssl", "@zlib"],
+            "extra_test_deps": ["@perl-test-deep"],
+        }
+        yaml_str = dump_yaml_subset(data)
+        loaded = parse_yaml_subset(yaml_str)
+        self.assertEqual(loaded, data)
+
+    def test_yaml_subset_keys_sorted(self) -> None:
+        """Verifies dump_yaml_subset enforces alphabetical key ordering for stability."""
+        data = {
+            "zebra": 1,
+            "apple": 2,
+            "mango": 3,
+            "banana": 4,
+        }
+        yaml_str = dump_yaml_subset(data)
+        lines = [line.split(":")[0].strip() for line in yaml_str.strip().splitlines()]
+        self.assertEqual(lines, ["apple", "banana", "mango", "zebra"])
+
+    def test_hermetic_binaries_in_runfiles(self) -> None:
+        """Verifies hermetic perl and buildifier binaries are resolved via runfiles and never fall back to host."""
+        perl_bin = find_perl_binary()
+        self.assertIsNotNone(perl_bin, "Hermetic perl binary should be found in Bazel runfiles")
+        self.assertTrue(perl_bin.is_file())
+        self.assertTrue(os.access(perl_bin, os.X_OK))
+
+        buildifier_bin = find_buildifier_binary()
+        self.assertIsNotNone(buildifier_bin, "Hermetic buildifier binary should be found in Bazel runfiles")
+        self.assertTrue(buildifier_bin.is_file())
+        self.assertTrue(os.access(buildifier_bin, os.X_OK))
+
+        # Test no-fallback: when Runfiles returns None or fails, functions must return None, not host PATH
+        with patch("cpan.tools.indexer.heuristics.Runfiles.Create", return_value=None):
+            self.assertIsNone(find_perl_binary())
+            self.assertIsNone(find_buildifier_binary())
+
+    def test_scratch_dir_configure_raises_without_perl(self) -> None:
+        """Verifies inspect_directory raises RuntimeError when hermetic perl is not in runfiles."""
+        dist_dir = self.work_dir / "No-Perl-Dist-1.00"
+        dist_dir.mkdir(parents=True)
+        lib_dir = dist_dir / "lib"
+        lib_dir.mkdir(parents=True)
+        (lib_dir / "NoPerl.pm").write_text("package NoPerl;\n$VERSION = '1.00';\n1;\n")
+        (dist_dir / "Makefile.PL").write_text("use ExtUtils::MakeMaker;\nWriteMakefile(NAME => 'NoPerl');\n")
+
+        heuristics = HeuristicsEngine()
+        with patch("cpan.tools.indexer.heuristics.find_perl_binary", return_value=None):
+            with self.assertRaises(RuntimeError) as cm:
+                heuristics.inspect_directory(
+                    extract_dir=dist_dir,
+                    dist_name="No-Perl-Dist",
+                    provides=["NoPerl"],
+                )
+            self.assertIn("Hermetic perl binary not found in runfiles", str(cm.exception))
+
+    def test_scratch_dir_configure_isolation(self) -> None:
+        """Verifies inspect_directory performs configure dry-run in scratch without polluting extract_dir."""
+        dist_dir = self.work_dir / "Sample-Dist-1.00"
+        dist_dir.mkdir(parents=True)
+        lib_dir = dist_dir / "lib"
+        lib_dir.mkdir(parents=True)
+        (lib_dir / "Sample.pm").write_text("package Sample;\n$VERSION = '1.00';\n1;\n")
+        # Makefile.PL creates Makefile when run
+        (dist_dir / "Makefile.PL").write_text("""use ExtUtils::MakeMaker;
+WriteMakefile(
+    NAME => 'Sample',
+    VERSION_FROM => 'lib/Sample.pm',
+);
+open my $fh, '>', 'temp_configure.log' or die $!;
+print $fh "configure log\\n";
+close $fh;
+""")
+        heuristics = HeuristicsEngine()
+        inspection = heuristics.inspect_directory(
+            extract_dir=dist_dir,
+            dist_name="Sample-Dist",
+            provides=["Sample"],
+        )
+        self.assertFalse(inspection.is_xs)
+        # Verify Makefile and temp_configure.log were NOT created in extract_dir
+        self.assertFalse((dist_dir / "Makefile").exists())
+        self.assertFalse((dist_dir / "temp_configure.log").exists())
+
+    def test_archive_integrity_verification(self) -> None:
+        """Verifies that archive checksum mismatches raise ValueError."""
+        # Create a sample tarball
+        import io
+        import tarfile
+
+        tar_buf = io.BytesIO()
+        with tarfile.open(fileobj=tar_buf, mode="w:gz") as tar:
+            data = b"package Sample;\n1;\n"
+            ti = tarfile.TarInfo("Sample-1.00/lib/Sample.pm")
+            ti.size = len(data)
+            tar.addfile(ti, io.BytesIO(data))
+
+        tar_path = self.work_dir / "sample.tar.gz"
+        tar_path.write_bytes(tar_buf.getvalue())
+
+        manager = IndexManager(index_dir=self.index_dir)
+        # Attempt create_new_port with invalid sha256
+        with self.assertRaises(ValueError) as cm:
+            manager.create_new_port(
+                dist_name="Sample",
+                upstream_version="1.00",
+                archive_url=tar_path.as_uri(),
+                archive_sha256="deadbeef" * 8,
+                archive_path=tar_path,
+                target_version="1.00.cpan1",
+            )
+        self.assertIn("Integrity check failed", str(cm.exception))
+
+    def test_diff_directories(self) -> None:
+        """Verifies diff_directories computes accurate diffs and detects changes."""
+        dir_a = self.work_dir / "dir_a"
+        dir_b = self.work_dir / "dir_b"
+        dir_a.mkdir()
+        dir_b.mkdir()
+
+        (dir_a / "file1.txt").write_text("line 1\nline 2\n")
+        (dir_b / "file1.txt").write_text("line 1\nline 2\n")
+
+        # Initially identical
+        self.assertEqual(diff_directories(dir_a, dir_b), [])
+
+        # Add file to dir_b
+        (dir_b / "file2.txt").write_text("new file\n")
+        diffs = diff_directories(dir_a, dir_b)
+        self.assertTrue(any("Only in" in d for d in diffs))
+
+        # Modify file1.txt in dir_b
+        (dir_b / "file1.txt").write_text("line 1\nline 2 modified\n")
+        diffs = diff_directories(dir_a, dir_b)
+        self.assertTrue(any("-line 2" in d for d in diffs))
+        self.assertTrue(any("+line 2 modified" in d for d in diffs))
+
+    def test_list_modules_ignores_non_perl_directories(self) -> None:
+        """Verifies list_modules filters out directories that do not start with perl-."""
+        modules_dir = self.index_dir / "modules"
+        (modules_dir / "perl-foo").mkdir()
+        (modules_dir / "perl-bar").mkdir()
+        (modules_dir / "other-tool").mkdir()
+        (modules_dir / "not-a-perl-module").mkdir()
+
+        manager = IndexManager(index_dir=self.index_dir)
+        mods = manager.list_modules()
+        self.assertEqual(mods, ["perl-bar", "perl-foo"])
+
+    def test_regenerate_modules_fails_loudly_on_error(self) -> None:
+        """Verifies regenerate_modules raises RuntimeError on failure instead of silently continuing."""
+        indexer = CPANIndexer(
+            index_dir=self.index_dir,
+            workspace_dir=self.work_dir,
+            bump_build_id=False,
+        )
+        with self.assertRaises(RuntimeError) as cm:
+            regenerate_modules(
+                indexer=indexer,
+                modules=["perl-nonexistent"],
+                bump_build_id=False,
+                jobs=1,
+            )
+        self.assertIn("Failed regenerating 1 module", str(cm.exception))
+
+    def test_main_enforces_build_workspace_directory(self) -> None:
+        """Verifies main() exits with 1 when called outside bazel run."""
+        with patch.dict(os.environ, {}, clear=True):
+            exit_code = main(["--regenerate"])
+            self.assertEqual(exit_code, 1)
 
 
 if __name__ == "__main__":

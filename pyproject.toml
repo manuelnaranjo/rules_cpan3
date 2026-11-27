@@ -1,0 +1,8 @@
+[project]
+name = "rules-cpan-tools"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "bazel-runfiles>=2.5.1",
+    "pyyaml>=6.0.2",
+]
