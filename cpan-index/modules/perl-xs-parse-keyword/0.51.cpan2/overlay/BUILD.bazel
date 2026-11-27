@@ -34,9 +34,6 @@ cpan_xs(
             "**/tests/**",
         ],
     ),
-    defines = [
-        "DEBUGGING=-g",
-    ],
     output_loc = "auto/XS/Parse/Keyword/Keyword",
     textual_hdrs = glob(
         [

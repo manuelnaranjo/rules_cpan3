@@ -7,6 +7,12 @@ load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
+    name = "copy_const_c_inc",
+    src = "fallback/const-c.inc",
+    out = "const-c.inc",
+)
+
+copy_file(
     name = "copy_const_xs_inc",
     src = "fallback/const-xs.inc",
     out = "const-xs.inc",
@@ -47,6 +53,7 @@ cpan_xs(
     ),
     output_loc = "auto/Type/Tiny/XS/XS",
     textual_hdrs = [
+        ":copy_const_c_inc",
         ":copy_const_xs_inc",
     ] + glob(
         [

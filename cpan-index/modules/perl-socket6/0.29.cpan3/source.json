@@ -3,7 +3,7 @@
     "integrity": "sha256-RokV+joE3PZXT8lX7/SVkV4kVpQ0lwyR7o5OFFn8kRQ=",
     "strip_prefix": "Socket6-0.29",
     "overlay": {
-        "config.h": "sha256-0YytIOFfRBBj9vBF3bZ821yZipv9YbKz+ijjuCuQU1Q=",
-        "BUILD.bazel": "sha256-QOMS+RnZMU0d8G5y0wjy9ckLVCy9qBMBCFwjWVyJfm4="
+        "BUILD.bazel": "sha256-QOMS+RnZMU0d8G5y0wjy9ckLVCy9qBMBCFwjWVyJfm4=",
+        "config.h": "sha256-0YytIOFfRBBj9vBF3bZ821yZipv9YbKz+ijjuCuQU1Q="
     }
 }

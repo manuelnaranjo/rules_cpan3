@@ -7,6 +7,12 @@ load("@rules_perl//perl:defs.bzl", "perl_library")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
+    name = "copy_Bignum_pm",
+    src = "lib/Crypt/OpenSSL/Bignum.pm",
+    out = "Bignum.pm",
+)
+
+copy_file(
     name = "copy_lib_Crypt_OpenSSL_Bignum_pm",
     src = "Bignum.pm",
     out = "lib/Crypt/OpenSSL/Bignum.pm",
@@ -16,12 +22,6 @@ copy_file(
     name = "copy_lib_Crypt_OpenSSL_Bignum_CTX_pm",
     src = "Bignum/CTX.pm",
     out = "lib/Crypt/OpenSSL/Bignum/CTX.pm",
-)
-
-copy_file(
-    name = "copy_Bignum_pm",
-    src = "lib/Crypt/OpenSSL/Bignum.pm",
-    out = "Bignum.pm",
 )
 
 cpan_xs(

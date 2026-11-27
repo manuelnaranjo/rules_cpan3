@@ -3,6 +3,6 @@
     "integrity": "sha256-PhshpmEOImkqlu/yosYY+zF+o4toZQnMyL/oLWQm01w=",
     "strip_prefix": "Search-Brick-RAM-Query-0.06",
     "overlay": {
-        "BUILD.bazel": "sha256-lU6biTdSE3YgCnzDt7+Cazx3UPIJdn39Z/ueobVs5bI="
+        "BUILD.bazel": "sha256-hvbNr1ewSMehFyn5XXiabUY+CGeUW30019ftiWCUudo="
     }
 }

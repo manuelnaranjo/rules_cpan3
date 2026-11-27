@@ -10,10 +10,17 @@ copy_file(
     out = "lib/Authen/NTLM.pm",
 )
 
+copy_file(
+    name = "copy_lib_NTLM_pm",
+    src = "NTLM.pm",
+    out = "lib/NTLM.pm",
+)
+
 perl_library(
     name = "NTLM",
     srcs = [
         ":copy_lib_Authen_NTLM_pm",
+        ":copy_lib_NTLM_pm",
     ] + glob(
         [
             "lib/**/*.pm",

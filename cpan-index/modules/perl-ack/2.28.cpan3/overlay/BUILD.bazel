@@ -11,12 +11,6 @@ copy_file(
 )
 
 copy_file(
-    name = "copy_lib_App_Ack_Filter_Collection_pm",
-    src = "Collection.pm",
-    out = "lib/App/Ack/Filter/Collection.pm",
-)
-
-copy_file(
     name = "copy_lib_App_Ack_ConfigDefault_pm",
     src = "ConfigDefault.pm",
     out = "lib/App/Ack/ConfigDefault.pm",
@@ -35,6 +29,18 @@ copy_file(
 )
 
 copy_file(
+    name = "copy_lib_App_Ack_Filter_pm",
+    src = "Filter.pm",
+    out = "lib/App/Ack/Filter.pm",
+)
+
+copy_file(
+    name = "copy_lib_App_Ack_Filter_Collection_pm",
+    src = "Collection.pm",
+    out = "lib/App/Ack/Filter/Collection.pm",
+)
+
+copy_file(
     name = "copy_lib_App_Ack_Filter_Default_pm",
     src = "Default.pm",
     out = "lib/App/Ack/Filter/Default.pm",
@@ -50,12 +56,6 @@ copy_file(
     name = "copy_lib_App_Ack_Filter_ExtensionGroup_pm",
     src = "ExtensionGroup.pm",
     out = "lib/App/Ack/Filter/ExtensionGroup.pm",
-)
-
-copy_file(
-    name = "copy_lib_App_Ack_Filter_pm",
-    src = "Filter.pm",
-    out = "lib/App/Ack/Filter.pm",
 )
 
 copy_file(

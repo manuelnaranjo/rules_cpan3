@@ -3,7 +3,7 @@
     "integrity": "sha256-L4rMlEKzhm7H3GPNRJ/Gk64+kw1dPl6UMPu285O9uxc=",
     "strip_prefix": "Net-LibIDN-0.12",
     "overlay": {
-        "__test1.c": "sha256-rShYE5OJD6a/LUZUzIgWP8n7Gek+RRHMCGr15iil12o=",
-        "BUILD.bazel": "sha256-OR7aiF8sB7wrDMJldFKqTuZSnbR/iGQxmzsjXNyTf08="
+        "BUILD.bazel": "sha256-OR7aiF8sB7wrDMJldFKqTuZSnbR/iGQxmzsjXNyTf08=",
+        "__test1.c": "sha256-rShYE5OJD6a/LUZUzIgWP8n7Gek+RRHMCGr15iil12o="
     }
 }

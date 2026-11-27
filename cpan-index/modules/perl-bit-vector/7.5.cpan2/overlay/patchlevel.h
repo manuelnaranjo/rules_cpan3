@@ -1,2 +1,2 @@
-#define PATCHLEVEL 40
-#define SUBVERSION 1
+#define PATCHLEVEL 44
+#define SUBVERSION 0

@@ -150,7 +150,10 @@ perl_library(
         "t",
         "t/lib",
     ],
-    deps = [":Crypt-OpenSSL-RSA"],
+    deps = [
+        ":Crypt-OpenSSL-RSA",
+        "@perl-crypt-openssl-guess",
+    ],
 )
 
 perl_test(

@@ -3,8 +3,8 @@
     "integrity": "sha256-DpSb2aKp3w+CmXEDD+kWnLr2zseLkvryL1R/9sYVXJs=",
     "strip_prefix": "Authen-PAM-0.16",
     "overlay": {
+        "BUILD.bazel": "sha256-32tlw7VfuDNg7/dvVIgkpEKcF3rzQnFQ45g7ZMnr2og=",
         "PAM_config.h": "sha256-Ib9y2gxYvWLG35QTKLdRjgU2nejpP54t0VjOOXyh13A=",
-        "lib/Authen/PAM.pm": "sha256-2PyVLZfTxmT309Pq6daRveK+x78XkDWFRvc6b2Ts/38=",
-        "BUILD.bazel": "sha256-32tlw7VfuDNg7/dvVIgkpEKcF3rzQnFQ45g7ZMnr2og="
+        "lib/Authen/PAM.pm": "sha256-2PyVLZfTxmT309Pq6daRveK+x78XkDWFRvc6b2Ts/38="
     }
 }

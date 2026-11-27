@@ -629,3 +629,383 @@ newCONSTSUB(stash, "TCOOFF", newSViv(TCOOFF));
 #else
 newCONSTSUB(stash, "TCOOFF", newSV(0));
 #endif
+#ifdef TCOON
+newCONSTSUB(stash, "TCOON", newSViv(TCOON));
+#else
+newCONSTSUB(stash, "TCOON", newSV(0));
+#endif
+#ifdef TCSADRAIN
+newCONSTSUB(stash, "TCSADRAIN", newSViv(TCSADRAIN));
+#else
+newCONSTSUB(stash, "TCSADRAIN", newSV(0));
+#endif
+#ifdef TCSAFLUSH
+newCONSTSUB(stash, "TCSAFLUSH", newSViv(TCSAFLUSH));
+#else
+newCONSTSUB(stash, "TCSAFLUSH", newSV(0));
+#endif
+#ifdef TCSANOW
+newCONSTSUB(stash, "TCSANOW", newSViv(TCSANOW));
+#else
+newCONSTSUB(stash, "TCSANOW", newSV(0));
+#endif
+#ifdef TCSBRK
+newCONSTSUB(stash, "TCSBRK", newSViv(TCSBRK));
+#else
+newCONSTSUB(stash, "TCSBRK", newSV(0));
+#endif
+#ifdef TCSETA
+newCONSTSUB(stash, "TCSETA", newSViv(TCSETA));
+#else
+newCONSTSUB(stash, "TCSETA", newSV(0));
+#endif
+#ifdef TCSETAF
+newCONSTSUB(stash, "TCSETAF", newSViv(TCSETAF));
+#else
+newCONSTSUB(stash, "TCSETAF", newSV(0));
+#endif
+#ifdef TCSETAW
+newCONSTSUB(stash, "TCSETAW", newSViv(TCSETAW));
+#else
+newCONSTSUB(stash, "TCSETAW", newSV(0));
+#endif
+newCONSTSUB(stash, "TCSETCTTY", newSV(0));
+#ifdef TCSETS
+newCONSTSUB(stash, "TCSETS", newSViv(TCSETS));
+#else
+newCONSTSUB(stash, "TCSETS", newSV(0));
+#endif
+#ifdef TCSETSF
+newCONSTSUB(stash, "TCSETSF", newSViv(TCSETSF));
+#else
+newCONSTSUB(stash, "TCSETSF", newSV(0));
+#endif
+#ifdef TCSETSW
+newCONSTSUB(stash, "TCSETSW", newSViv(TCSETSW));
+#else
+newCONSTSUB(stash, "TCSETSW", newSV(0));
+#endif
+#ifdef TCXONC
+newCONSTSUB(stash, "TCXONC", newSViv(TCXONC));
+#else
+newCONSTSUB(stash, "TCXONC", newSV(0));
+#endif
+newCONSTSUB(stash, "TERM_D40", newSV(0));
+newCONSTSUB(stash, "TERM_D42", newSV(0));
+newCONSTSUB(stash, "TERM_H45", newSV(0));
+newCONSTSUB(stash, "TERM_NONE", newSV(0));
+newCONSTSUB(stash, "TERM_TEC", newSV(0));
+newCONSTSUB(stash, "TERM_TEX", newSV(0));
+newCONSTSUB(stash, "TERM_V10", newSV(0));
+newCONSTSUB(stash, "TERM_V61", newSV(0));
+#ifdef TIOCCBRK
+newCONSTSUB(stash, "TIOCCBRK", newSViv(TIOCCBRK));
+#else
+newCONSTSUB(stash, "TIOCCBRK", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCCDTR", newSV(0));
+#ifdef TIOCCONS
+newCONSTSUB(stash, "TIOCCONS", newSViv(TIOCCONS));
+#else
+newCONSTSUB(stash, "TIOCCONS", newSV(0));
+#endif
+#ifdef TIOCEXCL
+newCONSTSUB(stash, "TIOCEXCL", newSViv(TIOCEXCL));
+#else
+newCONSTSUB(stash, "TIOCEXCL", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCFLUSH", newSV(0));
+newCONSTSUB(stash, "TIOCGETC", newSV(0));
+#ifdef TIOCGETD
+newCONSTSUB(stash, "TIOCGETD", newSViv(TIOCGETD));
+#else
+newCONSTSUB(stash, "TIOCGETD", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCGETP", newSV(0));
+newCONSTSUB(stash, "TIOCGLTC", newSV(0));
+#ifdef TIOCGPGRP
+newCONSTSUB(stash, "TIOCGPGRP", newSViv(TIOCGPGRP));
+#else
+newCONSTSUB(stash, "TIOCGPGRP", newSV(0));
+#endif
+#ifdef TIOCGSID
+newCONSTSUB(stash, "TIOCGSID", newSViv(TIOCGSID));
+#else
+newCONSTSUB(stash, "TIOCGSID", newSV(0));
+#endif
+#ifdef TIOCGSOFTCAR
+newCONSTSUB(stash, "TIOCGSOFTCAR", newSViv(TIOCGSOFTCAR));
+#else
+newCONSTSUB(stash, "TIOCGSOFTCAR", newSV(0));
+#endif
+#ifdef TIOCGWINSZ
+newCONSTSUB(stash, "TIOCGWINSZ", newSViv(TIOCGWINSZ));
+#else
+newCONSTSUB(stash, "TIOCGWINSZ", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCHPCL", newSV(0));
+newCONSTSUB(stash, "TIOCKBOF", newSV(0));
+newCONSTSUB(stash, "TIOCKBON", newSV(0));
+newCONSTSUB(stash, "TIOCLBIC", newSV(0));
+newCONSTSUB(stash, "TIOCLBIS", newSV(0));
+newCONSTSUB(stash, "TIOCLGET", newSV(0));
+newCONSTSUB(stash, "TIOCLSET", newSV(0));
+#ifdef TIOCMBIC
+newCONSTSUB(stash, "TIOCMBIC", newSViv(TIOCMBIC));
+#else
+newCONSTSUB(stash, "TIOCMBIC", newSV(0));
+#endif
+#ifdef TIOCMBIS
+newCONSTSUB(stash, "TIOCMBIS", newSViv(TIOCMBIS));
+#else
+newCONSTSUB(stash, "TIOCMBIS", newSV(0));
+#endif
+#ifdef TIOCMGET
+newCONSTSUB(stash, "TIOCMGET", newSViv(TIOCMGET));
+#else
+newCONSTSUB(stash, "TIOCMGET", newSV(0));
+#endif
+#ifdef TIOCMSET
+newCONSTSUB(stash, "TIOCMSET", newSViv(TIOCMSET));
+#else
+newCONSTSUB(stash, "TIOCMSET", newSV(0));
+#endif
+#ifdef TIOCM_CAR
+newCONSTSUB(stash, "TIOCM_CAR", newSViv(TIOCM_CAR));
+#else
+newCONSTSUB(stash, "TIOCM_CAR", newSV(0));
+#endif
+#ifdef TIOCM_CD
+newCONSTSUB(stash, "TIOCM_CD", newSViv(TIOCM_CD));
+#else
+newCONSTSUB(stash, "TIOCM_CD", newSV(0));
+#endif
+#ifdef TIOCM_CTS
+newCONSTSUB(stash, "TIOCM_CTS", newSViv(TIOCM_CTS));
+#else
+newCONSTSUB(stash, "TIOCM_CTS", newSV(0));
+#endif
+#ifdef TIOCM_DSR
+newCONSTSUB(stash, "TIOCM_DSR", newSViv(TIOCM_DSR));
+#else
+newCONSTSUB(stash, "TIOCM_DSR", newSV(0));
+#endif
+#ifdef TIOCM_DTR
+newCONSTSUB(stash, "TIOCM_DTR", newSViv(TIOCM_DTR));
+#else
+newCONSTSUB(stash, "TIOCM_DTR", newSV(0));
+#endif
+#ifdef TIOCM_LE
+newCONSTSUB(stash, "TIOCM_LE", newSViv(TIOCM_LE));
+#else
+newCONSTSUB(stash, "TIOCM_LE", newSV(0));
+#endif
+#ifdef TIOCM_RI
+newCONSTSUB(stash, "TIOCM_RI", newSViv(TIOCM_RI));
+#else
+newCONSTSUB(stash, "TIOCM_RI", newSV(0));
+#endif
+#ifdef TIOCM_RNG
+newCONSTSUB(stash, "TIOCM_RNG", newSViv(TIOCM_RNG));
+#else
+newCONSTSUB(stash, "TIOCM_RNG", newSV(0));
+#endif
+#ifdef TIOCM_RTS
+newCONSTSUB(stash, "TIOCM_RTS", newSViv(TIOCM_RTS));
+#else
+newCONSTSUB(stash, "TIOCM_RTS", newSV(0));
+#endif
+#ifdef TIOCM_SR
+newCONSTSUB(stash, "TIOCM_SR", newSViv(TIOCM_SR));
+#else
+newCONSTSUB(stash, "TIOCM_SR", newSV(0));
+#endif
+#ifdef TIOCM_ST
+newCONSTSUB(stash, "TIOCM_ST", newSViv(TIOCM_ST));
+#else
+newCONSTSUB(stash, "TIOCM_ST", newSV(0));
+#endif
+#ifdef TIOCNOTTY
+newCONSTSUB(stash, "TIOCNOTTY", newSViv(TIOCNOTTY));
+#else
+newCONSTSUB(stash, "TIOCNOTTY", newSV(0));
+#endif
+#ifdef TIOCNXCL
+newCONSTSUB(stash, "TIOCNXCL", newSViv(TIOCNXCL));
+#else
+newCONSTSUB(stash, "TIOCNXCL", newSV(0));
+#endif
+#ifdef TIOCOUTQ
+newCONSTSUB(stash, "TIOCOUTQ", newSViv(TIOCOUTQ));
+#else
+newCONSTSUB(stash, "TIOCOUTQ", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCREMOTE", newSV(0));
+#ifdef TIOCSBRK
+newCONSTSUB(stash, "TIOCSBRK", newSViv(TIOCSBRK));
+#else
+newCONSTSUB(stash, "TIOCSBRK", newSV(0));
+#endif
+#ifdef TIOCSCTTY
+newCONSTSUB(stash, "TIOCSCTTY", newSViv(TIOCSCTTY));
+#else
+newCONSTSUB(stash, "TIOCSCTTY", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCSDTR", newSV(0));
+newCONSTSUB(stash, "TIOCSETC", newSV(0));
+#ifdef TIOCSETD
+newCONSTSUB(stash, "TIOCSETD", newSViv(TIOCSETD));
+#else
+newCONSTSUB(stash, "TIOCSETD", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCSETN", newSV(0));
+newCONSTSUB(stash, "TIOCSETP", newSV(0));
+newCONSTSUB(stash, "TIOCSIGNAL", newSV(0));
+newCONSTSUB(stash, "TIOCSLTC", newSV(0));
+#ifdef TIOCSPGRP
+newCONSTSUB(stash, "TIOCSPGRP", newSViv(TIOCSPGRP));
+#else
+newCONSTSUB(stash, "TIOCSPGRP", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCSSID", newSV(0));
+#ifdef TIOCSSOFTCAR
+newCONSTSUB(stash, "TIOCSSOFTCAR", newSViv(TIOCSSOFTCAR));
+#else
+newCONSTSUB(stash, "TIOCSSOFTCAR", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCSTART", newSV(0));
+#ifdef TIOCSTI
+newCONSTSUB(stash, "TIOCSTI", newSViv(TIOCSTI));
+#else
+newCONSTSUB(stash, "TIOCSTI", newSV(0));
+#endif
+newCONSTSUB(stash, "TIOCSTOP", newSV(0));
+#ifdef TIOCSWINSZ
+newCONSTSUB(stash, "TIOCSWINSZ", newSViv(TIOCSWINSZ));
+#else
+newCONSTSUB(stash, "TIOCSWINSZ", newSV(0));
+#endif
+newCONSTSUB(stash, "TM_ANL", newSV(0));
+newCONSTSUB(stash, "TM_CECHO", newSV(0));
+newCONSTSUB(stash, "TM_CINVIS", newSV(0));
+newCONSTSUB(stash, "TM_LCF", newSV(0));
+newCONSTSUB(stash, "TM_NONE", newSV(0));
+newCONSTSUB(stash, "TM_SET", newSV(0));
+newCONSTSUB(stash, "TM_SNL", newSV(0));
+#ifdef TOSTOP
+newCONSTSUB(stash, "TOSTOP", newSViv(TOSTOP));
+#else
+newCONSTSUB(stash, "TOSTOP", newSV(0));
+#endif
+newCONSTSUB(stash, "VCEOF", newSV(0));
+newCONSTSUB(stash, "VCEOL", newSV(0));
+#ifdef VDISCARD
+newCONSTSUB(stash, "VDISCARD", newSViv(VDISCARD));
+#else
+newCONSTSUB(stash, "VDISCARD", newSV(0));
+#endif
+newCONSTSUB(stash, "VDSUSP", newSV(0));
+#ifdef VEOF
+newCONSTSUB(stash, "VEOF", newSViv(VEOF));
+#else
+newCONSTSUB(stash, "VEOF", newSV(0));
+#endif
+#ifdef VEOL
+newCONSTSUB(stash, "VEOL", newSViv(VEOL));
+#else
+newCONSTSUB(stash, "VEOL", newSV(0));
+#endif
+#ifdef VEOL2
+newCONSTSUB(stash, "VEOL2", newSViv(VEOL2));
+#else
+newCONSTSUB(stash, "VEOL2", newSV(0));
+#endif
+#ifdef VERASE
+newCONSTSUB(stash, "VERASE", newSViv(VERASE));
+#else
+newCONSTSUB(stash, "VERASE", newSV(0));
+#endif
+#ifdef VINTR
+newCONSTSUB(stash, "VINTR", newSViv(VINTR));
+#else
+newCONSTSUB(stash, "VINTR", newSV(0));
+#endif
+#ifdef VKILL
+newCONSTSUB(stash, "VKILL", newSViv(VKILL));
+#else
+newCONSTSUB(stash, "VKILL", newSV(0));
+#endif
+#ifdef VLNEXT
+newCONSTSUB(stash, "VLNEXT", newSViv(VLNEXT));
+#else
+newCONSTSUB(stash, "VLNEXT", newSV(0));
+#endif
+#ifdef VMIN
+newCONSTSUB(stash, "VMIN", newSViv(VMIN));
+#else
+newCONSTSUB(stash, "VMIN", newSV(0));
+#endif
+#ifdef VQUIT
+newCONSTSUB(stash, "VQUIT", newSViv(VQUIT));
+#else
+newCONSTSUB(stash, "VQUIT", newSV(0));
+#endif
+#ifdef VREPRINT
+newCONSTSUB(stash, "VREPRINT", newSViv(VREPRINT));
+#else
+newCONSTSUB(stash, "VREPRINT", newSV(0));
+#endif
+#ifdef VSTART
+newCONSTSUB(stash, "VSTART", newSViv(VSTART));
+#else
+newCONSTSUB(stash, "VSTART", newSV(0));
+#endif
+#ifdef VSTOP
+newCONSTSUB(stash, "VSTOP", newSViv(VSTOP));
+#else
+newCONSTSUB(stash, "VSTOP", newSV(0));
+#endif
+#ifdef VSUSP
+newCONSTSUB(stash, "VSUSP", newSViv(VSUSP));
+#else
+newCONSTSUB(stash, "VSUSP", newSV(0));
+#endif
+newCONSTSUB(stash, "VSWTCH", newSV(0));
+#ifdef VT0
+newCONSTSUB(stash, "VT0", newSViv(VT0));
+#else
+newCONSTSUB(stash, "VT0", newSV(0));
+#endif
+#ifdef VT1
+newCONSTSUB(stash, "VT1", newSViv(VT1));
+#else
+newCONSTSUB(stash, "VT1", newSV(0));
+#endif
+#ifdef VTDLY
+newCONSTSUB(stash, "VTDLY", newSViv(VTDLY));
+#else
+newCONSTSUB(stash, "VTDLY", newSV(0));
+#endif
+#ifdef VTIME
+newCONSTSUB(stash, "VTIME", newSViv(VTIME));
+#else
+newCONSTSUB(stash, "VTIME", newSV(0));
+#endif
+#ifdef VWERASE
+newCONSTSUB(stash, "VWERASE", newSViv(VWERASE));
+#else
+newCONSTSUB(stash, "VWERASE", newSV(0));
+#endif
+newCONSTSUB(stash, "WRAP", newSV(0));
+#ifdef XCASE
+newCONSTSUB(stash, "XCASE", newSViv(XCASE));
+#else
+newCONSTSUB(stash, "XCASE", newSV(0));
+#endif
+newCONSTSUB(stash, "XCLUDE", newSV(0));
+newCONSTSUB(stash, "XMT1EN", newSV(0));
+#ifdef XTABS
+newCONSTSUB(stash, "XTABS", newSViv(XTABS));
+#else
+newCONSTSUB(stash, "XTABS", newSV(0));
+#endif

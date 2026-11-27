@@ -3,14 +3,14 @@
     "integrity": "sha256-xf7lIH5qNA5Zz6Z98hFpgnH3tMiF90DlK7XCw6EN9Vw=",
     "strip_prefix": "DBD-mysql-5.014",
     "overlay": {
-        "Driver_xst.h": "sha256-1QmBawuetSKm17iThmkyu8FVGK1107g8GjmiBXjlmio=",
-        "dbixs_rev.h": "sha256-bpE+1Ay5Yhn4Dx+fNK3OJtVavSPjhZSlj3dLF3sLd9w=",
+        "BUILD.bazel": "sha256-oHDxbHi169Jxdc+jcmrfbZC6FP4CD0rUFUWXy+C4UuU=",
         "DBIXS.h": "sha256-zuMBeOQTNHgwyxMXPXV36NcuaJ9EB8I/AIcnjgCliaM=",
-        "mysql.xsi": "sha256-3h99W7glwr+bauCH7g8VgYQjGhbDJ0VMw0pPFdvxOy4=",
-        "dbivport.h": "sha256-nlP39Bqq8bVA4nhHVu9vFvYbY98NmVZIOt7TxJtuD0g=",
-        "dbipport.h": "sha256-9v9CmP7WFxlj/voMFjra1a3W65OSL+T9hAZW06pz96E=",
+        "Driver_xst.h": "sha256-1QmBawuetSKm17iThmkyu8FVGK1107g8GjmiBXjlmio=",
         "dbd_xsh.h": "sha256-5nyUc5m9UyxfMb2RH8fzV9RVLt0hXrpWDseg6Q0FrUs=",
         "dbi_sql.h": "sha256-KpzCQbukAz1bVxEcUm6NCnqLuUqfuDwonW+oJpBUP3c=",
-        "BUILD.bazel": "sha256-oHDxbHi169Jxdc+jcmrfbZC6FP4CD0rUFUWXy+C4UuU="
+        "dbipport.h": "sha256-9v9CmP7WFxlj/voMFjra1a3W65OSL+T9hAZW06pz96E=",
+        "dbivport.h": "sha256-nlP39Bqq8bVA4nhHVu9vFvYbY98NmVZIOt7TxJtuD0g=",
+        "dbixs_rev.h": "sha256-bpE+1Ay5Yhn4Dx+fNK3OJtVavSPjhZSlj3dLF3sLd9w=",
+        "mysql.xsi": "sha256-3h99W7glwr+bauCH7g8VgYQjGhbDJ0VMw0pPFdvxOy4="
     }
 }
