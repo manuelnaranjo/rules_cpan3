@@ -18,16 +18,27 @@ py_library(
         "//cpan/resources/dbi:dbivport.h",
         "//cpan/resources/dbi:dbixs_rev.h",
         "//cpan/resources/ppport:ppport.h",
+        "@buildifier_prebuilt//buildifier",
+        "@rules_perl//perl:current_exec_toolchain",
     ],
     visibility = ["//visibility:public"],
+    deps = [
+        "@uv//bazel_runfiles",
+        "@uv//pyyaml",
+    ],
 )
 
 py_binary(
     name = "indexer",
     srcs = ["indexer.py"],
     main = "indexer.py",
+    venv = "rules-cpan-tools",
     visibility = ["//visibility:public"],
-    deps = [":indexer_lib"],
+    deps = [
+        ":indexer_lib",
+        "@uv//bazel_runfiles",
+        "@uv//pyyaml",
+    ],
 )
 
 alias(

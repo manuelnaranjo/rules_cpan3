@@ -37,7 +37,8 @@ BAZEL_UUID_GEN := uuidgen 2>/dev/null || cat /proc/sys/kernel/random/uuid 2>/dev
 .PHONY: all ci build test pre-commit lint format clean help \
 	build-root build-smoke build-pakket build-deps-txt \
 	test-root test-smoke test-pakket test-deps-txt \
-	clean-root clean-smoke clean-pakket clean-deps-txt
+	clean-root clean-smoke clean-pakket clean-deps-txt \
+	check-cpan-index update-cpan-index
 
 ## ----------------------------------------------------------------------
 ## Top-Level Targets
@@ -75,6 +76,12 @@ test-root:
 
 clean-root:
 	$(call run_bazel,.,clean,,)
+
+check-cpan-index:
+	$(call run_bazel,.,run,$(ROOT_FLAGS),//:cpan_indexer -- --check --all --lockfile e2e/deps_txt/cpan.lock.json --lockfile e2e/pakket/cpan.lock.json --lockfile tests/cpan.lock.json)
+
+update-cpan-index:
+	$(call run_bazel,.,run,$(ROOT_FLAGS),//:cpan_indexer -- --regenerate --all --lockfile e2e/deps_txt/cpan.lock.json --lockfile e2e/pakket/cpan.lock.json --lockfile tests/cpan.lock.json)
 
 ## ----------------------------------------------------------------------
 ## End-to-End: Smoke Test Workspace (e2e/smoke)
@@ -133,6 +140,8 @@ help:
 	@echo "  test             Run all tests across all workspaces"
 	@echo "  pre-commit       Run pre-commit hooks (buildifier, lint, formatting)"
 	@echo "  clean            Clean build outputs across all workspaces"
+	@echo "  check-cpan-index Verify that cpan-index is up to date and idempotent"
+	@echo "  update-cpan-index Regenerate all cpan-index ports with explicit lockfiles"
 	@echo ""
 	@echo "Workspace-specific build targets:"
 	@echo "  build-root       Build root workspace (//...)"

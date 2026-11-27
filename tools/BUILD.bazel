@@ -1,4 +1,4 @@
-load("@bazel_gazelle//:def.bzl", "gazelle", "gazelle_binary")
+load("@aspect_gazelle_prebuilt//:def.bzl", "aspect_gazelle")
 load("@bazelrc-preset.bzl", "bazelrc_preset")
 
 bazelrc_preset(
@@ -7,15 +7,18 @@ bazelrc_preset(
 )
 
 # gazelle:map_kind bzl_library bzl_library @bazel_lib//:bzl_library.bzl
-gazelle_binary(
-    name = "gazelle_bin",
-    languages = ["@bazel_skylib_gazelle_plugin//bzl"],
-)
+# gazelle:map_kind py_binary py_binary @aspect_rules_py//py:defs.bzl
+# gazelle:map_kind py_library py_library @aspect_rules_py//py:defs.bzl
+# gazelle:map_kind py_test py_test @aspect_rules_py//py:defs.bzl
 
-gazelle(
+aspect_gazelle(
     name = "gazelle",
-    gazelle = "gazelle_bin",
+    languages = [
+        "starlark",
+        "python",
+    ],
     visibility = ["//visibility:public"],
+    with_check = True,
 )
 
 alias(

@@ -11,6 +11,8 @@ from __future__ import annotations
 import argparse
 import base64
 import concurrent.futures
+import difflib
+import hashlib
 import json
 import logging
 import os
@@ -36,6 +38,8 @@ try:
         HeuristicsEngine,
         compute_output_loc,
         compute_sri_hash,
+        find_buildifier_binary,
+        find_perl_binary,
         hex_to_sri,
         is_manual_test,
         sanitize_module_name,
@@ -48,6 +52,8 @@ except ImportError:
             HeuristicsEngine,
             compute_output_loc,
             compute_sri_hash,
+            find_buildifier_binary,
+            find_perl_binary,
             hex_to_sri,
             is_manual_test,
             sanitize_module_name,
@@ -61,6 +67,8 @@ except ImportError:
             HeuristicsEngine,
             compute_output_loc,
             compute_sri_hash,
+            find_buildifier_binary,
+            find_perl_binary,
             hex_to_sri,
             is_manual_test,
             sanitize_module_name,
@@ -84,6 +92,12 @@ def normalize_overlay_text(rel_name: str, data: bytes) -> bytes:
             text = data.decode("latin-1")
         except Exception:
             return data
+    # Strip non-deterministic timestamps in generated comments, e.g. "# created Fri Nov 27 21:36:35 2026"
+    text = re.sub(
+        r'(?m)^(#\s*(?:created|generated|automatically generated)\b[^\n]*)\b[A-Z][a-z]{2}\s+[A-Z][a-z]{2}\s+\d+\s+\d{2}:\d{2}:\d{2}\s+\d{4}',
+        r'\1<TIMESTAMP>',
+        text,
+    )
     lines = [line.rstrip() for line in text.splitlines()]
     normalized = "\n".join(lines).strip()
     if normalized:
@@ -120,11 +134,11 @@ def deduplicate_module_bazel_deps(content: str) -> str:
 
 
 def format_with_buildifier(file_path: Path) -> None:
-    """Formats a Bazel file with buildifier if available on PATH."""
-    buildifier_bin = shutil.which("buildifier")
+    """Formats a Bazel file with buildifier if available in runfiles or on PATH in pre-commit mode."""
+    buildifier_bin = find_buildifier_binary()
     if buildifier_bin and file_path.exists():
         try:
-            subprocess.run([buildifier_bin, str(file_path)], check=True, capture_output=True)
+            subprocess.run([str(buildifier_bin), "-mode=fix", "-lint=fix", str(file_path)], check=True, capture_output=True)
         except Exception as e:
             logger.debug("Buildifier failed on %s: %s", file_path, e)
 
@@ -144,6 +158,8 @@ class IndexResolution:
 
 class IndexManager:
     """Manages queries, port refactoring, and indexing in cpan-index."""
+
+    _meta_lock = threading.Lock()
 
     def __init__(self, index_dir: Path) -> None:
         self.index_dir = index_dir.resolve()
@@ -167,7 +183,19 @@ class IndexManager:
         except Exception as e:
             logger.warning("Failed loading lockfile %s: %s", lockfile_path, e)
 
+    def list_modules(self) -> List[str]:
+        """Lists all perl-* BCR module directory names present in cpan-index."""
+        if not self.modules_dir.exists():
+            return []
+        return sorted(
+            entry.name
+            for entry in self.modules_dir.iterdir()
+            if entry.is_dir() and entry.name.startswith("perl-")
+        )
+
     def get_module_dir(self, module_name: str) -> Path:
+        if not module_name.startswith("perl-"):
+            module_name = sanitize_module_name(module_name)
         return self.modules_dir / module_name
 
     def get_generator_metadata(self, module_name: str) -> Optional[GeneratorMetadata]:
@@ -178,6 +206,8 @@ class IndexManager:
 
     def list_existing_versions(self, module_name: str) -> List[Tuple[str, int, str]]:
         """Returns list of (upstream_version, build_id, full_version_str) sorted."""
+        if not module_name.startswith("perl-"):
+            module_name = sanitize_module_name(module_name)
         module_dir = self.get_module_dir(module_name)
         if not module_dir.exists():
             return []
@@ -307,7 +337,6 @@ class IndexManager:
 
         # 2. Clone overlay/ directory
         src_overlay = src_dir / "overlay"
-        overlay_sris: Dict[str, str] = {}
         if src_overlay.exists():
             for root, _, files in os.walk(src_overlay):
                 for f in files:
@@ -317,8 +346,16 @@ class IndexManager:
                     target_file.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy2(p, target_file)
 
-                    # Compute SRI hash
-                    overlay_sris[rel_p.as_posix()] = compute_sri_hash(target_file.read_bytes())
+        # Format BUILD.bazel files in overlay
+        for b_f in dest_overlay.rglob("BUILD.bazel"):
+            format_with_buildifier(b_f)
+
+        # Dedicated hash computation pass after all files are written and formatted
+        overlay_sris: Dict[str, str] = {}
+        for item in sorted(dest_overlay.rglob("*")):
+            if item.is_file():
+                rel_posix = item.relative_to(dest_overlay).as_posix()
+                overlay_sris[rel_posix] = compute_sri_hash(item.read_bytes())
 
         # 3. Update source.json
         archive_sri = hex_to_sri(archive_sha256)
@@ -408,6 +445,8 @@ class IndexManager:
         bump_build_id: bool = True,
     ) -> str:
         """Regenerates a port using generator-metadata.yaml, bumping build-id if requested."""
+        if not module_name.startswith("perl-"):
+            raise ValueError(f"Module name '{module_name}' must start with 'perl-'")
         existing = self.list_existing_versions(module_name)
         if not existing:
             raise ValueError(f"No existing version for {module_name}")
@@ -524,21 +563,6 @@ class IndexManager:
 
         if test_deps is None or runtime_deps is None or provides is None:
             lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
-            if not lock_info:
-                with self._lock:
-                    lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
-                    if not lock_info:
-                        ws_root = self.index_dir.parent
-                        for candidate in [
-                            ws_root / "e2e" / "deps_txt" / "cpan.lock.json",
-                            ws_root / "e2e" / "pakket" / "cpan.lock.json",
-                            ws_root / "tests" / "cpan.lock.json",
-                            ws_root / "cpan.lock.json",
-                        ]:
-                            if candidate.exists():
-                                self.load_lockfile(candidate)
-                        lock_info = self.lock_distributions.get(dist_name) or self.lock_distributions_by_mod.get(module_name)
-
             if lock_info:
                 deps = lock_info.get("dependencies", {})
                 if test_deps is None:
@@ -558,21 +582,31 @@ class IndexManager:
         with tempfile.TemporaryDirectory() as tmpdir:
             tmp_path = Path(tmpdir)
             tar_file = archive_path
-            if not tar_file or not tar_file.exists():
-                cache_dirs = [
-                    Path(os.environ.get("RULES_CPAN_CACHE_DIR", "")),
-                    Path.home() / ".cache" / "rules_cpan" / "dist",
-                ]
-                filename = archive_url.split("/")[-1] if archive_url else ""
-                found_in_cache = False
-                if filename:
-                    for c_dir in cache_dirs:
-                        if str(c_dir) and (c_dir / filename).exists():
-                            tar_file = c_dir / filename
-                            found_in_cache = True
-                            break
 
-                if not found_in_cache:
+            cache_env = os.environ.get("RULES_CPAN_CACHE_DIR")
+            cache_dir = Path(cache_env) if cache_env else (Path.home() / ".cache" / "rules_cpan" / "dist")
+            filename = archive_url.split("/")[-1] if archive_url else ""
+
+            if not tar_file or not tar_file.exists():
+                cached_candidate = (cache_dir / filename) if filename and cache_dir else None
+                if cached_candidate and cached_candidate.exists():
+                    if archive_sha256:
+                        cand_hash = hashlib.sha256(cached_candidate.read_bytes()).hexdigest()
+                        if cand_hash.lower() == archive_sha256.lower():
+                            tar_file = cached_candidate
+                        else:
+                            logger.warning(
+                                "Cached archive %s failed checksum verification; re-downloading",
+                                cached_candidate,
+                            )
+                            try:
+                                cached_candidate.unlink()
+                            except Exception:
+                                pass
+                    else:
+                        tar_file = cached_candidate
+
+                if not tar_file or not tar_file.exists():
                     if archive_url.startswith("file://"):
                         tar_file = Path(archive_url.removeprefix("file://"))
                     else:
@@ -585,15 +619,30 @@ class IndexManager:
                         with urllib.request.urlopen(req, timeout=60) as resp:
                             content = resp.read()
                             tar_file.write_bytes(content)
-                            default_cache = Path.home() / ".cache" / "rules_cpan" / "dist"
-                            if default_cache.exists() and filename:
-                                try:
-                                    (default_cache / filename).write_bytes(content)
-                                except Exception:
-                                    pass
 
-            if not archive_sha256 and tar_file and tar_file.exists():
-                import hashlib
+                        if archive_sha256:
+                            downloaded_sha = hashlib.sha256(content).hexdigest()
+                            if downloaded_sha.lower() != archive_sha256.lower():
+                                raise ValueError(
+                                    f"Integrity check failed for {archive_url}: "
+                                    f"expected {archive_sha256}, got {downloaded_sha}"
+                                )
+
+                        try:
+                            cache_dir.mkdir(parents=True, exist_ok=True)
+                            if filename:
+                                (cache_dir / filename).write_bytes(content)
+                        except Exception as e:
+                            logger.debug("Failed saving archive to cache %s: %s", cache_dir, e)
+
+            if archive_sha256 and tar_file and tar_file.exists():
+                actual_sha = hashlib.sha256(tar_file.read_bytes()).hexdigest()
+                if actual_sha.lower() != archive_sha256.lower():
+                    raise ValueError(
+                        f"Integrity check failed for {tar_file}: "
+                        f"expected {archive_sha256}, got {actual_sha}"
+                    )
+            elif not archive_sha256 and tar_file and tar_file.exists():
                 archive_sha256 = hashlib.sha256(tar_file.read_bytes()).hexdigest()
 
             extract_dir = tmp_path / "extract"
@@ -738,6 +787,13 @@ class IndexManager:
             format_with_buildifier(mb_file)
 
             # Write source.json
+            # Recompute overlay_sris directly from disk to guarantee exact hash after formatting
+            overlay_sris = {}
+            for item in sorted(dest_overlay.rglob("*")):
+                if item.is_file():
+                    rel_posix = item.relative_to(dest_overlay).as_posix()
+                    overlay_sris[rel_posix] = compute_sri_hash(item.read_bytes())
+
             archive_sri = hex_to_sri(archive_sha256)
             if generator_metadata and generator_metadata.strip_prefix:
                 strip_prefix = generator_metadata.strip_prefix
@@ -820,34 +876,37 @@ class IndexManager:
         new_version: str,
         replace_version: Optional[str] = None,
     ) -> None:
-        meta_file = module_dir / "metadata.json"
-        if meta_file.exists():
-            try:
-                meta = json.loads(meta_file.read_text(encoding="utf-8"))
-            except Exception:
-                meta = {}
-        else:
-            meta = {
-                "homepage": f"https://metacpan.org/dist/{dist_name}",
-                "maintainers": [
-                    {
-                        "name": "rules_cpan maintainers",
-                        "github": "manuelnaranjo",
-                    }
-                ],
-                "versions": [],
-                "yanked_versions": {},
-            }
+        with self._meta_lock:
+            meta_file = module_dir / "metadata.json"
+            if meta_file.exists():
+                try:
+                    meta = json.loads(meta_file.read_text(encoding="utf-8"))
+                except Exception:
+                    meta = {}
+            else:
+                meta = {
+                    "homepage": f"https://metacpan.org/dist/{dist_name}",
+                    "maintainers": [
+                        {
+                            "name": "rules_cpan maintainers",
+                            "github": "manuelnaranjo",
+                        }
+                    ],
+                    "versions": [],
+                    "yanked_versions": {},
+                }
 
-        versions: List[str] = meta.get("versions", [])
-        if replace_version and replace_version in versions:
-            versions = [new_version if v == replace_version else v for v in versions]
-            meta["versions"] = versions
-        elif new_version not in versions:
-            versions.append(new_version)
-            meta["versions"] = versions
+            versions: List[str] = meta.get("versions", [])
+            if replace_version and replace_version in versions:
+                versions = [new_version if v == replace_version else v for v in versions]
+                meta["versions"] = versions
+            elif new_version not in versions:
+                versions.append(new_version)
+                meta["versions"] = versions
 
-        meta_file.write_text(json.dumps(meta, indent=4) + "\n", encoding="utf-8")
+            tmp_meta = meta_file.with_suffix(".tmp")
+            tmp_meta.write_text(json.dumps(meta, indent=4) + "\n", encoding="utf-8")
+            tmp_meta.replace(meta_file)
 
 
 def sync_workspace_module_bazel(
@@ -972,23 +1031,22 @@ class CPANIndexer:
         workspace_dir: Path,
         bump_build_id: bool = False,
         lockfile_path: Optional[Path] = None,
+        lockfile_paths: Optional[List[Path]] = None,
     ) -> None:
         self.workspace_dir = workspace_dir
         self.index_dir = index_dir
         self.index_mgr = IndexManager(index_dir)
         self.bump_build_id = bump_build_id
 
-        if lockfile_path and lockfile_path.exists():
-            self.index_mgr.load_lockfile(lockfile_path)
+        all_locks: List[Path] = []
+        if lockfile_path:
+            all_locks.append(lockfile_path)
+        if lockfile_paths:
+            all_locks.extend(lockfile_paths)
 
-        for candidate in [
-            workspace_dir / "e2e" / "deps_txt" / "cpan.lock.json",
-            workspace_dir / "e2e" / "pakket" / "cpan.lock.json",
-            workspace_dir / "tests" / "cpan.lock.json",
-            workspace_dir / "cpan.lock.json",
-        ]:
-            if candidate.exists() and candidate != lockfile_path:
-                self.index_mgr.load_lockfile(candidate)
+        for lp in all_locks:
+            if lp and lp.exists():
+                self.index_mgr.load_lockfile(lp)
 
     def index_distribution(
         self,
@@ -1133,6 +1191,7 @@ def regenerate_modules(
         return 0
 
     worker_count = max(1, jobs if jobs and jobs > 0 else (os.cpu_count() or 1))
+    failed: List[Tuple[str, Exception]] = []
 
     if worker_count == 1 or len(modules) == 1:
         count = 0
@@ -1145,7 +1204,12 @@ def regenerate_modules(
                 print(f"[cpan_indexer] Regenerated {mod_name} -> {new_ver}")
                 count += 1
             except Exception as e:
-                logger.warning("Failed regenerating %s: %s", mod_name, e)
+                logger.error("Failed regenerating %s: %s", mod_name, e)
+                failed.append((mod_name, e))
+
+        if failed:
+            err_summary = ", ".join(f"{m} ({e})" for m, e in failed)
+            raise RuntimeError(f"Failed regenerating {len(failed)} module(s): {err_summary}")
         return count
 
     count = 0
@@ -1168,12 +1232,56 @@ def regenerate_modules(
         for future in concurrent.futures.as_completed(future_to_mod):
             m_name, new_ver, err = future.result()
             if err is not None:
-                logger.warning("Failed regenerating %s: %s", m_name, err)
+                logger.error("Failed regenerating %s: %s", m_name, err)
+                failed.append((m_name, err))
                 continue
             print(f"[cpan_indexer] Regenerated {m_name} -> {new_ver}")
             count += 1
 
+    if failed:
+        err_summary = ", ".join(f"{m} ({e})" for m, e in failed)
+        raise RuntimeError(f"Failed regenerating {len(failed)} module(s): {err_summary}")
+
     return count
+
+
+def diff_directories(dir_a: Path, dir_b: Path) -> List[str]:
+    """Computes unified diffs between two directories.
+
+    dir_a is expected/reference directory (e.g. current cpan-index).
+    dir_b is regenerated directory.
+    """
+    diff_lines: List[str] = []
+    files_a = {p.relative_to(dir_a).as_posix(): p for p in dir_a.rglob("*") if p.is_file()}
+    files_b = {p.relative_to(dir_b).as_posix(): p for p in dir_b.rglob("*") if p.is_file()}
+
+    all_keys = sorted(set(files_a.keys()) | set(files_b.keys()))
+    for rel_key in all_keys:
+        p_a = files_a.get(rel_key)
+        p_b = files_b.get(rel_key)
+        if p_a and not p_b:
+            diff_lines.append(f"Only in {dir_a}: {rel_key}\n")
+        elif p_b and not p_a:
+            diff_lines.append(f"Only in {dir_b}: {rel_key}\n")
+        elif p_a and p_b:
+            bytes_a = p_a.read_bytes()
+            bytes_b = p_b.read_bytes()
+            if bytes_a != bytes_b:
+                try:
+                    lines_a = bytes_a.decode("utf-8").splitlines(keepends=True)
+                    lines_b = bytes_b.decode("utf-8").splitlines(keepends=True)
+                    d = list(
+                        difflib.unified_diff(
+                            lines_a,
+                            lines_b,
+                            fromfile=str(p_a),
+                            tofile=str(p_b),
+                        )
+                    )
+                    diff_lines.extend(d)
+                except UnicodeDecodeError:
+                    diff_lines.append(f"Binary files {p_a} and {p_b} differ\n")
+    return diff_lines
 
 
 def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
@@ -1187,8 +1295,15 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
     parser.add_argument(
         "--lock",
         "--lockfile",
-        dest="lockfile",
-        help="Path to cpan.lock.json lockfile to index.",
+        dest="lockfiles",
+        action="append",
+        default=[],
+        help="Path to cpan.lock.json lockfile to index (can be passed multiple times).",
+    )
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="Verify that regeneration is idempotent without modifying files. Exits with 1 if changes are detected.",
     )
     parser.add_argument(
         "--module-bazel",
@@ -1255,9 +1370,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     log_level = logging.DEBUG if args.verbose else logging.INFO
     logging.basicConfig(level=log_level, format="%(levelname)s: %(message)s")
 
-    workspace_dir = Path(
-        os.environ.get("BUILD_WORKSPACE_DIRECTORY", os.getcwd())
-    ).resolve()
+    if "BUILD_WORKSPACE_DIRECTORY" not in os.environ:
+        sys.stderr.write("Error: cpan_indexer must be run via 'bazel run //:cpan_indexer -- <args>'\n")
+        return 1
+
+    workspace_dir = Path(os.environ["BUILD_WORKSPACE_DIRECTORY"]).resolve()
     index_dir = (
         Path(args.index_dir).resolve()
         if args.index_dir
@@ -1268,60 +1385,143 @@ def main(argv: Optional[List[str]] = None) -> int:
         logger.error("cpan-index directory not found at %s", index_dir)
         return 1
 
-    lock_path = Path(args.lockfile) if args.lockfile else None
-    if lock_path and not lock_path.is_absolute():
-        lock_path = workspace_dir / lock_path
+    lock_paths: List[Path] = [
+        Path(lf) if Path(lf).is_absolute() else (workspace_dir / lf)
+        for lf in args.lockfiles
+    ]
+
+    for lp in lock_paths:
+        if not lp.exists():
+            logger.error("Specified lockfile does not exist: %s", lp)
+            return 1
+
+    if args.check:
+        with tempfile.TemporaryDirectory() as tmp_check:
+            check_index_dir = Path(tmp_check) / "cpan-index"
+            shutil.copytree(index_dir, check_index_dir)
+            check_indexer = CPANIndexer(
+                index_dir=check_index_dir,
+                workspace_dir=workspace_dir,
+                bump_build_id=False,
+                lockfile_paths=lock_paths,
+            )
+
+            if args.regenerate or args.all:
+                modules_to_regenerate: List[str] = []
+                for mod_entry in sorted((check_index_dir / "modules").iterdir()):
+                    if not mod_entry.is_dir() or not mod_entry.name.startswith("perl-"):
+                        continue
+                    has_metadata = (mod_entry / "generator-metadata.yaml").exists()
+                    if args.all or has_metadata:
+                        modules_to_regenerate.append(mod_entry.name)
+
+                try:
+                    regenerate_modules(
+                        indexer=check_indexer,
+                        modules=modules_to_regenerate,
+                        bump_build_id=False,
+                        jobs=args.jobs,
+                    )
+                except Exception as e:
+                    logger.error("Regeneration check failed with error: %s", e)
+                    return 1
+
+            elif lock_paths:
+                for lp in lock_paths:
+                    check_indexer.index_lockfile(
+                        lockfile_path=lp,
+                        sync_module_bazel=False,
+                    )
+            elif args.distribution:
+                logger.error("--check is not supported with single --distribution")
+                return 1
+            else:
+                modules_to_regenerate = [
+                    mod_entry.name
+                    for mod_entry in sorted((check_index_dir / "modules").iterdir())
+                    if mod_entry.is_dir() and mod_entry.name.startswith("perl-")
+                ]
+                try:
+                    regenerate_modules(
+                        indexer=check_indexer,
+                        modules=modules_to_regenerate,
+                        bump_build_id=False,
+                        jobs=args.jobs,
+                    )
+                except Exception as e:
+                    logger.error("Regeneration check failed with error: %s", e)
+                    return 1
+
+            diffs = diff_directories(index_dir, check_index_dir)
+            if diffs:
+                sys.stdout.writelines(diffs)
+                sys.stderr.write(
+                    f"Error: cpan-index is not up to date ({len(diffs)} diff chunk(s) detected).\n"
+                    f"Run 'bazel run //:cpan_indexer -- --regenerate --all' to update.\n"
+                )
+                return 1
+
+            print("[cpan_indexer] Check passed: cpan-index is up to date and idempotent.")
+            return 0
 
     indexer = CPANIndexer(
         index_dir=index_dir,
         workspace_dir=workspace_dir,
         bump_build_id=args.bump_build_id,
-        lockfile_path=lock_path,
+        lockfile_paths=lock_paths,
     )
 
     if args.regenerate or args.all:
         if args.distribution:
             mod_name = sanitize_module_name(args.distribution)
-            new_ver = indexer.index_mgr.regenerate_port(
-                module_name=mod_name,
-                upstream_version=args.version,
-                bump_build_id=args.bump_build_id,
-            )
+            try:
+                new_ver = indexer.index_mgr.regenerate_port(
+                    module_name=mod_name,
+                    upstream_version=args.version,
+                    bump_build_id=args.bump_build_id,
+                )
+            except Exception as e:
+                logger.error("Failed regenerating %s: %s", mod_name, e)
+                return 1
             print(f"[cpan_indexer] Successfully regenerated {mod_name} -> {new_ver}")
             return 0
 
         # Regenerate modules
         modules_to_regenerate: List[str] = []
         for mod_entry in sorted((index_dir / "modules").iterdir()):
-            if not mod_entry.is_dir():
+            if not mod_entry.is_dir() or not mod_entry.name.startswith("perl-"):
                 continue
             has_metadata = (mod_entry / "generator-metadata.yaml").exists()
             if args.all or has_metadata:
                 modules_to_regenerate.append(mod_entry.name)
 
-        count = regenerate_modules(
-            indexer=indexer,
-            modules=modules_to_regenerate,
-            bump_build_id=args.bump_build_id,
-            jobs=args.jobs,
-        )
+        try:
+            count = regenerate_modules(
+                indexer=indexer,
+                modules=modules_to_regenerate,
+                bump_build_id=args.bump_build_id,
+                jobs=args.jobs,
+            )
+        except Exception as e:
+            logger.error("Regeneration failed: %s", e)
+            return 1
         print(f"[cpan_indexer] Successfully regenerated {count} modules")
         return 0
 
-    if args.lockfile:
-        lock_path = Path(args.lockfile)
-        if not lock_path.is_absolute():
-            lock_path = workspace_dir / lock_path
+    if lock_paths:
         mb_path = Path(args.module_bazel) if args.module_bazel else None
         if mb_path and not mb_path.is_absolute():
             mb_path = workspace_dir / mb_path
 
-        resolved = indexer.index_lockfile(
-            lockfile_path=lock_path,
-            sync_module_bazel=args.sync_module_bazel,
-            module_bazel_path=mb_path,
-        )
-        print(f"[cpan_indexer] Successfully indexed {len(resolved)} distributions from {lock_path}")
+        total_indexed = 0
+        for lp in lock_paths:
+            resolved = indexer.index_lockfile(
+                lockfile_path=lp,
+                sync_module_bazel=args.sync_module_bazel,
+                module_bazel_path=mb_path,
+            )
+            total_indexed += len(resolved)
+            print(f"[cpan_indexer] Successfully indexed {len(resolved)} distributions from {lp}")
         return 0
 
     if args.distribution:
@@ -1335,7 +1535,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             archive_sha256 = hashlib.sha256(archive_path.read_bytes()).hexdigest()
             url = f"file://{archive_path.name}"
         else:
-            # Query MetaCPAN for archive URL and sha256
             api_url = f"https://fastapi.metacpan.org/v1/release/{dist_name}"
             req = urllib.request.Request(api_url, headers={"User-Agent": "rules_cpan/indexer"})
             with urllib.request.urlopen(req, timeout=30) as resp:
@@ -1344,13 +1543,18 @@ def main(argv: Optional[List[str]] = None) -> int:
             version = str(meta.get("version", version)).lstrip("v")
             archive_sha256 = meta.get("checksum_sha256", "")
 
-        resolved_ver = indexer.index_distribution(
-            dist_name=dist_name,
-            version=version,
-            url=url,
-            sha256=archive_sha256,
-            archive_path=archive_path,
-        )
+        try:
+            resolved_ver = indexer.index_distribution(
+                dist_name=dist_name,
+                version=version,
+                url=url,
+                sha256=archive_sha256,
+                archive_path=archive_path,
+            )
+        except Exception as e:
+            logger.error("Failed indexing distribution %s: %s", dist_name, e)
+            return 1
+
         module_name = sanitize_module_name(dist_name)
         if args.sync_module_bazel:
             mb_path = Path(args.module_bazel) if args.module_bazel else workspace_dir / "MODULE.bazel"
@@ -1359,20 +1563,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(f"[cpan_indexer] Successfully indexed {dist_name} -> {module_name} {resolved_ver}")
         return 0
 
-    # Default fallback: check if cpan.lock.json or tests/cpan.lock.json exists in workspace
-    default_lock = workspace_dir / "cpan.lock.json"
-    if not default_lock.exists():
-        default_lock = workspace_dir / "tests" / "cpan.lock.json"
-
-    if default_lock.exists():
-        indexer.index_lockfile(
-            lockfile_path=default_lock,
-            sync_module_bazel=args.sync_module_bazel,
-        )
-        print(f"[cpan_indexer] Successfully indexed default lockfile: {default_lock}")
-        return 0
-
-    logger.error("No --lock or --distribution provided and no default lockfile found.")
+    logger.error("No operation specified. Use --regenerate [--all], --lockfile <path>, or --distribution <name>.")
     return 1
 
 
