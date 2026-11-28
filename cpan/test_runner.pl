@@ -21,6 +21,13 @@ if (File::Spec->file_name_is_absolute($test_file) && -f $test_file) {
     $target_test = abs_path($test_file);
 }
 
+if (!$target_test && $ENV{TEST_WORKSPACE} && $ENV{TEST_SRCDIR}) {
+    my $candidate = File::Spec->catfile($ENV{TEST_SRCDIR}, $ENV{TEST_WORKSPACE}, $test_file);
+    if (-f $candidate) {
+        $target_test = abs_path($candidate);
+    }
+}
+
 # Determine manifest or runfiles directory
 my @manifest_candidates = (
     $ENV{RUNFILES_MANIFEST_FILE},
@@ -35,9 +42,13 @@ for my $mf (@manifest_candidates) {
         while (my $mline = <$mfh>) {
             chomp $mline;
             my ($rpath, $fpath) = split ' ', $mline, 2;
-            if ($rpath && $fpath && $rpath =~ m{\Q$test_file\E$} && -f $fpath) {
-                $target_test = abs_path($fpath);
-                last;
+            if ($rpath && $fpath && -f $fpath) {
+                if (defined $ENV{TEST_WORKSPACE} && $rpath eq "$ENV{TEST_WORKSPACE}/$test_file") {
+                    $target_test = abs_path($fpath);
+                    last;
+                } elsif ($rpath =~ m{\Q$test_file\E$}) {
+                    $target_test //= abs_path($fpath);
+                }
             }
         }
         close $mfh;
@@ -73,9 +84,40 @@ while ($dist_dir ne "/" && $dist_dir ne "." && basename($dist_dir) ne "t") {
 if (basename($dist_dir) eq "t") {
     $dist_dir = dirname($dist_dir);
 }
+
+my @abs_inc = map { -d $_ ? abs_path($_) : $_ } @INC;
+
 chdir($dist_dir) or die "Failed to chdir to $dist_dir: $!\n";
 
-$ENV{PERL5LIB} = join(':', @INC);
+if (! -d "blib") {
+    eval {
+        require File::Path;
+        File::Path::make_path("blib");
+        my $target_lib = -d "build/lib/perl5" ? abs_path("build/lib/perl5") : (-d "lib" ? abs_path("lib") : undef);
+        if ($target_lib && ! -e "blib/lib") {
+            eval { symlink($target_lib, "blib/lib"); } or File::Path::make_path("blib/lib");
+        } elsif (! -d "blib/lib") {
+            File::Path::make_path("blib/lib");
+        }
+        my $target_arch;
+        if (-d "build/lib/perl5") {
+            for my $sub (glob("build/lib/perl5/*-linux* build/lib/perl5/*-thread*")) {
+                if (-d $sub) {
+                    $target_arch = abs_path($sub);
+                    last;
+                }
+            }
+        }
+        $target_arch //= $target_lib;
+        if ($target_arch && ! -e "blib/arch") {
+            eval { symlink($target_arch, "blib/arch"); } or File::Path::make_path("blib/arch");
+        } elsif (! -d "blib/arch") {
+            File::Path::make_path("blib/arch");
+        }
+    };
+}
+
+$ENV{PERL5LIB} = join(':', @abs_inc);
 $ENV{PERL_USE_UNSAFE_INC} = 1;
 
 my @extra_flags;
@@ -180,13 +222,15 @@ my $cleanup = sub {
 $SIG{INT} = sub { $cleanup->(); exit 1; };
 $SIG{TERM} = sub { $cleanup->(); exit 1; };
 
-my @inc_flags = map { "-I$_" } @INC;
+my @inc_flags = map { "-I$_" } @abs_inc;
+my $rel_target_test = File::Spec->abs2rel($target_test, $dist_dir);
+my $exec_test = (-f $rel_target_test) ? $rel_target_test : $target_test;
 if (@started_containers) {
-    system($^X, @extra_flags, @inc_flags, $target_test, @ARGV);
+    system($^X, @extra_flags, @inc_flags, $exec_test, @ARGV);
     my $exit_code = $? >> 8;
     $cleanup->();
     exit $exit_code;
 } else {
-    exec $^X, @extra_flags, @inc_flags, $target_test, @ARGV
+    exec $^X, @extra_flags, @inc_flags, $exec_test, @ARGV
         or die "Failed to exec $^X: $!\n";
 }

@@ -2182,6 +2182,22 @@
       "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Specio-0.53.tar.gz",
       "version": "0.53"
     },
+    "Spiffy": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Spiffy",
+        "Spiffy::mixin"
+      ],
+      "sha256": "8f58620a8420255c49b6c43c5ff5802bd25e4f09240c51e5bf2b022833d41da3",
+      "url": "https://cpan.metacpan.org/authors/id/I/IN/INGY/Spiffy-0.46.tar.gz",
+      "version": "0.46"
+    },
     "String-RewritePrefix": {
       "dependencies": {
         "build": [],
@@ -2327,6 +2343,29 @@
       "sha256": "d9b823b26619aa69f7a0616650a7810e895a8df062de9d2240d65dbe5cfe747a",
       "url": "https://cpan.metacpan.org/authors/id/B/BO/BOOK/System-Command-1.122.tar.gz",
       "version": "1.122"
+    },
+    "Test-Base": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Spiffy"
+        ],
+        "test": [
+          "Algorithm-Diff",
+          "Text-Diff"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Base",
+        "Test::Base::Block",
+        "Test::Base::Filter",
+        "Test::Base::Handle"
+      ],
+      "sha256": "2794a1aaaeb1d3a287dd2c7286258663796562f7db9ccc6b424bc4f1de8ad014",
+      "url": "https://cpan.metacpan.org/authors/id/I/IN/INGY/Test-Base-0.89.tar.gz",
+      "version": "0.89"
     },
     "Test-Deep": {
       "dependencies": {
@@ -2785,6 +2824,26 @@
       "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Test2-Plugin-NoWarnings-0.10.tar.gz",
       "version": "0.10"
     },
+    "Text-Diff": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Algorithm-Diff"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Text::Diff",
+        "Text::Diff::Base",
+        "Text::Diff::Config",
+        "Text::Diff::Table"
+      ],
+      "sha256": "3fc983e3140fa2580250bbcf2b52e2acbdbc5abda4374c3be78235905d8ca8eb",
+      "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Diff-1.46.tar.gz",
+      "version": "1.46"
+    },
     "Tie-ToObject": {
       "dependencies": {
         "build": [],
@@ -2822,7 +2881,9 @@
         "runtime": [
           "Exporter-Tiny"
         ],
-        "test": []
+        "test": [
+          "Test-Fatal"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -2959,6 +3020,7 @@
         "configure": [],
         "runtime": [],
         "test": [
+          "Test-Base",
           "Test-Warnings"
         ]
       },
@@ -3084,6 +3146,7 @@
     "Sub-Name",
     "Sub-Quote",
     "System-Command",
+    "Test-Base 0.89",
     "Test-Fatal",
     "Test-Needs",
     "Test-Simple",

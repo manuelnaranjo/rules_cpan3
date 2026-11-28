@@ -401,6 +401,12 @@ class ArchiveInspector:
         return computed_sha256, is_xs, member_names
 
 
+EXTRA_TEST_MODULES: Dict[str, List[str]] = {
+    "Type-Tiny": ["Test::Fatal"],
+    "YAML-LibYAML": ["Test::Base"],
+}
+
+
 class CPANResolver:
     """Transitive dependency resolver and lockfile generator."""
 
@@ -586,6 +592,12 @@ class CPANResolver:
 
                     dependencies[phase].append(module)
                     new_modules_to_resolve.add(module)
+
+                if dist_name in EXTRA_TEST_MODULES and "test" in self.phases:
+                    for mod in EXTRA_TEST_MODULES[dist_name]:
+                        if not self.index.is_core_module(mod):
+                            dependencies["test"].append(mod)
+                            new_modules_to_resolve.add(mod)
 
                 resolved[dist_name] = ResolvedDistribution(
                     name=dist_name,
