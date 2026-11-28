@@ -503,9 +503,9 @@
       "provides": [
         "Alien::ProtoBuf"
       ],
-      "sha256": "f46448d68e30f649a1681d5d841971b4cc77b3f53a991a2e0b981eee5305be53",
-      "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Alien-ProtoBuf-0.10.tar.gz",
-      "version": "0.10"
+      "sha256": "35d23685c9f2d82273005050f14d68de01613acc52d1aa536af278fa1b68211c",
+      "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Alien-ProtoBuf-0.11.tar.gz",
+      "version": "0.11"
     },
     "Alien-Role-Dino": {
       "dependencies": {
@@ -660,9 +660,9 @@
       "provides": [
         "Alien::uPB::Core"
       ],
-      "sha256": "08d742817809dfc9cca3b3f86d2b301bf3b56cc5187d1869c77430e5321d19b3",
-      "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Alien-uPB-Core-0.21.tar.gz",
-      "version": "0.21"
+      "sha256": "c85c2e0de1221182cc7dd53e692951e9484e26513a22364ff28ded9f68008a77",
+      "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Alien-uPB-Core-0.23.tar.gz",
+      "version": "0.23"
     },
     "Alt-Crypt-RSA-BigInt": {
       "dependencies": {
@@ -4786,7 +4786,7 @@
         "runtime": [],
         "test": []
       },
-      "is_xs": true,
+      "is_xs": false,
       "provides": [
         "Curses",
         "Curses::Field",
@@ -9896,9 +9896,9 @@
       "provides": [
         "Email::Address::XS"
       ],
-      "sha256": "1510b7f10d67201037cd50d22c9d6b26eeca55ededa4cdb46bbca27e59a4ea16",
-      "url": "https://cpan.metacpan.org/authors/id/P/PA/PALI/Email-Address-XS-1.05.tar.gz",
-      "version": "1.05"
+      "sha256": "d8de14fa522bb7467782616114264781876832dbf047de38f2e024ee2e396abe",
+      "url": "https://cpan.metacpan.org/authors/id/P/PA/PALI/Email-Address-XS-1.06.tar.gz",
+      "version": "1.06"
     },
     "Email-Date-Format": {
       "dependencies": {
@@ -21625,8 +21625,8 @@
       "provides": [
         "Math::Prime::Util::GMP"
       ],
-      "sha256": "5ad4be0f8d349432fbe10df67bc3a82b4bc4b0bade2a13e2c8a35b7fb9ddfd1f",
-      "url": "https://cpan.metacpan.org/authors/id/D/DA/DANAJ/Math-Prime-Util-GMP-0.54.tar.gz",
+      "sha256": "1e3dfaa751e54b06953e6d028d9f1f60112931b71b285c70d06e13280339afd7",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DANAJ/Math-Prime-Util-GMP-0.54-TRIAL1.tar.gz",
       "version": "0.54"
     },
     "Math-Random": {
@@ -66818,9 +66818,9 @@
       "provides": [
         "XML::Sig"
       ],
-      "sha256": "e36bcd56a2f85b14ebb46352438d25fb78d35e3e827ed7ad958a806231287b41",
-      "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/XML-Sig-0.73.tar.gz",
-      "version": "0.73"
+      "sha256": "b90572351ddf2dc8a8c71d84391077818f86c2a45e048d3d40ae9bae98c60326",
+      "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/XML-Sig-0.74.tar.gz",
+      "version": "0.74"
     },
     "XML-Simple": {
       "dependencies": {
@@ -67983,9 +67983,9 @@
     "Array-Diff 0.09",
     "Array-RefElem 1.00",
     "Authen-Krb5-Admin 0.17",
+    "Authen-PAM 0.16",
     "Authen-SASL 2.2100",
     "Authen-SASL-XS 1.02",
-    "Authen-PAM 0.16",
     "Authen-Simple-PAM 0.2",
     "Authorize-Rule 0.009",
     "AutoLoader 5.74",

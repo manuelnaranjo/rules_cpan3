@@ -35,6 +35,15 @@ Whenever invoking Bazel commands (`build`, `test`, `run`, `cquery`, `query`, etc
 - Native C/C++ third-party dependencies are ported into the local BCR registry at `registry` if not present in the upstream BCR.
 - When creating or modifying BCR module ports in `registry/modules`, always use the `overlay/` directory to introduce new files (such as `BUILD.bazel`, headers, or configuration files) and list them under the `overlay` dictionary in `source.json`. Patch files (`patches/`) should ONLY be used to modify existing upstream files when needed, never to introduce new files.
 
+## CPAN Lockfiles
+- **Never Modify Lockfiles Directly**: Lockfiles (`cpan.lock.json`) must NEVER be edited manually or patched directly.
+- **Always Regenerate via Resolver**: When dependencies or test dependencies change, update the corresponding `deps.txt` (or resolver logic) and regenerate the lockfile using the resolver tool:
+  ```bash
+  INVOCATION_ID=$(uuidgen)
+  echo "Invocation ID: ${INVOCATION_ID}"
+  bazel run --invocation_id=${INVOCATION_ID} //cpan/tools/resolver:resolver -- --input <path/to/deps.txt> --output <path/to/cpan.lock.json>
+  ```
+
 ## Coding Conventions
 - **Early Termination & Control Flow**: Always prefer methods and functions structured with early termination (guard clauses, early `return`, `continue`, or `break`) instead of deeply nested conditionals (`if/else`). Factor complex loop bodies or multi-step inspection logic into dedicated helper functions.
 
