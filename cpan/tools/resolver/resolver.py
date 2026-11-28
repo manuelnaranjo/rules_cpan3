@@ -402,8 +402,9 @@ class ArchiveInspector:
 
 
 EXTRA_TEST_MODULES: Dict[str, List[str]] = {
-    "Type-Tiny": ["Test::Fatal"],
+    "Type-Tiny": ["Test::Fatal", "Test::Requires"],
     "YAML-LibYAML": ["Test::Base"],
+    "namespace-autoclean": ["Test::Fatal"],
 }
 
 
@@ -581,16 +582,26 @@ class CPANResolver:
                     relationship = dep.get("relationship", "requires")
                     module = dep.get("module")
 
-                    if not module or relationship != "requires":
+                    if not module:
                         continue
-                    if phase not in self.phases:
+
+                    if relationship == "requires":
+                        if phase not in self.phases:
+                            continue
+                        target_phase = phase
+                    elif relationship in ("recommends", "suggests"):
+                        # Optional dependencies are resolved and injected only into tests
+                        if "test" not in self.phases or phase not in ("runtime", "test", "build", "configure"):
+                            continue
+                        target_phase = "test"
+                    else:
                         continue
 
                     # Filter core perl modules
                     if self.index.is_core_module(module):
                         continue
 
-                    dependencies[phase].append(module)
+                    dependencies[target_phase].append(module)
                     new_modules_to_resolve.add(module)
 
                 if dist_name in EXTRA_TEST_MODULES and "test" in self.phases:
