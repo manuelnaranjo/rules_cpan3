@@ -15,7 +15,9 @@ copy_file(
 cpan_xs(
     name = "Proc-ProcessTable_xs",
     srcs = ["ProcessTable.xs"],
-    cc_srcs = glob(
+    cc_srcs = [
+        ":copy_OS_c",
+    ] + glob(
         [
             "*.c",
             "**/*.c",
@@ -41,14 +43,10 @@ cpan_xs(
             "**/programs/**",
             "**/tests/**",
             "os/**/*.c",
-            "OS.c",
         ],
     ),
     output_loc = "auto/Proc/ProcessTable/ProcessTable",
-    textual_hdrs = [
-        "OS.c",
-        ":copy_OS_c",
-    ] + glob(
+    textual_hdrs = glob(
         [
             "*.h",
             "**/*.h",
@@ -80,7 +78,6 @@ cpan_xs(
             "**/programs/**",
             "**/tests/**",
             "os/**/*.c",
-            "OS.c",
         ],
     ),
     typemaps = glob(
@@ -157,7 +154,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/00-load.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -166,7 +162,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/01-instiantied_object_only_methods.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -175,7 +170,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugfix-106571_odd_process_name.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -184,7 +178,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugfix-51470_cmndline_mod_error.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -193,7 +186,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/bugfix-61946_odd_process_name.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -202,7 +194,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/manifest.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -211,7 +202,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/openbsd-size-rss.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -220,7 +210,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod-coverage.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -229,7 +218,6 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/pod.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
@@ -238,12 +226,21 @@ perl_test(
     size = "small",
     srcs = ["@rules_cpan//cpan:test_runner.pl"],
     args = ["t/process.t"],
-    tags = ["manual"],
     deps = [":Proc-ProcessTable_test_lib"],
 )
 
 test_suite(
     name = "test",
-    tags = ["manual"],
-    tests = [],
+    tests = [
+        ":test_t_00-load",
+        ":test_t_01-instiantied_object_only_methods",
+        ":test_t_bugfix-106571_odd_process_name",
+        ":test_t_bugfix-51470_cmndline_mod_error",
+        ":test_t_bugfix-61946_odd_process_name",
+        ":test_t_manifest",
+        ":test_t_openbsd-size-rss",
+        ":test_t_pod",
+        ":test_t_pod-coverage",
+        ":test_t_process",
+    ],
 )

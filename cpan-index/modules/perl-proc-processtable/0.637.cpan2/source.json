@@ -3,6 +3,6 @@
     "integrity": "sha256-1+aItfC9XTjluzBvFvkEqskxEt+O2gmP7+8cgQu6b4U=",
     "strip_prefix": "Proc-ProcessTable-0.637",
     "overlay": {
-        "BUILD.bazel": "sha256-n1V+2tEJhfm3e7JgHixBnYqn7ghNnfw9/khkHIcR5MY="
+        "BUILD.bazel": "sha256-IpWEoF//reTFLOa/6mCnx7sTUu3RYnGccnhLHuGD9o4="
     }
 }
