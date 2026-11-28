@@ -1,14 +1,14 @@
 name: CI
 on:
   push:
-    branches: [main]
+    branches: [main, main-rules-foreign-cc]
   pull_request:
-    branches: [main]
+    branches: [main, main-rules-foreign-cc]
   workflow_dispatch:
 
 concurrency:
-  group: concurrency-group::${{ github.workflow }}::${{ github.event.pull_request.number > 0 && format('pr-{0}', github.event.pull_request.number) || github.ref_name }}${{ github.ref_name == 'main' && format('::{0}', github.run_id) || ''}}
-  cancel-in-progress: ${{ github.ref_name != 'main' }}
+  group: concurrency-group::${{ github.workflow }}::${{ github.event.pull_request.number > 0 && format('pr-{0}', github.event.pull_request.number) || github.ref_name }}${{ (github.ref_name == 'main' || github.ref_name == 'main-rules-foreign-cc') && format('::{0}', github.run_id) || ''}}
+  cancel-in-progress: ${{ github.ref_name != 'main' && github.ref_name != 'main-rules-foreign-cc' }}
 
 jobs:
   test:
