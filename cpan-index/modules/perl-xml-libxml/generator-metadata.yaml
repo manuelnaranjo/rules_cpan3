@@ -23,5 +23,5 @@ manual_tests:
 - t/49_load_html.t
 - t/27new_callbacks_simple.t
 file_copies:
-  lib/XML/LibXML.pm: LibXML.pm
-  lib/XML/LibXML.pod: LibXML.pod
+  LibXML.pm: lib/XML/LibXML.pm
+  LibXML.pod: lib/XML/LibXML.pod

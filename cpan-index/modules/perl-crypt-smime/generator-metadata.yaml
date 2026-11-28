@@ -2,4 +2,4 @@ manual_tests:
 - t/manifest.t
 - t/boilerplate.t
 file_copies:
-  lib/Crypt/SMIME.pm: lib/SMIME.pm
+  lib/SMIME.pm: lib/Crypt/SMIME.pm

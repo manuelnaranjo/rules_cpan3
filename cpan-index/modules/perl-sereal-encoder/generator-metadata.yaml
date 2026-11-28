@@ -5,5 +5,6 @@ defines:
 output_loc: auto/Sereal/Encoder/Encoder
 patch_cmds:
 - rm -rf author_tools
+- printf '\n#if 0\n#include "snappy/csnappy_compress.c"\n#endif\n' >> srl_encoder.c
 patch_cmds_win:
-- powershell -Command "Remove-Item -Recurse -Force author_tools"
+- powershell -Command "Remove-Item -Recurse -Force author_tools; Add-Content srl_encoder.c \"`n#if 0`n#include `\"snappy/csnappy_compress.c`\"`n#endif\""
