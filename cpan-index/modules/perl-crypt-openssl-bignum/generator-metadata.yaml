@@ -2,4 +2,4 @@ native_deps:
 - '@openssl//:crypto'
 - '@openssl//:ssl'
 file_copies:
-  lib/Crypt/OpenSSL/Bignum.pm: Bignum.pm
+  Bignum.pm: lib/Crypt/OpenSSL/Bignum.pm
