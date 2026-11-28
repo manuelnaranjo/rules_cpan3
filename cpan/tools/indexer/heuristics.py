@@ -274,6 +274,7 @@ class GeneratorMetadata:
     target_compatible_with: List[str] = field(default_factory=list)
     exec_compatible_with: List[str] = field(default_factory=list)
     cc_srcs_exclude: List[str] = field(default_factory=list)
+    extra_cc_srcs: List[str] = field(default_factory=list)
     test_data_exclude: List[str] = field(default_factory=list)
     extra_deps: List[str] = field(default_factory=list)
     extra_test_deps: List[str] = field(default_factory=list)
@@ -311,6 +312,7 @@ class GeneratorMetadata:
             "target_compatible_with",
             "exec_compatible_with",
             "cc_srcs_exclude",
+            "extra_cc_srcs",
             "test_data_exclude",
             "extra_deps",
             "extra_test_deps",
@@ -388,6 +390,7 @@ class GeneratorMetadata:
             target_compatible_with=_check_list_str("target_compatible_with"),
             exec_compatible_with=_check_list_str("exec_compatible_with"),
             cc_srcs_exclude=_check_list_str("cc_srcs_exclude"),
+            extra_cc_srcs=_check_list_str("extra_cc_srcs"),
             test_data_exclude=_check_list_str("test_data_exclude"),
             extra_deps=_check_list_str("extra_deps"),
             extra_test_deps=_check_list_str("extra_test_deps"),
@@ -432,55 +435,14 @@ class GeneratorMetadata:
             res["exec_compatible_with"] = self.exec_compatible_with
         if self.cc_srcs_exclude:
             res["cc_srcs_exclude"] = self.cc_srcs_exclude
+        if self.extra_cc_srcs:
+            res["extra_cc_srcs"] = self.extra_cc_srcs
         if self.test_data_exclude:
             res["test_data_exclude"] = self.test_data_exclude
         if self.extra_deps:
             res["extra_deps"] = self.extra_deps
         if self.extra_test_deps:
             res["extra_test_deps"] = self.extra_test_deps
-        if self.patch_cmds:
-            res["patch_cmds"] = self.patch_cmds
-        if self.patch_cmds_win:
-            res["patch_cmds_win"] = self.patch_cmds_win
-        return res
-        if self.is_xs is not None:
-            res["is_xs"] = self.is_xs
-        if self.file_copies:
-            res["file_copies"] = self.file_copies
-        if self.manual_tests:
-            res["manual_tests"] = self.manual_tests
-        if self.test_services:
-            res["test_services"] = self.test_services
-        if self.test_exec_properties:
-            res["test_exec_properties"] = self.test_exec_properties
-        if self.execution_requirements:
-            res["execution_requirements"] = self.execution_requirements
-        if self.defines:
-            res["defines"] = self.defines
-        if self.defines_select:
-            res["defines_select"] = self.defines_select
-        if self.linkopts:
-            res["linkopts"] = self.linkopts
-        if self.linkopts_select:
-            res["linkopts_select"] = self.linkopts_select
-        if self.includes:
-            res["includes"] = self.includes
-        if self.output_loc:
-            res["output_loc"] = self.output_loc
-        if self.native_deps:
-            res["native_deps"] = self.native_deps
-        if self.strip_prefix:
-            res["strip_prefix"] = self.strip_prefix
-        if self.target_compatible_with:
-            res["target_compatible_with"] = self.target_compatible_with
-        if self.exec_compatible_with:
-            res["exec_compatible_with"] = self.exec_compatible_with
-        if self.cc_srcs_exclude:
-            res["cc_srcs_exclude"] = self.cc_srcs_exclude
-        if self.test_data_exclude:
-            res["test_data_exclude"] = self.test_data_exclude
-        if self.extra_deps:
-            res["extra_deps"] = self.extra_deps
         if self.patch_cmds:
             res["patch_cmds"] = self.patch_cmds
         if self.patch_cmds_win:
@@ -526,6 +488,7 @@ class DistributionInspection:
     h_files: List[str] = field(default_factory=list)
     typemaps: List[str] = field(default_factory=list)
     included_c_files: List[str] = field(default_factory=list)
+    raw_c_includes: Set[str] = field(default_factory=set)
     deleted_files: List[str] = field(default_factory=list)
     defines: List[str] = field(default_factory=list)
     includes: List[str] = field(default_factory=list)
@@ -639,6 +602,7 @@ class HeuristicsEngine:
                                 fragment_xs.append(candidate)
 
         # Inspect XS and C files for included .c files
+        raw_c_includes: Set[str] = set()
         for src in xs_files + c_files:
             src_path = extract_dir / src
             content = self._safe_read_text(src_path)
@@ -649,6 +613,9 @@ class HeuristicsEngine:
                     rel_dir = Path(src).parent
                     for c_inc in c_includes:
                         resolved = (rel_dir / c_inc).as_posix() if rel_dir != Path(".") else c_inc
+                        raw_c_includes.add(c_inc)
+                        raw_c_includes.add(resolved)
+                        raw_c_includes.add(Path(c_inc).name)
                         chosen = None
                         if (extract_dir / resolved).exists():
                             chosen = resolved
@@ -667,6 +634,7 @@ class HeuristicsEngine:
         inspection.top_level_xs = top_level_xs
         inspection.fragment_xs = fragment_xs
         inspection.included_c_files = included_c_files
+        inspection.raw_c_includes = raw_c_includes
 
         # 3. Dynamic constants: check fallback/ directory for headers/xs/inc/c files
         fallback_dir = extract_dir / "fallback"
@@ -885,8 +853,9 @@ class HeuristicsEngine:
                         if any(fnmatch.fnmatch(orig_rel, pat) or fnmatch.fnmatch(rel, pat) for pat in all_cc_excludes):
                             continue
                         inspection.add_file_copy(orig_rel, rel)
-                        if rel.endswith(".c") and rel not in inspection.included_c_files:
-                            inspection.included_c_files.append(rel)
+                        if rel.endswith(".c") and (rel in inspection.raw_c_includes or Path(rel).name in inspection.raw_c_includes):
+                            if rel not in inspection.included_c_files:
+                                inspection.included_c_files.append(rel)
                         continue
 
                     # Check for generated xssubs.c or constants
@@ -1225,6 +1194,12 @@ test_suite(
                 elif dest_path.endswith((".h", ".inc", ".xsi", ".xs")):
                     extra_textual_copies.append(f'":{rule_name}"')
 
+        if generator_metadata and generator_metadata.extra_cc_srcs:
+            for s in generator_metadata.extra_cc_srcs:
+                target_str = f'"{s}"'
+                if target_str not in extra_cc_srcs:
+                    extra_cc_srcs.append(target_str)
+
         load_copy_file = 'load("@bazel_lib//lib:copy_file.bzl", "copy_file")\n' if copy_file_rules else ""
         copy_file_block = "\n".join(copy_file_rules) + "\n\n" if copy_file_rules else ""
 
@@ -1318,6 +1293,11 @@ alias(
             quoted = f'"{d_f}"'
             if quoted not in cc_excludes:
                 cc_excludes.append(quoted)
+        if generator_metadata and generator_metadata.extra_cc_srcs:
+            for s in generator_metadata.extra_cc_srcs:
+                for q in (f'"{s}"', f'":{s}"'):
+                    if q in cc_excludes:
+                        cc_excludes.remove(q)
         cc_excludes_str = "\n        " + ",\n        ".join(cc_excludes) + ",\n    "
 
         if generator_metadata and generator_metadata.defines_select:
@@ -1381,6 +1361,11 @@ alias(
             if x not in seen_extra:
                 seen_extra.add(x)
                 dedup_extra.append(x)
+        if generator_metadata and generator_metadata.extra_cc_srcs:
+            for s in generator_metadata.extra_cc_srcs:
+                for q in (f'"{s}"', f'":{s}"'):
+                    if q in dedup_extra:
+                        dedup_extra.remove(q)
         if dedup_extra:
             prefix = "[\n        " + ",\n        ".join(dedup_extra) + ",\n    ] + "
         else:

@@ -825,6 +825,44 @@ class CPANIndexerIntegrationTest(unittest.TestCase):
         module_bazel = (d / "MODULE.bazel").read_text(encoding="utf-8")
         self.assertIn('bazel_dep(name = "bazel_lib"', module_bazel)
 
+    def test_copied_c_file_not_included_becomes_cc_srcs(self) -> None:
+        """Verifies that a copied .c file that is not #include'd by XS/C is added to cc_srcs instead of textual_hdrs."""
+        tar_path = self._create_sample_tar(
+            "Proc-Sample-1.00",
+            {
+                "Sample.xs": 'MODULE = Proc::Sample\nvoid foo();\n',
+                "os/Linux.c": 'void foo() {}\n',
+                "lib/Proc/Sample.pm": 'package Proc::Sample;\n1;\n',
+                "Makefile.PL": (
+                    'use ExtUtils::MakeMaker;\n'
+                    'use File::Copy;\n'
+                    'copy("os/Linux.c", "OS.c");\n'
+                    'WriteMakefile(NAME => "Proc::Sample", VERSION_FROM => "lib/Proc/Sample.pm", OBJECT => "Sample.o OS.o");\n'
+                ),
+            },
+        )
+        metadata = GeneratorMetadata(
+            cc_srcs_exclude=["os/**/*.c"],
+        )
+        meta_yaml = self.index_dir / "modules" / "perl-proc-sample" / "generator-metadata.yaml"
+        meta_yaml.parent.mkdir(parents=True, exist_ok=True)
+        meta_yaml.write_text(dump_yaml_subset(metadata.to_dict()), encoding="utf-8")
+
+        manager = IndexManager(index_dir=self.index_dir)
+        d = manager.create_new_port(
+            dist_name="Proc-Sample",
+            upstream_version="1.00",
+            archive_url=tar_path.as_uri(),
+            archive_sha256="",
+            archive_path=tar_path,
+            target_version="1.00.cpan1",
+        )
+        build_bazel = (d / "overlay" / "BUILD.bazel").read_text(encoding="utf-8")
+        self.assertIn('copy_file(\n    name = "copy_OS_c",\n    src = "os/Linux.c",\n    out = "OS.c",\n)', build_bazel)
+        self.assertIn('":copy_OS_c"', build_bazel)
+        self.assertIn('cc_srcs = [\n        ":copy_OS_c",\n    ] + glob(', build_bazel)
+        self.assertNotIn('":copy_OS_c"', build_bazel.split("textual_hdrs")[1])
+
     def test_build_requires_included_in_test_deps(self) -> None:
         """Verifies that build dependencies from lockfile are included in test_deps."""
         tar_path = self._create_sample_tar(
@@ -908,12 +946,14 @@ class HermeticGeneratorIssue84Test(unittest.TestCase):
         valid_dict = {
             "extra_deps": ["@perl-encode"],
             "extra_test_deps": ["@perl-test-nowarn"],
+            "extra_cc_srcs": [":my_c_target"],
             "is_xs": True,
             "native_deps": ["@zlib"],
         }
         meta = GeneratorMetadata.from_dict(valid_dict)
         self.assertEqual(meta.extra_deps, ["@perl-encode"])
         self.assertEqual(meta.extra_test_deps, ["@perl-test-nowarn"])
+        self.assertEqual(meta.extra_cc_srcs, [":my_c_target"])
         self.assertTrue(meta.is_xs)
 
         # 2. Unknown field rejection
