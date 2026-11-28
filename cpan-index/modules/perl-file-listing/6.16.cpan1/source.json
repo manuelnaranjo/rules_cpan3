@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Listing-6.16.tar.gz",
-    "integrity": "sha256-GJs6E/wKG6QSudnsWQHp5eREzHRrnwFW1DmTcNM2VcY=",
-    "strip_prefix": "File-Listing-6.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-in0sZxpv/ZlBwku9qCLzl9CTYcXG1fJnJaTJHeMOzSQ="
-    }
-}

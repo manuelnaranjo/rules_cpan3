@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/PerlX-Maybe-XS-1.001.tar.gz",
-    "integrity": "sha256-SO+X8GlJ5lJ30aCsJp+8VDsssIvWE/Ag3iCYvtakC7Y=",
-    "strip_prefix": "PerlX-Maybe-XS-1.001",
-    "overlay": {
-        "BUILD.bazel": "sha256-soDnpBC8hXxhWB05umPKKfyX0PKFrDX968l6vq3O8aY="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IZ/IZUT/Common-CLI-0.04.tar.gz",
-    "integrity": "sha256-RSyC/RdG18+OgkR84XWpeSt3qkeIff9Ju9n0l29n7l8=",
-    "strip_prefix": "Common-CLI-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-q02pLdWkF4Xlp3CPXWtjPxNCeVO10bMQADzSK9Dbi44="
-    }
-}

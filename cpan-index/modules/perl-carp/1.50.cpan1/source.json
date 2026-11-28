@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Carp-1.50.tar.gz",
-    "integrity": "sha256-9Sc7ThptUbIplsSMs6PLxy/UVsQDj1wgsSfi1Ly869k=",
-    "strip_prefix": "Carp-1.50",
-    "overlay": {
-        "BUILD.bazel": "sha256-hb1pbMjP/RRGreZWOUbD8r89+teoHTc1LDmxE6qq1tw="
-    }
-}

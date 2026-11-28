@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARIOROY/MCE-1.904.tar.gz",
-    "integrity": "sha256-b8Jqs58nISlP7QjgfGNQqn6dYlLpFcWjvD5Dqm9TcHw=",
-    "strip_prefix": "MCE-1.904",
-    "overlay": {
-        "BUILD.bazel": "sha256-+5gb4tTm+0XPcjBLlyPs0dqtu1JOpR4340DuTFrfrG8="
-    }
-}

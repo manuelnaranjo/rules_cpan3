@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/W/WO/WOLLMERS/Lingua-StopWords-0.12.tar.gz",
-    "integrity": "sha256-OY1W7UIQqRUYC7IR53vrHPrWlfcUciRSNFtCZHWlNcM=",
-    "strip_prefix": "Lingua-StopWords-0.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-zRmZ1BQcyCRF0EQ/9D5XELdX2zOAOhCJtKT5+5nIjMI="
-    }
-}

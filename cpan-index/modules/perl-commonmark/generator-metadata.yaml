@@ -1,2 +1,0 @@
-native_deps:
-- '@cmark//:cmark'

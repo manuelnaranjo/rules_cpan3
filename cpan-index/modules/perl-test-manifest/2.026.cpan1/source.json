@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Test-Manifest-2.026.tar.gz",
-    "integrity": "sha256-4DVdoKia/hABaKwYUeK8U8g3OPDbOHpTA4sZeIKarSU=",
-    "strip_prefix": "Test-Manifest-2.026",
-    "overlay": {
-        "BUILD.bazel": "sha256-gJoZ20sCVzqvy1QOA9bQno+md9TttbEUJdaP6Y1roDw="
-    }
-}

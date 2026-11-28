@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/PkgConfig-0.26026.tar.gz",
-    "integrity": "sha256-U1LtFWpLXejFI3ce45n2+M5ei/z4Z08eHb1KjINkO4U=",
-    "strip_prefix": "PkgConfig-0.26026",
-    "overlay": {
-        "BUILD.bazel": "sha256-uFTO6NuWcbERtJ0/WuJ3X3Td8n1nJS1fRnLtoK/L+Pw="
-    }
-}

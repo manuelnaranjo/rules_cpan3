@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz",
-    "integrity": "sha256-qMYB2zRc9pKYEvOCBi9x9eqsrT9PG+FbO+nXPSkadN0=",
-    "strip_prefix": "Devel-Confess-0.009004",
-    "overlay": {
-        "BUILD.bazel": "sha256-pzB6t0zTffUJcfPZeM+WOy1dF9AA6q8GCfeohcPdFKw="
-    }
-}

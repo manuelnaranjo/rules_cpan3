@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TINITA/Test-YAML-1.07.tar.gz",
-    "integrity": "sha256-HzANA09GKYy5KWCRLMBLrDP7J/BbiFLY8FHhELnNmV8=",
-    "strip_prefix": "Test-YAML-1.07",
-    "overlay": {
-        "BUILD.bazel": "sha256-Kp2M5E+5ULo1sJWudUZhtU3G4pNkoyxslvjcCa0zvIQ="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DRTECH/Locale-Maketext-Lexicon-1.00.tar.gz",
-    "integrity": "sha256-tz9rBKWNPw446/IRWkwVMvGk7vb6xcaipEnk4Uwd3Hw=",
-    "strip_prefix": "Locale-Maketext-Lexicon-1.00",
-    "overlay": {
-        "BUILD.bazel": "sha256-IwGtPQwRVX3eblDuZhC4UQSABG8lhx2ZXvs7cMA0XD8="
-    }
-}

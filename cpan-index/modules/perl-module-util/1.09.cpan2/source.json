@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MATTLAW/Module-Util-1.09.tar.gz",
-    "integrity": "sha256-bPvLakUGREbsiqDuGn3dxCC1RGkwM0QYeu+E0sfz4sY=",
-    "strip_prefix": "Module-Util-1.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-XEqesC0vfImto4NRmamZoJMSQBe/lUH4ZJs57CQtgTY="
-    }
-}

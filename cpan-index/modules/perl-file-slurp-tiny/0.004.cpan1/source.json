@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/File-Slurp-Tiny-0.004.tar.gz",
-    "integrity": "sha256-RSmVvuq/DpI+Zf3GJ6cl27EsnhDADYAYwW0QumJ1fx4=",
-    "strip_prefix": "File-Slurp-Tiny-0.004",
-    "overlay": {
-        "BUILD.bazel": "sha256-7P9V5ik23jclrOLT5MBiahrC+VTHzgRT8KdK2zaIvEc="
-    }
-}

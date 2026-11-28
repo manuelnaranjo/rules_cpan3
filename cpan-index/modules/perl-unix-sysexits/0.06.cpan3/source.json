@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JM/JMATES/Unix-Sysexits-0.06.tar.gz",
-    "integrity": "sha256-GbuR1Nyrz4DUEs7t5Li+NZWAGR25zfUpDIzdvsZw+PQ=",
-    "strip_prefix": "Unix-Sysexits-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-4MryrTpGdpkYOlYT7Qd+SQIwyhpYVy+PaeWZ333pGBY="
-    }
-}

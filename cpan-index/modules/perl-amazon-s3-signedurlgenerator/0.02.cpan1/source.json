@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/F/FA/FAYLAND/Amazon-S3-SignedURLGenerator-0.02.tar.gz",
-    "integrity": "sha256-fCLkAAx+xZJL8e70RnEkYJYf6WNNqt27j8rYf5mBukE=",
-    "strip_prefix": "Amazon-S3-SignedURLGenerator-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-yVn2qx9r4TwlpRuqPBsF3cydQgf5+LA8TZ0kByAoo34="
-    }
-}

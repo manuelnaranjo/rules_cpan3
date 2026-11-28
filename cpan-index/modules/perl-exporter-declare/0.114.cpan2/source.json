@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Exporter-Declare-0.114.tar.gz",
-    "integrity": "sha256-S9cNbKdvb2un5MYY1KyTuFk6WPEjPMvhixD18gTx1OQ=",
-    "strip_prefix": "Exporter-Declare-0.114",
-    "overlay": {
-        "BUILD.bazel": "sha256-ENQWfEeNCIS5ab4Emjr0qxUwPxJA4uXyp/Wxpdbvmls="
-    }
-}

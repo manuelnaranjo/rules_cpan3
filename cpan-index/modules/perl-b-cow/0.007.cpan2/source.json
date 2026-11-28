@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/B-COW-0.007.tar.gz",
-    "integrity": "sha256-EpDa8ifosJiJoxzxguKRBvHPnxpOm/d1L53pLtEVi0Q=",
-    "strip_prefix": "B-COW-0.007",
-    "overlay": {
-        "BUILD.bazel": "sha256-7m3nkeZfvxivgw/D6lHWJwAVTxoar7O+sm/YqoZl72I="
-    }
-}

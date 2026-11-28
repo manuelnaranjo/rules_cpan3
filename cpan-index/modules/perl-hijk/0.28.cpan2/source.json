@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GU/GUGOD/Hijk-0.28.tar.gz",
-    "integrity": "sha256-YvcsGRsrXuVYQqkm/eyMYw7mY7MvAZVkTEXkNWmb8Ds=",
-    "strip_prefix": "Hijk-0.28",
-    "overlay": {
-        "BUILD.bazel": "sha256-TEboI0wY8tfOlM1Il0xfiRRnFCI6ovY0tC1s3Yb6czE="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEZUMI/MIME-Charset-1.013.1.tar.gz",
-    "integrity": "sha256-G7em4MDSUfI9bmC/hMmt78W3TuxYR1v+5NORB+YIcPA=",
-    "strip_prefix": "MIME-Charset-1.013.1",
-    "overlay": {
-        "BUILD.bazel": "sha256-SFmek59zg7TpCpjnOoM7u9PrlKQZskmtVGoawdreDcc="
-    }
-}

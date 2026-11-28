@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Archive-Tar-3.14.tar.gz",
-    "integrity": "sha256-F3zgUGEkr74++Vg2dh+weZyUG4e3m6xIm93Gzahg2QQ=",
-    "strip_prefix": "Archive-Tar-3.14",
-    "overlay": {
-        "BUILD.bazel": "sha256-XGXL1aTlkg4xIGEn1pA7kFnBDt/kds63LPUKP3k14uw="
-    }
-}

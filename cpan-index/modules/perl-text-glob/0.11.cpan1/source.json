@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Text-Glob-0.11.tar.gz",
-    "integrity": "sha256-BpzNSdPwot7bEV9L3J+6wHqDWShAlT0fzfw5650wUoc=",
-    "strip_prefix": "Text-Glob-0.11",
-    "overlay": {
-        "BUILD.bazel": "sha256-fOV2i+pXklQN1QdflcCdIlerEqrhDYLwynmxoJXH/UM="
-    }
-}

@@ -1,5 +1,0 @@
-manual_tests:
-- t/10ldif-controls.t
-- t/07filtermatch.t
-- t/03schema.t
-- t/00ldif-entry.t

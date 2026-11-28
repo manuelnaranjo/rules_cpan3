@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EG/EGILES/Test-Compile-v3.3.3.tar.gz",
-    "integrity": "sha256-3zqzDstRrhShqpufwUMkyWnMJY7yrazDW8aBlBEtpoU=",
-    "strip_prefix": "Test-Compile-v3.3.3",
-    "overlay": {
-        "BUILD.bazel": "sha256-NG123F7MgHtRb1TKbKivS0A5ba0igebQbZH4aI9zyAM="
-    }
-}

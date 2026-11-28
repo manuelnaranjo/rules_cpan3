@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LN/LNATION/Import-Export-1.02.tar.gz",
-    "integrity": "sha256-qYKb5tq6cv6ge+UPw4NT0+97x5ee4xJUlHPL6BFtXjQ=",
-    "strip_prefix": "Import-Export-1.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-wP6YiFHftB0HmD7Kpq2v2WyWO6TIhwhjTFDLNq8EGfc="
-    }
-}

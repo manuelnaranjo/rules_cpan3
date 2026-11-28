@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Role-Tiny-2.002005.tar.gz",
-    "integrity": "sha256-RhjsUkYYwQTcKKjMhq8SmgDK0oKup/THUGC6BdTI9Nc=",
-    "strip_prefix": "Role-Tiny-2.002005",
-    "overlay": {
-        "BUILD.bazel": "sha256-atswafjWquAJdnr0mnNcpCTMenFOpHX3d3TtDShZIqE="
-    }
-}

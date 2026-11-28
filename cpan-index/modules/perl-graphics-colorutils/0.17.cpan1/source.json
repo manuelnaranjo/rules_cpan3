@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JA/JANERT/Graphics-ColorUtils-0.17.tar.gz",
-    "integrity": "sha256-PNYbrFapz3j8EylB34dikttwuHKnIgzN5u78s27WNgQ=",
-    "strip_prefix": "Graphics-ColorUtils-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-hsSAGlHTkWlng1n3+b6o46gfAScPDosgdGu/3gooLQE="
-    }
-}

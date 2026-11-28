@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RR/RRWO/HTTP-Headers-ActionPack-0.10.tar.gz",
-    "integrity": "sha256-ZCl9SVHCtwWZNJs1bqmo9/c/k2fmSsYts5z52iBQaVY=",
-    "strip_prefix": "HTTP-Headers-ActionPack-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-HmxnUvDIQ9bVICzZ3wDbkE0a7UW1mi0NUXRjpRZGj4U="
-    }
-}

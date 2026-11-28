@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/MailTools-2.22.tar.gz",
-    "integrity": "sha256-O/aLshIpj6aZpSdJ3d/zVYOnTzapLKichDuFTynYfHc=",
-    "strip_prefix": "MailTools-2.22",
-    "overlay": {
-        "BUILD.bazel": "sha256-xoVXe90a/JwE9Q/9lF6AWPcJ3dzD+XXWoJo7otbdl5w="
-    }
-}

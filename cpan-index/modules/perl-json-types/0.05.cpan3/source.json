@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TY/TYPESTER/JSON-Types-0.05.tar.gz",
-    "integrity": "sha256-9k2t9m7LezB7moaJ6p6r8P0/ap2CBGfF7q7d0TvO2es=",
-    "strip_prefix": "JSON-Types-0.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-LVgvOGbQIEVkJCwzh4L/dZ7xmHZGogGdbAxus98dZwo="
-    }
-}

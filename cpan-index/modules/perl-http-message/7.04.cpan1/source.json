@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Message-7.04.tar.gz",
-    "integrity": "sha256-aZ8zUNu3vY/cnzsBOwyRt8BZeDcIRD45vDlfozNS8AY=",
-    "strip_prefix": "HTTP-Message-7.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-EW3Xu4lrSPtyOndrN4OdsnhTkLxmenN/sZta7C2HV28="
-    }
-}

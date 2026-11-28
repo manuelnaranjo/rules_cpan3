@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/W/WE/WESM/DBIx-Class-Candy-0.005004.tar.gz",
-    "integrity": "sha256-Yx4WHAj/evv5o/ybSdHXlGzIlzDrRA/I7YfFidDgCu4=",
-    "strip_prefix": "DBIx-Class-Candy-0.005004",
-    "overlay": {
-        "BUILD.bazel": "sha256-+Vpz7ghEZsACaFDjle4TvyesQ4vI+LmHfe6mCUwhuWs="
-    }
-}

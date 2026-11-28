@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/File-Slurper-0.014.tar.gz",
-    "integrity": "sha256-1aNkhzOYiMPNdY5kgWDuHXDrQVPKy6/1eEbbzvs0Sww=",
-    "strip_prefix": "File-Slurper-0.014",
-    "overlay": {
-        "BUILD.bazel": "sha256-0+QNIhR+2I/R9pO9FxCQIgfBVt8yAhMxIlmpFYOyVH0="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Convert-ASN1-0.37.tar.gz",
-    "integrity": "sha256-ASuQu7kx4Ek0ChFNvFEPhFMJ2cp2zGxPrXUdMXtL8Po=",
-    "strip_prefix": "Convert-ASN1-0.37",
-    "overlay": {
-        "BUILD.bazel": "sha256-PfBHhhG/ePDesK9eQVeUxf2hPMsNXX53IL2WUFoNs5Q="
-    }
-}

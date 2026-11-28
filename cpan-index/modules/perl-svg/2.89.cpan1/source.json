@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MANWAR/SVG-2.89.tar.gz",
-    "integrity": "sha256-dHUfaICsy/k7IjUWHsRZo9B5CZKHlMkPGtyRsVjbdxE=",
-    "strip_prefix": "SVG-2.89",
-    "overlay": {
-        "BUILD.bazel": "sha256-LlbIGAEmB73Ol79W0pbI++bSFdGelU3BVIXYjWiUPqQ="
-    }
-}

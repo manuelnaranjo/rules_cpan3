@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AC/ACID/Class-Std-Fast-v0.0.8.tar.gz",
-    "integrity": "sha256-G9Q3Y8ajcxgwl6MOeH9dZxOw2ydRHFLVMyZrWdLPp4A=",
-    "strip_prefix": "Class-Std-Fast-v0.0.8",
-    "overlay": {
-        "BUILD.bazel": "sha256-tKIY4LEaR5H20/xk+FRwB17JWLpGGVQCAsRFqaUvEO4="
-    }
-}

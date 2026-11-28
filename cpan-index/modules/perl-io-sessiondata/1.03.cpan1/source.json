@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PH/PHRED/IO-SessionData-1.03.tar.gz",
-    "integrity": "sha256-ZKRxKj7bs/0QIw2ylsKcjGbwZq37wMPfakglj+85Ld0=",
-    "strip_prefix": "IO-SessionData-1.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-cd+mMTeeZfHT5EeOgfyRtQ+nEMkW5L6TRbmIonCIlEU="
-    }
-}

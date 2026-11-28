@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/PathTools-3.75.tar.gz",
-    "integrity": "sha256-pVhQOqax+McnwAczOQgad4iGBqpwGtoa1i3Z2MP5RaI=",
-    "strip_prefix": "PathTools-3.75",
-    "overlay": {
-        "BUILD.bazel": "sha256-1KAx4ZCrhhMS6AphbP2qLKaCuOuuwGa/VzS6KVGqJjM="
-    }
-}

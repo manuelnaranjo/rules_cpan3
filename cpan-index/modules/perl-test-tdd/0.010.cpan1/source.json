@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCHAVES/Test-Tdd-0.010.tar.gz",
-    "integrity": "sha256-iCXuRCAK4OZhz85Rbks5HTogPcNksYXuuzdqlohNzMo=",
-    "strip_prefix": "Test-Tdd-0.010",
-    "overlay": {
-        "BUILD.bazel": "sha256-Dsa6yC5OVGV2MrwLBAI+s2gmJGTKtxRzheWr9ZGTx/4="
-    }
-}

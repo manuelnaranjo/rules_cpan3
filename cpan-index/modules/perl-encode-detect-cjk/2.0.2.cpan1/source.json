@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/F/FO/FOOLFISH/Encode-Detect-CJK-2.0.2.tar.gz",
-    "integrity": "sha256-mAx7kRL5T7LOROfk9bhvPwRMswLX7tFzFCXM1MkpiOg=",
-    "strip_prefix": "Encode-Detect-CJK-2.0.2",
-    "overlay": {
-        "BUILD.bazel": "sha256-u7AYptDF5wbEl5iI5TV2vmxg/eSkdD4YtJM4HBmGC2Y="
-    }
-}

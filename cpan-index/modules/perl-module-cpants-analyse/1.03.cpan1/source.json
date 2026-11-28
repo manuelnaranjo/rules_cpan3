@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Module-CPANTS-Analyse-1.03.tar.gz",
-    "integrity": "sha256-0OqFHALrJwA9gkJUeDdVJTn/YdTwhwKM3q0Advu9Rjo=",
-    "strip_prefix": "Module-CPANTS-Analyse-1.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-2yiMgu58HpAOgpJ///q/JxXH1sYikAbutiEuI9NaE9s="
-    }
-}

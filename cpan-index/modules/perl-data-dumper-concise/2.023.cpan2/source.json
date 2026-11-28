@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Data-Dumper-Concise-2.023.tar.gz",
-    "integrity": "sha256-psIvETyvMRN1kN7xtwKKfnGO+s4yKCctBnLCXgNdWFM=",
-    "strip_prefix": "Data-Dumper-Concise-2.023",
-    "overlay": {
-        "BUILD.bazel": "sha256-fu/5I2kebzUqQK7Cc6aGEjm52pkmJutG+67tQAXwt94="
-    }
-}

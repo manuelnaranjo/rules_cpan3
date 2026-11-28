@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SN/SNOWHARE/Unicode-MapUTF8-1.14.tar.gz",
-    "integrity": "sha256-hd2x3ojcluTyEcpX2WheQc5NoHZGcRF9zusOBcrYpbA=",
-    "strip_prefix": "Unicode-MapUTF8-1.14",
-    "overlay": {
-        "BUILD.bazel": "sha256-wtGwMdVkMBdsS59dWvUXTEPCELRZaphbMfjLtPX1l4E="
-    }
-}

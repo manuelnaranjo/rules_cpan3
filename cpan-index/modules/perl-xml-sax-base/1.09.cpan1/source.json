@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-SAX-Base-1.09.tar.gz",
-    "integrity": "sha256-Zss1W6TvR8EMpzi9NZmXI2RDhqyFOrvrUTKEH16KKtA=",
-    "strip_prefix": "XML-SAX-Base-1.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-LDqEdtLt/gAe8pL35u72UjAu68cyV1aYga6DW+nmsZ0="
-    }
-}

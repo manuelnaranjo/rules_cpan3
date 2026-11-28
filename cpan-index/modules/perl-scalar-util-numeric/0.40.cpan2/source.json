@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHOCOLATE/Scalar-Util-Numeric-0.40.tar.gz",
-    "integrity": "sha256-11AbbUEHA9tbHBlC+/xBr4lko1Ul1/dmBYrPXKLMREA=",
-    "strip_prefix": "Scalar-Util-Numeric-0.40",
-    "overlay": {
-        "BUILD.bazel": "sha256-ghHZkxixlUQa/D1juNdHykrk/S8PCtvLvQgSb0FEK0M="
-    }
-}

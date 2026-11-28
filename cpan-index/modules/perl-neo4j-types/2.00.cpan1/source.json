@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AJ/AJNN/Neo4j-Types-2.00.tar.gz",
-    "integrity": "sha256-vQAtrzDlQq1+I9UFcD7XwWnZ4SOT0q0M9yDP1G8NmGM=",
-    "strip_prefix": "Neo4j-Types-2.00",
-    "overlay": {
-        "BUILD.bazel": "sha256-kTcmXde3x5iEcg4SyQZn6dS/KNJetQybReDu4nwPiwM="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA/Spreadsheet-WriteExcel-2.40.tar.gz",
-    "integrity": "sha256-41aq1oZs8TVzEmjuDpeaGXRDwVoEh46c8+gNAirWwH4=",
-    "strip_prefix": "Spreadsheet-WriteExcel-2.40",
-    "overlay": {
-        "BUILD.bazel": "sha256-rH9Hk0tStu9M3griWbeZm9/kNRpGqd+c5AFaqiumHgI="
-    }
-}

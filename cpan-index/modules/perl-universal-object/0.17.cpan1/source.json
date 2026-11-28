@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STEVAN/UNIVERSAL-Object-0.17.tar.gz",
-    "integrity": "sha256-H9iEXlPLNnFQMOP6IPF3k8ylBazsqkYKZhHJB81ELks=",
-    "strip_prefix": "UNIVERSAL-Object-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-4vteMQDFp6ETm/0c4QDQF2AX2Jlc+Ojxxj/7K6yJcBk="
-    }
-}

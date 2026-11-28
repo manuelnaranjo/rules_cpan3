@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MI/MITHALDU/PPI-1.291.tar.gz",
-    "integrity": "sha256-dKwQv2ZEPqgT+zfS/1IZxNjmhTeSctZpnIEqOdkfPB0=",
-    "strip_prefix": "PPI-1.291",
-    "overlay": {
-        "BUILD.bazel": "sha256-d26hNlY2Jud5+t6mAJ+KQCObuir9YwGKgSlCJtbpFlM="
-    }
-}

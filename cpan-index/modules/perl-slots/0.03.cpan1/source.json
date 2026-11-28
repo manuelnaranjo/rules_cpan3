@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STEVAN/slots-0.03.tar.gz",
-    "integrity": "sha256-mIPbnfEFmZcxnBBss82zv2i+FAqDkdbD8FdBBDjlQBk=",
-    "strip_prefix": "slots-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-EdB5VTVzR5oyaXbnXDUYrQ+biUf9LMH+cKUXSEb43GQ="
-    }
-}

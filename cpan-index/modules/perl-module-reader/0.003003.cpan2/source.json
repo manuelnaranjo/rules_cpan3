@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Module-Reader-0.003003.tar.gz",
-    "integrity": "sha256-LVoK23clF3VPv+wBgNalEDm7DNO9MxalnqoywF3d4oQ=",
-    "strip_prefix": "Module-Reader-0.003003",
-    "overlay": {
-        "BUILD.bazel": "sha256-fIvTUODUaULlzfBH7xy539prQj+VqhALO3wkvtquzY0="
-    }
-}

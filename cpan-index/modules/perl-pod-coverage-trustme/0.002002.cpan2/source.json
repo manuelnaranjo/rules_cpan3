@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Pod-Coverage-TrustMe-0.002002.tar.gz",
-    "integrity": "sha256-DJPMf14F9LpsKIAasdzTD9TplnnQXaEswJ+scwZoQ+Y=",
-    "strip_prefix": "Pod-Coverage-TrustMe-0.002002",
-    "overlay": {
-        "BUILD.bazel": "sha256-b4euUDHkeq1U+KBW9XX3pjNW8oQYbxXUh9GEcYuaKPI="
-    }
-}

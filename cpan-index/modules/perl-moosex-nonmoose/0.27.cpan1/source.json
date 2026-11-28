@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/MooseX-NonMoose-0.27.tar.gz",
-    "integrity": "sha256-b8eJO0en24EqPB/ou5DZwjUUPGk3JR5XDie9vQ2ETs4=",
-    "strip_prefix": "MooseX-NonMoose-0.27",
-    "overlay": {
-        "BUILD.bazel": "sha256-7uRZclloA5mFmRZeboVrmbGpMp53yTcHDCBgK5FqI6c="
-    }
-}

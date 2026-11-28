@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Fatal-0.019.tar.gz",
-    "integrity": "sha256-2Pa2yHuzmafWDClalKS3QahbI4ic/Wty8f9i8MVc9ws=",
-    "strip_prefix": "Test-Fatal-0.019",
-    "overlay": {
-        "BUILD.bazel": "sha256-tmVqjzgfGzlE6LvtuaOdZmPqqFxxtzfIVBbXvlBZw6w="
-    }
-}

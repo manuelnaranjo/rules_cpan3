@@ -1,9 +1,0 @@
-manual_tests:
-- '*'
-cc_srcs_exclude:
-- zlib-src/**
-defines:
-- NO_VIZ
-- USE_PPPORT_H
-- Perl_crz_BUILD_ZLIB=0
-- GZIP_OS_CODE=3

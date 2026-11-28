@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MANWAR/XML-XPath-1.49.tar.gz",
-    "integrity": "sha256-nISlG+TNtHv4h2bsqwUf4JIBZHKWnjn0rNugCYhfqr4=",
-    "strip_prefix": "XML-XPath-1.49",
-    "overlay": {
-        "BUILD.bazel": "sha256-yHKaPmAOR3eRFZ0kvyKoqF7WVuB0cMVCiEEfnmjvTQw="
-    }
-}

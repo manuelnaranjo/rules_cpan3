@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/Hash-MoreUtils-0.06.tar.gz",
-    "integrity": "sha256-25qPuGfVB1PDgIiaXlQHVlG14IybO3IctyIMCINUfeg=",
-    "strip_prefix": "Hash-MoreUtils-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-dRBF4xzzyjaFj/edwOtqFwMWQUja9ry6DhZxlfBFENY="
-    }
-}

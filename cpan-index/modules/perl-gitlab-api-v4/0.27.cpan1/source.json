@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BL/BLUEFEET/GitLab-API-v4-0.27.tar.gz",
-    "integrity": "sha256-1JvylctGocyU7J0vkFEXHjkOVg366hzQauhSGU1vwlk=",
-    "strip_prefix": "GitLab-API-v4-0.27",
-    "overlay": {
-        "BUILD.bazel": "sha256-0Puq9gtmx16DCCngrgvf6zjeEpAF/HndqXeskmIt96A="
-    }
-}

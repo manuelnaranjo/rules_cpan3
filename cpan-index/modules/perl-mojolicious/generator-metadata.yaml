@@ -1,2 +1,0 @@
-manual_tests:
-- t/mojo/exception.t

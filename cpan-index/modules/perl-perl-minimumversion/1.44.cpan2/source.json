@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DB/DBOOK/Perl-MinimumVersion-1.44.tar.gz",
-    "integrity": "sha256-/6nIovCZZgqBNh64usVqM1eTs+Fg+lsdlweLgxQs6Ms=",
-    "strip_prefix": "Perl-MinimumVersion-1.44",
-    "overlay": {
-        "BUILD.bazel": "sha256-KifJ872ZFipX5iAStH1yZtevFtHR2E16zpzXrmGJ7eo="
-    }
-}

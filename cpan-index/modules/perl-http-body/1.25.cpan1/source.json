@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GE/GETTY/HTTP-Body-1.25.tar.gz",
-    "integrity": "sha256-FgRa6I0x6TVJsUSwmEikgnCNrWjSq0iB7xap4UEbVQU=",
-    "strip_prefix": "HTTP-Body-1.25",
-    "overlay": {
-        "BUILD.bazel": "sha256-bhfvV2IK+QdbfeqZLIoLr1HnN0PKIr29wtFhEgUSg04="
-    }
-}

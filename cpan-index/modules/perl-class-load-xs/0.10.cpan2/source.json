@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Load-XS-0.10.tar.gz",
-    "integrity": "sha256-W8Is9Tbr/SVkxb2vQvDYpM7j0ZMPyLRLfUpCA4YirdE=",
-    "strip_prefix": "Class-Load-XS-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-y5dpa2R/3EDXp7aqVMaKLOrMd30rP5rR4/otDV9j9sY="
-    }
-}

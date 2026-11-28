@@ -1,3 +1,0 @@
-manual_tests:
-- t/000.2-warn.t
-- t/026-caller_message.t

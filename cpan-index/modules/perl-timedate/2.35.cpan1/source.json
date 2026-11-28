@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/TimeDate-2.35.tar.gz",
-    "integrity": "sha256-ut3QMGri6G6ewo095UOeUUZD6As3NeQ70Pu0JtczBN4=",
-    "strip_prefix": "TimeDate-2.35",
-    "overlay": {
-        "BUILD.bazel": "sha256-Dr7vYcs2RSpgLOkd8TnISSdfvnZxWRPZYuWj3jfSA10="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-MIME-1.954.tar.gz",
-    "integrity": "sha256-bdabAUNbZFrsxTVNmFSnDLh2QetEalJeerJBzvo8xNM=",
-    "strip_prefix": "Email-MIME-1.954",
-    "overlay": {
-        "BUILD.bazel": "sha256-nxRFhAbCZeeif1japcC9bbSSOlQ6HbyafLDuSHASOUQ="
-    }
-}

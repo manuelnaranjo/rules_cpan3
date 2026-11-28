@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IV/IVAN/Net-HTTPS-Any-0.12.tar.gz",
-    "integrity": "sha256-G7+ZD/TPi+mdnQlmfnDpO3nCtPaAQAnZeIXxvhlepuM=",
-    "strip_prefix": "Net-HTTPS-Any-0.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-47eNv3AXFSYnURFRmFBC38GT/LywfT1je4jVYm+JqHU="
-    }
-}

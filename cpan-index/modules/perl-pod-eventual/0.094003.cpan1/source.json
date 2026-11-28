@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Pod-Eventual-0.094003.tar.gz",
-    "integrity": "sha256-fwYMw00RZWzgadsGHj1g7cDKvI+JpKLcfqrpXayFbS0=",
-    "strip_prefix": "Pod-Eventual-0.094003",
-    "overlay": {
-        "BUILD.bazel": "sha256-QqURVIoF7ThgZ3tKbwFdDvoEY/uADYLLwNkJlC8uxAI="
-    }
-}

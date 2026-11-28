@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BA/BARBIE/Test-CPAN-Meta-0.25.tar.gz",
-    "integrity": "sha256-9VtPnPa8OW0P6AJyZ2hcsqxK/86JfQlnoxf6xttajbU=",
-    "strip_prefix": "Test-CPAN-Meta-0.25",
-    "overlay": {
-        "BUILD.bazel": "sha256-leEAIUTpxGWqC3l89qMBDdadZHACxtWAst/UezCY3AA="
-    }
-}

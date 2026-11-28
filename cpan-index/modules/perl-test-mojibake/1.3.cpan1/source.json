@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SY/SYP/Test-Mojibake-1.3.tar.gz",
-    "integrity": "sha256-j/51/5tpNSSIcn3Kc9uR+KoUtZ8voQTrdxfA1xpfGzM=",
-    "strip_prefix": "Test-Mojibake-1.3",
-    "overlay": {
-        "BUILD.bazel": "sha256-42MkUV+ObhH7I7//qLKb6U/8zhyG6PVSqAQx68c+CDs="
-    }
-}

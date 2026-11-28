@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Class-ErrorHandler-0.04.tar.gz",
-    "integrity": "sha256-NC0tz8eXogvugXmxuWuFwK56W0iCc1lSPNjHTD5wRQI=",
-    "strip_prefix": "Class-ErrorHandler-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-6K3w4+tp0C7NYdVS8lpFb4cBKsM/aZLzFdaadQ1DiMU="
-    }
-}

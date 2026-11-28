@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RO/ROODE/Iterator-0.03.tar.gz",
-    "integrity": "sha256-W4igQ06wSSe9CmXm+SDzrmrDmzIucuGxlwGLcLDO+H8=",
-    "strip_prefix": "Iterator-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-rbSh9RQuxb/cwsVBngEKQiUUlIVLtxNpeSX1gdwcMIc="
-    }
-}

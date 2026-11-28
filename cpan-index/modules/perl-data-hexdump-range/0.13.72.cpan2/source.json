@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NK/NKH/Data-HexDump-Range-0.13.72.tar.gz",
-    "integrity": "sha256-hdgN+grYovyv+ry5/hxtO1KaeGTf1R0RoGJ6Awbz074=",
-    "strip_prefix": "Data-HexDump-Range-0.13.72",
-    "overlay": {
-        "BUILD.bazel": "sha256-iQ1GuYRB6KZLeXxqaewNzQC0KztSS0MKKayZp0U7HBM="
-    }
-}

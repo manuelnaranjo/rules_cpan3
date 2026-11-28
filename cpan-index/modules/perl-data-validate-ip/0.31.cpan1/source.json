@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Data-Validate-IP-0.31.tar.gz",
-    "integrity": "sha256-c0r/hrb5ytQOHE2oHyj68Y4IAsdqVm2V5WE9QxgYL8E=",
-    "strip_prefix": "Data-Validate-IP-0.31",
-    "overlay": {
-        "BUILD.bazel": "sha256-BHc8aAvHRepDIElKz8/hCIGsBD75WETxN+dOVcgwWAY="
-    }
-}

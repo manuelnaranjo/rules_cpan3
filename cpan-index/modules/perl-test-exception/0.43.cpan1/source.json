@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Exception-0.43.tar.gz",
-    "integrity": "sha256-FWsT8Hdk92bYtFpDco8kOa+Bo1EmJUON6reDt4g+tTM=",
-    "strip_prefix": "Test-Exception-0.43",
-    "overlay": {
-        "BUILD.bazel": "sha256-Ioqgh6ovLH4OL/Yenzgqe2UpSaFSKzNOzAEahhoUgjU="
-    }
-}

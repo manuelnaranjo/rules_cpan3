@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/V/VI/VIPUL/Math-Fibonacci-1.5.tar.gz",
-    "integrity": "sha256-cKgobpRVjfmdyS9S2D4eIKe494UrzDod59njOCYLmbo=",
-    "strip_prefix": "Math-Fibonacci-1.5",
-    "overlay": {
-        "BUILD.bazel": "sha256-xBqNKYIjUWDcCTTyds6wr6awtsvDRgLP7eWl1s7rKac="
-    }
-}

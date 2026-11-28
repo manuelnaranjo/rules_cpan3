@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Plugin-UUID-0.002011.tar.gz",
-    "integrity": "sha256-3n6kFhfXuWx9GE0aAcui3DDFZtHOAseyMonmrSakDHQ=",
-    "strip_prefix": "Test2-Plugin-UUID-0.002011",
-    "overlay": {
-        "BUILD.bazel": "sha256-vSl2mb3yFaSsIaVEpfW64En1Z6m9GkPKV3uNzS15kDU="
-    }
-}

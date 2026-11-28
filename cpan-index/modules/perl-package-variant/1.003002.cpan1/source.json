@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/Package-Variant-1.003002.tar.gz",
-    "integrity": "sha256-su2EnS9M3WZGdRLao/FDJm1t+BDF+ukXWyUsV7wVNtw=",
-    "strip_prefix": "Package-Variant-1.003002",
-    "overlay": {
-        "BUILD.bazel": "sha256-F+nMx7wWGoHWG2PAngMj7m7mww8i+4ltSdzxtmk9YEw="
-    }
-}

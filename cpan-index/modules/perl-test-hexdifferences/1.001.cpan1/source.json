@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STEFFENW/Test-HexDifferences-1.001.tar.gz",
-    "integrity": "sha256-pjlF7N1CCvwxEJT5OiIM+zXfIyQt5hnlO6Z0d6E2kKI=",
-    "strip_prefix": "Test-HexDifferences-1.001",
-    "overlay": {
-        "BUILD.bazel": "sha256-SQ3ksA3WiTYTIGh6ltNUFLf77ngaIoIbovaY3aRdY/E="
-    }
-}

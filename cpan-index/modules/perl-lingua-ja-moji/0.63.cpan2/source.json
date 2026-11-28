@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BK/BKB/Lingua-JA-Moji-0.63.tar.gz",
-    "integrity": "sha256-UsHgJe8WK89pUZMwt3zgKu/aHkngw/kQR4RKX58rD1E=",
-    "strip_prefix": "Lingua-JA-Moji-0.63",
-    "overlay": {
-        "BUILD.bazel": "sha256-E3OlQJRSYv8huigr2k6nhVNooBQVz8lfG+sdQzGUaFE="
-    }
-}

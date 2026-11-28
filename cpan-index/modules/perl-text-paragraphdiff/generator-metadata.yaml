@@ -1,3 +1,0 @@
-manual_tests:
-- '*'
-strip_prefix: Text-ParagraphDiff

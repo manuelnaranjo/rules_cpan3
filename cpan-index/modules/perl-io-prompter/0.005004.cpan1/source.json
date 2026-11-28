@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/IO-Prompter-0.005004.tar.gz",
-    "integrity": "sha256-Kciyww69s2+pDLii1dG2xGN+mFZvvEdiYrocBV/sIGE=",
-    "strip_prefix": "IO-Prompter-0.005004",
-    "overlay": {
-        "BUILD.bazel": "sha256-CytVu8Fwk0qQSioqwDDHLsrg6c+7A/xbDx2z9n8egTA="
-    }
-}

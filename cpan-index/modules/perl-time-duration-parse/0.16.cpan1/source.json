@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Time-Duration-Parse-0.16.tar.gz",
-    "integrity": "sha256-EISmRj7ieQ+ZIVvXaxNcpFr+K/ppmPpv1UcLaeG6vBI=",
-    "strip_prefix": "Time-Duration-Parse-0.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-XBwiWyEAzs0kCNaerQUPeubwT7uW5ZrEIFQOtUtD9As="
-    }
-}

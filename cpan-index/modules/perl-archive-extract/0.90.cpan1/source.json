@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Archive-Extract-0.90.tar.gz",
-    "integrity": "sha256-8zgapGtXevK/MYVaVUdU77sNLr5JHdID9MHPW0gK8Xw=",
-    "strip_prefix": "Archive-Extract-0.90",
-    "overlay": {
-        "BUILD.bazel": "sha256-r+RaxiAa5KHg/C80ozQLhFvJDxfn/oERYKLQXlniKKI="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TINITA/Mo-0.40.tar.gz",
-    "integrity": "sha256-kdJBUjkfjCeX7jUDkTja6m3j7gO98+G4ck+lx1VAzrk=",
-    "strip_prefix": "Mo-0.40",
-    "overlay": {
-        "BUILD.bazel": "sha256-XLLedXN+qnJkEygMcmlWqfM+mtKlp/6XjrT9UwgwSyI="
-    }
-}

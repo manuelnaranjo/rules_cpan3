@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DRTECH/ElasticSearch-0.65.tar.gz",
-    "integrity": "sha256-lvRInxwTd2FuMLbgPpN5OX8b7jXOq10SfyuMR4FxLho=",
-    "strip_prefix": "ElasticSearch-0.65",
-    "overlay": {
-        "BUILD.bazel": "sha256-fnrhuqFGX09NnFoEiTsC9WJC7CCOT138QsHc3t4MHmw="
-    }
-}

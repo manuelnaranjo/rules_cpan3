@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KW/KWILLIAMS/Class-Container-0.13.tar.gz",
-    "integrity": "sha256-9dSVsd+4JtXAxF0DtNDmtgR8uwbNv2vhX9TckCrutws=",
-    "strip_prefix": "Class-Container-0.13",
-    "overlay": {
-        "BUILD.bazel": "sha256-2daXEQnKexAY4hDladrQgmY4O6DseTCdBzzIbYj5asg="
-    }
-}

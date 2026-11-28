@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/List-Compare-0.55.tar.gz",
-    "integrity": "sha256-zHGUeYNledUrArwyjtgKmPZ53wQ6mbVxCrLBkWaeuDc=",
-    "strip_prefix": "List-Compare-0.55",
-    "overlay": {
-        "BUILD.bazel": "sha256-lzlrIu2O0He7381dhXUqlGatxCEhMI4vx46CExjPA+g="
-    }
-}

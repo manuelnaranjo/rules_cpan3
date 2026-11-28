@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OV/OVID/HOP-Stream-0.03.tar.gz",
-    "integrity": "sha256-vyODyl6TmvXy0xx3WEl6JMT7dKqzoSlmaAkm/cXyPQA=",
-    "strip_prefix": "HOP-Stream-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-N3kWnQ8aTYg8EEcZAA0XmjUjil2c3YRdOQB9o/qM1Fc="
-    }
-}

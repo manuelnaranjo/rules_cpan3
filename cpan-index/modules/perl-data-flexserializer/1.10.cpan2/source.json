@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AV/AVAR/Data-FlexSerializer-1.10.tar.gz",
-    "integrity": "sha256-2uSUoeJCzWkbGKR7zwf66wS9/ycRquu6yQI+B9qjx1k=",
-    "strip_prefix": "Data-FlexSerializer-1.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-d3R90wiCMsIXVOCSGTBB6pdoIzCqBDX4z+HV/4Zzucc="
-    }
-}

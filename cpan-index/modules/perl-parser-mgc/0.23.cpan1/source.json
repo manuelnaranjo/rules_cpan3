@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Parser-MGC-0.23.tar.gz",
-    "integrity": "sha256-tXXBrwc4fl/6/rOs+1ydJRC7CbD/eUQYAw1lz2U999k=",
-    "strip_prefix": "Parser-MGC-0.23",
-    "overlay": {
-        "BUILD.bazel": "sha256-nwuK9NOkfyKZde2eOxYIr97LgHaIqI0GAvmkubWobp4="
-    }
-}

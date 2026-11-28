@@ -1,3 +1,0 @@
-manual_tests:
-- t/04-both.t
-- t/05-root.t

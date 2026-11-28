@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA/Excel-Writer-XLSX-1.15.tar.gz",
-    "integrity": "sha256-eTG02OL6i0+AbbS/Ujvjlkg/VfU+T0c4/f9emg2HUzE=",
-    "strip_prefix": "Excel-Writer-XLSX-1.15",
-    "overlay": {
-        "BUILD.bazel": "sha256-A/9g5wnP5nq+8t88RA83vpbg1YDoC7YEl9PEytspJsM="
-    }
-}

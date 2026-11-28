@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Web-ChromeLogger-0.06.tar.gz",
-    "integrity": "sha256-xMUo9fsrblulbLsHwsMKLgaJN7A29/Si1BsQe94UFqM=",
-    "strip_prefix": "Web-ChromeLogger-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-YJenI9lfy+qF6oBZb40k2jgWgnpL99Q48SIMu6q+SLo="
-    }
-}

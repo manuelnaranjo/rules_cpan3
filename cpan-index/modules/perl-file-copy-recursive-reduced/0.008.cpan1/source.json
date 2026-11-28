@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/File-Copy-Recursive-Reduced-0.008.tar.gz",
-    "integrity": "sha256-RivWa/VedLePKevcliavYi1PARW1GRsDFn6CFk25j1o=",
-    "strip_prefix": "File-Copy-Recursive-Reduced-0.008",
-    "overlay": {
-        "BUILD.bazel": "sha256-CvdQukKG/0X4PWNGVzOrZ883JDBsiAqdC/WRek0C/d0="
-    }
-}

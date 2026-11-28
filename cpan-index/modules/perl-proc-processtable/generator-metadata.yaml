@@ -1,2 +1,0 @@
-cc_srcs_exclude:
-- os/**/*.c

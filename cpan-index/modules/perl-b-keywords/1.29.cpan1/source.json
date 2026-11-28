@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Keywords-1.29.tar.gz",
-    "integrity": "sha256-4KoZ0zkECfDs5zQqsEHFtDLDHXzxq/GCwTS2qreHhLA=",
-    "strip_prefix": "B-Keywords-1.29",
-    "overlay": {
-        "BUILD.bazel": "sha256-RcqpHdASqYMC8zp2saMnnRPBgWc9Y12ZI9zWSD2y31I="
-    }
-}

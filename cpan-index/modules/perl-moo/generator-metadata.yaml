@@ -1,2 +1,0 @@
-manual_tests:
-- t/accessor-weaken-pre-5_8_3.t

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PA/PALI/Email-Address-XS-1.05.tar.gz",
-    "integrity": "sha256-FRC38Q1nIBA3zVDSLJ1rJu7KVe3tpM20a7yiflmk6hY=",
-    "strip_prefix": "Email-Address-XS-1.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-MHr+YLYKOn6FzI4hjFMrkQzDsI/uH2CHotPrUPcM684="
-    }
-}

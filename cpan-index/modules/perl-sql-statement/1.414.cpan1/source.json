@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/SQL-Statement-1.414.tar.gz",
-    "integrity": "sha256-3ei9z6ahNu7doGUZug8++uwIXDnbDfnEctwOxs14Gkk=",
-    "strip_prefix": "SQL-Statement-1.414",
-    "overlay": {
-        "BUILD.bazel": "sha256-94DUoHT4AtU2pd7fYLkX533xy8jnesYVRaxr7mnLY3g="
-    }
-}

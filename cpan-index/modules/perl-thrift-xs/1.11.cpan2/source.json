@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Thrift-XS-1.11.tar.gz",
-    "integrity": "sha256-KenC3h/G1Wck6ij0RdB15FCbtCjhTyYnP7ux794oFnk=",
-    "strip_prefix": "Thrift-XS-1.11",
-    "overlay": {
-        "BUILD.bazel": "sha256-8tR8m1yuBPgtGjOfdW3nx3IGA3aLygPRYgnkRsZ5oXw="
-    }
-}

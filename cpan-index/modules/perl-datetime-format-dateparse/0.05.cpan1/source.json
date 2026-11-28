@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JH/JHOBLITT/DateTime-Format-DateParse-0.05.tar.gz",
-    "integrity": "sha256-9uykyL5mzpmS7hUJMvj88HgJ/T0WZMryALil/Tp+Xrw=",
-    "strip_prefix": "DateTime-Format-DateParse-0.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-PYhYGA8m/aZQGI2jRzlmMTVyFdodjp1wnTaK4XNlkNY="
-    }
-}

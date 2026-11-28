@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SA/SADAHIRO/Unicode-Collate-1.31.tar.gz",
-    "integrity": "sha256-t13Qe7wlKTexuHBkv3nM0KG37pk7jPDoD0dAbDIFY58=",
-    "strip_prefix": "Unicode-Collate-1.31",
-    "overlay": {
-        "BUILD.bazel": "sha256-ZucXD2KXt5FrzQOM/YL0v3NV+SVm8OFdJRUW95tpBLE=",
-        "ucatbl.h": "sha256-jYeb6x/rWGdYSejIy+BW5efXM5Rng//1JCoaKJW8P/g="
-    }
-}

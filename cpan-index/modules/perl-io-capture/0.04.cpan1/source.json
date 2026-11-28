@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RE/REYNOLDS/IO-Capture-0.05.tar.gz",
-    "integrity": "sha256-wsFaJUynT7jFfSXXtsvK/3ejtPtWlUI/H4C7Qjq//qk=",
-    "strip_prefix": "IO-Capture-0.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-lLK443Sy3koZ8Jq60DD0ADX8HJ8VYHxSEFiNeJxezQ8="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/W/WE/WESM/DBIx-Class-Helpers-2.037000.tar.gz",
-    "integrity": "sha256-pCthxChly9sulbKcOVHvJVxNcsXHMypALX7twJ3N66E=",
-    "strip_prefix": "DBIx-Class-Helpers-2.037000",
-    "overlay": {
-        "BUILD.bazel": "sha256-WuDUaYx0r1fm8XV12yFWn9Me6IKPZwrPhA6CYTPZ8CU="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.54.tar.gz",
-    "integrity": "sha256-mvE4/2Mikr/EXBGQbjw5c5+uB75yn/L4n0TQkjGcWWc=",
-    "strip_prefix": "Future-0.54",
-    "overlay": {
-        "BUILD.bazel": "sha256-u6+YTW0hMqEb/S3Z2Mi24DQZA0/MiYLIxyeOrOGtwCI="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Pod-Escapes-1.07.tar.gz",
-    "integrity": "sha256-2/fIJ5hJUfskiQf5QP2PGfJpa8VUXAoVKH4PvlalIwg=",
-    "strip_prefix": "Pod-Escapes-1.07",
-    "overlay": {
-        "BUILD.bazel": "sha256-QZSAvKd7ZiphTZbDEsNamfpINrK/0WPDR0MTny7xUI8="
-    }
-}

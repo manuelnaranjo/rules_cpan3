@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETJ/MooX-Thunking-0.08.tar.gz",
-    "integrity": "sha256-v9wQPHRA1i2X/Z/ztOZP6FjKdlO7CEslsgzIIcuIxXw=",
-    "strip_prefix": "MooX-Thunking-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-1xr/v9hHeQbes2Vdp3UNODvN9lMUNKEpSYtVrrLqY3Q="
-    }
-}

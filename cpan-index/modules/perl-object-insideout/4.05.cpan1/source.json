@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JD/JDHEDDEN/Object-InsideOut-4.05.tar.gz",
-    "integrity": "sha256-nf1sooInJDR+DrZ1nQBwlCWBRwOtXGa9tiFFeYaLysQ=",
-    "strip_prefix": "Object-InsideOut-4.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-3jP78jhP/ob7z5NfsyF4xKKwJCrKNtJId0EY/4wLIKM="
-    }
-}

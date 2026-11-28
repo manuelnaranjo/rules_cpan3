@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-SharedFork-0.35.tar.gz",
-    "integrity": "sha256-KTLoZWEOgHWPdkxYZ1fvjhHbEoTZWOJeS3qFCYQUxZ8=",
-    "strip_prefix": "Test-SharedFork-0.35",
-    "overlay": {
-        "BUILD.bazel": "sha256-eyrggxzOnZJraticUiEM+aVtPeQxduwfQneJQV7bAIU="
-    }
-}

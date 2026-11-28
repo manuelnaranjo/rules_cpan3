@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/match-simple-0.012.tar.gz",
-    "integrity": "sha256-tzSan6km1QNHKZjR4LjDp/yuDtx84wraTudWzbJSo3w=",
-    "strip_prefix": "match-simple-0.012",
-    "overlay": {
-        "BUILD.bazel": "sha256-OaWqqvBkOCoGzci/rbkqoe43p4FCrLgkn3fqyLSY9tQ="
-    }
-}

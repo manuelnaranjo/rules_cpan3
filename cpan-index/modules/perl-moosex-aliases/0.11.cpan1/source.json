@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/MooseX-Aliases-0.11.tar.gz",
-    "integrity": "sha256-xIUPlyQmw0R6ru2Ny0Az6ERgylFwWtPqeLY6+Rn+B0g=",
-    "strip_prefix": "MooseX-Aliases-0.11",
-    "overlay": {
-        "BUILD.bazel": "sha256-ZzWtuCm1jWJwGCTCZfRH6R/QDB+WwXyiuorAQWo1OlA="
-    }
-}

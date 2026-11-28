@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/MooseX-SemiAffordanceAccessor-0.10.tar.gz",
-    "integrity": "sha256-pbhXdrzd7RaAJ6H/ZktBxfZYhnIc3VQ+OvnVN1misdU=",
-    "strip_prefix": "MooseX-SemiAffordanceAccessor-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-RB17sArtB0fusY6BzR9CB65zhpx+nz5pFbbzMh6X6lk="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAVIDO/List-BinarySearch-0.25.tar.gz",
-    "integrity": "sha256-yBEwcb1gQANe6KsBzxtyqRBXQZLx0XkQKud1qXPy6Co=",
-    "strip_prefix": "List-BinarySearch-0.25",
-    "overlay": {
-        "BUILD.bazel": "sha256-/o0bmkMOD0ndPanq1+xtjJWroJ0n1+JK5DtdY3vsAWU="
-    }
-}

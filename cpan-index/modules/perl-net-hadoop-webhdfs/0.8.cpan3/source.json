@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BU/BURAK/Net-Hadoop-WebHDFS-0.8.tar.gz",
-    "integrity": "sha256-RA2NhwMjo58tKogHJiYBBtjenaEDshclVhiuusXvdxA=",
-    "strip_prefix": "Net-Hadoop-WebHDFS-0.8",
-    "overlay": {
-        "BUILD.bazel": "sha256-iZNtCTlfjwz+Gj8k76OE/6Ur3efpDn/PcpoirBdFg3g="
-    }
-}

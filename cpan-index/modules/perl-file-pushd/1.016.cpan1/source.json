@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/File-pushd-1.016.tar.gz",
-    "integrity": "sha256-1zp/CUQpg7CYJg3z33qDKl9mB3OjE8onP6i1ZmX5fNw=",
-    "strip_prefix": "File-pushd-1.016",
-    "overlay": {
-        "BUILD.bazel": "sha256-bGY97v7meiA9nvc2dOe3jy3MChFuMDNCsQYsRIOWoj8="
-    }
-}

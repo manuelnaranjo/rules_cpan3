@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PJ/PJACKLAM/bignum-0.67.tar.gz",
-    "integrity": "sha256-HJqCSrMj4+WNmAgBHBCtJ1iduhICgGJ4IVASyn9SKHU=",
-    "strip_prefix": "bignum-0.67",
-    "overlay": {
-        "BUILD.bazel": "sha256-2+BrrWy4mmwVk7OG8t9rJpKztRhqs4st9NihWd3+KRQ="
-    }
-}

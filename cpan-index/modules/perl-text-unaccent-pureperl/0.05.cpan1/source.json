@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PJ/PJACKLAM/Text-Unaccent-PurePerl-0.05.tar.gz",
-    "integrity": "sha256-0i5jcmtBZL3xo9f2EZLTuPqmH05BPEgj291nLboGi/I=",
-    "strip_prefix": "Text-Unaccent-PurePerl-0.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-jNghTWe0tTwXMeh3LcEOGHJaTMNX0cXca3D7jsc3NaU="
-    }
-}

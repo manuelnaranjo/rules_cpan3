@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Import-Into-1.002005.tar.gz",
-    "integrity": "sha256-vZ53o/tmK0C0OxjTKAzTUu35+tjZQoPlGBgcwc6fBWc=",
-    "strip_prefix": "Import-Into-1.002005",
-    "overlay": {
-        "BUILD.bazel": "sha256-cM/Xtef1pRobt7jNdu53zdp7DUAyOW+FE4qAT1Wqt4M="
-    }
-}

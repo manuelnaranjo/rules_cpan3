@@ -1,9 +1,0 @@
-native_deps:
-- '@linux-pam//:linux-pam'
-target_compatible_with:
-- '@platforms//os:linux'
-patch_cmds:
-- rm -rf d
-- mkdir -p lib/Authen
-- sed -e 's/@PACKAGE_VERSION@/0.16/g' -e 's/@DL_LOAD_FLAGS@/sub dl_load_flags { 0x01
-  }/' PAM.pm.in > lib/Authen/PAM.pm

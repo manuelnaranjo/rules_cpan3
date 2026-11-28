@@ -1,4 +1,0 @@
-extra_test_deps:
-- '@perl-crypt-openssl-guess'
-manual_tests:
-- '*'

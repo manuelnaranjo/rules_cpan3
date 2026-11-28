@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OL/OLEG/Net-HTTPS-NB-0.16.tar.gz",
-    "integrity": "sha256-deRaLBhp+UDNqrct0nlFfvIJagRP4YvNwG+TO8po34E=",
-    "strip_prefix": "Net-HTTPS-NB-0.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-SYYkm+nulYxp0v3uLtFMjRjDZXMly4jnC4TAatV1u3o="
-    }
-}

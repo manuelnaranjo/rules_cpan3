@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/ShardedKV-Continuum-CHash-0.01.tar.gz",
-    "integrity": "sha256-CedVr5QKxoozsdpFvw6MkGrC7mCN7Ssx6hQAmdi928Q=",
-    "strip_prefix": "ShardedKV-Continuum-CHash-0.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-oIWRhuii+Hp9PGRwa3PYR7VPSoRyXSSm2jyqdfooHPg="
-    }
-}

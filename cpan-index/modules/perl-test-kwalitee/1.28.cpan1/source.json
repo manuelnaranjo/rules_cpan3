@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Kwalitee-1.28.tar.gz",
-    "integrity": "sha256-tFNs3XVbWXciMtQyXae9T7f1vlC0WF27r3WO7DBiQ6M=",
-    "strip_prefix": "Test-Kwalitee-1.28",
-    "overlay": {
-        "BUILD.bazel": "sha256-BfAqgySU4CbIEuLc4cJ/hunr8Vk3eRorABDn3EeDJ1M="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/namespace-autoclean-0.31.tar.gz",
-    "integrity": "sha256-07MsguHSyqnVi4yAdZZSQObKtmq5NQvW9r6kygfpONY=",
-    "strip_prefix": "namespace-autoclean-0.31",
-    "overlay": {
-        "BUILD.bazel": "sha256-TNDi5Xn2tiaSFQGlQ9odEfbagvhBA+QusTpuuh5fCxc="
-    }
-}

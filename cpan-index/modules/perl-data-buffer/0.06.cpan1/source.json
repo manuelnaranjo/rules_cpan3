@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Data-Buffer-0.06.tar.gz",
-    "integrity": "sha256-gVlWJg+EYJXxLhaC2m9taFeiUS3POU28VpKTECuP5K0=",
-    "strip_prefix": "Data-Buffer-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-3HBj5KtdGCX4YMYdrwya8Pd7K3BzyRdL3JN3y+ytxSo="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SA/SALVA/Math-Int128-0.22.tar.gz",
-    "integrity": "sha256-pjDKQBdThmlV8Rc4SKtbSsStXKatkIfxHN+R3ehRGbw=",
-    "strip_prefix": "Math-Int128-0.22",
-    "overlay": {
-        "BUILD.bazel": "sha256-nvXVuuWxCdiwnVdlE/2Ti67gU9DkGY86BG+ChbtcK1Q="
-    }
-}

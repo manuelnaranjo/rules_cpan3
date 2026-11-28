@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Warnings-0.038.tar.gz",
-    "integrity": "sha256-PaJ+ADo8PK/tPAm0K+Bc+b2/8L7lyFkKcxsChTiAonM=",
-    "strip_prefix": "Test-Warnings-0.038",
-    "overlay": {
-        "BUILD.bazel": "sha256-orTKyetDaok9dQ6ZTgu3OpSYzuG8dMnaekBRumc51+A="
-    }
-}

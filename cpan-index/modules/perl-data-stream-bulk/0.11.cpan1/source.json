@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/Data-Stream-Bulk-0.11.tar.gz",
-    "integrity": "sha256-BuCEMqa5dwVgbJJXCbmRKa2SZRbkd9WORGHks9nzCRc=",
-    "strip_prefix": "Data-Stream-Bulk-0.11",
-    "overlay": {
-        "BUILD.bazel": "sha256-mu5XJrSWTITVf2swPuByvQRjAeKk+MdCI2pUfFnKF9U="
-    }
-}

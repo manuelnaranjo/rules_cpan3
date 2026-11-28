@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Const-Fast-0.014.tar.gz",
-    "integrity": "sha256-+AWVOgjFeEahak2F17dmOYr698NsFGX8sd6gnl+jlNs=",
-    "strip_prefix": "Const-Fast-0.014",
-    "overlay": {
-        "BUILD.bazel": "sha256-5bOxK6cnRQdlsDz1qBZGE2Cat2IBxPKp6g/rSOnN4WQ="
-    }
-}

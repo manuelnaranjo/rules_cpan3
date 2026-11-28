@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Pod-Coverage-0.23.tar.gz",
-    "integrity": "sha256-MLegsMlC9Ep1UsDTTpsfLgugtnlVxh47FYnsNpB0sQc=",
-    "strip_prefix": "Pod-Coverage-0.23",
-    "overlay": {
-        "BUILD.bazel": "sha256-zhOjNSC7RNSoAIPIvcGhuO5kzg3H5P7Gu/NMEllFWXs="
-    }
-}

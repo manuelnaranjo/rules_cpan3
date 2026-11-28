@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AV/AVAR/MooseX-Attribute-TypeConstraint-CustomizeFatal-0.03.tar.gz",
-    "integrity": "sha256-pLsffM76K9FCmMWC4R+XphVC7s3hS5Ck6Vjr67LchjA=",
-    "strip_prefix": "MooseX-Attribute-TypeConstraint-CustomizeFatal-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-BGNQ+ybCUt9i6D8GxZTYYeBru2AeY8cxcv3Ks/DSC0w="
-    }
-}

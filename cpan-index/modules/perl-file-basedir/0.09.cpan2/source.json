@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-BaseDir-0.09.tar.gz",
-    "integrity": "sha256-bab3KBVirI8R7xo69q7bUcQRgrYPHxIs7QB579kpZ9k=",
-    "strip_prefix": "File-BaseDir-0.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-0GOcZ/O+13XuSs3NJ9Dix7LrNi07/EKEAAKE6ZNyTdI="
-    }
-}

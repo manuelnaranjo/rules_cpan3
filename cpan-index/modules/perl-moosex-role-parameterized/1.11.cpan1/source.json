@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Role-Parameterized-1.11.tar.gz",
-    "integrity": "sha256-HP52bF1/Dsq1f3M9zKQwoqKs1rmVdXFBuUCt42kr7J4=",
-    "strip_prefix": "MooseX-Role-Parameterized-1.11",
-    "overlay": {
-        "BUILD.bazel": "sha256-8DPMoSfNQYR+qSmhTo++tf2JFycl4zpjsQBw0lZNuTg="
-    }
-}

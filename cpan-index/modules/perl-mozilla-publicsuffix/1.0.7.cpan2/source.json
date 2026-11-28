@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOMHUKINS/Mozilla-PublicSuffix-v1.0.7.tar.gz",
-    "integrity": "sha256-aBXikhYbqBkrQ0OY2yleIps+YVdOamGZTpDzWaLHGyE=",
-    "strip_prefix": "Mozilla-PublicSuffix-v1.0.7",
-    "overlay": {
-        "BUILD.bazel": "sha256-k+Xd6DFL0aVM5lVAIC8ivOrgbJBGJPBQX096jSs08Fs="
-    }
-}

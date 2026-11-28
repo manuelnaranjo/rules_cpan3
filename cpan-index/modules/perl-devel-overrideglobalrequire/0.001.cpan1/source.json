@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Devel-OverrideGlobalRequire-0.001.tar.gz",
-    "integrity": "sha256-B5GJLeOuKSr0qU44LyHbHuiCEIdQMYUebqgsNBB4Xvk=",
-    "strip_prefix": "Devel-OverrideGlobalRequire-0.001",
-    "overlay": {
-        "BUILD.bazel": "sha256-PknwyxPRwqBok1TMm2YLutRGv1D+E5gKtBcuk1xGAw8="
-    }
-}

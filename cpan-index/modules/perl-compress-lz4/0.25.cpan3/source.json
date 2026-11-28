@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GR/GRAY/Compress-LZ4-0.25.tar.gz",
-    "integrity": "sha256-T0iFPsv5gUPN6gGbRVgLlTfEkp3W/BCdkNLw2kPdDog=",
-    "strip_prefix": "Compress-LZ4-0.25",
-    "overlay": {
-        "BUILD.bazel": "sha256-6tBGV7iO7meTZZso6xl+BjnIq2v/qrrl45KbDOPSrqo="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HU/HUGMEIR/fs-Promises-0.04.tar.gz",
-    "integrity": "sha256-s4zqlDH7DShNLiD5qRWya+BE+jhpvjh16acRXmem0zU=",
-    "strip_prefix": "fs-Promises-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-B+bz6lWlbjnuyoCCPjl3BH3Q95aSk09o3hHaHGWuUIk="
-    }
-}

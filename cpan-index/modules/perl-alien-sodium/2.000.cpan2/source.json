@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/Alien-Sodium-2.000.tar.gz",
-    "integrity": "sha256-II47OuEShsoSO/isbJ1apq4FCKZZLc1rMnfQ/PZPOC4=",
-    "strip_prefix": "Alien-Sodium-2.000",
-    "overlay": {
-        "BUILD.bazel": "sha256-jnQ+NSIcA6jxp0sk8vVwjFg/99kgEdRpQ/Nu8MLFiMg="
-    }
-}

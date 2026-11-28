@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CJ/CJM/IO-HTML-1.004.tar.gz",
-    "integrity": "sha256-yHst9ZRju/LDlZZ3PftcA73g9+EFGvM5+WP1jBy9i/U=",
-    "strip_prefix": "IO-HTML-1.004",
-    "overlay": {
-        "BUILD.bazel": "sha256-9PvFXQ0ym8QMLO5hEU8pawBOwkFVYCSpmveyvi+fDrs="
-    }
-}

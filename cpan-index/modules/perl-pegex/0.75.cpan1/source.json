@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IN/INGY/Pegex-0.75.tar.gz",
-    "integrity": "sha256-TcjTNd6AslJHzbP5RvDRDZugs8NLDtfQAxb9Bo/QXtw=",
-    "strip_prefix": "Pegex-0.75",
-    "overlay": {
-        "BUILD.bazel": "sha256-qQ4kroYp6AslxUVd2PtfIghfzhGNctGMeSDPeV45Iu8="
-    }
-}

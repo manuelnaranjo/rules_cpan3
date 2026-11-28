@@ -1,4 +1,0 @@
-execution_requirements:
-  no-remote: '1'
-target_compatible_with:
-- '@platforms//os:linux'

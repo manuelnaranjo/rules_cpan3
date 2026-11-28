@@ -1,2 +1,0 @@
-manual_tests:
-- t/02_prepare_serializer_for_format.t

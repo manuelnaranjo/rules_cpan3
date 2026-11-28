@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BP/BPS/Data-ICal-0.24.tar.gz",
-    "integrity": "sha256-czHHyEiGxTM3wNuCNhXg5xNKjxPv0oTlwgcm1bzVLf8=",
-    "strip_prefix": "Data-ICal-0.24",
-    "overlay": {
-        "BUILD.bazel": "sha256-y5I+w2WSkCALDpD5JW1Z8+vbtmjA+CXcUi/sytE0+/4="
-    }
-}

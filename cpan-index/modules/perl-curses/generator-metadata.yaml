@@ -1,7 +1,0 @@
-native_deps:
-- '@ncurses//:ncurses'
-patch_cmds:
-- rm -f cdemo.c testint.c testsym.c testtyp.c
-- for f in CursesWide CursesFun CursesFunWide CursesVar CursesCon CursesBoot; do if
-  [ -f $f.c ]; then mv $f.c $f.inc; sed -i "s/$f.c/$f.inc/" Curses.c; fi; done
-- cp hints/c-linux.ncurses.h c-config.h && sed -i 's/<ncurses.h>/<curses.h>/' c-config.h

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/builtin-compat-0.003003.tar.gz",
-    "integrity": "sha256-RBm3jUnxeMXIMp/B7cnPIQ5XIMBzxQODEZR8JOvRcSE=",
-    "strip_prefix": "builtin-compat-0.003003",
-    "overlay": {
-        "BUILD.bazel": "sha256-J2BoI5w5J2LPdaXUWTqEBirptiI68p4A6y3L1ND100E="
-    }
-}

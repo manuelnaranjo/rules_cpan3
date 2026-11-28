@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Exception-Class-1.46.tar.gz",
-    "integrity": "sha256-4vjAcI/43osbt74fqjzbJA/dl3S8dBYnNQV36n4OdqE=",
-    "strip_prefix": "Exception-Class-1.46",
-    "overlay": {
-        "BUILD.bazel": "sha256-jHPJgVLpe8s2nn2kpNRcInEmkAGRCEpNfd1j4zKO1Eg="
-    }
-}

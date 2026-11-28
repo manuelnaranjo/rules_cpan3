@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Y/YA/YANICK/NetPacket-1.8.0.tar.gz",
-    "integrity": "sha256-3sZcoweMxq4ofxJCy0FusLCbebVXoMedbP4p17xrMxA=",
-    "strip_prefix": "NetPacket-1.8.0",
-    "overlay": {
-        "BUILD.bazel": "sha256-nyNG7pmuz3NIsnsg9pzRxfvPjD7+kRUnW9A3AJ92m+w="
-    }
-}

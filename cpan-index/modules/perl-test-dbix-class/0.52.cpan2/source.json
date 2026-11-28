@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEWELLC/Test-DBIx-Class-0.52.tar.gz",
-    "integrity": "sha256-R2Rr8UEAuRw8m5MwGqNoSavSr9CFo03slpdNDHSfdzg=",
-    "strip_prefix": "Test-DBIx-Class-0.52",
-    "overlay": {
-        "BUILD.bazel": "sha256-z22K3CxxzWyqeMpbjfYKWMQyfTS5/C96Mv6c0LnDikI="
-    }
-}

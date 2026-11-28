@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IN/INGY/XXX-0.38.tar.gz",
-    "integrity": "sha256-0QUQ6gD2Gav0erKZ8Ui9WzYM+gfcDtUYE4t87HJpLSo=",
-    "strip_prefix": "XXX-0.38",
-    "overlay": {
-        "BUILD.bazel": "sha256-eVQp+SZtDC2SA2gozPx/8b1Tx6fHkxB6tMFOtW1eLSs="
-    }
-}

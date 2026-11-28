@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JW/JWB/Proc-ProcessTable-0.637.tar.gz",
-    "integrity": "sha256-1+aItfC9XTjluzBvFvkEqskxEt+O2gmP7+8cgQu6b4U=",
-    "strip_prefix": "Proc-ProcessTable-0.637",
-    "overlay": {
-        "BUILD.bazel": "sha256-IpWEoF//reTFLOa/6mCnx7sTUu3RYnGccnhLHuGD9o4="
-    }
-}

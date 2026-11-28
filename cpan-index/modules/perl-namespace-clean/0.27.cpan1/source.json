@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RI/RIBASUSHI/namespace-clean-0.27.tar.gz",
-    "integrity": "sha256-ihCoPD4YPcePnnt6pNCbR8EftOfTozuaEpEv0i4xr50=",
-    "strip_prefix": "namespace-clean-0.27",
-    "overlay": {
-        "BUILD.bazel": "sha256-wI0lkBqVUkn22uuiAi9GJfJiEus0FBlLh2Yvbwpn418="
-    }
-}

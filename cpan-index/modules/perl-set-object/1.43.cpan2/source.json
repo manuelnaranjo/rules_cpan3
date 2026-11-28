@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Set-Object-1.43.tar.gz",
-    "integrity": "sha256-47PHx+y5HvbSDrBr9r/3TkHEC3W9I04QfS7PeNPeqdE=",
-    "strip_prefix": "Set-Object-1.43",
-    "overlay": {
-        "BUILD.bazel": "sha256-MMH09jkGY2Uz9/8ZTfZbgsBnt6rC7VdRidSxO+R+DcA="
-    }
-}

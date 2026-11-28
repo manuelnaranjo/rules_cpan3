@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Module-Build-Using-PkgConfig-0.03.tar.gz",
-    "integrity": "sha256-EXdKaRS8+gkV+fAcMEGxaHjVKthtg+ztvmLmjU9B7ME=",
-    "strip_prefix": "Module-Build-Using-PkgConfig-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-Et+ZcTGwVNRCZA5s3P1FA3mjtQqkojWQ2uNbLof1Bqk="
-    }
-}

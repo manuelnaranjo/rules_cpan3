@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-Date-Format-1.008.tar.gz",
-    "integrity": "sha256-Qyt8g/+IdJrxKAA/UlfFc67BpGNBjbkO0ihDy7wli08=",
-    "strip_prefix": "Email-Date-Format-1.008",
-    "overlay": {
-        "BUILD.bazel": "sha256-xzhURV0aPzg6mxk2GvS9quaHYT0VsWq3NDfYkuraICc="
-    }
-}

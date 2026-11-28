@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/X/XA/XAICRON/JSON-WebToken-0.10.tar.gz",
-    "integrity": "sha256-d8GCqYUo8XFNgq/FSNWztNyT5nBpEou5uUE/JM8HJIs=",
-    "strip_prefix": "JSON-WebToken-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-XujKtQ0A00x8K+McD7usvc9XvOo1IlF611UNaGR9gpo="
-    }
-}

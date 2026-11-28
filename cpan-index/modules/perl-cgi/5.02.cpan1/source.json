@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/CGI-5.02.tar.gz",
-    "integrity": "sha256-R2N60EE8Un4A4SSdFNugwjQHOtS+8JdG+v1z3YXe1mU=",
-    "strip_prefix": "CGI-5.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-j1fPH/wE+rKmtRbJJrfipsTvvzjoKZxaQ7yboDYBPVo="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Log-Contextual-0.009001.tar.gz",
-    "integrity": "sha256-51aHKEv+A7Dka/ncUwbmXu1oBwjsg+SgD+KWCLj9zJE=",
-    "strip_prefix": "Log-Contextual-0.009001",
-    "overlay": {
-        "BUILD.bazel": "sha256-LMfvjxTCj+PsTPgMQZhzR0Dl4mIq+aR1Jl3BuVoNcOM="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JL/JLEADER/Perl-Critic-Policy-BuiltinFunctions-ProhibitReturnOr-0.01.tar.gz",
-    "integrity": "sha256-eVdSBlFNssL9dE2qjZSO92OVDO0/nAaXO0Gbebmdkw8=",
-    "strip_prefix": "Perl-Critic-Policy-BuiltinFunctions-ProhibitReturnOr-0.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-AQPUy5CmPf4jRoq24qc8FMkG/9gVAImCCXJ3vEPq35Q="
-    }
-}

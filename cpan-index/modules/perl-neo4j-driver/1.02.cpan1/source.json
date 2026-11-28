@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AJ/AJNN/Neo4j-Driver-1.02.tar.gz",
-    "integrity": "sha256-QLTRlMAjdARvU3QIFxZ5iOeuP9ThERPCWcnsrh2ohQM=",
-    "strip_prefix": "Neo4j-Driver-1.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-y96BYHgrZuyzPKeQT4qiJyB9vJ2gdmupRqXvcleXu/g="
-    }
-}

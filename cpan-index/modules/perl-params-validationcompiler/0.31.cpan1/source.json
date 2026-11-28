@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-ValidationCompiler-0.31.tar.gz",
-    "integrity": "sha256-e2SXFz8batsp9dUdjPnsNtLxIZQStLJBDp13qQHoSm0=",
-    "strip_prefix": "Params-ValidationCompiler-0.31",
-    "overlay": {
-        "BUILD.bazel": "sha256-z74dbtVCoeApWjpWZSFKUh81hxcFniOAmm5hjxqbAok="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DJ/DJERIUS/Math-Random-0.75.tar.gz",
-    "integrity": "sha256-cvnJTDL8xtzaFr0qXlD2ViOG0q/FKOXvs2mqLpWWAls=",
-    "strip_prefix": "Math-Random-0.75",
-    "overlay": {
-        "BUILD.bazel": "sha256-7dM45awfpTAcnVUZeX6H24vOVG/Z6cjBusGobTC9V3M="
-    }
-}

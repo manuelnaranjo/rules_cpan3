@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-SFTP-Foreign-1.93.tar.gz",
-    "integrity": "sha256-bH1kJQh2hz2kNIAOUGCovvekZFHYH4F+N+Q8/aUaD3o=",
-    "strip_prefix": "Net-SFTP-Foreign-1.93",
-    "overlay": {
-        "BUILD.bazel": "sha256-1ONjhQ/MJWqGkLHA9n4mOswFbmoMEC+Ie802ca+yXjg="
-    }
-}

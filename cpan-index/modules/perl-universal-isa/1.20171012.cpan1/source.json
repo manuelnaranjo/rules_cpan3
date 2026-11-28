@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/UNIVERSAL-isa-1.20171012.tar.gz",
-    "integrity": "sha256-0WlWA2ywHIGd7H0pT274kb4Ltkh2mJYBNUspMWTafys=",
-    "strip_prefix": "UNIVERSAL-isa-1.20171012",
-    "overlay": {
-        "BUILD.bazel": "sha256-HLpS+2KyclNeAy578/y68crC9t8Wc/mXQH4J5LUiBqw="
-    }
-}

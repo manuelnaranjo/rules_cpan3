@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JF/JFEARN/XML-TreeBuilder-5.4.tar.gz",
-    "integrity": "sha256-T6laXiKZj/kJOTAMX+2NeizvduPT1wfD1wEaWirM6i4=",
-    "strip_prefix": "XML-TreeBuilder-5.4",
-    "overlay": {
-        "BUILD.bazel": "sha256-OLCitEC2+mqLI3tvOSlBnGfR2k7KSJ7Txg96pZbo1hM="
-    }
-}

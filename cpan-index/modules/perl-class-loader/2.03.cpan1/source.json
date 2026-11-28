@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/V/VI/VIPUL/Class-Loader-2.03.tar.gz",
-    "integrity": "sha256-T+8gdurWBCNFT/H06ChZqam5lCtfuO7gyYucY8nyuOc=",
-    "strip_prefix": "Class-Loader-2.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-J9DreVvwvF6HOKLgws7DQPbOr9HvW4r77SdNJkXLGho="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Base-ModuleBuild-1.17.tar.gz",
-    "integrity": "sha256-/nJwrHNa3ehk5GjiHGQqRxuoi6Ja0w2pRXiDITLyufQ=",
-    "strip_prefix": "Alien-Base-ModuleBuild-1.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-ohnnjBKqMdeEkZdFU6uOaM1AavVRGSZX0is7ZblZ7Gg="
-    }
-}

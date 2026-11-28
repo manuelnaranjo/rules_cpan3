@@ -1,3 +1,0 @@
-manual_tests:
-- t/01get_test_files.t
-- t/include.t

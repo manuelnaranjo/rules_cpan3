@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MK/MKUTTER/Test-Pod-Content-v0.0.6.tar.gz",
-    "integrity": "sha256-dSvYOMdeETwXbjbLSl9BtLNLRL0T1gepLce988kDl1w=",
-    "strip_prefix": "Test-Pod-Content-v0.0.6",
-    "overlay": {
-        "BUILD.bazel": "sha256-2KxnPxHL3fwQbTL0un0ufhhpsfr6gs5hh7VSdt4Dhfg="
-    }
-}

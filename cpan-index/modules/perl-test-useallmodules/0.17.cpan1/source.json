@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Test-UseAllModules-0.17.tar.gz",
-    "integrity": "sha256-px8v6LlquL/Cdgqh0xNeoEmlsg3LEFRXt2mhGVx6JQk=",
-    "strip_prefix": "Test-UseAllModules-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-0xEZTygdStxpkYSfSzg9W7BjI8IC/mF9na3sgUECKVo="
-    }
-}

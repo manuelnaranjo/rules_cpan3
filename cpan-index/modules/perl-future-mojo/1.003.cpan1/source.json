@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DB/DBOOK/Future-Mojo-1.003.tar.gz",
-    "integrity": "sha256-noihHgTqSmVxev5jrhVWMNL408+NcU+JNIywXG7fXR4=",
-    "strip_prefix": "Future-Mojo-1.003",
-    "overlay": {
-        "BUILD.bazel": "sha256-MeSUpdnT3A17NZKUccz42M4/z1Ws6eqGDvI5Z+xCoBE="
-    }
-}

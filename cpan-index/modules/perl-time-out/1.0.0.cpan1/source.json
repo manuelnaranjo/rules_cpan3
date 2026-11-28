@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SV/SVW/Time-Out-1.0.0.tar.gz",
-    "integrity": "sha256-UUmT9VFsFkmbuRjzd6B6eYi8TIdx+Rba/TAUovJKGgY=",
-    "strip_prefix": "Time-Out-1.0.0",
-    "overlay": {
-        "BUILD.bazel": "sha256-jEHnDo/3bP0xIG4bA0b2C1QgoKcZTEcVLeZ1Ih+wycE="
-    }
-}

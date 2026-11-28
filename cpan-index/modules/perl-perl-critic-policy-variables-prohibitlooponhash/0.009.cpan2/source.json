@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Perl-Critic-Policy-Variables-ProhibitLoopOnHash-0.009.tar.gz",
-    "integrity": "sha256-zkozTeCSf8RdyzXt/IG+Y4FSilKBlbL4dzBKqD12HqU=",
-    "strip_prefix": "Perl-Critic-Policy-Variables-ProhibitLoopOnHash-0.009",
-    "overlay": {
-        "BUILD.bazel": "sha256-FRB3rwEFlJCiaqLJjpwy/WClqgg4OwPZp3Z4HBVPXN8="
-    }
-}

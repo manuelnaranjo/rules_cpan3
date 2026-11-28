@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SE/SEMANTICO/Test-XML-0.08.tar.gz",
-    "integrity": "sha256-61TMI83shg062KyKaXy/A40N7JUimRLZdcMBiQyoPuI=",
-    "strip_prefix": "Test-XML-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-eU23lOMi6iuMOE6C9m368yzf8lg9P97YrnsionKhTBg="
-    }
-}

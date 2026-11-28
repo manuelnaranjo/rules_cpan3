@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Build-Plugin-Download-GitLab-0.01.tar.gz",
-    "integrity": "sha256-wfCJyOoVKniZCdSKg9v88mJvdz2vMEMchiJYKyarqQI=",
-    "strip_prefix": "Alien-Build-Plugin-Download-GitLab-0.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-ODcyuXkTCE76ZAb4aLvYa/OpUdY4Q2w6nPTLrfsrCCU="
-    }
-}

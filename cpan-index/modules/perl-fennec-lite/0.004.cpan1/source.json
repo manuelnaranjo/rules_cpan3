@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz",
-    "integrity": "sha256-3OKOOTJ2LC/5KqUtkEBcBuiY6By3sWTMrolmrnfx3Ks=",
-    "strip_prefix": "Fennec-Lite-0.004",
-    "overlay": {
-        "BUILD.bazel": "sha256-8TYNkQxOazqudiuIDu7b0scJhY3fuZNfA4regADDBwk="
-    }
-}

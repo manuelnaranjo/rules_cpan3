@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SI/SIFUKURT/Crypt-RC4-2.02.tar.gz",
-    "integrity": "sha256-XsRCXGvCIgeIljC+c1DZlobmKkTGE2lgEQIDzVlK4Oo=",
-    "strip_prefix": "Crypt-RC4-2.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-4JLi1zl3dcDQwzJ4noBeLBfcgtdQs/jzC4GqZky+wBY="
-    }
-}

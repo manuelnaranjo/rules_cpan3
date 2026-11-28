@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/GD-2.91.tar.gz",
-    "integrity": "sha256-Rcm8WnMZmHyz7BntMe1gLfJ6rezv2hRKVmfJch6U3wE=",
-    "strip_prefix": "GD-2.91",
-    "overlay": {
-        "BUILD.bazel": "sha256-5ysssBUFxnonGAH4T167nOmTIe1rMqiorfFZK0/jH6s="
-    }
-}

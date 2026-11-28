@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Lexical-SealRequireHints-0.012.tar.gz",
-    "integrity": "sha256-wyvcOOBvjWyQdlu74xaMNYJH2n2uhbgLqEotoXY3V90=",
-    "strip_prefix": "Lexical-SealRequireHints-0.012",
-    "overlay": {
-        "BUILD.bazel": "sha256-RCCvqIbw6bDEQQrH9z2pkLDGrFSSD1rDL+V1T6Aw2c4="
-    }
-}

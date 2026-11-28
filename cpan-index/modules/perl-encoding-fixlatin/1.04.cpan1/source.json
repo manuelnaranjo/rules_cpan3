@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GR/GRANTM/Encoding-FixLatin-1.04.tar.gz",
-    "integrity": "sha256-2gcuWxxfZlZ6LRBrucgKFmwFRSfDI1DhSaCaXT9Oi3g=",
-    "strip_prefix": "Encoding-FixLatin-1.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-z5fnoOG8j/fFnhXckzmqFdJRLlBoZYqfv3r3GuxlPHg="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/HTTP-Headers-Fast-0.22.tar.gz",
-    "integrity": "sha256-zEMdtoSW3YhNtLwMC3ESwfSk8dxoxPWjyqdXoedIG0g=",
-    "strip_prefix": "HTTP-Headers-Fast-0.22",
-    "overlay": {
-        "BUILD.bazel": "sha256-V5HpPOA6icIUO/Yb0YVQp3WgrpP3giRE8ZIDTreRoSA="
-    }
-}

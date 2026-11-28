@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Devel-StrictMode-0.003.tar.gz",
-    "integrity": "sha256-sKfeX4qqzYMC5prl3wuP0VUKOij73wd8tXq8rezlZfA=",
-    "strip_prefix": "Devel-StrictMode-0.003",
-    "overlay": {
-        "BUILD.bazel": "sha256-Vc/A1TwbwWkId0Ex/vTtq4MOTpri91Q8jxW+AYq+AM0="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAKONH/Math-GSL-Alien-1.05.tar.gz",
-    "integrity": "sha256-U78AFqpgjLxXc1LaoL/Couc4lBvhz8/XCldApV47Cro=",
-    "strip_prefix": "Math-GSL-Alien-1.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-xl1w6Dc2n7BQNAEGQ/uNxVVXDDVKMqYeMW6Cfsc2N9Y="
-    }
-}

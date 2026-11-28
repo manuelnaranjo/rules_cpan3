@@ -1,2 +1,0 @@
-native_deps:
-- '@perl-b-hooks-op-check//:B-Hooks-OP-Check_xs'

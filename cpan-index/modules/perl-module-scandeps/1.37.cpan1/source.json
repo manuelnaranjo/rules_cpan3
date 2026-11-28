@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/Module-ScanDeps-1.37.tar.gz",
-    "integrity": "sha256-H14RnK3hRmw5xx5bw1qNT05nJjXbA9eaWg3PCMTitaM=",
-    "strip_prefix": "Module-ScanDeps-1.37",
-    "overlay": {
-        "BUILD.bazel": "sha256-N7gRsPKy0ZjD4OHZFMry9P1WvQm7IL5vZAzGs7uGKuU="
-    }
-}

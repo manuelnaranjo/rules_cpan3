@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.4001.tar.gz",
-    "integrity": "sha256-HbthV7DGVa5e5rXkIlZR/D6lBeb9jJctLx0mEpE6UT4=",
-    "strip_prefix": "Moose-2.4001",
-    "overlay": {
-        "BUILD.bazel": "sha256-zLS0rOztsth80B8Xck3XX3Tw6SgiHdAjJ2ddX8bWFgA="
-    }
-}

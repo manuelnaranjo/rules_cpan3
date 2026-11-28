@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJRAY/RPC-XML-0.82.tar.gz",
-    "integrity": "sha256-UnnrDRNsUz/4l/aTTDqtbyBQS5l/smBuUsXbvZJ1jnM=",
-    "strip_prefix": "RPC-XML-0.82",
-    "overlay": {
-        "BUILD.bazel": "sha256-r9Fdp0Bd1LFKeWIeqRsauuwOs5uoOHiy0qTEkCe0CGk="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/W/WA/WATERKIP/URN-OASIS-SAML2-0.007.tar.gz",
-    "integrity": "sha256-TLZmW2PHWN8/ssggJSU1tv969g1yXoLmHebcBsq2C/s=",
-    "strip_prefix": "URN-OASIS-SAML2-0.007",
-    "overlay": {
-        "BUILD.bazel": "sha256-cuB3Qhp1Jn9CMS4UWhM4jR/kGL8phnMft+IlId7bWnk="
-    }
-}

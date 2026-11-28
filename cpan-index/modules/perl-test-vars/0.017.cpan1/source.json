@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/Test-Vars-0.017.tar.gz",
-    "integrity": "sha256-Vt2su2Y89UJnOqZVJe9QmAtT8gd3DnQ6HRhhS9gmgXg=",
-    "strip_prefix": "Test-Vars-0.017",
-    "overlay": {
-        "BUILD.bazel": "sha256-cWwB12zS3YG5STTGlnlIqWFGptCLSwraq8/V4aml8Fs="
-    }
-}

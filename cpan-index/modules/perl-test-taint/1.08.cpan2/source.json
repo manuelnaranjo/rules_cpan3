@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Test-Taint-1.08.tar.gz",
-    "integrity": "sha256-XVlNQlc1LJN4UCTGOqCntz2RLOypYRzZdc6DqrAhqX0=",
-    "strip_prefix": "Test-Taint-1.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-IobkdCixarLwbV33p9NMHyypdCFvrwRcsXHea1MMTlg="
-    }
-}

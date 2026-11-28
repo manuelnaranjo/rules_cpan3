@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Sub-Quote-2.006009.tar.gz",
-    "integrity": "sha256-lnKC1U0tUbGYxnk1WU+T5N6j5U0eW87RWMlOKb6Giks=",
-    "strip_prefix": "Sub-Quote-2.006009",
-    "overlay": {
-        "BUILD.bazel": "sha256-sTbc/++DY1+3dqQkfgaTS5X9bjlcM1jn8QHVD2B/O4Y="
-    }
-}

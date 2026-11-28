@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Filesys-Notify-Simple-0.14.tar.gz",
-    "integrity": "sha256-H9pxLUul4YaBWe019vjvv66dQ11jdvVgbVM7ywgFVaQ=",
-    "strip_prefix": "Filesys-Notify-Simple-0.14",
-    "overlay": {
-        "BUILD.bazel": "sha256-Ke4REVCeefK64376MkF8/3vipw4jeAYJwxch1O0p/yc="
-    }
-}

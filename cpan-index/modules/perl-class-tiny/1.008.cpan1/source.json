@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Class-Tiny-1.008.tar.gz",
-    "integrity": "sha256-7gWKY5Evofy5pySY9WykIaIFbcf59LZ4N0RtZCGBVhU=",
-    "strip_prefix": "Class-Tiny-1.008",
-    "overlay": {
-        "BUILD.bazel": "sha256-b1MesOvPckewQCYvpfJz6FAOZruk/8bbLXhlPyLY2P0="
-    }
-}

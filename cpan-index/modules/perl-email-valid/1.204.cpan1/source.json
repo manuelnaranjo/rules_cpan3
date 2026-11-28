@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-Valid-1.204.tar.gz",
-    "integrity": "sha256-HDepsbx2MEhZVysVCoLCa9TxLsY9LQt2UFrDkhBMtH8=",
-    "strip_prefix": "Email-Valid-1.204",
-    "overlay": {
-        "BUILD.bazel": "sha256-IG/zKRZS+aJno2lQRwTVqesH8tYJF3hvzgD9v6ECLFI="
-    }
-}

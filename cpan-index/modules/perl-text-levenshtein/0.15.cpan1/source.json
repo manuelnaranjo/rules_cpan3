@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Levenshtein-0.15.tar.gz",
-    "integrity": "sha256-bS6SIyyvdVC9b6gDS467rMzYGo3O+npgWoylOaFdLyI=",
-    "strip_prefix": "Text-Levenshtein-0.15",
-    "overlay": {
-        "BUILD.bazel": "sha256-apgKk4syxYWW+zK+lKCDk7/P0V7wQ22nNO4UljfU9tU="
-    }
-}

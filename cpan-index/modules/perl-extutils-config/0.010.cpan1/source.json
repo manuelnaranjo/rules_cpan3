@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Config-0.010.tar.gz",
-    "integrity": "sha256-gufk6Qy+OA4VL13m4+QDdGmC1QLdMBl6EjZS5GYQxm0=",
-    "strip_prefix": "ExtUtils-Config-0.010",
-    "overlay": {
-        "BUILD.bazel": "sha256-f/MxoIemtUXAcz1wBAAP3Z7OgYf5GNuYpwc9ogZStww="
-    }
-}

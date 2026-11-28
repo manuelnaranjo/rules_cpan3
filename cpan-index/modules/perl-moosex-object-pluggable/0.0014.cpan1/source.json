@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Object-Pluggable-0.0014.tar.gz",
-    "integrity": "sha256-8798u+g/WcIRFGPgx9yOafpT+zqJA/NvNtP4hsw+ZOA=",
-    "strip_prefix": "MooseX-Object-Pluggable-0.0014",
-    "overlay": {
-        "BUILD.bazel": "sha256-Fsyg7NkXVAX7yMqwiIKv/nWmpBFhiIRnhLOkFx/nIag="
-    }
-}

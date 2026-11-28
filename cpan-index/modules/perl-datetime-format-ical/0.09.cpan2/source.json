@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-ICal-0.09.tar.gz",
-    "integrity": "sha256-iwn2U59enA3w5hNQMWme1O+e74Fl/ICu/uzIF++ZfDM=",
-    "strip_prefix": "DateTime-Format-ICal-0.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-0DYJcNT8ReUDkw7K3TDmEKZJMfhR3FR/LW178I9AtmI="
-    }
-}

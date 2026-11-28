@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-MinimumVersion-0.101083.tar.gz",
-    "integrity": "sha256-MqHrzYA/oQ7vylU7w87dQ1lqdZ3Dl1revSJoiCPDauo=",
-    "strip_prefix": "Test-MinimumVersion-0.101083",
-    "overlay": {
-        "BUILD.bazel": "sha256-kYAwqnVspV5O1lIVwyD/pNpMLM48hdUXzXTDeMpwpss="
-    }
-}

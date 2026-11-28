@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PR/PREACTION/Log-Any-1.720.tar.gz",
-    "integrity": "sha256-H6imEh3OKXQG9nrby02S2wHp3YV4HLbvcQ3DM7uc/VY=",
-    "strip_prefix": "Log-Any-1.720",
-    "overlay": {
-        "BUILD.bazel": "sha256-tK5dnBY541ennzdPpOIdAmJ16bJkNgpMjK233E1W4N8="
-    }
-}

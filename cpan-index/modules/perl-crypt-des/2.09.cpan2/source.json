@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-DES-2.09.tar.gz",
-    "integrity": "sha256-FJzcChTpRLTMXu+3Vgx42MslJU+fl3RUfIgDVafp9Aw=",
-    "strip_prefix": "Crypt-DES-2.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-CgM3N8lIa/MB/pGmsI9pDvOVyTHxG7okEDzLESvrTb4="
-    }
-}

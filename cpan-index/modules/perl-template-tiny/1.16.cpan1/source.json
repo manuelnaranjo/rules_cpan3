@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Template-Tiny-1.16.tar.gz",
-    "integrity": "sha256-zqRzUiCvgccpQ96nBGWoP2G+tJmiorpn6lV2LhzYBg4=",
-    "strip_prefix": "Template-Tiny-1.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-HPunYUeNqLa0tAj6aYMYBXTeHSESYXKgL2SQOVF/y8c="
-    }
-}

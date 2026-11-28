@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Package-Constants-0.06.tar.gz",
-    "integrity": "sha256-C1i+eHBszE5L2butQXZ0cEJ/17LPrXSUid4QH4W8XfU=",
-    "strip_prefix": "Package-Constants-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-9ggC03Jg3gl4W2Dq8baDPTp+Pw5sVaNQi2gwLTtDBaE="
-    }
-}

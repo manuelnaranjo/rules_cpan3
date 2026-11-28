@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AV/AVIF/Tree-Trie-1.9.tar.gz",
-    "integrity": "sha256-ywVyL21nqZqD868UJ8WXTaelUJ4UFvJXrvvJPzyWgr0=",
-    "strip_prefix": "Tree-Trie-1.9",
-    "overlay": {
-        "BUILD.bazel": "sha256-3kUTrB75vsyulx/bHRVS5vX/smmXo2VOm2VcJEExwiY="
-    }
-}

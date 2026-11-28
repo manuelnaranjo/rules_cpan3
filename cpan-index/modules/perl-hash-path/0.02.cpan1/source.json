@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IZ/IZUT/Hash-Path-0.02.tar.gz",
-    "integrity": "sha256-sjOapmXHcKjue9Q4WmewDFeK4BQt5XYmV/cJRnlFbq8=",
-    "strip_prefix": "Hash-Path-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-7QBvFzJAPtqWJDmwoFX+WdPSTpv34HhSPgyd8agIezE="
-    }
-}

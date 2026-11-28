@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IZ/IZUT/SQL-Tokenizer-0.24.tar.gz",
-    "integrity": "sha256-+qhpvEJlc2QVNqCfU1AuVA1ePjrWp6oaxiXT9pdrQuE=",
-    "strip_prefix": "SQL-Tokenizer-0.24",
-    "overlay": {
-        "BUILD.bazel": "sha256-5Z2495F7PzQPMGm4l9AhYAD7CoTKnnhwlIrPqChUIAk="
-    }
-}

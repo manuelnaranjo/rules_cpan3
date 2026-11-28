@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Test-Bits-0.02.tar.gz",
-    "integrity": "sha256-qYJvVkg6J+LGMVZZDzKKNjPjA3XBDfyJ9mkOOSneC8M=",
-    "strip_prefix": "Test-Bits-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-LFJ5ChfTRp1fDk8kKjEWL/OE+ty3PqDuGcTMvMPD32s="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANAJ/Crypt-Random-TESHA2-0.01.tar.gz",
-    "integrity": "sha256-oJErQsUr4XPaUo1VJ+QNlnMkvASseNn8LdyR/xb+ljM=",
-    "strip_prefix": "Crypt-Random-TESHA2-0.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-8mNkaF5rqXOlDroHUoUPMBc52ldPe0CE9vQgCKGEvbc="
-    }
-}

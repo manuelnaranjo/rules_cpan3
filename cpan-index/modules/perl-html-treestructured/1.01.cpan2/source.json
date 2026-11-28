@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MV/MVR/HTML-TreeStructured-1.01.tar.gz",
-    "integrity": "sha256-Y1h3/l1TFJL2OFYfAY4Wa/yUU8cG+w+cuNroePtCKmU=",
-    "strip_prefix": "HTML-TreeStructured-1.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-r6hTvQCecceu1gfQl9QgAkyUOFjBbonvFkJCkeSdwjg="
-    }
-}

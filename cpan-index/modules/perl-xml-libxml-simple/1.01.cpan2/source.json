@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/XML-LibXML-Simple-1.01.tar.gz",
-    "integrity": "sha256-zZjIEEtw12cr+ia0UTt4rfK0uSIOWGqovrGlCFADZaY=",
-    "strip_prefix": "XML-LibXML-Simple-1.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-cDhO9UWi0T5l1Ib4duD/95nanVrBOi8HkwF3PD5nsLE="
-    }
-}

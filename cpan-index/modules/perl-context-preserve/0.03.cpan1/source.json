@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Context-Preserve-0.03.tar.gz",
-    "integrity": "sha256-CZFKTCx725nKtoDBg8v0kuyY1uI/vMSH/MSuEFZ9/R8=",
-    "strip_prefix": "Context-Preserve-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-aYuW2zMhzi9tNamWumXJSj3D3JLdgyf0izJ7TgIMCKc="
-    }
-}

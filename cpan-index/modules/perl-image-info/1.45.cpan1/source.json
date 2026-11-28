@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SR/SREZIC/Image-Info-1.45.tar.gz",
-    "integrity": "sha256-nWwdKMKbE3saUVLmKAg9hDdXczbYvqGRYF3aINVbNTk=",
-    "strip_prefix": "Image-Info-1.45",
-    "overlay": {
-        "BUILD.bazel": "sha256-tBbFry27ZN178eSbaaB4RCSrxQrh+8JdcwDdcXe+nUg="
-    }
-}

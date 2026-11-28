@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHOCOLATE/Scope-Guard-0.21.tar.gz",
-    "integrity": "sha256-jJsb6lxWRI4sP63GXQW+nkaQo4I6gPOdLxD92Pd30ng=",
-    "strip_prefix": "Scope-Guard-0.21",
-    "overlay": {
-        "BUILD.bazel": "sha256-AbcKRB1M5wTcyTQt4W2OUHCS1+KeTur7ipSPjqbsVfQ="
-    }
-}

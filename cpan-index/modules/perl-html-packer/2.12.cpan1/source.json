@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/HTML-Packer-2.12.tar.gz",
-    "integrity": "sha256-brNQAVFruqmliLAi3vs4L+KmNnNAWhUszdgOhRnaPuc=",
-    "strip_prefix": "HTML-Packer-2.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-7PliAcXki+rSll7Akb9hay8tf4VJJbQPTY/fG7Frgl0="
-    }
-}

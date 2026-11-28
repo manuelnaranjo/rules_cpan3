@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Test2-Tools-Explain-0.02.tar.gz",
-    "integrity": "sha256-5Ha9Fznmj0GGF8MIw8PPdC3mpZXCO7rCwnDhQVn3MSI=",
-    "strip_prefix": "Test2-Tools-Explain-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-Kq0RW2UfJbTDQBDsXWBsZq7eXEfMhErM2Ic9Q90dbAA="
-    }
-}

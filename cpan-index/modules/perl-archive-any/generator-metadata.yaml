@@ -1,5 +1,0 @@
-manual_tests:
-- t/00compile.t
-- t/Any.t
-- t/fail.t
-- t/type.t

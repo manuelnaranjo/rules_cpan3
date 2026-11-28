@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PU/PUNYTAN/Emoji-NationalFlag-0.01.tar.gz",
-    "integrity": "sha256-GbR77JwdmJlwGtIDH2kzMokXW8am6EKSM6ck4AOMgFs=",
-    "strip_prefix": "Emoji-NationalFlag-0.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-34+uVOlBSXw7O7WA7yi6nr7TkFuknfe1jVw/szPoYEU="
-    }
-}

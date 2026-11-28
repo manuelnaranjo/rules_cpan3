@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MATTLAW/Module-Mask-0.06.tar.gz",
-    "integrity": "sha256-LXP4H/Icn6KBAnkeVG/yVxZLMCX3gyVEyCI/uHwefnc=",
-    "strip_prefix": "Module-Mask-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-z6FS1egQ3ZEvjoNGekHke77i6syxm8tHn8He/CvQcVg="
-    }
-}

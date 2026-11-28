@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA/OLE-Storage_Lite-0.24.tar.gz",
-    "integrity": "sha256-ccO27wghdslYXmIN1I8PR4LCgr5z8qZT6kthj3V7s/0=",
-    "strip_prefix": "OLE-Storage_Lite-0.24",
-    "overlay": {
-        "BUILD.bazel": "sha256-MyMyuvlsdiyXiW9iePRRsGfCTg5osJa2ySVnXu16Kx8="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/aliased-0.34.tar.gz",
-    "integrity": "sha256-w1BSRQfNgn+rhk5dTCzDULG6uqEvqVrsDKAIQ/zH3us=",
-    "strip_prefix": "aliased-0.34",
-    "overlay": {
-        "BUILD.bazel": "sha256-hfmXU+w/Ocr1bWr+3S1bpbFZvCsevhkb1ma30+RsFis="
-    }
-}

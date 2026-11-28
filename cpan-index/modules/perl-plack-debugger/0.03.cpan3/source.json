@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STEVAN/Plack-Debugger-0.03.tar.gz",
-    "integrity": "sha256-/2Pprnot4llDU4LbbulQnWgTalVK9F32BXNmsGU0kr4=",
-    "strip_prefix": "Plack-Debugger-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-4P5scBthvukwvI+otDD3jqr921Gs1U/V4iy1chIBbJc="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/LV-0.006.tar.gz",
-    "integrity": "sha256-+ojC1K8LESbUZAHmNVplSW0DPPwqapRGUwEaY4rfp1w=",
-    "strip_prefix": "LV-0.006",
-    "overlay": {
-        "BUILD.bazel": "sha256-0UDgEVVQ1cqIYFBM/RQq+Rg8z4zD05m6BAGfMKSHcQ4="
-    }
-}

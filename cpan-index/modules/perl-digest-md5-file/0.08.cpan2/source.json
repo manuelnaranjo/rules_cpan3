@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DM/DMUEY/Digest-MD5-File-0.08.tar.gz",
-    "integrity": "sha256-rbQ6VOMmJ7T35XyWQObrBtC7edjqVM0L157TVoj7Ehg=",
-    "strip_prefix": "Digest-MD5-File-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-8ViZ8tFpU6xQtxv0ooHVX6pAhFIiXUQqg5au5FNqjI0="
-    }
-}

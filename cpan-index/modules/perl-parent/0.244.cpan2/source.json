@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CO/CORION/parent-0.244.tar.gz",
-    "integrity": "sha256-FJpl8BmQnCiXFLV/tcfK26WT57hszyXLSfflSioa8c4=",
-    "strip_prefix": "parent-0.244",
-    "overlay": {
-        "BUILD.bazel": "sha256-xyTbKWnV2K1OEs4NwduJKOsMR18rTkhMp9qm92gtTdc="
-    }
-}

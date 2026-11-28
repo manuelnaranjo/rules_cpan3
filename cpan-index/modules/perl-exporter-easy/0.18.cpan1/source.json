@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Exporter-Easy-0.18.tar.gz",
-    "integrity": "sha256-00eyKS/8YzLlusGuznN5bLdcHrSnmxpN6cVKsI8cJWU=",
-    "strip_prefix": "Exporter-Easy-0.18",
-    "overlay": {
-        "BUILD.bazel": "sha256-f9raXEPPKKh2zSEu+fYCHLBpFDAqElGLCMdKG+8cDHs="
-    }
-}

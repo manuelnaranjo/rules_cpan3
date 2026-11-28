@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Role-Dino-0.08.tar.gz",
-    "integrity": "sha256-hNISYZ2K+jQtTSFsgO3p2JbxFAZcMUbKnokUwyHwGHI=",
-    "strip_prefix": "Alien-Role-Dino-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-PUiRxkmPrXEwcNXVWWfpr5VpZ1myEec7qYFFr/We33o="
-    }
-}

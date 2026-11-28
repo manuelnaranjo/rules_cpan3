@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RS/RSHERER/Class-Data-Inheritable-0.10.tar.gz",
-    "integrity": "sha256-qhrmimETV7e/2aL2SQfMGW3dbQR8rmTvnQrQmdmK5Uo=",
-    "strip_prefix": "Class-Data-Inheritable-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-vtmz/v0tY2XBPcCXQuML5QBqQktI/IXUQQZkB/SD8GA="
-    }
-}

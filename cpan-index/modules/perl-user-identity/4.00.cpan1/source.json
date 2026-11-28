@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/User-Identity-4.00.tar.gz",
-    "integrity": "sha256-RuxVxLLBWPueO9XGOqoQaV/uhQjvTslYd03Y6syrOEc=",
-    "strip_prefix": "User-Identity-4.00",
-    "overlay": {
-        "BUILD.bazel": "sha256-Mz2P+gn09xc8sRhZ2CDqb9uGBGh2zR6X2J3ne6gxQhw="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MANWAR/Time-Warp-0.55.tar.gz",
-    "integrity": "sha256-TKP6XI0LSdPFFAT3b5u2Qg8EsNV6Hco3FvU0ZVMc76g=",
-    "strip_prefix": "Time-Warp-0.55",
-    "overlay": {
-        "BUILD.bazel": "sha256-RLcIzdlUdUloPkyIJMD9T57r6YuRfrys34AY1Ce1A+E="
-    }
-}

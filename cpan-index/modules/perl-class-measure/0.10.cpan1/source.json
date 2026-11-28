@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BL/BLUEFEET/Class-Measure-0.10.tar.gz",
-    "integrity": "sha256-wLeesJpmzEH7g6rb0kh0NytGWnRAe5bgcimU7vv9JMo=",
-    "strip_prefix": "Class-Measure-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-u6P+aAw6agd4LQxTw5rjQKUUbgfwOEFurjU5JqpbgL8="
-    }
-}

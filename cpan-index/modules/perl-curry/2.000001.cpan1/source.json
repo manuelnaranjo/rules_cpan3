@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/curry-2.000001.tar.gz",
-    "integrity": "sha256-yY/iBQ+t7KOYGdboDVROkSGE/oRsvnNTnGhpT7G1HAg=",
-    "strip_prefix": "curry-2.000001",
-    "overlay": {
-        "BUILD.bazel": "sha256-SZGMMGfDlLdSk2aZRfp1gxL7hEgZt1Lo10+vCzxwL4M="
-    }
-}

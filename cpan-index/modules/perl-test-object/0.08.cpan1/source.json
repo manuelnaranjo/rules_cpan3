@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Object-0.08.tar.gz",
-    "integrity": "sha256-ZSeJZBR4NzE/QQjlW1lnboo2TW7fAbPcGYruiUqx0Ls=",
-    "strip_prefix": "Test-Object-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-GgXcrinIDHwl4AxumJGIaKsNoluxT9rDtMfKnEdK/hQ="
-    }
-}

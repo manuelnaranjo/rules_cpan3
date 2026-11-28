@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KI/KIMRYAN/Lingua-EN-Sentence-0.34.tar.gz",
-    "integrity": "sha256-Wu8hOuB4Xnv4VMxsElMLh8wRCEPtyrInFJzXL87uNLk=",
-    "strip_prefix": "Lingua-EN-Sentence-0.34",
-    "overlay": {
-        "BUILD.bazel": "sha256-0SaY6d5fXygJIXCNohkt+Mi5ngr+QOK5PXgcVnWvMHI="
-    }
-}

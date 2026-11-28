@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Devel-REPL-InProcess-0.05.tar.gz",
-    "integrity": "sha256-HFkpFn3r90qB9Z4ZVOz8Iu1mdgUJXshyI481QzRau5s=",
-    "strip_prefix": "Devel-REPL-InProcess-0.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-4+NjXt8YrilTsrqdOk3M9zCQs1djauOWKUUiJ9lPdaU="
-    }
-}

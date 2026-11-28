@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Sub-Metadata-0.002.tar.gz",
-    "integrity": "sha256-oi+e6sePBA/ABV/sfiyEQtQl2/KFlnYZ9EJNJXfEhNA=",
-    "strip_prefix": "Sub-Metadata-0.002",
-    "overlay": {
-        "BUILD.bazel": "sha256-7m9pZKDJfIPJx0ILghIIGBfyeGvyzLdSTpOmlNcdbLA="
-    }
-}

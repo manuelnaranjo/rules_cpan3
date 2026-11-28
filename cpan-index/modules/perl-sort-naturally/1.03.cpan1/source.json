@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Sort-Naturally-1.03.tar.gz",
-    "integrity": "sha256-6qscXIdXWngmCJMEqx+P+n8Y5s2LOTdiPpmOhl7B50Y=",
-    "strip_prefix": "Sort-Naturally-1.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-bupbMsOpRWiY6rzkItx1UVvucqH0OFPCeqtDUJErGps="
-    }
-}

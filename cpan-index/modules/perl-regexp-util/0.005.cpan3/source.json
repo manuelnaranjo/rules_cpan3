@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Regexp-Util-0.005.tar.gz",
-    "integrity": "sha256-oIhx/KIFTEZOxs1mP72y/OmcwDRiVqzwpJNmge2KDgA=",
-    "strip_prefix": "Regexp-Util-0.005",
-    "overlay": {
-        "BUILD.bazel": "sha256-RRh4B0+MZXCp7l7Bsz86sySt2zNhNL+QFHpTniH3Pwc="
-    }
-}

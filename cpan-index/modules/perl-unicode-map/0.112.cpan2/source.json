@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSCHWARTZ/Unicode-Map-0.112.tar.gz",
-    "integrity": "sha256-EPDC8S67pX3NT0bSTPJCwZFdMewKTsNrTfGMnKDLSlo=",
-    "strip_prefix": "Unicode-Map-0.112",
-    "overlay": {
-        "BUILD.bazel": "sha256-YqrhWpypMhoGQ10hVlMCAfjJ6dXVr02gklAEWYJAJbo="
-    }
-}

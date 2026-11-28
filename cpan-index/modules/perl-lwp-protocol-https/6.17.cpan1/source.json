@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/LWP-Protocol-https-6.17.tar.gz",
-    "integrity": "sha256-Nhx8Hu6M9mgSlY+XXybvLiJyoMYiHSBDR3y5wiuNHCM=",
-    "strip_prefix": "LWP-Protocol-https-6.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-krnwER/uKu8n80R/AputjCjh0cB4ZchEIcnlLOPugKE="
-    }
-}

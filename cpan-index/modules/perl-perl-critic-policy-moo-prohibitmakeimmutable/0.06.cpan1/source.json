@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BL/BLUEFEET/Perl-Critic-Policy-Moo-ProhibitMakeImmutable-0.06.tar.gz",
-    "integrity": "sha256-Qy+DOqtKfJ8SOPDeTDUN1pDXxkUSdQxqomdCPAnmpz0=",
-    "strip_prefix": "Perl-Critic-Policy-Moo-ProhibitMakeImmutable-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-3jSS17RF+3ZYWMMZmByGhR+J326p8BgDYGu0FHDR/Mc="
-    }
-}

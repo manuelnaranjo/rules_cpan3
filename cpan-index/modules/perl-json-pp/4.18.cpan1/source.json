@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-PP-4.18.tar.gz",
-    "integrity": "sha256-nHvLI4GDxCQNtVSLGRDOhCjgRk0F5BPfWJOZjme/YCw=",
-    "strip_prefix": "JSON-PP-4.18",
-    "overlay": {
-        "BUILD.bazel": "sha256-cR/ytDOEvm1h0uURJwy3CpiM+pqTeutj9pyf4bZKck4="
-    }
-}

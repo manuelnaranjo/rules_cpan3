@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BI/BIGPRESH/Data-Censor-0.04.tar.gz",
-    "integrity": "sha256-txNpSwBDYrp5m6yp7pal0cRaXil3EeMxL3Qe9RHizIM=",
-    "strip_prefix": "Data-Censor-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-5rmglnoM3QxcOebjYMz2B175SbEn67mKetP5BLvv8Ng="
-    }
-}

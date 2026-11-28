@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Deep-1.205.tar.gz",
-    "integrity": "sha256-QngemUOnohXmYsSXO5/q/cAZ/RZGm9uEmoU37liVYnM=",
-    "strip_prefix": "Test-Deep-1.205",
-    "overlay": {
-        "BUILD.bazel": "sha256-4Y0+Ej29hUAYNTvyYDlAJal7ZTFN2VXGd91csp8rWng="
-    }
-}

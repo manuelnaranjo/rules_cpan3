@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PERLANCAR/Log-Any-Adapter-Callback-0.102.tar.gz",
-    "integrity": "sha256-fAGIMmW9q2U0QlfBsdHmn74wDnaT3d7ruY+fZzEOB80=",
-    "strip_prefix": "Log-Any-Adapter-Callback-0.102",
-    "overlay": {
-        "BUILD.bazel": "sha256-cjtZaIk/YOK70utqwPAgVt8x0NaM+r8wurIyzd8DXQ0="
-    }
-}

@@ -1,3 +1,0 @@
-manual_tests:
-- t/08_regression.t
-- t/07_token.t

@@ -1,7 +1,0 @@
-native_deps:
-- '@openssl//:crypto'
-- '@openssl//:ssl'
-manual_tests:
-- '*'
-file_copies:
-  Random.pm: lib/Crypt/OpenSSL/Random.pm

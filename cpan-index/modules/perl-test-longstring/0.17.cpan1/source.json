@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Test-LongString-0.17.tar.gz",
-    "integrity": "sha256-q8Q0nq8E0b7B5GQWajAYWR6oRtjzxcnIr0rEkF0+l08=",
-    "strip_prefix": "Test-LongString-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-Cq/nrzVa4AnSDCUgdsi7ubNVisn7fA2NSCdxi88694A="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SB/SBECK/Date-Manip-7.00.tar.gz",
-    "integrity": "sha256-NxM+6wnTbabUYVRswha49qIpekMzHGgKaEjz//kll1w=",
-    "strip_prefix": "Date-Manip-7.00",
-    "overlay": {
-        "BUILD.bazel": "sha256-WkChP7VnEVd0xrYByDZAA49cVJOR5liEr12ugs+ZYdc="
-    }
-}

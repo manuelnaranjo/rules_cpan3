@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/Modern-Perl-1.20250607.tar.gz",
-    "integrity": "sha256-OO1+t7ka7tFTiHSD5JqagHouiWKrInzG/bXqTcQd8Sg=",
-    "strip_prefix": "Modern-Perl-1.20250607",
-    "overlay": {
-        "BUILD.bazel": "sha256-tOiXZsfPrdFAl+gaQVnT/knY32s4u++3cDJ5eeYAOHs="
-    }
-}

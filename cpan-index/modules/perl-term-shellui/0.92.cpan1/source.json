@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BR/BRONSON/Term-ShellUI-0.92.tar.gz",
-    "integrity": "sha256-MnnAHHYiczXu/wkDKkD0sCsoUVGzV2wEys0VvgWUK9s=",
-    "strip_prefix": "Term-ShellUI-0.92",
-    "overlay": {
-        "BUILD.bazel": "sha256-2XftqL5oOzT9irtC0tFFxLpXuzxmyfrPW5brN4IA6gU="
-    }
-}

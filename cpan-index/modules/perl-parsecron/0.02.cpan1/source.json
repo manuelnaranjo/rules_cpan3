@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EL/ELOHMROW/ParseCron-0.02.tar.gz",
-    "integrity": "sha256-gSBIGLadPoM3KFJWSqSzn0FZiNkuu2t6ImFvkK4pxfM=",
-    "strip_prefix": "ParseCron-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-i0EEsTehSfMb/Um9NyVvwq4Vs2MPJgJq/bwxgEudTW4="
-    }
-}

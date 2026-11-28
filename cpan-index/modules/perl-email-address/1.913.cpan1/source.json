@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-Address-1.913.tar.gz",
-    "integrity": "sha256-avtUH232tTXM92QtNhrhjXqVo/k6zhvFNz9kwkEMpa8=",
-    "strip_prefix": "Email-Address-1.913",
-    "overlay": {
-        "BUILD.bazel": "sha256-mCW3i0aQ2fX2XICHqV0RgcDwEeVEjLcstTsYVtsXARk="
-    }
-}

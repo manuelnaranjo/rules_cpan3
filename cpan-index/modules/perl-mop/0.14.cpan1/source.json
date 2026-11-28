@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STEVAN/MOP-0.14.tar.gz",
-    "integrity": "sha256-ON42SZS+Cm8LdDvGDi0eDZ/3vpucR0WJ2B6wj1uYRNI=",
-    "strip_prefix": "MOP-0.14",
-    "overlay": {
-        "BUILD.bazel": "sha256-bSXZRklSqKbnF/92st2cGEeULyyi8+cRST0zB/imo7E="
-    }
-}

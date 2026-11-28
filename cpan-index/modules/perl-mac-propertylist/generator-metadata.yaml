@@ -1,9 +1,0 @@
-manual_tests:
-- t/read_binary.t
-- t/get_filehandle.t
-- t/round_trip.t
-- t/parse_plist_fh.t
-- t/as_perl.t
-- t/bad_plist.t
-- t/int64.t
-- t/time.t

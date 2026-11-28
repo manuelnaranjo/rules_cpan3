@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DG/DGRYSKI/ShardedKV-Continuum-Jump-0.04.tar.gz",
-    "integrity": "sha256-IOcwix324lzPFL1tSUxwE1CT/Y1h1f1sPGOIo9MgmVw=",
-    "strip_prefix": "ShardedKV-Continuum-Jump-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-4cxWyy7Ijv18qp6y+xmFR8IRw+2wXXGmlcgVZTMjBIU="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.104007.tar.gz",
-    "integrity": "sha256-gUYto82edFkB8p/wBsTIBMydsBfM9FFUs82VWFQLwZE=",
-    "strip_prefix": "Software-License-0.104007",
-    "overlay": {
-        "BUILD.bazel": "sha256-Q+WPVljLMsMKT0dMM3pnaed+jAlmy45Iy/DEQ3VjlaI="
-    }
-}

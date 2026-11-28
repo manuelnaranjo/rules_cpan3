@@ -1,9 +1,0 @@
-includes:
-- .
-output_loc: auto/XML/Parser/Expat/Expat
-native_deps:
-- '@libexpat//:libexpat'
-manual_tests:
-- '*'
-file_copies:
-  Parser.pm: lib/XML/Parser.pm

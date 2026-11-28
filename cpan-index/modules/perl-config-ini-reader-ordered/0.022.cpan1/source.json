@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Config-INI-Reader-Ordered-0.022.tar.gz",
-    "integrity": "sha256-Byv/OzL0GvgybsFyx9JKsosuXzYCH1Jo0MjC44ewY1Q=",
-    "strip_prefix": "Config-INI-Reader-Ordered-0.022",
-    "overlay": {
-        "BUILD.bazel": "sha256-eO2+Sg7kPyBU/RQPFeQfRaQDqk6sj66j4CQKuoV/bv4="
-    }
-}

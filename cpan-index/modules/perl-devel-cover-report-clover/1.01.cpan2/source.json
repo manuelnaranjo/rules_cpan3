@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DB/DBARTLE/Devel-Cover-Report-Clover-1.01.tar.gz",
-    "integrity": "sha256-0UglUYn9nidl+8jETeG9Cj5TYUwrIddpi0fEA8jQOak=",
-    "strip_prefix": "Devel-Cover-Report-Clover-1.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-yiYA26TJm4/+Hug68dae2qDHJqWToYIVikhTjT9dkkQ="
-    }
-}

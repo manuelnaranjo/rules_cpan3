@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Markdent-0.41.tar.gz",
-    "integrity": "sha256-/mXh51dxJTVpVs0qZNwLP41a+fWIB+KIEvBfOjp9/18=",
-    "strip_prefix": "Markdent-0.41",
-    "overlay": {
-        "BUILD.bazel": "sha256-Y8zJhzT+qMyZ+4JXR7o4Xd4YDe6q/C8ke0J2yn75m38="
-    }
-}

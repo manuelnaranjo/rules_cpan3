@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/Locale-gettext-1.07.tar.gz",
-    "integrity": "sha256-kJ1HlUaX58BCGPlykVt4e9EkTXXjvQFiC8Fn1bvEnBU=",
-    "strip_prefix": "Locale-gettext-1.07",
-    "overlay": {
-        "BUILD.bazel": "sha256-YdAOsGUl8DGx6SzPLOE35NlWMD74mOcFPhnVSo/z1EY=",
-        "config.h": "sha256-iNW2UNtl4qg+UySvuqIxqt0yWOEu3P1MyJOpTXoQWS8="
-    }
-}

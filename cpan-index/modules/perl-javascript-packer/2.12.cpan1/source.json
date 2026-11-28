@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/JavaScript-Packer-2.12.tar.gz",
-    "integrity": "sha256-tGeZ92Vk6bQ7pFExa0UYtRHRQoq1vD8mtXPA7e16S6Q=",
-    "strip_prefix": "JavaScript-Packer-2.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-sGiMGLmuQATAcrfLh4Yh2BtzJoMX6/mw+AxG1LZ9j78="
-    }
-}

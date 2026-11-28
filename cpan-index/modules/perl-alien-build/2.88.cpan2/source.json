@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Build-2.88.tar.gz",
-    "integrity": "sha256-wUNGus4rUMrmLx7nCpB/THOD+r+QsDQnLuUqWxNF+7o=",
-    "strip_prefix": "Alien-Build-2.88",
-    "overlay": {
-        "BUILD.bazel": "sha256-d4yxrl3cfUSI+RTfSSuGD8KCbPtpawDdz8ylEBRpwGg="
-    }
-}

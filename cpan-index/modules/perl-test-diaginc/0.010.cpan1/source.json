@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Test-DiagINC-0.010.tar.gz",
-    "integrity": "sha256-W8uNNWxQnjWdU9hpwH79qo/uXWz5mJcBi5qRTOshIi4=",
-    "strip_prefix": "Test-DiagINC-0.010",
-    "overlay": {
-        "BUILD.bazel": "sha256-8hQm4Tmzsp+w8vEW0r/EpaQxyEtH7q1lYX+mSjXJNsQ="
-    }
-}

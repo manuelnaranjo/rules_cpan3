@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Log-Dispatch-2.71.tar.gz",
-    "integrity": "sha256-nWDZZIw1zidUcx603rfwWAns4b1jO3TXR5Wu2exzJXA=",
-    "strip_prefix": "Log-Dispatch-2.71",
-    "overlay": {
-        "BUILD.bazel": "sha256-AJiA+Tks2ruNwUv3B24mUXPLB33LOcSnCAxagavK540="
-    }
-}

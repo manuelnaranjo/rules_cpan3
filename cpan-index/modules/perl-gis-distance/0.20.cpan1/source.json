@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BL/BLUEFEET/GIS-Distance-0.20.tar.gz",
-    "integrity": "sha256-srL4d0zdq24+SdNJiO+v6P4NUA/21Xth+GYUCVvxQj4=",
-    "strip_prefix": "GIS-Distance-0.20",
-    "overlay": {
-        "BUILD.bazel": "sha256-w4KKZyv0yjn/uRCBVhCkB0H/2I0JhyiD2kHV9S5W1Cg="
-    }
-}

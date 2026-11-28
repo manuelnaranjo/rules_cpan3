@@ -1,5 +1,0 @@
-manual_tests:
-- '*'
-file_copies:
-  General/Extended.pm: lib/Config/General/Extended.pm
-  General/Interpolated.pm: lib/Config/General/Interpolated.pm

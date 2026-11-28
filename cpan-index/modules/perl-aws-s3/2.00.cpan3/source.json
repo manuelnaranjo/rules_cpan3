@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/AWS-S3-2.00.tar.gz",
-    "integrity": "sha256-6QZaEfJWBQ2e9nHJUEaRVqTYJWNHqD2J56xdF3Xf0WM=",
-    "strip_prefix": "AWS-S3-2.00",
-    "overlay": {
-        "BUILD.bazel": "sha256-vlqkxxBcJJc/PdLPwdvLVG0XRa+1lxo55RdlUy4RSF8="
-    }
-}

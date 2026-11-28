@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DANAJ/Crypt-Random-Seed-0.03.tar.gz",
-    "integrity": "sha256-WT2lS1IsCcwmu8wOTknByOaIpv0zsHJq+AHXIqXI0PE=",
-    "strip_prefix": "Crypt-Random-Seed-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-mLeCxyJ50PiAmkfoW5FHBcVbRKPLiM5Kd1Q4XWTGs/Y="
-    }
-}

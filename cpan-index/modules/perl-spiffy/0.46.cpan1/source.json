@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IN/INGY/Spiffy-0.46.tar.gz",
-    "integrity": "sha256-j1hiCoQgJVxJtsQ8X/WAK9JeTwkkDFHlvysCKDPUHaM=",
-    "strip_prefix": "Spiffy-0.46",
-    "overlay": {
-        "BUILD.bazel": "sha256-9K1OGHEWMqUtTw/g3x12LFe5jMZkAaP0vTNo1ocmrLQ="
-    }
-}

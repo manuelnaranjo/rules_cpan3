@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/F/FA/FAYLAND/Lingua-Han-PinYin-0.23.tar.gz",
-    "integrity": "sha256-KDYyxEselk6UAoB7bFN2HAedW9RDQ20tbqV2fTXoXKs=",
-    "strip_prefix": "Lingua-Han-PinYin-0.23",
-    "overlay": {
-        "BUILD.bazel": "sha256-iN3nItJp81dRvSNTwhxuiPkapYCi8gpROC+SxqtIMmQ="
-    }
-}

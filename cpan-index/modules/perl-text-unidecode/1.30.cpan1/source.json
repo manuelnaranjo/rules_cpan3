@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SB/SBURKE/Text-Unidecode-1.30.tar.gz",
-    "integrity": "sha256-bCTxTdwdIOJhYcIHtzyhhO7S71fwi1+y7hlubi6IscY=",
-    "strip_prefix": "Text-Unidecode-1.30",
-    "overlay": {
-        "BUILD.bazel": "sha256-ZJw2N8VZXXKIJc9QkC+GKLaDHL7fxwmdSZPyChw6PCk="
-    }
-}

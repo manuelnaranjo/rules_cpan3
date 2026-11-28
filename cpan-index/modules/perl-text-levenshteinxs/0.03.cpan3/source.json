@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JG/JGOLDBERG/Text-LevenshteinXS-0.03.tar.gz",
-    "integrity": "sha256-43T/eyN5Gc5eqSRfNW0ctSzIf9JrOlo4s/Pl/4KgFJE=",
-    "strip_prefix": "Text-LevenshteinXS-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-mBuqTdDtEVQvsXC0UDU/T/EHf40LQLtczdN9yqa9mvQ="
-    }
-}

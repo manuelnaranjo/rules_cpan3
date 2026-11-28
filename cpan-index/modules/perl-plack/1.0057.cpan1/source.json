@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Plack-1.0057.tar.gz",
-    "integrity": "sha256-Ac/gNidnA/Ys9sHOx8fmMEIGd0mN+nvDM62I7KnXp2U=",
-    "strip_prefix": "Plack-1.0057",
-    "overlay": {
-        "BUILD.bazel": "sha256-JY4S/broIYx7b13ZMRh+WYkrx6yXC9C/NFzDuPS/p7g="
-    }
-}

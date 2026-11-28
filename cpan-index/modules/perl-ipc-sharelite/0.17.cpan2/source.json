@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AN/ANDYA/IPC-ShareLite-0.17.tar.gz",
-    "integrity": "sha256-FNQGuR2pbWUh0NGoLSKjBidHZSJrhrClbn/93Plq578=",
-    "strip_prefix": "IPC-ShareLite-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-8WDgk1pv0QIq4SxlLz06eiP68DeApLGQqCHSH+FZF4o="
-    }
-}

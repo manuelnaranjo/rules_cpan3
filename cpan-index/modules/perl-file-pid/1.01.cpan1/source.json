@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CW/CWEST/File-Pid-1.01.tar.gz",
-    "integrity": "sha256-uv7uj9yW6wYwagxYu9tyCbbeRfhQ51/caxbbV24F5CI=",
-    "strip_prefix": "File-Pid-1.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-H1BB10M0wlM7zNBW2KzOiJ+elWUNVOWkGbXXoJmqAnk="
-    }
-}

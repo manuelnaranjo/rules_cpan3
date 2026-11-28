@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-DateTime-MoreCoercions-0.15.tar.gz",
-    "integrity": "sha256-Ibs6WXcZiI7bbOqhMkGNXPkuy5KlDM43uUJZpV4ON5Y=",
-    "strip_prefix": "MooseX-Types-DateTime-MoreCoercions-0.15",
-    "overlay": {
-        "BUILD.bazel": "sha256-F8ULO5GaQ1+slNZQhEoSogluXrXdWv+Gjt5hgnDqbWk="
-    }
-}

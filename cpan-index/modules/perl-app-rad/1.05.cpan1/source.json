@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GA/GARU/App-Rad-1.05.tar.gz",
-    "integrity": "sha256-KHAorbO2UYQQCGIMYTjEao+9gT+p9wEn760Aopk0V9Y=",
-    "strip_prefix": "App-Rad-1.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-M/L5D6Q1iiHq76DFeDOiv1GLKx751LYAYq1uWCTU47g="
-    }
-}

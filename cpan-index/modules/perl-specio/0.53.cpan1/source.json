@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Specio-0.53.tar.gz",
-    "integrity": "sha256-DQ7s+56JvQ9fcQ+sQuEgCogtUTqGL5hJfq71knrGwYM=",
-    "strip_prefix": "Specio-0.53",
-    "overlay": {
-        "BUILD.bazel": "sha256-P3mtQHsRzuhNYt+7iTF1PWbpd1vUhG5fWKkun++zh7I="
-    }
-}

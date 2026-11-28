@@ -1,4 +1,0 @@
-cc_srcs_exclude:
-  - "sombok/lib/5.*.c"
-  - "sombok/lib/6.*.c"
-  - "sombok/lib/7.*.c"

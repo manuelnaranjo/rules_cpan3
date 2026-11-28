@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.45.tar.gz",
-    "integrity": "sha256-05cc94qDReOAQrIIu3s5y2lQgDhq9in0oE/9ZUnfEVc=",
-    "strip_prefix": "File-Copy-Recursive-0.45",
-    "overlay": {
-        "BUILD.bazel": "sha256-YGcBT2KCUk7tKsFp3JZysFsmtNOCJuz1TZrQB83vOTg="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-BinaryData-0.016.tar.gz",
-    "integrity": "sha256-EVoABqVj1DHMoaPM0QPkQDH1xRAxxuGy2UpDSrFNW4Y=",
-    "strip_prefix": "Test-BinaryData-0.016",
-    "overlay": {
-        "BUILD.bazel": "sha256-Gdxzy16/vyBkM2URGdm8av5ugC+xZg0eC/Sj3AJMxHc="
-    }
-}

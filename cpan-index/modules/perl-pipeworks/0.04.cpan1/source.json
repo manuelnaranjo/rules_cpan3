@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JA/JANUS/Pipeworks-0.04.tar.gz",
-    "integrity": "sha256-+4qLXgAryP4hk2M0ANrL0Yo4LL7dW4IilK13xY9x98U=",
-    "strip_prefix": "Pipeworks-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-m7x6l/0146tBZUfXy2mjcIOPeZHB7g8IyZyu9txVUko="
-    }
-}

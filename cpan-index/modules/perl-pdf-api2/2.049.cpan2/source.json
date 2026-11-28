@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SS/SSIMMS/PDF-API2-2.049.tar.gz",
-    "integrity": "sha256-aI8+fCSpfK1C651KfI8LWDAZHwKNLpTKLbxRYQcKHN8=",
-    "strip_prefix": "PDF-API2-2.049",
-    "overlay": {
-        "BUILD.bazel": "sha256-Ydz+lu8FoWZaIVNqDwyHi3X+VBY30FkcmaCRGQJASdQ="
-    }
-}

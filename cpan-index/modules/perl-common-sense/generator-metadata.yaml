@@ -1,4 +1,0 @@
-manual_tests:
-- '*'
-patch_cmds:
-- perl sense.pm.PL sense.pm

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/MooseX-Params-Validate-0.21.tar.gz",
-    "integrity": "sha256-iClURqupmcu4+ZjX+5onAdZhc5SlHW1yTHdObZ/xOdk=",
-    "strip_prefix": "MooseX-Params-Validate-0.21",
-    "overlay": {
-        "BUILD.bazel": "sha256-/yLwfG55wod1d74sPUzkRhZery0BdLWnfPum34tK3jA="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MI/MITHUN/URI-Encode-v1.1.1.tar.gz",
-    "integrity": "sha256-S7nOTnAWwBOM+cI3VQhZUobvocjcFbRbqkxHKBwIJDs=",
-    "strip_prefix": "URI-Encode-v1.1.1",
-    "overlay": {
-        "BUILD.bazel": "sha256-IhDI4JfNQX2QYqN1ZkViF6KRKqOwPvn+MiwmOYDh2V4="
-    }
-}

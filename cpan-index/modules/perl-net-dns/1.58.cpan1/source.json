@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.58.tar.gz",
-    "integrity": "sha256-YzXp4lO8RXx/fiaq72c8YT9iveJquNHL3T3f60Aocac=",
-    "strip_prefix": "Net-DNS-1.58",
-    "overlay": {
-        "BUILD.bazel": "sha256-CMhie6uZNKkyHb3V7daFgDFmip2/2eHWoOTYFaKpKH4="
-    }
-}

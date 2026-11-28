@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RW/RWSTAUNER/Pod-Markdown-3.400.tar.gz",
-    "integrity": "sha256-pibpm81OfSFOQ9RyKlTjqvrDcThi90ec+5Sg4oefhEI=",
-    "strip_prefix": "Pod-Markdown-3.400",
-    "overlay": {
-        "BUILD.bazel": "sha256-NY6h+l4Of8T35B7ToPqV1UrdwmfId+cAzXhAdeoOx4s="
-    }
-}

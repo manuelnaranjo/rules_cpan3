@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Pod-Coverage-TrustPod-0.100006.tar.gz",
-    "integrity": "sha256-NYrcJQTwOetpCYqpm93mrp3JNTZKjhRPZAXoKTs6fKM=",
-    "strip_prefix": "Pod-Coverage-TrustPod-0.100006",
-    "overlay": {
-        "BUILD.bazel": "sha256-UbXWKqgG7CYYuJc+MexcAK4oG3qzRN7w/8hkQBs3MlE="
-    }
-}

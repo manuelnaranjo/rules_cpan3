@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/HTML-Tidy-1.60.tar.gz",
-    "integrity": "sha256-vPv2XWh/jmcs9gyYIbzWXV6McqeCcrZ7sKwcaZoT18c=",
-    "strip_prefix": "HTML-Tidy-1.60",
-    "overlay": {
-        "BUILD.bazel": "sha256-XVLeSjW/VREMcKIMgLWkXbE/m9c1G2e08zaD9yV23Lw="
-    }
-}

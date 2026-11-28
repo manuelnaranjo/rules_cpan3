@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JR/JROBINSON/Paws-0.46.tar.gz",
-    "integrity": "sha256-lh45QSi0w48OcRfLqAOg04UBYm/580uO4A+tmIbqTb8=",
-    "strip_prefix": "Paws-0.46",
-    "overlay": {
-        "BUILD.bazel": "sha256-fweakSCH/oJNtnGWRZMq+ORnJUQayOurPNoPH9e1Cdo="
-    }
-}

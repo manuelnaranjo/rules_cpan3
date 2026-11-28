@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/ack-2.28.tar.gz",
-    "integrity": "sha256-im7L8Kua7nX6oLiXXUpH/gAqfziFRVrkXXHisE2y75s=",
-    "strip_prefix": "ack-2.28",
-    "overlay": {
-        "BUILD.bazel": "sha256-ppoakyhEzo3r/p7C438RhcASPcC4UcqcwhfilYa0hNk="
-    }
-}

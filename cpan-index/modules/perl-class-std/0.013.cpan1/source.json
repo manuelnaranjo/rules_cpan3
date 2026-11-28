@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Class-Std-0.013.tar.gz",
-    "integrity": "sha256-vNbYL2yK8P4Gn87X3RZaR5WwtukjUcfU5aGrmhT8NcY=",
-    "strip_prefix": "Class-Std-0.013",
-    "overlay": {
-        "BUILD.bazel": "sha256-gq/l0tcX3E56Y7GvCV0siCSdAC8M06ajEQkFWU4gxJc="
-    }
-}

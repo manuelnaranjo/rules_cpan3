@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMK/Text-WordDiff-0.09.tar.gz",
-    "integrity": "sha256-/uaZynY63KL04Y9KioNv0hArwoIK9wj460M1bVrg1Q4=",
-    "strip_prefix": "Text-WordDiff-0.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-Hb3b13seklltQEBfBZMZ+h0qPyeBxecXvR351nMKtAg="
-    }
-}

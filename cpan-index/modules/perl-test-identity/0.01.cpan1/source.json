@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Test-Identity-0.01.tar.gz",
-    "integrity": "sha256-LwIFAJrtFSZoGCqvoWNXqx9HtMvAAeiYcbZzh++OXyM=",
-    "strip_prefix": "Test-Identity-0.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-YXR4eT6EVNXzXy2pFacbx037safNqqXgAMZTno/iYLs="
-    }
-}

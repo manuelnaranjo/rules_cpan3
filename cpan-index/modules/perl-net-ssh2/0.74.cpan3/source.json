@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RK/RKITOVER/Net-SSH2-0.74.tar.gz",
-    "integrity": "sha256-HBJGmXRe60DtY2CX/cw+ciyUz9dwTrwKz7DwVUHSgJw=",
-    "strip_prefix": "Net-SSH2-0.74",
-    "overlay": {
-        "BUILD.bazel": "sha256-EQfPbeUFSHrIlV0wigen6fiGp0giRC9qTFd8aw4moeM="
-    }
-}

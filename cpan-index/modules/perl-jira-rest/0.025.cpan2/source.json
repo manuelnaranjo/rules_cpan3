@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GN/GNUSTAVO/JIRA-REST-0.025.tar.gz",
-    "integrity": "sha256-83dMmR/jh1wRP26hWPOG4BOIa3U5ADoVnBQuh45QF8c=",
-    "strip_prefix": "JIRA-REST-0.025",
-    "overlay": {
-        "BUILD.bazel": "sha256-r5g0TmXRZFUcTFpDSXw7DbkSj1Fr0DnSG52m/+OnHv8="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JG/JGMYERS/Encode-Detect-1.01.tar.gz",
-    "integrity": "sha256-g02JOqfbbOPxWK+9DkMtbtFaJ24JQNsKdL4T/ZxLu/E=",
-    "strip_prefix": "Encode-Detect-1.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-yl/RuaeMMtg8MVKXgulpAAMuXx4gKoQKAxLmmY/4KIU="
-    }
-}

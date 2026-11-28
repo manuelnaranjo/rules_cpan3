@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AR/ARISTOTLE/Parse-MIME-1.006.tar.gz",
-    "integrity": "sha256-k9cfD6KbZqBm41Guq5cDYrLI7f47FqArMhZJcgrDfio=",
-    "strip_prefix": "Parse-MIME-1.006",
-    "overlay": {
-        "BUILD.bazel": "sha256-eLgwNQhfDSz0fyWzNDeC5BdcpzD4s1qM/NLojOGE2G0="
-    }
-}

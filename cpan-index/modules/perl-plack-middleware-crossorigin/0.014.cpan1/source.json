@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Plack-Middleware-CrossOrigin-0.014.tar.gz",
-    "integrity": "sha256-NegPq8yEVaa8Gu4IIP3pxK6Uuqt6eVznmTKryTAE87c=",
-    "strip_prefix": "Plack-Middleware-CrossOrigin-0.014",
-    "overlay": {
-        "BUILD.bazel": "sha256-pxB/Lm4SXW/eae46hZOExaJgn+/U+SuH3R1o5Ihju6Q="
-    }
-}

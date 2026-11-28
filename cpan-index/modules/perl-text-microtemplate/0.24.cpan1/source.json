@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KA/KAZUHO/Text-MicroTemplate-0.24.tar.gz",
-    "integrity": "sha256-MoAecfNe6Kqg1XbOwSXO5Gs9SRWuZCvGSWISDU+XtMg=",
-    "strip_prefix": "Text-MicroTemplate-0.24",
-    "overlay": {
-        "BUILD.bazel": "sha256-0Akb7+ELdhXogDeXOreUyUBl5+vKJ5PChz7dG9zUvlc="
-    }
-}

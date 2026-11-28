@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BO/BOOK/System-Command-1.122.tar.gz",
-    "integrity": "sha256-2bgjsmYZqmn3oGFmUKeBDolajfBi3p0iQNZdvlz+dHo=",
-    "strip_prefix": "System-Command-1.122",
-    "overlay": {
-        "BUILD.bazel": "sha256-VJQ260cNvWCMP5q08OzCsrP/JFy2SYpVolUpVJ0+V6c="
-    }
-}

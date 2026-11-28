@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJT/Text-Trim-1.04.tar.gz",
-    "integrity": "sha256-1YeKkHnTPNF2bParxEzWJb0AoCE9LOjjFD/mlEq6qhE=",
-    "strip_prefix": "Text-Trim-1.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-AY094xgCr/oI9K1h+hDKLngwjt9ole6G2MF/eiAqNyA="
-    }
-}

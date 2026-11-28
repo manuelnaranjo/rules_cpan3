@@ -1,6 +1,0 @@
-manual_tests:
-- t/01-compile.t
-- t/tap2junit.t
-- t/formatter.t
-- t/tap2junit-filter.t
-- t/tap2junit-name.t

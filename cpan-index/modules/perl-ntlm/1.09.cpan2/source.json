@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NB/NBEBOUT/NTLM-1.09.tar.gz",
-    "integrity": "sha256-yCPjDNp2vBVjblhDAslg4rXu75UXwkSPdFRJiJMVH4U=",
-    "strip_prefix": "NTLM-1.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-fpQdiRHQ9egiKaKMJ5iTap3egRP7HNQCbIZqdMNf8Nk="
-    }
-}

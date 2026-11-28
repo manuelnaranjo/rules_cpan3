@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SN/SNOWHARE/Lingua-Stem-2.31.tar.gz",
-    "integrity": "sha256-qhqZMrZCflmCU+YajM0NBMxVn66dWNh3TCAncItjAmQ=",
-    "strip_prefix": "Lingua-Stem-2.31",
-    "overlay": {
-        "BUILD.bazel": "sha256-41ef2BbV70/elRNDo6Gvqv8DzUDyU55OwaYZXosMXI8="
-    }
-}

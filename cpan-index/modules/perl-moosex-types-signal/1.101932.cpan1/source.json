@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/MooseX-Types-Signal-1.101932.tar.gz",
-    "integrity": "sha256-qw43FKiHa1ZCkQj3YYM7Ol2hxzwEXVmLNO61/Yz0w+w=",
-    "strip_prefix": "MooseX-Types-Signal-1.101932",
-    "overlay": {
-        "BUILD.bazel": "sha256-GerhAlZmielMsWMhRTpj76A+yy6eVU9t1Q1P/ynI7N8="
-    }
-}

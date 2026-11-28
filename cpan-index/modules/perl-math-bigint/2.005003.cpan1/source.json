@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PJ/PJACKLAM/Math-BigInt-2.005003.tar.gz",
-    "integrity": "sha256-xK3BICNJ9/zRTQHmlJ/uDslpBJ1FycpZqinsWKZZZts=",
-    "strip_prefix": "Math-BigInt-2.005003",
-    "overlay": {
-        "BUILD.bazel": "sha256-mcl187Kiee3n5M5xJviwR+j3on2Jvxegf7tCUc4nAes="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/Regexp-RegGrp-2.01.tar.gz",
-    "integrity": "sha256-AhGDN+fwn6dstYXHkDDkOfAXynkbCmYvjTQAhgO3Fo0=",
-    "strip_prefix": "Regexp-RegGrp-2.01",
-    "overlay": {
-        "BUILD.bazel": "sha256-aQOZqLmtcE2T/AzdFlyU5TFFiYrH09hsjyWId8fpeMU="
-    }
-}

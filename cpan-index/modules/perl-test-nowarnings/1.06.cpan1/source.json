@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Test-NoWarnings-1.06.tar.gz",
-    "integrity": "sha256-wtxRFDt+tjIxIQ4n3yDSyDk3cuCjM1R+yLeiBe1i9zc=",
-    "strip_prefix": "Test-NoWarnings-1.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-sCnA7CKxBs8F8jcVNRRu8ARzDqRphg6pdRudbgVTvN0="
-    }
-}

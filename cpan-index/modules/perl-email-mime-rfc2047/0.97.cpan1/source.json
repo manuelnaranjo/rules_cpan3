@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NW/NWELLNHOF/Email-MIME-RFC2047-0.97.tar.gz",
-    "integrity": "sha256-p1vEyPlTSUHU8I79tvve2+tjqu8Ly0n1osVu6HgINgs=",
-    "strip_prefix": "Email-MIME-RFC2047-0.97",
-    "overlay": {
-        "BUILD.bazel": "sha256-2LDk0UztvgI+EIFgCASxB4MBoKbkXfG6Ry6fFxy87iU="
-    }
-}

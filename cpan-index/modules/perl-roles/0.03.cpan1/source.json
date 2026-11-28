@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STEVAN/roles-0.03.tar.gz",
-    "integrity": "sha256-X7iv8m7bzDTyfqvk9BVfY1VQvavLUFdooV4cC+mrSQk=",
-    "strip_prefix": "roles-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-M3WvViqEhDIM5j8fsAng+smr74fHzshCyFMSoGJZaeU="
-    }
-}

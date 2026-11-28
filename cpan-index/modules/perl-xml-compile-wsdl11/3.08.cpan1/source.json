@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/XML-Compile-WSDL11-3.08.tar.gz",
-    "integrity": "sha256-3Wh8z1CD/pj84d0YVA4dAXUEJDephuM+7BBeyiSPjUI=",
-    "strip_prefix": "XML-Compile-WSDL11-3.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-2SOc2U6oPoQSl/oND8ZN2ez8Rv/gtKjSdhbEpnjBTqw="
-    }
-}

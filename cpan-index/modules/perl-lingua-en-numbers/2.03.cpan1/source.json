@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Lingua-EN-Numbers-2.03.tar.gz",
-    "integrity": "sha256-STuQmph5hmgASirkhlEN1gP4WO+6uMUNkxYn7oxApaw=",
-    "strip_prefix": "Lingua-EN-Numbers-2.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-bRFUVph/aUsfsNpxQmPLn7j9eeJXVNNae5f6e1BPgag="
-    }
-}

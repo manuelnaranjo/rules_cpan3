@@ -1,6 +1,0 @@
-manual_tests:
-- t/03-merge-configs.t
-- t/04-load-fixtures.t
-- t/05-example-schema.t
-- t/11-fixtures_ok_populate.t
-- t/20-fixtures_ok_populate_hash.t

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Constant-FromGlobal-0.10.tar.gz",
-    "integrity": "sha256-gkBNV2p4T1enwrA5dVH+dS70AyjyfA6GLRH5lfdqn9o=",
-    "strip_prefix": "Constant-FromGlobal-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-dran36QYqrwex1XwKxeWuGIIHxNd6AdI8MK4p+xBTRI="
-    }
-}

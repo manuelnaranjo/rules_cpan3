@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KI/KIMRYAN/Lingua-EN-Fathom-1.27.tar.gz",
-    "integrity": "sha256-2xJVh+sHVCJC11nvAjF6526CU1x0HQXlmclfrCdcz+E=",
-    "strip_prefix": "Lingua-EN-Fathom-1.27",
-    "overlay": {
-        "BUILD.bazel": "sha256-vEdIrhvPQHqd7ftLfBaVokoL4i0WkFpJEZi2kwhIbvM="
-    }
-}

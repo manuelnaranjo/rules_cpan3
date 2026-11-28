@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/strictures-2.000006.tar.gz",
-    "integrity": "sha256-CdV5dKbRsjgMgChw/tRxEI9RFw2oFFjidRhZ8nFPjVc=",
-    "strip_prefix": "strictures-2.000006",
-    "overlay": {
-        "BUILD.bazel": "sha256-k04zieOjuQgR7xe/3CbLeKc9KIJK5iW7kCag6vaA2Bo="
-    }
-}

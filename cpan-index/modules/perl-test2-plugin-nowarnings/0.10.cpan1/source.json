@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Test2-Plugin-NoWarnings-0.10.tar.gz",
-    "integrity": "sha256-yXyxEizG4+SgeQWdpx4S9ldgv7BnHRnSWn7HxfHyQPs=",
-    "strip_prefix": "Test2-Plugin-NoWarnings-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-teM29wz6w/VwoiIqWq0l52NqKrwjSEoS9Lpgh0DFpKw="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Digest-JHash-0.10.tar.gz",
-    "integrity": "sha256-x0bPCoYaAECQJjzVTXco0MdZWgz5DLv9hAmzlu47AGM=",
-    "strip_prefix": "Digest-JHash-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-zyu3PcFrqBZ8PLsJECKivmg7CK4XNahie6FEcFb3X24="
-    }
-}

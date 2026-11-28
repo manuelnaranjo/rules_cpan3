@@ -1,7 +1,0 @@
-manual_tests:
-- '*'
-defines:
-- LTM_DESC
-- LTC_NO_ACCEL
-patch_cmds:
-- rm -f src/patched_s_mp_rand_platform.c

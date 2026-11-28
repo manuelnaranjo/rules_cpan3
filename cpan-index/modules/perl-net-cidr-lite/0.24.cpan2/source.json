@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STIGTSP/Net-CIDR-Lite-0.24.tar.gz",
-    "integrity": "sha256-+rBqxO5gqYFhxmwQUPofJPa5lwmtD0sO3chOxxynrRc=",
-    "strip_prefix": "Net-CIDR-Lite-0.24",
-    "overlay": {
-        "BUILD.bazel": "sha256-MCG6SLBciL1UkzlFXxY+HTJAD/vQ/GlMX40rlwG1cA0="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETJ/ExtUtils-CppGuess-0.271.tar.gz",
-    "integrity": "sha256-RyfP59pqupzcxrufiZhDhE2M+7En8tdjsZTDRfJDukM=",
-    "strip_prefix": "ExtUtils-CppGuess-0.271",
-    "overlay": {
-        "BUILD.bazel": "sha256-nYFTrewKRV89Axzq09gBdc6xnsml/ntXD+9cuZ2r0Hs="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AV/AVAR/Constant-Export-Lazy-0.17.tar.gz",
-    "integrity": "sha256-LiFat8cvNvNw4DhQPiquAY1ezqBvXGFPsWaGF+c57MM=",
-    "strip_prefix": "Constant-Export-Lazy-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-xycUid9kPvjxaQ2nd0sezNcUEHgw2tWbw55ucUGYX2s="
-    }
-}

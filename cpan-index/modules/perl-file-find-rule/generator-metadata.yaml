@@ -1,3 +1,0 @@
-manual_tests:
-- t/File-Find-Rule.t
-- t/findrule.t

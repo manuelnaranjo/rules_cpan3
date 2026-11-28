@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/Tree-Simple-VisitorFactory-0.16.tgz",
-    "integrity": "sha256-nPU4+qEsVP+0qRQ5lF5IjxhW9iuJrFByqSIRngGIDaY=",
-    "strip_prefix": "Tree-Simple-VisitorFactory-0.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-WQ4Fkh/+lH1jLIRToXHFCl6b7Pqz8WsnF3suWorh2Oo="
-    }
-}

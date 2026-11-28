@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Conflicts-0.003.tar.gz",
-    "integrity": "sha256-cHzcdQOMcP6Rd5uIisBQ8ShWXTlnupZoDhscfMlzOHU=",
-    "strip_prefix": "Module-Runtime-Conflicts-0.003",
-    "overlay": {
-        "BUILD.bazel": "sha256-yu0dKfMB5J4KSQYtOHHpS1/luIg/k00VXUGBGWPG/Hs="
-    }
-}

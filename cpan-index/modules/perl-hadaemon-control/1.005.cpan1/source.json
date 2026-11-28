@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IK/IKRUGLOV/HADaemon-Control-1.005.tar.gz",
-    "integrity": "sha256-ZujRMC2zKYzTJ48N03vY9T3w0oES5MST7RfjpYAW9Ls=",
-    "strip_prefix": "HADaemon-Control-1.005",
-    "overlay": {
-        "BUILD.bazel": "sha256-K/Ssvq8E/2O3T3Ep24Yppjo2hZ8M9DAnG4t2zokaRbQ="
-    }
-}

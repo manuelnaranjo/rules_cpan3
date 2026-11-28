@@ -1,7 +1,0 @@
-manual_tests:
-- t/compile1.t
-- t/compile2.t
-- t/compile3.t
-- t/compile4.t
-- t/compile5.t
-output_loc: auto/Template/Stash/XS/XS

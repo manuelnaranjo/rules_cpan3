@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Text-Reform-1.20.tar.gz",
-    "integrity": "sha256-qHkt2MGqyXABAyM3s2o1a+luLXTE8DnvmjY7ZB20rmE=",
-    "strip_prefix": "Text-Reform-1.20",
-    "overlay": {
-        "BUILD.bazel": "sha256-nau6nfd4DI2i92ROqhhrkaGywg8A5N6nbcNhMNACGA8="
-    }
-}

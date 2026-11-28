@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MR/MRSCOTTY/Crypt-PKCS10-2.005.tar.gz",
-    "integrity": "sha256-LdEv0JHCPjp8NKZqw1rDq/kHQCOUtVV0mO3kj8QUU6c=",
-    "strip_prefix": "Crypt-PKCS10-2.005",
-    "overlay": {
-        "BUILD.bazel": "sha256-iOxnGSQhw6oICY0B0z2x3zGrNgqiqtXeFEKdCVgnpYs="
-    }
-}

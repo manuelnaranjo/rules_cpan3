@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KE/KENTNL/HTML-Tree-5.07.tar.gz",
-    "integrity": "sha256-8DdNuEcxwgS4bB1bkJdf7w0wqGvZ3vkZND5VTjGp278=",
-    "strip_prefix": "HTML-Tree-5.07",
-    "overlay": {
-        "BUILD.bazel": "sha256-oSQr9HUh6j9zCHgPrka+X7MSWCA4ntxIrpBAcDpUUqk="
-    }
-}

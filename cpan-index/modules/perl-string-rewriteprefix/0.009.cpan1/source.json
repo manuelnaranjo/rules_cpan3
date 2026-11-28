@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/String-RewritePrefix-0.009.tar.gz",
-    "integrity": "sha256-RJGL7JalSvjKN8qJfkNnCewoSgeyhRbvPM5GZoaWRtU=",
-    "strip_prefix": "String-RewritePrefix-0.009",
-    "overlay": {
-        "BUILD.bazel": "sha256-rWaYpOaGKIeH1al93Rim+L/y59aKfhokaPIqAdCtgoI="
-    }
-}

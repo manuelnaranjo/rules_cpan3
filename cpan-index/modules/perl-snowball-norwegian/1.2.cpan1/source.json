@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AS/ASKSH/Snowball-Norwegian-1.2.tar.gz",
-    "integrity": "sha256-Hc+NfyazdSCgENzVGXAU4KWDhe5muDtP3gfqtQrZ5Rg=",
-    "strip_prefix": "Snowball-Norwegian-1.2",
-    "overlay": {
-        "BUILD.bazel": "sha256-xnFUeNR1AKnAdNLwQVv5tS8hnaLLYfUUh5DElolBdhM="
-    }
-}

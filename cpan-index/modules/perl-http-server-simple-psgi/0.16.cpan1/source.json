@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/HTTP-Server-Simple-PSGI-0.16.tar.gz",
-    "integrity": "sha256-X3zLhFMEO5cnhJKnVzKBFuEeA1LyhUooqcY05ukTHbo=",
-    "strip_prefix": "HTTP-Server-Simple-PSGI-0.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-c1cvXEQTH1Ph7j/yTJ38R46VFxrnH73oPclmzkoQV60="
-    }
-}

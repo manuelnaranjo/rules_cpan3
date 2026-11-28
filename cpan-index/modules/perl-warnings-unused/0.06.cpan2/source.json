@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GF/GFUJI/warnings-unused-0.06.tar.gz",
-    "integrity": "sha256-b3GYmKY1YNQyTB6VVJ9EHOxCnZDPW1e/AWCFM09L8B8=",
-    "strip_prefix": "warnings-unused-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-0xv7Ngx/cnMX14us3yyaHgaNdnp50mCwA2mzVjP+wlA="
-    }
-}

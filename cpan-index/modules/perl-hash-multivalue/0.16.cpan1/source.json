@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AR/ARISTOTLE/Hash-MultiValue-0.16.tar.gz",
-    "integrity": "sha256-Zhgd96po4nhvr2iVyIsYuVyACo5Ob7TAf9F2QQo8c/Q=",
-    "strip_prefix": "Hash-MultiValue-0.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-lUmWLxRKVHsT/ITYlrrfoCr1kaLm2Dbu1rDIbwyNDbQ="
-    }
-}

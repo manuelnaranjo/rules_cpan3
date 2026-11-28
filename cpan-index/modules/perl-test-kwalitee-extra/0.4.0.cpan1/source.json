@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Y/YA/YAKEX/Test-Kwalitee-Extra-v0.4.0.tar.gz",
-    "integrity": "sha256-9Fryxz5oa39XsoNBKAJuPTuS1cE0VhbOQQzg5fU+ViY=",
-    "strip_prefix": "Test-Kwalitee-Extra-v0.4.0",
-    "overlay": {
-        "BUILD.bazel": "sha256-rg5xGaYt8iUzDmjjhY2QBiupcHesX5eOtfSMKnR4MAg="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MS/MSTEMLE/Net-AMQP-RabbitMQ-2.40014.tar.gz",
-    "integrity": "sha256-mzqRaW74xQ6GrjQDKwL2t2yegLKGD3hkTJPuwa7tCk4=",
-    "strip_prefix": "Net-AMQP-RabbitMQ-2.40014",
-    "overlay": {
-        "BUILD.bazel": "sha256-6Uc6ljSXjpE89IVmOINmIPryAl/2hwciHvNeb0ssGLQ="
-    }
-}

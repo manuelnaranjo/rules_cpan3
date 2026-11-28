@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/Dist-CheckConflicts-0.11.tar.gz",
-    "integrity": "sha256-6oRLlobJTWZtnURDIddkSQss3i+YXEFltMLHdmXK7cQ=",
-    "strip_prefix": "Dist-CheckConflicts-0.11",
-    "overlay": {
-        "BUILD.bazel": "sha256-odu2AcGjN1mKPmgD2OQRLIklHeieF5qHYNgffrdWYiM="
-    }
-}

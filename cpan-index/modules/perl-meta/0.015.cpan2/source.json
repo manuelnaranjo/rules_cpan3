@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/meta-0.015.tar.gz",
-    "integrity": "sha256-BOrj4KEk6yR569mhZzGfTbTZIL5l5Z4WrgzWz35Z5qU=",
-    "strip_prefix": "meta-0.015",
-    "overlay": {
-        "BUILD.bazel": "sha256-/ejRwivAKHhvxVIaR3+rW4nI33aENIhHUJP7/Dg2iZM="
-    }
-}

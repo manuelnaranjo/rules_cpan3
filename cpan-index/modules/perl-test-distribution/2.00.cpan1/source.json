@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SR/SRSHAH/Test-Distribution-2.00.tar.gz",
-    "integrity": "sha256-UOzQf7bKt7KypztVJu5DuQ53c0ybzslc6IIrnAqRK2g=",
-    "strip_prefix": "Test-Distribution-2.00",
-    "overlay": {
-        "BUILD.bazel": "sha256-rOtilhh0lnMorcKSSWwrqNryLUbCZ/dKdiICM1l2XvY="
-    }
-}

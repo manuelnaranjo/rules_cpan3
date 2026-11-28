@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RE/RENEEB/HTTP-Tiny-Multipart-0.08.tar.gz",
-    "integrity": "sha256-7Q1D1HB5fCNr5/g+QU4xVhVg7z+I+rHsCd7yDZjDYdY=",
-    "strip_prefix": "HTTP-Tiny-Multipart-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-o/+oBJXpTFAQdrfeZsPRQ5rEoaGRwqqtnTIWbqZ4fVU="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/HTTP-Tiny-0.096.tar.gz",
-    "integrity": "sha256-HfGoyuy/l6LL4AKmVeD+IdTNW77p5AZWo6YCQj+Y6u8=",
-    "strip_prefix": "HTTP-Tiny-0.096",
-    "overlay": {
-        "BUILD.bazel": "sha256-E/1k86NTQsFqJ6holxwfP1cpf/1NmqiorUUjbSUnhak="
-    }
-}

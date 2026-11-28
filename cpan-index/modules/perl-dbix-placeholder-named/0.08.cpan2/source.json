@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/I/IZ/IZUT/DBIx-Placeholder-Named-0.08.tar.gz",
-    "integrity": "sha256-MJg7QCX/yc8A6/HA93b8LOEyZZDvpJRgLqScLOgqk9U=",
-    "strip_prefix": "DBIx-Placeholder-Named-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-GvVct40GsLXqe2xg6wuTKrXiZoJGVKdZKuecgWCGtd4="
-    }
-}

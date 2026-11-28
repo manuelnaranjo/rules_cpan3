@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OC/OCBNET/CSS-Sass-3.6.4.tar.gz",
-    "integrity": "sha256-JFKeYG4arpFPU+hp5C5rsO7T6MnCVjQ8jzf6KdnAaUE=",
-    "strip_prefix": "CSS-Sass-3.6.4",
-    "overlay": {
-        "BUILD.bazel": "sha256-L8x3hVwcqaBeR3thu6nUWfFUzUk7F0F6kX7ssEup3sM="
-    }
-}

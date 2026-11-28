@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GU/GUGOD/Elastijk-0.13.tar.gz",
-    "integrity": "sha256-i+GV5y8qw2r64Jaa7VrJMyFkHmXULnVp9Mhccqo4/rs=",
-    "strip_prefix": "Elastijk-0.13",
-    "overlay": {
-        "BUILD.bazel": "sha256-GSl97HHEFZU7xzHvruLbK3Pc9Kp0kCRmXQd7vco9tGc="
-    }
-}

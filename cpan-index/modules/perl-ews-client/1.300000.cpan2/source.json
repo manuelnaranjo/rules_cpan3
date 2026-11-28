@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OL/OLIVER/EWS-Client-1.300000.tar.gz",
-    "integrity": "sha256-Y/BIB3RlYOu+wkvW/rZcHcpBUd0Qb19PFj9O2WPFx7A=",
-    "strip_prefix": "EWS-Client-1.300000",
-    "overlay": {
-        "BUILD.bazel": "sha256-2fuyVYYD5lPqKcFBy1wAuw0WLAhYpqigelOj21sNadM="
-    }
-}

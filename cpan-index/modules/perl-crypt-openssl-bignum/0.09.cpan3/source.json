@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KM/KMX/Crypt-OpenSSL-Bignum-0.09.tar.gz",
-    "integrity": "sha256-I05y+4OW1FUn5v1F5DdZxcPzogjPjynmoiFhqZb9Qtw=",
-    "strip_prefix": "Crypt-OpenSSL-Bignum-0.09",
-    "overlay": {
-        "BUILD.bazel": "sha256-hv/c23PbrlX4bnYy+SNOAtTqVWZyOlveJn8RT6zTmGI="
-    }
-}

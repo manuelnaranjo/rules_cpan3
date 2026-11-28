@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PM/PMISON/File-Type-0.22.tar.gz",
-    "integrity": "sha256-01zZX+9X/U39iDH2LDTilNfEuGH8kJ4Ct2Bxc51S00E=",
-    "strip_prefix": "File-Type-0.22",
-    "overlay": {
-        "BUILD.bazel": "sha256-5mTWylCWDuY5gNPAYB9EC01kRi7/gOtoeZrZDDZBBfw="
-    }
-}

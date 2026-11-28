@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Bit-Vector-7.5.tar.gz",
-    "integrity": "sha256-I5eSJrR9sgS4DrM1j6Sb0nMiojncEJtRvN67kVSOgY4=",
-    "strip_prefix": "Bit-Vector-7.5",
-    "overlay": {
-        "BUILD.bazel": "sha256-8ngO+rE3K1YHZHWgB+Q6Opn5kYvAeYv2mGVIr/CvW+Q=",
-        "patchlevel.h": "sha256-qjP0WIfRGeur3yBc6OhBUQnOervgw7JxNdT4piEJSSM="
-    }
-}

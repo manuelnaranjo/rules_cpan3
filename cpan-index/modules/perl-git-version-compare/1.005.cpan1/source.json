@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BO/BOOK/Git-Version-Compare-1.005.tar.gz",
-    "integrity": "sha256-NX/e2eVflesvUWoY9dwbRyCp3u+eLA52vNX+SuubPLs=",
-    "strip_prefix": "Git-Version-Compare-1.005",
-    "overlay": {
-        "BUILD.bazel": "sha256-rfy2DD+NRkZ6pwtT++ULxHPGy2rPXvCBVE7DNdleexU="
-    }
-}

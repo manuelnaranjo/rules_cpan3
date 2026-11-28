@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-Abstract-3.010.tar.gz",
-    "integrity": "sha256-jBL2i1l0yvyZ10lCq+/IWXGTA1qv0nYxKOaqr8pLftY=",
-    "strip_prefix": "Email-Abstract-3.010",
-    "overlay": {
-        "BUILD.bazel": "sha256-oAkBhYpB+uXp6rhqOt/JiWqS87axCSHjtHHR+p9ydPM="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Params-SomeUtil-1.12.tar.gz",
-    "integrity": "sha256-ymECelx/nOLjEoXGegvcTwUsYgUa37dAbXnqDyPlwfA=",
-    "strip_prefix": "Params-SomeUtil-1.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-AEQPzGkQhdnb7lwWDVfDnxCzuwOuNQg9/7pTuDrGZYA="
-    }
-}

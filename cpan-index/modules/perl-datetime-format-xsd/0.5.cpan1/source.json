@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/DateTime-Format-XSD-0.5.tar.gz",
-    "integrity": "sha256-qaGfAmdlhdrHa0uOtOJcWN/3AL1s43hNSCjq6V34Fx8=",
-    "strip_prefix": "DateTime-Format-XSD-0.5",
-    "overlay": {
-        "BUILD.bazel": "sha256-dCJNtx1qFjopxsLIjUdWo7N7WVwxW9x222r8XVSEQkc="
-    }
-}

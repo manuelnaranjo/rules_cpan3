@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-JSON-Schema-Acceptance-1.041.tar.gz",
-    "integrity": "sha256-3jpbnMIDfbkEH+hLaT1pWQFUWn3CS8CzdlQbO9eYlqk=",
-    "strip_prefix": "Test-JSON-Schema-Acceptance-1.041",
-    "overlay": {
-        "BUILD.bazel": "sha256-x5QkFA4Ajm+0Annjtr65HgmdMeF2X7TK/DIhLF9Y+B4="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-NoTabs-2.02.tar.gz",
-    "integrity": "sha256-+3XGo4ch8BaeEcHn2+UyntchaIWgsBEj80LdhtM1YDA=",
-    "strip_prefix": "Test-NoTabs-2.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-WKcwbVx5ljyXfFDtiHEbFqq4SoWCjTmq1Ct6P93D/UQ="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Test-Most-0.42.tar.gz",
-    "integrity": "sha256-pBiTVIPe8KRiWaUL/2MghCeSpaAndxkmZ94iJHUlMHU=",
-    "strip_prefix": "Test-Most-0.42",
-    "overlay": {
-        "BUILD.bazel": "sha256-dAfG4RQLM+4m/ByMdKiC+Q5ar9NRwB46QEt1GXv+edQ="
-    }
-}

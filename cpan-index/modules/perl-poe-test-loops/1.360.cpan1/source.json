@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RC/RCAPUTO/POE-Test-Loops-1.360.tar.gz",
-    "integrity": "sha256-vtDJb+kcmP035utZqASqrJzEqekoRQt21L9VJ6nmpHs=",
-    "strip_prefix": "POE-Test-Loops-1.360",
-    "overlay": {
-        "BUILD.bazel": "sha256-vb4KeF/BnGEt/5nAzXObIsTghxWNBc3kkqTS+G2ccw0="
-    }
-}

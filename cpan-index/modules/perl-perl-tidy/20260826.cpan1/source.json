@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHANCOCK/Perl-Tidy-20260826.tar.gz",
-    "integrity": "sha256-EE4+XuXIRSTV5QMk1mTHhZsaxCKrl6PnokiYWktPf2Q=",
-    "strip_prefix": "Perl-Tidy-20260826",
-    "overlay": {
-        "BUILD.bazel": "sha256-83zkeVVs6Yxig49b7lOISt/zsITQFgx4+fnFeE6B2Q0="
-    }
-}

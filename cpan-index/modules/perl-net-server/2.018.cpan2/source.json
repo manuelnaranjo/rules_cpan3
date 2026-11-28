@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BB/BBB/Net-Server-2.018.tar.gz",
-    "integrity": "sha256-TWvRrbDeYA1rRLmoYpuUP+hnALBVGGeR6jl7fPOkVrM=",
-    "strip_prefix": "Net-Server-2.018",
-    "overlay": {
-        "BUILD.bazel": "sha256-H/kATpLF0hS2swXYHWXu2tV6WgAFQN6AQIMFp2iBe7Q="
-    }
-}

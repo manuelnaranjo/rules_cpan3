@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KV/KVAIL/Text-Pluralize-1.1.tar.gz",
-    "integrity": "sha256-Y8pT9Yh1m2yEGHTeXyrmEVRX48UNKTEBD5pivPY+Ua8=",
-    "strip_prefix": "Text-Pluralize-1.1",
-    "overlay": {
-        "BUILD.bazel": "sha256-hZj+YezLKMAf1touHmQ7LONtB+21Vya4qLpsPTRfm7E="
-    }
-}

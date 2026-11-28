@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AN/ANDK/Devel-Symdump-2.18.tar.gz",
-    "integrity": "sha256-gm+BoQf1WSolFnZu1DvrR+EMyD7cnqSAkLAqNgQHdsA=",
-    "strip_prefix": "Devel-Symdump-2.18",
-    "overlay": {
-        "BUILD.bazel": "sha256-s4gwoYrl+L0VyUZ7y+AC5IgQ+ccXE2ijuaO2OsNMK7o="
-    }
-}

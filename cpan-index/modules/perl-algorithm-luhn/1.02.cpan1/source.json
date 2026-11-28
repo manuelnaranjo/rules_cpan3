@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Algorithm-LUHN-1.02.tar.gz",
-    "integrity": "sha256-6Aj7uhPiYmCNN5I++pF+GEB0U8Svlqt4P8d/n+FZucA=",
-    "strip_prefix": "Algorithm-LUHN-1.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-oj0woYnVJjz8aqPWdP37PwGyaRfCZ+WZbj3m/mZOgpg="
-    }
-}

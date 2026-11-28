@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PERIGRIN/XML-NamespaceSupport-1.12.tar.gz",
-    "integrity": "sha256-R+mVhZ+N0EE6o/ItNQxKYtplLoVCZ6oFhq5USuK65e8=",
-    "strip_prefix": "XML-NamespaceSupport-1.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-FYAhP98JUxwWO7bIXd6SBdixrzqEUYqPbHXtfQ7eOPk="
-    }
-}

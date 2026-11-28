@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/List-AllUtils-0.19.tar.gz",
-    "integrity": "sha256-MKgUarIad4e4xW1YKc+afysVJ207P8oHM2rDjTAC/7w=",
-    "strip_prefix": "List-AllUtils-0.19",
-    "overlay": {
-        "BUILD.bazel": "sha256-x1YBKj4UXlhKx1G/xcCzH8jOmNouh8QcMldITBBQPW0="
-    }
-}

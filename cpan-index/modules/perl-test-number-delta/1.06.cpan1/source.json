@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Test-Number-Delta-1.06.tar.gz",
-    "integrity": "sha256-U1QwkZ5v32zlX/dumJKvzLo7fUFg20XzrEOw+S/80Ek=",
-    "strip_prefix": "Test-Number-Delta-1.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-E1RGj3gADMuzbaIK9h9EYx06/VWgYyVD7r1X1BY8W1Q="
-    }
-}

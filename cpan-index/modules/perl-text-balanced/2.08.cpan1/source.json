@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHAY/Text-Balanced-2.08.tar.gz",
-    "integrity": "sha256-rbTolsADzSx8mhsIptlmD0TRKkBYwnRoFfIVMl2j7Lg=",
-    "strip_prefix": "Text-Balanced-2.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-tRVmbO72bqAcl0YuleCYstnfVmDpUHecfgv4uRbxW98="
-    }
-}

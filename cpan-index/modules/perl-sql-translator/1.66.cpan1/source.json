@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/V/VE/VEESH/SQL-Translator-1.66.tar.gz",
-    "integrity": "sha256-9/9+Np2Ck6OUyzeDtUt0Xn+vREIuioO/zDWTeKblYUU=",
-    "strip_prefix": "SQL-Translator-1.66",
-    "overlay": {
-        "BUILD.bazel": "sha256-MMBRRfF/mR7lsxeCMUvQIukGOruhq37IPaBmM4mqXvk="
-    }
-}

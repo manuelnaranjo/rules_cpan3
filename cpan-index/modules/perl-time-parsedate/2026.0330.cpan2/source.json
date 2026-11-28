@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BP/BPS/Time-ParseDate-2026.033.tar.gz",
-    "integrity": "sha256-hGXIFGvRKdO+SkArReG5+cMG9CsPWKHlB7vb1lPyU7c=",
-    "strip_prefix": "Time-ParseDate-2026.033",
-    "overlay": {
-        "BUILD.bazel": "sha256-7jVUzwaqfhOkpIizoIipr01SdsX2PoDyEamS2wXq5oM="
-    }
-}

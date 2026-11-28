@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.15.tar.gz",
-    "integrity": "sha256-DUU1+I5Dur2Eq2BIZiFfxNBDmL1Nt7IYUtSjGxwV72E=",
-    "strip_prefix": "MRO-Compat-0.15",
-    "overlay": {
-        "BUILD.bazel": "sha256-if8nMkWHQ0ywQpWiSl75CF8a4FM7zzoVCUOohf5iMWU="
-    }
-}

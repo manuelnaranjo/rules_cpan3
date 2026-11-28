@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/IPC-System-Simple-1.30.tar.gz",
-    "integrity": "sha256-Iub1IitQXuUTBY/co1q3oeq4BTm5jlykqSOnCorpup4=",
-    "strip_prefix": "IPC-System-Simple-1.30",
-    "overlay": {
-        "BUILD.bazel": "sha256-MBoILEGb+EqudGge0vuDoVpC8C9nmrHYuOIHhtp5jKk="
-    }
-}

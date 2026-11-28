@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Usage-2.05.tar.gz",
-    "integrity": "sha256-EAwnkIdXxW6/7Ki3vxWphn5EnfZj/wE944VdGD376jA=",
-    "strip_prefix": "Pod-Usage-2.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-G1DfzUGtKBQffKVLGEGgw6ktjUrK69pCRHbRczzbczY="
-    }
-}

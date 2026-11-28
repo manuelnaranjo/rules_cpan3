@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JL/JLMARTIN/ARGV-Struct-0.06.tar.gz",
-    "integrity": "sha256-ou8XTjVjLBtuv/6Km2N0yKbUrf2jXSr+HnMIAkRLX2k=",
-    "strip_prefix": "ARGV-Struct-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-WTDUSLxtv9hpLe/ErWBA7ixQ2J5OWPIPdWpVkirp1kc="
-    }
-}

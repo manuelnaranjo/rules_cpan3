@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/G/GA/GAVINC/URI-Query-0.16.tar.gz",
-    "integrity": "sha256-tOYt55tGjc1+6DXk39ADXIP6+S5sRLebzdmlAof7jBg=",
-    "strip_prefix": "URI-Query-0.16",
-    "overlay": {
-        "BUILD.bazel": "sha256-pjCZheaSNY99tLeS+z40xJaTEK0iIcXLG+P8z3kbpAE="
-    }
-}

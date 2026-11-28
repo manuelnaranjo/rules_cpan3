@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Class-Factory-Util-1.7.tar.gz",
-    "integrity": "sha256-bFFrRFtE+HNj+zoUhDHTHp7LXm8h+2SByJskBrZpLiY=",
-    "strip_prefix": "Class-Factory-Util-1.7",
-    "overlay": {
-        "BUILD.bazel": "sha256-KsV2VWq/otCZGOPSil+EZtO7EdV2z/AxRsy8WFwieUY="
-    }
-}

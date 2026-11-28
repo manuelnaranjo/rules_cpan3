@@ -1,9 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/ST/STBEY/Date-Calc-XS-6.4.tar.gz",
-    "integrity": "sha256-Xxo7kIDoN97C77rDqwZ8NdSFJTiV3OeUeiyMVnOKWrM=",
-    "strip_prefix": "Date-Calc-XS-6.4",
-    "overlay": {
-        "BUILD.bazel": "sha256-WeV0e0mYCsIe3TbMl5zNCoTrmee/3ncyXr1RI8EmqCo=",
-        "patchlevel.h": "sha256-qjP0WIfRGeur3yBc6OhBUQnOervgw7JxNdT4piEJSSM="
-    }
-}

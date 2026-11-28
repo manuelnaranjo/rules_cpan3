@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BI/BIGPRESH/Business-Tax-VAT-Validation-1.24.tar.gz",
-    "integrity": "sha256-1AYPTafIjN/nwbLwzDwBKwm+fbd9MtrGjdVqIEJTouE=",
-    "strip_prefix": "Business-Tax-VAT-Validation-1.24",
-    "overlay": {
-        "BUILD.bazel": "sha256-035tEIQi/CWj3fpKUf1SeXKegUKHz+loRdhjFbjSJTE="
-    }
-}

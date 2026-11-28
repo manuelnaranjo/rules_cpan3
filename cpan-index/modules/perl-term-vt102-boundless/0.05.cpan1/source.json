@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/F/FB/FBARRIOS/Term-VT102-Boundless-0.05.tar.gz",
-    "integrity": "sha256-4d7YWuPXa1nAO4aX9KbLAa4xvWKpNU9bt9GPnpJ7SF8=",
-    "strip_prefix": "Term-VT102-Boundless-0.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-vgTeZNSso2NBJ0XWsFLh2ZJopohJbg/1xNuvqG5UMWY="
-    }
-}

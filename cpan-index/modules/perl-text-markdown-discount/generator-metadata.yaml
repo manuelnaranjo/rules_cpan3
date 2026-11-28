@@ -1,6 +1,0 @@
-native_deps:
-- '@discount//:markdown'
-patch_cmds:
-- rm -rf discount-*
-patch_cmds_win:
-- powershell -Command "Remove-Item -Recurse -Force discount-*"

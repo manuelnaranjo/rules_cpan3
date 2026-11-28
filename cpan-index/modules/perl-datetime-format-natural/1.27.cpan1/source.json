@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/S/SC/SCHUBIGER/DateTime-Format-Natural-1.27.tar.gz",
-    "integrity": "sha256-B36iMhqDskge2w7+7s+36K7+YUCYihcd0JyroG51fVw=",
-    "strip_prefix": "DateTime-Format-Natural-1.27",
-    "overlay": {
-        "BUILD.bazel": "sha256-wCOkAcJN9RxeFo06zjmp3/U+n2kLn0FDylwJfKJQfuE="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MR/MRAMBERG/Text-SimpleTable-2.07.tar.gz",
-    "integrity": "sha256-JW0/OHZOljMxWLFKsYJXuS8xVcYNZYyvuAOJ9y9GGe0=",
-    "strip_prefix": "Text-SimpleTable-2.07",
-    "overlay": {
-        "BUILD.bazel": "sha256-fNNuV4k0wP89BeBk7lx2FwHvajLgr6yy32qQIV4acGY="
-    }
-}

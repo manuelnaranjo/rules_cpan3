@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/String-InterpolatedVariables-2.000000.tar.gz",
-    "integrity": "sha256-msRoOzw7n0kiS6zVKp6GzPCi3fouMuwkx4k+8dSxNMw=",
-    "strip_prefix": "String-InterpolatedVariables-2.000000",
-    "overlay": {
-        "BUILD.bazel": "sha256-/17lBPakPswqqCnicfVJ6X50YC8/a/MYCnhJ1RQ86zs="
-    }
-}

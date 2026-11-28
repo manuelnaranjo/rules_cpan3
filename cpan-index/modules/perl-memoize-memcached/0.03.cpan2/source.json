@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TC/TCOHEN/Memoize-Memcached-0.04.tar.gz",
-    "integrity": "sha256-Ko4gSI+g/1ZrCMbIYaxJnMqwCY99k6NLstfxZZGrXxg=",
-    "strip_prefix": "Memoize-Memcached-0.04",
-    "overlay": {
-        "BUILD.bazel": "sha256-6g0EGX6cErXO6Z7nerSNaczwhZ4j4c+oJroKHLSPTjQ="
-    }
-}

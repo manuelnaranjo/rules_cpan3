@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MP/MPIOTR/Text-Iconv-1.7.tar.gz",
-    "integrity": "sha256-W4C31ecJ00OTvLqIlxhkoXtEpb8PnkvO44PQKefS1cM=",
-    "strip_prefix": "Text-Iconv-1.7",
-    "overlay": {
-        "BUILD.bazel": "sha256-LhyqnfSg+YGXM0AZOmg4IcoOB3ISjVf7ae8Zea0lv5k="
-    }
-}

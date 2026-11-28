@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/C/CR/CROMEDOME/Dancer2-Plugin-Ajax-0.400000.tar.gz",
-    "integrity": "sha256-jo0xLUfvXkyaPN2XAs7RgpKUetFznmnOeE5rqVcblk8=",
-    "strip_prefix": "Dancer2-Plugin-Ajax-0.400000",
-    "overlay": {
-        "BUILD.bazel": "sha256-wKMipfv+fASMAE+P1NdWZZvtCBEqwrxcnqS+hSGA384="
-    }
-}

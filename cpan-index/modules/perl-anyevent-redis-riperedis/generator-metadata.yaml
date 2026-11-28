@@ -1,9 +1,0 @@
-test_services:
-- redis
-patch_cmds:
-- perl -pi -e 's/sleep \$elapsed \+= 0\.1/sleep(\$elapsed += 0.1)/' t/tlib/Test/RedisRunner.pm
-patch_cmds_win:
-- powershell -Command "(Get-Content t/tlib/Test/RedisRunner.pm) -replace 'sleep \$elapsed
-  \+= 0\.1', 'sleep(\$elapsed += 0.1)' | Set-Content t/tlib/Test/RedisRunner.pm"
-manual_tests:
-- '*'

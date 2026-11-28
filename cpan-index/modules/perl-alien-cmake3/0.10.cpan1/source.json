@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-cmake3-0.10.tar.gz",
-    "integrity": "sha256-yHoJ2Gh7XFBXuCXFYylRPYsbd0Gx7E/KNGRl7gIZSF8=",
-    "strip_prefix": "Alien-cmake3-0.10",
-    "overlay": {
-        "BUILD.bazel": "sha256-9lmofTucseUWBMc7kidLv7OV1SPtpcFIzT5Zdu5ffaM="
-    }
-}

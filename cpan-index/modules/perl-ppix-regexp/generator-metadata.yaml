@@ -1,8 +1,0 @@
-manual_tests:
-- t/parse.t
-- t/unit-adhoc.t
-- t/xplain.t
-- t/unit.t
-- t/basic.t
-- t/width.t
-- t/fuzz.t

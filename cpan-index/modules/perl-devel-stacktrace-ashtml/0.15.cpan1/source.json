@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Devel-StackTrace-AsHTML-0.15.tar.gz",
-    "integrity": "sha256-YoPb4hl+LyAAnMS0SZl3Qhac3ZUb/ETLxuYsKpYtMUc=",
-    "strip_prefix": "Devel-StackTrace-AsHTML-0.15",
-    "overlay": {
-        "BUILD.bazel": "sha256-ENuT+qjofwYHPVpXniOFJkApFpU2taiNaCfjo1mFy8w="
-    }
-}

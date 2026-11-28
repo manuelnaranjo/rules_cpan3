@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETJ/ExtUtils-Depends-0.8002.tar.gz",
-    "integrity": "sha256-ArmkZFAFDOGbMlsj5Gu07GRCKdfy2VBE9nqG2O+s3Ck=",
-    "strip_prefix": "ExtUtils-Depends-0.8002",
-    "overlay": {
-        "BUILD.bazel": "sha256-wiSKakA3q4cPJ+zN0mcpsmJ+8BuGVYnhoarv+3vo9mQ="
-    }
-}

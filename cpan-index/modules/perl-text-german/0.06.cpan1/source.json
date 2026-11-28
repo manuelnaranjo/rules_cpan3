@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/U/UL/ULPFR/Text-German-0.06.tar.gz",
-    "integrity": "sha256-ki1PGQEtl3OxH0pvZCEF6fkT9YZvRGG2BZymdNW7B90=",
-    "strip_prefix": "Text-German-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-dI+Yw8fiTt8l9q1M6ACQUs5c3sv0vMJGtcVC4AFkiwM="
-    }
-}

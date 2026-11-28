@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/AnyEvent-Subprocess-1.102912.tar.gz",
-    "integrity": "sha256-oUSQcQsJNkQzO9v3R39K5Y879FU6VUvc3nk2ykx+U/U=",
-    "strip_prefix": "AnyEvent-Subprocess-1.102912",
-    "overlay": {
-        "BUILD.bazel": "sha256-K0nFqNz5jLpVfnpGoXwfrLFLUrjhGcjhTI8CxTJAFko="
-    }
-}

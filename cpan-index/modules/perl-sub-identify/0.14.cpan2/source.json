@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz",
-    "integrity": "sha256-Bo0nIIZRTdHoQrakCxvtuv7mOQDlsIiQ72cAA53vrW8=",
-    "strip_prefix": "Sub-Identify-0.14",
-    "overlay": {
-        "BUILD.bazel": "sha256-A4O0wcrC5lRxFxFCR23JXxMQHiUDL+PpWv56Yinb2gM="
-    }
-}

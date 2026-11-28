@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TO/TOMHUGHES/IO-Zlib-1.15.tar.gz",
-    "integrity": "sha256-etiHeS43zD/9ZGgaPnSDxfeJtEoDPzQLx3HkWDLr/zI=",
-    "strip_prefix": "IO-Zlib-1.15",
-    "overlay": {
-        "BUILD.bazel": "sha256-0SiEDyCIHjHmEcSXyzVueMWn3vt1VerwsNRr2xTObds="
-    }
-}

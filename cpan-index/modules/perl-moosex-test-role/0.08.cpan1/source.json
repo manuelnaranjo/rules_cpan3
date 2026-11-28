@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PB/PBOYD/MooseX-Test-Role-0.08.tar.gz",
-    "integrity": "sha256-/hFq6DiAPwAUQb1AHKzS/d0PBR3OlckcI+ac3UQ9BEA=",
-    "strip_prefix": "MooseX-Test-Role-0.08",
-    "overlay": {
-        "BUILD.bazel": "sha256-T9QwPz8cHTU5aKH/HU/10j7f0hzjXoqXfto8guR9TOw="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/A/AK/AKREAL/Proc-Daemon-0.23.tar.gz",
-    "integrity": "sha256-NMC4W3lItDHLq8l87lgINeUVzPQ7rb2DOesQlHQIm2k=",
-    "strip_prefix": "Proc-Daemon-0.23",
-    "overlay": {
-        "BUILD.bazel": "sha256-+g4PU23IyCI0aFEvJ51XctXEcnq+6tdELVcQGNJv4Jg="
-    }
-}

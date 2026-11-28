@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-OpenSSL-Verify-0.38.tar.gz",
-    "integrity": "sha256-JcYOSJVFH0AUBjCmK1h97TvuXKG6VHR3oI5bXskFAj8=",
-    "strip_prefix": "Crypt-OpenSSL-Verify-0.38",
-    "overlay": {
-        "BUILD.bazel": "sha256-vsJDLG4t1vpKxzta4hfA0bmu6FynxJJvlebMGdbUWkk="
-    }
-}

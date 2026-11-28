@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TI/TILLY/Sys-RunAlone-0.13.tar.gz",
-    "integrity": "sha256-tUktfyZ/sRbmBAIur1vaGR96257oXjU0DnXvhqy0iCI=",
-    "strip_prefix": "Sys-RunAlone-0.13",
-    "overlay": {
-        "BUILD.bazel": "sha256-wcY8YLExxSnBDufld5qu3bccRRlKdf2o9ENinTuC32I="
-    }
-}

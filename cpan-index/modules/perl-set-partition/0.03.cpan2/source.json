@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DL/DLAND/Set-Partition-0.03.tar.gz",
-    "integrity": "sha256-qxeOyholWXLEtF15VDYZrVZSmQSoiXrn8r1X5uxvyWo=",
-    "strip_prefix": "Set-Partition-0.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-MMyO/TvbT7HrNrt2wd16VQyzfC2T7H01p6KDmAzKBmw="
-    }
-}

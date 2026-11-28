@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Data-Page-2.03.tar.gz",
-    "integrity": "sha256-LvpSFn0ferNZAs8yrgJ3amI3BdeRnUEYmBKHsETOPYs=",
-    "strip_prefix": "Data-Page-2.03",
-    "overlay": {
-        "BUILD.bazel": "sha256-Xc7wpjB3lJAo409koLYG2a+cxcO9+jTLvHFdemE798Q="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BP/BPS/GDGraph-1.56.tar.gz",
-    "integrity": "sha256-b0nMTlkBVIDbnJtrGK/YxQvjCIZoe2lBFRPQbziXERM=",
-    "strip_prefix": "GDGraph-1.56",
-    "overlay": {
-        "BUILD.bazel": "sha256-DHSVuYh23RQ75j/askZlXTrQQ3XJ2Q16po7TaykKggg="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/B-Hooks-EndOfScope-0.28.tar.gz",
-    "integrity": "sha256-7ax3oX/DZiDIMkzBlM4frS8C6fy+ctCK0LLEfwx/2O8=",
-    "strip_prefix": "B-Hooks-EndOfScope-0.28",
-    "overlay": {
-        "BUILD.bazel": "sha256-EQJVYCQpW0X3eFRmapVDd92grv+fTenFDr+I1TiBrDM="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/URI-FromHash-0.05.tar.gz",
-    "integrity": "sha256-p8rFvM7p8uLYrQ9gVAAWNxLNCsZN8vuDT3YPtJ8vb9A=",
-    "strip_prefix": "URI-FromHash-0.05",
-    "overlay": {
-        "BUILD.bazel": "sha256-cwucyctSC1Hf1cpKs3wlrwqnfPRjthNkIHDu8bqdHWs="
-    }
-}

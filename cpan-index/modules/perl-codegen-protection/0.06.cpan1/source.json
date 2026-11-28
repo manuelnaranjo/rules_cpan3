@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OV/OVID/CodeGen-Protection-0.06.tar.gz",
-    "integrity": "sha256-iWxjkTi9Z6RLqq45d82W9pKtulCmuaGpUcSWTQSPFMg=",
-    "strip_prefix": "CodeGen-Protection-0.06",
-    "overlay": {
-        "BUILD.bazel": "sha256-fYwJD+nNm+4/nIVBQT1WNPqE8k93lEPQURqPtqtLswc="
-    }
-}

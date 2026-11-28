@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/P/PE/PERIGRIN/XML-SemanticDiff-1.0007.tar.gz",
-    "integrity": "sha256-Bf3v77vD9rYvx8m1+rr7a2le1o8KPZWFdyUdHwQCoPU=",
-    "strip_prefix": "XML-SemanticDiff-1.0007",
-    "overlay": {
-        "BUILD.bazel": "sha256-70i5Rc29q6goZnp6IvrLVcNiFQBFyxiObqR1kZeDh5o="
-    }
-}

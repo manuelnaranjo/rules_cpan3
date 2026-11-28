@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DO/DOMQ/Pod-Snippets-0.14.tar.gz",
-    "integrity": "sha256-yai9NzTiAwa8x1GvQ+xpiziQ81rdU8Kr9WoNkux1UKw=",
-    "strip_prefix": "Pod-Snippets-0.14",
-    "overlay": {
-        "BUILD.bazel": "sha256-NBaxgP4XOQjUrA/pcoA5rLPS27JBRYcvLz6KylWfUVo="
-    }
-}

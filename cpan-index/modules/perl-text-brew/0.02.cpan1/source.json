@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/K/KC/KCIVEY/Text-Brew-0.02.tar.gz",
-    "integrity": "sha256-qhuFhBz5/G/jODZrvIcKTpMEonZB5j+Sof2Wvujr9kw=",
-    "strip_prefix": "Text-Brew-0.02",
-    "overlay": {
-        "BUILD.bazel": "sha256-+5Dns08+f85mYuJR9NUlPsTxM7jOuCQCivf6tmT1Qek="
-    }
-}

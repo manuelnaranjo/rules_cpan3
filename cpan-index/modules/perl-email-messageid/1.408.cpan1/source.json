@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-MessageID-1.408.tar.gz",
-    "integrity": "sha256-Hz1bT/Cxx7OemsfDGPs3rc0LrJVWA2VGSU0U8G3FZDw=",
-    "strip_prefix": "Email-MessageID-1.408",
-    "overlay": {
-        "BUILD.bazel": "sha256-7upXFI6vurU9bbMzBgvepb1RgCwnFdusuIMRXDEzREU="
-    }
-}

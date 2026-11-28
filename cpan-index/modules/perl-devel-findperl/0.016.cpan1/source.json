@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Devel-FindPerl-0.016.tar.gz",
-    "integrity": "sha256-Q6K/L3h6PxuIEXkGMWKyqj58sET25eduxkZq6QqGETg=",
-    "strip_prefix": "Devel-FindPerl-0.016",
-    "overlay": {
-        "BUILD.bazel": "sha256-mf9su3q8PRQGgthin1oBUMXvbySRdNUGYWrDGMKw2j8="
-    }
-}

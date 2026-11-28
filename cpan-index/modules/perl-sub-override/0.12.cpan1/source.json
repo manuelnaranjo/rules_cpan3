@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/M/MV/MVSJES/Sub-Override-0.12.tar.gz",
-    "integrity": "sha256-2SLcbvDlH2OF4RExCEXDOTvmt6TU69oqnkfAW/YveeM=",
-    "strip_prefix": "Sub-Override-0.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-PgxF4rB57rvDgzYWFnc/yjt65RVNWpeE67XLqlPrdZA="
-    }
-}

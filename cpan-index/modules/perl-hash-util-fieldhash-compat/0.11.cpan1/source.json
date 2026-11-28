@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Hash-Util-FieldHash-Compat-0.11.tar.gz",
-    "integrity": "sha256-ZC5Gp1tTe6EUILMPiwNAPJCgahVFjNgAnzOf6eXzdBs=",
-    "strip_prefix": "Hash-Util-FieldHash-Compat-0.11",
-    "overlay": {
-        "BUILD.bazel": "sha256-fOwT8B4bWUbOtQjTV6IixQ/S8LybePnc8482PnYOrJk="
-    }
-}

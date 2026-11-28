@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/T/TB/TBONE/User-1.9.tar.gz",
-    "integrity": "sha256-W6sYA0y9mge8sSkvzbpn1dCRLTPbD63iGBnX2TXIj9k=",
-    "strip_prefix": "User-1.9",
-    "overlay": {
-        "BUILD.bazel": "sha256-xUHuy1o2p+DcHZuJmjB10405VxMLanGVi6XODjAKk6w="
-    }
-}

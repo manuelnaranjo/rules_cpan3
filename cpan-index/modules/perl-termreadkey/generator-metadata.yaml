@@ -1,8 +1,0 @@
-output_loc: auto/Term/ReadKey/ReadKey
-patch_cmds:
-- perl genchars.pl
-- perl ReadKey.pm.PL
-- mkdir -p lib/Term && cp ReadKey.pm lib/Term/ReadKey.pm
-patch_cmds_win:
-- powershell -Command "perl genchars.pl; perl ReadKey.pm.PL; New-Item -ItemType Directory
-  -Force lib/Term; Copy-Item ReadKey.pm lib/Term/ReadKey.pm"

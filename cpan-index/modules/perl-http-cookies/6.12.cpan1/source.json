@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Cookies-6.12.tar.gz",
-    "integrity": "sha256-TkYMS652KFv8cm9kE0lAL8kDj82coPMzRr7ANtc4drg=",
-    "strip_prefix": "HTTP-Cookies-6.12",
-    "overlay": {
-        "BUILD.bazel": "sha256-/PPbgnLTg1/huczxXXQ8y/xpcWi61+XpqRy0aiwD/r8="
-    }
-}

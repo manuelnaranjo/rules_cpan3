@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/B/BK/BKB/JSON-Parse-0.62.tar.gz",
-    "integrity": "sha256-YnMYD5OSSXQB3dbYIHBvWqhsG+iIkd1qq02Qa1z/Ztk=",
-    "strip_prefix": "JSON-Parse-0.62",
-    "overlay": {
-        "BUILD.bazel": "sha256-7k4Kw0YA4vjXFxKJa1+Gl0uxcrtDQQ1zhuUrpJhKqZ0="
-    }
-}

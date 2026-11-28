@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DD/DDICK/Test-MockTime-0.17.tar.gz",
-    "integrity": "sha256-M2PhGLJgbx1qvJVvIrDQkQl3K3CGFV+1ycf5gzUGAvk=",
-    "strip_prefix": "Test-MockTime-0.17",
-    "overlay": {
-        "BUILD.bazel": "sha256-XBdlD9g5YK3wNCfhZvXEErc8GckD/oEm2IEU9Kamza4="
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-TimeZone-2.72.tar.gz",
-    "integrity": "sha256-I7S11+SZBdLcnD+KeM5mgxHR5EEQOGlRWOmcjA83VJI=",
-    "strip_prefix": "DateTime-TimeZone-2.72",
-    "overlay": {
-        "BUILD.bazel": "sha256-hs1jOBGoBcBjO0BRv2+dlL/a14FQovb19nRrNxwhkk4="
-    }
-}

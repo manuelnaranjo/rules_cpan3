@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/F/FG/FGLOCK/DateTime-Event-Recurrence-0.19.tar.gz",
-    "integrity": "sha256-+UCHiaRhEHdmyhojK7PsHnAu7HyoFnQB6m7D9LbQtaU=",
-    "strip_prefix": "DateTime-Event-Recurrence-0.19",
-    "overlay": {
-        "BUILD.bazel": "sha256-co0OaVSMxicYgu7DndZz7Dc7Cg8wROxDUaAlHQD34Us="
-    }
-}

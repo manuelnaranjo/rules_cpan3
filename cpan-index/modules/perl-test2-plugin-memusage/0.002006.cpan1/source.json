@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Plugin-MemUsage-0.002006.tar.gz",
-    "integrity": "sha256-W9aCQsxiGFRqIuFQhcGxyqS/ImTx1FAce5n0BZB0hvs=",
-    "strip_prefix": "Test2-Plugin-MemUsage-0.002006",
-    "overlay": {
-        "BUILD.bazel": "sha256-gBcjf/Hw1DeczG7K3/cQUfCIAwrklQ18J23yP3B9Csc="
-    }
-}

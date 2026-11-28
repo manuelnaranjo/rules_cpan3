@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Autoformat-1.75.tar.gz",
-    "integrity": "sha256-ndT0zj2uxLTb9bWdrEVoqJRq7RLCi05ZiMjoxgLGt3E=",
-    "strip_prefix": "Text-Autoformat-1.75",
-    "overlay": {
-        "BUILD.bazel": "sha256-6N2Js1G4jzIiwW+r/iBp3csvJJ19JEdq4ARXdO71SPY="
-    }
-}

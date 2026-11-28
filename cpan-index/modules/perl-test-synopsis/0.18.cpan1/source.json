@@ -1,8 +1,0 @@
-{
-    "url": "https://cpan.metacpan.org/authors/id/Z/ZO/ZOFFIX/Test-Synopsis-0.18.tar.gz",
-    "integrity": "sha256-58ucuwPLYhhOWRg8HQp+o6dvlyvRvwrxPxa39ZlgsfA=",
-    "strip_prefix": "Test-Synopsis-0.18",
-    "overlay": {
-        "BUILD.bazel": "sha256-ToCBVZnpIP7s1piCP+GIfHWFDxgZL0lYJxjwMZs141g="
-    }
-}
