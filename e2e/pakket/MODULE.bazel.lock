@@ -771,7 +771,7 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "SBKLvtJoU6wDD56OzeQWKe2r4dcokVcQ6b4jp9bhDYM=",
+        "bzlTransitiveDigest": "iv1FcK7C1aC99u+tEW6GPSAdSmQUXRbVRTUa1pA9zDo=",
         "usagesDigest": "yjJco0L0lMPUvgVKF/BAzvCiyzdRZg1Or4EAkqyFWyM=",
         "recordedInputs": [
           "FILE:@@//cpan.lock.json 6b2bae22b5ce5138360a8f0c5fbd06f0c2c6cbe1ac947a935550b6e952d6f783",

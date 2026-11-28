@@ -771,30 +771,91 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "u+ww1XV8cCUJpfi6YRgRMq3TaYUDh8zN0jKTiUbanXw=",
-        "usagesDigest": "Pmk4LWhyHp4k7l1lVAJaWIfdciAuicm1ky1YXD/JNFc=",
+        "bzlTransitiveDigest": "oG3fdiFqfRkoAEeo3jB9puXkh5VlP8XlOpdQ6eHEM3I=",
+        "usagesDigest": "yjJco0L0lMPUvgVKF/BAzvCiyzdRZg1Or4EAkqyFWyM=",
         "recordedInputs": [
-          "REPO_MAPPING:rules_cpan+,perl-algorithm-diff perl-algorithm-diff+",
-          "REPO_MAPPING:rules_cpan+,perl-compress-raw-zlib perl-compress-raw-zlib+",
-          "FILE:@@rules_cpan+//tests/cpan.lock.json 95860bf6ecdecfa30a541006b4c8bddb73561426cbfcf2e5e429298afd5644bb"
+          "FILE:@@//cpan.lock.json 7f4066fa77bb14d08a32876d8b6c6014ef9c740f176cb0cb322fe4073d452d6d",
+          "FILE:@@rules_cpan+//tests/cpan.lock.json c15879640cdf20d441f3de267e0cc485a59237e1e9e49fdc2f9346ee85a07524"
         ],
         "generatedRepoSpecs": {
+          "cpan__Algorithm-Diff": {
+            "repoRuleId": "@@rules_cpan+//cpan/private:repo_rules.bzl%cpan_dist_repo",
+            "attributes": {
+              "dist_name": "Algorithm-Diff",
+              "version": "1.201",
+              "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Algorithm-Diff-1.201.tar.gz",
+              "sha256": "0022da5982645d9ef0207f3eb9ef63e70e9713ed2340ed7b3850779b0d842a7d",
+              "strip_prefix": "",
+              "is_xs": false,
+              "provides": [
+                "Algorithm::Diff",
+                "Algorithm::Diff::_impl"
+              ],
+              "dependencies": "{\"build\":[],\"configure\":[],\"runtime\":[],\"test\":[]}",
+              "all_dists": "{\"Algorithm-Diff\":\"cpan__Algorithm-Diff\"}",
+              "hub_name": "cpan"
+            }
+          },
           "cpan": {
             "repoRuleId": "@@rules_cpan+//cpan/private:repo_rules.bzl%cpan_hub_repo",
             "attributes": {
               "hub_name": "cpan",
-              "direct_deps": [
-                "Algorithm-Diff",
-                "Compress-Raw-Zlib"
-              ],
+              "direct_deps": [],
               "all_dists": {
-                "Algorithm-Diff": "perl-algorithm-diff",
-                "Compress-Raw-Zlib": "perl-compress-raw-zlib"
-              },
-              "injected_targets": {
-                "Algorithm-Diff": "'@@perl-algorithm-diff+//:Algorithm-Diff'",
-                "Compress-Raw-Zlib": "'@@perl-compress-raw-zlib+//:Compress-Raw-Zlib'"
+                "Algorithm-Diff": "cpan__Algorithm-Diff"
               }
+            }
+          },
+          "cpan_alt__Algorithm-Diff": {
+            "repoRuleId": "@@rules_cpan+//cpan/private:repo_rules.bzl%cpan_dist_repo",
+            "attributes": {
+              "dist_name": "Algorithm-Diff",
+              "version": "1.201",
+              "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Algorithm-Diff-1.201.tar.gz",
+              "sha256": "0022da5982645d9ef0207f3eb9ef63e70e9713ed2340ed7b3850779b0d842a7d",
+              "strip_prefix": "",
+              "is_xs": false,
+              "provides": [
+                "Algorithm::Diff",
+                "Algorithm::Diff::_impl"
+              ],
+              "dependencies": "{\"build\":[],\"configure\":[],\"runtime\":[],\"test\":[]}",
+              "all_dists": "{\"Algorithm-Diff\":\"cpan_alt__Algorithm-Diff\",\"Compress-Raw-Zlib\":\"cpan_alt__Compress-Raw-Zlib\",\"Devel-PPPort\":\"cpan_alt__Devel-PPPort\"}",
+              "hub_name": "cpan_alt"
+            }
+          },
+          "cpan_alt__Compress-Raw-Zlib": {
+            "repoRuleId": "@@rules_cpan+//cpan/private:repo_rules.bzl%cpan_dist_repo",
+            "attributes": {
+              "dist_name": "Compress-Raw-Zlib",
+              "version": "2.226",
+              "url": "https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.226.tar.gz",
+              "sha256": "80dc104a733976eba40dbe9272cd32ebf183195204e0bdd30e214a37d2ac42cb",
+              "strip_prefix": "",
+              "is_xs": true,
+              "provides": [
+                "Compress::Raw::Zlib"
+              ],
+              "dependencies": "{\"build\":[],\"configure\":[],\"runtime\":[],\"test\":[]}",
+              "all_dists": "{\"Algorithm-Diff\":\"cpan_alt__Algorithm-Diff\",\"Compress-Raw-Zlib\":\"cpan_alt__Compress-Raw-Zlib\",\"Devel-PPPort\":\"cpan_alt__Devel-PPPort\"}",
+              "hub_name": "cpan_alt"
+            }
+          },
+          "cpan_alt__Devel-PPPort": {
+            "repoRuleId": "@@rules_cpan+//cpan/private:repo_rules.bzl%cpan_dist_repo",
+            "attributes": {
+              "dist_name": "Devel-PPPort",
+              "version": "3.68",
+              "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Devel-PPPort-3.68.tar.gz",
+              "sha256": "5290d5bb84cde9e9e61113a20c67b5d47267eb8e65a119a8a248cc96aac0badb",
+              "strip_prefix": "",
+              "is_xs": true,
+              "provides": [
+                "Devel::PPPort"
+              ],
+              "dependencies": "{\"build\":[],\"configure\":[],\"runtime\":[],\"test\":[]}",
+              "all_dists": "{\"Algorithm-Diff\":\"cpan_alt__Algorithm-Diff\",\"Compress-Raw-Zlib\":\"cpan_alt__Compress-Raw-Zlib\",\"Devel-PPPort\":\"cpan_alt__Devel-PPPort\"}",
+              "hub_name": "cpan_alt"
             }
           },
           "cpan_alt": {
@@ -803,13 +864,14 @@
               "hub_name": "cpan_alt",
               "direct_deps": [
                 "Algorithm-Diff",
-                "Compress-Raw-Zlib"
+                "Compress-Raw-Zlib",
+                "Devel-PPPort"
               ],
               "all_dists": {
-                "Algorithm-Diff": "perl-algorithm-diff",
-                "Compress-Raw-Zlib": "perl-compress-raw-zlib"
-              },
-              "injected_targets": {}
+                "Algorithm-Diff": "cpan_alt__Algorithm-Diff",
+                "Compress-Raw-Zlib": "cpan_alt__Compress-Raw-Zlib",
+                "Devel-PPPort": "cpan_alt__Devel-PPPort"
+              }
             }
           }
         }

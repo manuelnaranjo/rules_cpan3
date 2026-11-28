@@ -632,7 +632,7 @@
     },
     "@@rules_cpan+//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "rTJ0aXWx4uy3lXFPC+9t2l+1UVO3/R+LduXmygPFvqs=",
+        "bzlTransitiveDigest": "oG3fdiFqfRkoAEeo3jB9puXkh5VlP8XlOpdQ6eHEM3I=",
         "usagesDigest": "yjJco0L0lMPUvgVKF/BAzvCiyzdRZg1Or4EAkqyFWyM=",
         "recordedInputs": [
           "FILE:@@//cpan.lock.json 41a54ec9cbc958703490f53ec748dc4ce8bd31ce51ffada96d8d378664b62929",

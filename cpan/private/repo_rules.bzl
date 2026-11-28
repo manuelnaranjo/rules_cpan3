@@ -70,25 +70,30 @@ def _find_test_files(ctx):
     return test_files
 
 def _find_test_includes(ctx):
+    """Finds include directories for test libraries in the distribution.
+
+    Args:
+        ctx: Repository context.
+
+    Returns:
+        List of include directory paths.
+    """
+    include_dirs = ["."]
+    for candidate in ["inc", "parts/inc", "examples"]:
+        if ctx.path(candidate).exists and candidate not in include_dirs:
+            include_dirs.append(candidate)
+
     t_path = ctx.path("t")
     if not t_path.exists:
-        return []
-    include_dirs = ["t"]
-    dirs_to_visit = [t_path]
-    for _ in range(100):
-        if not dirs_to_visit:
-            break
-        curr = dirs_to_visit.pop(0)
-        has_pm = False
-        for child in curr.readdir():
-            if child.is_dir:
-                dirs_to_visit.append(child)
-            elif child.basename.endswith(".pm"):
-                has_pm = True
-        if has_pm:
-            rel = str(curr)[len(str(ctx.path(""))) + 1:]
+        return include_dirs
+
+    include_dirs.append("t")
+    for child in t_path.readdir():
+        if child.is_dir:
+            rel = "t/" + child.basename
             if rel not in include_dirs:
                 include_dirs.append(rel)
+
     return include_dirs
 
 def _cpan_dist_repo_impl(ctx):
@@ -153,16 +158,65 @@ def _cpan_dist_repo_impl(ctx):
             clean_name = clean_name[:-2]
         t_name = "test_" + sanitize_target_name(clean_name)
         test_target_names.append('":%s"' % t_name)
+
+        has_taint = False
+        t_file_path = ctx.path(t_file)
+        if t_file_path.exists:
+            content = ctx.read(t_file_path)
+            first_line = content.split("\n")[0]
+            if first_line.startswith("#!") and "-T" in first_line:
+                has_taint = True
+
+        perlopt = ["-M_cpan_test_init"]
+        if has_taint:
+            perlopt.append("-T")
+
         test_blocks.append("""perl_test(
     name = "{name}",
     size = "small",
     srcs = ["{src}"],
+    perlopt = {perlopt},
     deps = {deps},
 )""".format(
             name = t_name,
             src = t_file,
+            perlopt = json.encode(perlopt),
             deps = json.encode(resolved_test_deps),
         ))
+
+    perl_core_flag = "\n$ENV{PERL_CORE} = 1;\n" if ctx.attr.dist_name == "Module-Build" else ""
+    init_content = """package _cpan_test_init;
+use strict;
+use warnings;
+use Cwd qw(abs_path chdir);
+use File::Basename qw(dirname);
+
+# Propagate @INC to child perl processes via PERL5LIB
+$ENV{PERL5LIB} = join(':', grep { defined && length } (@INC, ($ENV{PERL5LIB} || ())));
+
+# Set common non-interactive testing flags
+$ENV{PERL_USE_UNSAFE_INC} = 1;
+$ENV{PERL_MM_USE_DEFAULT} = 1;
+$ENV{AUTOMATED_TESTING} = 1;
+$ENV{NONINTERACTIVE_TESTING} = 1;
+$ENV{NO_NETWORK_TESTING} = 1;""" + perl_core_flag + """
+# Chdir to the distribution root directory in runfiles
+my $dir = dirname(abs_path($0));
+while ($dir && ! -d "$dir/t" && $dir ne "/") {
+    $dir = dirname($dir);
+}
+if ($dir && -d "$dir/t") {
+    ($dir) = ($dir =~ /(.*)/s);
+    chdir($dir);
+    if (-d "build" && ! -e "blib") {
+        eval { symlink("build", "blib"); };
+    }
+}
+1;
+"""
+    ctx.file("blib/lib/.keep", "")
+    ctx.file("blib/arch/.keep", "")
+    ctx.file("_cpan_test_init.pm", init_content)
 
     build_content = """# Auto-generated BUILD.bazel for {dist_name}
 load("@rules_cpan//cpan:defs.bzl", "cpan_dist")
@@ -180,6 +234,8 @@ cpan_dist(
         "WORKSPACE.bazel",
         "WORKSPACE",
         "MODULE.bazel",
+        "_cpan_test_init.pm",
+        "blib/**",
     ], allow_empty = True),
     deps = {build_deps},
 )
@@ -200,15 +256,13 @@ alias(
 # Helper library providing distribution runtime and test helper sources
 perl_library(
     name = "test_lib",
-    srcs = glob(["t/**/*.pm", "t/*.pm"], allow_empty = True),
+    srcs = glob(["t/**/*.pm", "t/*.pm", "_cpan_test_init.pm"], allow_empty = True),
     data = glob(["**"], exclude = [
         "BUILD.bazel",
         "BUILD",
         "WORKSPACE.bazel",
         "WORKSPACE",
         "MODULE.bazel",
-        "t/**/*.t",
-        "t/*.t",
     ], allow_empty = True),
     includes = {test_includes},
     deps = [":{dist_name}"],
