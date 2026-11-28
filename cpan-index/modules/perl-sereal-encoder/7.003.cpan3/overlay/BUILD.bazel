@@ -32,6 +32,7 @@ cpan_xs(
             "**/contrib/**",
             "**/programs/**",
             "**/tests/**",
+            "snappy/csnappy_compress.c",
             "author_tools/numeric_str_length.c",
             "author_tools/siphash_vectors.c",
             "author_tools/stringify_test.c",
@@ -41,7 +42,9 @@ cpan_xs(
         "ZSTD_DISABLE_ASM",
     ],
     output_loc = "auto/Sereal/Encoder/Encoder",
-    textual_hdrs = glob(
+    textual_hdrs = [
+        "snappy/csnappy_compress.c",
+    ] + glob(
         [
             "*.h",
             "**/*.h",
@@ -72,6 +75,7 @@ cpan_xs(
             "**/contrib/**",
             "**/programs/**",
             "**/tests/**",
+            "snappy/csnappy_compress.c",
             "author_tools/numeric_str_length.c",
             "author_tools/siphash_vectors.c",
             "author_tools/stringify_test.c",

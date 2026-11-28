@@ -7,9 +7,9 @@ load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
-    name = "copy_lib_SMIME_pm",
-    src = "lib/Crypt/SMIME.pm",
-    out = "lib/SMIME.pm",
+    name = "copy_lib_Crypt_SMIME_pm",
+    src = "lib/SMIME.pm",
+    out = "lib/Crypt/SMIME.pm",
 )
 
 cpan_xs(
@@ -100,7 +100,7 @@ cpan_xs(
 perl_library(
     name = "Crypt-SMIME",
     srcs = [
-        ":copy_lib_SMIME_pm",
+        ":copy_lib_Crypt_SMIME_pm",
     ] + glob(
         [
             "lib/**/*.pm",

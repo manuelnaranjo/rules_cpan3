@@ -3,7 +3,7 @@
     "integrity": "sha256-o0DqZpNW9KAGCMbR7xQcEM4Q3OAjLpdv6Nt58W/W5TU=",
     "strip_prefix": "Crypt-SMIME-0.34",
     "overlay": {
-        "BUILD.bazel": "sha256-I/T3hNh3JJ5nErkpO9oi6rbw9070Q73sEBE6AZh12zQ=",
+        "BUILD.bazel": "sha256-mOFS2txQoo0YFNSAsPjBOwusKjWFQ0aq8RKzGH2IOeY=",
         "const-autoload.inc": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
         "const-c.inc": "sha256-p2+KtyK6zg+Pcn6ttmtxRLUFJUws0Uul8W6cjAafEAc=",
         "const-xs.inc": "sha256-lvv+8vV0I5SozLR8m9TAaZrXN2+Epnrwb8aPSTMRczs="

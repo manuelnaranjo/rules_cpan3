@@ -7,21 +7,15 @@ load("@rules_perl//perl:defs.bzl", "perl_library", "perl_test")
 package(default_visibility = ["//visibility:public"])
 
 copy_file(
-    name = "copy_LibXML_pm",
-    src = "lib/XML/LibXML.pm",
-    out = "LibXML.pm",
-)
-
-copy_file(
-    name = "copy_LibXML_pod",
-    src = "lib/XML/LibXML.pod",
-    out = "LibXML.pod",
-)
-
-copy_file(
     name = "copy_lib_XML_LibXML_pm",
     src = "LibXML.pm",
     out = "lib/XML/LibXML.pm",
+)
+
+copy_file(
+    name = "copy_lib_XML_LibXML_pod",
+    src = "LibXML.pod",
+    out = "lib/XML/LibXML.pod",
 )
 
 cpan_xs(
@@ -111,9 +105,8 @@ cpan_xs(
 perl_library(
     name = "XML-LibXML",
     srcs = [
-        ":copy_LibXML_pm",
-        ":copy_LibXML_pod",
         ":copy_lib_XML_LibXML_pm",
+        ":copy_lib_XML_LibXML_pod",
     ] + glob(
         [
             "lib/**/*.pm",
