@@ -1147,6 +1147,50 @@ close $fh;
             exit_code = main(["--regenerate"])
             self.assertEqual(exit_code, 1)
 
+    def test_root_pm_mapping_multi_word_namespace(self) -> None:
+        """Verifies root .pm files in multi-word namespaces map to canonical lib/ paths."""
+        extract_dir = self.work_dir / "Authen-Krb5-Admin-0.17"
+        extract_dir.mkdir(parents=True)
+        (extract_dir / "Admin.pm").write_text("package Authen::Krb5::Admin;\n$VERSION = '0.17';\n1;\n")
+        (extract_dir / "Admin.xs").write_text("#include <EXTERN.h>\nMODULE = Authen::Krb5::Admin PACKAGE = Authen::Krb5::Admin\n")
+
+        inspection = DistributionInspection(dist_name="Authen-Krb5-Admin", provides=["Authen::Krb5::Admin"])
+        heuristics = HeuristicsEngine()
+        heuristics._discover_module_mappings(extract_dir, inspection)
+
+        self.assertIn(("Admin.pm", "lib/Authen/Krb5/Admin.pm"), inspection.file_copies)
+
+    def test_multiple_root_pm_mapping(self) -> None:
+        """Verifies distributions with multiple root .pm files map all modules correctly."""
+        extract_dir = self.work_dir / "IO-Tty-1.31"
+        extract_dir.mkdir(parents=True)
+        (extract_dir / "Tty.pm").write_text("package IO::Tty;\n$VERSION = '1.31';\n1;\n")
+        (extract_dir / "Pty.pm").write_text("package IO::Pty;\n$VERSION = '1.31';\n1;\n")
+        (extract_dir / "Tty.xs").write_text("#include <EXTERN.h>\nMODULE = IO::Tty PACKAGE = IO::Tty\n")
+
+        inspection = DistributionInspection(dist_name="IO-Tty", provides=["IO::Pty", "IO::Tty"])
+        heuristics = HeuristicsEngine()
+        heuristics._discover_module_mappings(extract_dir, inspection)
+
+        copies = set(inspection.file_copies)
+        self.assertIn(("Tty.pm", "lib/IO/Tty.pm"), copies)
+        self.assertIn(("Pty.pm", "lib/IO/Pty.pm"), copies)
+
+    def test_root_pod_and_package_detection(self) -> None:
+        """Verifies root .pod files and package declarations in custom locations map properly."""
+        extract_dir = self.work_dir / "XML-LibXML-2.0210"
+        extract_dir.mkdir(parents=True)
+        (extract_dir / "LibXML.pm").write_text("package XML::LibXML;\n$VERSION = '2.0210';\n1;\n")
+        (extract_dir / "LibXML.pod").write_text("=head1 NAME\n\nXML::LibXML - Perl Binding for libxml2\n")
+
+        inspection = DistributionInspection(dist_name="XML-LibXML", provides=["XML::LibXML"])
+        heuristics = HeuristicsEngine()
+        heuristics._discover_module_mappings(extract_dir, inspection)
+
+        copies = set(inspection.file_copies)
+        self.assertIn(("LibXML.pm", "lib/XML/LibXML.pm"), copies)
+        self.assertIn(("LibXML.pod", "lib/XML/LibXML.pod"), copies)
+
 
 if __name__ == "__main__":
     unittest.main()

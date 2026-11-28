@@ -2,5 +2,3 @@ native_deps:
 - '@libiconv//:iconv'
 manual_tests:
 - '*'
-file_copies:
-  Iconv.pm: lib/Text/Iconv.pm
