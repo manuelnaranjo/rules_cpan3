@@ -775,6 +775,115 @@ class HeuristicsEngine:
                 found.append(part)
         return found
 
+    def _extract_perl_package(self, file_path: Path) -> Optional[str]:
+        """Extracts the package name from a Perl .pm file."""
+        try:
+            content = file_path.read_text(encoding="utf-8", errors="ignore")
+            m = re.search(r"^\s*package\s+([A-Za-z0-9_:]+)", content, re.MULTILINE)
+            if m:
+                return m.group(1).strip()
+        except Exception:
+            pass
+        return None
+
+    def _extract_pod_name(self, file_path: Path) -> Optional[str]:
+        """Extracts module name from a .pod file NAME section."""
+        try:
+            content = file_path.read_text(encoding="utf-8", errors="ignore")
+            m = re.search(r"=head1\s+NAME\s+([A-Za-z0-9_:]+)", content, re.MULTILINE)
+            if m:
+                return m.group(1).strip().split()[0]
+        except Exception:
+            pass
+        return None
+
+    def _extract_provides_from_meta(self, extract_dir: Path) -> Dict[str, str]:
+        """Extracts file -> package mapping from META.json or META.yml provides field."""
+        file_to_pkg: Dict[str, str] = {}
+        meta_json = extract_dir / "META.json"
+        if meta_json.exists():
+            try:
+                data = json.loads(meta_json.read_text(encoding="utf-8", errors="ignore"))
+                provides = data.get("provides", {})
+                if isinstance(provides, dict):
+                    for pkg, info in provides.items():
+                        if isinstance(info, dict) and "file" in info:
+                            f_path = info["file"]
+                            file_to_pkg[f_path] = pkg
+                            file_to_pkg[Path(f_path).name] = pkg
+            except Exception:
+                pass
+        return file_to_pkg
+
+    def _discover_module_mappings(
+        self,
+        extract_dir: Path,
+        inspection: DistributionInspection,
+    ) -> None:
+        """Discovers root and non-standard .pm / .pod files and maps them to canonical lib/ destinations."""
+        dist_name = inspection.dist_name
+        parts = dist_name.split("-")
+        existing_srcs = {s for s, _ in inspection.file_copies}
+        existing_dests = {d for _, d in inspection.file_copies}
+
+        meta_provides = self._extract_provides_from_meta(extract_dir)
+
+        candidate_files: List[Path] = [
+            p for p in extract_dir.iterdir()
+            if p.is_file() and p.suffix in (".pm", ".pod") and not p.name.startswith(".")
+        ]
+
+        candidate_files.sort(key=lambda item: item.as_posix())
+
+        for p in candidate_files:
+            src_rel = p.relative_to(extract_dir).as_posix()
+            if src_rel in existing_srcs:
+                continue
+
+            stem = p.stem
+            suffix = p.suffix
+            dest_pkg: Optional[str] = None
+
+            # 1. Match from META provides
+            if src_rel in meta_provides:
+                dest_pkg = meta_provides[src_rel]
+            elif p.name in meta_provides:
+                dest_pkg = meta_provides[p.name]
+
+            # 2. Match from inspection.provides
+            if not dest_pkg and inspection.provides:
+                for prov in inspection.provides:
+                    if prov == stem or prov.endswith("::" + stem):
+                        dest_pkg = prov
+                        break
+
+            # 3. Match from file package declaration
+            if not dest_pkg and suffix == ".pm":
+                dest_pkg = self._extract_perl_package(p)
+
+            # 4. Match from POD NAME section
+            if not dest_pkg and suffix == ".pod":
+                dest_pkg = self._extract_pod_name(p)
+
+            # 5. Fallback based on dist_name
+            if not dest_pkg:
+                if stem == parts[-1]:
+                    dest_pkg = "::".join(parts)
+                elif len(parts) > 1:
+                    dest_pkg = "::".join(parts[:-1] + [stem])
+                else:
+                    dest_pkg = stem
+
+            dest_rel = "lib/" + dest_pkg.replace("::", "/") + suffix
+            if dest_rel == src_rel or dest_rel == f"lib/{src_rel}":
+                continue
+            if (extract_dir / dest_rel).exists() or dest_rel in existing_dests:
+                continue
+
+            inspection.add_file_copy(src_rel, dest_rel)
+            existing_srcs.add(src_rel)
+            existing_dests.add(dest_rel)
+
     def _inspect_build_scripts(
         self,
         extract_dir: Path,
@@ -858,7 +967,7 @@ class HeuristicsEngine:
                                 inspection.included_c_files.append(rel)
                         continue
 
-                    # Check for generated xssubs.c or constants
+                    # Check for generated xssubs.c, constants, or generated modules
                     if rel.endswith((".c", ".h", ".xs", ".inc")):
                         if any(fnmatch.fnmatch(rel, pat) for pat in all_cc_excludes):
                             continue
@@ -869,6 +978,13 @@ class HeuristicsEngine:
                             if rel not in inspection.included_c_files:
                                 inspection.included_c_files.append(rel)
                         inspection.overlay_files[rel] = file_content.encode("utf-8")
+                    elif rel.endswith((".pm", ".pod")):
+                        pkg = self._extract_perl_package(new_file)
+                        if pkg:
+                            dest_rel = f"lib/{pkg.replace('::', '/')}{new_file.suffix}"
+                        else:
+                            dest_rel = f"lib/{rel}"
+                        inspection.overlay_files[dest_rel] = new_file.read_bytes()
 
                 # Extract preprocessor defines and PM mappings from scratch Makefile
                 makefile_file = scratch_dir / "Makefile"
@@ -908,9 +1024,13 @@ class HeuristicsEngine:
                         if src_rel.endswith(".pm") and dest_rel.endswith(".pm"):
                             src_path = extract_dir / src_rel
                             dest_path = extract_dir / "lib" / dest_rel
+                            scratch_src = scratch_dir / src_rel
                             if src_path.exists() and not dest_path.exists():
                                 target_overlay_rel = f"lib/{dest_rel}"
                                 inspection.add_file_copy(src_rel, target_overlay_rel)
+                            elif scratch_src.exists() and not dest_path.exists():
+                                target_overlay_rel = f"lib/{dest_rel}"
+                                inspection.overlay_files[target_overlay_rel] = scratch_src.read_bytes()
                 else:
                     # Fallback search for preprocessor defines from script_text when Makefile wasn't generated
                     for m in re.finditer(r"-D([A-Za-z0-9_]+)(?:=([^\s\'\"]+))?", script_text):
@@ -928,16 +1048,8 @@ class HeuristicsEngine:
                         if clean_def and len(clean_def) > 1 and clean_def not in inspection.defines:
                             inspection.defines.append(clean_def)
 
-        # Fallback check for root .pm matching Foo-Bar -> lib/Foo/Bar.pm
-        dist_name = inspection.dist_name
-        parts = dist_name.split("-")
-        leaf_pm = f"{parts[-1]}.pm"
-        leaf_path = extract_dir / leaf_pm
-        dest_rel = "/".join(parts) + ".pm"
-        dest_path = extract_dir / "lib" / dest_rel
-        if leaf_path.exists() and not dest_path.exists():
-            target_overlay_rel = f"lib/{dest_rel}"
-            inspection.add_file_copy(leaf_pm, target_overlay_rel)
+        # Discover root and non-standard .pm / .pod mappings
+        self._discover_module_mappings(extract_dir, inspection)
 
     def wrap_constants_in_ifdef(self, content: str) -> str:
         """Wraps newCONSTSUB calls in #ifdef guards for platform portability."""

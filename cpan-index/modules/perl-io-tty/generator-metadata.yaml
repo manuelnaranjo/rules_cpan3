@@ -32,9 +32,3 @@ linkopts_select:
   - -lutil
   //conditions:default: []
 output_loc: auto/IO/Tty/Tty
-patch_cmds:
-- mkdir -p lib/IO/Tty && printf "package IO::Tty::Constant;\nour \$VERSION = \"1.31\";\nrequire
-  Exporter;\nour @ISA = qw(Exporter);\nour @EXPORT_OK = qw();\n1;\n" > lib/IO/Tty/Constant.pm
-file_copies:
-  Tty.pm: lib/IO/Tty.pm
-  Pty.pm: lib/IO/Pty.pm

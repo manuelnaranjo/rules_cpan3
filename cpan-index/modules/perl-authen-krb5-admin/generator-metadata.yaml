@@ -7,5 +7,3 @@ native_deps:
 - '@krb5//:krb5'
 - '@krb5//:com_err'
 - '@krb5//:k5crypto'
-file_copies:
-  Admin.pm: lib/Authen/Krb5/Admin.pm

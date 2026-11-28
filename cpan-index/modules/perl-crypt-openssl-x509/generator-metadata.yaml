@@ -3,5 +3,3 @@ native_deps:
 - '@openssl//:ssl'
 manual_tests:
 - '*'
-file_copies:
-  X509.pm: lib/Crypt/OpenSSL/X509.pm
