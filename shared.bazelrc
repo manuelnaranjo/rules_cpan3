@@ -16,7 +16,10 @@ build --cxxopt=-w
 
 # When testing, only report failed tests in summary and output logs on error
 test --test_summary=terse
-test --test_output=errors
+test --test_output=summary
+
+# keep going to catch all issues
+build --keep_going
 
 # --- BuildBuddy Remote Build Execution (RBE) Configuration ---
 # Remote executor, cache, and BES endpoints
