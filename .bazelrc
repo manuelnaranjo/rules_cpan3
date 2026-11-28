@@ -13,8 +13,8 @@ common --config=ruleset
 # Bazel settings that apply to this repository.
 # Take care to document any settings that you expect users to apply.
 
-# BCR Registries: cpan-index registry first, followed by public BCR
-common --registry=file://%workspace%/cpan-index
+# BCR Registries: our registry first, followed by public BCR
+common --registry=file://%workspace%/registry
 common --registry=https://bcr.bazel.build
 
 # Perl rules configuration (enable XS dynamic loading)
