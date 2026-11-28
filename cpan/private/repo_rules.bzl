@@ -69,25 +69,31 @@ def _find_test_files(ctx):
                 test_files.append(rel)
     return test_files
 
+def _dir_has_pm(dir_path):
+    dirs_to_visit = [dir_path]
+    for _ in range(100):
+        if not dirs_to_visit:
+            break
+        curr = dirs_to_visit.pop(0)
+        for child in curr.readdir():
+            if child.is_dir:
+                dirs_to_visit.append(child)
+            elif child.basename.endswith(".pm"):
+                return True
+    return False
+
 def _find_test_includes(ctx):
     t_path = ctx.path("t")
     if not t_path.exists:
         return []
     include_dirs = ["t"]
-    dirs_to_visit = [t_path]
-    for _ in range(100):
-        if not dirs_to_visit:
-            break
-        curr = dirs_to_visit.pop(0)
-        has_pm = False
-        for child in curr.readdir():
-            if child.is_dir:
-                dirs_to_visit.append(child)
-            elif child.basename.endswith(".pm"):
-                has_pm = True
-        if has_pm:
-            rel = str(curr)[len(str(ctx.path(""))) + 1:]
-            if rel not in include_dirs:
+    t_lib = ctx.path("t/lib")
+    if t_lib.exists:
+        include_dirs.append("t/lib")
+    for child in t_path.readdir():
+        if child.is_dir:
+            rel = "t/" + child.basename
+            if rel not in include_dirs and _dir_has_pm(child):
                 include_dirs.append(rel)
     return include_dirs
 
@@ -156,7 +162,9 @@ def _cpan_dist_repo_impl(ctx):
         test_blocks.append("""perl_test(
     name = "{name}",
     size = "small",
-    srcs = ["{src}"],
+    srcs = ["@rules_cpan//cpan:test_runner.pl"],
+    args = ["{src}"],
+    data = ["{src}"],
     deps = {deps},
 )""".format(
             name = t_name,
@@ -207,8 +215,6 @@ perl_library(
         "WORKSPACE.bazel",
         "WORKSPACE",
         "MODULE.bazel",
-        "t/**/*.t",
-        "t/*.t",
     ], allow_empty = True),
     includes = {test_includes},
     deps = [":{dist_name}"],

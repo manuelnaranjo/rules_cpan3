@@ -597,7 +597,7 @@
   "moduleExtensions": {
     "//cpan:extensions.bzl%cpan": {
       "general": {
-        "bzlTransitiveDigest": "SBKLvtJoU6wDD56OzeQWKe2r4dcokVcQ6b4jp9bhDYM=",
+        "bzlTransitiveDigest": "4i2pl3YItvH7ei42w6F2OsQ2KWKKe1d3WsbF1lxfS6w=",
         "usagesDigest": "+C4C1z7JPsJkbf9pT5u2CK8zkY9IxShUfcgc3CO2sWA=",
         "recordedInputs": [
           "FILE:@@//tests/cpan.lock.json c15879640cdf20d441f3de267e0cc485a59237e1e9e49fdc2f9346ee85a07524"

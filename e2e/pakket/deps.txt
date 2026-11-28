@@ -53,6 +53,7 @@ Sub-Install
 Sub-Name
 Sub-Quote
 System-Command
+Test-Base
 Test-Fatal
 Test-Needs
 Test2-Suite

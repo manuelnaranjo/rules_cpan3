@@ -65463,7 +65463,9 @@
         "runtime": [
           "Exporter-Tiny"
         ],
-        "test": []
+        "test": [
+          "Test-Fatal"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -67061,7 +67063,9 @@
         "build": [],
         "configure": [],
         "runtime": [],
-        "test": []
+        "test": [
+          "Test-Base"
+        ]
       },
       "is_xs": true,
       "provides": [
