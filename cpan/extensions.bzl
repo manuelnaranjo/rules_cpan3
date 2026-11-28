@@ -2,25 +2,13 @@
 
 load(
     "//cpan/private:repo_rules.bzl",
+    "cpan_dist_repo",
     "cpan_hub_repo",
-    "dist_to_bcr_module",
+    "sanitize_repo_name",
 )
 
 def _cpan_impl(module_ctx):
     seen_hubs = {}
-
-    # Collect injected distribution targets across modules
-    injected_by_hub = {}
-    for mod in module_ctx.modules:
-        for inj in getattr(mod.tags, "inject", []):
-            hub = inj.hub
-            if hub not in injected_by_hub:
-                injected_by_hub[hub] = {}
-            if inj.target:
-                injected_by_hub[hub][inj.distribution] = str(inj.target)
-            else:
-                bcr_mod = dist_to_bcr_module(inj.distribution)
-                injected_by_hub[hub][inj.distribution] = "@" + bcr_mod + "//:" + inj.distribution
 
     for mod in module_ctx.modules:
         for install in mod.tags.install:
@@ -28,11 +16,6 @@ def _cpan_impl(module_ctx):
             if hub_name in seen_hubs:
                 continue
             seen_hubs[hub_name] = True
-
-            hub_injected = dict(injected_by_hub.get(hub_name, {}))
-            for dist_name, target in getattr(install, "injected", {}).items():
-                if target:
-                    hub_injected[dist_name] = str(target)
 
             distributions = {}
             root_dependencies = []
@@ -55,30 +38,46 @@ def _cpan_impl(module_ctx):
 
             all_dists = {}
             for dist_name in distributions.keys():
-                all_dists[dist_name] = dist_to_bcr_module(dist_name)
+                all_dists[dist_name] = hub_name + "__" + sanitize_repo_name(dist_name)
 
-            # Instantiate hub repository rule pointing directly to BCR modules
+            # Declare repository for each distribution in lockfile
+            for dist_name, dist_info in distributions.items():
+                repo_name = all_dists[dist_name]
+                cpan_dist_repo(
+                    name = repo_name,
+                    dist_name = dist_name,
+                    version = dist_info.get("version", ""),
+                    url = dist_info.get("url", ""),
+                    sha256 = dist_info.get("sha256", ""),
+                    strip_prefix = dist_info.get("strip_prefix", ""),
+                    is_xs = dist_info.get("is_xs", False),
+                    provides = dist_info.get("provides", []),
+                    dependencies = json.encode(dist_info.get("dependencies", {})),
+                    all_dists = json.encode(all_dists),
+                    hub_name = hub_name,
+                )
+
+            # Instantiate hub repository rule
             cpan_hub_repo(
                 name = hub_name,
                 hub_name = hub_name,
                 direct_deps = direct_deps.keys(),
                 all_dists = all_dists,
-                injected_targets = hub_injected,
             )
 
 inject_tag = tag_class(
-    doc = "Injects an externally-managed or ported Bazel target for a CPAN distribution into the hub.",
+    doc = "Legacy tag for backwards compatibility (no-op).",
     attrs = {
         "distribution": attr.string(
-            doc = "CPAN distribution name (e.g. 'Compress-Raw-Zlib').",
-            mandatory = True,
+            doc = "CPAN distribution name.",
+            mandatory = False,
         ),
         "hub": attr.string(
-            doc = "Name of the hub repository this injection applies to.",
+            doc = "Name of the hub repository.",
             default = "cpan",
         ),
         "target": attr.label(
-            doc = "Bazel target label managing this distribution (e.g. '@perl-compress-raw-zlib//:Compress-Raw-Zlib').",
+            doc = "Bazel target label.",
             mandatory = False,
         ),
     },
@@ -88,7 +87,7 @@ install_tag = tag_class(
     doc = "Defines a CPAN hub repository and installs dependencies from a lockfile.",
     attrs = {
         "injected": attr.string_keyed_label_dict(
-            doc = "Optional mapping from distribution name to injected Bazel target label.",
+            doc = "Optional mapping for backwards compatibility.",
             default = {},
         ),
         "lock": attr.label(

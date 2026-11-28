@@ -11,6 +11,7 @@ bzl_library(
     name = "defs",
     srcs = ["defs.bzl"],
     deps = [
+        "//cpan/private:foreign_cc",
         "//cpan/private:rules",
         "//platforms:platforms_bzl",
     ],
