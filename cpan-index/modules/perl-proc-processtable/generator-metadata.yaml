@@ -1,4 +1,2 @@
 cc_srcs_exclude:
 - os/**/*.c
-manual_tests:
-- '*'
