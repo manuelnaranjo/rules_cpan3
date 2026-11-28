@@ -39,6 +39,135 @@
       "url": "https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Algorithm-Diff-Callback-0.111.tar.gz",
       "version": "0.111"
     },
+    "Alien-Build": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "File-Which"
+        ],
+        "runtime": [
+          "Capture-Tiny",
+          "FFI-CheckLib",
+          "File-Which",
+          "File-chdir",
+          "Path-Tiny"
+        ],
+        "test": [
+          "Devel-Hide"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "Alien::Base",
+        "Alien::Base::PkgConfig",
+        "Alien::Base::Wrapper",
+        "Alien::Build",
+        "Alien::Build::CommandSequence",
+        "Alien::Build::Helper",
+        "Alien::Build::Interpolate",
+        "Alien::Build::Interpolate::Default",
+        "Alien::Build::Interpolate::Helper",
+        "Alien::Build::Log",
+        "Alien::Build::Log::Abbreviate",
+        "Alien::Build::Log::Default",
+        "Alien::Build::MM",
+        "Alien::Build::Meta",
+        "Alien::Build::Plugin",
+        "Alien::Build::Plugin::Build::Autoconf",
+        "Alien::Build::Plugin::Build::CMake",
+        "Alien::Build::Plugin::Build::Copy",
+        "Alien::Build::Plugin::Build::MSYS",
+        "Alien::Build::Plugin::Build::Make",
+        "Alien::Build::Plugin::Build::SearchDep",
+        "Alien::Build::Plugin::Core::CleanInstall",
+        "Alien::Build::Plugin::Core::Download",
+        "Alien::Build::Plugin::Core::FFI",
+        "Alien::Build::Plugin::Core::Gather",
+        "Alien::Build::Plugin::Core::Legacy",
+        "Alien::Build::Plugin::Core::Override",
+        "Alien::Build::Plugin::Core::Setup",
+        "Alien::Build::Plugin::Core::Tail",
+        "Alien::Build::Plugin::Decode::DirListing",
+        "Alien::Build::Plugin::Decode::DirListingFtpcopy",
+        "Alien::Build::Plugin::Decode::HTML",
+        "Alien::Build::Plugin::Decode::Mojo",
+        "Alien::Build::Plugin::Digest::Negotiate",
+        "Alien::Build::Plugin::Digest::SHA",
+        "Alien::Build::Plugin::Digest::SHAPP",
+        "Alien::Build::Plugin::Download::Negotiate",
+        "Alien::Build::Plugin::Extract::ArchiveTar",
+        "Alien::Build::Plugin::Extract::ArchiveZip",
+        "Alien::Build::Plugin::Extract::CommandLine",
+        "Alien::Build::Plugin::Extract::Directory",
+        "Alien::Build::Plugin::Extract::File",
+        "Alien::Build::Plugin::Extract::Negotiate",
+        "Alien::Build::Plugin::Fetch::CurlCommand",
+        "Alien::Build::Plugin::Fetch::HTTPTiny",
+        "Alien::Build::Plugin::Fetch::LWP",
+        "Alien::Build::Plugin::Fetch::Local",
+        "Alien::Build::Plugin::Fetch::LocalDir",
+        "Alien::Build::Plugin::Fetch::NetFTP",
+        "Alien::Build::Plugin::Fetch::Wget",
+        "Alien::Build::Plugin::Gather::IsolateDynamic",
+        "Alien::Build::Plugin::PkgConfig::CommandLine",
+        "Alien::Build::Plugin::PkgConfig::LibPkgConf",
+        "Alien::Build::Plugin::PkgConfig::MakeStatic",
+        "Alien::Build::Plugin::PkgConfig::Negotiate",
+        "Alien::Build::Plugin::PkgConfig::PP",
+        "Alien::Build::Plugin::Prefer::BadVersion",
+        "Alien::Build::Plugin::Prefer::GoodVersion",
+        "Alien::Build::Plugin::Prefer::SortVersions",
+        "Alien::Build::Plugin::Probe::CBuilder",
+        "Alien::Build::Plugin::Probe::CommandLine",
+        "Alien::Build::Plugin::Probe::Vcpkg",
+        "Alien::Build::Plugin::Test::Mock",
+        "Alien::Build::PluginMeta",
+        "Alien::Build::Temp",
+        "Alien::Build::TempDir",
+        "Alien::Build::Util",
+        "Alien::Build::Version::Basic",
+        "Alien::Build::rc",
+        "Alien::Role",
+        "Alien::Util",
+        "Test::Alien",
+        "Test::Alien::Build",
+        "Test::Alien::CanCompile",
+        "Test::Alien::CanPlatypus",
+        "Test::Alien::Diag",
+        "Test::Alien::Run",
+        "Test::Alien::Synthetic",
+        "alienfile"
+      ],
+      "sha256": "c14346bace2b50cae62f1ee70a907f4c7383fabf90b034272ee52a5b1345fbba",
+      "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Build-2.88.tar.gz",
+      "version": "2.88"
+    },
+    "Alien-cmake3": {
+      "dependencies": {
+        "build": [
+          "Alien-Build"
+        ],
+        "configure": [
+          "Alien-Build",
+          "Capture-Tiny",
+          "File-Which",
+          "Path-Tiny"
+        ],
+        "runtime": [
+          "Alien-Build"
+        ],
+        "test": [
+          "Alien-Build"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Alien::cmake3"
+      ],
+      "sha256": "c87a09d8687b5c5057b825c56329513d8b1b7741b1ec4fca346465ee0219485f",
+      "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-cmake3-0.10.tar.gz",
+      "version": "0.10"
+    },
     "App-Cmd": {
       "dependencies": {
         "build": [],
@@ -80,6 +209,67 @@
       "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/App-Cmd-0.340.tar.gz",
       "version": "0.340"
     },
+    "App-FatPacker": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "App::FatPacker",
+        "App::FatPacker::Trace"
+      ],
+      "sha256": "129db36dc845661a582286810cfe2d5216eb2ce082bad40ae1fcdce0f45deccf",
+      "url": "https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/App-FatPacker-0.010008.tar.gz",
+      "version": "0.010008"
+    },
+    "App-Nopaste": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Class-Load",
+          "Getopt-Long-Descriptive",
+          "JSON-MaybeXS",
+          "Module-Pluggable",
+          "Module-Runtime",
+          "Path-Tiny",
+          "URI",
+          "WWW-Mechanize",
+          "libwww-perl",
+          "namespace-clean"
+        ],
+        "test": [
+          "Browser-Open",
+          "Clipboard",
+          "Test-Deep",
+          "Test-Fatal",
+          "libwww-perl"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "App::Nopaste",
+        "App::Nopaste::Command",
+        "App::Nopaste::Service",
+        "App::Nopaste::Service::Codepeek",
+        "App::Nopaste::Service::Debian",
+        "App::Nopaste::Service::Gist",
+        "App::Nopaste::Service::GitLab",
+        "App::Nopaste::Service::Mojopaste",
+        "App::Nopaste::Service::PastebinCom",
+        "App::Nopaste::Service::Pastie",
+        "App::Nopaste::Service::Shadowcat",
+        "App::Nopaste::Service::Snitch",
+        "App::Nopaste::Service::Ubuntu",
+        "App::Nopaste::Service::ssh"
+      ],
+      "sha256": "3cd41971688990cafd58420bf61f87d8fd03bc68276b3f311482bbfeed952bb0",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/App-Nopaste-1.013.tar.gz",
+      "version": "1.013"
+    },
     "Archive-Any": {
       "dependencies": {
         "build": [],
@@ -107,12 +297,37 @@
       "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Archive-Any-0.0946.tar.gz",
       "version": "0.0946"
     },
+    "Archive-Any-Lite": {
+      "dependencies": {
+        "build": [
+          "Test-UseAllModules"
+        ],
+        "configure": [
+          "ExtUtils-MakeMaker-CPANfile"
+        ],
+        "runtime": [
+          "Archive-Zip"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Archive::Any::Lite",
+        "Archive::Any::Lite::Tar",
+        "Archive::Any::Lite::Zip"
+      ],
+      "sha256": "15c188253993a4b66e5599f0789b1326f0a66c092bdbfac9313706d41c285170",
+      "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Archive-Any-Lite-0.11.tar.gz",
+      "version": "0.11"
+    },
     "Archive-Tar": {
       "dependencies": {
         "build": [],
         "configure": [],
         "runtime": [],
-        "test": []
+        "test": [
+          "IO-Compress-Lzma"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -150,6 +365,97 @@
       "url": "https://cpan.metacpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.68.tar.gz",
       "version": "1.68"
     },
+    "Array-Diff": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Algorithm-Diff",
+          "Class-Accessor"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Array::Diff"
+      ],
+      "sha256": "8006392e9861e741537c2bbc9116c8e42b962f2e07e8d641a2ff6a11c6445077",
+      "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Array-Diff-0.09.tar.gz",
+      "version": "0.09"
+    },
+    "B-C": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "B-Flags",
+          "IPC-Run",
+          "Opcodes"
+        ],
+        "test": [
+          "B-Debug",
+          "B-Flags",
+          "IPC-Run",
+          "Opcodes"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "B::Asm5_005002",
+        "B::Asm5_005003",
+        "B::Asm5_005004",
+        "B::Asm5_005005",
+        "B::Asm5_005008",
+        "B::Asm5_006000",
+        "B::Asm5_006001",
+        "B::Asm5_006001RC1",
+        "B::Asm5_006002",
+        "B::Asm5_008000",
+        "B::Asm5_008001",
+        "B::Asm5_008002",
+        "B::Asm5_008003",
+        "B::Asm5_008004",
+        "B::Asm5_008005",
+        "B::Asm5_008006",
+        "B::Asm5_008007",
+        "B::Asm5_008008",
+        "B::Asm5_008009",
+        "B::Asm5_010000",
+        "B::Asm5_01001",
+        "B::Asm5_011003",
+        "B::Asm5_012000",
+        "B::Asm5_012001",
+        "B::Asm5_012003",
+        "B::Asm5_013000",
+        "B::Asm5_013001",
+        "B::Asm5_013002",
+        "B::Asm5_013003",
+        "B::Asm5_013004",
+        "B::Asm5_014000",
+        "B::Asm5_014001",
+        "B::Asm5_014002",
+        "B::Assembler",
+        "B::Bblock",
+        "B::Bytecode",
+        "B::Bytecode56",
+        "B::C",
+        "B::C::InitSection",
+        "B::C::Section",
+        "B::CC",
+        "B::Disassembler",
+        "B::Disassembler::BytecodeStream",
+        "B::FAKEOP",
+        "B::Pseudoreg",
+        "B::STASHGV",
+        "B::Shadow",
+        "B::Stackobj",
+        "B::Stash",
+        "ByteLoader"
+      ],
+      "sha256": "0452a611d343adf9d95fceab6ba6b66176e3ad7fccce5280922c0e431f5149ff",
+      "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-C-1.57.tar.gz",
+      "version": "1.57"
+    },
     "B-COW": {
       "dependencies": {
         "build": [],
@@ -165,6 +471,38 @@
       "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/B-COW-0.007.tar.gz",
       "version": "0.007"
     },
+    "B-Debug": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "B-Flags"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "B::Debug"
+      ],
+      "sha256": "8d6d3f5134f0ddd8dde68e6581f5b30b73b7db40fd28d076e4f6e5386f570d3a",
+      "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Debug-1.26.tar.gz",
+      "version": "1.26"
+    },
+    "B-Flags": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "B::Flags"
+      ],
+      "sha256": "c1db97d01315bed109b4c48958cd32195cfc9ef5d3b7707eb47840c1d57c10b2",
+      "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Flags-0.17.tar.gz",
+      "version": "0.17"
+    },
     "B-Hooks-EndOfScope": {
       "dependencies": {
         "build": [],
@@ -173,7 +511,10 @@
           "Module-Implementation",
           "Sub-Exporter-Progressive"
         ],
-        "test": []
+        "test": [
+          "Devel-Hide",
+          "Variable-Magic"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -184,6 +525,170 @@
       "sha256": "edac77a17fc36620c8324cc194ce1fad2f02e9fcbe72d08ad0b2c47f0c7fd8ef",
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/B-Hooks-EndOfScope-0.28.tar.gz",
       "version": "0.28"
+    },
+    "B-Keywords": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "B::Keywords"
+      ],
+      "sha256": "e0aa19d3390409f0ece7342ab041c5b432c31d7cf1abf182c134b6aab78784b0",
+      "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Keywords-1.29.tar.gz",
+      "version": "1.29"
+    },
+    "Browser-Open": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Browser::Open"
+      ],
+      "sha256": "aceb3129782fe06e5b6e3e4b1a97e20c208426e5870ea67fb63b79188b056867",
+      "url": "https://cpan.metacpan.org/authors/id/C/CF/CFRANKS/Browser-Open-0.04.tar.gz",
+      "version": "0.04"
+    },
+    "Business-ISBN": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Business-ISBN-Data"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Business::ISBN",
+        "Business::ISBN10",
+        "Business::ISBN13"
+      ],
+      "sha256": "91135da48dd97fdbb40ea33306a008a2eae35ac5e3fae15fd420beab106b1e7a",
+      "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Business-ISBN-3.014.tar.gz",
+      "version": "3.014"
+    },
+    "Business-ISBN-Data": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Business::ISBN::Data"
+      ],
+      "sha256": "2c129e3bf581cb5a19baa622aa3fc27bfa27d5e0b770f7e97d280afe6a9b5ed9",
+      "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Business-ISBN-Data-20261126.001.tar.gz",
+      "version": "20261126.001"
+    },
+    "CGI": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "HTML-Parser",
+          "URI"
+        ],
+        "test": [
+          "Test-NoWarnings",
+          "Test-Warn"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "CGI",
+        "CGI::Carp",
+        "CGI::Cookie",
+        "CGI::File::Temp",
+        "CGI::HTML::Functions",
+        "CGI::MultipartBuffer",
+        "CGI::Pretty",
+        "CGI::Push",
+        "CGI::Util",
+        "Fh"
+      ],
+      "sha256": "47637ad0413c527e00e1249d14dba0c234073ad4bef09746fafd73dd85ded665",
+      "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/CGI-5.02.tar.gz",
+      "version": "5.02"
+    },
+    "CPAN-Changes": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Module-Runtime",
+          "Moo",
+          "Sub-Quote",
+          "Type-Tiny"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "CPAN::Changes",
+        "CPAN::Changes::Entry",
+        "CPAN::Changes::Group",
+        "CPAN::Changes::HasEntries",
+        "CPAN::Changes::Parser",
+        "CPAN::Changes::Release",
+        "CPAN::Changes::Spec",
+        "Test::CPAN::Changes"
+      ],
+      "sha256": "1b022a0a6451827d060ee9cbfe9b2d8edbac2a3d7155cbee33ea93274b830fb5",
+      "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/CPAN-Changes-0.500005.tar.gz",
+      "version": "0.500005"
+    },
+    "CPAN-Common-Index": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "CPAN-DistnameInfo",
+          "Class-Tiny",
+          "Tie-Handle-Offset",
+          "URI"
+        ],
+        "test": [
+          "Test-Deep",
+          "Test-FailWarnings",
+          "Test-Fatal"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "CPAN::Common::Index",
+        "CPAN::Common::Index::LocalPackage",
+        "CPAN::Common::Index::MetaDB",
+        "CPAN::Common::Index::Mirror",
+        "CPAN::Common::Index::Mux::Ordered"
+      ],
+      "sha256": "c43ddbb22fd42b06118fe6357f53700fbd77f531ba3c427faafbf303cbf4eaf0",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Common-Index-0.010.tar.gz",
+      "version": "0.010"
+    },
+    "CPAN-DistnameInfo": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "CPAN::DistnameInfo"
+      ],
+      "sha256": "2f24fbe9f7eeacbc269d35fc61618322fc17be499ee0cd9018f370934a9f2435",
+      "url": "https://cpan.metacpan.org/authors/id/G/GB/GBARR/CPAN-DistnameInfo-0.12.tar.gz",
+      "version": "0.12"
     },
     "CPAN-Meta-Check": {
       "dependencies": {
@@ -200,6 +705,39 @@
       "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/CPAN-Meta-Check-0.018.tar.gz",
       "version": "0.018"
     },
+    "CPAN-Requirements-Dynamic": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "ExtUtils-Config",
+          "ExtUtils-HasCompiler"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "CPAN::Requirements::Dynamic"
+      ],
+      "sha256": "0731694542ec57aead9f20259ba678f74e5602e655b1833eef3e9336f47298e8",
+      "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/CPAN-Requirements-Dynamic-0.003.tar.gz",
+      "version": "0.003"
+    },
+    "Canary-Stability": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Canary::Stability"
+      ],
+      "sha256": "a5c91c62cf95fcb868f60eab5c832908f6905221013fea2bce3ff57046d7b6ea",
+      "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Canary-Stability-2013.tar.gz",
+      "version": "2013"
+    },
     "Capture-Tiny": {
       "dependencies": {
         "build": [],
@@ -214,6 +752,55 @@
       "sha256": "ca6e8d7ce7471c2be54e1009f64c367d7ee233a2894cacf52ebe6f53b04e81e5",
       "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Capture-Tiny-0.50.tar.gz",
       "version": "0.50"
+    },
+    "Carp-Always": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Test-Base"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Carp::Always"
+      ],
+      "sha256": "98aa11492171c016fb0827581ab1fa5ed01b1e99c6357489ddf3a827315866f1",
+      "url": "https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Carp-Always-0.16.tar.gz",
+      "version": "0.16"
+    },
+    "Carp-Assert": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Carp::Assert"
+      ],
+      "sha256": "807ea97c6bed76ac2e4969efba7dae48fefeb9f28797f112671b3ac8a49355f7",
+      "url": "https://cpan.metacpan.org/authors/id/Y/YV/YVES/Carp-Assert-0.22.tar.gz",
+      "version": "0.22"
+    },
+    "Class-Accessor": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Class::Accessor",
+        "Class::Accessor::Fast",
+        "Class::Accessor::Faster"
+      ],
+      "sha256": "bf12a3e5de5a2c6e8a447b364f4f5a050bf74624c56e315022ae7992ff2f411c",
+      "url": "https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz",
+      "version": "0.51"
     },
     "Class-Data-Inheritable": {
       "dependencies": {
@@ -292,6 +879,124 @@
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Load-XS-0.10.tar.gz",
       "version": "0.10"
     },
+    "Class-Method-Modifiers": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Class::Method::Modifiers"
+      ],
+      "sha256": "65cd85bfe475d066e9186f7a8cc636070985b30b0ebb1cde8681cf062c2e15fc",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.15.tar.gz",
+      "version": "2.15"
+    },
+    "Class-Refresh": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Class-Load",
+          "Class-Unload",
+          "Devel-OverrideGlobalRequire",
+          "Try-Tiny"
+        ],
+        "test": [
+          "Test-Fatal",
+          "Test-Requires"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Class::Refresh"
+      ],
+      "sha256": "e3b0035355cbb35a2aee3f223688d578946a7a7c570acd398b28cddb1fd4beb3",
+      "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/Class-Refresh-0.07.tar.gz",
+      "version": "0.07"
+    },
+    "Class-Tiny": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Test-FailWarnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Class::Tiny",
+        "Class::Tiny::Object"
+      ],
+      "sha256": "ee058a63912fa1fcb9a72498f56ca421a2056dc7f9f4b67837446d6421815615",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Class-Tiny-1.008.tar.gz",
+      "version": "1.008"
+    },
+    "Class-Unload": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Class-Inspector"
+        ],
+        "test": [
+          "Test-Requires"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Class::Unload"
+      ],
+      "sha256": "2508039578fb5457fdffb22d8fa6f90be295c30417901d0fd975744e55922696",
+      "url": "https://cpan.metacpan.org/authors/id/I/IL/ILMARI/Class-Unload-0.12.tar.gz",
+      "version": "0.12"
+    },
+    "Class-XSAccessor": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Class::XSAccessor",
+        "Class::XSAccessor::Array"
+      ],
+      "sha256": "99c56b395f1239af19901f2feeb125d9ecb4e351a0d80daa9529211a4700a6f2",
+      "url": "https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Class-XSAccessor-1.19.tar.gz",
+      "version": "1.19"
+    },
+    "Clipboard": {
+      "dependencies": {
+        "build": [
+          "Module-Build"
+        ],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [
+          "CGI",
+          "URI"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Clipboard",
+        "Clipboard::MacPasteboard",
+        "Clipboard::WaylandClipboard",
+        "Clipboard::Win32",
+        "Clipboard::Xclip",
+        "Clipboard::Xsel"
+      ],
+      "sha256": "95e234cde474cd62ee762f45f8c9d8297436c61ac53bc6af7a73c257358c4bd0",
+      "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.32.tar.gz",
+      "version": "0.32"
+    },
     "Clone": {
       "dependencies": {
         "build": [],
@@ -324,6 +1029,21 @@
       "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Clone-PP-1.09.tar.gz",
       "version": "1.09"
     },
+    "Compress-Raw-Lzma": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Compress::Raw::Lzma"
+      ],
+      "sha256": "1292b126d831822f6b45c6c02c4fc69cc5ffbf6dc8f2515ff4f301cfcfcf684d",
+      "url": "https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.225.tar.gz",
+      "version": "2.225"
+    },
     "Compress-Raw-Zlib": {
       "dependencies": {
         "build": [],
@@ -346,7 +1066,14 @@
         "runtime": [
           "Module-Pluggable"
         ],
-        "test": []
+        "test": [
+          "Config-General",
+          "Config-Tiny",
+          "Cpanel-JSON-XS",
+          "XML-NamespaceSupport",
+          "XML-Simple",
+          "YAML-LibYAML"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -363,12 +1090,118 @@
       "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.33.tar.gz",
       "version": "0.33"
     },
-    "Cpanel-JSON-XS": {
+    "Config-AutoConf": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Capture-Tiny"
+        ],
+        "test": [
+          "File-Slurper"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Config::AutoConf"
+      ],
+      "sha256": "bb57a958ef49d3f7162276dae14a7bd5af43fd1d8513231af35d665459454023",
+      "url": "https://cpan.metacpan.org/authors/id/A/AM/AMBS/Config-AutoConf-0.320.tar.gz",
+      "version": "0.320"
+    },
+    "Config-General": {
       "dependencies": {
         "build": [],
         "configure": [],
         "runtime": [],
         "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Config::General",
+        "Config::General::Extended",
+        "Config::General::Interpolated"
+      ],
+      "sha256": "6538a47e6950bca0b0b6ac4c69a7a5e915fc52cf060346d935f16570fec86d43",
+      "url": "https://cpan.metacpan.org/authors/id/T/TL/TLINDEN/Config-General-2.69.tar.gz",
+      "version": "2.69"
+    },
+    "Config-INI": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Mixin-Linewise"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Config::INI",
+        "Config::INI::Reader",
+        "Config::INI::Writer"
+      ],
+      "sha256": "0bbe797a730210644a907d90cd4aa2b23ad580cb27bd39393bfc6a7ef9fdfdea",
+      "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Config-INI-0.029.tar.gz",
+      "version": "0.029"
+    },
+    "Config-INI-Reader-Ordered": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Config-INI"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Config::INI::Reader::Ordered"
+      ],
+      "sha256": "072bff3b32f41af8326ec172c7d24ab28b2e5f36021f5268d0c8c2e387b06354",
+      "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Config-INI-Reader-Ordered-0.022.tar.gz",
+      "version": "0.022"
+    },
+    "Config-Tiny": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Config::Tiny"
+      ],
+      "sha256": "b2f7345619b3b8e636dd39ea010731c9dc2bfb8f022bcbd86ae6ad17866e110d",
+      "url": "https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/Config-Tiny-2.30.tgz",
+      "version": "2.30"
+    },
+    "Cpanel-JSON-XS": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "CPAN-Changes",
+          "Class-XSAccessor",
+          "JSON",
+          "JSON-XS",
+          "List-MoreUtils",
+          "Mojolicious",
+          "Perl-MinimumVersion",
+          "Pod-Spell-CommonMistakes",
+          "Test-CPAN-Meta",
+          "Test-CheckChanges",
+          "Test-Kwalitee",
+          "Test-LeakTrace",
+          "Test-MinimumVersion",
+          "Test-Pod",
+          "Test-Pod-Coverage",
+          "Test-Spelling",
+          "Text-CSV_XS",
+          "common-sense"
+        ]
       },
       "is_xs": true,
       "provides": [
@@ -379,6 +1212,60 @@
       "sha256": "daabf6ad0376ee4613e671c521f5d05650c42205e403cac077e79d8594da3ade",
       "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Cpanel-JSON-XS-4.83.tar.gz",
       "version": "4.83"
+    },
+    "Cwd-Guard": {
+      "dependencies": {
+        "build": [
+          "Test-Requires"
+        ],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Cwd::Guard"
+      ],
+      "sha256": "7afc7ca2b9502e440241938ad97a3e7ebd550180ebd6142e1db394186b268e77",
+      "url": "https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Cwd-Guard-0.05.tar.gz",
+      "version": "0.05"
+    },
+    "Data-Binary": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Data::Binary"
+      ],
+      "sha256": "4821a2de10ac7108f4dcb284a71b876981b0cb1ea6c5ed6afb177bf2e7cb8d73",
+      "url": "https://cpan.metacpan.org/authors/id/S/SN/SNKWATT/Data-Binary-0.01.tar.gz",
+      "version": "0.01"
+    },
+    "Data-Dump": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Data::Dump",
+        "Data::Dump::FilterContext",
+        "Data::Dump::Filtered",
+        "Data::Dump::Trace",
+        "Data::Dump::Trace::Call",
+        "Data::Dump::Trace::Wrapper"
+      ],
+      "sha256": "2ce73373892b9b70170678530dac192ec3dfe9148bb06fec7becba536fc040df",
+      "url": "https://cpan.metacpan.org/authors/id/G/GA/GARU/Data-Dump-1.28.tar.gz",
+      "version": "1.28"
     },
     "Data-OptList": {
       "dependencies": {
@@ -442,6 +1329,26 @@
       "url": "https://cpan.metacpan.org/authors/id/G/GA/GARU/Data-Printer-1.002001.tar.gz",
       "version": "1.002001"
     },
+    "Data-Section": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "MRO-Compat",
+          "Sub-Exporter"
+        ],
+        "test": [
+          "Test-FailWarnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Data::Section"
+      ],
+      "sha256": "83acc7a55d3dd7ed36e9d78d350af3138c69cfa178a44765822712ff433b990e",
+      "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Data-Section-0.200008.tar.gz",
+      "version": "0.200008"
+    },
     "Data-Visitor": {
       "dependencies": {
         "build": [],
@@ -464,6 +1371,23 @@
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Data-Visitor-0.32.tar.gz",
       "version": "0.32"
     },
+    "Devel-Caller": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "PadWalker"
+        ],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Devel::Caller"
+      ],
+      "sha256": "b679a2b18034b0b720de82c3708724c364b10a6ca164cbc67cdc3af283f3503f",
+      "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-Caller-2.07.tar.gz",
+      "version": "2.07"
+    },
     "Devel-CheckBin": {
       "dependencies": {
         "build": [],
@@ -478,6 +1402,39 @@
       "sha256": "157f3db59c29ed1d49133a469cee772c885ad4ee64e8692a91b3ebfdbe2fe3e4",
       "url": "https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Devel-CheckBin-0.04.tar.gz",
       "version": "0.04"
+    },
+    "Devel-CheckCompiler": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Module-Build-Tiny"
+        ],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Devel::AssertC99",
+        "Devel::CheckCompiler"
+      ],
+      "sha256": "768b7697b4b8d4d372c7507b65e9dd26aa4223f7100183bbb4d3af46d43869b5",
+      "url": "https://cpan.metacpan.org/authors/id/S/SY/SYOHEX/Devel-CheckCompiler-0.07.tar.gz",
+      "version": "0.07"
+    },
+    "Devel-Cycle": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Devel::Cycle"
+      ],
+      "sha256": "fd3365c4d898b2b2bddbb78a46d507a18cca8490a290199547dab7f1e7390bc2",
+      "url": "https://cpan.metacpan.org/authors/id/L/LD/LDS/Devel-Cycle-1.12.tar.gz",
+      "version": "1.12"
     },
     "Devel-GlobalDestruction": {
       "dependencies": {
@@ -495,6 +1452,38 @@
       "sha256": "34b8a5f29991311468fe6913cadaba75fd5d2b0b3ee3bb41fe5b53efab9154ab",
       "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Devel-GlobalDestruction-0.14.tar.gz",
       "version": "0.14"
+    },
+    "Devel-Hide": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Devel::Hide"
+      ],
+      "sha256": "7830b4a57f7ec7410620d6c0150185449d7b4c9964c39a7dc397056032c32a08",
+      "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Devel-Hide-0.0016.tar.gz",
+      "version": "0.0016"
+    },
+    "Devel-LexAlias": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Devel-Caller"
+        ],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Devel::LexAlias"
+      ],
+      "sha256": "5e0ad9d43e266033856e424e104a0009f8e63449e40cd5aba59ad94cb1bcee72",
+      "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-LexAlias-0.05.tar.gz",
+      "version": "0.05"
     },
     "Devel-OverloadInfo": {
       "dependencies": {
@@ -516,6 +1505,42 @@
       "url": "https://cpan.metacpan.org/authors/id/I/IL/ILMARI/Devel-OverloadInfo-0.008.tar.gz",
       "version": "0.008"
     },
+    "Devel-OverrideGlobalRequire": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Devel::OverrideGlobalRequire"
+      ],
+      "sha256": "0791892de3ae292af4a94e382f21db1ee88210875031851e6ea82c3410785ef9",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Devel-OverrideGlobalRequire-0.001.tar.gz",
+      "version": "0.001"
+    },
+    "Devel-PartialDump": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Class-Tiny",
+          "Sub-Exporter",
+          "namespace-clean"
+        ],
+        "test": [
+          "Test-Warnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Devel::PartialDump"
+      ],
+      "sha256": "aef0ff3ea59a9691967c2885118ff667156084957089c4388f49db646fd3d907",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Devel-PartialDump-0.20.tar.gz",
+      "version": "0.20"
+    },
     "Devel-StackTrace": {
       "dependencies": {
         "build": [],
@@ -531,6 +1556,39 @@
       "sha256": "63cb6196e986a7e578c4d28b3c780e7194835bfc78b68eeb8f00599d4444888c",
       "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Devel-StackTrace-2.05.tar.gz",
       "version": "2.05"
+    },
+    "Devel-Symdump": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Devel::Symdump",
+        "Devel::Symdump::Export"
+      ],
+      "sha256": "826f81a107f5592a2516766ed43beb47e10cc83edc9ea48090b02a36040776c0",
+      "url": "https://cpan.metacpan.org/authors/id/A/AN/ANDK/Devel-Symdump-2.18.tar.gz",
+      "version": "2.18"
+    },
+    "Digest-HMAC": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Digest::HMAC",
+        "Digest::HMAC_MD5",
+        "Digest::HMAC_SHA1"
+      ],
+      "sha256": "215cb59cba610745cfb2d4b3f8ef756d590e57e3ad7986a992e87c4969fcdc7a",
+      "url": "https://cpan.metacpan.org/authors/id/A/AR/ARODLAND/Digest-HMAC-1.05.tar.gz",
+      "version": "1.05"
     },
     "Dist-CheckConflicts": {
       "dependencies": {
@@ -551,12 +1609,29 @@
       "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/Dist-CheckConflicts-0.11.tar.gz",
       "version": "0.11"
     },
+    "Encode-Locale": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Encode::Locale"
+      ],
+      "sha256": "176fa02771f542a4efb1dbc2a4c928e8f4391bf4078473bd6040d8f11adb0ec1",
+      "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/Encode-Locale-1.05.tar.gz",
+      "version": "1.05"
+    },
     "Eval-Closure": {
       "dependencies": {
         "build": [],
         "configure": [],
         "runtime": [],
         "test": [
+          "Devel-LexAlias",
+          "Perl-Tidy",
           "Test-Fatal",
           "Test-Requires"
         ]
@@ -593,7 +1668,10 @@
         "build": [],
         "configure": [],
         "runtime": [],
-        "test": []
+        "test": [
+          "Test-Fatal",
+          "Test-Warnings"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -619,6 +1697,21 @@
       "sha256": "82e7e4e90cbe380e152f5de6e3e403746982d502dd30197a123652e46610c66d",
       "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Config-0.010.tar.gz",
       "version": "0.010"
+    },
+    "ExtUtils-HasCompiler": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "ExtUtils::HasCompiler"
+      ],
+      "sha256": "02e1e7275df00682d3ca8ea1c27a30591d6dd08b3e3865c0958afae911635a66",
+      "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-HasCompiler-0.025.tar.gz",
+      "version": "0.025"
     },
     "ExtUtils-Helpers": {
       "dependencies": {
@@ -655,6 +1748,40 @@
       "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-InstallPaths-0.015.tar.gz",
       "version": "0.015"
     },
+    "ExtUtils-MakeMaker-CPANfile": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Module-CPANfile"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "ExtUtils::MakeMaker::CPANfile"
+      ],
+      "sha256": "87467857ca7a624cb64e5dee706eafc6a0bfeed773646c9d6d2f042ed72fb13e",
+      "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/ExtUtils-MakeMaker-CPANfile-0.11.tar.gz",
+      "version": "0.11"
+    },
+    "FFI-CheckLib": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "File-Which"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "FFI::CheckLib"
+      ],
+      "sha256": "04d885fc377d44896e5ea1c4ec310f979bb04f2f18658a7e7a4d509f7e80bb80",
+      "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/FFI-CheckLib-0.31.tar.gz",
+      "version": "0.31"
+    },
     "File-Copy-Recursive": {
       "dependencies": {
         "build": [],
@@ -675,6 +1802,90 @@
       "sha256": "d3971cf78a8345e38042b208bb7b39cb695080386af629f4a04ffd6549df1157",
       "url": "https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.45.tar.gz",
       "version": "0.45"
+    },
+    "File-Copy-Recursive-Reduced": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Capture-Tiny",
+          "Path-Tiny"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "File::Copy::Recursive::Reduced"
+      ],
+      "sha256": "462bd66bf55e74b78f29ebdc9626af622d4f0115b5191b03167e82164db98f5a",
+      "url": "https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/File-Copy-Recursive-Reduced-0.008.tar.gz",
+      "version": "0.008"
+    },
+    "File-Find-Object": {
+      "dependencies": {
+        "build": [
+          "Module-Build"
+        ],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [
+          "Class-XSAccessor"
+        ],
+        "test": [
+          "File-TreeCreate",
+          "Test-File"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "File::Find::Object",
+        "File::Find::Object::Base",
+        "File::Find::Object::DeepPath",
+        "File::Find::Object::PathComp",
+        "File::Find::Object::Result",
+        "File::Find::Object::TopPath"
+      ],
+      "sha256": "7e99afe4a9d992fcef1dfea42e1f95475706aed94f185068a89f729b512735f8",
+      "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/File-Find-Object-0.3.9.tar.gz",
+      "version": "0.3.9"
+    },
+    "File-Find-Rule": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Number-Compare",
+          "Text-Glob"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "File::Find::Rule",
+        "File::Find::Rule::Test::ATeam"
+      ],
+      "sha256": "2bd556289a6d44ad2ee74803258bb0b0050d246f1e81caab0b263c303acf0c82",
+      "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/File-Find-Rule-0.35.tar.gz",
+      "version": "0.35"
+    },
+    "File-Find-Rule-Perl": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "File-Find-Rule",
+          "Params-Util"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "File::Find::Rule::Perl"
+      ],
+      "sha256": "ae1886050d9ca21223c073e2870abdc80dc30e3f55289a11c37da3820a8321ff",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-Find-Rule-Perl-1.16.tar.gz",
+      "version": "1.16"
     },
     "File-HomeDir": {
       "dependencies": {
@@ -701,6 +1912,28 @@
       "sha256": "593737c62df0f6dab5d4122e0b4476417945bb6262c33eedc009665ef1548852",
       "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/File-HomeDir-1.006.tar.gz",
       "version": "1.006"
+    },
+    "File-Listing": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "HTTP-Date"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "File::Listing",
+        "File::Listing::apache",
+        "File::Listing::dosftp",
+        "File::Listing::netware",
+        "File::Listing::unix",
+        "File::Listing::vms"
+      ],
+      "sha256": "189b3a13fc0a1ba412b9d9ec5901e9e5e444cc746b9f0156d4399370d33655c6",
+      "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Listing-6.16.tar.gz",
+      "version": "6.16"
     },
     "File-Lockfile": {
       "dependencies": {
@@ -747,7 +1980,12 @@
         "runtime": [
           "Class-Inspector"
         ],
-        "test": []
+        "test": [
+          "File-ShareDir-Install",
+          "List-MoreUtils",
+          "Params-Util",
+          "inc-latest"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -771,6 +2009,43 @@
       "sha256": "8f9533b198f2d4a9a5288cbc7d224f7679ad05a7a8573745599789428bc5aea0",
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-ShareDir-Install-0.14.tar.gz",
       "version": "0.14"
+    },
+    "File-Slurper": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "PerlIO-utf8_strict",
+          "Test-Warnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "File::Slurper"
+      ],
+      "sha256": "d5a36487339888c3cd758e648160ee1d70eb4153cacbaff57846dbcefb344b0c",
+      "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/File-Slurper-0.014.tar.gz",
+      "version": "0.014"
+    },
+    "File-TreeCreate": {
+      "dependencies": {
+        "build": [
+          "Module-Build"
+        ],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "File::TreeCreate"
+      ],
+      "sha256": "57686f10843be81affad185ae4131790ba0c4af36d2104d6fb69126528055267",
+      "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/File-TreeCreate-0.0.1.tar.gz",
+      "version": "0.0.1"
     },
     "File-Which": {
       "dependencies": {
@@ -819,6 +2094,33 @@
       "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/File-pushd-1.016.tar.gz",
       "version": "1.016"
     },
+    "Font-AFM": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Font::AFM",
+        "Font::Metrics::Courier",
+        "Font::Metrics::CourierBold",
+        "Font::Metrics::CourierBoldOblique",
+        "Font::Metrics::CourierOblique",
+        "Font::Metrics::Helvetica",
+        "Font::Metrics::HelveticaBold",
+        "Font::Metrics::HelveticaBoldOblique",
+        "Font::Metrics::HelveticaOblique",
+        "Font::Metrics::TimesBold",
+        "Font::Metrics::TimesBoldItalic",
+        "Font::Metrics::TimesItalic",
+        "Font::Metrics::TimesRoman"
+      ],
+      "sha256": "32671166da32596a0f6baacd0c1233825a60acaf25805d79c81a3f18d6088bc1",
+      "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/Font-AFM-1.20.tar.gz",
+      "version": "1.20"
+    },
     "Getopt-Long-Descriptive": {
       "dependencies": {
         "build": [],
@@ -854,6 +2156,7 @@
           "Sort-Versions"
         ],
         "test": [
+          "Path-Class",
           "Sort-Versions",
           "Test-Deep",
           "Test-Exception"
@@ -872,6 +2175,276 @@
       "url": "https://cpan.metacpan.org/authors/id/G/GE/GENEHACK/Git-Wrapper-0.048.tar.gz",
       "version": "0.048"
     },
+    "HTML-Form": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "HTML-Parser",
+          "HTTP-Message",
+          "URI"
+        ],
+        "test": [
+          "HTTP-Message",
+          "Test-Warnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "HTML::Form",
+        "HTML::Form::FileInput",
+        "HTML::Form::IgnoreInput",
+        "HTML::Form::ImageInput",
+        "HTML::Form::Input",
+        "HTML::Form::KeygenInput",
+        "HTML::Form::ListInput",
+        "HTML::Form::SubmitInput",
+        "HTML::Form::TextInput"
+      ],
+      "sha256": "ae5ad0f6fe70b1a382789d5e83a9b669cc541ee9d459e1bfa89b43ae0c014cdd",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Form-6.13.tar.gz",
+      "version": "6.13"
+    },
+    "HTML-Formatter": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Font-AFM",
+          "HTML-Tree"
+        ],
+        "test": [
+          "File-Slurper",
+          "Test-Warnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "HTML::FormatMarkdown",
+        "HTML::FormatPS",
+        "HTML::FormatRTF",
+        "HTML::FormatText",
+        "HTML::Formatter"
+      ],
+      "sha256": "cb0a0dd8aa5e8ba9ca214ce451bf4df33aa09c13e907e8d3082ddafeb30151cc",
+      "url": "https://cpan.metacpan.org/authors/id/N/NI/NIGELM/HTML-Formatter-2.16.tar.gz",
+      "version": "2.16"
+    },
+    "HTML-Parser": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "HTML-Tagset",
+          "HTTP-Message",
+          "URI"
+        ],
+        "test": [
+          "URI"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "HTML::Entities",
+        "HTML::Filter",
+        "HTML::HeadParser",
+        "HTML::LinkExtor",
+        "HTML::Parser",
+        "HTML::PullParser",
+        "HTML::TokeParser"
+      ],
+      "sha256": "04342b30b3b1675041b28cfecb693a3d3a0c051587cc40b746a7f9a72a7e3b8a",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.87.tar.gz",
+      "version": "3.87"
+    },
+    "HTML-Tagset": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "HTML::Tagset"
+      ],
+      "sha256": "eb89e145a608ed1f8f141a57472ee5f69e67592a432dcd2e8b1dbb445f2b230b",
+      "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/HTML-Tagset-3.24.tar.gz",
+      "version": "3.24"
+    },
+    "HTML-Tree": {
+      "dependencies": {
+        "build": [
+          "Module-Build"
+        ],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [
+          "HTML-Parser",
+          "HTML-Tagset"
+        ],
+        "test": [
+          "HTML-Formatter",
+          "Test-Fatal",
+          "Test-LeakTrace",
+          "URI",
+          "libwww-perl"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "HTML::AsSubs",
+        "HTML::Element",
+        "HTML::Element::traverse",
+        "HTML::Parse",
+        "HTML::Tree",
+        "HTML::TreeBuilder"
+      ],
+      "sha256": "f0374db84731c204b86c1d5b90975fef0d30a86bd9def919343e554e31a9dbbf",
+      "url": "https://cpan.metacpan.org/authors/id/K/KE/KENTNL/HTML-Tree-5.07.tar.gz",
+      "version": "5.07"
+    },
+    "HTTP-CookieJar": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "HTTP-Date"
+        ],
+        "test": [
+          "Mozilla-PublicSuffix",
+          "Test-Deep",
+          "Test-Requires",
+          "URI"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "HTTP::CookieJar",
+        "HTTP::CookieJar::LWP"
+      ],
+      "sha256": "7094ea5c91f536d263b85e83ab4e9a963e11c4408ce08ecae553fa9c0cc47e73",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/HTTP-CookieJar-0.014.tar.gz",
+      "version": "0.014"
+    },
+    "HTTP-Cookies": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "HTTP-Date",
+          "HTTP-Message"
+        ],
+        "test": [
+          "HTTP-Message",
+          "URI"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "HTTP::Cookies",
+        "HTTP::Cookies::Microsoft",
+        "HTTP::Cookies::Netscape"
+      ],
+      "sha256": "4e460c4bae76285bfc726f641349402fc9038fcd9ca0f33346bec036d73876b8",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Cookies-6.12.tar.gz",
+      "version": "6.12"
+    },
+    "HTTP-Daemon": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Module-Build-Tiny"
+        ],
+        "runtime": [
+          "HTTP-Date",
+          "HTTP-Message",
+          "LWP-MediaTypes"
+        ],
+        "test": [
+          "Test-Needs",
+          "libwww-perl"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "HTTP::Daemon"
+      ],
+      "sha256": "16281580c40e23108d028434698b5d7d53637bf904c9df822481e253cbec920c",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.17.tar.gz",
+      "version": "6.17"
+    },
+    "HTTP-Date": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "TimeDate"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "HTTP::Date"
+      ],
+      "sha256": "b57d80ca6d821c6949ca48b27467d45aba7a9c77346562306facca781a003e44",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Date-6.08.tar.gz",
+      "version": "6.08"
+    },
+    "HTTP-Message": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Clone",
+          "Encode-Locale",
+          "HTTP-Date",
+          "IO-HTML",
+          "LWP-MediaTypes",
+          "URI"
+        ],
+        "test": [
+          "IO-Compress-Brotli",
+          "Test-Needs",
+          "Try-Tiny",
+          "URI"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "HTTP::Config",
+        "HTTP::Headers",
+        "HTTP::Headers::Auth",
+        "HTTP::Headers::ETag",
+        "HTTP::Headers::Util",
+        "HTTP::Message",
+        "HTTP::Request",
+        "HTTP::Request::Common",
+        "HTTP::Response",
+        "HTTP::Status"
+      ],
+      "sha256": "699f3350dbb7bd8fdc9f3b013b0c91b7c059783708443e39bc395fa33352f006",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Message-7.04.tar.gz",
+      "version": "7.04"
+    },
+    "HTTP-Negotiate": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "HTTP-Message"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "HTTP::Negotiate"
+      ],
+      "sha256": "1c729c1ea63100e878405cda7d66f9adfd3ed4f1d6cacaca0ee9152df728e016",
+      "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz",
+      "version": "6.01"
+    },
     "Hash-Util-FieldHash-Compat": {
       "dependencies": {
         "build": [],
@@ -888,6 +2461,86 @@
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Hash-Util-FieldHash-Compat-0.11.tar.gz",
       "version": "0.11"
     },
+    "Hook-LexWrap": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Hook::LexWrap"
+      ],
+      "sha256": "b60bdc5f98f94f9294b06adef82b1d996da192d5f183f9f434b610fd1137ec2d",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Hook-LexWrap-0.26.tar.gz",
+      "version": "0.26"
+    },
+    "IO-Compress-Brotli": {
+      "dependencies": {
+        "build": [
+          "Alien-cmake3"
+        ],
+        "configure": [
+          "Alien-cmake3"
+        ],
+        "runtime": [
+          "File-Slurper"
+        ],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "IO::Compress::Brotli",
+        "IO::Uncompress::Brotli"
+      ],
+      "sha256": "fb30386115589dbdc71ff3ab0af1b67c33c202df4bbdb4e00093f1c50a2cf2f8",
+      "url": "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/IO-Compress-Brotli-0.023.tar.gz",
+      "version": "0.023"
+    },
+    "IO-Compress-Lzma": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Compress-Raw-Lzma"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "IO::Compress::Adapter::Lzip",
+        "IO::Compress::Adapter::Lzma",
+        "IO::Compress::Adapter::Xz",
+        "IO::Compress::Lzip",
+        "IO::Compress::Lzma",
+        "IO::Compress::Xz",
+        "IO::Uncompress::Adapter::UnLzip",
+        "IO::Uncompress::Adapter::UnLzma",
+        "IO::Uncompress::Adapter::UnXz",
+        "IO::Uncompress::UnLzip",
+        "IO::Uncompress::UnLzma",
+        "IO::Uncompress::UnXz"
+      ],
+      "sha256": "bf3fb4b4b20a9cac8c1c85f3ae678a6117df16b59b62b8ffdd0ab2752ea3d4ba",
+      "url": "https://cpan.metacpan.org/authors/id/P/PM/PMQS/IO-Compress-Lzma-2.225.tar.gz",
+      "version": "2.225"
+    },
+    "IO-HTML": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "IO::HTML"
+      ],
+      "sha256": "c87b2df59463bbf2c39596773dfb5c03bde0f7e1051af339f963f58c1cbd8bf5",
+      "url": "https://cpan.metacpan.org/authors/id/C/CJ/CJM/IO-HTML-1.004.tar.gz",
+      "version": "1.004"
+    },
     "IO-Interactive": {
       "dependencies": {
         "build": [],
@@ -902,6 +2555,29 @@
       "sha256": "30aaa346a0f664f837750b1b9b3b511e78c7779296fb8f3be31aae5b73f7efb7",
       "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/IO-Interactive-1.027.tar.gz",
       "version": "1.027"
+    },
+    "IO-Pager": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "File-Which",
+          "TermReadKey"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "IO::Pager",
+        "IO::Pager::Buffered",
+        "IO::Pager::Page",
+        "IO::Pager::Perl",
+        "IO::Pager::Unbuffered",
+        "IO::Pager::less"
+      ],
+      "sha256": "bcb4d8c2d280c8034b82591cc0b9eb67a004f90ce9aa05979fc6071307acb195",
+      "url": "https://cpan.metacpan.org/authors/id/J/JP/JPIERCE/IO-Pager-2.10.tgz",
+      "version": "2.10"
     },
     "IO-Prompt-Tiny": {
       "dependencies": {
@@ -919,6 +2595,75 @@
       "sha256": "00cc5a454f733367403dcdbba21966047f920c5abc5f03e6847d2f53e0c57996",
       "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/IO-Prompt-Tiny-0.003.tar.gz",
       "version": "0.003"
+    },
+    "IO-Socket-INET6": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [
+          "Socket6"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "IO::Socket::INET6"
+      ],
+      "sha256": "b6da746853253d5b4ac43191b4f69a4719595ee13a7ca676a8054cf36e6d16bb",
+      "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/IO-Socket-INET6-2.73.tar.gz",
+      "version": "2.73"
+    },
+    "IO-Socket-SSL": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Net-SSLeay"
+        ],
+        "runtime": [
+          "Net-SSLeay"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "IO::Socket::SSL",
+        "IO::Socket::SSL::Intercept",
+        "IO::Socket::SSL::OCSP_Cache",
+        "IO::Socket::SSL::OCSP_Resolver",
+        "IO::Socket::SSL::PublicSuffix",
+        "IO::Socket::SSL::SSL_Context",
+        "IO::Socket::SSL::SSL_HANDLE",
+        "IO::Socket::SSL::Session_Cache",
+        "IO::Socket::SSL::Trace",
+        "IO::Socket::SSL::Utils"
+      ],
+      "sha256": "a0be800ff4852b1567ee5500e772417ad7a360abff80c01b5b875c15d44be832",
+      "url": "https://cpan.metacpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.099.tar.gz",
+      "version": "2.099"
+    },
+    "IO-Stringy": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "IO::AtomicFile",
+        "IO::InnerFile",
+        "IO::Lines",
+        "IO::Scalar",
+        "IO::ScalarArray",
+        "IO::Stringy",
+        "IO::Wrap",
+        "IO::WrapTie"
+      ],
+      "sha256": "51220fcaf9f66a639b69d251d7b0757bf4202f4f9debd45bdd341a6aca62fe4e",
+      "url": "https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/IO-Stringy-2.113.tar.gz",
+      "version": "2.113"
     },
     "IO-TieCombine": {
       "dependencies": {
@@ -962,7 +2707,10 @@
         "runtime": [
           "IO-Tty"
         ],
-        "test": []
+        "test": [
+          "IO-Tty",
+          "Readonly"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -994,12 +2742,31 @@
       "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.049.tar.gz",
       "version": "0.049"
     },
+    "JSON": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "JSON-XS"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "JSON",
+        "JSON::Backend::PP"
+      ],
+      "sha256": "713bdbe724dbb915ed50265ffe47e079a511980cb2427aa19076788bb64c3182",
+      "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.11.tar.gz",
+      "version": "4.11"
+    },
     "JSON-MaybeXS": {
       "dependencies": {
         "build": [],
         "configure": [],
         "runtime": [],
         "test": [
+          "Cpanel-JSON-XS",
           "Test-Needs"
         ]
       },
@@ -1010,6 +2777,120 @@
       "sha256": "cd3937afa78831f80a2ad5abab6c51b9e82fca4c31e5856ea208d598db5dc867",
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/JSON-MaybeXS-1.004008.tar.gz",
       "version": "1.004008"
+    },
+    "JSON-XS": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Canary-Stability"
+        ],
+        "runtime": [
+          "Types-Serialiser",
+          "common-sense"
+        ],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "JSON::XS"
+      ],
+      "sha256": "07f09b369f64575cb269a7d6572fb253fe747de8fab1dd9c1ba46e5ae19cd2a0",
+      "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/JSON-XS-4.06.tar.gz",
+      "version": "4.06"
+    },
+    "LWP-MediaTypes": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "LWP::MediaTypes"
+      ],
+      "sha256": "abb2dcfbf069317fe65b098e3b2ad58c5eb33e9a839b9190cce6d371f8966cc1",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/LWP-MediaTypes-6.05.tar.gz",
+      "version": "6.05"
+    },
+    "LWP-Protocol-https": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "IO-Socket-SSL",
+          "Net-HTTP",
+          "libwww-perl"
+        ],
+        "test": [
+          "IO-Socket-SSL",
+          "Test-Needs",
+          "libwww-perl"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "LWP::Protocol::https"
+      ],
+      "sha256": "361c7c1eee8cf66812958f975f26ef2e2272a0c6221d2043477cb9c22b8d1c23",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/LWP-Protocol-https-6.17.tar.gz",
+      "version": "6.17"
+    },
+    "Lingua-EN-Inflect": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Lingua::EN::Inflect"
+      ],
+      "sha256": "05c29ec3482e572313a60da2181b0b30c5db7cf01f8ae7616ad67e1b66263296",
+      "url": "https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/Lingua-EN-Inflect-1.905.tar.gz",
+      "version": "1.905"
+    },
+    "List-MoreUtils": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Exporter-Tiny",
+          "List-MoreUtils-XS"
+        ],
+        "test": [
+          "Config-AutoConf",
+          "Test-LeakTrace"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "List::MoreUtils",
+        "List::MoreUtils::PP"
+      ],
+      "sha256": "63b1f7842cd42d9b538d1e34e0330de5ff1559e4c2737342506418276f646527",
+      "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.430.tar.gz",
+      "version": "0.430"
+    },
+    "List-MoreUtils-XS": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Config-AutoConf",
+          "Test-LeakTrace",
+          "inc-latest"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "List::MoreUtils::XS"
+      ],
+      "sha256": "e8ce46d57c179eecd8758293e9400ff300aaf20fefe0a9d15b9fe2302b9cb242",
+      "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-XS-0.430.tar.gz",
+      "version": "0.430"
     },
     "Log-Any": {
       "dependencies": {
@@ -1107,6 +2988,36 @@
       "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Log-Dispatch-2.71.tar.gz",
       "version": "2.71"
     },
+    "MIME-Base32": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "MIME::Base32"
+      ],
+      "sha256": "ab21fa99130e33a0aff6cdb596f647e5e565d207d634ba2ef06bdbef50424e99",
+      "url": "https://cpan.metacpan.org/authors/id/R/RE/REHSACK/MIME-Base32-1.303.tar.gz",
+      "version": "1.303"
+    },
+    "MIME-Charset": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "MIME::Charset"
+      ],
+      "sha256": "1bb7a6e0c0d251f23d6e60bf84c9adefc5b74eec58475bfee4d39107e60870f0",
+      "url": "https://cpan.metacpan.org/authors/id/N/NE/NEZUMI/MIME-Charset-1.013.1.tar.gz",
+      "version": "1.013.1"
+    },
     "MIME-Types": {
       "dependencies": {
         "build": [],
@@ -1140,6 +3051,26 @@
       "sha256": "0d4535f88e43babd84ab604866215fc4d04398bd4db7b21852d4a31b1c15ef61",
       "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.15.tar.gz",
       "version": "0.15"
+    },
+    "Mixin-Linewise": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "PerlIO-utf8_strict",
+          "Sub-Exporter"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Mixin::Linewise",
+        "Mixin::Linewise::Readers",
+        "Mixin::Linewise::Writers"
+      ],
+      "sha256": "d28e88516ce9b5295c31631dcccdc0fc8f2ab7d8a5cc876bb1b20131087b01db",
+      "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Mixin-Linewise-0.111.tar.gz",
+      "version": "0.111"
     },
     "Module-Build": {
       "dependencies": {
@@ -1187,7 +3118,10 @@
           "ExtUtils-Helpers",
           "ExtUtils-InstallPaths"
         ],
-        "test": []
+        "test": [
+          "CPAN-Requirements-Dynamic",
+          "File-ShareDir"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -1196,6 +3130,78 @@
       "sha256": "3726d622da6f655e88fdf89e4fd597709c44970b47de65082003e8d86b5e193a",
       "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.053.tar.gz",
       "version": "0.053"
+    },
+    "Module-Build-XSUtil": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [
+          "Devel-CheckCompiler"
+        ],
+        "test": [
+          "Capture-Tiny",
+          "Cwd-Guard",
+          "File-Copy-Recursive-Reduced"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "Module::Build::XSUtil"
+      ],
+      "sha256": "9063b3c346edeb422807ffe49ffb23038c4f900d4a77b845ce4b53d97bf29400",
+      "url": "https://cpan.metacpan.org/authors/id/H/HI/HIDEAKIO/Module-Build-XSUtil-0.19.tar.gz",
+      "version": "0.19"
+    },
+    "Module-CPANTS-Analyse": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "ExtUtils-MakeMaker-CPANfile"
+        ],
+        "runtime": [
+          "Archive-Any-Lite",
+          "Array-Diff",
+          "Class-Accessor",
+          "Data-Binary",
+          "File-Find-Object",
+          "Module-Find",
+          "Parse-Distname",
+          "Perl-PrereqScanner-NotQuiteLite",
+          "Software-License"
+        ],
+        "test": [
+          "Config-INI",
+          "Module-CPANfile",
+          "Test-FailWarnings",
+          "Test-File"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Module::CPANTS::Analyse",
+        "Module::CPANTS::Kwalitee",
+        "Module::CPANTS::Kwalitee::BrokenInstaller",
+        "Module::CPANTS::Kwalitee::CpantsErrors",
+        "Module::CPANTS::Kwalitee::Distname",
+        "Module::CPANTS::Kwalitee::Distros",
+        "Module::CPANTS::Kwalitee::Files",
+        "Module::CPANTS::Kwalitee::FindModules",
+        "Module::CPANTS::Kwalitee::License",
+        "Module::CPANTS::Kwalitee::Manifest",
+        "Module::CPANTS::Kwalitee::MetaYML",
+        "Module::CPANTS::Kwalitee::NeedsCompiler",
+        "Module::CPANTS::Kwalitee::Pod",
+        "Module::CPANTS::Kwalitee::Prereq",
+        "Module::CPANTS::Kwalitee::Repackageable",
+        "Module::CPANTS::Kwalitee::Signature",
+        "Module::CPANTS::Kwalitee::Uses",
+        "Module::CPANTS::Kwalitee::Version"
+      ],
+      "sha256": "d0ea851c02eb27003d8242547837552539ff61d4f087028cdead0076fbbd463a",
+      "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Module-CPANTS-Analyse-1.03.tar.gz",
+      "version": "1.03"
     },
     "Module-CPANfile": {
       "dependencies": {
@@ -1223,7 +3229,10 @@
         "build": [],
         "configure": [],
         "runtime": [],
-        "test": []
+        "test": [
+          "Test-Pod",
+          "Test-Pod-Coverage"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -1259,7 +3268,10 @@
         "build": [],
         "configure": [],
         "runtime": [],
-        "test": []
+        "test": [
+          "App-FatPacker",
+          "Module-Runtime"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -1304,6 +3316,166 @@
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Conflicts-0.003.tar.gz",
       "version": "0.003"
     },
+    "Mojolicious": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Mojo",
+        "Mojo::Asset",
+        "Mojo::Asset::File",
+        "Mojo::Asset::Memory",
+        "Mojo::Base",
+        "Mojo::BaseUtil",
+        "Mojo::ByteStream",
+        "Mojo::Cache",
+        "Mojo::Collection",
+        "Mojo::Content",
+        "Mojo::Content::MultiPart",
+        "Mojo::Content::Single",
+        "Mojo::Cookie",
+        "Mojo::Cookie::Request",
+        "Mojo::Cookie::Response",
+        "Mojo::DOM",
+        "Mojo::DOM::CSS",
+        "Mojo::DOM::HTML",
+        "Mojo::Date",
+        "Mojo::DynamicMethods",
+        "Mojo::EventEmitter",
+        "Mojo::Exception",
+        "Mojo::File",
+        "Mojo::Headers",
+        "Mojo::HelloWorld",
+        "Mojo::Home",
+        "Mojo::IOLoop",
+        "Mojo::IOLoop::Client",
+        "Mojo::IOLoop::Server",
+        "Mojo::IOLoop::Stream",
+        "Mojo::IOLoop::Subprocess",
+        "Mojo::IOLoop::TLS",
+        "Mojo::JSON",
+        "Mojo::JSON::Pointer",
+        "Mojo::Loader",
+        "Mojo::Log",
+        "Mojo::Message",
+        "Mojo::Message::Request",
+        "Mojo::Message::Response",
+        "Mojo::Parameters",
+        "Mojo::Path",
+        "Mojo::Promise",
+        "Mojo::Reactor",
+        "Mojo::Reactor::EV",
+        "Mojo::Reactor::Poll",
+        "Mojo::SSE",
+        "Mojo::Server",
+        "Mojo::Server::CGI",
+        "Mojo::Server::Daemon",
+        "Mojo::Server::Hypnotoad",
+        "Mojo::Server::Morbo",
+        "Mojo::Server::Morbo::Backend",
+        "Mojo::Server::Morbo::Backend::Poll",
+        "Mojo::Server::PSGI",
+        "Mojo::Server::Prefork",
+        "Mojo::Template",
+        "Mojo::Transaction",
+        "Mojo::Transaction::HTTP",
+        "Mojo::Transaction::WebSocket",
+        "Mojo::URL",
+        "Mojo::Upload",
+        "Mojo::UserAgent",
+        "Mojo::UserAgent::CookieJar",
+        "Mojo::UserAgent::Proxy",
+        "Mojo::UserAgent::Server",
+        "Mojo::UserAgent::Transactor",
+        "Mojo::Util",
+        "Mojo::WebSocket",
+        "Mojolicious",
+        "Mojolicious::Command",
+        "Mojolicious::Command::Author::cpanify",
+        "Mojolicious::Command::Author::generate",
+        "Mojolicious::Command::Author::generate::app",
+        "Mojolicious::Command::Author::generate::dockerfile",
+        "Mojolicious::Command::Author::generate::lite_app",
+        "Mojolicious::Command::Author::generate::makefile",
+        "Mojolicious::Command::Author::generate::plugin",
+        "Mojolicious::Command::Author::inflate",
+        "Mojolicious::Command::cgi",
+        "Mojolicious::Command::daemon",
+        "Mojolicious::Command::eval",
+        "Mojolicious::Command::get",
+        "Mojolicious::Command::prefork",
+        "Mojolicious::Command::psgi",
+        "Mojolicious::Command::routes",
+        "Mojolicious::Command::version",
+        "Mojolicious::Commands",
+        "Mojolicious::Controller",
+        "Mojolicious::Lite",
+        "Mojolicious::Plugin",
+        "Mojolicious::Plugin::Config",
+        "Mojolicious::Plugin::DefaultHelpers",
+        "Mojolicious::Plugin::EPLRenderer",
+        "Mojolicious::Plugin::EPRenderer",
+        "Mojolicious::Plugin::HeaderCondition",
+        "Mojolicious::Plugin::JSONConfig",
+        "Mojolicious::Plugin::Mount",
+        "Mojolicious::Plugin::NotYAMLConfig",
+        "Mojolicious::Plugin::TagHelpers",
+        "Mojolicious::Plugins",
+        "Mojolicious::Renderer",
+        "Mojolicious::Routes",
+        "Mojolicious::Routes::Match",
+        "Mojolicious::Routes::Pattern",
+        "Mojolicious::Routes::Route",
+        "Mojolicious::Sessions",
+        "Mojolicious::Static",
+        "Mojolicious::Types",
+        "Mojolicious::Validator",
+        "Mojolicious::Validator::Validation",
+        "Test::Mojo",
+        "ojo"
+      ],
+      "sha256": "8568cdd99a2a7efd568920c504f00a2e5a86f063b7fd1c89552533b5309773bd",
+      "url": "https://cpan.metacpan.org/authors/id/S/SR/SRI/Mojolicious-9.54.tar.gz",
+      "version": "9.54"
+    },
+    "Moo": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Class-Method-Modifiers",
+          "Role-Tiny",
+          "Sub-Quote"
+        ],
+        "test": [
+          "Class-XSAccessor"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Method::Generate::Accessor",
+        "Method::Generate::BuildAll",
+        "Method::Generate::Constructor",
+        "Method::Generate::DemolishAll",
+        "Moo",
+        "Moo::HandleMoose",
+        "Moo::HandleMoose::FakeConstructor",
+        "Moo::HandleMoose::FakeMetaClass",
+        "Moo::HandleMoose::_TypeMap",
+        "Moo::Object",
+        "Moo::Role",
+        "Moo::_Utils",
+        "Moo::sification",
+        "oo"
+      ],
+      "sha256": "fb5a2952649faed07373f220b78004a9c6aba387739133740c1770e9b1f4b108",
+      "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.005005.tar.gz",
+      "version": "2.005005"
+    },
     "Moose": {
       "dependencies": {
         "build": [],
@@ -1331,6 +3503,8 @@
         ],
         "test": [
           "CPAN-Meta-Check",
+          "Data-OptList",
+          "Devel-PartialDump",
           "Test-Fatal",
           "Test-Needs"
         ]
@@ -1818,6 +3992,7 @@
           "namespace-autoclean"
         ],
         "test": [
+          "Moo",
           "Moose",
           "Test-Fatal",
           "Test-Needs"
@@ -1849,6 +4024,392 @@
       "sha256": "fe116ae838803f001441bd401cacd2fddd0f051dce95c91c23e69cdd443d0440",
       "url": "https://cpan.metacpan.org/authors/id/P/PB/PBOYD/MooseX-Test-Role-0.08.tar.gz",
       "version": "0.08"
+    },
+    "Mouse": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Module-Build",
+          "Module-Build-XSUtil"
+        ],
+        "runtime": [],
+        "test": [
+          "Test-Exception",
+          "Test-Fatal",
+          "Test-LeakTrace",
+          "Test-Output",
+          "Test-Requires",
+          "Try-Tiny"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "Mouse",
+        "Mouse::Exporter",
+        "Mouse::Meta::Attribute",
+        "Mouse::Meta::Class",
+        "Mouse::Meta::Method",
+        "Mouse::Meta::Method::Accessor",
+        "Mouse::Meta::Method::Constructor",
+        "Mouse::Meta::Method::Delegation",
+        "Mouse::Meta::Method::Destructor",
+        "Mouse::Meta::Module",
+        "Mouse::Meta::Role",
+        "Mouse::Meta::Role::Application",
+        "Mouse::Meta::Role::Composite",
+        "Mouse::Meta::Role::Method",
+        "Mouse::Meta::TypeConstraint",
+        "Mouse::Object",
+        "Mouse::PurePerl",
+        "Mouse::Role",
+        "Mouse::Spec",
+        "Mouse::TypeRegistry",
+        "Mouse::Util",
+        "Mouse::Util::MetaRole",
+        "Mouse::Util::TypeConstraints",
+        "Squirrel",
+        "Squirrel::Role",
+        "Test::Mouse",
+        "ouse"
+      ],
+      "sha256": "3ab8b0f9f96cbe43ff23498d900f91add52455dc9a7d6613a0a8186142bdeecf",
+      "url": "https://cpan.metacpan.org/authors/id/S/SY/SYOHEX/Mouse-v2.6.2.tar.gz",
+      "version": "v2.6.2"
+    },
+    "Mozilla-PublicSuffix": {
+      "dependencies": {
+        "build": [
+          "Module-Build"
+        ],
+        "configure": [
+          "Module-Build",
+          "URI"
+        ],
+        "runtime": [
+          "URI"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Mozilla::PublicSuffix"
+      ],
+      "sha256": "6815e292161ba8192b434398db295e229b3e61574e6a61994e90f359a2c71b21",
+      "url": "https://cpan.metacpan.org/authors/id/T/TO/TOMHUKINS/Mozilla-PublicSuffix-v1.0.7.tar.gz",
+      "version": "v1.0.7"
+    },
+    "NTLM": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Digest-HMAC"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Authen::NTLM",
+        "Authen::NTLM::DES",
+        "Authen::NTLM::MD4"
+      ],
+      "sha256": "c823e30cda76bc15636e584302c960e2b5eeef9517c2448f7454498893151f85",
+      "url": "https://cpan.metacpan.org/authors/id/N/NB/NBEBOUT/NTLM-1.09.tar.gz",
+      "version": "1.09"
+    },
+    "Net-HTTP": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "URI"
+        ],
+        "test": [
+          "IO-Socket-INET6",
+          "IO-Socket-SSL"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Net::HTTP",
+        "Net::HTTP::Methods",
+        "Net::HTTP::NB",
+        "Net::HTTPS"
+      ],
+      "sha256": "290ed9a97b05c7935b048e6d2a356035871fca98ad72c01c5961726adf85c83c",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Net-HTTP-6.24.tar.gz",
+      "version": "6.24"
+    },
+    "Net-SSLeay": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Net::SSLeay",
+        "Net::SSLeay::Handle"
+      ],
+      "sha256": "ab213691685fb2a576c669cbc8d9266f8165a31563ad15b7c4030b94adfc0753",
+      "url": "https://cpan.metacpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.96.tar.gz",
+      "version": "1.96"
+    },
+    "Number-Compare": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Number::Compare"
+      ],
+      "sha256": "83293737e803b43112830443fb5208ec5208a2e6ea512ed54ef8e4dd2b880827",
+      "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Number-Compare-0.03.tar.gz",
+      "version": "0.03"
+    },
+    "Opcodes": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Opcodes"
+      ],
+      "sha256": "9d8bf9f100115aa8e62497ac594dff91b63ae9f29acf3195fe4b1ff8d9b530d0",
+      "url": "https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Opcodes-0.16.tar.gz",
+      "version": "0.16"
+    },
+    "PPI": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Clone",
+          "Params-Util",
+          "Safe-Isa",
+          "Task-Weaken",
+          "YAML-PP"
+        ],
+        "test": [
+          "Class-Inspector",
+          "Test-NoWarnings",
+          "Test-Object",
+          "Test-SubCalls"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "PPI",
+        "PPI::Cache",
+        "PPI::Document",
+        "PPI::Document::File",
+        "PPI::Document::Fragment",
+        "PPI::Document::Normalized",
+        "PPI::Dumper",
+        "PPI::Element",
+        "PPI::Exception",
+        "PPI::Exception::ParserRejection",
+        "PPI::Find",
+        "PPI::Lexer",
+        "PPI::Node",
+        "PPI::Normal",
+        "PPI::Normal::Standard",
+        "PPI::Singletons",
+        "PPI::Statement",
+        "PPI::Statement::Break",
+        "PPI::Statement::Compound",
+        "PPI::Statement::Data",
+        "PPI::Statement::End",
+        "PPI::Statement::Expression",
+        "PPI::Statement::Given",
+        "PPI::Statement::Include",
+        "PPI::Statement::Include::Perl6",
+        "PPI::Statement::Null",
+        "PPI::Statement::Package",
+        "PPI::Statement::Scheduled",
+        "PPI::Statement::Sub",
+        "PPI::Statement::Unknown",
+        "PPI::Statement::UnmatchedBrace",
+        "PPI::Statement::Variable",
+        "PPI::Statement::When",
+        "PPI::Structure",
+        "PPI::Structure::Block",
+        "PPI::Structure::Condition",
+        "PPI::Structure::Constructor",
+        "PPI::Structure::For",
+        "PPI::Structure::Given",
+        "PPI::Structure::List",
+        "PPI::Structure::Signature",
+        "PPI::Structure::Subscript",
+        "PPI::Structure::Unknown",
+        "PPI::Structure::When",
+        "PPI::Token",
+        "PPI::Token::ArrayIndex",
+        "PPI::Token::Attribute",
+        "PPI::Token::BOM",
+        "PPI::Token::Cast",
+        "PPI::Token::Comment",
+        "PPI::Token::DashedWord",
+        "PPI::Token::Data",
+        "PPI::Token::End",
+        "PPI::Token::HereDoc",
+        "PPI::Token::Label",
+        "PPI::Token::Magic",
+        "PPI::Token::Number",
+        "PPI::Token::Number::Binary",
+        "PPI::Token::Number::Exp",
+        "PPI::Token::Number::Float",
+        "PPI::Token::Number::Hex",
+        "PPI::Token::Number::Octal",
+        "PPI::Token::Number::Version",
+        "PPI::Token::Operator",
+        "PPI::Token::Pod",
+        "PPI::Token::Prototype",
+        "PPI::Token::Quote",
+        "PPI::Token::Quote::Double",
+        "PPI::Token::Quote::Interpolate",
+        "PPI::Token::Quote::Literal",
+        "PPI::Token::Quote::Single",
+        "PPI::Token::QuoteLike",
+        "PPI::Token::QuoteLike::Backtick",
+        "PPI::Token::QuoteLike::Command",
+        "PPI::Token::QuoteLike::Readline",
+        "PPI::Token::QuoteLike::Regexp",
+        "PPI::Token::QuoteLike::Words",
+        "PPI::Token::Regexp",
+        "PPI::Token::Regexp::Match",
+        "PPI::Token::Regexp::Substitute",
+        "PPI::Token::Regexp::Transliterate",
+        "PPI::Token::Separator",
+        "PPI::Token::Structure",
+        "PPI::Token::Symbol",
+        "PPI::Token::Unknown",
+        "PPI::Token::Whitespace",
+        "PPI::Token::Word",
+        "PPI::Tokenizer",
+        "PPI::Transform",
+        "PPI::Transform::UpdateCopyright",
+        "PPI::Util",
+        "PPI::XSAccessor"
+      ],
+      "sha256": "74ac10bf66443ea813fb37d2ff5219c4d8e685379272d6699c812a39d91f3c1d",
+      "url": "https://cpan.metacpan.org/authors/id/M/MI/MITHALDU/PPI-1.291.tar.gz",
+      "version": "1.291"
+    },
+    "PPIx-Regexp": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [
+          "PPI",
+          "Task-Weaken"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "PPIx::Regexp",
+        "PPIx::Regexp::Constant",
+        "PPIx::Regexp::Constant::Inf",
+        "PPIx::Regexp::Dumper",
+        "PPIx::Regexp::Element",
+        "PPIx::Regexp::Lexer",
+        "PPIx::Regexp::Node",
+        "PPIx::Regexp::Node::Range",
+        "PPIx::Regexp::Node::Unknown",
+        "PPIx::Regexp::Structure",
+        "PPIx::Regexp::Structure::Assertion",
+        "PPIx::Regexp::Structure::Atomic_Script_Run",
+        "PPIx::Regexp::Structure::BranchReset",
+        "PPIx::Regexp::Structure::Capture",
+        "PPIx::Regexp::Structure::CharClass",
+        "PPIx::Regexp::Structure::Code",
+        "PPIx::Regexp::Structure::Main",
+        "PPIx::Regexp::Structure::Modifier",
+        "PPIx::Regexp::Structure::NamedCapture",
+        "PPIx::Regexp::Structure::Quantifier",
+        "PPIx::Regexp::Structure::RegexSet",
+        "PPIx::Regexp::Structure::Regexp",
+        "PPIx::Regexp::Structure::Replacement",
+        "PPIx::Regexp::Structure::Script_Run",
+        "PPIx::Regexp::Structure::Subexpression",
+        "PPIx::Regexp::Structure::Switch",
+        "PPIx::Regexp::Structure::Unknown",
+        "PPIx::Regexp::Support",
+        "PPIx::Regexp::Token",
+        "PPIx::Regexp::Token::Assertion",
+        "PPIx::Regexp::Token::Backreference",
+        "PPIx::Regexp::Token::Backtrack",
+        "PPIx::Regexp::Token::CharClass",
+        "PPIx::Regexp::Token::CharClass::POSIX",
+        "PPIx::Regexp::Token::CharClass::POSIX::Unknown",
+        "PPIx::Regexp::Token::CharClass::Simple",
+        "PPIx::Regexp::Token::Code",
+        "PPIx::Regexp::Token::Comment",
+        "PPIx::Regexp::Token::Condition",
+        "PPIx::Regexp::Token::Control",
+        "PPIx::Regexp::Token::Delimiter",
+        "PPIx::Regexp::Token::Greediness",
+        "PPIx::Regexp::Token::GroupType",
+        "PPIx::Regexp::Token::GroupType::Assertion",
+        "PPIx::Regexp::Token::GroupType::Atomic_Script_Run",
+        "PPIx::Regexp::Token::GroupType::BranchReset",
+        "PPIx::Regexp::Token::GroupType::Code",
+        "PPIx::Regexp::Token::GroupType::Modifier",
+        "PPIx::Regexp::Token::GroupType::NamedCapture",
+        "PPIx::Regexp::Token::GroupType::Script_Run",
+        "PPIx::Regexp::Token::GroupType::Subexpression",
+        "PPIx::Regexp::Token::GroupType::Switch",
+        "PPIx::Regexp::Token::Interpolation",
+        "PPIx::Regexp::Token::Literal",
+        "PPIx::Regexp::Token::Modifier",
+        "PPIx::Regexp::Token::NoOp",
+        "PPIx::Regexp::Token::Operator",
+        "PPIx::Regexp::Token::Quantifier",
+        "PPIx::Regexp::Token::Recursion",
+        "PPIx::Regexp::Token::Reference",
+        "PPIx::Regexp::Token::Structure",
+        "PPIx::Regexp::Token::Unknown",
+        "PPIx::Regexp::Token::Unmatched",
+        "PPIx::Regexp::Token::Whitespace",
+        "PPIx::Regexp::Tokenizer",
+        "PPIx::Regexp::Util"
+      ],
+      "sha256": "e9c669c01d7c951f9bfee899c147fc8c8ddd98d3f32329f94000c7b02f53366b",
+      "url": "https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-Regexp-0.092.tar.gz",
+      "version": "0.092"
+    },
+    "PPIx-Utils": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "B-Keywords",
+          "PPI"
+        ],
+        "test": [
+          "PPI"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "PPIx::Utils",
+        "PPIx::Utils::Classification",
+        "PPIx::Utils::Language",
+        "PPIx::Utils::Traversal"
+      ],
+      "sha256": "336918d56ac9482d248d2ca6e79ed7f2cc67403fbdecdd73a9c414a034adb3cf",
+      "url": "https://cpan.metacpan.org/authors/id/D/DB/DBOOK/PPIx-Utils-0.004.tar.gz",
+      "version": "0.004"
     },
     "Package-DeprecationManager": {
       "dependencies": {
@@ -1884,8 +4445,10 @@
         ],
         "test": [
           "CPAN-Meta-Check",
+          "Package-Stash-XS",
           "Test-Fatal",
-          "Test-Needs"
+          "Test-Needs",
+          "Variable-Magic"
         ]
       },
       "is_xs": false,
@@ -1904,7 +4467,8 @@
         "runtime": [],
         "test": [
           "Test-Fatal",
-          "Test-Needs"
+          "Test-Needs",
+          "Variable-Magic"
         ]
       },
       "is_xs": true,
@@ -1914,6 +4478,21 @@
       "sha256": "9f961e798c01370f3834eda5f010c9d60c68a96d15c48598d8a5a25ca32f5f11",
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Package-Stash-XS-0.32.tar.gz",
       "version": "0.32"
+    },
+    "PadWalker": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "PadWalker"
+      ],
+      "sha256": "07b26abb841146af32072a8d68cb90176ffb176fd9268e6f2f7d106f817a0cd0",
+      "url": "https://cpan.metacpan.org/authors/id/R/RO/ROBIN/PadWalker-2.5.tar.gz",
+      "version": "2.5"
     },
     "Params-SomeUtil": {
       "dependencies": {
@@ -1936,6 +4515,7 @@
         "configure": [],
         "runtime": [],
         "test": [
+          "Config-AutoConf",
           "Test-LeakTrace"
         ]
       },
@@ -1984,6 +4564,7 @@
           "Exception-Class"
         ],
         "test": [
+          "Class-XSAccessor",
           "Specio",
           "Test-Without-Module",
           "Test2-Plugin-NoWarnings"
@@ -1999,12 +4580,58 @@
       "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-ValidationCompiler-0.31.tar.gz",
       "version": "0.31"
     },
+    "Parse-Distname": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "ExtUtils-MakeMaker-CPANfile"
+        ],
+        "runtime": [],
+        "test": [
+          "Test-Differences",
+          "Test-UseAllModules"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Parse::Distname"
+      ],
+      "sha256": "a5fa93bec2dab76d883da12d4f344b73bf8beb0cc4b66c24376f3e0f387aef07",
+      "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Parse-Distname-0.05.tar.gz",
+      "version": "0.05"
+    },
+    "Path-Class": {
+      "dependencies": {
+        "build": [
+          "Module-Build"
+        ],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Path::Class",
+        "Path::Class::Dir",
+        "Path::Class::Entity",
+        "Path::Class::File"
+      ],
+      "sha256": "654781948602386f2cb2e4473a739f17dc6953d92aabc2498a4ca2561bc248ce",
+      "url": "https://cpan.metacpan.org/authors/id/K/KW/KWILLIAMS/Path-Class-0.37.tar.gz",
+      "version": "0.37"
+    },
     "Path-Tiny": {
       "dependencies": {
         "build": [],
         "configure": [],
         "runtime": [],
-        "test": []
+        "test": [
+          "Test-FailWarnings",
+          "Test-MockRandom",
+          "Unicode-UTF8"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -2014,6 +4641,248 @@
       "sha256": "ff20713d1a14d257af9c78209001f40dc177e4b9d1496115cbd8726d577946c7",
       "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.150.tar.gz",
       "version": "0.150"
+    },
+    "Perl-MinimumVersion": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "File-Find-Rule",
+          "File-Find-Rule-Perl",
+          "PPI",
+          "PPIx-Regexp",
+          "PPIx-Utils",
+          "Params-Util"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Perl::MinimumVersion",
+        "Perl::MinimumVersion::Reason"
+      ],
+      "sha256": "ffa9c8a2f099660a81361eb8bac56a335793b3e160fa5b1d97078b83142ce8cb",
+      "url": "https://cpan.metacpan.org/authors/id/D/DB/DBOOK/Perl-MinimumVersion-1.44.tar.gz",
+      "version": "1.44"
+    },
+    "Perl-PrereqScanner-NotQuiteLite": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "ExtUtils-MakeMaker-CPANfile"
+        ],
+        "runtime": [
+          "Data-Dump",
+          "Module-CPANfile",
+          "Module-Find",
+          "Parse-Distname",
+          "Regexp-Trie"
+        ],
+        "test": [
+          "CPAN-Common-Index",
+          "Test-FailWarnings",
+          "Test-UseAllModules"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Perl::PrereqScanner::NotQuiteLite",
+        "Perl::PrereqScanner::NotQuiteLite::App",
+        "Perl::PrereqScanner::NotQuiteLite::Context",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Aliased",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::AnyMoose",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Autouse",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Catalyst",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::ClassAccessor",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::ClassAutouse",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::ClassLoad",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Core",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::FeatureCompatClass",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Inline",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::KeywordDeclare",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Later",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Mixin",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::ModuleRuntime",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::MojoBase",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Moose",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::MooseXDeclare",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::ObjectPad",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Only",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::POE",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::PackageVariant",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Plack",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Prefork",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Superclass",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Syntax",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::SyntaxCollector",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::TestClassMost",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::TestMore",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::TestRequires",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::UniversalVersion",
+        "Perl::PrereqScanner::NotQuiteLite::Parser::Unless",
+        "Perl::PrereqScanner::NotQuiteLite::Tokens",
+        "Perl::PrereqScanner::NotQuiteLite::Util",
+        "Perl::PrereqScanner::NotQuiteLite::Util::CPANfile",
+        "Perl::PrereqScanner::NotQuiteLite::Util::Prereqs"
+      ],
+      "sha256": "4b2799f478cca0bd9c980f748b0625df627ee3d203b39f00f8b469a0ab39605c",
+      "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Perl-PrereqScanner-NotQuiteLite-0.9918.tar.gz",
+      "version": "0.9918"
+    },
+    "Perl-Tidy": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Perl::Tidy",
+        "Perl::Tidy::Debugger",
+        "Perl::Tidy::Diagnostics",
+        "Perl::Tidy::FileWriter",
+        "Perl::Tidy::Formatter",
+        "Perl::Tidy::HtmlWriter",
+        "Perl::Tidy::IOScalar",
+        "Perl::Tidy::IOScalarArray",
+        "Perl::Tidy::IndentationItem",
+        "Perl::Tidy::Logger",
+        "Perl::Tidy::Tokenizer",
+        "Perl::Tidy::VerticalAligner",
+        "Perl::Tidy::VerticalAligner::Alignment",
+        "Perl::Tidy::VerticalAligner::Line"
+      ],
+      "sha256": "104e3e5ee5c84524d5e50324d664c7859b1ac422ab97a3e7a248985a4b4f7f64",
+      "url": "https://cpan.metacpan.org/authors/id/S/SH/SHANCOCK/Perl-Tidy-20260826.tar.gz",
+      "version": "20260826"
+    },
+    "PerlIO-utf8_strict": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Test-Exception"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "PerlIO::utf8_strict"
+      ],
+      "sha256": "bcd2848b72df290b5e984fae8b1a6ca96f6d072003cf222389a8c9e8e1c570cd",
+      "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/PerlIO-utf8_strict-0.010.tar.gz",
+      "version": "0.010"
+    },
+    "Pod-Coverage": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Devel-Symdump",
+          "Pod-Parser"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Pod::Coverage",
+        "Pod::Coverage::CountParents",
+        "Pod::Coverage::ExportOnly",
+        "Pod::Coverage::Extractor",
+        "Pod::Coverage::Overloader"
+      ],
+      "sha256": "30b7a0b0c942f44a7552c0d34e9b1f2e0ba0b67955c61e3b1589ec369074b107",
+      "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Pod-Coverage-0.23.tar.gz",
+      "version": "0.23"
+    },
+    "Pod-Parser": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Pod::Cache",
+        "Pod::Cache::Item",
+        "Pod::Find",
+        "Pod::Hyperlink",
+        "Pod::InputObjects",
+        "Pod::InputSource",
+        "Pod::InteriorSequence",
+        "Pod::List",
+        "Pod::Paragraph",
+        "Pod::ParseTree",
+        "Pod::ParseUtils",
+        "Pod::Parser",
+        "Pod::PlainText",
+        "Pod::Select"
+      ],
+      "sha256": "5deccbf55d750ce65588cd211c1a03fa1ef3aaa15d1ac2b8d85383a42c1427ea",
+      "url": "https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Parser-1.67.tar.gz",
+      "version": "1.67"
+    },
+    "Pod-Spell": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "File-ShareDir-Install"
+        ],
+        "runtime": [
+          "Class-Tiny",
+          "File-ShareDir",
+          "Lingua-EN-Inflect"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Pod::Spell",
+        "Pod::Wordlist"
+      ],
+      "sha256": "7ef56c9229f3efbc71a0462ce44490c0dd49fbf3b21fe85bb08b1eeac6f7b063",
+      "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Pod-Spell-1.27.tar.gz",
+      "version": "1.27"
+    },
+    "Pod-Spell-CommonMistakes": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Module-Build-Tiny"
+        ],
+        "runtime": [
+          "IO-Stringy",
+          "Pod-Spell"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Pod::Spell::CommonMistakes",
+        "Pod::Spell::CommonMistakes::WordList"
+      ],
+      "sha256": "2ba9ea76c049daf892ba2bdd85a07099a33be315876f55ed33a644d575324432",
+      "url": "https://cpan.metacpan.org/authors/id/A/AP/APOCAL/Pod-Spell-CommonMistakes-1.002.tar.gz",
+      "version": "1.002"
+    },
+    "Proc-InvokeEditor": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Carp-Assert"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Proc::InvokeEditor"
+      ],
+      "sha256": "4a2dbe1cd1c82c31f2bb9f3e417f0b04fadc171590df15330109c33d4d208175",
+      "url": "https://cpan.metacpan.org/authors/id/M/MS/MSTEVENS/Proc-InvokeEditor-1.13.tar.gz",
+      "version": "1.13"
     },
     "Readonly": {
       "dependencies": {
@@ -2066,12 +4935,124 @@
       "url": "https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Ref-Util-XS-0.117.tar.gz",
       "version": "0.117"
     },
-    "Role-Tiny": {
+    "Regexp-IPv6": {
       "dependencies": {
         "build": [],
         "configure": [],
         "runtime": [],
         "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Regexp::IPv6"
+      ],
+      "sha256": "d542d17d75ce93631de8ba2156da0e0b58a755c409cd4a0d27a3873a26712ce2",
+      "url": "https://cpan.metacpan.org/authors/id/S/SA/SALVA/Regexp-IPv6-0.03.tar.gz",
+      "version": "0.03"
+    },
+    "Regexp-Trie": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Regexp::Trie"
+      ],
+      "sha256": "fb2bf94ed8dbc1f4a95d9fc8f710cb67b3f796c6efc9c4bb4c2cfa3ebaa1c5fa",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/Regexp-Trie-0.02.tar.gz",
+      "version": "0.02"
+    },
+    "Regexp-Util": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Exporter-Tiny"
+        ],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Regexp::Util"
+      ],
+      "sha256": "a08871fca2054c464ec6cd663fbdb2fce99cc0346256acf0a4936681ed8a0e00",
+      "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Regexp-Util-0.005.tar.gz",
+      "version": "0.005"
+    },
+    "Reply": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Config-INI-Reader-Ordered",
+          "Devel-LexAlias",
+          "Eval-Closure",
+          "File-HomeDir",
+          "Module-Runtime",
+          "Package-Stash",
+          "PadWalker",
+          "Try-Tiny"
+        ],
+        "test": [
+          "App-Nopaste",
+          "B-Keywords",
+          "Carp-Always",
+          "Class-Refresh",
+          "Data-Dump",
+          "Data-Printer",
+          "IO-Pager",
+          "Proc-InvokeEditor",
+          "Term-ReadLine-Gnu",
+          "TermReadKey"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Reply",
+        "Reply::App",
+        "Reply::Config",
+        "Reply::Plugin",
+        "Reply::Plugin::AutoRefresh",
+        "Reply::Plugin::Autocomplete::Commands",
+        "Reply::Plugin::Autocomplete::Functions",
+        "Reply::Plugin::Autocomplete::Globals",
+        "Reply::Plugin::Autocomplete::Keywords",
+        "Reply::Plugin::Autocomplete::Lexicals",
+        "Reply::Plugin::Autocomplete::Methods",
+        "Reply::Plugin::Autocomplete::Packages",
+        "Reply::Plugin::CollapseStack",
+        "Reply::Plugin::Colors",
+        "Reply::Plugin::DataDump",
+        "Reply::Plugin::DataDumper",
+        "Reply::Plugin::DataPrinter",
+        "Reply::Plugin::Editor",
+        "Reply::Plugin::FancyPrompt",
+        "Reply::Plugin::Hints",
+        "Reply::Plugin::Interrupt",
+        "Reply::Plugin::LexicalPersistence",
+        "Reply::Plugin::LoadClass",
+        "Reply::Plugin::Nopaste",
+        "Reply::Plugin::Packages",
+        "Reply::Plugin::Pager",
+        "Reply::Plugin::ReadLine",
+        "Reply::Plugin::ResultCache",
+        "Reply::Plugin::Timer"
+      ],
+      "sha256": "4ada2a45a77a54ae10c4e9a48144ea826d5d79ad050cb9626e9f783d03ab79f2",
+      "url": "https://cpan.metacpan.org/authors/id/D/DO/DOY/Reply-0.42.tar.gz",
+      "version": "0.42"
+    },
+    "Role-Tiny": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Class-Method-Modifiers"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -2096,6 +5077,73 @@
       "sha256": "87f4148aa0ff1d5e652723322eab7dafa3801c967d6f91ac9147a3c467b8a66a",
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Safe-Isa-1.000010.tar.gz",
       "version": "1.000010"
+    },
+    "Socket6": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Socket6"
+      ],
+      "sha256": "468915fa3a04dcf6574fc957eff495915e24569434970c91ee8e4e1459fc9114",
+      "url": "https://cpan.metacpan.org/authors/id/U/UM/UMEMOTO/Socket6-0.29.tar.gz",
+      "version": "0.29"
+    },
+    "Software-License": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Data-Section",
+          "Text-Template"
+        ],
+        "test": [
+          "Try-Tiny"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Software::License",
+        "Software::License::AGPL_3",
+        "Software::License::Apache_1_1",
+        "Software::License::Apache_2_0",
+        "Software::License::Artistic_1_0",
+        "Software::License::Artistic_1_0_Perl",
+        "Software::License::Artistic_2_0",
+        "Software::License::BSD",
+        "Software::License::CC0_1_0",
+        "Software::License::Custom",
+        "Software::License::EUPL_1_1",
+        "Software::License::EUPL_1_2",
+        "Software::License::FreeBSD",
+        "Software::License::GFDL_1_2",
+        "Software::License::GFDL_1_3",
+        "Software::License::GPL_1",
+        "Software::License::GPL_2",
+        "Software::License::GPL_3",
+        "Software::License::LGPL_2_1",
+        "Software::License::LGPL_3_0",
+        "Software::License::MIT",
+        "Software::License::Mozilla_1_0",
+        "Software::License::Mozilla_1_1",
+        "Software::License::Mozilla_2_0",
+        "Software::License::None",
+        "Software::License::OpenSSL",
+        "Software::License::Perl_5",
+        "Software::License::PostgreSQL",
+        "Software::License::QPL_1_0",
+        "Software::License::SSLeay",
+        "Software::License::Sun",
+        "Software::License::Zlib",
+        "Software::LicenseUtils"
+      ],
+      "sha256": "81462da3cd9e745901f29ff006c4c804cc9db017ccf45154b3cd9558540bc191",
+      "url": "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.104007.tar.gz",
+      "version": "0.104007"
     },
     "Sort-Versions": {
       "dependencies": {
@@ -2130,6 +5178,7 @@
           "Try-Tiny"
         ],
         "test": [
+          "Ref-Util",
           "Test-Needs"
         ]
       },
@@ -2285,7 +5334,10 @@
         "build": [],
         "configure": [],
         "runtime": [],
-        "test": []
+        "test": [
+          "B-C",
+          "Devel-CheckBin"
+        ]
       },
       "is_xs": true,
       "provides": [
@@ -2333,7 +5385,10 @@
         "runtime": [
           "IPC-Run"
         ],
-        "test": []
+        "test": [
+          "Test-Command",
+          "Test-Output"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -2344,6 +5399,87 @@
       "url": "https://cpan.metacpan.org/authors/id/B/BO/BOOK/System-Command-1.122.tar.gz",
       "version": "1.122"
     },
+    "Task-Weaken": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Task::Weaken"
+      ],
+      "sha256": "2383fedb9dbaef646468ea824afbf7c801076720cfba0df2a7a074726dcd66be",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Task-Weaken-1.06.tar.gz",
+      "version": "1.06"
+    },
+    "Term-ReadLine-Gnu": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Term::ReadLine::Gnu",
+        "Term::ReadLine::Gnu::AU",
+        "Term::ReadLine::Gnu::Var",
+        "Term::ReadLine::Gnu::XS"
+      ],
+      "sha256": "3b07ac8a9b494c50aa87a40dccab3f879b92eb9527ac0f2ded5d4743d166b649",
+      "url": "https://cpan.metacpan.org/authors/id/H/HA/HAYASHI/Term-ReadLine-Gnu-1.47.tar.gz",
+      "version": "1.47"
+    },
+    "Term-Size-Any": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Devel-Hide",
+          "Term-Size-Perl"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Term::Size::Any"
+      ],
+      "sha256": "64fa5fdb1ae3a823134aaa95aec75354bc17bdd9ca12ba0a7ae34a7e51b3ded2",
+      "url": "https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Term-Size-Any-0.002.tar.gz",
+      "version": "0.002"
+    },
+    "Term-Size-Perl": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Term::Size::Perl"
+      ],
+      "sha256": "ae9a6746cb1b305ddc8f8d8ca46878552b9c1123628971e13a275183822f209e",
+      "url": "https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Term-Size-Perl-0.031.tar.gz",
+      "version": "0.031"
+    },
+    "TermReadKey": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Term::ReadKey"
+      ],
+      "sha256": "5a645878dc570ac33661581fbb090ff24ebce17d43ea53fd22e105a856a47290",
+      "url": "https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/TermReadKey-2.38.tar.gz",
+      "version": "2.38"
+    },
     "Test-Base": {
       "dependencies": {
         "build": [],
@@ -2353,6 +5489,7 @@
         ],
         "test": [
           "Algorithm-Diff",
+          "Test-Deep",
           "Text-Diff"
         ]
       },
@@ -2366,6 +5503,84 @@
       "sha256": "2794a1aaaeb1d3a287dd2c7286258663796562f7db9ccc6b424bc4f1de8ad014",
       "url": "https://cpan.metacpan.org/authors/id/I/IN/INGY/Test-Base-0.89.tar.gz",
       "version": "0.89"
+    },
+    "Test-CPAN-Meta": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Test-CPAN-Meta-JSON",
+          "Test-Pod",
+          "Test-Pod-Coverage"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::CPAN::Meta",
+        "Test::CPAN::Meta::Version"
+      ],
+      "sha256": "f55b4f9cf6bc396d0fe8027267685cb2ac4affce897d0967a317fac6db5a8db5",
+      "url": "https://cpan.metacpan.org/authors/id/B/BA/BARBIE/Test-CPAN-Meta-0.25.tar.gz",
+      "version": "0.25"
+    },
+    "Test-CPAN-Meta-JSON": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "JSON"
+        ],
+        "test": [
+          "Test-CPAN-Meta",
+          "Test-Pod",
+          "Test-Pod-Coverage"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::CPAN::Meta::JSON",
+        "Test::CPAN::Meta::JSON::Version"
+      ],
+      "sha256": "67ac509adffb1d2b256a8f8c0523e00761d960166192c6070298f7088a9ae9c9",
+      "url": "https://cpan.metacpan.org/authors/id/B/BA/BARBIE/Test-CPAN-Meta-JSON-0.16.tar.gz",
+      "version": "0.16"
+    },
+    "Test-CheckChanges": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "Module-Build"
+        ],
+        "runtime": [],
+        "test": [
+          "Module-Build",
+          "Test-Pod",
+          "Test-Pod-Coverage"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::CheckChanges"
+      ],
+      "sha256": "43678d2f670b241e9568b4e4f45aa42aa79bb2350d0d804c830392aeff6f54c4",
+      "url": "https://cpan.metacpan.org/authors/id/G/GA/GAM/Test-CheckChanges-0.14.tar.gz",
+      "version": "0.14"
+    },
+    "Test-Command": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Command"
+      ],
+      "sha256": "28a3fc6fea73a19f563f11bd0f28186756d4c74207be6deacaad26d2081b9533",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DANBOO/Test-Command-0.11.tar.gz",
+      "version": "0.11"
     },
     "Test-Deep": {
       "dependencies": {
@@ -2432,6 +5647,24 @@
       "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Deep-1.205.tar.gz",
       "version": "1.205"
     },
+    "Test-Differences": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Capture-Tiny",
+          "Text-Diff"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Differences"
+      ],
+      "sha256": "3c113f4e25c38323a3fe5992d30c337264d00ef872aecfd2d9431ca8ea0083e2",
+      "url": "https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.73.tar.gz",
+      "version": "0.73"
+    },
     "Test-Exception": {
       "dependencies": {
         "build": [],
@@ -2448,6 +5681,23 @@
       "sha256": "156b13f07764f766d8b45a43728f2439af81a3512625438deab783b7883eb533",
       "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Exception-0.43.tar.gz",
       "version": "0.43"
+    },
+    "Test-FailWarnings": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Capture-Tiny"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::FailWarnings"
+      ],
+      "sha256": "da34ef9029f6849d6026201d49127d054ee6ac4b979c82210315f5721964a96f",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Test-FailWarnings-0.008.tar.gz",
+      "version": "0.008"
     },
     "Test-Fatal": {
       "dependencies": {
@@ -2481,6 +5731,27 @@
       "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Test-File-1.995.tar.gz",
       "version": "1.995"
     },
+    "Test-Kwalitee": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Module-CPANTS-Analyse"
+        ],
+        "test": [
+          "CPAN-Meta-Check",
+          "Test-Deep",
+          "Test-Warnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Kwalitee"
+      ],
+      "sha256": "b4536cdd755b59772232d4325da7bd4fb7f5be50b4585dbbaf758eec306243a3",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Kwalitee-1.28.tar.gz",
+      "version": "1.28"
+    },
     "Test-LeakTrace": {
       "dependencies": {
         "build": [],
@@ -2497,6 +5768,73 @@
       "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/Test-LeakTrace-0.17.tar.gz",
       "version": "0.17"
     },
+    "Test-Memory-Cycle": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Devel-Cycle",
+          "PadWalker"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Memory::Cycle"
+      ],
+      "sha256": "9d53ddfdc964cd8454cb0da4c695b6a3ae47b45839291c34cb9d8d1cfaab3202",
+      "url": "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Test-Memory-Cycle-1.06.tar.gz",
+      "version": "1.06"
+    },
+    "Test-MinimumVersion": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "File-Find-Rule",
+          "File-Find-Rule-Perl",
+          "Perl-MinimumVersion"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::MinimumVersion"
+      ],
+      "sha256": "32a1ebcd803fa10eefca553bc3cedd43596a759dc3975adebd22688823c36aea",
+      "url": "https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-MinimumVersion-0.101083.tar.gz",
+      "version": "0.101083"
+    },
+    "Test-MockRandom": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::MockRandom"
+      ],
+      "sha256": "2614930d84fc5deac39afbc1ee86ccd39b221507f27d4ee493ca26e5c921cce0",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Test-MockRandom-1.01.tar.gz",
+      "version": "1.01"
+    },
+    "Test-More-UTF8": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::More::UTF8"
+      ],
+      "sha256": "b9f1c4b36a97cdfefaa53ed1115dd38f4b483037775f6559ee1df14acfd1ce04",
+      "url": "https://cpan.metacpan.org/authors/id/M/MO/MONS/Test-More-UTF8-0.05.tar.gz",
+      "version": "0.05"
+    },
     "Test-Needs": {
       "dependencies": {
         "build": [],
@@ -2511,6 +5849,55 @@
       "sha256": "923ffdc78fcba96609753e4bae26b0ba0186893de4a63cd5236e012c7c90e208",
       "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Test-Needs-0.002010.tar.gz",
       "version": "0.002010"
+    },
+    "Test-NoWarnings": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::NoWarnings",
+        "Test::NoWarnings::Warning"
+      ],
+      "sha256": "c2dc51143b7eb63231210e27df20d2c8393772e0a333547ec8b7a205ed62f737",
+      "url": "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Test-NoWarnings-1.06.tar.gz",
+      "version": "1.06"
+    },
+    "Test-Object": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Object",
+        "Test::Object::Test"
+      ],
+      "sha256": "65278964147837313f4108e55b59676e8a364d6edf01b3dc198aee894ab1d0bb",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Object-0.08.tar.gz",
+      "version": "0.08"
+    },
+    "Test-Output": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Capture-Tiny"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Output"
+      ],
+      "sha256": "a3a95cb8c4d387fe079add4490757e69927ef0488bbb18b4d55e7fc6d25f1a63",
+      "url": "https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Test-Output-1.036.tar.gz",
+      "version": "1.036"
     },
     "Test-Pod": {
       "dependencies": {
@@ -2527,6 +5914,23 @@
       "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Pod-1.52.tar.gz",
       "version": "1.52"
     },
+    "Test-Pod-Coverage": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Pod-Coverage"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Pod::Coverage"
+      ],
+      "sha256": "48c9cca9f7d99eee741176445b431adf09c029e1aa57c4703c9f46f7601d40d4",
+      "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Test-Pod-Coverage-1.10.tar.gz",
+      "version": "1.10"
+    },
     "Test-Requires": {
       "dependencies": {
         "build": [],
@@ -2542,12 +5946,32 @@
       "url": "https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Test-Requires-0.11.tar.gz",
       "version": "0.11"
     },
-    "Test-Simple": {
+    "Test-RequiresInternet": {
       "dependencies": {
         "build": [],
         "configure": [],
         "runtime": [],
         "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::RequiresInternet"
+      ],
+      "sha256": "bba7b32a1cc0d58ce2ec20b200a7347c69631641e8cae8ff4567ad24ef1e833e",
+      "url": "https://cpan.metacpan.org/authors/id/M/MA/MALLEN/Test-RequiresInternet-0.05.tar.gz",
+      "version": "0.05"
+    },
+    "Test-Simple": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Module-Pluggable",
+          "Term-Size-Any",
+          "TermReadKey",
+          "Unicode-LineBreak"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -2757,6 +6181,56 @@
       "url": "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302226.tar.gz",
       "version": "1.302226"
     },
+    "Test-Spelling": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "IPC-Run3",
+          "Pod-Spell"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::Spelling"
+      ],
+      "sha256": "38c659f03a4d7362e16832a3489d17f86a2ea36471d335e17ce323457df5bc60",
+      "url": "https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/Test-Spelling-0.25.tar.gz",
+      "version": "0.25"
+    },
+    "Test-SubCalls": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Hook-LexWrap"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::SubCalls"
+      ],
+      "sha256": "cbc1e9b35a05e71febc13e5ef547a31c8249899bb6011dbdc9d9ff366ddab6c2",
+      "url": "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-SubCalls-1.10.tar.gz",
+      "version": "1.10"
+    },
+    "Test-UseAllModules": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Test::UseAllModules"
+      ],
+      "sha256": "a71f2fe8b96ab8bfc2760aa1d3135ea049a5b20dcb105457b769a1195c7a2509",
+      "url": "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Test-UseAllModules-0.17.tar.gz",
+      "version": "0.17"
+    },
     "Test-Warn": {
       "dependencies": {
         "build": [],
@@ -2779,7 +6253,10 @@
         "build": [],
         "configure": [],
         "runtime": [],
-        "test": []
+        "test": [
+          "CPAN-Meta-Check",
+          "PadWalker"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -2824,6 +6301,21 @@
       "url": "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Test2-Plugin-NoWarnings-0.10.tar.gz",
       "version": "0.10"
     },
+    "Text-CSV_XS": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Text::CSV_XS"
+      ],
+      "sha256": "4f0c16457c87def295a994e9c4ba397a8baafad96cefaf2d61483125f90ff974",
+      "url": "https://cpan.metacpan.org/authors/id/H/HM/HMBRAND/Text-CSV_XS-1.65.tgz",
+      "version": "1.65"
+    },
     "Text-Diff": {
       "dependencies": {
         "build": [],
@@ -2844,6 +6336,56 @@
       "url": "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Diff-1.46.tar.gz",
       "version": "1.46"
     },
+    "Text-Glob": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Text::Glob"
+      ],
+      "sha256": "069ccd49d3f0a2dedb115f4bdc9fbac07a83592840953d1fcdfc39eb9d305287",
+      "url": "https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Text-Glob-0.11.tar.gz",
+      "version": "0.11"
+    },
+    "Text-Template": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Test-More-UTF8",
+          "Test-Warnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "Text::Template",
+        "Text::Template::Preprocess"
+      ],
+      "sha256": "a295ea7d1ef241ae2640c1f7864b628f8e6f99ec14fb1da781b2f5f2168dcf09",
+      "url": "https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Text-Template-1.61.tar.gz",
+      "version": "1.61"
+    },
+    "Tie-Handle-Offset": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Tie::Handle::Offset",
+        "Tie::Handle::SkipHeader"
+      ],
+      "sha256": "ee9f39055dc695aa244a252f56ffd37f8be07209b337ad387824721206d2a89e",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Tie-Handle-Offset-0.004.tar.gz",
+      "version": "0.004"
+    },
     "Tie-ToObject": {
       "dependencies": {
         "build": [],
@@ -2859,12 +6401,72 @@
       "url": "https://cpan.metacpan.org/authors/id/N/NU/NUFFIN/Tie-ToObject-0.03.tar.gz",
       "version": "0.03"
     },
-    "Try-Tiny": {
+    "TimeDate": {
       "dependencies": {
         "build": [],
         "configure": [],
         "runtime": [],
         "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "Date::Format",
+        "Date::Format::Generic",
+        "Date::Language",
+        "Date::Language::Afar",
+        "Date::Language::Amharic",
+        "Date::Language::Arabic",
+        "Date::Language::Austrian",
+        "Date::Language::Brazilian",
+        "Date::Language::Bulgarian",
+        "Date::Language::Chinese",
+        "Date::Language::Chinese_GB",
+        "Date::Language::Czech",
+        "Date::Language::Danish",
+        "Date::Language::Dutch",
+        "Date::Language::English",
+        "Date::Language::Finnish",
+        "Date::Language::French",
+        "Date::Language::Gedeo",
+        "Date::Language::German",
+        "Date::Language::Greek",
+        "Date::Language::Hungarian",
+        "Date::Language::Icelandic",
+        "Date::Language::Italian",
+        "Date::Language::Norwegian",
+        "Date::Language::Occitan",
+        "Date::Language::Oromo",
+        "Date::Language::Portuguese",
+        "Date::Language::Romanian",
+        "Date::Language::Russian",
+        "Date::Language::Russian_cp1251",
+        "Date::Language::Russian_koi8r",
+        "Date::Language::Sidama",
+        "Date::Language::Somali",
+        "Date::Language::Spanish",
+        "Date::Language::Swedish",
+        "Date::Language::Tigrinya",
+        "Date::Language::TigrinyaEritrean",
+        "Date::Language::TigrinyaEthiopian",
+        "Date::Language::Turkish",
+        "Date::Parse",
+        "Time::Zone",
+        "TimeDate"
+      ],
+      "sha256": "baddd0306ae2e86e9ec28d3de5439e514643e80b3735e43bd0fbb426d73304de",
+      "url": "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/TimeDate-2.35.tar.gz",
+      "version": "2.35"
+    },
+    "Try-Tiny": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "CPAN-Meta-Check",
+          "Capture-Tiny",
+          "Sub-Name"
+        ]
       },
       "is_xs": false,
       "provides": [
@@ -2882,7 +6484,23 @@
           "Exporter-Tiny"
         ],
         "test": [
-          "Test-Fatal"
+          "Class-XSAccessor",
+          "Devel-Hide",
+          "Devel-LexAlias",
+          "Devel-StackTrace",
+          "Moo",
+          "Moose",
+          "Mouse",
+          "Ref-Util-XS",
+          "Regexp-Util",
+          "Reply",
+          "Test-Deep",
+          "Test-Fatal",
+          "Test-Memory-Cycle",
+          "Test-Requires",
+          "Test-Warnings",
+          "Type-Tiny-XS",
+          "namespace-clean"
         ]
       },
       "is_xs": false,
@@ -2943,6 +6561,24 @@
       "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Type-Tiny-2.010001.tar.gz",
       "version": "2.010001"
     },
+    "Type-Tiny-XS": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Type-Tiny"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "Type::Tiny::XS",
+        "Type::Tiny::XS::Util"
+      ],
+      "sha256": "9a61450dda90294f606cd7a3fa44f3b1a366bcd88a419917b054ee5e23d148bd",
+      "url": "https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Type-Tiny-XS-0.025.tar.gz",
+      "version": "0.025"
+    },
     "Types-Path-Tiny": {
       "dependencies": {
         "build": [],
@@ -2982,6 +6618,103 @@
       "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Types-Serialiser-1.01.tar.gz",
       "version": "1.01"
     },
+    "URI": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "MIME-Base32"
+        ],
+        "test": [
+          "Business-ISBN",
+          "Regexp-IPv6",
+          "Test-Needs",
+          "Test-Warnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "URI",
+        "URI::Escape",
+        "URI::Heuristic",
+        "URI::IRI",
+        "URI::QueryParam",
+        "URI::Split",
+        "URI::URL",
+        "URI::WithBase",
+        "URI::data",
+        "URI::file",
+        "URI::file::Base",
+        "URI::file::FAT",
+        "URI::file::Mac",
+        "URI::file::OS2",
+        "URI::file::QNX",
+        "URI::file::Unix",
+        "URI::file::Win32",
+        "URI::ftp",
+        "URI::ftpes",
+        "URI::ftps",
+        "URI::geo",
+        "URI::gopher",
+        "URI::http",
+        "URI::https",
+        "URI::icap",
+        "URI::icaps",
+        "URI::irc",
+        "URI::ircs",
+        "URI::ldap",
+        "URI::ldapi",
+        "URI::ldaps",
+        "URI::mailto",
+        "URI::mms",
+        "URI::news",
+        "URI::nntp",
+        "URI::nntps",
+        "URI::otpauth",
+        "URI::pop",
+        "URI::rlogin",
+        "URI::rsync",
+        "URI::rtsp",
+        "URI::rtspu",
+        "URI::scp",
+        "URI::sftp",
+        "URI::sip",
+        "URI::sips",
+        "URI::smb",
+        "URI::smtp",
+        "URI::snews",
+        "URI::ssh",
+        "URI::telnet",
+        "URI::tn3270",
+        "URI::urn",
+        "URI::urn::isbn",
+        "URI::urn::oid",
+        "URI::ws",
+        "URI::wss"
+      ],
+      "sha256": "ef5d2ef099a1a24a6e83ffe543de73337805d3d39c00b84fa205d725ad1a1b63",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.40.tar.gz",
+      "version": "5.40"
+    },
+    "Unicode-LineBreak": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "MIME-Charset"
+        ],
+        "test": []
+      },
+      "is_xs": true,
+      "provides": [
+        "Text::LineFold",
+        "Unicode::GCString",
+        "Unicode::LineBreak"
+      ],
+      "sha256": "486762e4cacddcc77b13989f979a029f84630b8175e7fef17989e157d4b6318a",
+      "url": "https://cpan.metacpan.org/authors/id/N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz",
+      "version": "2019.001"
+    },
     "Unicode-UTF8": {
       "dependencies": {
         "build": [],
@@ -3014,6 +6747,187 @@
       "url": "https://cpan.metacpan.org/authors/id/V/VP/VPIT/Variable-Magic-0.65.tar.gz",
       "version": "0.65"
     },
+    "WWW-Mechanize": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "HTML-Form",
+          "HTML-Parser",
+          "HTML-Tree",
+          "HTTP-Cookies",
+          "HTTP-Message",
+          "URI",
+          "libwww-perl"
+        ],
+        "test": [
+          "HTTP-Daemon",
+          "Path-Tiny",
+          "Test-Deep",
+          "Test-Fatal",
+          "Test-Memory-Cycle",
+          "Test-Output",
+          "Test-Warnings",
+          "URI",
+          "libwww-perl"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "WWW::Mechanize",
+        "WWW::Mechanize::Image",
+        "WWW::Mechanize::Link"
+      ],
+      "sha256": "2ed28cbeea54de40d08e88eb52f4dd5fcb05062efb6b2feb9da8376ca4308e60",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/WWW-Mechanize-2.22.tar.gz",
+      "version": "2.22"
+    },
+    "WWW-RobotRules": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "URI"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "WWW::RobotRules",
+        "WWW::RobotRules::AnyDBM_File",
+        "WWW::RobotRules::DB_File",
+        "WWW::RobotRules::InCore"
+      ],
+      "sha256": "8522b532935a11bfa688c2e113bac66729df4851be50c2c26d4b06f45fade472",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/WWW-RobotRules-6.03.tar.gz",
+      "version": "6.03"
+    },
+    "XML-NamespaceSupport": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "XML::NamespaceSupport"
+      ],
+      "sha256": "47e995859f8dd0413aa3f22d350c4a62da652e854267aa0586ae544ae2bae5ef",
+      "url": "https://cpan.metacpan.org/authors/id/P/PE/PERIGRIN/XML-NamespaceSupport-1.12.tar.gz",
+      "version": "1.12"
+    },
+    "XML-Parser": {
+      "dependencies": {
+        "build": [],
+        "configure": [
+          "File-ShareDir-Install"
+        ],
+        "runtime": [
+          "File-ShareDir"
+        ],
+        "test": [
+          "libwww-perl"
+        ]
+      },
+      "is_xs": true,
+      "provides": [
+        "XML::Parser",
+        "XML::Parser::Expat",
+        "XML::Parser::Style::Debug",
+        "XML::Parser::Style::Objects",
+        "XML::Parser::Style::Stream",
+        "XML::Parser::Style::Subs",
+        "XML::Parser::Style::Tree"
+      ],
+      "sha256": "a358fd7c49f5e27717a644a9102bd21dc7fc25a415983279c59b1580e2b62a58",
+      "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.59.tar.gz",
+      "version": "2.59"
+    },
+    "XML-SAX": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "XML-NamespaceSupport",
+          "XML-SAX-Base"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "XML::SAX",
+        "XML::SAX::DocumentLocator",
+        "XML::SAX::ParserFactory",
+        "XML::SAX::PurePerl",
+        "XML::SAX::PurePerl::DebugHandler",
+        "XML::SAX::PurePerl::Exception",
+        "XML::SAX::PurePerl::Productions",
+        "XML::SAX::PurePerl::Reader",
+        "XML::SAX::PurePerl::Reader::Stream",
+        "XML::SAX::PurePerl::Reader::String",
+        "XML::SAX::PurePerl::Reader::URI"
+      ],
+      "sha256": "4506c387043aa6a77b455f00f57409f3720aa7e553495ab2535263b4ed1ea12a",
+      "url": "https://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-SAX-1.02.tar.gz",
+      "version": "1.02"
+    },
+    "XML-SAX-Base": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "XML::SAX::Base",
+        "XML::SAX::Base::NoHandler",
+        "XML::SAX::Exception"
+      ],
+      "sha256": "66cb355ba4ef47c10ca738bd35999723644386ac853abbeb5132841f5e8a2ad0",
+      "url": "https://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-SAX-Base-1.09.tar.gz",
+      "version": "1.09"
+    },
+    "XML-SAX-Expat": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "XML-NamespaceSupport",
+          "XML-Parser",
+          "XML-SAX",
+          "XML-SAX-Base"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "XML::SAX::Expat"
+      ],
+      "sha256": "4c016213d0ce7db2c494e30086b59917b302db8c292dcd21f39deebd9780c83f",
+      "url": "https://cpan.metacpan.org/authors/id/B/BJ/BJOERN/XML-SAX-Expat-0.51.tar.gz",
+      "version": "0.51"
+    },
+    "XML-Simple": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "XML-NamespaceSupport",
+          "XML-SAX",
+          "XML-SAX-Expat"
+        ],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "XML::Simple"
+      ],
+      "sha256": "531fddaebea2416743eb5c4fdfab028f502123d9a220405a4100e68fc480dbf8",
+      "url": "https://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-Simple-2.25.tar.gz",
+      "version": "2.25"
+    },
     "YAML-LibYAML": {
       "dependencies": {
         "build": [],
@@ -3034,6 +6948,56 @@
       "url": "https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-LibYAML-v0.910.0.tar.gz",
       "version": "v0.910.0"
     },
+    "YAML-PP": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": [
+          "Test-Deep",
+          "Test-Warnings"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "YAML::PP",
+        "YAML::PP::Common",
+        "YAML::PP::Constructor",
+        "YAML::PP::Dumper",
+        "YAML::PP::Emitter",
+        "YAML::PP::Exception",
+        "YAML::PP::Grammar",
+        "YAML::PP::Highlight",
+        "YAML::PP::Lexer",
+        "YAML::PP::Loader",
+        "YAML::PP::Parser",
+        "YAML::PP::Perl",
+        "YAML::PP::Preserve::Array",
+        "YAML::PP::Preserve::Hash",
+        "YAML::PP::Preserve::Scalar",
+        "YAML::PP::Reader",
+        "YAML::PP::Reader::File",
+        "YAML::PP::Render",
+        "YAML::PP::Representer",
+        "YAML::PP::Schema",
+        "YAML::PP::Schema::Binary",
+        "YAML::PP::Schema::Catchall",
+        "YAML::PP::Schema::Core",
+        "YAML::PP::Schema::Failsafe",
+        "YAML::PP::Schema::Include",
+        "YAML::PP::Schema::JSON",
+        "YAML::PP::Schema::Merge",
+        "YAML::PP::Schema::Perl",
+        "YAML::PP::Schema::Tie::IxHash",
+        "YAML::PP::Schema::YAML1_1",
+        "YAML::PP::Type::MergeKey",
+        "YAML::PP::Writer",
+        "YAML::PP::Writer::File"
+      ],
+      "sha256": "f4a2a6d22b32a31e418debcbd04b843ba0997f9dea0fcc1f96b08b2f2ebcb2e7",
+      "url": "https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.43.0.tar.gz",
+      "version": "v0.43.0"
+    },
     "common-sense": {
       "dependencies": {
         "build": [],
@@ -3049,6 +7013,82 @@
       "url": "https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/common-sense-3.75.tar.gz",
       "version": "3.75"
     },
+    "inc-latest": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [],
+        "test": []
+      },
+      "is_xs": false,
+      "provides": [
+        "inc::latest",
+        "inc::latest::private"
+      ],
+      "sha256": "daa905f363c6a748deb7c408473870563fcac79b9e3e95b26e130a4a8dc3c611",
+      "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/inc-latest-0.500.tar.gz",
+      "version": "0.500"
+    },
+    "libwww-perl": {
+      "dependencies": {
+        "build": [],
+        "configure": [],
+        "runtime": [
+          "Encode-Locale",
+          "File-Listing",
+          "HTML-Parser",
+          "HTTP-Cookies",
+          "HTTP-Date",
+          "HTTP-Message",
+          "HTTP-Negotiate",
+          "LWP-MediaTypes",
+          "Net-HTTP",
+          "Try-Tiny",
+          "URI",
+          "WWW-RobotRules"
+        ],
+        "test": [
+          "Data-Dump",
+          "HTTP-CookieJar",
+          "HTTP-Daemon",
+          "LWP-Protocol-https",
+          "NTLM",
+          "Test-Fatal",
+          "Test-LeakTrace",
+          "Test-Needs",
+          "Test-RequiresInternet"
+        ]
+      },
+      "is_xs": false,
+      "provides": [
+        "LWP",
+        "LWP::Authen::Basic",
+        "LWP::Authen::Digest",
+        "LWP::Authen::Ntlm",
+        "LWP::ConnCache",
+        "LWP::Debug",
+        "LWP::Debug::TraceHTTP",
+        "LWP::DebugFile",
+        "LWP::MemberMixin",
+        "LWP::Protocol",
+        "LWP::Protocol::cpan",
+        "LWP::Protocol::data",
+        "LWP::Protocol::file",
+        "LWP::Protocol::ftp",
+        "LWP::Protocol::gopher",
+        "LWP::Protocol::http",
+        "LWP::Protocol::loopback",
+        "LWP::Protocol::mailto",
+        "LWP::Protocol::nntp",
+        "LWP::Protocol::nogo",
+        "LWP::RobotUA",
+        "LWP::Simple",
+        "LWP::UserAgent"
+      ],
+      "sha256": "e75f0fa9d3c6f0daf5a5a72fa9f8b1c9c0d23e3a84a8522ccb4f835232b95505",
+      "url": "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.83.tar.gz",
+      "version": "6.83"
+    },
     "namespace-autoclean": {
       "dependencies": {
         "build": [],
@@ -3058,6 +7098,7 @@
           "namespace-clean"
         ],
         "test": [
+          "Test-Fatal",
           "Test-Needs"
         ]
       },

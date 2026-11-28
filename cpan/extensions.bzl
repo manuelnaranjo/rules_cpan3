@@ -65,6 +65,10 @@ def _cpan_impl(module_ctx):
                 all_dists = all_dists,
             )
 
+    return module_ctx.extension_metadata(
+        reproducible = True,
+    )
+
 inject_tag = tag_class(
     doc = "Legacy tag for backwards compatibility (no-op).",
     attrs = {

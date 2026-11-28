@@ -144,7 +144,7 @@ def _cpan_dist_repo_impl(ctx):
                 resolved_runtime_deps.append(target_label)
 
     resolved_test_deps = [":test_lib"]
-    for d in test_deps_names:
+    for d in test_deps_names + build_deps + configure_deps:
         if d in all_dists_map:
             target_label = "@" + all_dists_map[d] + "//:" + d
             if target_label not in resolved_test_deps:
