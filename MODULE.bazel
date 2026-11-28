@@ -68,6 +68,8 @@ uv.project(
 use_repo(uv, "uv")
 
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.10.0")
+bazel_dep(name = "rules_foreign_cc", version = "0.15.1")
+bazel_dep(name = "ape", version = "1.1.0")
 
 # CPAN dependency installation via Bzlmod module extension
 cpan = use_extension("//cpan:extensions.bzl", "cpan")

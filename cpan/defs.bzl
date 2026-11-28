@@ -1,5 +1,6 @@
 """Public API re-exports for rules_cpan"""
 
+load("//cpan/private:foreign_cc.bzl", _cpan_dist = "cpan_dist")
 load("//cpan/private:rules.bzl", _cpan_xs = "cpan_xs")
 load(
     "//platforms:platforms.bzl",
@@ -13,6 +14,7 @@ load(
     _platform_transition = "platform_transition",
 )
 
+cpan_dist = _cpan_dist
 cpan_xs = _cpan_xs
 PLATFORMS = _PLATFORMS
 RBE_PLATFORMS = _RBE_PLATFORMS

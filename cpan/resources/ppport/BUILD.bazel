@@ -9,7 +9,7 @@ perl_binary(
     main = "generate_ppport.pl",
     tags = ["manual"],
     deps = [
-        "@perl-devel-ppport//:Devel-PPPort",
+        "@cpan//:Devel-PPPort",
     ],
 )
 

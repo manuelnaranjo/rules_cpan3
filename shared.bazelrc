@@ -21,6 +21,9 @@ test --test_output=summary
 # keep going to catch all issues
 build --keep_going
 
+# Sandbox isolation: block /usr locally to enforce hermeticity
+build --sandbox_block_path=/usr
+
 # --- BuildBuddy Remote Build Execution (RBE) Configuration ---
 # Remote executor, cache, and BES endpoints
 common:rbe --remote_executor=grpcs://remote.buildbuddy.io
@@ -29,7 +32,7 @@ common:rbe --bes_backend=grpcs://remote.buildbuddy.io
 common:rbe --bes_results_url=https://app.buildbuddy.io/invocation/
 
 # Remote execution properties compatible with hermetic toolchains (LLVM + Perl)
-common:rbe --remote_default_exec_properties=container-image=docker://gcr.io/flame-public/rbe-ubuntu22-04:latest
+common:rbe --remote_default_exec_properties=container-image=docker://oraclelinux:10-slim
 common:rbe --remote_default_exec_properties=OSFamily=Linux
 common:rbe --extra_execution_platforms=@rules_cpan//platforms:rbe_linux_x86_64
 
