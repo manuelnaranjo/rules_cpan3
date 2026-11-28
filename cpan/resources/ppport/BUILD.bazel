@@ -7,6 +7,7 @@ perl_binary(
     name = "generate_ppport",
     srcs = ["generate_ppport.pl"],
     main = "generate_ppport.pl",
+    tags = ["manual"],
     deps = [
         "@perl-devel-ppport//:Devel-PPPort",
     ],
@@ -16,5 +17,6 @@ run_binary(
     name = "ppport_h",
     outs = ["ppport.h"],
     args = ["$(execpath :ppport.h)"],
+    tags = ["manual"],
     tool = ":generate_ppport",
 )

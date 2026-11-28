@@ -27,10 +27,13 @@ Whenever invoking Bazel commands (`build`, `test`, `run`, `cquery`, `query`, etc
 - Always use relative paths relative to the repository workspace root.
 - For tools executed via `bazel run`, reference files relative to `BUILD_WORKSPACE_DIRECTORY`.
 
+## Branching & Pull Requests
+- All PRs started from the `main-rules-foreign-cc` branch should aim to be merged into `main-rules-foreign-cc`.
+
 ## Bzlmod & Dependencies
 - Strictly use Bzlmod (`MODULE.bazel`). No legacy `WORKSPACE` files.
-- Native C/C++ third-party dependencies and CPAN distributions are ported into the local BCR registry at `cpan-index` if not present in the upstream BCR.
-- When creating or modifying BCR module ports in `cpan-index/modules`, always use the `overlay/` directory to introduce new files (such as `BUILD.bazel`, headers, or configuration files) and list them under the `overlay` dictionary in `source.json`. Patch files (`patches/`) should ONLY be used to modify existing upstream files when needed, never to introduce new files.
+- Native C/C++ third-party dependencies are ported into the local BCR registry at `registry` if not present in the upstream BCR.
+- When creating or modifying BCR module ports in `registry/modules`, always use the `overlay/` directory to introduce new files (such as `BUILD.bazel`, headers, or configuration files) and list them under the `overlay` dictionary in `source.json`. Patch files (`patches/`) should ONLY be used to modify existing upstream files when needed, never to introduce new files.
 
 ## Coding Conventions
 - **Early Termination & Control Flow**: Always prefer methods and functions structured with early termination (guard clauses, early `return`, `continue`, or `break`) instead of deeply nested conditionals (`if/else`). Factor complex loop bodies or multi-step inspection logic into dedicated helper functions.

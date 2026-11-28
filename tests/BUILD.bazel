@@ -122,6 +122,7 @@ py_test(
     name = "indexer_test",
     size = "small",
     srcs = ["indexer_test.py"],
+    tags = ["manual"],
     venv = "rules-cpan-tools",
     deps = ["//cpan/tools/indexer:indexer_lib"],
 )
@@ -131,6 +132,7 @@ perl_test(
     name = "cpan_pureperl_test",
     size = "small",
     srcs = ["test_cpan_pureperl.t"],
+    tags = ["manual"],
     deps = [
         "@cpan//Algorithm-Diff",
     ],
@@ -140,6 +142,7 @@ perl_test(
     name = "cpan_xs_test",
     size = "small",
     srcs = ["test_cpan_xs.t"],
+    tags = ["manual"],
     deps = [
         "@cpan//Compress-Raw-Zlib",
     ],
@@ -149,6 +152,7 @@ perl_test(
     name = "cpan_alt_test",
     size = "small",
     srcs = ["test_cpan_alt.t"],
+    tags = ["manual"],
     deps = [
         "@cpan_alt//Algorithm-Diff",
     ],
@@ -165,7 +169,7 @@ py_test(
 
 test_suite(
     name = "cpan_hub_all_tests",
-    tags = ["-manual"],
+    tags = ["manual"],
     tests = [
         "@cpan//:all_tests",
     ],

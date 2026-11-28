@@ -1,10 +1,18 @@
+load("@bazel_skylib//rules:build_test.bzl", "build_test")
 load("@rules_perl//perl:defs.bzl", "perl_test")
 
 package(default_visibility = ["//visibility:public"])
 
+build_test(
+    name = "smoke_test",
+    targets = [
+        "@rules_cpan//platforms:linux_x86_64",
+    ],
+)
+
 test_suite(
     name = "deps_txt_tests",
-    tags = ["-manual"],
+    tags = ["manual"],
     tests = [
         ":e2e_deps_txt_test",
         "@cpan//:test-rules-cpan-modules",

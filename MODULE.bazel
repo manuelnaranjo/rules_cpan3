@@ -5,11 +5,11 @@ module(
 )
 
 # Registries configured in .bazelrc:
-# 1. file://%workspace%/cpan-index (Local BCR registry for CPAN and 3rdparty native C/C++ dependencies)
+# 1. file://%workspace%/registry (Local BCR registry for 3rdparty native C/C++ dependencies)
 # 2. https://bcr.bazel.build (Public Bazel Central Registry)
-# registry = ["file://%workspace%/cpan-index", "https://bcr.bazel.build"]
+# registry = ["file://%workspace%/registry", "https://bcr.bazel.build"]
 
-# Native C/C++ dependencies (consumed from BCR or local cpan-index)
+# Native C/C++ dependencies (consumed from BCR or local registry)
 bazel_dep(name = "zlib", version = "1.3.1.bcr.5")
 bazel_dep(name = "bzip2", version = "1.0.8.bcr.4")
 bazel_dep(name = "libexpat", version = "2.7.1.bcr.1")
@@ -68,23 +68,12 @@ uv.project(
 use_repo(uv, "uv")
 
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.10.0")
-bazel_dep(name = "perl-compress-raw-zlib", version = "2.226.cpan2")
 
 # CPAN dependency installation via Bzlmod module extension
 cpan = use_extension("//cpan:extensions.bzl", "cpan")
 cpan.install(
     name = "cpan",
     lock = "//tests:cpan.lock.json",
-)
-cpan.inject(
-    distribution = "Algorithm-Diff",
-    hub = "cpan",
-    target = "@perl-algorithm-diff//:Algorithm-Diff",
-)
-cpan.inject(
-    distribution = "Compress-Raw-Zlib",
-    hub = "cpan",
-    target = "@perl-compress-raw-zlib//:Compress-Raw-Zlib",
 )
 cpan.install(
     name = "cpan_alt",
@@ -130,7 +119,3 @@ http_archive(
     strip_prefix = "Compress-Raw-Zlib-2.226",
     urls = ["https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.226.tar.gz"],
 )
-
-# CPAN dependencies indexed by rules_cpan indexer
-bazel_dep(name = "perl-algorithm-diff", version = "1.201.cpan2")
-bazel_dep(name = "perl-devel-ppport", version = "3.68.cpan3")

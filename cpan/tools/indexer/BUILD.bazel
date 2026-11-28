@@ -21,6 +21,7 @@ py_library(
         "@buildifier_prebuilt//buildifier",
         "@rules_perl//perl:current_exec_toolchain",
     ],
+    tags = ["manual"],
     visibility = ["//visibility:public"],
     deps = [
         "@uv//bazel_runfiles",
@@ -32,6 +33,7 @@ py_binary(
     name = "indexer",
     srcs = ["indexer.py"],
     main = "indexer.py",
+    tags = ["manual"],
     venv = "rules-cpan-tools",
     visibility = ["//visibility:public"],
     deps = [
@@ -44,5 +46,6 @@ py_binary(
 alias(
     name = "cpan_indexer",
     actual = ":indexer",
+    tags = ["manual"],
     visibility = ["//visibility:public"],
 )

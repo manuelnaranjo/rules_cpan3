@@ -25,4 +25,5 @@ alias(
 alias(
     name = "cpan_indexer",
     actual = "//cpan/tools/indexer:indexer",
+    tags = ["manual"],
 )

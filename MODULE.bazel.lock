@@ -589,10 +589,8 @@
     "//cpan:extensions.bzl%cpan": {
       "general": {
         "bzlTransitiveDigest": "u+ww1XV8cCUJpfi6YRgRMq3TaYUDh8zN0jKTiUbanXw=",
-        "usagesDigest": "6PL+yEftTXIu3xtuOnE3nCRZLDsnGCAPcyBVR8FgXKY=",
+        "usagesDigest": "+C4C1z7JPsJkbf9pT5u2CK8zkY9IxShUfcgc3CO2sWA=",
         "recordedInputs": [
-          "REPO_MAPPING:,perl-algorithm-diff perl-algorithm-diff+",
-          "REPO_MAPPING:,perl-compress-raw-zlib perl-compress-raw-zlib+",
           "FILE:@@//tests/cpan.lock.json 95860bf6ecdecfa30a541006b4c8bddb73561426cbfcf2e5e429298afd5644bb"
         ],
         "generatedRepoSpecs": {
@@ -608,10 +606,7 @@
                 "Algorithm-Diff": "perl-algorithm-diff",
                 "Compress-Raw-Zlib": "perl-compress-raw-zlib"
               },
-              "injected_targets": {
-                "Algorithm-Diff": "'@@perl-algorithm-diff+//:Algorithm-Diff'",
-                "Compress-Raw-Zlib": "'@@perl-compress-raw-zlib+//:Compress-Raw-Zlib'"
-              }
+              "injected_targets": {}
             }
           },
           "cpan_alt": {
